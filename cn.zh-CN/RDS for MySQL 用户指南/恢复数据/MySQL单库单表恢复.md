@@ -18,7 +18,7 @@ RDS for MySQL支持单库和单表的数据恢复，可以通过备份指定恢�
 
 ## 注意事项 {#section_slr_ynq_ngb .section}
 
-**库/表级别恢复**功能会将备份文件从tar压缩包变成xbstream文件包，占用的OSS存储空间会增大，超出免费的额度将会产生额外的费用，请合理设计备份周期，以满足业务需求的同时，兼顾备份空间的合理利用。关于免费额度详情，请参见[查看备份空间免费额度](https://help.aliyun.com/document_detail/96142.html#concept-ipg-lm4-ydb)。。
+**库/表级别恢复**功能会将备份文件从tar压缩包变成xbstream文件包，占用的OSS存储空间会增大，超出免费的额度将会产生额外的费用，请合理设计备份周期，以满足业务需求的同时，兼顾备份空间的合理利用。关于免费额度详情，请参见[查看备份空间免费额度](https://help.aliyun.com/document_detail/96142.html#concept-ipg-lm4-ydb)。
 
 ## 操作步骤 {#section_m3j_zlb_3gb .section}
 
@@ -28,9 +28,9 @@ RDS for MySQL支持单库和单表的数据恢复，可以通过备份指定恢�
 4.  在左侧导航栏中，选择备份恢复。
 5.  在页面右上角，单击**数据库 库/表级别恢复**，在弹出的对话框中设置以下参数。
 
-    ![库/表级别恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/154813660137783_zh-CN.png)
+    ![库/表级别恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/154813668737783_zh-CN.png)
 
-    ![库/表级别恢复参数设置1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/154813660137784_zh-CN.png)
+    ![库/表级别恢复参数设置1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/154813668737784_zh-CN.png)
 
     |参数名称|说明|
     |----|--|
@@ -57,7 +57,7 @@ RDS for MySQL支持单库和单表的数据恢复，可以通过备份指定恢�
 
     **说明：** 若**回档位置**选择的是**回档到新实例**，会跳转到实例购买页面，设置新实例的参数并完成支付即可。
 
-    ![库/表级别恢复新建实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/154813660137786_zh-CN.png)
+    ![库/表级别恢复新建实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/154813668837786_zh-CN.png)
 
     |参数名称|说明|
     |----|--|
