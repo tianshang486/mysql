@@ -2,11 +2,11 @@
 
 ## 描述 {#section_l21_v32_12b .section}
 
-该接口用于查询在系统权重分配方式下，每个只读实例被分配的读请求权重值。
+该接口用于计算系统指定的权重。如果是自定义读权重，请参见[DescribeDBInstanceNetInfo](intl.zh-CN/API参考/网络管理/DescribeDBInstanceNetInfo.md#)。
 
 **说明：** 
 
--   仅适用于RDS for MySQL实例。
+-   适用于MySQL实例和SQL Server 2017集群版实例。
 -   主实例必须在没有被锁定的情况下才能进行查询，否则操作将失败。
 
 ## 请求参数 {#section_qzx_w32_12b .section}
@@ -21,7 +21,7 @@
 |参数|类型|说明|
 |--|--|--|
 |<公共返回参数\>|-|详见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
-|DBInstanceWeights|List|系统实时计算的只读实例权重信息。|
+|DBInstanceWeights|List|系统实时计算的实例权重信息。|
 
 ## DBInstanceWeight {#section_avj_3jf_12b .section}
 
@@ -32,5 +32,5 @@
 -   Readonly：只读实例
 
 |
-|Weight|String|只读实例所分配的权重。|
+|Weight|String|系统实时计算的实例权重。|
 
