@@ -57,14 +57,14 @@ RDS for MySQL 对来自客户端的查询（Select）进行 Hash 计算得到该
 
         取值为 2 ：开启查询缓存功能，但仅缓存 Select SQL\_CACHE 开头的查询。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8311/154397330533697_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8311/154832295033697_zh-CN.png)
 
     **说明：** 
 
     -   修改 query\_cache\_type 需要重启实例（修改后实例会自动重启）。
-    -   参数 query\_cache\_size 要求设置值为 1024 的整数倍，否则会提示 “参数格式错误，请重新输入”。
+    -   参数 query\_cache\_size 要求设置值为 1024 的整数倍，否则会提示 “指定参数无效”。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8311/154397330533698_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8311/154832295033698_zh-CN.png)
 
 -   **开启**
 
@@ -83,7 +83,7 @@ RDS for MySQL 对来自客户端的查询（Select）进行 Hash 计算得到该
 
 -   **控制台**
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8311/154397330533699_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8311/154832295033699_zh-CN.png)
 
 -   **SQL命令**
 
@@ -101,6 +101,6 @@ RDS for MySQL 对来自客户端的查询（Select）进行 Hash 计算得到该
 
     -   Qcache\_queries\_in\_cache：查询缓存中缓存的查询量。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8311/154397330533700_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8311/154832295033700_zh-CN.png)
 
 
