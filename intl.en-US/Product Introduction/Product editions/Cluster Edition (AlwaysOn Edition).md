@@ -4,15 +4,9 @@ Currently, only RDS for SQL Server 2017 Enterprise Edition supports the Cluster 
 
 The following figure shows the architecture of the Cluster Edition.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62203/154304689532574_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62203/154837933332574_en-US.png)
 
 ## Advantages {#section_wcv_gh2_wfb .section}
-
--   **Achievable zero Recovery Point Object \(RPO\)**
-
-    To achieve ultimate data reliability, you can build a database with an RPO of zero by setting the REQUIRED\_SYNCHRONIZED\_SECONDARIES\_TO\_COMMIT parameter.
-
-    **Note:** However, after this parameter is turned on, performance is affected because every write request is completed only after data is written into the slave instance.
 
 -   **Horizontally scalable read capability**
 
