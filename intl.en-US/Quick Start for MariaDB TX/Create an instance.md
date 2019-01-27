@@ -1,17 +1,18 @@
 # Create an instance {#concept_wzp_ncf_vdb .concept}
 
-You can use the RDS console or an API to create an RDS instance. For more information about instance pricing, see [Pricing of ApsaraDB for RDS](https://www.alibabacloud.com/product/apsaradb-for-rds?spm=a3c0i.7938564.220486.8.10521d15zCpnIt#pricing). This document describes how to use the RDS console to create an instance. For more information about how to use an API to create an instance, see [CreateDBInstance](../../../../../intl.en-US/API Reference/Instance management/Create an RDS instance.md#).
+You can use the RDS console or an API to create an RDS instance. For more information about instance pricing, see [Pricing](https://www.alibabacloud.com/product/apsaradb-for-rds?spm=a3c0i.7938564.220486.8.10521d15zCpnIt#pricing). This document describes how to use the RDS console to create an instance. If you need to use an API to create an instance, see [CreateDBInstance](../../../../../intl.en-US/API Reference/Instance management/Create an RDS instance.md#).
 
 ## Prerequisites {#section_hyl_tcf_vdb .section}
 
--   You have registered an Alibaba Cloud account.
--   If you are creating a Pay-As-You-Go instance, make sure that your account balance is sufficient.
+You have registered an Alibaba Cloud account. For more information, see [Sign up with Alibaba Cloud](https://www.alibabacloud.com/help/doc-detail/50482.html).
 
 ## Procedure {#section_o45_5cf_vdb .section}
 
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/?spm=5176.doc43185.2.7.mR2Syx).
 2.  On the Instances page, click **Create Instance**.
-3.  Select **Subscription** or **Pay-As-You-Go**. For more information about billing methods, see [Billing items and billing methods](../../../../../intl.en-US/Purchase Guide/Billing items and billing methods.md#).
+3.  Select **Subscription** or **Pay-As-You-Go**.
+    -   **Subscription** indicates prepayment, which means you need to pay the monthly or yearly price when creating an instance. This is cost-effective if you want to use the instance for one month or more.
+    -   **Pay-As-You-Go** indicates costs are automatically deducted from your Alibaba Cloud account by hour. You can release the instance at any time. This is cost-effective if you only want to use the instance temporarily.
 4.  Select the instance configuration. The parameters are described as follows:
     -   Basic configuration
         -   Region and zone: Select the region and zone in which the instance is located. Some regions support both single-zone and multi-zone instances, while some regions support only single-zone instances.
