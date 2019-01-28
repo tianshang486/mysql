@@ -25,25 +25,17 @@ We recommend that you periodically check and adjust the whitelist according to y
 
     **Note:** You can also click **Add a Whitelist Group** to create a new group.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7948/15486593994139_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7948/15486625264139_en-US.png)
 
-6.  In the White List field of the displayed dialog box, add the IP addresses or IP address segments that need to access the RDS instance, and click **OK**.
+6.  In the **White List** field of the displayed dialog box, add the IP addresses or IP address segments that need to access the RDS instance, and click **OK**.
 
     **Note:** 
 
     -   If you enter an IP address segment, such as 10.10.10.0/24, it indicates that any IP address in the format of 10.10.10.X can access the RDS instance.
     -   If you want to enter multiple IP addresses or IP address segments, separate them by comma \(but do not add blank spaces before or after commas\), such as **192.168.0.1,172.16.213.9**.
     -   If you click **Upload ECS Intranet IP Address**, the system displays the IP addresses of all ECS instances under your Alibaba Cloud account, and you can quickly add intranet IP addresses of ECS instances.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7948/15486593994140_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7948/15486625274140_en-US.png)
 
-
-## Precautions for adding an ECS security group {#section_tsz_lt4_ydb .section}
-
-You can configure both the IP whitelist and ECS security group. Your RDS instance allows access from servers whose IP addresses are in the IP whitelist and ECS instances that are in the security group.
-
--   Currently, only MySQL 5.6 and the Hangzhou, Qingdao, and Hong Kong regions support ECS security groups.
--   One RDS instance supports one security group.
--   Updates to the ECS security group are automatically applied to the whitelist.
 
 ## Add an ECS security group {#section_dsr_nt4_ydb .section}
 
@@ -54,7 +46,7 @@ A security group is a virtual firewall that is used to set network access contro
 -   RDS instances that support ECS security groups are MySQL 5.6, PostgreSQL, and MariaDB TX.
 -   Regions that support ECS security groups: Hangzhou, Qingdao, and Hongkong.
 -   You can set both the IP whitelist and ECS security group. All ECS instances specified in either the IP whitelist or security group can access the RDS instance.
--   Currently each RDS instance can have only one ECS security group.
+-   Currently each RDS instance supports one security group.
 
 **Procedure**
 
