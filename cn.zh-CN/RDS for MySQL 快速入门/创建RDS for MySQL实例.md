@@ -67,16 +67,9 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154891903236543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154891913036543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/设置白名单.md)和[创建账号](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/申请外网地址.md)。然后就可以[连接实例](intl.zh-CN/RDS for MySQL 快速入门/连接实例.md)。
-
-## 常见问题 {#section_x1j_b4f_qgb .section}
-
--   如何授权子账号管理RDS实例？
-
-    答：请参见[云数据库 RDS 授权](https://www.alibabacloud.com/help/zh/doc-detail/58932.htm)。
-
 
 ## 相关API {#section_hcn_555_jgb .section}
 
