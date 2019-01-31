@@ -68,7 +68,7 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154780238036543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154891917236543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](intl.zh-CN/RDS for SQL Server 快速入门/初始化配置/设置白名单.md)和[创建账号](intl.zh-CN/RDS for SQL Server 快速入门/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2008 R2版.md)，如果是通过外网连接，还需要[申请外网地址](intl.zh-CN/RDS for SQL Server 快速入门/初始化配置/申请外网地址.md#)。然后就可以[连接实例](intl.zh-CN/RDS for SQL Server 快速入门/连接实例.md)。
 
