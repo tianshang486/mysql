@@ -7,7 +7,7 @@ To guarantee instance stability and security, RDS for SQL Server has certain lim
 
  | 2016 Standard/Enterprise
 
- 2012 Standard, Enterprise
+ 2012 Standard/ Enterprise
 
  | 2008 R2 Enterprise
 
