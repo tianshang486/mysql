@@ -41,7 +41,7 @@ To guarantee instance stability and security, RDS for SQL Server has certain lim
 |Replication|
 |Policy management|
 
-**说明：** 
+**Note:** 
 
 -   RDS for SQL Server instances already have Microsoft SQL Server licenses and do not support your own licenses.
 
