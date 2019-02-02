@@ -48,7 +48,7 @@
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154882903036543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154907027636543_zh-CN.png)
 
 3.  单击目标实例的ID，进入基本信息页面。
 4.  在菜单中选择**备份恢复**。
@@ -71,7 +71,7 @@
 
  |
 
-    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/154882903037578_zh-CN.png)
+    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/154907027637578_zh-CN.png)
 
 
 ## 手动备份MySQL数据 {#section_yvd_yk4_ydb .section}
@@ -81,12 +81,12 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154882903036543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154907027636543_zh-CN.png)
 
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 
-    ![备份MySQL数据](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15488290304105_zh-CN.png)
+    ![备份MySQL数据](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15490702764105_zh-CN.png)
 
     **说明：** 
 
@@ -103,6 +103,10 @@
 2.  RDS for MySQL的日志备份是否可以关闭？
 
     答：可以关闭（基础版除外）。备份设置内关闭日志备份开关即可。
+
+3.  为什么有时候备份任务会失败？
+
+    答：备份过程中执行DDL操作，会导致锁表，进而导致备份失败。
 
 
 ## 相关文档 {#section_wfb_2ft_cgb .section}
