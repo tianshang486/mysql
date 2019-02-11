@@ -31,11 +31,6 @@ RDS instances are divided into three series: Basic Edition, High-availability Ed
 |[Master/Slave switchover](../../../../../intl.en-US/User Guide/Instance management/Switch between master and slave instances.md)|Not supported|Supported|
 |[SSL](../../../../../intl.en-US/User Guide/Security/Set SSL encryption.md)|Not supported|Supported|
 |[TDE](../../../../../intl.en-US/User Guide/Security/Set TDE.md)|Not supported|Supported|
-| Performance tuning
-
- |Not supported| Not supported
-
- |
 |[Migrate to another zone](../../../../../intl.en-US/User Guide/Instance management/Migrate instance across zones.md)|Not supported|Supported|
 |[Read/Write splitting](../../../../../intl.en-US/User Guide/Read__write splitting/Introduction to read__write splitting.md)|Not supported|Supported|
 |[Read-only instance](../../../../../intl.en-US/Quick Start for MySQL/Scale instances/Read-only instance/Introduction to read-only instances.md)|Not supported|Supported \(not free\)|
