@@ -14,7 +14,7 @@
 -   应用使用长连接模式：对于长连接模式（比如Java应用），应用侧应该配置连接池。连接池的初始连接数设置过高，应用启动后建立多个到RDS实例空闲连接。
 -   应用使用短连接模式：对于短连接模式（比如PHP应用），出现大量的空闲连接说明应用没有在查询执行完毕后**显式**的关闭连接。
 
-![空闲连接过多](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8305/155012242838821_zh-CN.png)
+![空闲连接过多](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8305/155012300438821_zh-CN.png)
 
  **解决方法**
 
@@ -23,11 +23,11 @@
 -   修改应用，短连接模式需要在代码中修改查询结束后调用关闭连接的方法。
 -   对于非交互模式连接，在控制台的参数设置里设置wait\_timeout参数为较小值。wait\_timeout参数控制非交互模式连接的超时时间（单位秒，默认值为24小时即86400秒），当非交互式连接空闲时间超过wait\_timeout指定的时间后，RDS实例会主动关闭连接。
 
-    ![修改wait_timeout](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8305/155012242838822_zh-CN.png)
+    ![修改wait_timeout](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8305/155012300438822_zh-CN.png)
 
 -   对于交互模式连接，在控制台的参数设置里设置interactive\_timeout参数为较小值。interactive\_timeout参数控制交互模式连接的超时时间（单位秒，默认值为2小时即7200秒），当交互式连接空闲时间超过interactive\_timeout指定的时间后，RDS实例会主动关闭连接。
 
-    ![修改interactive_timeout](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8305/155012242838823_zh-CN.png)
+    ![修改interactive_timeout](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8305/155012300438823_zh-CN.png)
 
 
 **说明：** 
@@ -44,7 +44,7 @@
 -   CPU使用率过高导致活动连接数堆积。
 -   IOPS使用率高导致活动连接数堆积。
 
-![活动连接过多](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8305/155012242838824_zh-CN.png)
+![活动连接过多](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8305/155012300438824_zh-CN.png)
 
  **解决方法**
 
