@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1012936 .reference}
+# CreateDBInstance {#doc_api_1012956 .reference}
 
 该接口用于创建一个RDS实例。
 
@@ -72,7 +72,13 @@
 |SystemDBCharset|String|否|GBK|系统字符集。
 
  |
-|DBInstanceDescription|String|否|测试数据库|实例的描述或备注信息，不超过256个字节；注：不能以http:// , https:// 开头。以中文、英文字母开头。可以包含中文、英文字符、”\_”，” -”，数字字符长度2~256。
+|DBInstanceDescription|String|否|测试数据库|实例的描述或备注信息，不超过256个字节。
+
+ **说明：** 
+
+-   不能以 http:// 和 https:// 开头；
+-   以中文、英文字母开头；
+-   可以包含数字、中文、英文、下划线，短横线，长度2~256。
 
  |
 |ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过 64 个 ASCII 字符，且该参数值中不能包含非 ASCII 字符。
@@ -90,7 +96,10 @@
 
  **说明：** 
 
- -   SQL Server2017集群版只支持VPC网络；
+ 
+
+-   SQL Server2017集群版只支持VPC网络；
+
 -   如果数据库类型为MariaDB，该参数必填。
 
  |
