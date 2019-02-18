@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1013091 .reference}
+# CreateDBInstance {#doc_api_1013093 .reference}
 
 该接口用于创建一个RDS实例。
 
@@ -144,7 +144,7 @@
  **说明：** 若付费类型为Prepaid则该入参必须传入。
 
  |
-|DBInstanceStorageType|String|否|cloud\_ssd|实例存储类型。
+|DBInstanceStorageType|String|否|cloud\_ssd|实例存储类型：
 
  -   local\_ssd：本地SSD盘（推荐）；
 -   cloud\_ssd：SSD云盘。
