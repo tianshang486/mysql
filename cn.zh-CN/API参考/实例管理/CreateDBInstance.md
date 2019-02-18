@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1013093 .reference}
+# CreateDBInstance {#doc_api_1013118 .reference}
 
 该接口用于创建一个RDS实例。
 
@@ -55,7 +55,7 @@
 -   Intranet：内网连接。
 
  |
-|SecurityIPList|String|是|10.23.12.27/25|该实例的IP白名单：
+|SecurityIPList|String|是|10.23.12.27/25|该实例的[IP白名单](~~96118~~)：
 
  -   多个IP之间以逗号隔开，且不可重复，最多可添加1000个IP。
 -   支持格式：%，0.0.0.0/0，10.23.12.24（IP），或者10.23.12.24/24（CIDR模式，无类域间路由，/24表示地址中前缀的长度，范围1~32）。
@@ -164,10 +164,10 @@
 |OrderId|String|100789370230206|订单ID。
 
  |
-|ConnectionString|String|rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com|数据库连接地址。
+|ConnectionString|String|rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com|数据库内网连接地址。
 
  |
-|Port|String|3306|数据库连接端口。
+|Port|String|3306|数据库内网连接端口。
 
  |
 |RequestId|String|1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC|请求ID。
@@ -180,14 +180,14 @@
 
 ``` {#request_demo}
 
-http(s)://[Endpoint]/?DBInstanceClass=rds.mys2.small
-&DBInstanceNetType=Internet
-&DBInstanceStorage=20
+http(s)://[Endpoint]/?RegionId=cn-hangzhou
 &Engine=MySQL
 &EngineVersion=5.6
-&PayType=Postpaid
-&RegionId=cn-hangzhou
+&DBInstanceClass=rds.mys2.small
+&DBInstanceStorage=20
+&DBInstanceNetType=Internet
 &SecurityIPList=10.23.12.27/25
+&PayType=Postpaid
 &<公共请求参数>
 
 ```
@@ -199,8 +199,8 @@ http(s)://[Endpoint]/?DBInstanceClass=rds.mys2.small
 ``` {#xml_return_success_demo}
 <CreateDBInstanceResponse>
   <OrderId>100789370230206</OrderId>
-  <ConnectionString>rdsaiiabnaiiabn.mysql.rds.aliyuncs.com</ConnectionString>
-  <DBInstanceId>rdsaiiabnaiiabn</DBInstanceId>
+  <ConnectionString>rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com</ConnectionString>
+  <DBInstanceId>rm-uf6wjk5xxxxxxxxxx</DBInstanceId>
   <Port>3306</Port>
   <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId>
 </CreateDBInstanceResponse>
@@ -212,9 +212,9 @@ http(s)://[Endpoint]/?DBInstanceClass=rds.mys2.small
 ``` {#json_return_success_demo}
 {
 	"Port":"3306",
-	"ConnectionString":"rdsaiiabnaiiabn.mysql.rds.aliyuncs.com",
+	"ConnectionString":"rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com",
 	"RequestId":"1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC",
-	"DBInstanceId":"rdsaiiabnaiiabn",
+	"DBInstanceId":"rm-uf6wjk5xxxxxxxxxx",
 	"OrderId":"100789370230206"
 }
 ```
