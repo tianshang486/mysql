@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1012956 .reference}
+# CreateDBInstance {#doc_api_1012963 .reference}
 
 该接口用于创建一个RDS实例。
 
@@ -72,7 +72,7 @@
 |SystemDBCharset|String|否|GBK|系统字符集。
 
  |
-|DBInstanceDescription|String|否|测试数据库|实例的描述或备注信息，不超过256个字节。
+|DBInstanceDescription|String|否|测试数据库|实例的描述或备注信息。
 
  **说明：** 
 
