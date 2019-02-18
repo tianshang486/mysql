@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1012963 .reference}
+# CreateDBInstance {#doc_api_1013091 .reference}
 
 该接口用于创建一个RDS实例。
 
@@ -15,7 +15,7 @@
 |Action|String|是|CreateDBInstance|系统规定参数，取值：**CreateDBInstance**。
 
  |
-|RegionId|String|是|cn-hangzhou|数据中心，长度不超过50个字符，通过函数[DescribeRegions](~~26243~~)查看可用的数据中心。
+|RegionId|String|是|cn-hangzhou|地域ID，长度不超过50个字符，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
 
  |
 |Engine|String|是|MySQL|数据库类型，取值范围为：
@@ -27,7 +27,7 @@
 -   MariaDB。
 
  |
-|EngineVersion|String|是|5.6|数据库版本号，取值如下：
+|EngineVersion|String|是|5.6|数据库版本，取值如下：
 
  -   MySQL：5.5/5.6/5.7；
 -   SQLServer：2008r2/2012/2012\_ent\_ha/2012\_std\_ha/2012\_web/2016\_ent\_ha/2016\_std\_ha/2016\_web/2017\_ent；
@@ -42,7 +42,7 @@
 |DBInstanceStorage|Integer|是|20|实例存储空间，取值范围如下：
 
  -   MySQL/PostgreSQL/PPAS 双机高可用版为 5~2000；
--   MySQL 5.7 云盘版为 20~1000；
+-   MySQL 5.7 云盘版/MariaDB 为 20~1000；
 -   SQL Server 2008R2 为 10~2000；
 -   SQL Server 2012/2016/2017 为 20~3000。
 
@@ -55,7 +55,7 @@
 -   Intranet：内网连接。
 
  |
-|SecurityIPList|String|是|10.23.12.27/25|该实例下所有数据库的IP名单：
+|SecurityIPList|String|是|10.23.12.27/25|该实例的IP白名单：
 
  -   多个IP之间以逗号隔开，且不可重复，最多可添加1000个IP。
 -   支持格式：%，0.0.0.0/0，10.23.12.24（IP），或者10.23.12.24/24（CIDR模式，无类域间路由，/24表示地址中前缀的长度，范围1~32）。
@@ -92,7 +92,9 @@
 |InstanceNetworkType|String|否|Classic|实例的网络类型：
 
  -   VPC：VPC网络；
--   Classic：经典网络类型，默认创建经典网络类型的实例。
+-   Classic：经典网络类型。
+
+ 默认创建经典网络类型的实例。
 
  **说明：** 
 
@@ -105,8 +107,8 @@
  |
 |ConnectionMode|String|否|Performance|实例的访问模式：
 
- -   Performance为标准访问模式；
--   Safty为高安全访问模式。
+ -   Performance：标准访问模式；
+-   Safty：高安全访问模式。
 
  默认为RDS系统分配。
 
@@ -142,10 +144,13 @@
  **说明：** 若付费类型为Prepaid则该入参必须传入。
 
  |
-|DBInstanceStorageType|String|否|无|实例储存类型。
+|DBInstanceStorageType|String|否|cloud\_ssd|实例存储类型。
+
+ -   local\_ssd：本地SSD盘（推荐）；
+-   cloud\_ssd：SSD云盘。
 
  |
-|BusinessInfo|String|否|无|业务信息。
+|BusinessInfo|String|否|5476xxxxx|支持的活动页面ID。
 
  |
 
