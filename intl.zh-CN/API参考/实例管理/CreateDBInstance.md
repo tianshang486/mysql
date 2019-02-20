@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1013118 .reference}
+# CreateDBInstance {#doc_api_1015898 .reference}
 
 该接口用于创建一个RDS实例。
 
@@ -20,20 +20,20 @@
  |
 |Engine|String|是|MySQL|数据库类型，取值范围为：
 
- -   MySQL；
--   SQLServer；
--   PostgreSQL；
--   PPAS；
--   MariaDB。
+ -   **MySQL**；
+-   **SQLServer**；
+-   **PostgreSQL**；
+-   **PPAS**；
+-   **MariaDB**。
 
  |
 |EngineVersion|String|是|5.6|数据库版本，取值如下：
 
- -   MySQL：5.5/5.6/5.7；
--   SQLServer：2008r2/2012/2012\_ent\_ha/2012\_std\_ha/2012\_web/2016\_ent\_ha/2016\_std\_ha/2016\_web/2017\_ent；
--   PostgreSQL：9.4/10.0；
--   PPAS：9.3/10.0；
--   MariaDB：10.3。
+ -   MySQL：**5.5/5.6/5.7**；
+-   SQLServer：**2008r2/2012/2012\_ent\_ha/2012\_std\_ha/2012\_web/2016\_ent\_ha/2016\_std\_ha/2016\_web/2017\_ent**；
+-   PostgreSQL：**9.4/10.0**；
+-   PPAS：**9.3/10.0**；
+-   MariaDB：**10.3**。
 
  |
 |DBInstanceClass|String|是|rds.mys2.small|实例规格，详见[实例规格表](~~26312~~)。
@@ -41,21 +41,21 @@
  |
 |DBInstanceStorage|Integer|是|20|实例存储空间，取值范围如下：
 
- -   MySQL/PostgreSQL/PPAS 双机高可用版为 5~2000；
--   MySQL 5.7 云盘版/MariaDB 为 20~1000；
--   SQL Server 2008R2 为 10~2000；
--   SQL Server 2012/2016/2017 为 20~3000。
+ -   MySQL/PostgreSQL/PPAS 双机高可用版： **5-2000**；
+-   MySQL 5.7 云盘版/MariaDB：**20-1000**；
+-   SQL Server 2008R2：**10-2000**；
+-   SQL Server 2012/2016/2017：**20-3000**。
 
  每5G进行递增，单位：GB。详见[实例规格表](~~26312~~)。
 
  |
 |DBInstanceNetType|String|是|Internet|实例的网络连接类型：
 
- -   Internet：公网连接；
--   Intranet：内网连接。
+ -   **Internet**：公网连接；
+-   **Intranet**：内网连接。
 
  |
-|SecurityIPList|String|是|10.23.12.27/25|该实例的[IP白名单](~~96118~~)：
+|SecurityIPList|String|是|10.23.12.27/25|该实例的[IP白名单](~~43185~~)：
 
  -   多个IP之间以逗号隔开，且不可重复，最多可添加1000个IP。
 -   支持格式：%，0.0.0.0/0，10.23.12.24（IP），或者10.23.12.24/24（CIDR模式，无类域间路由，/24表示地址中前缀的长度，范围1~32）。
@@ -65,11 +65,14 @@
  |
 |PayType|String|是|Postpaid|实例的付费类型：
 
- -   Postpaid：后付费（按量付费）；
--   Prepaid：预付费（包年包月）。
+ -   **Postpaid**：后付费（按量付费）；
+-   **Prepaid**：预付费（包年包月）。
 
  |
-|SystemDBCharset|String|否|GBK|系统字符集。
+|SystemDBCharset|String|否|GBK|字符集，取值范围限定如下字符集：
+
+ -   MySQL类型：**utf8、gbk、latin1、utf8mb4**（MySQL 5.5、5.6和5.7）；
+-   SQLServer类型：**Chinese\_PRC\_CI\_AS、Chinese\_PRC\_CS\_AS、SQL\_Latin1\_General\_CP1\_CI\_AS、SQL\_Latin1\_General\_CP1\_CS\_AS、Chinese\_PRC\_BIN**。
 
  |
 |DBInstanceDescription|String|否|测试数据库|实例的描述或备注信息。
@@ -91,8 +94,8 @@
  |
 |InstanceNetworkType|String|否|Classic|实例的网络类型：
 
- -   VPC：VPC网络；
--   Classic：经典网络类型。
+ -   **VPC**：VPC网络；
+-   **Classic**：经典网络类型。
 
  默认创建经典网络类型的实例。
 
@@ -107,8 +110,8 @@
  |
 |ConnectionMode|String|否|Performance|实例的访问模式：
 
- -   Performance：标准访问模式；
--   Safty：高安全访问模式。
+ -   **Standard**：标准访问模式；
+-   **Safe**：数据库代理模式。
 
  默认为RDS系统分配。
 
@@ -130,24 +133,24 @@
  |
 |UsedTime|String|否|2|指定购买时长：
 
- -   当参数Period为Year时，UsedTime取值为1~9；
--   当参数Period为Month时，UsedTime取值为1、2、3。
+ -   当参数**Period**为**Year**时，UsedTime取值为**1-9**；
+-   当参数**Period**为**Month**时，UsedTime取值为**1/2/3**。
 
- **说明：** 若付费类型为Prepaid则该入参必须传入。
+ **说明：** 若付费类型为**Prepaid**则该参数必须传入。
 
  |
 |Period|String|否|Year|指定预付费实例为包年或者包月类型：
 
- -   Year：包年；
--   Month：包月。
+ -   **Year**：包年；
+-   **Month**：包月。
 
- **说明：** 若付费类型为Prepaid则该入参必须传入。
+ **说明：** 若付费类型为**Prepaid**则该参数必须传入。
 
  |
 |DBInstanceStorageType|String|否|cloud\_ssd|实例存储类型：
 
- -   local\_ssd：本地SSD盘（推荐）；
--   cloud\_ssd：SSD云盘。
+ -   **local\_ssd**：本地SSD盘（推荐）；
+-   **cloud\_ssd**：SSD云盘。
 
  |
 |BusinessInfo|String|否|5476xxxxx|支持的活动页面ID。
