@@ -19,7 +19,7 @@ RDS supports two access modes: standard mode and safe connection mode. This arti
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper left corner, select the region.
 3.  Locate the target instance and click the instance ID.
-4.  In the left-side navigation pane, click **Connection Options**。
+4.  In the left-side navigation pane, click **Connection Options**.
 5.  Click **Switch Access Mode**.
 
 **Method 2**
