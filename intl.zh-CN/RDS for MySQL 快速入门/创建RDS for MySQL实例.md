@@ -27,17 +27,21 @@
     -   请确保RDS实例与需要连接的ECS实例创建于同一个地域，否则它们无法通过内网互通，只能通过外网互通，无法发挥最佳性能。
 |
     |资源组|实例所属的资源组。|
-    |数据库类型|     -   即数据库引擎的类型：MySQL、SQL Server、PostgreSQL和PPAS。
-    -   不同地域支持的数据库类型不同，请以实际界面为准。
+    |数据库类型| 即数据库引擎的类型：MySQL、SQL Server、PostgreSQL和PPAS。
+
+ **说明：** 不同地域支持的数据库类型不同，请以实际界面为准。
+
  |
-    |版本|指数据库版本。RDS for MySQL支持的数据库版本包括MySQL 5.5、5.6、5.7。不同地域所支持的数据库版本不同，请以实际界面为准。
+    |版本| 指数据库版本。RDS for MySQL支持的数据库版本包括MySQL 5.5、5.6、5.7。
 
-|
-    |系列|    -   基础版：单节点，计算与存储分离，性价比高。
+ **说明：** 不同地域所支持的数据库版本不同，请以实际界面为准。
+
+ |
+    |系列|     -   基础版：单节点，计算与存储分离，性价比高。
     -   高可用版：一个主节点和一个备节点，经典高可用架构。
-关于各个系列的详细介绍，请参见[产品系列概述](../../../../../intl.zh-CN/云数据库RDS简介/产品系列/产品系列概述.md)。不同数据库版本支持的系列不同，请以实际界面为准。
+ **说明：** 不同数据库版本支持的系列不同，请以实际界面为准。关于各个系列的详细介绍，请参见[产品系列概述](../../../../../intl.zh-CN/云数据库RDS简介/产品系列/产品系列概述.md)。
 
-|
+ |
     |可用区|可用区是地域中的一个独立物理区域，不同可用区之间没有实质性区别。您可以选择将RDS实例的主备节点创建在同一可用区或不同可用区。
 
 |
@@ -67,13 +71,20 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154891913036543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155115855736543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/设置白名单.md)和[创建账号](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/申请外网地址.md)。然后就可以[连接实例](intl.zh-CN/RDS for MySQL 快速入门/连接实例.md)。
+
+## 常见问题 {#section_x1j_b4f_qgb .section}
+
+-   如何授权子账号管理RDS实例？
+
+    答：请参见[云数据库 RDS 授权](https://www.alibabacloud.com/help/zh/doc-detail/58932.htm)。
+
 
 ## 相关API {#section_hcn_555_jgb .section}
 
 |API|描述|
 |---|--|
-|[CreateDBInstance](../../../../../intl.zh-CN/API参考/实例管理/CreateDBInstance.md#)|创建RDS实例|
+|[../../../../../dita-oss-bucket/SP\_60/DNMYSQ1851749/ZH-CN\_TP\_8086.md\#](../../../../../intl.zh-CN/API参考/实例管理/CreateDBInstance.md#)|创建RDS实例|
 
