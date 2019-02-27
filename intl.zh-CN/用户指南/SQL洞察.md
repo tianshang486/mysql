@@ -2,31 +2,30 @@
 
 为了更好地提供服务，RDS for MySQL的SQL审计功能将升级为**SQL洞察**功能，继续为您的数据库提供安全审计、性能诊断等增值服务，升级过程中不影响实例的正常使用，升级后费用更低，功能更丰富。
 
-## 升级计划 {#section_ktf_nhn_mfb .section}
+## 升级计划 {#section_pnw_5rp_xgb .section}
 
-为保证服务质量，全球的RDS for MySQL实例将分批进行升级：
+为保证服务质量，全球的RDS for MySQL实例将分批进行升级。
 
--   在升级日期后，新购的实例都支持SQL洞察功能。
--   存量的实例将在2019年3月1日前自动支持SQL洞察功能。
+在升级日期后，新购和存量的实例都将支持SQL洞察功能。
 
-|地域|新购实例的升级日期|存量实例的升级日期|
-|--|---------|---------|
-|华北2（北京）、华东2（上海）、杭州金融云、上海金融云|2018年10月23日|2018年10月23日至2019年3月1日|
-|华北1（青岛）、华东1（杭州）、华南1（深圳）、深圳金融云|2018年11月1日|
-|其它地域|2018年11月15日起各地域陆续开放|
+|地域|升级日期|
+|--|----|
+|新加坡、马来西亚、印度尼西亚|2019年1月底|
+|日本、澳洲、印度、张北、呼和浩特|2019年2月底|
+|成都、伦敦|2019年3月底|
 
 ## 功能说明 {#section_ovx_hcv_lfb .section}
 
 -   **SQL审计日志**：记录对数据库执行的所有操作。通过审计日志记录，您可以对数据库进行故障分析、行为分析、安全审计等操作。
 -   **增强搜索**：可以按照数据库、用户、客户端IP、线程ID、执行时长、扫描行数等进行多维度检索，并支持导出和下载搜索结果。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969513817_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123206913817_zh-CN.png)
 
 -   **SQL分析**：新增SQL分析功能，可以对指定时间段的SQL日志进行可视化交互式分析，找出异常SQL，定位性能问题。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969513818_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123206913818_zh-CN.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969513819_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123206913819_zh-CN.png)
 
 -   **降低成本**：采用新的列式存储和压缩技术，大幅降低了SQL日志存储空间，平均可帮您节省大约60%的成本。SQL洞察功能的单价为¥0.008/GB，按小时扣费。
 
@@ -34,30 +33,38 @@
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
+
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155123206937169_zh-CN.png)
+
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**SQL洞察**。
 5.  单击**立即开通**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969513750_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123206913750_zh-CN.png)
 
-6.  选择SQL审计日志的保存时长，单击**开通服务**。系统将自动开始计费（¥0.008/GB，按小时扣费）。
+6.  选择SQL审计日志的保存时长，单击**开通服务**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969513755_zh-CN.png)
+    -   试用版：审计日志仅保存一天，即只能查询一天范围内的数据；不支持数据导出等高级功能；不保障数据完整性。
+    -   30天或以上：按小时扣费，每小时每GB 0.008元。
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123206913755_zh-CN.png)
 
 
 ## 修改SQL日志的存储时长 {#section_sgz_q13_mfb .section}
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
+
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155123206937169_zh-CN.png)
+
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**SQL洞察**。
 5.  单击**服务设置**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969513804_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123207013804_zh-CN.png)
 
 6.  修改存储时长。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969513805_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123207013805_zh-CN.png)
 
 
 ## 关闭SQL洞察 {#section_f4b_sb3_mfb .section}
@@ -68,23 +75,26 @@ SQL洞察功能关闭后，SQL审计日志会被清空。请将SQL审计日志�
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
+
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155123206937169_zh-CN.png)
+
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**SQL洞察**。
 5.  单击**导出**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969513823_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123207013823_zh-CN.png)
 
 6.  在弹出的对话框中，单击**确定**。
 7.  导出完成后，在**导出列表**中，下载已导出的文件并妥善保存。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969513831_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123207013831_zh-CN.png)
 
 8.  单击**服务设置**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969513804_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123207013804_zh-CN.png)
 
 9.  关闭SQL洞察的开关。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/154399969613807_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123207013807_zh-CN.png)
 
 
