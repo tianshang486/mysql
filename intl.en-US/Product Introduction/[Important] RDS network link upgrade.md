@@ -22,7 +22,7 @@ To check whether an instance is in high-security mode \(database proxy mode\), p
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target instance is located.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155128312637659_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155128332037659_en-US.png)
 
 3.  Locate the target instance and click the instance ID.
 4.  In the left-side navigation pane, click **Connection Options**. Check the **Database Proxy Status \(High-Security Mode\)** field.
@@ -52,7 +52,10 @@ During the upgrade, the RDS instance being upgraded will be disconnected for abo
 
 ## Upgrade method 2 {#section_gdh_ztr_mgb .section}
 
-1.  On the **Connection Options** page, click the slider next to **Database Proxy Status \(High-Security Mode\)**.
+1.  On the **Database Proxy** page, click the slider next to **Database Proxy Status \(High-Security Mode\)**.
+
+    **Note:** This slider is displayed only if the access mode of the instance is high-security mode \(database proxy mode\).
+
 2.  In the displayed dialog box, click **Confirm**.
 3.  Check that services are running properly.
 
