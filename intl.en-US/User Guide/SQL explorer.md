@@ -10,16 +10,17 @@ After the upgrade time, new and existing instances will both support the SQL exp
 
 |Regions|Upgrade time|
 |-------|------------|
+|China \(Hangzhou, Shanghai, Qingdao, Beijing, Shenzhen, Hong Kong\)|By of end of December, 2018|
 |Singapore, Malaysia, and Indonesia|By the end of January, 2019|
 |Japan, Australia, India, China \(Zhangjiakou\), and China \(Hohhot\)|By the end of February, 2019|
-|China \(Chengdu\) and London|By the end of March, 2019|
+|London|By the end of March, 2019|
 
 ## Features {#section_ovx_hcv_lfb .section}
 
 -   **SQL log**: SQL log records all operations that have been performed on databases. With SQL log, you can do database troubleshooting, action analysis, and security audit.
 -   **Enhanced search**: You can search data by database, user, client ID, thread ID, execution time, or the number of scanned rows. You can also export and download the search results.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155122863313817_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123358313817_en-US.png)
 
 -   **SQL analysis**: This new feature provides visualized interactive analysis of SQL log of a specified time period. You can use this feature to locate abnormal SQL statements and performance issues.
 -   **Cost reduction**: SQL explorer adopts the column-based storage and compression technology to reduce the SQL log space usage and reduce storage costs by about 60%. The hourly fee for SQL explorer is RMB 0.008/GB.
@@ -32,11 +33,11 @@ After the upgrade time, new and existing instances will both support the SQL exp
 4.  In the left-side navigation pane, select **SQL Explorer**.
 5.  Click **Activate Now**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155122863313750_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123358313750_en-US.png)
 
 6.  Specify the SQL log storage duration \(for how long you want to keep the SQL log\), and click **Activate**. The system then automatically starts charging an hourly fee of RMB 0.008/GB.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155122863313755_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123358313755_en-US.png)
 
 
 ## Modify the SQL log storage duration {#section_sgz_q13_mfb .section}
@@ -47,11 +48,11 @@ After the upgrade time, new and existing instances will both support the SQL exp
 4.  In the left-side navigation pane, select **SQL Explorer**.
 5.  Click **Service Settings**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155122863413804_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123358313804_en-US.png)
 
 6.  Modify the storage duration.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155122863413805_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123358313805_en-US.png)
 
 
 ## Disable SQL explorer {#section_f4b_sb3_mfb .section}
@@ -66,19 +67,19 @@ If you disable the SQL explorer function, the existing SQL log will be deleted. 
 4.  In the left-side navigation pane, select **SQL Explorer**.
 5.  Click **Export**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155122863413823_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123358313823_en-US.png)
 
 6.  Click **OK** in the dialog box.
 7.  After the export process is complete, click **View Exported List** and then download the log file.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155122863413831_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123358313831_en-US.png)
 
 8.  Click **Service Settings**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155122863413804_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123358313804_en-US.png)
 
 9.  Click the toggle to disable the SQL explorer function.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155122863413807_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/155123358313807_en-US.png)
 
 
