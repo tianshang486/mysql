@@ -1,17 +1,21 @@
 # 恢复MySQL数据 {#concept_vrh_qp4_ydb .concept}
 
-有备份的情况下可以使用备份进行数据修复，恢复MySQL的数据。
+RDS for MySQL实例在有备份的情况下可以使用备份进行数据修复，恢复MySQL的数据。
 
-您可以通过以下方式恢复RDS for MySQL的数据：
+您可以通过以下方式恢复RDS for MySQL实例的数据：
 
--   方式一：恢复到一个新实例，经过验证后，再将数据迁移到原实例。本文介绍这种方式。此功能原名为克隆实例。
+-   方式一：恢复到一个新实例，经过验证后，再将数据迁移到原实例，此功能原名为克隆实例。本文介绍这种方式。
 
-    恢复的内容包括数据库信息、账号信息和实例设置，例如，白名单设置、备份设置、参数设置等。您可以选择按备份集恢复或者按时间点恢复。
-
-    **说明：** 单库逻辑备份的恢复方法请参见[RDS for MySQL 逻辑备份文件恢复到自建数据库](https://help.aliyun.com/document_detail/97438.html#concept-zql-2c5-vfb)。
+    **说明：** 单库逻辑备份的恢复方法请参见[RDS for MySQL 逻辑备份文件恢复到自建数据库](../cn.zh-CN/常见问题/数据备份__恢复/RDS for MySQL 逻辑备份文件恢复到自建数据库.md#)。
 
 -   方式二：恢复单库和单表的数据到原实例或新实例。具体请参见[MySQL单库单表恢复](cn.zh-CN/RDS for MySQL 用户指南/恢复数据/MySQL单库单表恢复.md#)。
 -   方式三：直接恢复到原实例。具体请参见[覆盖性恢复](cn.zh-CN/RDS for MySQL 用户指南/恢复数据/覆盖性恢复.md#)。
+
+## 注意事项 {#section_ng5_ms5_xgb .section}
+
+-   新实例的白名单设置、备份设置、参数设置和当前实例保持一致。
+-   新实例内的数据信息与备份文件或时间点当时的信息一致。
+-   新实例带有所使用备份文件或时间点当时的账号信息。
 
 ## 计费方式 {#section_uh5_4bq_w2b .section}
 
@@ -31,7 +35,7 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154829377336543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155134127836543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在左侧导航栏中，选择备份恢复。
@@ -131,7 +135,7 @@ RDS实例有以下规格族：
     -   在已选择对象框中，将鼠标放在需要修改的对象上面，单击**编辑**，修改迁移后的对象名称。
     -   使用数据传输服务提供的库表映射功能，将待迁移对象迁移到目标库中的另外一个对象名的对象中。
     -   重命名目标库中跟迁移对象同名的对象。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15482937733949_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15513412783949_zh-CN.png)
 
 8.  单击**预检查并启动**。
 
@@ -141,11 +145,11 @@ RDS实例有以下规格族：
 
 9.  若系统显示预检查失败结果，单击检测结果为失败的检测项后的**i**，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据迁移任务列表中选择该任务，并重新进行预检查。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15482937733951_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15513412793951_zh-CN.png)
 
 10. 错误排查完毕后，在迁移任务列表页面，选择新创建的迁移任务，单击**启动**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15482937733952_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15513412793952_zh-CN.png)
 
 11. 若系统显示预检查通过信息，单击**确定**。
 12. 在购买配置确认页面，确认配置信息并勾选**《数据传输（按量付费）服务条款》**，单击**立即购买并启动**。
