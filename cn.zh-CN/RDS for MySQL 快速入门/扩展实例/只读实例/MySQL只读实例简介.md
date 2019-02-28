@@ -15,7 +15,7 @@
     -   MySQL 5.6
 -   只读实例为单节点的架构（没有备节点）。
 
-## 只读实例与备实例、灾备实例的区别 {#section_ecg_2mb_3gb .section}
+## 只读实例、备实例和灾备实例三者之间的区别 {#section_ecg_2mb_3gb .section}
 
 -   只读实例和主备实例在同一地域，可以在不同可用区；备实例和主实例在同一个地域；[灾备实例](intl.zh-CN/RDS for MySQL 快速入门/扩展实例/灾备实例.md#)和主备实例在不同地域。
 -   只读实例可以根据需要创建最多10个；备实例数量是固定的1~2个（高可用版1个，金融版2个）；灾备实例是不同地域的一主一备。
@@ -23,7 +23,7 @@
 
 只读实例、主备实例和灾备实例拓扑图如下。
 
-![只读实例、主备实例和灾备实例拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7826/15511597216089_zh-CN.png)
+![只读实例、主备实例和灾备实例拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7826/15513434556089_zh-CN.png)
 
 ## 计费 {#section_fwf_5p5_vdb .section}
 
