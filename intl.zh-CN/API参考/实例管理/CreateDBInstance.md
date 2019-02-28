@@ -1,6 +1,6 @@
-# CreateDBInstance {#doc_api_1015898 .reference}
+# CreateDBInstance {#doc_api_1030300 .reference}
 
-该接口用于创建一个RDS实例。
+调用CreateDBInstance接口创建一个RDS实例。
 
 关于RDS实例的规格，请参见[实例规格表](~~26312~~)。
 
@@ -18,7 +18,7 @@
 |RegionId|String|是|cn-hangzhou|地域ID，长度不超过50个字符，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
 
  |
-|Engine|String|是|MySQL|数据库类型，取值范围为：
+|Engine|String|是|MySQL|数据库类型，取值：
 
  -   **MySQL**；
 -   **SQLServer**；
@@ -27,7 +27,7 @@
 -   **MariaDB**。
 
  |
-|EngineVersion|String|是|5.6|数据库版本，取值如下：
+|EngineVersion|String|是|5.6|数据库版本，取值：
 
  -   MySQL：**5.5/5.6/5.7**；
 -   SQLServer：**2008r2/2012/2012\_ent\_ha/2012\_std\_ha/2012\_web/2016\_ent\_ha/2016\_std\_ha/2016\_web/2017\_ent**；
@@ -39,40 +39,41 @@
 |DBInstanceClass|String|是|rds.mys2.small|实例规格，详见[实例规格表](~~26312~~)。
 
  |
-|DBInstanceStorage|Integer|是|20|实例存储空间，取值范围如下：
+|DBInstanceStorage|Integer|是|20|实例存储空间，取值：
 
- -   MySQL/PostgreSQL/PPAS 双机高可用版： **5-2000**；
--   MySQL 5.7 云盘版/MariaDB：**20-1000**；
--   SQL Server 2008R2：**10-2000**；
--   SQL Server 2012/2016/2017：**20-3000**。
+ -   MySQL/PostgreSQL/PPAS 双机高可用版： **5~2000**；
+-   MySQL 5.7 云盘版/MariaDB：**20~1000**；
+-   SQL Server 2008R2：**10~2000**；
+-   SQL Server 2012/2016/2017：**20~3000**。
 
  每5G进行递增，单位：GB。详见[实例规格表](~~26312~~)。
 
  |
-|DBInstanceNetType|String|是|Internet|实例的网络连接类型：
+|DBInstanceNetType|String|是|Internet|实例的网络连接类型，取值：
 
  -   **Internet**：公网连接；
 -   **Intranet**：内网连接。
 
  |
-|SecurityIPList|String|是|10.23.12.27/25|该实例的[IP白名单](~~43185~~)：
+|SecurityIPList|String|是|10.23.12.27/25|该实例的[IP白名单](~~43185~~)。
 
- -   多个IP之间以逗号隔开，且不可重复，最多可添加1000个IP。
--   支持格式：%，0.0.0.0/0，10.23.12.24（IP），或者10.23.12.24/24（CIDR模式，无类域间路由，/24表示地址中前缀的长度，范围1~32）。
+ **说明：** 
 
- **说明：** 0.0.0.0/0，表示不设置IP白名单，任何地址都可以访问实例，属于高危操作，请谨慎设置。
+-   多个IP之间以英文逗号“,”隔开，且不可重复，最多可添加1000个IP；
+-   支持格式：%，0.0.0.0/0，10.23.12.24（IP），或者10.23.12.24/24（CIDR模式，无类域间路由，/24表示地址中前缀的长度，范围1~32）；
+-   0.0.0.0/0，表示不设置IP白名单，任何地址都可以访问实例，属于高危操作，请谨慎设置。
 
  |
-|PayType|String|是|Postpaid|实例的付费类型：
+|PayType|String|是|Postpaid|实例的付费类型，取值：
 
  -   **Postpaid**：后付费（按量付费）；
 -   **Prepaid**：预付费（包年包月）。
 
  |
-|SystemDBCharset|String|否|GBK|字符集，取值范围限定如下字符集：
+|SystemDBCharset|String|否|GBK|字符集，取值：
 
- -   MySQL类型：**utf8、gbk、latin1、utf8mb4**（MySQL 5.5、5.6和5.7）；
--   SQLServer类型：**Chinese\_PRC\_CI\_AS、Chinese\_PRC\_CS\_AS、SQL\_Latin1\_General\_CP1\_CI\_AS、SQL\_Latin1\_General\_CP1\_CS\_AS、Chinese\_PRC\_BIN**。
+ -   MySQL/MariaDB实例：**utf8、gbk、latin1、utf8mb4**；
+-   SQL Server实例：**Chinese\_PRC\_CI\_AS、Chinese\_PRC\_CS\_AS、SQL\_Latin1\_General\_CP1\_CI\_AS、SQL\_Latin1\_General\_CP1\_CS\_AS、Chinese\_PRC\_BIN**。
 
  |
 |DBInstanceDescription|String|否|测试数据库|实例的描述或备注信息。
@@ -92,10 +93,10 @@
  **说明：** 如果数据库类型为MariaDB，该参数必填。
 
  |
-|InstanceNetworkType|String|否|Classic|实例的网络类型：
+|InstanceNetworkType|String|否|Classic|实例的网络类型，取值：
 
  -   **VPC**：VPC网络；
--   **Classic**：经典网络类型。
+-   **Classic**：经典网络。
 
  默认创建经典网络类型的实例。
 
@@ -108,7 +109,7 @@
 -   如果数据库类型为MariaDB，该参数必填。
 
  |
-|ConnectionMode|String|否|Performance|实例的访问模式：
+|ConnectionMode|String|否|Performance|实例的访问模式，取值：
 
  -   **Standard**：标准访问模式；
 -   **Safe**：数据库代理模式。
@@ -123,23 +124,26 @@
  **说明：** 如果数据库类型为MariaDB，该参数必填。
 
  |
-|VSwitchId|String|否|vsw-xxxxxxxxxxx|VSwitch Id，多个值用英文逗号“,”隔开。
+|VSwitchId|String|否|vsw-xxxxxxxxxxx|VSwitch Id。
 
- **说明：** 如果数据库类型为MariaDB，该参数必填。
+ **说明：** 
+
+-   多个值用英文逗号“,”隔开；
+-   如果数据库类型为MariaDB，该参数必填。
 
  |
-|PrivateIpAddress|String|否|无|用户可以指定**VSwitchId**下的当前实例读写分离链路的vpcIP，如果不输入，系统通过vpcId和VSwitchId自动分配。
+|PrivateIpAddress|String|否|172.16.201.69|用户可以指定**VSwitchId**下的当前实例读写分离链路的**vpcIP**，如果不输入，系统通过**vpcId**和**VSwitchId**自动分配。
 
  |
-|UsedTime|String|否|2|指定购买时长：
+|UsedTime|String|否|2|指定购买时长，取值：
 
- -   当参数**Period**为**Year**时，UsedTime取值为**1-9**；
--   当参数**Period**为**Month**时，UsedTime取值为**1/2/3**。
+ -   当参数**Period**为**Year**时，UsedTime取值为**1~9**；
+-   当参数**Period**为**Month**时，UsedTime取值为**1~3**。
 
  **说明：** 若付费类型为**Prepaid**则该参数必须传入。
 
  |
-|Period|String|否|Year|指定预付费实例为包年或者包月类型：
+|Period|String|否|Year|指定预付费实例为包年或者包月类型，取值：
 
  -   **Year**：包年；
 -   **Month**：包月。
@@ -147,7 +151,7 @@
  **说明：** 若付费类型为**Prepaid**则该参数必须传入。
 
  |
-|DBInstanceStorageType|String|否|cloud\_ssd|实例存储类型：
+|DBInstanceStorageType|String|否|cloud\_ssd|实例存储类型，取值：
 
  -   **local\_ssd**：本地SSD盘（推荐）；
 -   **cloud\_ssd**：SSD云盘。
@@ -183,7 +187,8 @@
 
 ``` {#request_demo}
 
-http(s)://[Endpoint]/?RegionId=cn-hangzhou
+http(s)://rds.aliyuncs.com/?Action=CreateDBInstance
+&RegionId=cn-hangzhou
 &Engine=MySQL
 &EngineVersion=5.6
 &DBInstanceClass=rds.mys2.small
