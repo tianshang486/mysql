@@ -81,7 +81,7 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155115893536543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155134312636543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/设置白名单.md)和[创建账号](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/申请外网地址.md)。然后就可以[连接实例](intl.zh-CN/RDS for MySQL 快速入门/连接实例.md)。
 
@@ -96,5 +96,5 @@
 
 |API|描述|
 |---|--|
-|[../../../../../dita-oss-bucket/SP\_60/DNMYSQ1851749/ZH-CN\_TP\_8086.md\#](../../../../../intl.zh-CN/API参考/实例管理/CreateDBInstance.md#)|创建RDS实例|
+|[CreateDBInstance](../../../../../intl.zh-CN/API参考/实例管理/CreateDBInstance.md#)|创建RDS实例|
 
