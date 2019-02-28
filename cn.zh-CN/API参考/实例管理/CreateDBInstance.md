@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1030278 .reference}
+# CreateDBInstance {#doc_api_1030281 .reference}
 
 调用CreateDBInstance接口创建一个RDS实例。
 
@@ -63,7 +63,7 @@
 -   支持格式：%，0.0.0.0/0，10.23.12.24（IP），或者10.23.12.24/24（CIDR模式，无类域间路由，/24表示地址中前缀的长度，范围1~32）；
 -   0.0.0.0/0，表示不设置IP白名单，任何地址都可以访问实例，属于高危操作，请谨慎设置。
 
-\*yyyy-MM-dd\*T\*HH:mm\*Z
+\_yyyy-MM-dd\_T\_HH:mm\_Z
 
  |
 |PayType|String|是|Postpaid|实例的付费类型，取值：
