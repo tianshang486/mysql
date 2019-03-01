@@ -1,6 +1,6 @@
 # 【重要】RDS网络链路升级说明 {#concept_vyz_wf2_wfb .concept}
 
-为提供更出色的稳定性和性能，阿里云将对部分RDS实例进行网络连接模式升级，也即从高安全模式（数据库代理）升级到高性能模式（标准模式）。
+为提供更出色的稳定性和性能，阿里云将对部分RDS实例进行网络连接模式升级，即从高安全模式（数据库代理）升级到高性能模式（标准模式）。
 
 ## 不升级的风险 {#section_v4k_gsj_ngb .section}
 
@@ -18,7 +18,7 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140787037659_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140813437659_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**数据库连接**，查看**数据库代理状态（原高安全模式）**。
@@ -38,11 +38,11 @@
 
 1.  在**数据库连接**页面，单击**切换访问模式**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140787137661_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140813437661_zh-CN.png)
 
 2.  在弹出的对话框中，单击**确认**，以关闭数据库代理。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140787137662_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140813437662_zh-CN.png)
 
 3.  确认业务运行正常。
 
@@ -55,11 +55,11 @@
 
 1.  在**数据库代理**页面，单击**已开通**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140787137721_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140813437721_zh-CN.png)
 
 2.  在弹出的对话框中，单击**确认**，以关闭数据库代理。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140787137662_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140813437662_zh-CN.png)
 
 3.  确认业务运行正常。
 
@@ -77,7 +77,7 @@
     -   如果**开始时间**和**计划切换时间**为空，表示需要您主动设置时间，请务必点击**自定义操作时间**进行设置。
     -   如果不修改，则按照默认的**计划切换时间**（默认是在实例的可运维时间内）进行升级。
     -   不同的实例可以设置不同的**计划切换时间**。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140787137740_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140813437740_zh-CN.png)
 
 4.  确认**数据库代理状态（原高安全模式）**为**未开通**。
 5.  确认业务运行正常。
