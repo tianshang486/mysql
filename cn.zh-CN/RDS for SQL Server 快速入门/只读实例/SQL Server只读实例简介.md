@@ -15,7 +15,7 @@
 
 只读实例拓扑图如下图所示。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7826/15514218466089_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7826/15514220346089_zh-CN.png)
 
 ## 计费 {#section_fwf_5p5_vdb .section}
 
