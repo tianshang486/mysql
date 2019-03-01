@@ -13,12 +13,12 @@
 
 ## 升级范围 {#section_hzy_lkr_mgb .section}
 
-处于高安全模式（数据库代理模式）且未开通读写分离的RDS for MyQL、PostgreSQL、PPAS实例和HybridDB for PostgreSQL实例（不涉及RDS for SQL Server实例）。具体判定方式如下：
+处于高安全模式（数据库代理模式）且未开通读写分离的RDS for MySQL、PostgreSQL、PPAS实例和HybridDB for PostgreSQL实例（不涉及RDS for SQL Server实例）。具体判定方式如下：
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/154830981637659_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140761537659_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**数据库连接**，查看**数据库代理状态（原高安全模式）**。
@@ -38,11 +38,11 @@
 
 1.  在**数据库连接**页面，单击**切换访问模式**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/154830981637661_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140761537661_zh-CN.png)
 
 2.  在弹出的对话框中，单击**确认**，以关闭数据库代理。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/154830981637662_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140761537662_zh-CN.png)
 
 3.  确认业务运行正常。
 
@@ -55,11 +55,11 @@
 
 1.  在**数据库代理**页面，单击**已开通**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/154830981637721_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140761537721_zh-CN.png)
 
 2.  在弹出的对话框中，单击**确认**，以关闭数据库代理。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/154830981637662_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140761537662_zh-CN.png)
 
 3.  确认业务运行正常。
 
@@ -74,10 +74,10 @@
 
     **说明：** 
 
+    -   如果**开始时间**和**计划切换时间**为空，表示需要您主动设置时间，请务必点击**自定义操作时间**进行设置。
     -   如果不修改，则按照默认的**计划切换时间**（默认是在实例的可运维时间内）进行升级。
-    -   如果**计划切换时间**为空，请务必点击**自定义操作时间**进行设置。
     -   不同的实例可以设置不同的**计划切换时间**。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/154830981637740_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/155140761537740_zh-CN.png)
 
 4.  确认**数据库代理状态（原高安全模式）**为**未开通**。
 5.  确认业务运行正常。
