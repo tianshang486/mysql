@@ -35,7 +35,7 @@ RDS for MySQL实例在有备份的情况下可以使用备份进行数据修复�
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155134127836543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155140630136543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在左侧导航栏中，选择备份恢复。
@@ -117,6 +117,8 @@ RDS实例有以下规格族：
         -   **RDS实例ID**：选择新实例的ID。
         -   **数据库账号**：填写新实例的账号。
         -   **数据库密码**：以上账号的密码。
+        **说明：** **实例类型**的选择会影响后续参数的显示，这里请选择**RDS实例**。
+
     -   目标库信息
 
         -   **实例类型**：选择**RDS实例**。
@@ -124,6 +126,8 @@ RDS实例有以下规格族：
         -   **RDS实例ID**：选择原实例的ID。
         -   **数据库账号**：填写原实例的账号。
         -   **数据库密码**：以上账号的密码。
+        **说明：** **实例类型**的选择会影响后续参数的显示，这里请选择**RDS实例**。
+
 5.  单击**授权白名单并进入下一步**。
 6.  选择**结构迁移**和**全量数据迁移**。
 7.  在左侧的**迁移对象**框中，选择要迁移的对象，单击**\>**将这些对象移入已选择对象框中。
@@ -135,7 +139,7 @@ RDS实例有以下规格族：
     -   在已选择对象框中，将鼠标放在需要修改的对象上面，单击**编辑**，修改迁移后的对象名称。
     -   使用数据传输服务提供的库表映射功能，将待迁移对象迁移到目标库中的另外一个对象名的对象中。
     -   重命名目标库中跟迁移对象同名的对象。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15513412783949_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15514063013949_zh-CN.png)
 
 8.  单击**预检查并启动**。
 
@@ -145,11 +149,11 @@ RDS实例有以下规格族：
 
 9.  若系统显示预检查失败结果，单击检测结果为失败的检测项后的**i**，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据迁移任务列表中选择该任务，并重新进行预检查。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15513412793951_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15514063013951_zh-CN.png)
 
 10. 错误排查完毕后，在迁移任务列表页面，选择新创建的迁移任务，单击**启动**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15513412793952_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15514063023952_zh-CN.png)
 
 11. 若系统显示预检查通过信息，单击**确定**。
 12. 在购买配置确认页面，确认配置信息并勾选**《数据传输（按量付费）服务条款》**，单击**立即购买并启动**。
