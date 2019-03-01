@@ -109,7 +109,7 @@ select * from oss_fdw_list_file('t_oss');
 
 ## 辅助功能 {#section_tn2_z3g_wdb .section}
 
-oss\_fdw.rds\_read\_one\_file：在读模式下，指定某个外表匹配的文件。设置后，该外部表在数据导入中只匹配被设置的一个文件。
+oss\_fdw.rds\_read\_one\_file：在读模式下，指定某个外表匹配的文件。设置后，该外部表在数据导入中只匹配这个被设置的文件。
 
 例如，set oss\_fdw.rds\_read\_one\_file = ‘oss\_test/example16.csv.1’;
 
