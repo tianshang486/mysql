@@ -75,9 +75,7 @@ oss\_fdw和其他fdw接口一样，对外部数据OSS中的数据进行封装。
 -   filepath和dir必须指定两个参数中的其中一个，且不能同时指定。
 -   导出模式目前只支持虚拟文件夹的匹配模式，即只支持dir，不支持filepath。
 
-## CREATE FOREIGN TABLE 的导出模式参数 {#section_sxg_t3g_wdb .section}
-
-针对导出模式，新增下列两个参数oss\_flush\_block\_size和oss\_flush\_block\_size。
+## CREATE FOREIGN TABLE的导出模式参数 {#section_sxg_t3g_wdb .section}
 
 -   oss\_flush\_block\_size：单次刷出到OSS的buffer大小，默认32MB，可选范围1到128MB。
 
@@ -85,8 +83,6 @@ oss\_fdw和其他fdw接口一样，对外部数据OSS中的数据进行封装。
 
 -   num\_parallel\_worker：写OSS数据的压缩模式中并行压缩线程的个数，范围1到8，默认并发数3。
 
-
-**说明：** oss\_flush\_block\_size和oss\_flush\_block\_size两个参数对导入模式无效。
 
 ## 辅助函数 {#section_uw1_x3g_wdb .section}
 
