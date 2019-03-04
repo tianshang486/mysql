@@ -1,16 +1,17 @@
 # 创建RDS for MariaDB实例 {#concept_wzp_ncf_vdb .concept}
 
-您可以通过阿里云RDS管理控制台或API创建RDS实例。关于实例计费说明，请参见[计费方式](../intl.zh-CN/云数据库RDS价格/计费方式与收费项.md#)。本文将介绍在RDS管理控制台上创建实例的步骤，关于如何通过API创建实例，请参见[创建RDS实例](../intl.zh-CN/API参考/实例管理/CreateDBInstance.md#)。
+您可以通过阿里云RDS管理控制台或API创建RDS实例。关于实例计费说明，请参见[计费方式](../cn.zh-CN/云数据库RDS价格/计费方式与收费项.md#)。本文将介绍在RDS管理控制台上创建实例的步骤，关于如何通过API创建实例，请参见[创建RDS实例](../cn.zh-CN/API参考/实例管理/CreateDBInstance.md#)。
 
 ## 前提条件 {#section_hyl_tcf_vdb .section}
 
-已注册阿里云账号。具体操作请参见[创建阿里云账号](https://www.alibabacloud.com/help/doc-detail/50482.html)。
+-   已注册阿里云账号。具体操作请参见[注册阿里云账号](https://help.aliyun.com/knowledge_detail/37195.html)。
+-   若您要创建按时付费的实例，请确保您的阿里云账号的余额大于等于100元。
 
 ## 注意事项 {#section_kmf_kkp_mgb .section}
 
 -   包年包月实例无法转为按量付费实例。
--   按量付费实例可以转为包年包月实例，请参见[按量付费转包年包月](../intl.zh-CN/用户指南/计费管理/按量付费转包年包月.md#)。
--   同一个主账号，最多可以创建30个按量付费的RDS实例。如需提高此限额，请[提交工单](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex)申请。
+-   按量付费实例可以转为包年包月实例，请参见[按量付费转包年包月](../cn.zh-CN/RDS for MariaDB TX 用户指南/计费管理/按量付费转包年包月.md#)。
+-   同一个主账号，最多可以创建30个按量付费的RDS实例。如需提高此限额，请[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex)申请。
 
 ## 操作步骤 {#section_o45_5cf_vdb .section}
 
@@ -32,14 +33,15 @@
     |数据库类型|     -   即数据库引擎的类型：MySQL、SQL Server、PostgreSQL、PPAS和MariaDB。此处选择MariaDB。
     -   不同地域支持的数据库类型不同，请以实际界面为准。
  |
-    |版本|指数据库引擎版本。RDS for MariaDB支持的数据库版本为10.3。|
-    |系列|目前RDS for MariaDB支持高可用版。高可用版包括一个主节点和一个备节点，即经典的高可用架构。关于各个系列的详细介绍，请参见[产品系列概述](../intl.zh-CN/云数据库RDS简介/产品系列/产品系列概述.md)。|
-    |网络类型|无需选择。目前MariaDB仅支持专有网络。专有网络也称为VPC（Virtual Private Cloud），是一种隔离的网络环境，安全性和性能均高于传统的经典网络，详情请参见[创建默认专有网络和交换机](https://www.alibabacloud.com/help/zh/doc-detail/65402.htm)。
+    |版本|指MariaDB的版本。RDS for MariaDB支持的版本为10.3。|
+    |系列|目前RDS for MariaDB支持高可用版。高可用版包括一个主节点和一个备节点，即经典的高可用架构。关于各个系列的详细介绍，请参见[产品系列概述](../cn.zh-CN/云数据库RDS简介/产品系列/产品系列概述.md)。|
+    |存储类型|目前RDS for MariaDB支持SSD云盘。关于存储类型的详细介绍，请参见[存储类型](../cn.zh-CN/云数据库RDS简介/存储类型.md)。|
+    |网络类型|无需选择。目前MariaDB仅支持专有网络。专有网络也称为VPC（Virtual Private Cloud），是一种隔离的网络环境，安全性和性能均高于传统的经典网络，详情请参见[创建默认专有网络和交换机](https://help.aliyun.com/document_detail/65402.html)。
 
 **说明：** 请确保RDS实例与需要连接的ECS实例网络类型一致，否则它们无法通过内网互通。
 
 |
-    |规格|每种规格都有对应的CPU核数、内存、最大连接数和最大IOPS。具体请参见[实例规格表](../intl.zh-CN/云数据库RDS简介/实例规格/实例规格表.md#)。RDS实例有以下规格族：
+    |规格|每种规格都有对应的CPU核数、内存、最大连接数和最大IOPS。具体请参见[实例规格表](../cn.zh-CN/云数据库RDS简介/实例规格/实例规格表.md#)。RDS实例有以下规格族：
 
     -   通用型：独享被分配的内存和I/O资源，与同一服务器上的其他通用型实例共享CPU和存储资源。
     -   独享型：独享被分配的CPU、内存、存储和I/O资源。
@@ -59,7 +61,9 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155166302236543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155168384236543_zh-CN.png)
 
-创建实例后，您需要[设置白名单](intl.zh-CN/RDS for MariaDB TX 快速入门/初始化配置/设置白名单.md)和[创建账号](intl.zh-CN/RDS for MariaDB TX 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](https://www.alibabacloud.com/help/zh/doc-detail/97738.htm)。然后就可以[连接实例](intl.zh-CN/RDS for MariaDB TX 快速入门/连接实例.md)。
+创建实例后，您需要[设置白名单](cn.zh-CN/RDS for MariaDB TX 快速入门/初始化配置/设置白名单.md)和[创建账号](cn.zh-CN/RDS for MariaDB TX 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](https://help.aliyun.com/document_detail/97738.html)。然后就可以[连接实例](cn.zh-CN/RDS for MariaDB TX 快速入门/连接实例.md)。
+
+如果连接实例失败，请参见[为什么无法连接RDS？](https://help.aliyun.com/knowledge_detail/91236.html)
 
