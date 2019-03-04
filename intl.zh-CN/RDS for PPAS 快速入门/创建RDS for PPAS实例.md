@@ -25,10 +25,14 @@
     -   请确保RDS实例与需要连接的ECS实例创建于同一个地域，否则它们无法通过内网互通，只能通过外网互通，无法发挥最佳性能。
 |
     |资源组|实例所属的资源组。|
-    |数据库类型|     -   即数据库引擎的类型：MySQL、SQL Server、PostgreSQL和PPAS。
-    -   不同地域支持的数据库类型不同，请以实际界面为准。
+    |数据库类型| 即数据库引擎的类型：MySQL、SQL Server、PostgreSQL、PPAS和MariaDB。
+
+ **说明：** 不同地域支持的数据库类型不同，请以实际界面为准。
+
  |
-    |版本|指数据库版本。RDS for PPAS支持的数据库版本包括PPAS 9.3、PPAS 10。不同地域所支持的数据库版本不同，请以实际界面为准。|
+    |版本|指PPAS的版本。RDS for PPAS支持的版本包括PPAS 9.3、PPAS 10。**说明：** 不同地域所支持的版本不同，请以实际界面为准。
+
+|
     |系列| 高可用版：一个主节点和一个备节点，经典高可用架构。关于各个系列的详细介绍，请参见[产品系列概述](../intl.zh-CN/云数据库RDS简介/产品系列/产品系列概述.md)。
 
  不同数据库版本支持的系列不同，请以实际界面为准。
@@ -63,7 +67,7 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154780241636543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155168487936543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](intl.zh-CN/RDS for PPAS 快速入门/初始化配置/设置白名单.md)和[创建账号](intl.zh-CN/RDS for PPAS 快速入门/初始化配置/创建数据库和账号.md)，如果是通过外网连接，还需要[申请外网地址](https://www.alibabacloud.com/help/zh/doc-detail/97738.htm)。然后就可以[连接实例](intl.zh-CN/RDS for PPAS 快速入门/连接实例.md)。
 
@@ -71,5 +75,5 @@
 
 |API|描述|
 |---|--|
-|[CreateDBInstance](../intl.zh-CN/API参考/实例管理/CreateDBInstance.md#)|创建RDS实例|
+|[../DNMYSQ1851749/ZH-CN\_TP\_8086.md\#](../intl.zh-CN/API参考/实例管理/CreateDBInstance.md#)|创建RDS实例|
 
