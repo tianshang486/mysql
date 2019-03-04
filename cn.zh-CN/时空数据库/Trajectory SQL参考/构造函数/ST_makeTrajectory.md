@@ -22,10 +22,10 @@ trajectory ST_makeTrajectory (leaftype type, geometry[] points, timestamp[] time
 |end|轨迹的结束时间。|
 |timeline|轨迹的时间序列，数量必须和linestring的点数量一致。|
 |attrs\_json|属性数据信息字符串，json格式。|
-| attr\_field\_names|表示轨迹属性的所有字段名称（数组）|
-|x|用于构建几何对象的x坐标（数组）|
-|y|用于构建几何对象的y坐标（数组）|
-|srid|轨迹空间参考。必须存在|
+| attr\_field\_names|表示轨迹属性的所有字段名称（数组）。|
+|x|用于构建几何对象的x坐标（数组）。|
+|y|用于构建几何对象的y坐标（数组）。|
+|srid|轨迹空间参考。必须存在。|
 
 attr\_json的格式为`{"leafcount":3,"attributes":{"velocity":{"type":"integer","length":2,"nullable":true,"value":[120,null,140]},"accuracy":{"type":"float","length":4,"nullable":false,"value":[120,130,140]},"bearing":{"type":"float","length":8,"nullable":false,"value":[120,130,140]},"vesname":{"type":"string","length":20,"nullable":true,"value":["dsff","fgsd",null]},"active":{"type":"timestamp","nullable":false,"value":["Fri Jan 01 14:30:00 2010","Fri Jan 01 15:00:00 2010","Fri Jan 01 15:30:00 2010"]}},"events":[{"1":"Fri Jan 01 14:30:00 2010"},{"2":"Fri Jan 01 15:00:00 2010"},{"3":"Fri Jan 01 15:30:00 2010"}]}` 
 
