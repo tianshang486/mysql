@@ -1,6 +1,6 @@
 # ST\_IsGeoreferenced {#reference_hj5_z24_qfb .reference}
 
-获取raster对象是否已被地理参考。boolean格式的返回结果为：”t” 或 “f”。
+获取raster对象是否已被地理参考。boolean格式的返回结果为：“t” 或 “f”。
 
 ## 语法 {#section_ysj_vhn_qfb .section}
 
