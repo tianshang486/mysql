@@ -39,9 +39,9 @@ attr\_json的格式为`{"leafcount":3,"attributes":{"velocity":{"type":"integer"
 -   type为字段类型，支持integer，float，string, timestamp，bool五种数据类型;
 -   length为字段长度，integer支持长度为1、2、4、8; float支持长度为4、8；string可自定义长度，不指定时默认长度为64，最大长度为253，该长度值为字符实际个数，不包含末尾的结束标识；timestamp长度可不指定，默认为8；bool长度可不指定，默认为1;
 -   nullable为字段是否允许为空，true为允许为空，false不允许为空，默认值为true；
--   value为字段值序列，用json数组表达，单个元素值为空用null表达
+-   value为字段值序列，用json数组表达，单个元素值为空用null表达。
 
-**events**为轨迹事件，用json数组表达多个事件，数组元素用json的"key":"value"表达，key为事件类型，value为事件时间。
+**events**为轨迹事件，用json数组表达多个事件，数组元素用json的“key:value”表达，key为事件类型，value为事件时间。
 
 如果传入的时间参数为 timespan 或者 start、end，则会根据spatial中点的个数进行插值。
 
