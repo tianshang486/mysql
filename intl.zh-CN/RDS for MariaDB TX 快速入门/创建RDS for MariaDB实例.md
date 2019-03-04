@@ -32,7 +32,7 @@
     |数据库类型|     -   即数据库引擎的类型：MySQL、SQL Server、PostgreSQL、PPAS和MariaDB。此处选择MariaDB。
     -   不同地域支持的数据库类型不同，请以实际界面为准。
  |
-    |版本|指数据库引擎版本。RDS for MariaDB支持的数据库版本为10.3。|
+    |版本|指MariaDB的版本。RDS for MariaDB支持的版本为10.3。|
     |系列|目前RDS for MariaDB支持高可用版。高可用版包括一个主节点和一个备节点，即经典的高可用架构。关于各个系列的详细介绍，请参见[产品系列概述](../intl.zh-CN/云数据库RDS简介/产品系列/产品系列概述.md)。|
     |网络类型|无需选择。目前MariaDB仅支持专有网络。专有网络也称为VPC（Virtual Private Cloud），是一种隔离的网络环境，安全性和性能均高于传统的经典网络，详情请参见[创建默认专有网络和交换机](https://www.alibabacloud.com/help/zh/doc-detail/65402.htm)。
 
@@ -59,7 +59,7 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155166302236543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155168386936543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](intl.zh-CN/RDS for MariaDB TX 快速入门/初始化配置/设置白名单.md)和[创建账号](intl.zh-CN/RDS for MariaDB TX 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](https://www.alibabacloud.com/help/zh/doc-detail/97738.htm)。然后就可以[连接实例](intl.zh-CN/RDS for MariaDB TX 快速入门/连接实例.md)。
 
