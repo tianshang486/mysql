@@ -5,8 +5,8 @@
 ## 语法 {#section_og1_4hn_qfb .section}
 
 ```
-trajectory ST_attrNullFilter(trajectory traj, cstring attr_field_name);
-trajectory ST_attrNullFilter(trajectory traj, cstring attr_field_name);
+trajectory ST_attrNotNullFilter(trajectory traj, cstring attr_field_name);
+trajectory ST_attrNotNullFilter(trajectory traj, cstring attr_field_name);
 ```
 
 ## 参数 {#section_cxv_qhn_qfb .section}
