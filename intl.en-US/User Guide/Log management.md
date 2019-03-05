@@ -17,10 +17,10 @@ You can use the RDS console to manage logs of MySQL 5.5/5.6, SQL Server 2008 R2,
     |Query item|Content|
     |----------|-------|
     |Error Log|Records the SQL statements that are failed to be executed in the past month.|
-    |Slow SQL Log Details|     -   Records the SQL statements that lasted for over one second \(For MySQL, you can modify this time threshold by modifying the long\_query\_time parameter in Parameters\) in the past month. Similar SQL statements are displayed once only.
+    |Slow SQL Log Details|     -   Records the SQL statements that lasted for over one second \(For MySQL and MariaDB, you can modify this time threshold by modifying the long\_query\_time parameter in Parameters\) in the past month. Similar SQL statements are displayed once only.
     -   The list does not include slow SQL logs of the past two hours. To query these logs, check the **slow\_log\_view** table in the MySQL database.
  |
-    |Slow SQL Log Summary|Provides statistics and analysis reports for SQL statements that lasted for over one second \(For MySQL, you can modify this time threshold by modifying the long\_query\_time parameter in Parameters\) in the past month. |
+    |Slow SQL Log Summary|Provides statistics and analysis reports for SQL statements that lasted for over one second \(For MySQL and MariaDB, you can modify this time threshold by modifying the long\_query\_time parameter in Parameters\) in the past month. |
 
 
 ## Use SQL statements to manage logs {#section_amm_rz4_ydb .section}
