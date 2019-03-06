@@ -1,12 +1,19 @@
 # 通过临时实例恢复SQL Server数据 {#concept_en3_pfn_ydb .concept}
 
-用户对数据库误操作引起的损失可以通过数据恢复功能最大程度地减少。您可以通过临时实例来恢复数据。
+数据恢复功能可以最大程度地减少数据库误操作造成的损失，您可以通过临时实例来恢复数据。
 
-创建临时实例并不影响当前的生产实例，而是提供一个临时实例供数据访问。您需要先将数据恢复到临时实例，验证无误后再回迁到主实例，避免数据恢复对业务造成冲击。
+创建临时实例并不影响当前的生产实例，而是提供一个临时实例供数据访问。您可以先将数据恢复到临时实例，验证无误后再回迁到主实例，减少数据恢复对业务造成的冲击。
+
+## 前提条件 {#section_oqz_thr_zgb .section}
+
+-   本功能适用于以下RDS for SQL Server实例：
+    -   SQL Server 2012企业版基础系列
+    -   SQL Server 2012/2016 Web版
+    -   SQL Server 2008 R2
+-   实例已有数据备份，如需按时间点恢复还需要相应的日志备份。
 
 ## 注意事项 {#section_qn5_l2n_ydb .section}
 
--   仅RDS for SQL Server 2012/2016基础版和RDS for SQL Server 2008 R2版支持临时实例。
 -   临时实例会继承备份文件的账号和密码。
 -   临时实例的网络类型是经典网络。
 -   同一时间仅可生成一个临时实例。如果要创建新的临时实例，需先删除已存在的临时实例。
@@ -17,7 +24,7 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155166284536543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155184094536543_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧菜单栏中单击**备份恢复**。
@@ -77,7 +84,7 @@
 
     -   以下以预检查不通过为例进行描述。如果预检查通过，请直接跳转至步骤18。
 
-16. 若系统显示预检查失败结果，单击检测结果为**失败**后的![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41606/155166284639847_zh-CN.png)，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据**迁移任务列表**中选择该任务，并重新进行预检查。
+16. 若系统显示预检查失败结果，单击检测结果为**失败**后的![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41606/155184094539847_zh-CN.png)，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据**迁移任务列表**中选择该任务，并重新进行预检查。
 
     ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/26207/cn_zh/1496828913256/rds_newuser_image_024.png)
 
