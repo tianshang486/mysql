@@ -1,8 +1,8 @@
-# ModifySQLCollectorPolicy {#doc_api_1043972 .reference}
+# ModifySQLCollectorPolicy {#doc_api_1044027 .reference}
 
 调用ModifySQLCollectorPolicy接口开启或关闭实例的SQL审计功能。
 
-**说明：** 支持的实例版本如下：
+支持的实例版本如下：
 
 -   MySQL 5.5
 -   MySQL 5.6
