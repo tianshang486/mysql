@@ -10,13 +10,13 @@
 
 **说明：** 
 
--   仅PPAS 10.0支持只读实例。
+-   PPAS 10.0支持只读实例，PPAS 9.3不支持。
 -   主实例规格不低于8核32G（独享套餐）。
 -   只读实例为单节点的架构（没有备节点）。
 
 只读实例拓扑图如下图所示。
 
-![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133899/155194586439776_zh-CN.png)
+![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133899/155194901039776_zh-CN.png)
 
 ## 计费 {#section_fwf_5p5_vdb .section}
 
