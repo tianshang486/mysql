@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1030300 .reference}
+# CreateDBInstance {#doc_api_1053113 .reference}
 
 调用CreateDBInstance接口创建一个RDS实例。
 
@@ -85,7 +85,7 @@
 -   可以包含数字、中文、英文、下划线，短横线，长度2~256。
 
  |
-|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过 64 个 ASCII 字符，且该参数值中不能包含非 ASCII 字符。
+|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
 
  |
 |ZoneId|String|否|cn-hangzhou-b|可用区ID。
