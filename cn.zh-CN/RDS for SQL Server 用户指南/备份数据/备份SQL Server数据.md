@@ -45,7 +45,7 @@
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155201632136543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155202658436543_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在菜单中选择 **备份恢复**。
@@ -70,16 +70,18 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155201632136543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155202658436543_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
-
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41600/155201632121680_zh-CN.png)
-
-    **说明：** 单库备份时，选择左侧的数据库，单击**\>**将要备份的数据库加入列表。若您还没有数据库，请先[创建数据库](cn.zh-CN/RDS for SQL Server 用户指南/数据库管理/创建数据库.md#)。
-
 5.  设置好备份方式、备份策略，单击**确定**。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41600/155202658421680_zh-CN.png)
+
+    **说明：** 如果是**全量备份** \> **单库备份**，请在左侧选择要备份的数据库，单击**\>**将要备份的数据库加入列表。若您还没有数据库，请先[创建数据库](cn.zh-CN/RDS for SQL Server 用户指南/数据库管理/创建数据库.md#)。
+
+    ![单库备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41600/155202658440346_zh-CN.png)
+
 
 ## 常见问题 {#section_h54_lrx_pgb .section}
 
