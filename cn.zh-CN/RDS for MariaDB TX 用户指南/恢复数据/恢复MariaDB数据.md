@@ -36,7 +36,7 @@ RDS for MariaDB TX实例在有备份的情况下可以使用备份进行数据�
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155166317036543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155203124036543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在左侧导航栏中，选择备份恢复。
@@ -51,7 +51,7 @@ RDS for MariaDB TX实例在有备份的情况下可以使用备份进行数据�
 
     |参数名称|说明|
     |----|--|
-    |**还原方式**|     -   **按时间点**：可以设置为日志备份保留时间内的任意时间点。如要查看或修改日志备份保留时间，请参见[备份数据](cn.zh-CN/RDS for MariaDB TX 用户指南/备份数据/备份MariaDB数据.md#)。
+    |**还原方式**|     -   **按时间点**：可以设置为日志备份保留时间内的任意时间点。如要查看或修改日志备份保留时间，请参见[备份数据](cn.zh-CN/RDS for MariaDB TX 用户指南/备份数据/自动备份MariaDB数据.md#)。
     -   **按备份集**
  **说明：** 只有开启了日志备份，才会显示**按时间点**。
 
@@ -122,11 +122,11 @@ RDS实例有以下规格族：
         -   **数据库密码**：以上账号的密码。
         **说明：** **实例类型**和**RDS实例ID**的选择会影响其他参数的显示。
 
-    ![任务截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/63824/155166317039850_zh-CN.png)
+    ![任务截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/63824/155203124039850_zh-CN.png)
 
 5.  单击**授权白名单并进入下一步**。
 6.  选择**结构迁移**和**全量数据迁移**。
-7.  在左侧的**迁移对象**框中，选择要迁移的对象，单击**\>**将这些对象移入已选择对象框中。
+7.  在左侧的**迁移对象**框中，选择要迁移的对象，单击**\>**将这些对象移入**已选择对象**框中。
 
     **说明：** DTS会做**同名对象存在性检查**，如果目标RDS实例中已经存在跟待迁移的对象同名的对象，会导致迁移失败。
 
@@ -135,7 +135,7 @@ RDS实例有以下规格族：
     -   在已选择对象框中，将鼠标放在需要修改的对象上面，单击**编辑**，修改迁移后的对象名称。
     -   使用数据传输服务提供的库表映射功能，将待迁移对象迁移到目标库中的另外一个对象名的对象中。
     -   重命名目标库中跟迁移对象同名的对象。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15516631703949_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15520312403949_zh-CN.png)
 
 8.  单击**预检查并启动**。
 
@@ -143,13 +143,13 @@ RDS实例有以下规格族：
 
     -   以下以预检查不通过为例。如果预检查通过，请直接跳转至步骤10。
 
-9.  若系统显示预检查失败结果，单击检测结果为失败的检测项后的**!**，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据迁移任务列表中选择该任务，并重新进行预检查。
+9.  若系统显示预检查失败结果，单击检测结果为失败的检测项后的![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41850/155203124040361_zh-CN.png)，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据迁移任务列表中选择该任务，并重新进行预检查。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15516631703951_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15520312403951_zh-CN.png)
 
 10. 错误排查完毕后，在迁移任务列表页面，选择新创建的迁移任务，单击**启动**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15516631703952_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15520312403952_zh-CN.png)
 
 11. 若系统显示预检查通过信息，单击**确定**。
 12. 在购买配置确认页面，确认配置信息并勾选**《数据传输（按量付费）服务条款》**，单击**立即购买并启动**。
