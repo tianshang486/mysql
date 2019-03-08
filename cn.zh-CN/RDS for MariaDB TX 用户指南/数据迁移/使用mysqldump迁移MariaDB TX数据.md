@@ -1,12 +1,12 @@
 # 使用mysqldump迁移MariaDB TX数据 {#concept_t3k_hjb_wfb .concept}
 
-使用 mysqldump 工具可以迁移数据库，本文将介绍详细的操作步骤。
+使用mysqldump工具可以迁移数据库，本文将介绍详细的操作步骤。
 
 ## 背景信息 {#section_ivh_3w1_wfb .section}
 
-由于 RDS 提供的关系型数据库服务与原生的数据库服务完全兼容，所以对用户来说，将原有数据库迁移到 RDS 实例的过程，与从一个 MariaDB 服务器迁移到另外一台 MariaDB 服务器的过程基本类似。
+由于RDS提供的关系型数据库服务与原生的数据库服务完全兼容，所以对用户来说，将原有数据库迁移到RDS实例的过程，与从一个MariaDB服务器迁移到另外一台MariaDB服务器的过程基本类似。
 
-本文使用Linux7和MariaDB 10.2.4版本为例演示如何迁移到RDS for MariaDB TX实例。
+本文以本地Linux7和MariaDB 10.2.4版本为例，演示如何从本地迁移到RDS for MariaDB TX。
 
 ## 注意事项 {#section_mwl_f5g_cgb .section}
 
@@ -14,13 +14,13 @@
 
 ## 前提条件 {#section_bd4_5gz_5fb .section}
 
-已对RDS 实例[设置白名单](../cn.zh-CN/RDS for MariaDB TX 快速入门/初始化配置/设置白名单.md#)和[申请外网地址](../cn.zh-CN/RDS for MariaDB TX 快速入门/初始化配置/申请外网地址.md#)。
+已对RDS实例[设置白名单](../cn.zh-CN/RDS for MariaDB TX 快速入门/初始化配置/设置白名单.md#)和[申请外网地址](../cn.zh-CN/RDS for MariaDB TX 快速入门/初始化配置/申请外网地址.md#)。
 
 ## 操作步骤 {#section_lcm_tqt_vfb .section}
 
 1.  使用远程工具[登录RDS for MariaDB TX实例](../cn.zh-CN/RDS for MariaDB TX 快速入门/连接实例.md#)，创建空数据库。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7982/155166312532385_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7982/155202509632385_zh-CN.png)
 
 2.  登录本地Linux服务器，使用自带的mysqldump工具将本地数据库数据导出为数据文件。
 
@@ -47,6 +47,6 @@
 
 5.  刷新远程工具后查看表，已经有了数据，说明已经迁移成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7982/155166312532386_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7982/155202509632386_zh-CN.png)
 
 
