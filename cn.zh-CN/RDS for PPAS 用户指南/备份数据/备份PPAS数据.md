@@ -12,20 +12,20 @@
 -   若数据量较大，花费的时间可能较长，请耐心等待。
 -   备份文件有保留时间，请及时下载需要保留的备份文件到本地。
 
-## 备份策略 {#section_oyj_3k4_ydb .section}
+## 备份说明 {#section_oyj_3k4_ydb .section}
 
 |数据库类型|数据备份|日志备份|
 |-----|----|----|
 |PPAS|支持全量物理备份|WAL（16MB/个）产生完后立即压缩上传，24小时内删除本地文件。|
 
-## 设置自动备份 {#section_f33_lk4_ydb .section}
+## 设置备份策略实现自动备份 {#section_f33_lk4_ydb .section}
 
 阿里云数据库会执行用户设定的备份策略，自动备份数据库。
 
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154882918336543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155201637736543_zh-CN.png)
 
 3.  单击目标实例的ID，进入基本信息页面。
 4.  在菜单中选择 **备份恢复**。
@@ -44,7 +44,7 @@
     -   可以设置为 7~730 天，且必须小于等于数据备份天数。
  |
 
-    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/154882918337578_zh-CN.png)
+    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/155201637737578_zh-CN.png)
 
 
 ## 手动备份 {#section_yvd_yk4_ydb .section}
@@ -52,12 +52,12 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154882918336543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155201637736543_zh-CN.png)
 
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62103/154882918331503_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/62103/155201637731503_zh-CN.png)
 
 5.  设置好备份方式，单击**确定**。
 
