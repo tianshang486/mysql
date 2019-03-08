@@ -31,7 +31,7 @@
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154882919636543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155201425036543_zh-CN.png)
 
 3.  单击目标实例的ID，进入基本信息页面。
 4.  在菜单中选择 **备份恢复**。
@@ -50,14 +50,14 @@
     -   可以设置为 7~730 天，且必须小于等于数据备份天数。
  |
 
-    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/154882919637578_zh-CN.png)
+    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/63819/155201425040330_zh-CN.png)
 
 
 ## 常见问题 {#section_h54_lrx_pgb .section}
 
 1.  RDS for MariaDB TX的数据备份是否可以关闭？
 
-    答：不可以关闭。可以减少备份频率，一周至少2次。数据备份保留天数最少7天，最多730天。
+    答：不可以关闭。数据备份保留天数最少7天，最多730天。
 
 2.  RDS for MariaDB TX的日志备份是否可以关闭？
 
