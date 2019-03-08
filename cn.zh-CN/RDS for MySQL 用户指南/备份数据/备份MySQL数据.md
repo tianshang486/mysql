@@ -12,9 +12,7 @@
 -   若数据量较大，花费的时间可能较长，请耐心等待。
 -   备份文件有保留时间，请及时下载需要保留的备份文件到本地。
 
-## 备份策略 {#section_oyj_3k4_ydb .section}
-
-阿里云数据库支持数据备份和日志备份。如要按照时间点恢复数据，需启用日志备份。各类型数据库备份策略如下：
+## 备份说明 {#section_oyj_3k4_ydb .section}
 
 |数据库类型|数据备份|日志备份|
 |-----|----|----|
@@ -41,14 +39,14 @@
 
  |
 
-## 设置自动备份MySQL数据 {#section_f33_lk4_ydb .section}
+## 设置备份策略实现自动备份 {#section_f33_lk4_ydb .section}
 
 阿里云数据库会执行用户设定的备份策略，自动备份数据库。
 
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154907027636543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155201625836543_zh-CN.png)
 
 3.  单击目标实例的ID，进入基本信息页面。
 4.  在菜单中选择**备份恢复**。
@@ -71,7 +69,7 @@
 
  |
 
-    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/154907027637578_zh-CN.png)
+    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/155201625837578_zh-CN.png)
 
 
 ## 手动备份MySQL数据 {#section_yvd_yk4_ydb .section}
@@ -81,12 +79,12 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154907027636543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155201625836543_zh-CN.png)
 
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 
-    ![备份MySQL数据](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15490702764105_zh-CN.png)
+    ![备份MySQL数据](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15520162584105_zh-CN.png)
 
     **说明：** 
 
