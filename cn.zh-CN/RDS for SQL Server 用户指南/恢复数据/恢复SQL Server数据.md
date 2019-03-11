@@ -1,6 +1,6 @@
 # 恢复SQL Server数据 {#concept_o52_hlx_52b .concept}
 
-有备份的情况下可以使用备份进行数据修复，恢复SQL Server的数据。
+如果拥有RDS for SQL Server实例的数据备份，可以通过备份恢复的方式实现数据修复。
 
 您可以通过多种方式恢复RDS for SQL Server实例的数据。
 
@@ -24,18 +24,18 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择备份集所属实例所在的地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155142784236543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155227435936543_zh-CN.png)
 
 3.  单击备份集所属实例的ID。
 4.  在左侧导航栏中，选择**备份恢复**。
 5.  在页面右上角，单击**数据库恢复**。
 6.  （仅高可用系列实例需要执行本步骤）选择**恢复到已有实例**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155142784210029_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155227435910029_zh-CN.png)
 
 7.  设置以下参数，然后单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155142784210031_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155227435910031_zh-CN.png)
 
     **说明：** 若有相同数据库名存在，需要修改恢复后库名。
 
@@ -79,7 +79,7 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在的地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155142784236543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155227435936543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在左侧导航栏中，选择**备份恢复**。
