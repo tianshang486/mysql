@@ -1,4 +1,4 @@
-# DescribeBinlogFiles {#doc_api_1058926 .reference}
+# DescribeBinlogFiles {#doc_api_1058974 .reference}
 
 调用DescribeBinlogFiles接口查看BINLOG日志。
 
@@ -75,7 +75,7 @@
 |└LogEndTime|String|2019-02-15T13:10:28Z|BINLOG文件记录的结束时间。
 
  |
-|└DownloadLink|String|http://rdsxxxxxxx.oss.aliyuncs.com/custins47742/hostins46770/mysql-bin.000120.zip?spm=0.0.0.0.eMQKjs&OSSAccessKeyId=c9gzsqpauj3duw5whwdv40hb&Expires=1384916927&Signature=07TMgM3G2Jw4sOO6yN8nWDgBJPA%3D|支持HTTP协议的下载链接URL，NULL表示没有下载链接。
+|└DownloadLink|String|http://rdsxxxxxxx.oss.aliyuncs.com/xxxxxx|支持HTTP协议的下载链接URL，NULL表示没有下载链接。
 
  |
 |└HostInstanceID|String|Binlog|Binlog所在实例编号，用户区分该binlog日志产生于主实例或备实例。
@@ -87,7 +87,7 @@
 |└Checksum|String|18358304393468701857|校验和。
 
  |
-|└IntranetDownloadLink|String|http://rdslog-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/custins1xxxxx37/hostins5xxxxxx/000000040000000000000019.tar.gz?OSSAccessKeyId=LTAI23hcUqqtkmRx&Expires=1550996474&Signature=t4hk5xxxxx|内网下载链接URL。
+|└IntranetDownloadLink|String|http://rdslog-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxxx|内网下载链接URL。
 
  |
 |└LogFileName|String|000000040000000000000019|Binlog文件名称。
