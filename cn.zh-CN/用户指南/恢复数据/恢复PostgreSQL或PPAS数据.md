@@ -1,5 +1,7 @@
 # 恢复PostgreSQL或PPAS数据 {#concept_rxd_d5g_2fb .concept}
 
+如果拥有RDS for PostgreSQL/PPAS实例的数据备份，可以通过备份恢复的方式实现数据修复。
+
 RDS for PostgreSQL和RDS for PPAS支持按备份集或时间点恢复数据。恢复数据的过程如下：
 
 -   恢复到一个新实例（此功能原名为克隆实例）。
@@ -32,7 +34,7 @@ RDS for PostgreSQL和RDS for PPAS支持按备份集或时间点恢复数据。�
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155166379837169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155227539937169_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在左侧导航栏中，选择备份恢复。
@@ -135,18 +137,18 @@ RDS实例有以下规格族：
     -   在已选择对象框中，将鼠标放在需要修改的对象上面，单击**编辑**，修改迁移后的对象名称。
     -   使用数据传输服务提供的库表映射功能，将待迁移对象迁移到目标库中的另外一个对象名的对象中。
     -   重命名目标库中跟迁移对象同名的对象。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15516637983949_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15522753993949_zh-CN.png)
 
 8.  单击**预检查并启动**。
     -   以下以预检查不通过为例。如果预检查通过，请直接跳转至步骤10。
 
 9.  若系统显示预检查失败结果，单击检测结果为失败的检测项后的**!**，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据迁移任务列表中选择该任务，并重新进行预检查。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15516637983951_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15522753993951_zh-CN.png)
 
 10. 错误排查完毕后，在迁移任务列表页面，选择新创建的迁移任务，单击**启动**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15516637983952_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15522753993952_zh-CN.png)
 
 11. 若系统显示预检查通过信息，单击**确定**。
 12. 在购买配置确认页面，确认配置信息并勾选**《数据传输（按量付费）服务条款》**，单击**立即购买并启动**。
