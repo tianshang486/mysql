@@ -1,6 +1,6 @@
 # 恢复MySQL数据 {#concept_vrh_qp4_ydb .concept}
 
-RDS for MySQL实例在有备份的情况下可以使用备份进行数据修复，恢复MySQL的数据。
+如果拥有RDS for MySQL实例的数据备份，可以通过备份恢复的方式实现数据修复。
 
 您可以通过以下方式恢复RDS for MySQL实例的数据：
 
@@ -41,7 +41,7 @@ RDS for MySQL实例在有备份的情况下可以使用备份进行数据修复�
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155166375537169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155236220937169_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在左侧导航栏中，选择备份恢复。
@@ -123,7 +123,7 @@ RDS实例有以下规格族：
         -   **RDS实例ID**：选择新实例的ID。
         -   **数据库账号**：填写新实例的账号。
         -   **数据库密码**：以上账号的密码。
-        -   **连接方式**：通常选择**非加密连接**，对于支持并且开启了[SSL加密](intl.zh-CN/RDS for MySQL 用户指南/数据安全性/设置 SSL 加密.md#)的实例，请选择**SSL安全连接**。
+        -   **连接方式**：通常选择**非加密连接**，对于支持并且开启了[SSL加密](intl.zh-CN/用户指南/数据安全性/设置 SSL 加密.md#)的实例，请选择**SSL安全连接**。
         **说明：** **实例类型**和**RDS实例ID**的选择会影响其他参数的显示。
 
     -   目标库信息
@@ -133,10 +133,10 @@ RDS实例有以下规格族：
         -   **RDS实例ID**：选择原实例的ID。
         -   **数据库账号**：填写原实例的账号。
         -   **数据库密码**：以上账号的密码。
-        -   **连接方式**：通常选择**非加密连接**，对于支持并且开启了[SSL加密](intl.zh-CN/RDS for MySQL 用户指南/数据安全性/设置 SSL 加密.md#)的实例，请选择**SSL安全连接**。
+        -   **连接方式**：通常选择**非加密连接**，对于支持并且开启了[SSL加密](intl.zh-CN/用户指南/数据安全性/设置 SSL 加密.md#)的实例，请选择**SSL安全连接**。
         **说明：** **实例类型**和**RDS实例ID**的选择会影响其他参数的显示。
 
-    ![任务截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41850/155166375539851_zh-CN.png)
+    ![任务截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41850/155236220939851_zh-CN.png)
 
 5.  单击**授权白名单并进入下一步**。
 6.  选择**结构迁移**和**全量数据迁移**。
@@ -149,18 +149,18 @@ RDS实例有以下规格族：
     -   在已选择对象框中，将鼠标放在需要修改的对象上面，单击**编辑**，修改迁移后的对象名称。
     -   使用数据传输服务提供的库表映射功能，将待迁移对象迁移到目标库中的另外一个对象名的对象中。
     -   重命名目标库中跟迁移对象同名的对象。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15516637553949_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15523622093949_zh-CN.png)
 
 8.  单击**预检查并启动**。
     -   以下以预检查不通过为例。如果预检查通过，请直接跳转至步骤10。
 
-9.  若系统显示预检查失败结果，单击检测结果为失败的检测项后的**!**，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据迁移任务列表中选择该任务，并重新进行预检查。
+9.  若系统显示预检查失败结果，单击检测结果为失败的检测项后的![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7962/155236220940064_zh-CN.png)，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据迁移任务列表中选择该任务，并重新进行预检查。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15516637553951_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15523622103951_zh-CN.png)
 
 10. 错误排查完毕后，在迁移任务列表页面，选择新创建的迁移任务，单击**启动**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15516637553952_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15523622103952_zh-CN.png)
 
 11. 若系统显示预检查通过信息，单击**确定**。
 12. 在购买配置确认页面，确认配置信息并勾选**《数据传输（按量付费）服务条款》**，单击**立即购买并启动**。
