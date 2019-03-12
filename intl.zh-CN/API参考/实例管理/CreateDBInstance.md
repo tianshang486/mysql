@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1053113 .reference}
+# CreateDBInstance {#doc_api_1061593 .reference}
 
 调用CreateDBInstance接口创建一个RDS实例。
 
@@ -55,13 +55,10 @@
 -   **Intranet**：内网连接。
 
  |
-|SecurityIPList|String|是|10.23.12.27/25|该实例的[IP白名单](~~43185~~)。
+|SecurityIPList|String|是|10.23.12.27/25|该实例的[IP白名单](~~43185~~)，多个IP地址请以英文逗号（,）隔开，不可重复，最多1000个。支持如下两种格式：
 
- **说明：** 
-
--   多个IP之间以英文逗号“,”隔开，且不可重复，最多可添加1000个IP；
--   支持格式：%，0.0.0.0/0，10.23.12.24（IP），或者10.23.12.24/24（CIDR模式，无类域间路由，/24表示地址中前缀的长度，范围1~32）；
--   0.0.0.0/0，表示不设置IP白名单，任何地址都可以访问实例，属于高危操作，请谨慎设置。
+ -   IP地址形式，例如：10.23.12.24。
+-   CIDR形式，例如：10.23.12.24/24（无类域间路由，24表示了地址中前缀的长度，范围为1~32）。
 
  |
 |PayType|String|是|Postpaid|实例的付费类型，取值：
@@ -76,13 +73,9 @@
 -   SQL Server实例：**Chinese\_PRC\_CI\_AS、Chinese\_PRC\_CS\_AS、SQL\_Latin1\_General\_CP1\_CI\_AS、SQL\_Latin1\_General\_CP1\_CS\_AS、Chinese\_PRC\_BIN**。
 
  |
-|DBInstanceDescription|String|否|测试数据库|实例的描述或备注信息。
+|DBInstanceDescription|String|否|测试数据库|实例名称，长度为2~256个字符。以中文、英文字母开头，可以包含可以包含数字、中文、英文、下划线（\_）、短横线（-）。
 
- **说明：** 
-
--   不能以 http:// 和 https:// 开头；
--   以中文、英文字母开头；
--   可以包含数字、中文、英文、下划线，短横线，长度2~256。
+ **说明：** 不能以 http:// 和 https:// 开头。
 
  |
 |ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
@@ -109,7 +102,7 @@
 -   如果数据库类型为MariaDB，该参数必填。
 
  |
-|ConnectionMode|String|否|Performance|实例的访问模式，取值：
+|ConnectionMode|String|否|Standard|实例的访问模式，取值：
 
  -   **Standard**：标准访问模式；
 -   **Safe**：数据库代理模式。
@@ -119,17 +112,14 @@
  **说明：** SQL Server 2012/2016/2017只支持标准访问模式。
 
  |
-|VPCId|String|否|vpc-xxxxxxxxxxxx|VPC ID。
+|VPCId|String|否|vpc-xxxxxxxxxxxx|VPC ID， 多个值用英文逗号（,）隔开。
 
  **说明：** 如果数据库类型为MariaDB，该参数必填。
 
  |
-|VSwitchId|String|否|vsw-xxxxxxxxxxx|VSwitch Id。
+|VSwitchId|String|否|vsw-xxxxxxxxxxx|VSwitch Id，多个值用英文逗号（,）隔开。
 
- **说明：** 
-
--   多个值用英文逗号“,”隔开；
--   如果数据库类型为MariaDB，该参数必填。
+ **说明：** 如果数据库类型为MariaDB，该参数必填。
 
  |
 |PrivateIpAddress|String|否|172.16.201.69|用户可以指定**VSwitchId**下的当前实例读写分离链路的**vpcIP**，如果不输入，系统通过**vpcId**和**VSwitchId**自动分配。
@@ -157,7 +147,7 @@
 -   **cloud\_ssd**：SSD云盘。
 
  |
-|BusinessInfo|String|否|5476xxxxx|支持的活动页面ID。
+|BusinessInfo|String|否|121436975448952|业务扩展参数。
 
  |
 
