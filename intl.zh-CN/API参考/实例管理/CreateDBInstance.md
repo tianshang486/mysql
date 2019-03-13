@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1061593 .reference}
+# CreateDBInstance {#doc_api_1063872 .reference}
 
 调用CreateDBInstance接口创建一个RDS实例。
 
@@ -117,12 +117,12 @@
  **说明：** 如果数据库类型为MariaDB，该参数必填。
 
  |
-|VSwitchId|String|否|vsw-xxxxxxxxxxx|VSwitch Id，多个值用英文逗号（,）隔开。
+|VSwitchId|String|否|vsw-xxxxxxxxxxx|VSwitch ID，多个值用英文逗号（,）隔开。
 
  **说明：** 如果数据库类型为MariaDB，该参数必填。
 
  |
-|PrivateIpAddress|String|否|172.16.201.69|用户可以指定**VSwitchId**下的当前实例读写分离链路的**vpcIP**，如果不输入，系统通过**vpcId**和**VSwitchId**自动分配。
+|PrivateIpAddress|String|否|172.16.201.69|设置实例的内网IP，需要在指定交换机的IP地址范围内。系统默认通过**VPCId**和**VSwitchId**自动分配。
 
  |
 |UsedTime|String|否|2|指定购买时长，取值：
