@@ -1,4 +1,4 @@
-# ModifyDBInstanceMaintainTime {#doc_api_1061538 .reference}
+# ModifyDBInstanceMaintainTime {#doc_api_1063666 .reference}
 
 调用ModifyDBInstanceMaintainTime接口修改RDS实例可维护时间段。
 
@@ -18,9 +18,7 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|MaintainTime|String|是|22:00Z-02:00Z|实例的可维护时间段。
-
- **说明：** 格式：*hh:mm*Z-*hh:mm*Z。
+|MaintainTime|String|是|22:00Z-02:00Z|实例的可维护时间段，格式：*hh:mm*Z-*hh:mm*Z。
 
  |
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
