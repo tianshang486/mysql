@@ -27,10 +27,12 @@
     -   请确保RDS实例与需要连接的ECS实例创建于同一个地域，否则它们无法通过内网互通，只能通过外网互通，无法发挥最佳性能。
 |
     |资源组|实例所属的资源组。|
-    |数据库类型|     -   即数据库引擎的类型：MySQL、SQL Server、PostgreSQL和PPAS。
-    -   不同地域支持的数据库类型不同，请以实际界面为准。
+    |数据库类型| 即数据库引擎的类型：MySQL、SQL Server、PostgreSQL、PPAS和MariaDB。
+
+ **说明：** 不同地域支持的数据库类型不同，请以实际界面为准。
+
  |
-    |版本|指数据库版本。RDS for SQL Server支持的数据库版本为2017、2016、2012、2008 R2，详情请参见[各版本的功能差异](intl.zh-CN/RDS for SQL Server 快速入门/各版本的功能差异.md#)。不同地域所支持的数据库版本不同，请以实际界面为准。
+    |版本|指SQL Server的版本。RDS for SQL Server支持的版本为2017、2016、2012、2008 R2，详情请参见[各版本的功能差异](intl.zh-CN/RDS for SQL Server 快速入门/各版本的功能差异.md#)。**说明：** 不同地域所支持的版本不同，请以实际界面为准。
 
 |
     |系列|    -   基础版：单节点，计算与存储分离，性价比高。
@@ -56,7 +58,7 @@
 例如，**8核32GB**是通用型实例规格，**8核32GB（独享套餐）**是独享型实例规格，**30核220GB（独占主机）**是独占物理机型实例规格。
 
 |
-    |存储空间|该存储空间包括数据空间、系统文件空间、Binlog文件空间和事务文件空间。|
+    |存储空间|该存储空间包括数据空间、系统文件空间和事务文件空间。|
 
 5.  设置购买时长（仅针对包年包月实例）和实例数量，然后单击右侧的**立即购买**。
 
@@ -68,7 +70,7 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/154891917236543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155254830736543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](intl.zh-CN/RDS for SQL Server 快速入门/初始化配置/设置白名单.md)和[创建账号](intl.zh-CN/RDS for SQL Server 快速入门/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2008 R2版.md)，如果是通过外网连接，还需要[申请外网地址](intl.zh-CN/RDS for SQL Server 快速入门/初始化配置/申请外网地址.md#)。然后就可以[连接实例](intl.zh-CN/RDS for SQL Server 快速入门/连接实例.md)。
 
