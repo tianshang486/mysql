@@ -1,12 +1,11 @@
-# DescribeBinlogFiles {#doc_api_1058974 .reference}
+# DescribeBinlogFiles {#doc_api_1082874 .reference}
 
-调用DescribeBinlogFiles接口查看BINLOG日志。
+调用DescribeBinlogFiles接口查看Binlog日志。
 
-**说明：** 
-
--   本接口不适用于SQL Server实例。
--   当**DownloadLink**为NULL时，表示RDS没有提供下载链接URL。
+-   当**DownloadLink**为NULL时，表示RDS没有提供下载链接URL；
 -   当**DownloadLink**不为NULL时，用户可以根据此URL下载备份文件，此URL已设置过期时间**LinkExpiredTime**，请在过期时间之前下载。
+
+**说明：** 本接口不适用于SQL Server实例。
 
 ## 调试 {#apiExplorer .section}
 
@@ -19,17 +18,17 @@
 |Action|String|是|DescribeBinlogFiles|系统规定参数，取值：**DescribeBinlogFiles**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
 |StartTime|String|是|2011-06-01T15:00:00Z|查询开始时间。
 
- **说明：** 格式：yyyy-MM-ddTHH:mm:ssZ。
+ **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
  |
 |EndTime|String|是|2011-06-20T15:00:00Z|查询结束时间，大于查询开始时间。
 
- **说明：** 格式：yyyy-MM-ddTHH:mm:ssZ。
+ **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
  |
 |PageSize|Integer|否|30|每页记录数，取值：
@@ -46,7 +45,7 @@
  默认值：**1**。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 
@@ -60,25 +59,25 @@
 |PageNumber|Integer|1|页码。
 
  |
-|PageRecordCount|Integer|30|当前页BINLOG文件个数。
+|PageRecordCount|Integer|30|当前页Binlog文件个数。
 
  |
-|Items| | |BinLogFile参数明细。
+|Items| | |Binlog明细列表。
 
  |
-|└FileSize|Long|2269410|BINLOG文件大小，单位：Byte。
+|└FileSize|Long|2269410|Binlog文件大小，单位：Byte。
 
  |
-|└LogBeginTime|String|2019-02-09T17:45:21Z|BINLOG文件记录的开始时间。
+|└LogBeginTime|String|2019-02-09T17:45:21Z|Binlog文件记录的开始时间。
 
  |
-|└LogEndTime|String|2019-02-15T13:10:28Z|BINLOG文件记录的结束时间。
+|└LogEndTime|String|2019-02-15T13:10:28Z|Binlog文件记录的结束时间。
 
  |
-|└DownloadLink|String|http://rdsxxxxxxx.oss.aliyuncs.com/xxxxxx|支持HTTP协议的下载链接URL，NULL表示没有下载链接。
+|└DownloadLink|String|http://rdsxxxxx.oss.aliyuncs.com/xxxxxx|支持HTTP协议的下载链接URL，NULL表示没有下载链接。
 
  |
-|└HostInstanceID|String|Binlog|Binlog所在实例编号，用户区分该binlog日志产生于主实例或备实例。
+|└HostInstanceID|String|5841973|Binlog所在实例编号，用户区分该Binlog日志产生于主实例或备实例。
 
  |
 |└LinkExpiredTime|String|2013-06-09T18:00:00Z|URL过期时间。
@@ -107,7 +106,7 @@
 ``` {#request_demo}
 
 http(s)://rds.aliyuncs.com/?Action=DescribeBinlogFiles
-&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
+&DBInstanceId=rm-uf6wjk5xxxxxxx
 &StartTime=2011-06-01T15:00:00Z
 &EndTime=2011-06-20T15:00:00Z
 &<公共请求参数>
