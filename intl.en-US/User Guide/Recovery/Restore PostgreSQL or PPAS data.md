@@ -36,7 +36,7 @@ The costs are the same as purchasing a new instance. For details, see [Pricing](
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the instance is located.
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155256303940804_en-US.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155257479840804_en-US.png)
 
 3.  Click the instance ID.
 4.  In the left-side navigation pane, choose Backup and Recovery.
@@ -135,7 +135,7 @@ DDL operations are not allowed during the migration; otherwise, the migration ma
 
             **Note:** This parameter is displayed only if you have selected certain RDS instances.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/155256303940810_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/155257479840810_en-US.png)
 
 5.  Click **Authorized Whitelist and Enter Into Next Step**.
 6.  Select **Migrate object structure** and **Migrate existing data**.
@@ -147,19 +147,19 @@ DDL operations are not allowed during the migration; otherwise, the migration ma
 
     -   In the right pane, place your mouse over an object and click **Edit** to modify the object name.
     -   Rename the object in the target instance.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/155256303940814_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/155257479840814_en-US.png)
 
 8.  Click **Pre-check and Start**.
     -   If the pre-check succeeds, go to step 11.
     -   If the pre-check fails, go to step 9.
-9.  If the pre-check fails, click ![](images/40064_en-US.png) next to the failed item to view details.
+9.  If the pre-check fails, click ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/22161/155257479840827_en-US.png) next to the failed item to view details.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15525630393951_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15525747983951_en-US.png)
 
 10. After fixing all problems, select the migration task in the migration task list and click **Start**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/155256303940816_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/155257479940816_en-US.png)
 
 11. If the pre-check succeeds, click **Next**.
-12. On the Confirm Purchase Configuration dialog box, confirm the configuration, select **《Service Terms of Data Transmission \(Pay-As-You-Go\)》**, and click **Buy and Start Now**.
+12. On the Confirm Purchase Configuration dialog box, confirm the configuration, select **Service Terms of Data Transmission \(Pay-As-You-Go\)**, and click **Buy and Start Now**.
 
