@@ -10,31 +10,31 @@
 
 -   仅以下版本实例支持SSL加密：
     -   SQL Server 2008 R2版
-    -   MySQL 5.6金融版、MySQL 5.6 高可用版、MySQL 5.7 高可用本地盘版
+    -   MySQL 5.6 高可用版、MySQL 5.7 高可用本地盘版
 
 ## 开启SSL加密 {#section_hjf_z54_ydb .section}
 
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/154745713337169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155253449937169_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧菜单栏中单击**数据安全性**。
 5.  选择**SSL**标签页。
 6.  单击**未开通**前面的开关，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15474571334147_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15525344994147_zh-CN.png)
 
 7.  在设置 SSL对话框中选择要开通SSL加密的链路，单击**确定**，开通 SSL 加密。
 
     **说明：** 用户可以根据需要，选择加密内网链路或者外网链路，但只可以加密一条链路。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15474571334148_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15525344994148_zh-CN.png)
 
 8.  单击**下载证书**，下载SSL CA证书，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15474571334149_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15525344994149_zh-CN.png)
 
     下载的文件为压缩包，包含如下三个文件：
 
@@ -67,6 +67,6 @@
 3.  在**Use SSL**栏选择If avaliable。
 4.  在**SSL CA File**栏单击...选择PEM文件。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15474571334150_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15525344994150_zh-CN.png)
 
 
