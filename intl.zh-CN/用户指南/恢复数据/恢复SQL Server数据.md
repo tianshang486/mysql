@@ -16,30 +16,25 @@
 
 您可以将实例的全量备份集恢复到您已有的实例，包括当前实例本身。可以恢复实例的所有数据库或者部分数据库。
 
-本功能适用于以下RDS for SQL Server实例：
-
--   SQL Server 2012/2016企业版高可用系列
--   SQL Server 2012/2016标准版高可用系列
--   SQL Server 2012企业版基础系列
--   SQL Server 2012/2016 Web版基础系列
+本功能适用于RDS for SQL Server 2012/2016实例。
 
 **操作步骤**
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择备份集所属实例所在的地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155254858537169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155254908137169_zh-CN.png)
 
 3.  单击备份集所属实例的ID。
 4.  在左侧导航栏中，选择**备份恢复**。
 5.  在页面右上角，单击**数据库恢复**。
 6.  （仅高可用系列需要执行本步骤）选择**恢复到已有实例**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155254858510029_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155254908210029_zh-CN.png)
 
 7.  设置以下参数，然后单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155254858510031_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155254908210031_zh-CN.png)
 
     **说明：** 若有相同数据库名存在，需要修改恢复后库名。
 
@@ -70,25 +65,18 @@
 
 费用：需要新建实例，费用与新购实例相同。
 
-本功能适用于以下RDS for SQL Server实例：
-
--   SQL Server 2017集群版
--   SQL Server 2012/2016企业版高可用系列
--   SQL Server 2012/2016标准版高可用系列
+本功能适用于RDS for SQL Server 2012/2016/2017实例。
 
 **操作步骤**
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在的地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155254858537169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155254908137169_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在左侧导航栏中，选择**备份恢复**。
 5.  在页面右上角，单击**数据库恢复**，在弹出的对话框中，选择**恢复到全新实例**。
-
-    **说明：** 若是SQL Server 2017集群版实例，在右侧单击**恢复**，选择**数据库恢复（原克隆实例）**并单击**确定**。
-
 6.  在弹出的页面中，选择新实例的计费方式：**包年包月**或**按量付费**。
 7.  设置新实例的参数。
 
