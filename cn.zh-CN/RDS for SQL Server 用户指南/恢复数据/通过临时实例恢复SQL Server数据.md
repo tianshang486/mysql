@@ -24,7 +24,7 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155184094536543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155255604636543_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧菜单栏中单击**备份恢复**。
@@ -78,13 +78,11 @@
 
 15. 单击**预检查并启动**。
 
-    **说明：** 
+    **说明：** 在迁移任务正式启动之前，会先进行前置预检查，只有预检查通过后，才能成功启动迁移。关于具体的预检查内容，请参见[预检查简介](https://help.aliyun.com/document_detail/52099.html)。
 
-    -   在迁移任务正式启动之前，会先进行前置预检查，只有预检查通过后，才能成功启动迁移。关于具体的预检查内容，请参见[预检查简介](https://help.aliyun.com/document_detail/52099.html)。
+16. 此步骤以预检查不通过为例。如果预检查通过，请直接跳转至步骤18。
 
-    -   以下以预检查不通过为例进行描述。如果预检查通过，请直接跳转至步骤18。
-
-16. 若系统显示预检查失败结果，单击检测结果为**失败**后的![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41606/155184094539847_zh-CN.png)，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据**迁移任务列表**中选择该任务，并重新进行预检查。
+    若系统显示预检查失败结果，单击检测结果为**失败**后的![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41606/155255604639847_zh-CN.png)，查看失败详细信息，如下图所示。根据失败原因修复后，可在数据**迁移任务列表**中选择该任务，并重新进行预检查。
 
     ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/26207/cn_zh/1496828913256/rds_newuser_image_024.png)
 
