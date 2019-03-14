@@ -1,11 +1,12 @@
 # 恢复SQL Server数据 {#concept_o52_hlx_52b .concept}
 
+如果拥有RDS for SQL Server实例的数据备份，可以通过备份恢复的方式实现数据修复。
+
 您可以通过多种方式恢复RDS for SQL Server实例的数据。
 
 -   [恢复到已有实例](#)
 -   [恢复到全新实例](#)
 -   [通过临时实例恢复到主实例](#)
--   [直接恢复到主实例](#)
 
 ## 注意事项 {#section_qbn_ygz_xfb .section}
 
@@ -27,18 +28,18 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择备份集所属实例所在的地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/154746010937169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155254858537169_zh-CN.png)
 
 3.  单击备份集所属实例的ID。
 4.  在左侧导航栏中，选择**备份恢复**。
 5.  在页面右上角，单击**数据库恢复**。
 6.  （仅高可用系列需要执行本步骤）选择**恢复到已有实例**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154746010910029_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155254858510029_zh-CN.png)
 
 7.  设置以下参数，然后单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154746010910031_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155254858510031_zh-CN.png)
 
     **说明：** 若有相同数据库名存在，需要修改恢复后库名。
 
@@ -80,7 +81,7 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在的地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/154746010937169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155254858537169_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在左侧导航栏中，选择**备份恢复**。
@@ -99,7 +100,7 @@
     |**数据库**|     -   **全部**：恢复备份集中的所有数据库。
     -   **部分**：恢复备份集中的部分数据库。如果选择此项，需要将要恢复的数据库添加到右侧。
  |
-    |**系列/可用区/规格/存储空间/网络类型/购买时长**|关于这些参数的说明，请参见[创建实例](../../../../../intl.zh-CN/快速入门MySQL版/创建实例.md)。|
+    |**系列/可用区/规格/存储空间/网络类型/购买时长**|关于这些参数的说明，请参见[创建实例](../../../../../intl.zh-CN/RDS for SQL Server 快速入门/创建RDS for SQL Server实例.md#)。|
     |**购买量**|设置购买数量，批量创建克隆实例。单次最多可以创建5个克隆实例。|
 
 8.  单击**立即购买**。
@@ -115,40 +116,4 @@
 -   SQL Server 2008 R2
 
 具体操作请参见[通过临时实例恢复到主实例](intl.zh-CN/用户指南/恢复数据/通过临时实例恢复SQL Server数据.md)。
-
-## 直接覆盖原实例 {#section_ilr_kgn_ydb .section}
-
-您可以直接将指定备份数据覆盖到原实例，指定的备份数据之后的数据将会全部丢失。建议您通过以上其他恢复方式进行更加安全的数据恢复。
-
-本功能适用于以下实例：
-
--   RDS for MySQL 5.5/5.6/5.7 高可用版实例
--   RDS for SQL Server 2008 R2
--   RDS for SQL Server 2017集群版实例
-
-**前提条件**
-
-实例下没有只读实例。
-
-**操作步骤**
-
-1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
-2.  选择实例所在地域。
-
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/154746010937169_zh-CN.png)
-
-3.  单击实例的ID。
-4.  选择左侧导航栏中，选择**备份恢复**。
-5.  在**数据备份**标签页中，选择时间范围，单击**查询**。
-6.  -   对于MySQL高可用版实例和SQL Server 2017集群版实例，找到目标备份，单击**恢复**，如下图所示。
-
-    在弹出的对话框中，选择**覆盖性恢复实例**，单击**确定**。
-
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154746011010040_zh-CN.png)
-
--   对于RDS for SQL Server 2008 R2实例，找到目标备份，单击**覆盖性恢复**，如下图所示。
-
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/154746011010049_zh-CN.png)
-
-7.  在弹出的确认框中，单击**确定**。
 
