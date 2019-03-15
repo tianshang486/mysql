@@ -1,8 +1,8 @@
-# DescribeDBInstanceTDE {#doc_api_1021617 .reference}
+# DescribeDBInstanceTDE {#doc_api_1066900 .reference}
 
-查询实例数据加密状态。
+调用DescribeDBInstanceTDE接口查询实例数据加密状态。
 
-该接口用于查看实例的透明数据加密（Transparent Data Encryption，简称 TDE）配置。
+该接口用于查看实例的[透明数据加密](~~33510~~)（Transparent Data Encryption，TDE）配置。
 
 **说明：** 该接口只支持MySQL 5.6和SQL Server 2008 R2实例。
 
@@ -17,10 +17,10 @@
 |Action|String|是|DescribeDBInstanceTDE|系统规定参数，取值：**DescribeDBInstanceTDE**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 
@@ -28,22 +28,18 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|TDEStatus|String|Enabled|实例级别的TDE状态：
-
- -   **Enabled**：TDE开启；
--   **Disabled**：TDE关闭。
+|TDEStatus|String|Enabled|实例级别的TDE状态，取值：**Enable | Disable**
 
  |
 |Databases| | |数据库级别的TDE状态列表。
+
+ **说明：** 对于SQL Server 2008 R2实例，可以在实例级别的TDE开启时，控制数据库级别的TDE开启或关闭。
 
  |
 |└DBName|String|test02|数据库名称。
 
  |
-|└TDEStatus|String|Enabled|数据库级别的TDE状态：
-
- -   **Enabled**：TDE开启；
--   **Disabled**：TDE关闭。
+|└TDEStatus|String|Enabled|数据库级别的TDE状态，取值：**Enable | Disable**
 
  |
 |RequestId|String|C816A4BF-A6EC-4722-95F9-2055859CCFD2|请求ID。
@@ -57,7 +53,7 @@
 ``` {#request_demo}
 
 http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceTDE
-&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
+&DBInstanceId=rm-uf6wjk5xxxxxxx
 &<公共请求参数>
 
 ```
