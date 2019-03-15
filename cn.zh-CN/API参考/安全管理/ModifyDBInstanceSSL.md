@@ -1,8 +1,8 @@
-# ModifyDBInstanceSSL {#doc_api_1021551 .reference}
+# ModifyDBInstanceSSL {#doc_api_1067141 .reference}
 
-修改实例SSL链路。
+调用ModifyDBInstanceSSL接口修改实例SSL链路。
 
-该接口用于为实例设置SSL（Secure Sockets Layer）加密。
+该接口用于为实例设置[SSL](~~32474~~)（Secure Sockets Layer）加密。
 
 **说明：** 仅支持MySQL 5.6、MySQL 5.7高可用本地盘版和SQL Server 2008 R2实例。
 
@@ -17,15 +17,15 @@
 |Action|String|是|ModifyDBInstanceSSL|系统规定参数，取值：**ModifyDBInstanceSSL**。
 
  |
-|ConnectionString|String|是|rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com|为目标连接地址创建或更新SSL证书。
+|ConnectionString|String|是|rm-uf6wjk5xxxxx.mysql.rds.aliyuncs.com|需要创建或更新SSL证书的连接地址。
 
  **说明：** 每个实例只能有一个连接地址受SSL保护。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 
@@ -44,8 +44,8 @@
 ``` {#request_demo}
 
 http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceSSL
-&ConnectionString=rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com
-&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
+&ConnectionString=rm-uf6wjk5xxxxx.mysql.rds.aliyuncs.com
+&DBInstanceId=rm-uf6wjk5xxxxxxx
 &<公共请求参数>
 
 ```
