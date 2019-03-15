@@ -1,8 +1,6 @@
-# DescribeDBInstanceIPArrayList {#doc_api_1021241 .reference}
+# DescribeDBInstanceIPArrayList {#doc_api_1066780 .reference}
 
-查看RDS实例IP白名单。
-
-该接口用于查询允许访问实例的IP地址。
+调用DescribeDBInstanceIPArrayList接口查看RDS实例IP白名单。
 
 ## 调试 {#apiExplorer .section}
 
@@ -15,16 +13,16 @@
 |Action|String|是|DescribeDBInstanceIPArrayList|系统规定参数，取值：**DescribeDBInstanceIPArrayList**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|WhitelistNetworkType|String|否|VPC|白名单的网络类型。取值范围：
+|WhitelistNetworkType|String|否|VPC|白名单的网络类型，取值：
 
  -   **Classic**：高安全白名单模式下的经典网络；
 -   **VPC**：高安全白名单模式下的专有网络；
 -   **MIX**：通用白名单模式。
 
- 不传该值则返回所有网络类型的白名单IP。
+ 默认返回所有网络类型的白名单IP。
 
  |
 
@@ -32,7 +30,7 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|Items| | |实例的IP白名单分组列表。
+|Items| | |IP白名单分组列表。
 
  |
 |└DBInstanceIPArrayName|String|rds\_default|IP白名单分组名称。
@@ -40,13 +38,13 @@
  |
 |└DBInstanceIPArrayAttribute|String|hidden|白名单分组属性，默认为空。
 
- **说明：** 控制台不显示带有“hidden”标签的分组。
+ **说明：** 控制台不显示带有“hidden”属性的分组，带有该标签的分组通常是用于访问DTS、DRDS服务的。
 
  |
-|└SecurityIPList|String|192.168.1.0/24|IP白名单分组下的IP列表，最多1000个，以英文逗号“,”隔开。
+|└SecurityIPList|String|192.168.1.0/24|IP白名单分组下的IP列表，最多1000个，以英文逗号（,）隔开。
 
  |
-|└SecurityIPType|String|IPv4|IP类型。
+|└SecurityIPType|String|IPv4|IP地址的类型。
 
  |
 |RequestId|String|E2B6AF71-DC32-4055-B477-43B348798D10|请求ID。
@@ -60,7 +58,7 @@
 ``` {#request_demo}
 
 http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceIPArrayList
-&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
+&DBInstanceId=rm-uf6wjk5xxxxxxx
 &<公共请求参数>
 
 ```
