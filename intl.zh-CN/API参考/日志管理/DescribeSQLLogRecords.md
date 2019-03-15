@@ -1,8 +1,8 @@
-# DescribeSQLLogRecords {#doc_api_1082939 .reference}
+# DescribeSQLLogRecords {#doc_api_1084639 .reference}
 
 调用DescribeSQLLogRecords接口查询实例的SQL审计日志。
 
-**说明：** 支持的实例版本如下：
+支持的实例版本如下：
 
 -   MySQL 5.5
 -   MySQL 5.6
@@ -25,14 +25,10 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|StartTime|String|是|2011-06-01T15:00:00Z|查询开始时间。
-
- **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|StartTime|String|是|2011-06-01T15:00:00Z|查询开始时间，格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
  |
-|EndTime|String|是|2011-06-11T15:00:00Z|查询结束时间，大于查询开始时间，与查询开始时间间隔小于31天。
-
- **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|EndTime|String|是|2011-06-11T15:00:00Z|查询结束时间，大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
  |
 |ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
