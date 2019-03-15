@@ -1,13 +1,13 @@
-# ModifyDBInstanceTDE {#doc_api_1021532 .reference}
+# ModifyDBInstanceTDE {#doc_api_1067155 .reference}
 
-修改实例数据加密状态。
+调用ModifyDBInstanceTDE接口修改实例数据加密状态。
 
-该接口用于为实例设置透明数据加密（Transparent Data Encryption，简称 TDE）。
+该接口用于为实例设置[透明数据加密](~~33510~~)（Transparent Data Encryption，TDE）。
 
 -   加密密钥由密钥管理服务（KMS）产生和管理，RDS不提供加密所需的密钥和证书。开通TDE后，用户如果要恢复数据到本地，需要先通过RDS解密数据；
 -   开通TDE前需要先开通KMS。如果您未开通KMS，可在开通TDE过程中根据引导开通KMS；
 -   对于SQL Server 2008R2，只支持数据库级别的TDE开启和关闭；
--   对于MySQL 5.6，只支持实例级别的TDE开启，不接受DBName传值；
+-   对于MySQL 5.6，只支持实例级别的TDE开启；
 -   TDE开通后无法关闭，且会增加CPU使用率。
 
 **说明：** 仅支持MySQL 5.6和SQL Server 2008 R2实例。
@@ -23,21 +23,18 @@
 |Action|String|是|ModifyDBInstanceTDE|系统规定参数，取值：**ModifyDBInstanceTDE**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|TDEStatus|String|是|Enabled|TDE状态：
-
- -   **Enabled**：TDE开启；
--   **Disabled**：TDE关闭。
+|TDEStatus|String|是|Enabled|TDE状态，取值：**Enable | Disable**
 
  |
-|DBName|String|否|testDB|想要开启TDE的数据库名称，可以一次输入多个，以英文逗号“,”分隔，最多传入50个。
+|DBName|String|否|testDB|想要开启TDE的数据库名称，可以一次输入多个，以英文逗号（,）分隔，最多传入50个。
 
- **说明：** 仅SQL Server 2008 R2实例支持传入此参数。
+ **说明：** 仅SQL Server 2008 R2实例需要传入此参数。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 
@@ -56,7 +53,7 @@
 ``` {#request_demo}
 
 http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceTDE
-&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
+&DBInstanceId=rm-uf6wjk5xxxxxxx
 &TDEStatus=Enabled
 &<公共请求参数>
 
