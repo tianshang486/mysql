@@ -1,6 +1,8 @@
-# CreateDBInstance {#doc_api_1063872 .reference}
+# CreateDBInstance {#doc_api_1086041 .reference}
 
 调用CreateDBInstance接口创建一个RDS实例。
+
+ **请确保在使用该接口前，已充分了解RDS产品的收费方式和[价格](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing)。** 
 
 关于RDS实例的规格，请参见[实例规格表](~~26312~~)。
 
