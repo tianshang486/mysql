@@ -1,4 +1,4 @@
-# DescribeBinlogFiles {#doc_api_1082874 .reference}
+# DescribeBinlogFiles {#doc_api_1084643 .reference}
 
 调用DescribeBinlogFiles接口查看Binlog日志。
 
@@ -21,14 +21,10 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|StartTime|String|是|2011-06-01T15:00:00Z|查询开始时间。
-
- **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|StartTime|String|是|2011-06-01T15:00:00Z|查询开始时间，格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
  |
-|EndTime|String|是|2011-06-20T15:00:00Z|查询结束时间，大于查询开始时间。
-
- **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|EndTime|String|是|2011-06-20T15:00:00Z|查询结束时间，大于查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
  |
 |PageSize|Integer|否|30|每页记录数，取值：
