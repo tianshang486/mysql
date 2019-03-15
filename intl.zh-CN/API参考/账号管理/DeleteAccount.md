@@ -1,11 +1,10 @@
-# DeleteAccount {#doc_api_1027238 .reference}
+# DeleteAccount {#doc_api_1064578 .reference}
 
-该接口用于删除数据库账号。
+调用DeleteAccount接口删除数据库账号。
 
-调用该接口时，请注意：
+调用该接口时，实例状态需要为运行中，否则将操作失败：
 
--   实例状态需要为运行中；
--   该接口暂不支持SQL Server 2017集群版、PostgreSQL、PPAS实例。
+**说明：** 该接口暂不支持SQL Server 2017集群版、PostgreSQL、PPAS实例。
 
 ## 调试 {#apiExplorer .section}
 
@@ -18,13 +17,13 @@
 |Action|String|是|DeleteAccount|系统规定参数，取值：**DeleteAccount**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
 |AccountName|String|是|test1|需要删除的数据库账号名称。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 
@@ -43,7 +42,7 @@
 ``` {#request_demo}
 
 http(s)://rds.aliyuncs.com/?Action=DeleteAccount
-&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
+&DBInstanceId=rm-uf6wjk5xxxxxxx
 &AccountName=test1
 &<公共请求参数>
 
