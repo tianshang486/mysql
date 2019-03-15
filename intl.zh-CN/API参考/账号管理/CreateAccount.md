@@ -1,8 +1,8 @@
-# CreateAccount {#doc_api_1021202 .reference}
+# CreateAccount {#doc_api_1064571 .reference}
 
-该接口用于创建管理数据库的账号。
+调用CreateAccount接口创建管理数据库的账号。
 
-实例和数据库必须满足以下条件，否则将创建失败：
+调用该接口时，实例必须满足以下条件，否则将操作失败：
 
 -   实例状态为运行中；
 -   数据库状态为运行中；
@@ -10,11 +10,8 @@
 
 **说明：** 
 
- 
-
 -   该参数仅适用于MySQL、MariaDB、SQL Server（除SQL Server 2017集群版）实例；
-
--   PostgreSQL、PPAS、SQL Server 2017集群版有且仅有一个高权限账号，其他账号由高权限账号连接数据库后创建。
+-   PostgreSQL、PPAS、SQL Server 2017集群版有且仅有一个高权限账号，其他账号由高权限账号连接数据库后通过SQL创建。
 
 ## 调试 {#apiExplorer .section}
 
@@ -27,7 +24,7 @@
 |Action|String|是|CreateAccount|系统规定参数，取值：**CreateAccount**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
 |AccountName|String|是|test1|数据库账号名称。
@@ -41,7 +38,7 @@
 -   其他非法字符，见[禁用关键字表](~~26317~~)。
 
  |
-|AccountPassword|String|是|Test123456|数据库账号密码。
+|AccountPassword|String|是|Test123456|数据库账号的密码。
 
  **说明：** 
 
@@ -50,24 +47,20 @@
 -   特殊字符为!@\#$%^\*\(\)\_+-=
 
  |
-|AccountDescription|String|否|测试账号A|备注信息。
+|AccountDescription|String|否|测试账号A|账号描述，长度为2~256个字符。以中文、英文字母开头，可以包含可以包含数字、中文、英文、下划线（\_）、短横线（-）。
 
- **说明：** 
-
--   不能以 http:// 和 https:// 开头；
--   以中文、英文字母开头；
--   可以包含数字、中文、英文、下划线，短横线，长度2~256。
+ **说明：** 不能以 http:// 和 https:// 开头。
 
  |
-|AccountType|String|否|Normal|账号类型，取值为：
+|AccountType|String|否|Normal|账号类型，取值：
 
  -   **Normal**：普通账号；
 -   **Super**：高权限账号。
 
- 默认为**Normal**。
+ 默认值：**Normal**。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 
@@ -86,7 +79,7 @@
 ``` {#request_demo}
 
 http(s)://rds.aliyuncs.com/?Action=CreateAccount
-&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
+&DBInstanceId=rm-uf6wjk5xxxxxxx
 &AccountName=test1
 &AccountPassword=Test123456
 &<公共请求参数>
