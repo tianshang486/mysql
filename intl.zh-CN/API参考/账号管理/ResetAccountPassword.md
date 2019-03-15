@@ -1,10 +1,10 @@
-# ResetAccountPassword {#doc_api_1021637 .reference}
+# ResetAccountPassword {#doc_api_1064594 .reference}
 
-该接口用于重置账号密码。
+调用ResetAccountPassword接口重置账号密码。
 
 实例状态需要为运行中，否则操作将失败。
 
-**说明：** 该接口暂不支持对PostgreSQL、PPAS、SQL Server 2017集群版实例通过命令行创建的账号进行密码重置。
+**说明：** 该接口暂不支持对SQL Server 2017集群版、PostgreSQL、PPAS实例通过SQL创建的账号进行密码重置。
 
 ## 调试 {#apiExplorer .section}
 
@@ -17,7 +17,7 @@
 |Action|String|是|ResetAccountPassword|系统规定参数，取值：**ResetAccountPassword**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
 |AccountName|String|是|test1|账号名称。
@@ -32,7 +32,7 @@
 -   特殊字符为!@\#$%^\*\(\)\_+-=
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 
@@ -51,7 +51,7 @@
 ``` {#request_demo}
 
 http(s)://rds.aliyuncs.com/?Action=ResetAccountPassword
-&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
+&DBInstanceId=rm-uf6wjk5xxxxxxx
 &AccountName=test1
 &AccountPassword=Test123456
 &<公共请求参数>
