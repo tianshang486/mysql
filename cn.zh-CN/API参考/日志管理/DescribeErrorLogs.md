@@ -1,4 +1,4 @@
-# DescribeErrorLogs {#doc_api_1082866 .reference}
+# DescribeErrorLogs {#doc_api_1084653 .reference}
 
 调用DescribeErrorLogs接口查看实例某段时间内的错误日志。
 
@@ -18,14 +18,10 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|StartTime|String|是|2011-05-01T20:10Z|查询开始时间。
-
- **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|StartTime|String|是|2011-05-01T20:10Z|查询开始时间，格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
  |
-|EndTime|String|是|2011-05-30T20:10Z|查询结束时间，大于查询开始时间，与查询开始时间间隔小于31天。
-
- **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|EndTime|String|是|2011-05-30T20:10Z|查询结束时间，大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
  |
 |PageSize|Integer|否|30|每页记录数，取值：
