@@ -1,6 +1,6 @@
-# ResetAccount {#doc_api_1021631 .reference}
+# ResetAccount {#doc_api_1064596 .reference}
 
-该接口用于重置高权限账号的权限。
+调用ResetAccount接口重置高权限账号的权限。
 
 **说明：** 该接口不适用于没有高权限账号的SQL Server 2008 R2实例。
 
@@ -15,7 +15,7 @@
 |Action|String|是|ResetAccount|系统规定参数，取值：**ResetAccount**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
 |AccountName|String|是|test1|高权限账号名称。
@@ -30,7 +30,7 @@
 -   特殊字符为!@\#$%^\*\(\)\_+-=
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 
