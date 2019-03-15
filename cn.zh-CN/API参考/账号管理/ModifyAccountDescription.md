@@ -1,8 +1,8 @@
-# ModifyAccountDescription {#doc_api_1021649 .reference}
+# ModifyAccountDescription {#doc_api_1064592 .reference}
 
-该接口用于修改数据库账号的备注。
+调用ModifyAccountDescription接口修改数据库账号的描述。
 
-**说明：** 该接口暂不支持PostgreSQL、PPAS实例。
+**说明：** 该接口暂不支持SQL Server 2017集群版、PostgreSQL、PPAS实例。
 
 ## 调试 {#apiExplorer .section}
 
@@ -15,22 +15,18 @@
 |Action|String|是|ModifyAccountDescription|系统规定参数，取值：**ModifyAccountDescription**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|AccountName|String|是|test1|数据库账号名称。
+|AccountName|String|是|test1|账号名称。
 
  |
-|AccountDescription|String|是|测试账号A|账号备注。
+|AccountDescription|String|是|测试账号A|账号描述，长度为2~256个字符。以中文、英文字母开头，可以包含可以包含数字、中文、英文、下划线（\_）、短横线（-）。
 
- **说明：** 
-
--   不能以 http:// 和 https:// 开头；
--   以中文、英文字母开头；
--   可以包含数字、中文、英文、下划线，短横线，长度2-256个字符。
+ **说明：** 不能以 http:// 和 https:// 开头。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 
