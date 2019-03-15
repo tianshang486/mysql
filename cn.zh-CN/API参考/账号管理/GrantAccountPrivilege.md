@@ -1,61 +1,84 @@
-# GrantAccountPrivilege {#reference_x1w_rzg_12b .reference}
+# GrantAccountPrivilege {#doc_api_1064586 .reference}
 
-## 描述 {#section_l21_v32_12b .section}
+调用GrantAccountPrivilege接口授权账号访问数据库。
 
-该接口用于授权账号访问某个数据库，一个账号可关联一个或多个数据库。如果指定的账号对指定数据库已经具有访问权限，则会直接返回成功。实例状态为运行中，否则操作将失败。
+一个账号可授权访问一个或多个数据库。调用该接口时，请确保实例状态为运行中，否则将操作失败。
 
-## 前提条件 {#section_ebl_wlf_cgb .section}
+**说明：** 该接口暂不支持SQL Server 2017集群版、PostgreSQL、PPAS实例。
 
-该接口适用于MySQL、SQL Server和MariaDB实例。
+## 调试 {#apiExplorer .section}
 
-## 请求参数 {#section_qzx_w32_12b .section}
+前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=GrantAccountPrivilege)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
 
-|名称|类型|是否必须|描述|
-|--|--|----|--|
-|Action|String|是|系统规定参数，取值为GrantAccountPrivilege。|
-|DBInstanceId|String|是|实例ID。|
-|AccountName|String|是|账号名。|
-|DBName|String|是|设置与该账号关联的数据库名称。|
-|AccountPrivilege|String|是|账号权限：-   ReadOnly：只读；
--   ReadWrite：读写；
--   DDLOnly（适用于MySQL和MariaDB）：只能执行DDL；
--   DMLOnly（适用于MySQL和MariaDB）：只能执行DML；
--   DBOwner（适用于SQL Server）：数据库所有者。
+## 请求参数 {#parameters .section}
 
-|
+|名称|类型|是否必选|示例值|描述|
+|--|--|----|---|--|
+|Action|String|是|GrantAccountPrivilege|系统规定参数，取值：**GrantAccountPrivilege**。
 
-## 返回参数 {#section_rpk_z32_12b .section}
+ |
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
 
-|名称|类型|描述|
-|--|--|--|
-|<公共返回参数\>|-|详见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#)。|
+ |
+|AccountName|String|是|test1|账号名称。
 
-## 请求示例 {#section_l4g_pj2_12b .section}
+ |
+|DBName|String|是|testDB|需要授权访问的数据库名称。
+
+ |
+|AccountPrivilege|String|是|ReadWrite|账号权限，取值：
+
+ -   **ReadWrite**：读写；
+-   **ReadOnly**：只读；
+-   **DDLOnly**：仅执行DDL，适用于MySQL和MariaDB；
+-   **DMLOnly**：只执行DML，适用于MySQL和MariaDB；
+-   **DBOwner**：数据库所有者，适用于SQL Server。
+
+ |
+
+## 返回参数 {#resultMapping .section}
+
+|名称|类型|示例值|描述|
+|--|--|---|--|
+|RequestId|String|81BC9559-7B22-4B7F-B705-5F56DEECDEA7|请求ID。
+
+ |
+
+## 示例 {#demo .section}
+
+请求示例
+
+``` {#request_demo}
+
+http(s)://rds.aliyuncs.com/?Action=GrantAccountPrivilege
+&DBInstanceId=rm-uf6wjk5xxxxxxx
+&AccountName=test1
+&DBName=test
+&AccountPrivilege=ReadWrite
+&<公共请求参数>
 
 ```
-https://rds.aliyuncs.com/?Action=GrantAccountPrivilege
-        &AccountName=testacc02
-        &AccountPrivilege=ReadWrite
-        &DBName=testdb03
-        &DBInstanceId=riauvjz6zajfiq6ba1370329449201
-        &<公共请求参数>
-```
 
-## 返回示例 {#section_xtg_rj2_12b .section}
+正常返回示例
 
-**XML格式**
+`XML` 格式
 
-```
+``` {#xml_return_success_demo}
 <GrantAccountPrivilegeResponse>
-        <RequestId>81BC9559-7B22-4B7F-B705-5F56DEECDEA7</RequestId>
-        </GrantAccountPrivilegeResponse>
-```
-
-**JSON格式**
+  <RequestId>81BC9559-7B22-4B7F-B705-5F56DEECDEA7</RequestId>
+</GrantAccountPrivilegeResponse>
 
 ```
+
+`JSON` 格式
+
+``` {#json_return_success_demo}
 {
-        "RequestId":"81BC9559-7B22-4B7F-B705-5F56DEECDEA7"
-        }
+	"RequestId":"81BC9559-7B22-4B7F-B705-5F56DEECDEA7"
+}
 ```
+
+## 错误码 { .section}
+
+[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
 
