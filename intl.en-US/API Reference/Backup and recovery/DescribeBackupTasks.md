@@ -7,7 +7,7 @@ This API is used to show the backup task list.
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
 |Action|String|Yes|Required parameter. Value: DescribeBackupTasks|
-|DBInstanceId|String|Yes|Instance ID|
+|DBInstanceId|String|Yes|Instance ID.|
 |BackupJobId|String|No|Backup task ID.|
 
 ## Response parameters {#section_ugq_nwj_n2b .section}
