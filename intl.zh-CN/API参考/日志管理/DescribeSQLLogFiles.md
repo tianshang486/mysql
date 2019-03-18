@@ -1,4 +1,4 @@
-# DescribeSQLLogFiles {#doc_api_1084641 .reference}
+# DescribeSQLLogFiles {#doc_api_1090923 .reference}
 
 调用DescribeSQLLogFiles接口查询SQL审计文件列表。
 
@@ -74,7 +74,7 @@
 |└LogEndTime|String|2015-05-24T07:00:00Z|SQL结束时间。
 
  |
-|└LogDownloadURL|String|http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|下载链接的地址。若当前不可下载，则为空。
+|└LogDownloadURL|String|http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|下载地址。若当前不可下载，则为空。
 
  |
 |└LogSize|String|3000|日志文件大小，单位：Byte。
