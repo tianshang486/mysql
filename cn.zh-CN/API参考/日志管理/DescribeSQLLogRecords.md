@@ -1,4 +1,4 @@
-# DescribeSQLLogRecords {#doc_api_1084639 .reference}
+# DescribeSQLLogRecords {#doc_api_1091128 .reference}
 
 调用DescribeSQLLogRecords接口查询实例的SQL审计日志。
 
@@ -34,10 +34,10 @@
 |ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
 
  |
-|SQLId|Long|否|25623548|查询语句唯一标识ID。
+|SQLId|Long|否|25623548|SQL语句唯一标识ID。
 
  |
-|QueryKeywords|String|否|rds|关键字查询，多个关键字以空格分隔，不超过10个关键字。
+|QueryKeywords|String|否|rds|用于查询的关键字，多个关键字以空格分隔，不超过10个关键字。
 
  |
 |Database|String|否|Database|数据库名称，默认为所有数据库。
@@ -46,7 +46,10 @@
 |User|String|否|user|用户名称，默认为所有。
 
  |
-|Form|String|否|Stream|用于触发审计日志文件的生成，取值：**Stream**。若传入这个值，则只返回公共参数，需再调用[DescribeSQLLogFiles](~~26295~~)接口获取文件的最终下载地址。
+|Form|String|否|Stream|触发审计文件的生成或者返回SQL记录列表，取值：
+
+ -   **File**：若传入这个值，则触发审计文件的生成，只返回公共参数，需再调用[DescribeSQLLogFiles](~~26295~~)接口获取文件的最终下载地址；
+-   **Stream**：默认值，返回SQL记录列表。
 
  |
 |PageSize|Integer|否|30|每页记录数，取值：
@@ -77,7 +80,7 @@
 |PageNumber|Integer|1|页码。
 
  |
-|PageRecordCount|Integer|30|本页SQL日志明细个数。
+|PageRecordCount|Integer|30|本页SQL审计日志个数。
 
  |
 |Items| | |SQL审计日志列表。
@@ -95,7 +98,7 @@
 |└SQLText|String|update test.zxb set id=0 limit 1|SQL语句。
 
  |
-|└TotalExecutionTimes|Long|600|执行时间，单位：微秒。
+|└TotalExecutionTimes|Long|600|执行耗时，单位：微秒。
 
  |
 |└ReturnRowCounts|Long|30|返回记录数。
