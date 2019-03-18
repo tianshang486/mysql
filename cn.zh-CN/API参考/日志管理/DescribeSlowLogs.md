@@ -1,4 +1,4 @@
-# DescribeSlowLogs {#doc_api_1084657 .reference}
+# DescribeSlowLogs {#doc_api_1091175 .reference}
 
 调用DescribeSlowLogs查看慢日志统计情况。
 
@@ -89,13 +89,13 @@
 |└SQLServerTotalExecutionCounts|Long|1|SQL Server总执行次数。
 
  |
-|└MySQLTotalExecutionCounts|Long|1|MySQL执行总次数。
+|└MySQLTotalExecutionCounts|Long|1|MySQL总执行次数。
 
  |
-|└SQLServerTotalExecutionTimes|Long|100|SQL Server总执行时间，单位：毫秒。
+|└SQLServerTotalExecutionTimes|Long|1000|SQL Server总执行时间，单位：毫秒。
 
  |
-|└MySQLTotalExecutionTimes|Long|1|MySQL执行总时长，单位：秒。
+|└MySQLTotalExecutionTimes|Long|1|MySQL总执行时间，单位：秒。
 
  |
 |└MaxExecutionTime|Long|60|最大执行时长，单位：秒。
@@ -128,10 +128,10 @@
 |└AvgExecutionTime|Long|1|平均执行时间，单位：秒。
 
  |
-|└SQLHASH|String|U2FsdGVkxxxx|慢日志统计里的SQL语句唯一标识符，可获取该SQL语句的慢日志明细。
+|└SQLHASH|String|U2FsdGVkxxxx|慢日志统计里的SQL语句唯一标识符，可用于获取该SQL语句的慢日志明细。
 
  |
-|└SQLIdStr|String|521584|对应的是慢日志统计模版SQL的ID，现已废弃，使用的是**SQLHASH**。
+|└SQLIdStr|String|521584|对应的是慢日志统计模版SQL的ID，现已废弃，请使用**SQLHASH**。
 
  |
 |└SlowLogId|Long|26584213|慢查询汇总标识ID。
@@ -196,53 +196,26 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSlowLogs
 
 ``` {#json_return_success_demo}
 {
-	"Items":{
-		"DBInstance":[
-			{
-				"LockMode":"Unlock",
-				"DBInstanceNetType":"Internet",
-				"MasterInstanceId":"",
-				"DBInstanceId":"rdsmjfirvmjfirv",
-				"ZoneId":"cn-hangzhou-a",
-				"ReadOnlyDBInstanceIds":{
-					"ReadOnlyDBInstanceId":[]
-				},
-				"DBInstanceDescription":"testforRemarks",
-				"TempDBInstanceId":"",
-				"Engine":"MySQL",
-				"ExpireTime":"2014-10-10T16:00:00Z",
-				"DBInstanceType":"Primary",
-				"RegionId":"cn-hangzhou",
-				"GuardDBInstanceId ":"",
-				"LockReason":"",
-				"DBInstanceStatus":"Running",
-				"PayType":"Prepaid"
-			},
-			{
-				"LockMode":"Unlock",
-				"DBInstanceNetType":"Intranet",
-				"MasterInstanceId":"",
-				"DBInstanceId":"rdsabqumfabqumf",
-				"ReadOnlyDBInstanceIds":{
-					"ReadOnlyDBInstanceId":[]
-				},
-				"DBInstanceDescription":"testforcreate",
-				"TempDBInstanceId":"",
-				"Engine":"MySQL",
-				"ExpireTime":"",
-				"DBInstanceType":"Primary",
-				"RegionId":"cn-hangzhou",
-				"LockReason":"",
-				"GuardDBInstanceId ":"",
-				"DBInstanceStatus":"Running",
-				"PayType":"Postpaid"
+	"DescribeSlowLogsResponse":{
+		"Items":{
+			"SQLSlowLog":{
+				"SQLServerTotalExecutionTimes":"189",
+				"SQLText":"update test.zxb set id=0 limit 1",
+				"TotalLogicalReadcounts":"89",
+				"SQLServerTotalExecutionCounts":"178",
+				"TotalPhysicalReadcounts":"90",
+				"ReportTime":"2013-11-12Z"
 			}
-		]
-	},
-	"TotalRecordCount":2,
-	"PageNumber":1,
-	"RequestId":"2553A660-E4EB-4AF4-A402-8AFF70A49143",
-	"PageRecordCount":2
+		},
+		"PageNumber":"1",
+		"TotalRecordCount":"1",
+		"DBInstanceID":"riauvjz6zajfiq6ba1370329449201",
+		"RequestId":"A5409D02-D661-4BF3-8F3D-0A814D0574E7",
+		"EndTime":"2011-12-11Z",
+		"StartTime":"2011-06-11Z",
+		"Engine":"SQLServer",
+		"PageRecordCount":"1"
+	}
 }
 ```
 
