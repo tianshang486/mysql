@@ -1,4 +1,4 @@
-# DescribeSlowLogRecords {#doc_api_1084655 .reference}
+# DescribeSlowLogRecords {#doc_api_1091168 .reference}
 
 调用DescribeSlowLogRecords接口查看实例的慢日志明细。
 
@@ -24,7 +24,7 @@
 |EndTime|String|是|2011-06-20T16:00Z|查询结束时间，需要大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
  |
-|SQLHASH|String|否|U2FsdGVkxxxx|慢日志统计里的SQL语句唯一标识符，可获取该SQL语句的慢日志明细。
+|SQLHASH|String|否|U2FsdGVkxxxx|慢日志统计里的SQL语句唯一标识符，可用于获取该SQL语句的慢日志明细。
 
  |
 |DBName|String|否|RDS\_MySQL|数据库名称。
