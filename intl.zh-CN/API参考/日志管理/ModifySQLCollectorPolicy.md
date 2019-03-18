@@ -1,4 +1,4 @@
-# ModifySQLCollectorPolicy {#doc_api_1044027 .reference}
+# ModifySQLCollectorPolicy {#doc_api_1091160 .reference}
 
 调用ModifySQLCollectorPolicy接口开启或关闭实例的SQL审计功能。
 
@@ -22,24 +22,21 @@
 |Action|String|是|ModifySQLCollectorPolicy|系统规定参数，取值：**ModifySQLCollectorPolicy**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|SQLCollectorStatus|String|是|Enable|开启或关闭SQL审计：
-
- -   **Enable**：开启SQL审计；
--   **Disabled**：关闭SQL审计。
+|SQLCollectorStatus|String|是|Enable|开启或关闭SQL审计，取值：**Enable | Disable**
 
  |
-|StoragePeriod|Integer|否|30|SQL审计存储时间，取值：**1~30**，单位：天。
+|StoragePeriod|Integer|否|30|SQL审计日志存储时长，取值：**1~30**，单位：天。默认值：**30**。
 
  **说明：** 在SQL审计开启时，可传入该参数修改存储时间，不传则与现有值保持一致。
 
  |
-|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
+|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 
@@ -58,7 +55,7 @@
 ``` {#request_demo}
 
 http(s)://rds.aliyuncs.com/?Action=ModifySQLCollectorPolicy
-&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
+&DBInstanceId=rm-uf6wjk5xxxxxxx
 &SQLCollectorStatus=Enable
 &<公共请求参数>
 
