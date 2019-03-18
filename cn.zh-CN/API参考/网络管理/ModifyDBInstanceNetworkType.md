@@ -1,4 +1,4 @@
-# ModifyDBInstanceNetworkType {#doc_api_1075604 .reference}
+# ModifyDBInstanceNetworkType {#doc_api_1091246 .reference}
 
 调用ModifyDBInstanceNetworkType接口切换RDS实例网络类型。
 
@@ -34,23 +34,22 @@
  **说明：** 从经典网络切换到专有网络时该参数有效。
 
  |
-|ClassicExpiredDays|String|否|7|经典网络地址保留的天数，取值**1-120**，默认值：**7**天。
+|ClassicExpiredDays|String|否|7|经典网络地址保留的天数，取值**1-120**，单位：天。默认值：**7**。
 
  **说明：** 若传入参数**RetainClassic**=**True**，则该参数必传。
 
  |
-|ReadWriteSplittingClassicExpiredDays|Integer|否|7|读写分离的经典网络地址保留的天数，取值**1-120**，默认值：**7**天。
+|ReadWriteSplittingClassicExpiredDays|Integer|否|7|读写分离的经典网络地址保留的天数，取值**1-120**，单位：天。默认值：**7**。
 
  **说明：** 
 
--   如果要保留读写分离的经典网络地址，则**RetainClassic**=**True**；
--   当前实例存在经典网络类型的读写分离实例时，该值有效。
+-   当实例存在经典网络类型的读写分离地址，且**RetainClassic**=**True**，本参数有效。
 
  |
 |VPCId|String|否|vpc-uf6f7l4fg90xxxxxx|VPC ID。
 
  |
-|VSwitchId|String|否|vsw-uf6adz52c2pxxxxx|VSwitch ID，若传入**VPCId**，则该参数必传。
+|VSwitchId|String|否|vsw-uf6adz52c2pxxxxx|交换机ID，若传入**VPCId**，则该参数必传。
 
  |
 |PrivateIpAddress|String|否|172.10.40.25|设置实例的内网IP，需要在指定交换机的IP地址范围内。系统默认通过**VPCId**和**VSwitchId**自动分配。
