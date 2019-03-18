@@ -1,4 +1,4 @@
-# MigrateSecurityIPMode {#doc_api_1067139 .reference}
+# MigrateSecurityIPMode {#doc_api_1090622 .reference}
 
 调用MigrateSecurityIPMode接口把白名单从通用模式切换为高安全模式。
 
@@ -8,7 +8,7 @@
 **说明：** 
 
 -   高安全模式无法切换回通用模式；
--   不支持SQL Server实例。
+-   不支持SQL Server、MariaDB实例。
 
 ## 调试 {#apiExplorer .section}
 
