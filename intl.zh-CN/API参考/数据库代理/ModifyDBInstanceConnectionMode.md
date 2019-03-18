@@ -1,4 +1,4 @@
-# ModifyDBInstanceConnectionMode {#doc_api_1084583 .reference}
+# ModifyDBInstanceConnectionMode {#doc_api_1091883 .reference}
 
 调用ModifyDBInstanceConnectionMode接口开启或关闭数据库代理，已下线。
 
@@ -21,7 +21,7 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxx|实例名。
 
  |
-|AccessKeyId|String|否|LTAIKw8gqPc3FvOw|阿里云颁发给用户的访问服务所用的密钥ID。
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
 |OwnerAccount|String|否|testuser@aliyun.com|用户主账号。
