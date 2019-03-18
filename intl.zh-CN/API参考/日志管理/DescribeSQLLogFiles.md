@@ -1,4 +1,4 @@
-# DescribeSQLLogFiles {#doc_api_1090923 .reference}
+# DescribeSQLLogFiles {#doc_api_1091881 .reference}
 
 调用DescribeSQLLogFiles接口查询SQL审计文件列表。
 
@@ -107,7 +107,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSQLLogFiles
     <LogStatus>Success</LogStatus>
     <LogStartTime>2015-05-23T07:00:00Z</LogStartTime>
     <LogEndTime>2015-05-23T07:00:00Z</LogEndTime>
-    <LogDownloadURL>xxxxxx.cn-hangzhou.oss.aliyun-inc.com/gc.ggter.com/2015_05_23/gc.ggter.com_2015_05_23_1500_1600.gz?OSSAccessKeyId=3xmgf7JheOfOTUTf&amp;Expires=1432539994&amp;Signature=dMv7VqPqZHXVbKPmorGIvylC66c%3D</LogDownloadURL>
+    <LogDownloadURL>xxxxxx.cn-hangzhou.oss.aliyun-inc.com/gc.ggter.com/2015_05_23/gc.ggter.com_2015_05_23_1500_1600.gz?OSSAccessKeyId=AAAAAAAAAAA&amp;Expires=1432539994&amp;Signature=dMv7VqPqZHXVbKPmorGIvylC66c%3D</LogDownloadURL>
     <LogSize>257</LogSize>
   </items>
   <pageRecordCount>1</pageRecordCount>
@@ -129,7 +129,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSQLLogFiles
 			"LogEndTime":"2015-05-23T07:00:00Z",
 			"LogStatus":"Success",
 			"FileID":"ZUBaS964T3OYtxxxxxxxx",
-			"LogDownloadURL":"xxxxxx.cn-hangzhou.oss.aliyun-inc.com/gc.ggter.com/2015_05_23/gc.ggter.com_2015_05_23_1500_1600.gz?OSSAccessKeyId=3xmgf7JheOfOTUTf&Expires=1432539994&Signature=dMv7VqPqZHXVbKPmorGIvylC66c%3D",
+			"LogDownloadURL":"xxxxxx.cn-hangzhou.oss.aliyun-inc.com/gc.ggter.com/2015_05_23/gc.ggter.com_2015_05_23_1500_1600.gz?OSSAccessKeyId=AAAAAAAAAAA&Expires=1432539994&Signature=dMv7VqPqZHXVbKPmorGIvylC66c%3D",
 			"LogSize":"257"
 		}
 	],
