@@ -1,8 +1,8 @@
-# ModifyDBInstanceNetworkExpireTime {#doc_api_1072757 .reference}
+# ModifyDBInstanceNetworkExpireTime {#doc_api_1091253 .reference}
 
 调用ModifyDBInstanceNetworkExpireTime接口修改连接地址过期时间。
 
-**说明：** 当实例在混访模式下（同时包含VPC和经典网络两种网络类型的实例），该接口用于延长保留的经典网络地址过期时间。
+**说明：** 当实例在混访模式下（同时包含VPC连接地址和经典网络连接地址），该接口用于延长保留的经典网络地址过期时间。
 
 ## 调试 {#apiExplorer .section}
 
@@ -26,7 +26,7 @@
 -   经典网络读写分离地址。
 
  |
-|ClassicExpiredDays|Integer|是|7|经典网络连接地址保留天数，取值：**1-120**。
+|ClassicExpiredDays|Integer|是|7|经典网络连接地址保留天数，取值：**1-120**，单位：天。
 
  |
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
