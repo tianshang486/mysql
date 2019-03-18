@@ -20,7 +20,7 @@
 
 1.  使用远程工具[连接RDS for MariaDB TX实例](../../../../../intl.zh-CN/RDS for MariaDB TX 快速入门/连接实例.md#)，创建空数据库。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7982/155194297532385_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64517/155287178540891_zh-CN.png)
 
 2.  登录本地Linux服务器，使用自带的mysqldump工具将本地数据库数据导出为数据文件。
 
@@ -47,6 +47,6 @@
 
 5.  刷新远程工具后查看表，已经有了数据，说明已经迁移成功。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7982/155194297532386_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64517/155287178540892_zh-CN.png)
 
 
