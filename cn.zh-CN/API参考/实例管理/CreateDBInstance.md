@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1086041 .reference}
+# CreateDBInstance {#doc_api_1094261 .reference}
 
 调用CreateDBInstance接口创建一个RDS实例。
 
@@ -57,16 +57,29 @@
 -   **Intranet**：内网连接。
 
  |
+|PayType|String|是|Postpaid|实例的付费类型，取值：
+
+ -   **Postpaid**：后付费（按量付费）；
+-   **Prepaid**：预付费（包年包月）。
+
+ |
 |SecurityIPList|String|是|10.23.12.27/25|该实例的[IP白名单](~~43185~~)，多个IP地址请以英文逗号（,）隔开，不可重复，最多1000个。支持如下两种格式：
 
  -   IP地址形式，例如：10.23.12.24。
 -   CIDR形式，例如：10.23.12.24/24（无类域间路由，24表示了地址中前缀的长度，范围为1~32）。
 
  |
-|PayType|String|是|Postpaid|实例的付费类型，取值：
+|NodeType|String|否|HighAvailability|实例系列，取值：
 
- -   **Postpaid**：后付费（按量付费）；
--   **Prepaid**：预付费（包年包月）。
+ -   **Basic**：单机基础版；
+-   **HighAvailability**：双机高可用版；
+-   **Finance**：金融版（仅支持中国站）；
+-   **AlwaysOn**：集群版（仅支持SQL Server 2017企业集群版）。
+
+ **说明：** 
+
+-   当参数**EngineVersion**=**2017\_ent**，本字段为**AlwaysOn**；
+-   当参数**EngineVersion**为其他值时，根据**DBInstanceClass**和**EngineVersion**反推系列，默认为**HighAvailability**。
 
  |
 |SystemDBCharset|String|否|GBK|字符集，取值：
