@@ -1,4 +1,4 @@
-# ModifyDBInstanceConnectionMode {#doc_api_1091883 .reference}
+# ModifyDBInstanceConnectionMode {#doc_api_1094269 .reference}
 
 调用ModifyDBInstanceConnectionMode接口开启或关闭数据库代理，已下线。
 
@@ -42,10 +42,9 @@
 
 ``` {#request_demo}
 
-https://rds.aliyuncs.com/?Action=ModifyDBInstanceConnectionMode
+http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceConnectionMode
 &ConnectionMode=Performance
-&DBInstanceId=rdsaiiabnaiiabn
-&AccessKeyId=LTAIKw8gqPc3FvOw
+&DBInstanceId=rm-uf6wjk5xxxxxx
 &<公共请求参数>
 
 ```
