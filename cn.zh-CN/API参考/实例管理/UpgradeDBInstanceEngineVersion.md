@@ -1,8 +1,8 @@
-# UpgradeDBInstanceEngineVersion {#doc_api_1102539 .reference}
+# UpgradeDBInstanceEngineVersion {#doc_api_1102542 .reference}
 
 调用UpgradeDBInstanceEngineVersion接口升级实例数据库版本。
 
- **升级后根据新老规格信息和磁盘类型信息计算差价。** 
+**说明：** **升级后根据新老规格信息和磁盘类型信息计算差价。**
 
 如果主实例下挂载只读实例或者灾备实例，请先升级只读实例或者灾备实例的数据库版本。
 
