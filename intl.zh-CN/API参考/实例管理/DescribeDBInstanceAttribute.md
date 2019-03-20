@@ -1,4 +1,4 @@
-# DescribeDBInstanceAttribute {#doc_api_1091775 .reference}
+# DescribeDBInstanceAttribute {#doc_api_1101599 .reference}
 
 调用DescribeDBInstanceAttribute接口查看RDS实例的详细信息。
 
@@ -247,7 +247,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
       <Extra>
         <DBInstanceId/>
       </Extra>
-      <ConnectionString>rm-bp176gz75d0u555fu.mysql.rds.aliyuncs.com</ConnectionString>
+      <ConnectionString>rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com</ConnectionString>
       <AccountMaxQuantity>99999</AccountMaxQuantity>
       <CurrentKernelVersion>rds_20170714</CurrentKernelVersion>
       <DBInstanceCPU>2</DBInstanceCPU>
@@ -255,8 +255,8 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
       <ZoneId>cn-hangzhou-f</ZoneId>
       <ReadOnlyDBInstanceIds/>
       <ConnectionMode>Standard</ConnectionMode>
-      <VSwitchId>vsw-bp1w9ouei2nm66qlzoam0</VSwitchId>
-      <VpcId>vpc-bp1opxu1zkhn00gzv26cf</VpcId>
+      <VSwitchId>vsw-bp1w9oueixxxxx</VSwitchId>
+      <VpcId>vpc-bp1opxu1zkhxxxxx</VpcId>
       <Engine>MySQL</Engine>
       <MaintainTime>18:00Z-22:00Z</MaintainTime>
       <MaxConnections>4000</MaxConnections>
@@ -274,9 +274,9 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
       <MaxIOPS>600</MaxIOPS>
       <DBInstanceClass>mysql.n2.medium.1</DBInstanceClass>
       <DBMaxQuantity>99999</DBMaxQuantity>
-      <ResourceGroupId>rg-acfmyiu4ekpdhaq</ResourceGroupId>
-      <DBInstanceId>rm-bp176gz75d0u555fu</DBInstanceId>
-      <VpcCloudInstanceId>rm-bp176gz75d0u555fu</VpcCloudInstanceId>
+      <ResourceGroupId>rg-acfmyxxxxx</ResourceGroupId>
+      <DBInstanceId>rm-bp176xxxxx</DBInstanceId>
+      <VpcCloudInstanceId>rm-bp176gz7xxxxx</VpcCloudInstanceId>
       <DBInstanceClassType>x</DBInstanceClassType>
       <LatestKernelVersion/>
       <InstanceNetworkType>VPC</InstanceNetworkType>
@@ -305,7 +305,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
 		"DBInstanceAttribute":[
 			{
 				"AccountMaxQuantity":99999,
-				"ConnectionString":"rm-bp176gz75d0u555fu.mysql.rds.aliyuncs.com",
+				"ConnectionString":"rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com",
 				"Extra":{
 					"DBInstanceId":{
 						"DBInstanceId":[]
@@ -319,9 +319,9 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
 				"ReadOnlyDBInstanceIds":{
 					"ReadOnlyDBInstanceId":[]
 				},
-				"VSwitchId":"vsw-bp1w9ouei2nm66qlzoam0",
+				"VSwitchId":"vsw-bp1w9oueixxxxx",
 				"Engine":"MySQL",
-				"VpcId":"vpc-bp1opxu1zkhn00gzv26cf",
+				"VpcId":"vpc-bp1opxu1zkhxxxxx",
 				"MaintainTime":"18:00Z-22:00Z",
 				"MaxConnections":4000,
 				"DBInstanceType":"Primary",
@@ -338,9 +338,9 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
 				"DBInstanceNetType":"Intranet",
 				"DBInstanceClass":"mysql.n2.medium.1",
 				"DBMaxQuantity":99999,
-				"DBInstanceId":"rm-bp176gz75d0u555fu",
-				"ResourceGroupId":"rg-acfmyiu4ekpdhaq",
-				"VpcCloudInstanceId":"rm-bp176gz75d0u555fu",
+				"DBInstanceId":"rm-bp176xxxxx",
+				"ResourceGroupId":"rg-acfmyxxxxx",
+				"VpcCloudInstanceId":"rm-bp176gz7xxxxx",
 				"DBInstanceClassType":"x",
 				"LatestKernelVersion":"",
 				"InstanceNetworkType":"VPC",
