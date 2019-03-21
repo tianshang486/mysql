@@ -1,4 +1,4 @@
-# CreateReadOnlyDBInstance {#doc_api_1063871 .reference}
+# CreateReadOnlyDBInstance {#doc_api_1105949 .reference}
 
 调用CreateReadOnlyDBInstance接口为某个实例创建一个只读实例。
 
@@ -90,7 +90,7 @@
 |DBInstanceId|String|rr-uf6wjk5xxxxxxx|创建的只读实例ID。
 
  |
-|OrderId|String|100789370230206|订单ID。
+|OrderId|String|10078937xxxxx|订单ID。
 
  |
 |ConnectionString|String|rr-xxxxx.mysql.rds.aliyuncs.com|创建的只读实例内网数据库连接地址。
@@ -127,9 +127,9 @@ http(s)://rds.aliyuncs.com/?Action=CreateReadOnlyDBInstance
 
 ``` {#xml_return_success_demo}
 <CreateReadOnlyDBInstanceResponse>
-  <OrderId>100789370230206</OrderId>
-  <ConnectionString>rdsaiiabnaiiabn.mysql.rds.aliyuncs.com </ConnectionString>
-  <DBInstanceId>rdsaiiabnaiiabn</DBInstanceId>
+  <OrderId>10078937xxxxx</OrderId>
+  <ConnectionString>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com </ConnectionString>
+  <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
   <port>3306</port>
   <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId>
 </CreateReadOnlyDBInstanceResponse>
@@ -141,10 +141,10 @@ http(s)://rds.aliyuncs.com/?Action=CreateReadOnlyDBInstance
 ``` {#json_return_success_demo}
 {
 	"Port":"3306",
-	"ConnectionString":"rdsaiiabnaiiabn.mysql.rds.aliyuncs.com",
+	"ConnectionString":"rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com",
 	"RequestId":"1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC",
-	"DBInstanceId":"rdsaiiabnaiiabn",
-	"OrderId":"100789370230206"
+	"DBInstanceId":"rm-uf6wjk5xxxxxxx",
+	"OrderId":"10078937xxxxx"
 }
 ```
 
