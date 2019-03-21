@@ -10,7 +10,8 @@ The billing method of read-only instances is Pay-As-You-Go \(billed by hour.\). 
 
 ## Prerequisites {#section_kdj_3gb_ygb .section}
 
--   The instance is an RDS for PostgreSQL 10.0 instance, not PostgreSQL 9.4.
+-   The instance is an RDS for PostgreSQL 10.0 instance.
+-   The instance belongs to the High-Availability series.
 -   The configuration of the master instance must be at least 8-core 32 GB \(dedicated or dedicated-host instance\).
 
 ## Attention {#section_dbp_zq5_vdb .section}
@@ -26,12 +27,12 @@ The billing method of read-only instances is Pay-As-You-Go \(billed by hour.\). 
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315064541263_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315453841263_en-US.png)
 
 3.  Find the instance and click the instance ID.
 4.  Click **Add Read-only instance**.
 
-    ![添加只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315064539780_en-US.png)
+    ![添加只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315453839780_en-US.png)
 
 5.  On the purchase page, select instance configurations and click **Buy Now**.
 
@@ -59,14 +60,14 @@ The instance creation takes a few minutes.
 3.  Find the master instance and click its ID.
 4.  On the **Basic Information** page, place the mouse over the number of read-only instances and click the read-only instance ID.
 
-    ![主实例内跳转只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315064539784_en-US.png)
+    ![主实例内跳转只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315453839784_en-US.png)
 
 
 ## View the delay of a read-only instance {#section_sww_dv5_vdb .section}
 
 When a read-only instance synchronizes data from the master instance, the read-only instance may lag behind the master instance by a small amount of time. You can view the delay on the basic information page of the read-only instance.
 
-![只读实例延迟](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315064639785_en-US.png)
+![只读实例延迟](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315453839785_en-US.png)
 
 ## Related API {#section_hcn_555_jgb .section}
 
