@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1094261 .reference}
+# CreateDBInstance {#doc_api_1105125 .reference}
 
 调用CreateDBInstance接口创建一个RDS实例。
 
@@ -142,8 +142,8 @@
  |
 |UsedTime|String|否|2|指定购买时长，取值：
 
- -   当参数**Period**为**Year**时，UsedTime取值为**1~9**；
--   当参数**Period**为**Month**时，UsedTime取值为**1~3**。
+ -   当参数**Period**为**Year**时，UsedTime取值为**1~3**；
+-   当参数**Period**为**Month**时，UsedTime取值为**1~9**。
 
  **说明：** 若付费类型为**Prepaid**则该参数必须传入。
 
