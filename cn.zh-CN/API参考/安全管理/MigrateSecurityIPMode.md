@@ -1,4 +1,4 @@
-# MigrateSecurityIPMode {#doc_api_1090622 .reference}
+# MigrateSecurityIPMode {#doc_api_1106076 .reference}
 
 调用MigrateSecurityIPMode接口把白名单从通用模式切换为高安全模式。
 
@@ -60,7 +60,7 @@ http(s)://rds.aliyuncs.com/?Action=MigrateSecurityIPMode
 
 ``` {#xml_return_success_demo}
 <MigrateSecurityIPModeResponse>
-  <DBInstanceId>rm-bp1qh9ycn9x2ovq65</DBInstanceId>
+  <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
   <RequestId>EF1E53AB-5625-49C7-ADF1-FBD0B6640D19</RequestId>
   <SecurityIPMode>safety</SecurityIPMode>
 </MigrateSecurityIPModeResponse>
@@ -72,7 +72,7 @@ http(s)://rds.aliyuncs.com/?Action=MigrateSecurityIPMode
 ``` {#json_return_success_demo}
 {
 	"RequestId":"EF1E53AB-5625-49C7-ADF1-FBD0B6640D19",
-	"DBInstanceId":"rm-bp1qh9ycn9x2ovq65",
+	"DBInstanceId":"rm-uf6wjk5xxxxxxx",
 	"SecurityIPMode":"safety"
 }
 ```
