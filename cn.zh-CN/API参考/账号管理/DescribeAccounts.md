@@ -1,4 +1,4 @@
-# DescribeAccounts {#doc_api_1064583 .reference}
+# DescribeAccounts {#doc_api_1105966 .reference}
 
 调用DescribeAccounts接口查看实例的帐号信息。
 
@@ -27,7 +27,7 @@
 -   **50**；
 -   **100**。
 
- 默认值：**500**。
+ 默认值：**30**。
 
  |
 |PageNumber|Integer|否|1|页码，取值：大于0且不超过Integer的最大值。
@@ -121,7 +121,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeAccounts
       </DatabasePrivileges>
       <AccountStatus>Available</AccountStatus>
       <AccountDescription/>
-      <DBInstanceId>rdsaiiabnaiiabn</DBInstanceId>
+      <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
       <AccountName>testacc02</AccountName>
       <PrivExceeded>0</PrivExceeded>
       <AccountType>Normal</AccountType>
@@ -150,7 +150,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeAccounts
 					]
 				},
 				"AccountDescription":"",
-				"DBInstanceId":"rdsaiiabnaiiabn",
+				"DBInstanceId":"rm-uf6wjk5xxxxxxx",
 				"AccountName":"testacc02",
 				"PrivExceeded":"0",
 				"AccountType":"Normal"
