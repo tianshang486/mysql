@@ -1,4 +1,4 @@
-# DescribeDBInstancePerformance {#doc_api_1104939 .reference}
+# DescribeDBInstancePerformance {#doc_api_1106175 .reference}
 
 调用DescribeDBInstancePerformance接口查看实例性能数据。
 
@@ -102,7 +102,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstancePerformance
 ``` {#xml_return_success_demo}
 <DescribeDBInstancePerformanceResponse>
   <RequestId>A5409D02-D661-4BF3-8F3D-0A814D0574E7</RequestId>
-  <DBInstanceID>rdsaiiabnaiiabn</DBInstanceID>
+  <DBInstanceID> rm-uf6wjk5xxxxxxx</DBInstanceID>
   <StartTime>2012-06-11T15:00Z</StartTime>
   <EndTime>2013-10-17T15:00Z</EndTime>
   <Engine>MySQL</Engine>
@@ -122,7 +122,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstancePerformance
 
 ``` {#json_return_success_demo}
 {
-	"DBInstanceID":"rdsaiiabnaiiabn",
+	"DBInstanceID":" rm-uf6wjk5xxxxxxx",
 	"RequestId":"A5409D02-D661-4BF3-8F3D-0A814D0574E7",
 	"PerformanceKeys":{
 		"PerformanceKey":[
