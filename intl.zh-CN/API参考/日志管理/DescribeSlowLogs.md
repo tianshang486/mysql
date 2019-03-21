@@ -1,4 +1,4 @@
-# DescribeSlowLogs {#doc_api_1091175 .reference}
+# DescribeSlowLogs {#doc_api_1106084 .reference}
 
 调用DescribeSlowLogs查看慢日志统计情况。
 
@@ -171,7 +171,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSlowLogs
 ``` {#xml_return_success_demo}
 <DescribeSlowLogsResponse>
   <RequestId>A5409D02-D661-4BF3-8F3D-0A814D0574E7</RequestId>
-  <DBInstanceID>riauvjz6zajfiq6ba1370329449201</DBInstanceID>
+  <DBInstanceID>rm-uf6wjk5xxxxxxx</DBInstanceID>
   <Engine>SQLServer</Engine>
   <StartTime>2011-06-11Z</StartTime>
   <EndTime>2011-12-11Z</EndTime>
@@ -209,7 +209,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSlowLogs
 		},
 		"PageNumber":"1",
 		"TotalRecordCount":"1",
-		"DBInstanceID":"riauvjz6zajfiq6ba1370329449201",
+		"DBInstanceID":"rm-uf6wjk5xxxxxxx",
 		"RequestId":"A5409D02-D661-4BF3-8F3D-0A814D0574E7",
 		"EndTime":"2011-12-11Z",
 		"StartTime":"2011-06-11Z",
