@@ -1,4 +1,4 @@
-# DescribeSlowLogRecords {#doc_api_1091168 .reference}
+# DescribeSlowLogRecords {#doc_api_1106089 .reference}
 
 调用DescribeSlowLogRecords接口查看实例的慢日志明细。
 
@@ -121,7 +121,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSlowLogRecords
 ``` {#xml_return_success_demo}
 <DescribeSlowLogRecordsResponse>
   <RequestId>542BB8D6-4268-45CC-A557-B03EFD7AB30A</RequestId>
-  <DBInstanceID>riauvjz6zajfiq6ba1370329449201</DBInstanceID>
+  <DBInstanceID>rm-uf6wjk5xxxxxxx</DBInstanceID>
   <Engine>MySQL</Engine>
   <TotalRecordCount>1</TotalRecordCount>
   <PageNumber>1</PageNumber>
@@ -146,25 +146,26 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSlowLogRecords
 
 ``` {#json_return_success_demo}
 {
-	"Items":{
-		"SQLSlowRecord":[
-			{
+	"DescribeSlowLogRecordsResponse":{
+		"Items":{
+			"SQLSlowRecord":{
 				"ReturnRowCounts":"1",
 				"HostAddress":"192.101.2.11",
-				"SQLText":" update test.zxb set id=0 limit 1",
+				"SQLText":"update test.zxb set id=0 limit 1",
 				"LockTimes":"12",
 				"ExecutionStartTime":"2011-06-11T15:00:08Z",
 				"ParseRowCounts":"125",
 				"QueryTimes":"123",
 				"DBName":"test"
 			}
-		]
-	},
-	"TotalRecordCount":1,
-	"PageNumber":1,
-	"RequestId":"542BB8D6-4268-45CC-A557-B03EFD7AB30A",
-	"Engine":"MySQL",
-	"PageRecordCount":1
+		},
+		"PageNumber":"1",
+		"TotalRecordCount":"1",
+		"DBInstanceID":"rm-uf6wjk5xxxxxxx",
+		"RequestId":"542BB8D6-4268-45CC-A557-B03EFD7AB30A",
+		"Engine":"MySQL",
+		"PageRecordCount":"1"
+	}
 }
 ```
 
