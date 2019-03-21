@@ -1,4 +1,4 @@
-# RenewInstance {#doc_api_1059321 .reference}
+# RenewInstance {#doc_api_1105139 .reference}
 
 调用RenewInstance接口对RDS实例进行续费。
 
@@ -26,7 +26,7 @@
  |
 |Period|String|是|12|预付费续费时长，单位：月。取值：
 
- -   **1-9**
+ -   **1~9**
 -   **12**
 -   **24**
 -   **36**
@@ -79,7 +79,7 @@ http(s)://rds.aliyuncs.com/?Action=RenewInstance
 
 ``` {#xml_return_success_demo}
 <RenewInstanceResponse>
-  <OrderId>202867170710728</OrderId>
+  <OrderId>20286717xxxxx</OrderId>
   <RequestId>E10319A3-B96A-46B0-81CE-D610DC891409</RequestId>
 </RenewInstanceResponse>
 
@@ -90,7 +90,7 @@ http(s)://rds.aliyuncs.com/?Action=RenewInstance
 ``` {#json_return_success_demo}
 {
 	"RequestId":"E10319A3-B96A-46B0-81CE-D610DC891409",
-	"OrderId":"202867170710728"
+	"OrderId":"20286717xxxxx"
 }
 ```
 
