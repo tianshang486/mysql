@@ -2,7 +2,7 @@
 
 You can create read-only instances to handle large numbers of read requests and increase the application throughput. A read-only instance is a read-only copy of the master instance. Changes to the master instance are also automatically synchronized to all relevant read-only instances.
 
-For more information, see [EN-US\_TP\_134807.md\#](intl.en-US/Quick Start for PPAS/Read-only instances/Introduction to PPAS read-only instances.md#)。
+For more information, see [Introduction to PostgreSQL read-only instances](intl.en-US/Quick Start for PostgreSQL/Read-only instances/Introduction to PostgreSQL read-only instances.md).
 
 ## Pricing {#section_vqk_qbx_dhb .section}
 
@@ -26,12 +26,12 @@ The billing method of read-only instances is Pay-As-You-Go \(billed by hour.\). 
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315053041263_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315064541263_en-US.png)
 
 3.  Find the instance and click the instance ID.
 4.  Click **Add Read-only instance**.
 
-    ![添加只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315053039780_en-US.png)
+    ![添加只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315064539780_en-US.png)
 
 5.  On the purchase page, select instance configurations and click **Buy Now**.
 
@@ -54,19 +54,19 @@ The instance creation takes a few minutes.
 
 **View the read-only instance on the master instance information page**
 
-1.  Log on to the [RDS管理控制台](https://rds.console.aliyun.com/).
+1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the master instance is located.
 3.  Find the master instance and click its ID.
 4.  On the **Basic Information** page, place the mouse over the number of read-only instances and click the read-only instance ID.
 
-    ![主实例内跳转只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315053039784_en-US.png)
+    ![主实例内跳转只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315064539784_en-US.png)
 
 
 ## View the delay of a read-only instance {#section_sww_dv5_vdb .section}
 
 When a read-only instance synchronizes data from the master instance, the read-only instance may lag behind the master instance by a small amount of time. You can view the delay on the basic information page of the read-only instance.
 
-![只读实例延迟](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315053039785_en-US.png)
+![只读实例延迟](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/155315064639785_en-US.png)
 
 ## Related API {#section_hcn_555_jgb .section}
 
