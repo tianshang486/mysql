@@ -1,4 +1,4 @@
-# DescribeOssDownloads {#doc_api_1105032 .reference}
+# DescribeOssDownloads {#doc_api_1106157 .reference}
 
 调用DescribeOssDownloads接口查看备份数据上云任务的文件详情。
 
@@ -103,10 +103,10 @@ http(s)://rds.aliyuncs.com/?Action=DescribeOssDownloads
 ``` {#xml_return_success_demo}
 <DescribeOssDownloadsResponse>
   <RequestId>A5409D02-D661-4BF3-8F3D-0A814D0574E7</RequestId>
-  <DBInstanceId>rdsaiiabnaiiabn</DBInstanceId>
-  <MigrateTaskId>rdsaiiabnaiiabn</MigrateTaskId>
+  <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
+  <MigrateTaskId>562154852</MigrateTaskId>
   <Items>
-    <FileName>rdsaiiabnaiiabn</FileName>
+    <FileName>test</FileName>
     <CreateTime>2017-05-30 T12:11:4Z</CreateTime>
     <FileSize>2MB</FileSize>
     <IsAvailable>True</IsAvailable>
@@ -127,12 +127,12 @@ http(s)://rds.aliyuncs.com/?Action=DescribeOssDownloads
 		"Status":"Finished",
 		"IsAvailable":"True",
 		"Description":"Api description",
-		"FileName":"rdsaiiabnaiiabn",
+		"FileName":"test",
 		"CreateTime":"2017-05-30 T12:11:4Z",
 		"BackupMode":"FULL"
 	},
-	"MigrateTaskId":"rdsaiiabnaiiabn",
-	"DBInstanceId":"rdsaiiabnaiiabn",
+	"MigrateTaskId":"562154852",
+	"DBInstanceId":"rm-uf6wjk5xxxxxxx",
 	"RequestId":"A5409D02-D661-4BF3-8F3D-0A814D0574E7"
 }
 ```
