@@ -1,4 +1,4 @@
-# DescribeDiagnosticReportList {#doc_api_1091887 .reference}
+# DescribeDiagnosticReportList {#doc_api_1105951 .reference}
 
 调用DescribeDiagnosticReportList接口获取诊断报告列表。
 
@@ -70,7 +70,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDiagnosticReportList
 <DescribeDiagnosticReportListResponse>
   <reportList>
     <diagnosticTime>2018-01-17T12:46:09Z</diagnosticTime>
-    <downloadURL>http://rdsreport-hzi-v2.oss-cn-hangzhou-i.aliyuncs.com/custins5095533/apsaradba_report_1516193170098.pdf?OSSAccessKeyId=LTAIfCxxxxxxx&amp;Expires=1516244278&amp;Signature=hWQMLng%2ByhNjas2q59w1zKBvvzc%3D</downloadURL>
+    <downloadURL>http://rdsreport-hzi-v2.oss-cn-hangzhou-i.aliyuncs.com/xxxxx</downloadURL>
     <endTime>2018-01-10T15:31:00Z</endTime>
     <score>100</score>
     <startTime>2018-01-10T15:30:00Z</startTime>
@@ -88,7 +88,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDiagnosticReportList
 	"reportList":[
 		{
 			"startTime":"2018-01-10T15:30:00Z",
-			"downloadURL":"http://rdsreport-hzi-v2.oss-cn-hangzhou-i.aliyuncs.com/custins5095533/apsaradba_report_1516193170098.pdf?OSSAccessKeyId=LTAIfCxxxxxxx&Expires=1516244278&Signature=hWQMLng%2ByhNjas2q59w1zKBvvzc%3D",
+			"downloadURL":"http://rdsreport-hzi-v2.oss-cn-hangzhou-i.aliyuncs.com/xxxxx",
 			"score":100,
 			"diagnosticTime":"2018-01-17T12:46:09Z",
 			"endTime":"2018-01-10T15:31:00Z"
