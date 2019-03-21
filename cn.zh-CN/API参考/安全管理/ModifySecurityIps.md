@@ -1,8 +1,8 @@
-# ModifySecurityIps {#doc_api_1021521 .reference}
+# ModifySecurityIps {#doc_api_1106078 .reference}
 
-该接口用于修改允许访问实例的IP名单。
+调用ModifySecurityIps接口修改白名单。
 
-调用该接口需要实例状态为运行中，否则操作将失败 **。**
+调用该接口时，实例状态必须为运行中，否则将操作失败。
 
 ## 调试 {#apiExplorer .section}
 
@@ -15,26 +15,26 @@
 |Action|String|是|ModifySecurityIps|系统规定参数，取值：**ModifySecurityIps**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|SecurityIps|String|是|0.0.0.0/0,10.23.12.24|IP白名单分组下的IP列表，最多1000个，以英文逗号“,”隔开，格式如下：
+|SecurityIps|String|是|10.23.12.24|该实例的[IP白名单](~~43185~~)，多个IP地址请以英文逗号（,）隔开，不可重复，最多1000个。支持如下两种格式：
 
- -   0.0.0.0/0，10.23.12.24（IP）；
--   10.23.12.24/24（CIDR模式，无类域间路由，/24表示了地址中前缀的长度，范围1~32）。
+ -   IP地址形式，例如：10.23.12.24。
+-   CIDR形式，例如：10.23.12.24/24（无类域间路由，24表示了地址中前缀的长度，范围为1~32）。
 
  |
-|DBInstanceIPArrayName|String|否|test|IP白名单分组的名字，如果不传默认操作“Default”分组。
+|DBInstanceIPArrayName|String|否|test|需要修改的IP白名单分组名称，默认操作“Default”分组。
 
- **说明：** 1个实例最多支持50个白名单分组。
+ **说明：** 单个实例最多支持50个白名单分组。
 
  |
 |DBInstanceIPArrayAttribute|String|否|hidden|白名单分组属性，默认为空。
 
- **说明：** 用于区分不同的属性值，控制台不显示带有“hidden”标签的分组。
+ **说明：** 控制台不显示带有“hidden”属性的分组，带有该标签的分组通常是用于访问DTS、DRDS服务的。
 
  |
-|ModifyMode|String|否|Cover|修改方式，取值如下：
+|ModifyMode|String|否|Cover|修改方式，取值：
 
  -   **Cover**：覆盖原IP白名单；
 -   **Append**：追加IP；
@@ -43,7 +43,7 @@
  默认值：**Cover**。
 
  |
-|WhitelistNetworkType|String|否|Classic|白名单的网络类型。取值范围：
+|WhitelistNetworkType|String|否|Classic|白名单的网络类型，取值：
 
  -   **Classic**：高安全白名单模式下的经典网络；
 -   **VPC**：高安全白名单模式下的专有网络；
@@ -52,7 +52,7 @@
  默认值：**MIX**。
 
  |
-|SecurityGroupId|String|否|rg-acfmyxxxxxxxxxx|安全组编码。
+|SecurityGroupId|String|否|rg-acfmyxxxxx|安全组编码。
 
  |
 |SecurityIPType|String|否|IPv4|IP地址类型。
@@ -77,8 +77,8 @@
 ``` {#request_demo}
 
 http(s)://rds.aliyuncs.com/?Action=ModifySecurityIps
-&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
-&SecurityIps=0.0.0.0/0,10.23.12.24
+&DBInstanceId=rm-uf6wjk5xxxxxxx
+&SecurityIps=10.23.12.24
 &<公共请求参数>
 
 ```
@@ -90,7 +90,7 @@ http(s)://rds.aliyuncs.com/?Action=ModifySecurityIps
 ``` {#xml_return_success_demo}
 <ModifySecurityIpsResponse>
   <RequestId> 1AD222E9-E606-4A42-BF6D-8A4442913CEF</RequestId>
-  <TaskId>123</TaskId>
+  <TaskId>115855279</TaskId>
 </ModifySecurityIpsResponse>
 
 ```
@@ -100,7 +100,7 @@ http(s)://rds.aliyuncs.com/?Action=ModifySecurityIps
 ``` {#json_return_success_demo}
 {
 	"RequestId":" 1AD222E9-E606-4A42-BF6D-8A4442913CEF",
-	"TaskId":123
+	"TaskId":115855279
 }
 ```
 
