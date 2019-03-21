@@ -1,4 +1,4 @@
-# ResetAccountPassword {#doc_api_1064594 .reference}
+# ResetAccountPassword {#doc_api_1105982 .reference}
 
 调用ResetAccountPassword接口重置账号密码。
 
@@ -29,7 +29,7 @@
 
 -   长度为8~32个字符；
 -   由大写字母、小写字母、数字、特殊字符中的任意三种组成；
--   特殊字符为!@\#$%^\*\(\)\_+-=
+-   特殊字符为!@\#$&%^\*\(\)\_+-=
 
  |
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
