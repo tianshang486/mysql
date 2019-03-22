@@ -33,13 +33,13 @@ The intranet address is recommended because accessing RDS through the intranet i
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/?spm=5176.doc43185.2.7.mR2Syx).
 2.  In the upper-left corner, select the region where the RDS instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64706/155324055841374_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64706/155324205541374_en-US.png)
 
 3.  Find the RDS instance and click its ID.
 4.  In the left-side navigation pane, choose **Connection Options**.
 5.  Click **Apply for Internet Address**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64706/155324055841375_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64706/155324205641375_en-US.png)
 
 6.  In the displayed dialog box, click **OK**.
 
@@ -55,6 +55,6 @@ The intranet address is recommended because accessing RDS through the intranet i
 
     -   **Connection Address**: You can modify the address prefix, which consists of 8 to 30 characters, including letters and digits, and starts with a lower-case letter.
     -   **Port**: The port number can be modified only if the RDS network type is classic network.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64706/155324055941377_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64706/155324205641377_en-US.png)
 
 
