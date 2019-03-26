@@ -10,26 +10,26 @@
 
 **说明：** 
 
--   仅PostgreSQL 10.0支持只读实例。
+-   仅PostgreSQL 10.0高可用版支持只读实例。
 -   主实例规格不低于8核32G（独享套餐）。
 -   只读实例为单节点的架构（没有备节点）。
 
 只读实例拓扑图如下图所示。
 
-![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133899/155194592539776_zh-CN.png)
+![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133899/155356304439776_zh-CN.png)
 
 ## 计费 {#section_fwf_5p5_vdb .section}
 
-按量付费，即每小时扣费一次，费用和相同规格的按量付费主实例价格一致，请参见[价格](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing)。
+按量付费，即每小时扣费一次，费用和相同规格的按量付费主实例价格一致，请参见[详细价格信息](https://www.aliyun.com/price/product#/rds/detail)。
 
 ## 功能特点 {#section_zx1_zp5_vdb .section}
 
 -   计费方式：按量付费，使用更灵活，费用更便宜。
 -   地域和可用区：与主实例在同一地域，可以在不同的可用区。
 -   规格和存储空间：只读实例的规格和存储空间不能低于主实例。
--   [网络类型](../../../../../intl.zh-CN/用户指南/数据库连接/切换网络类型.md#)：可以与主实例不一致。
+-   [切换网络类型](../../../../../cn.zh-CN/RDS for PostgreSQL 用户指南/数据库连接/切换网络类型.md#)：可以与主实例不一致。
 -   账号与数据库管理：不需要维护账号与数据库，全部通过主实例同步。
--   白名单：只读实例创建时会自动复制其主实例的白名单信息，但只读实例和主实例的白名单是相互独立的。若您需要修改只读实例的白名单，请参见[设置白名单](intl.zh-CN/RDS for PostgreSQL 快速入门/初始化配置/设置白名单.md#)。
+-   白名单：只读实例创建时会自动复制其主实例的白名单信息，但只读实例和主实例的白名单是相互独立的。若您需要修改只读实例的白名单，请参见[设置白名单](cn.zh-CN/RDS for PostgreSQL 快速入门/初始化配置/设置白名单.md#)。
 -   监控与报警：提供系统性能指标的监控视图，如磁盘容量、IOPS、连接数、CPU利用率等。
 
 ## 功能限制 { .section}
