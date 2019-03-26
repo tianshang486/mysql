@@ -16,11 +16,11 @@
 
 只读实例拓扑图如下图所示。
 
-![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133899/155194901039776_zh-CN.png)
+![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133899/155359377239776_zh-CN.png)
 
 ## 计费 {#section_fwf_5p5_vdb .section}
 
-按量付费，即每小时扣费一次，费用和相同规格的按量付费主实例价格一致，请参见[价格](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing)。
+按量付费，即每小时扣费一次。
 
 ## 功能特点 {#section_zx1_zp5_vdb .section}
 
