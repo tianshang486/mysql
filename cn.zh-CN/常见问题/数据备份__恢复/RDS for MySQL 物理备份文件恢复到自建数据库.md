@@ -6,6 +6,7 @@
 
 -   通过逻辑备份文件恢复到自建数据库请参见[RDS for MySQL 逻辑备份文件恢复到自建数据库](intl.zh-CN/常见问题/数据备份__恢复/RDS for MySQL 逻辑备份文件恢复到自建数据库.md#)。
 -   关于云数据库MySQL版如何备份数据，请参见[备份 RDS 数据](../../../../../intl.zh-CN/用户指南/备份数据/备份 RDS 数据.md#)。
+-   由于Percona Xtrabackup不支持Windows，Windows系统下的备份恢复请参见[使用 mysqldump 迁移 MySQL 数据](../../../../../intl.zh-CN/RDS for MySQL 用户指南/数据迁移/使用 mysqldump 迁移 MySQL 数据.md#)。
 
 ## 注意事项 {#section_bd4_5gz_5fb .section}
 
