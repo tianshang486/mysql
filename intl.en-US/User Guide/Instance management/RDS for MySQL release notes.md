@@ -44,22 +44,22 @@
     -   Resolved the problem that an entire TokuDB table is rebuilt by the ALTER TABLE COMMENT command. For more information, see [Reference](https://github.com/alibaba/AliSQL/wiki/Changes-in-AliSQL-5.6.32-(2018-05-01)#1-alter-tokudb-table-comment-rebuild-whole-engine-data).
     -   Resolved possible deadlocks triggered by the SHOW SLAVE STATUS or SHOW STATUS command.
 -   **Version mysql\_20171205 \(5.6.16\)**
--   -   Resolved the problem that concurrent execution of OPTIMIZE TABLE and ONLINE ALTER TABLE causes deadlocks.
--   Resolved conflicts between SEQUENCE and implicit primary keys.
--   Resolved problems related to SHOW CREATE SEQUENCE.
--   Resolved the problem that TokuDB table statistics are incorrect.
--   Resolved the problem that parallel OPTIMIZE table commands cause deadlocks.
--   Resolved the character set problems recorded in QUERY\_LOG\_EVENT.
--   Resolved the problem that databases cannot be stopped due to signal processing. For more information, see [Reference](https://github.com/alibaba/AliSQL/wiki/Changes-in-AliSQL-5.6.32-%282017-10-10%29#1-the-ack-receiver-thread-didnt-handle-signal-correctly).
--   Resolved problems caused by RESET MASTER.
--   Resolved the problem that backup databases are stuck in the waiting state.
--   Resolved the possible process termination caused by SHOW CREATE TABLE.
+    -   Resolved the problem that concurrent execution of OPTIMIZE TABLE and ONLINE ALTER TABLE causes deadlocks.
+    -   Resolved conflicts between SEQUENCE and implicit primary keys.
+    -   Resolved problems related to SHOW CREATE SEQUENCE.
+    -   Resolved the problem that TokuDB table statistics are incorrect.
+    -   Resolved the problem that parallel OPTIMIZE table commands cause deadlocks.
+    -   Resolved the character set problems recorded in QUERY\_LOG\_EVENT.
+    -   Resolved the problem that databases cannot be stopped due to signal processing. For more information, see [Reference](https://github.com/alibaba/AliSQL/wiki/Changes-in-AliSQL-5.6.32-%282017-10-10%29#1-the-ack-receiver-thread-didnt-handle-signal-correctly).
+    -   Resolved problems caused by RESET MASTER.
+    -   Resolved the problem that backup databases are stuck in the waiting state.
+    -   Resolved the possible process termination caused by SHOW CREATE TABLE.
 -   **Version 20170927 \(5.6.16\)**
     -   Resolved the problem that TokuDB table queries use incorrect indexes.
 -   **Version 20170901 \(5.6.16\)**
--   -   Upgraded the SSL encryption version to TLS1.2. For more information, see [Reference](https://github.com/alibaba/AliSQL/wiki/Changes-in-AliSQL-5.6.32-(2017-10-10)#2-upgrade-ssl-tlsv12).
--   Supported SEQUENCE.
--   Resolved the problem that NOT IN queries return incorrect results in certain scenarios.
+    -   Upgraded the SSL encryption version to TLS1.2. For more information, see [Reference](https://github.com/alibaba/AliSQL/wiki/Changes-in-AliSQL-5.6.32-(2017-10-10)#2-upgrade-ssl-tlsv12).
+    -   Supported SEQUENCE.
+    -   Resolved the problem that NOT IN queries return incorrect results in certain scenarios.
 -   **Version 20170530 \(5.6.16\)**
 
     Allowed master accounts to kill connections of common accounts.
