@@ -20,7 +20,7 @@
 
 -   **Version 20180601**
 
-    -   Prohibits non-super users from running RESET SLAVE.
+    -   Prohibited non-super users from running RESET SLAVE.
     -   Fixed the thread ID overflow.
 -   **Version 20180431**
     -   Supported the High-availability Edition.
@@ -39,8 +39,8 @@
 
 -   **Version mysql\_20180426 \(5.6.16\)**
     -   Supported hidden indexes so that you can set invisible indexes. For more information, see [Reference](https://github.com/alibaba/AliSQL/wiki/Changes-in-AliSQL-5.6.32-(2017-07-16)#1-invisible-indexes).
-    -   Fixed bugs that occur when backup instances are applying threads.
-    -   Resolved the performance deterioration that occurs when backup instances are applying partition updates.
+    -   Fixed bugs that occur when slave instances apply threads.
+    -   Resolved the performance deterioration that occurs when slave instances apply partition updates.
     -   Resolved the problem that an entire TokuDB table is rebuilt by the ALTER TABLE COMMENT command. For more information, see [Reference](https://github.com/alibaba/AliSQL/wiki/Changes-in-AliSQL-5.6.32-(2018-05-01)#1-alter-tokudb-table-comment-rebuild-whole-engine-data).
     -   Resolved possible deadlocks triggered by the SHOW SLAVE STATUS or SHOW STATUS command.
 -   **Version mysql\_20171205 \(5.6.16\)**
