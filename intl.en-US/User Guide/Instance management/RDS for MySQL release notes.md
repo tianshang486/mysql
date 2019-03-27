@@ -66,6 +66,6 @@
 
 -   **Version 20170221 \(5.6.16\)**
 
-    Supported [Introduction to read/write splitting](intl.en-US/User Guide/Read__write splitting/Introduction to read__write splitting.md).
+    Supported [read/write splitting](intl.en-US/User Guide/Read__write splitting/Introduction to read__write splitting.md).
 
 
