@@ -1,4 +1,4 @@
-# CloneDBInstance {#doc_api_1105057 .reference}
+# CloneDBInstance {#doc_api_1164192 .reference}
 
 调用CloneDBInstance接口将历史数据恢复至一个新实例（称为克隆实例）。
 
@@ -111,7 +111,7 @@
 |DBInstanceId|String|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|OrderId|String|100789370230206|订单ID。
+|OrderId|String|100789370xxxxx|订单ID。
 
  |
 |RequestId|String|1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC|请求ID。
@@ -137,7 +137,7 @@ http(s)://rds.aliyuncs.com/?Action=CloneDBInstance
 
 ``` {#xml_return_success_demo}
 <CloneDBInstanceResponse>
-  <OrderId>100789370230206</OrderId>
+  <OrderId>100789370xxxxx</OrderId>
   <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
   <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId>
 </CloneDBInstanceResponse>
@@ -150,7 +150,7 @@ http(s)://rds.aliyuncs.com/?Action=CloneDBInstance
 {
 	"RequestId":"1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC",
 	"DBInstanceId":"rm-uf6wjk5xxxxxxx",
-	"OrderId":"100789370230206"
+	"OrderId":"100789370xxxxx"
 }
 ```
 
