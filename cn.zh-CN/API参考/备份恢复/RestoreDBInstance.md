@@ -1,4 +1,4 @@
-# RestoreDBInstance {#doc_api_Rds_RestoreDBInstance .reference}
+# RestoreDBInstance {#doc_api_1164263 .reference}
 
 调用RestoreDBInstance接口恢复备份集到原实例（覆盖性恢复），已下线。
 
@@ -21,7 +21,7 @@
 |ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
 
  |
-|BackupId|String|否|327329803|备份集ID。可以通过接口[DescribeBackups](~~26273~~l)查询备份集ID。
+|BackupId|String|否|327329803|备份集ID。可以通过接口[DescribeBackups](~~26273~~)查询备份集ID。
 
  **说明：** **BackupId**和**RestoreTime**必须传入一个。
 
