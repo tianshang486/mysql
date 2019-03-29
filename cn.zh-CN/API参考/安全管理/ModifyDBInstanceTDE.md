@@ -1,4 +1,4 @@
-# ModifyDBInstanceTDE {#doc_api_1067155 .reference}
+# ModifyDBInstanceTDE {#doc_api_Rds_ModifyDBInstanceTDE .reference}
 
 调用ModifyDBInstanceTDE接口修改实例数据加密状态。
 
@@ -26,7 +26,7 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|TDEStatus|String|是|Enabled|TDE状态，取值：**Enable | Disable**
+|TDEStatus|String|是|Enabled|TDE状态，取值：**Enabled | Disabled**
 
  |
 |DBName|String|否|testDB|想要开启TDE的数据库名称，可以一次输入多个，以英文逗号（,）分隔，最多传入50个。
