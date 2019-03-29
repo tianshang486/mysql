@@ -1,4 +1,4 @@
-# DescribeResourceUsage {#doc_api_1104950 .reference}
+# DescribeResourceUsage {#doc_api_1106158 .reference}
 
 调用DescribeResourceUsage接口查看实例的空间利用信息。
 
@@ -79,7 +79,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeResourceUsage
   <BackupOssDataSize>8821760</BackupOssDataSize>
   <BackupOssLogSize>44180999</BackupOssLogSize>
   <RequestId>A88722B7-DAEE-4822-BA8B-9B019FCB8D46</RequestId>
-  <DBInstanceId>rm-bp1r9w4h96v0vdl3v</DBInstanceId>
+  <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
   <DataSize>2337275904</DataSize>
   <LogSize>-1</LogSize>
   <BackupSize>53002759</BackupSize>
@@ -97,7 +97,7 @@ http(s)://rds.aliyuncs.com/?Action=DescribeResourceUsage
 {
 	"BackupOssLogSize":"44180999",
 	"BackupOssDataSize":"8821760",
-	"DBInstanceId":"rm-bp1r9w4h96v0vdl3v",
+	"DBInstanceId":"rm-uf6wjk5xxxxxxx",
 	"RequestId":"A88722B7-DAEE-4822-BA8B-9B019FCB8D46",
 	"LogSize":-1,
 	"DataSize":2337275904,
