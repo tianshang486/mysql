@@ -22,13 +22,13 @@ After this function is activated, the backup file format is changed from TAR to 
 4.  In the left-side navigation pane, choose **Backup and Recovery**.
 5.  In the upper right corner, click **Restore Databases/Tables**.
 
-    **Note:** If this button is not displayed, see **Prerequisites** in this topic.
+    **Note:** If this button is not displayed, see Prerequisites in this topic.
 
-    ![库/表级别恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155405470537783_en-US.png)
+    ![库/表级别恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155405499537783_en-US.png)
 
 6.  Set the following parameters.
 
-    ![库/表级别恢复参数设置1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155405470537784_en-US.png)
+    ![库/表级别恢复参数设置1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155405499537784_en-US.png)
 
     |Parameter|Description|
     |---------|-----------|
@@ -51,6 +51,6 @@ After this function is activated, the backup file format is changed from TAR to 
 
 7.  Click **OK**. The restoration starts.
 
-    **Note:** If you chose to restore a **New Instance**, the instance purchase page is displayed. After you complete the payment, the restoration starts.
+    **Note:** If you chose to restore a new instance, the instance purchase page is displayed. After you complete the payment, the restoration starts.
 
 
