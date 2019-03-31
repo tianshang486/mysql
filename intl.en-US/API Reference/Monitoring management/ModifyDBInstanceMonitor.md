@@ -1,6 +1,6 @@
 # ModifyDBInstanceMonitor {#reference_zpl_gzl_12b .reference}
 
- **Before using this API, ensure that you have fully understood the [billing methods](../../../../../intl.en-US/Purchase Guide/Billing items and billing methods.md) and [pricing](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing) of RDS.** 
+ **Before using this API, ensure that you have fully understood the [billing methods](../../../../../intl.en-US/Purchase Guide/Billing items and billing methods.md) and [pricing](https://www.alibabacloud.com/product/apsaradb-for-rds-mysql/pricing) of RDS.** 
 
 This API is used to set the monitoring frequency of your RDS instance.
 
@@ -8,13 +8,13 @@ This API is used to set the monitoring frequency of your RDS instance.
 
 ## Debug {#apiExplorer .section}
 
-Click [here](https://api.aliyun.com/#product=Slb&api=CreateLoadBalancer) to perform a debug operation in OpenAPI Explorer and automatically generate an SDK code example.
+Click [here](https://api.aliyun.com/?spm=a2c63.p38356.879954.8.14b919eclNB5Cx#/?product=Rds&api=ModifyDBInstanceMonitor) to perform a debug operation in OpenAPI Explorer and automatically generate an SDK code example.
 
 ## Request parameters {#parameters .section}
 
 |Parameter|Type|Required|Example value|Description|
 |---------|----|--------|-------------|-----------|
-|Action|String|Yes|ModifyDBInstanceMonitor| Action to perform. Value: **ModifyDBInstanceMonitor**。
+|Action|String|Yes|ModifyDBInstanceMonitor| Action to perform. Value: **ModifyDBInstanceMonitor**.
 
  |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx| Instance ID.
@@ -72,5 +72,5 @@ Normal response example
 
 ## Error codes {#section_nnn_bt5_ghb .section}
 
-[Click here to view error codes.](https://error-center.aliyun.com/status/product/Rds)
+[Click here to view error codes.](https://error-center.alibabacloud.com/status/product/Rds)
 
