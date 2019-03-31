@@ -1,6 +1,6 @@
 # Restore MySQL databases or tables {#concept_ocr_swk_ngb .concept}
 
-In RDS for MySQL 5.6 High-Availability Edition, you can restore databases or tables rather than the entire instance.
+In RDS for MySQL 5.6 High-Availability Edition, you can restore only certain databases or tables rather than the entire instance.
 
 **Prerequisites**
 
@@ -24,11 +24,11 @@ After this function is activated, the backup file format is changed from TAR to 
 
     **Note:** If this button is not displayed, see Prerequisites in this topic.
 
-    ![库/表级别恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155405499537783_en-US.png)
+    ![库/表级别恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155405509337783_en-US.png)
 
 6.  Set the following parameters.
 
-    ![库/表级别恢复参数设置1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155405499537784_en-US.png)
+    ![库/表级别恢复参数设置1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155405509337784_en-US.png)
 
     |Parameter|Description|
     |---------|-----------|
