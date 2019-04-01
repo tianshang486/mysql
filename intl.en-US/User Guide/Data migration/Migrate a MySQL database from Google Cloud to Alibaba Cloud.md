@@ -4,8 +4,8 @@ This topic describes how to migrate a MySQL database from Google Cloud to Alibab
 
 ## Prerequisites {#section_vw2_ycl_5fb .section}
 
--   You have [Create an instance](../../../../intl.en-US/Quick Start for MySQL/Create an instance.md).
--   You have [Creating accounts and databases](../../../../intl.en-US/Quick Start for MySQL/Initial configuration/Creating accounts and databases.md).
+-   You have [created an Alibaba Cloud RDS MySQL instance](../../../../../intl.en-US/Quick Start for MySQL/Create an instance.md).
+-   You have [created an account with read/write privileges](../../../../../intl.en-US/Quick Start for MySQL/Initial configuration/Create accounts and databases.md).
 
 ## Limits {#section_ang_jbk_5fb .section}
 
@@ -30,11 +30,11 @@ DTS automatically attempts to recover abnormal tasks of the past seven days. Thi
 
     **Note:** If an Internal IP address is not enabled, perform related settings by going to **Configuration** \> **Edit configuration** \> **Set connectivity**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/154398530233416_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/155410891233416_en-US.png)
 
 2.  Choose **Configuration** \> **Edit configuration** \> **Set connectivity** \> **Add network**, and then add the IP address of the [region of the source database instance](#table_j3v_42k_5fb) obtained from DTS.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/154398530333417_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/155410891233417_en-US.png)
 
 3.  Log on to the [DTS Console](https://dts.console.aliyun.com/).
 4.  In the left-side navigation pane, click **Data Migration**. In the right pane, click **Create Migration Task** in the upper-right corner.
@@ -58,21 +58,21 @@ DTS automatically attempts to recover abnormal tasks of the past seven days. Thi
     |Database Password|Account password|
     |Connection method|Select **Non-encrypted connection** or **SSL secure connection**. The latter greatly increases CPU consumption.|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/154398530333418_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/155410891233418_en-US.png)
 
 6.  Click **Test the Connection** and confirm that the test results for both the source and target databases are Test passed.
 7.  Click **Authorize Whitelist and Enter into Next Step** .
-8.  Select the migration type. In the Migration objects area, select the target database and click ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/154398530333419_en-US.png) to add the database to the Selected objects area.
+8.  Select the migration type. In the Migration objects area, select the target database and click ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/155410891333419_en-US.png) to add the database to the Selected objects area.
 
     **Note:** To maintain data consistency before and after migration, we recommend that you migrate the structure, full data, and incremental data.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/154398530333420_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/155410891333420_en-US.png)
 
 9.  Click **Pre-check and Start** and wait until the pre-check ends.
 
     **Note:** If the check fails, you can rectify faults according to error items and restart the task.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/154398530333421_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/155410891333421_en-US.png)
 
 10. Click **Next**. In the **Confirm Purchase Configuration** dialog box, read and confirm you agree to the **Service Terms of Data Transmission \(Pay-As-You-Go\)** and click **Buy and Start Now**.
 
@@ -80,6 +80,6 @@ DTS automatically attempts to recover abnormal tasks of the past seven days. Thi
 
 11. Wait until the migration task is completed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/154398530333422_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64127/155410891333422_en-US.png)
 
 
