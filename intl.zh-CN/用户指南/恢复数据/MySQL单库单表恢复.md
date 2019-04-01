@@ -28,9 +28,11 @@ RDS for MySQL支持单库和单表的数据恢复，可以通过备份指定恢�
 4.  在左侧导航栏中，选择备份恢复。
 5.  在页面右上角，单击**数据库 库/表级别恢复**，在弹出的对话框中设置以下参数。
 
-    ![库/表级别恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155255651237783_zh-CN.png)
+    **说明：** 如未看到**数据库 库/表级别恢复**按钮，请参见[前提条件](#)。
 
-    ![库/表级别恢复参数设置1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155255651237784_zh-CN.png)
+    ![库/表级别恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155408169437783_zh-CN.png)
+
+    ![库/表级别恢复参数设置1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155408169437784_zh-CN.png)
 
     |参数名称|说明|
     |----|--|
@@ -38,7 +40,7 @@ RDS for MySQL支持单库和单表的数据恢复，可以通过备份指定恢�
     -   **回档到新实例**：新购实例，并将库/表恢复到新实例中。
  |
     |**还原方式**|     -   **按备份集**
-    -   **按时间点**：可以设置为日志备份保留时间内的任意时间点。如要查看或修改日志备份保留时间，请参见[备份 RDS 数据](../../../../../intl.zh-CN/用户指南/备份数据/备份 RDS 数据.md#)。
+    -   **按时间点**：可以设置为日志备份保留时间内的任意时间点。如要查看或修改日志备份保留时间，请参见[备份RDS数据](../../../../../intl.zh-CN/用户指南/备份数据/备份RDS数据.md#)。
  **说明：** 只有开启了日志备份，才会显示**按时间点**。
 
  |
@@ -57,7 +59,7 @@ RDS for MySQL支持单库和单表的数据恢复，可以通过备份指定恢�
 
     **说明：** 若**回档位置**选择的是**回档到新实例**，会跳转到实例购买页面，设置新实例的参数并完成支付即可。
 
-    ![库/表级别恢复新建实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155255651237786_zh-CN.png)
+    ![库/表级别恢复新建实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155408169437786_zh-CN.png)
 
     |参数名称|说明|
     |----|--|
