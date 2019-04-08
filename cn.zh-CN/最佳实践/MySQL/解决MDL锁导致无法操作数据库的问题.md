@@ -29,7 +29,7 @@ MySQL 5.5版本开始，引入了MDL锁，用于解决或者保证DDL操作与DM
 2.  在首页上方选择**SQL操作** \> **SQL窗口**。
 3.  在命令行输入show full processlist;并执行，查看所有线程状态，在**State**列发现大量**Waiting for table metadata lock**即表示出现阻塞，在对应的**Info**列可以查看到是对哪个表的操作，找到正在对该表进行操作的会话，记下**Id**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24465/155469072514301_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24465/155469081214301_zh-CN.png)
 
     **说明：** 
 
@@ -56,9 +56,9 @@ MySQL 5.5版本开始，引入了MDL锁，用于解决或者保证DDL操作与DM
 
 4.  在命令行输入kill**Id数字**，例如 kill 267，即可中断会话，解除MDL锁。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24465/155469072514302_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/24465/155469081214302_zh-CN.png)
 
-5.  
+
 ## 后续维护 {#section_imb_ygx_3hb .section}
 
 -   在业务低峰期执行相关场景操作，例如创建索引、删除索引等。
