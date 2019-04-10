@@ -1,4 +1,4 @@
-# CreateDBInstance {#doc_api_1105125 .reference}
+# CreateDBInstance {#doc_api_Rds_CreateDBInstance .reference}
 
 调用CreateDBInstance接口创建一个RDS实例。
 
@@ -38,7 +38,7 @@
 -   MariaDB：**10.3**。
 
  |
-|DBInstanceClass|String|是|rds.mys2.small|实例规格，详见[实例规格表](~~26312~~)。
+|DBInstanceClass|String|是|rds.mysql.s1.small|实例规格，详见[实例规格表](~~26312~~)。
 
  |
 |DBInstanceStorage|Integer|是|20|实例存储空间，取值：
@@ -63,23 +63,10 @@
 -   **Prepaid**：预付费（包年包月）。
 
  |
-|SecurityIPList|String|是|10.23.12.27/25|该实例的[IP白名单](~~43185~~)，多个IP地址请以英文逗号（,）隔开，不可重复，最多1000个。支持如下两种格式：
+|SecurityIPList|String|是|10.23.12.27/24|该实例的[IP白名单](~~43185~~)，多个IP地址请以英文逗号（,）隔开，不可重复，最多1000个。支持如下两种格式：
 
- -   IP地址形式，例如：10.23.12.24。
+ -   IP地址形式，例如：10.23.12.24；
 -   CIDR形式，例如：10.23.12.24/24（无类域间路由，24表示了地址中前缀的长度，范围为1~32）。
-
- |
-|NodeType|String|否|HighAvailability|实例系列，取值：
-
- -   **Basic**：单机基础版；
--   **HighAvailability**：双机高可用版；
--   **Finance**：金融版（仅支持中国站）；
--   **AlwaysOn**：集群版（仅支持SQL Server 2017企业集群版）。
-
- **说明：** 
-
--   当参数**EngineVersion**=**2017\_ent**，本字段为**AlwaysOn**；
--   当参数**EngineVersion**为其他值时，根据**DBInstanceClass**和**EngineVersion**反推系列，默认为**HighAvailability**。
 
  |
 |SystemDBCharset|String|否|GBK|字符集，取值：
@@ -173,10 +160,10 @@
 |DBInstanceId|String|rm-uf6wjk5xxxxxxxxxx|实例ID。
 
  |
-|OrderId|String|100789370230206|订单ID。
+|OrderId|String|1007893702xxxxx|订单ID。
 
  |
-|ConnectionString|String|rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com|数据库内网连接地址。
+|ConnectionString|String|rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com|数据库内网连接地址。
 
  |
 |Port|String|3306|数据库内网连接端口。
@@ -196,11 +183,11 @@ http(s)://rds.aliyuncs.com/?Action=CreateDBInstance
 &RegionId=cn-hangzhou
 &Engine=MySQL
 &EngineVersion=5.6
-&DBInstanceClass=rds.mys2.small
+&DBInstanceClass=rds.mysql.s1.small
 &DBInstanceStorage=20
 &DBInstanceNetType=Internet
-&SecurityIPList=10.23.12.27/25
 &PayType=Postpaid
+&SecurityIPList=10.23.12.27/24
 &<公共请求参数>
 
 ```
@@ -211,9 +198,9 @@ http(s)://rds.aliyuncs.com/?Action=CreateDBInstance
 
 ``` {#xml_return_success_demo}
 <CreateDBInstanceResponse>
-  <OrderId>100789370230206</OrderId>
-  <ConnectionString>rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com</ConnectionString>
-  <DBInstanceId>rm-uf6wjk5xxxxxxxxxx</DBInstanceId>
+  <OrderId>1007893702xxxxx</OrderId>
+  <ConnectionString>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</ConnectionString>
+  <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
   <Port>3306</Port>
   <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId>
 </CreateDBInstanceResponse>
@@ -225,10 +212,10 @@ http(s)://rds.aliyuncs.com/?Action=CreateDBInstance
 ``` {#json_return_success_demo}
 {
 	"Port":"3306",
-	"ConnectionString":"rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com",
+	"ConnectionString":"rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com",
 	"RequestId":"1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC",
-	"DBInstanceId":"rm-uf6wjk5xxxxxxxxxx",
-	"OrderId":"100789370230206"
+	"DBInstanceId":"rm-uf6wjk5xxxxxxx",
+	"OrderId":"1007893702xxxxx"
 }
 ```
 
