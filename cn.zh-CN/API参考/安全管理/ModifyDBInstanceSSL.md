@@ -1,10 +1,10 @@
-# ModifyDBInstanceSSL {#doc_api_1067141 .reference}
+# ModifyDBInstanceSSL {#doc_api_Rds_ModifyDBInstanceSSL .reference}
 
 调用ModifyDBInstanceSSL接口修改实例SSL链路。
 
 该接口用于为实例设置[SSL](~~32474~~)（Secure Sockets Layer）加密。
 
-**说明：** 仅支持MySQL 5.6、MySQL 5.7高可用本地盘版和SQL Server 2008 R2实例。
+**说明：** 支持MySQL 5.6、MySQL 5.7高可用本地盘版和SQL Server所有版本。
 
 ## 调试 {#apiExplorer .section}
 
@@ -43,7 +43,7 @@
 
 ``` {#request_demo}
 
-http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceSSL
+http(s)://[Endpoint]/?Action=ModifyDBInstanceSSL
 &ConnectionString=rm-uf6wjk5xxxxx.mysql.rds.aliyuncs.com
 &DBInstanceId=rm-uf6wjk5xxxxxxx
 &<公共请求参数>
