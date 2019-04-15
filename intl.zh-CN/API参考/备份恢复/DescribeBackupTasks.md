@@ -47,6 +47,11 @@
 |Items| | |备份任务详情。
 
  |
+|└BackupId|String|346650271|任务生成的备份集ID。
+
+ **说明：** 当返回参数**BackupStatus**=**Finished**之后，可以通过传入请求参数**BackupJobId**查看备份集ID。
+
+ |
 |└BackupJobId|String|4762614|备份任务ID。
 
  |
@@ -56,17 +61,21 @@
 |└BackupStatus|String|NoStart|备份任务状态，取值：
 
  -   **NoStart**：未开始；
+-   **Checking**：检查备份；
 -   **Preparing**：准备备份；
 -   **Waiting**：等待备份；
 -   **Uploading**：上传备份；
--   **Checking**：检查备份；
--   **Finished**：完成备份。
+-   **Finished**：完成备份；
+-   **Failed**：备份失败。
 
  |
 |└JobMode|String|Automated|备份模式，取值：
 
  -   **Automated**：系统自动备份；
 -   **Manual**：手动备份。
+
+ |
+|└Process|String|25|任务进度百分比。
 
  |
 |└TaskAction|String|NormalBackupTask|任务类型，取值：
