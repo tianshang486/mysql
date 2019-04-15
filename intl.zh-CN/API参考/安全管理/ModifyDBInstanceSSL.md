@@ -4,7 +4,10 @@
 
 该接口用于为实例设置[SSL](~~32474~~)（Secure Sockets Layer）加密。
 
-**说明：** 支持MySQL 5.6、MySQL 5.7高可用本地盘版和SQL Server所有版本。
+**说明：** 
+
+-   支持MySQL 5.6、MySQL 5.7高可用本地盘版和SQL Server所有版本。
+    -   读写分离地址不支持SSL加密。
 
 ## 调试 {#apiExplorer .section}
 
