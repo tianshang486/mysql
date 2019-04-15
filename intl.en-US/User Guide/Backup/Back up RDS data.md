@@ -41,7 +41,7 @@ The interval does not change the total size of generated log files.
 
 **Note:** The following uses MySQL 5.7 \(High-availability Edition\) as an example.
 
-1.  Log on to the [RDS console](https://rds.console.aliyun.com/) .
+1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Click the ID of the instance to visit the Basic Information page.
 3.  Click **Backup and Recovery** in the left-side navigation pane.
 4.  On the Backup and Recovery page, select **Backup Settings** and click **Edit**.
@@ -49,7 +49,7 @@ The interval does not change the total size of generated log files.
 
     The parameters are explained as follows:
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15450298814105_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15552992264104_en-US.png)
 
     |Parameters|Description|
     |----------|-----------|
@@ -74,7 +74,7 @@ The interval does not change the total size of generated log files.
 4.  Click **Back up Instance** at the upper right corner.
 5.  Set **Backup Mode** and **Backup Policy**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15450298814105_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15552992264105_en-US.png)
 
     **Note:** 
 
