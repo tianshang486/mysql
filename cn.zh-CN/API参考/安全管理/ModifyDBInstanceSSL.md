@@ -43,7 +43,7 @@
 
 ``` {#request_demo}
 
-http(s)://[Endpoint]/?Action=ModifyDBInstanceSSL
+http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceSSL
 &ConnectionString=rm-uf6wjk5xxxxx.mysql.rds.aliyuncs.com
 &DBInstanceId=rm-uf6wjk5xxxxxxx
 &<公共请求参数>
