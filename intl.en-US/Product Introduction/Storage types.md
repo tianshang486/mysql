@@ -58,9 +58,10 @@ The supported storage types depend on the database engine, version, and series.
 |Local SSD|
 |5.6/5.5|High Availability|Local SSD|
 |SQLServer|2008 R2|High Availability|Local SSD|
-|2012|Basic or High Availability|Cloud SSD|
-|2016|Basic or High Availability|Cloud SSD|
-|PostgreSQL|9.4|High Availability|Local SSD|
+|2016/2012|Basic or High Availability|Cloud SSD|
+|2017|Cluster \(AlwaysOn\)|Cloud SSD|
+|PostgreSQL|10/9.4|High Availability|Local SSD|
 |10|Basic|Cloud SSD|
-|PPAS|9.3|High Availability|Local SSD|
+|PPAS|10/9.3|High Availability|Local SSD|
+|MariaDB|10.3|High Availability|Cloud SSD|
 
