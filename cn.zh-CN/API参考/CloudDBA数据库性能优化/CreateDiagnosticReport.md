@@ -1,46 +1,82 @@
-# CreateDiagnosticReport {#reference_dhm_5ff_12b .reference}
+# CreateDiagnosticReport {#doc_api_Rds_CreateDiagnosticReport .reference}
 
-该接口用于实时生成诊断报告，已下线。
+调用CreateDiagnosticReport接口创建诊断报告。
 
-## 描述 {#section_l21_v32_12b .section}
+## 调试 {#apiExplorer .section}
 
-该接口用于实时生成诊断报告。
+前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=CreateDiagnosticReport)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
 
-**说明：** 该API已下线，您可以在控制台上手动创建诊断报告。
+## 请求参数 {#parameters .section}
 
-## 请求参数 {#section_qzx_w32_12b .section}
+|名称|类型|是否必选|示例值|描述|
+|--|--|----|---|--|
+|Action|String|是|CreateDiagnosticReport|系统规定参数。取值：CreateDiagnosticReport。
 
-|名称|类型|是否必须|描述|
-|--|--|----|--|
-|Action|String|是|系统规定参数，取值为CreateDiagnosticReport。|
-|DBInstanceId|String|是|实例ID。|
-|StartTime|String|否|监控数据起始时间，格式示例为2012-06-11T15:00Z。若不传入StartTime，则系统会使用当前时间前1个小时的时间。|
-|EndTime|String|否|监控数据结束时间，格式示例为2012-06-11T15:00Z。与StartTime的间隔不得超过24小时。若不传入EndTime，默认是StartTime的值加一个小时。|
+ |
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxx|实例ID。
 
-## 返回参数 {#section_rpk_z32_12b .section}
+ |
+|StartTime|String|是|2018-06-11T15:00Z|用于生成诊断报告的监控数据起始时间。
 
-|参数|类型|说明|
-|--|--|--|
-|<公共返回参数\>|-|详见[公共参数](cn.zh-CN/API参考/使用API/公共参数.md#)。|
-|RequestId|String|请求ID。|
-|ReportId|String|报告ID。|
+ **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
-## 请求示例 {#section_l4g_pj2_12b .section}
+ |
+|EndTime|String|是|2018-06-12T15:00Z|用于生成诊断报告的监控数据结束时间。
 
-```
+ **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
 
-https://rds.aliyuncs.com/?Action=CreateDiagnosticReport
-&DBInstanceId=rm-bp1842vmucXXXXXX
+ |
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+
+ |
+
+## 返回参数 {#resultMapping .section}
+
+|名称|类型|示例值|描述|
+|--|--|---|--|
+|ReportId|String|10166270|诊断报告ID。
+
+ |
+|RequestId|String|8DA8956A-53DA-423E-9540-387428ED37FF-5711|请求ID。
+
+ |
+
+## 示例 {#demo .section}
+
+请求示例
+
+``` {#request_demo}
+
+http(s)://rds.aliyuncs.com/?Action=CreateDiagnosticReport
+&DBInstanceId=rm-uf6wjk5xxxxxx
+&StartTime=2018-06-11T15:00Z
+&EndTime=2018-06-12T15:00Z
 &<公共请求参数>
-```
-
-## 返回示例 {#section_xtg_rj2_12b .section}
-
-**XML格式**
 
 ```
-<DeleteDBInstanceResponse>  
-         <ReportId>10058234</ReportId><RequestId>C6EE1CE1-6ADF-4D9B-BD9A-114EB6221F02</RequestId>
-</DeleteDBInstanceResponse>
+
+正常返回示例
+
+`XML` 格式
+
+``` {#xml_return_success_demo}
+<CreateDiagnosticReportResponse>
+  <reportId>10166270</reportId>
+  <requestId>8DA8956A-53DA-423E-9540-387428ED37FF-5711</requestId>
+</CreateDiagnosticReportResponse>
+
 ```
+
+`JSON` 格式
+
+``` {#json_return_success_demo}
+{
+	"requestId":"8DA8956A-53DA-423E-9540-387428ED37FF-5711",
+	"reportId":"10166270"
+}
+```
+
+## 错误码 { .section}
+
+[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
 
