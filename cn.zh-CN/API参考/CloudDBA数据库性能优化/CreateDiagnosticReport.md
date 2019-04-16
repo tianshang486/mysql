@@ -10,7 +10,7 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|CreateDiagnosticReport|系统规定参数。取值：CreateDiagnosticReport。
+|Action|String|是|CreateDiagnosticReport|系统规定参数。取值：**CreateDiagnosticReport**。
 
  |
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxx|实例ID。
