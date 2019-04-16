@@ -7,7 +7,7 @@
 **说明：** 
 
 -   支持MySQL 5.6、MySQL 5.7高可用本地盘版和SQL Server所有版本。
-    -   读写分离地址不支持SSL加密。
+-   读写分离地址不支持SSL加密。
 
 ## 调试 {#apiExplorer .section}
 
