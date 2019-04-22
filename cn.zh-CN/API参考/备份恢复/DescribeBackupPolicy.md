@@ -1,4 +1,4 @@
-# DescribeBackupPolicy {#doc_api_1090913 .reference}
+# DescribeBackupPolicy {#doc_api_Rds_DescribeBackupPolicy .reference}
 
 调用DescribeBackupPolicy接口查看实例备份设置。
 
@@ -24,9 +24,6 @@ RDS实例将根据用户设置的备份设置，定期做备份。
 -   **LogBackupPolicy**：日志备份。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
-
- |
 
 ## 返回参数 {#resultMapping .section}
 
@@ -49,13 +46,13 @@ RDS实例将根据用户设置的备份设置，定期做备份。
 -   **Sunday**：周日。
 
  |
-|BackupLog|String|Enable|日志备份开关，取值：**Enable | Disable**
+|BackupLog|String|Enable|日志备份开关，取值：**Enable | Disabled**
 
  |
 |LogBackupRetentionPeriod|Integer|7|日志备份保留天数。
 
  |
-|Duplication|String|Enable|是否将备份文件转储至OSS，取值：**Enable | Disable**
+|Duplication|String|Enable|是否将备份文件转储至OSS，取值：**Enable | Disabled**
 
  |
 |DuplicationContent|String|DATA&LOG|转储数据备份或者日志备份，取值：
