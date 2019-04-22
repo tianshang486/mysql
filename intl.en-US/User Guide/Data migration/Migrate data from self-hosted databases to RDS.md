@@ -8,16 +8,16 @@ You can import data from self-hosted databases to ApsaraDB RDS. Choose a method 
 
 ## Migrate from on-premises databases to RDS for MySQL { .section}
 
--   [Migrate data from on-premises MySQL to RDS for MySQL](https://www.alibabacloud.com/help/doc-detail/26621.htm)
--   [Migrate data from on-premises Oracle to RDS for MySQL](https://www.alibabacloud.com/help/doc-detail/26620.htm)
+-   [Migrate from on-premises MySQL to RDS for MySQL](https://www.alibabacloud.com/help/doc-detail/26621.htm)
+-   [Migrate from on-premises Oracle to RDS for MySQL](https://www.alibabacloud.com/help/doc-detail/26620.htm)
 
 ## Migrate from on-premises databases to RDS for SQL Server { .section}
 
-[Migrate from on-premises SQL Server to ApsaraDB RDS for SQL Server](https://www.alibabacloud.com/help/doc-detail/26622.htm)
+[Migrate from on-premises SQL Server to RDS for SQL Server](https://www.alibabacloud.com/help/doc-detail/26622.htm)
 
 ## Migrate from on-premises databases to RDS for PostgreSQL {#section_otw_wq5_ydb .section}
 
-[Migrate data from on-premises PostgreSQL to RDS for PostgreSQL](https://www.alibabacloud.com/help/doc-detail/26624.htm)
+[Migrate from on-premises PostgreSQL to RDS for PostgreSQL](https://www.alibabacloud.com/help/doc-detail/26624.htm)
 
 ## Migrate from on-premises databases to RDS for PPAS {#section_sh4_xq5_ydb .section}
 
