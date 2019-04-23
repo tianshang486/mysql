@@ -1,4 +1,4 @@
-# CopyDatabaseBetweenInstances {#doc_api_1064069 .reference}
+# CopyDatabaseBetweenInstances {#doc_api_Rds_CopyDatabaseBetweenInstances .reference}
 
 调用CopyDatabaseBetweenInstances接口在实例间复制数据库。
 
@@ -11,6 +11,7 @@
 -   目标实例的可用存储空间 \>源实例中待复制数据库占用的空间。
 
 **说明：** 仅适用于RDS for SQL Server 2012/2016实例。
+
 
 ## 调试 {#apiExplorer .section}
 
@@ -29,7 +30,7 @@
 |TargetDBInstanceId|String|是|rm-ut5ajk3xxxxxxx|目标实例ID，不能与源实例ID相同。
 
  |
-|DbNames|String|是|testDB1,testDB2|待复制的数据库名列表，用英文逗号（,）隔开。
+|DbNames|String|是|\{"test1":"test2"\}|复制数据库名称列表，格式：\{"源实例数据库名称":"目标实例数据库名称"\}。
 
  |
 |BackupId|String|否|1065238746521|源实例备份集ID。按备份集复制数据库时，可以通过查询备份列表接口[DescribeBackups](~~26273~~)获取备份集ID。
@@ -67,7 +68,7 @@
 http(s)://rds.aliyuncs.com/?Action=CopyDatabaseBetweenInstances
 &DBInstanceId=rm-uf6wjk5xxxxxxx
 &TargetDBInstanceId=rm-ut5ajk3xxxxxxx
-&DbNames=testDB1,testDB2
+&DbNames={"test1":"test2"}
 &<公共请求参数>
 
 ```
