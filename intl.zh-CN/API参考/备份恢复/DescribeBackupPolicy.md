@@ -79,7 +79,7 @@ RDS实例将根据用户设置的备份设置，定期做备份。
 |└Sotrage|String|OSS|备份存储介质。
 
  |
-|EnableBackupLog|String|True|是否开启日志备份，取值：
+|EnableBackupLog|String|1|是否开启日志备份，取值：
 
  -   **1**：表示开启；
 -   **0**：表示关闭。
