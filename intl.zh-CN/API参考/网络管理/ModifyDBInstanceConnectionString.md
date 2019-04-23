@@ -1,4 +1,4 @@
-# ModifyDBInstanceConnectionString {#doc_api_1074764 .reference}
+# ModifyDBInstanceConnectionString {#doc_api_Rds_ModifyDBInstanceConnectionString .reference}
 
 调用ModifyDBInstanceConnectionString接口修改实例的连接地址和端口。
 
@@ -29,6 +29,8 @@
 
  |
 |ConnectionStringPrefix|String|是|m-xxxxbn5c23qo|目标连接地址的前缀，即只能修改**CurrentConnectionString**参数的前缀部分。
+
+ **说明：** 长度5~30，不能包含汉字和非法字符（~!\#%^&\*=+\\|\{\};:'",<\>/?），建议由字母、数字、短横线（-）组成。
 
  |
 |Port|String|是|3306|目标端口。
