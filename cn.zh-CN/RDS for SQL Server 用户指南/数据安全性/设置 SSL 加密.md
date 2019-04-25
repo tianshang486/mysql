@@ -4,7 +4,9 @@
 
 **说明：** 
 
+-   SSL的证书有效期为1年，请在1年内更新证书有效期，否则使用加密连接的客户端程序将无法正常连接。
 -   由于SSL加密的固有缺陷，启用SSL加密会显著增加CPU使用率，建议您仅在外网链路有加密需求的时候启用SSL加密。内网链路相对较安全，一般无需对链路加密。
+-   读写分离地址不支持SSL加密。
 -   开启SSL加密后，将无法再关闭，请谨慎操作。
 
 ## 开启SSL加密 {#section_hjf_z54_ydb .section}
@@ -12,24 +14,24 @@
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155505815836543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155615634236543_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧菜单栏中单击**数据安全性**。
 5.  选择**SSL**标签页。
 6.  单击**未开通**前面的开关，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15550581584147_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15561563434147_zh-CN.png)
 
 7.  在设置 SSL对话框中选择要开通SSL加密的链路，单击**确定**，开通 SSL 加密。
 
     **说明：** 用户可以根据需要，选择加密内网链路或者外网链路，但只可以加密一条链路。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15550581604148_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15561563434148_zh-CN.png)
 
 8.  单击**下载证书**，下载SSL CA证书，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15550581604149_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15561563434149_zh-CN.png)
 
     下载的文件为压缩包，包含如下三个文件：
 
@@ -61,6 +63,14 @@
 2.  选择**Database** \> **Manage Connections** 。
 3.  启用**Use SSL**，并导入SSL CA证书，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15550581604150_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15561563434150_zh-CN.png)
 
+
+## 更新证书有效期 {#section_22w_qk5_422 .section}
+
+SSL的证书有效期为1年，请在1年内更新证书有效期，否则使用加密连接的客户端程序将无法正常连接。
+
+**说明：** **更新有效期**操作将会重启实例，重启前请做好业务安排，谨慎操作。
+
+![更新证书有效期](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/155615634345367_zh-CN.png)
 
