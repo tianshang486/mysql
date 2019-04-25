@@ -1,11 +1,13 @@
 # 华为云MySQL数据库迁移到阿里云 {#concept_u2k_fyt_2gb .concept}
 
-本文介绍华为云MySQL数据库迁移到阿里云的步骤及注意事项。
+## 背景信息 {#section_w5d_gjm_syh .section}
+
+本文介绍使用阿里云[数据传输服务（DTS）](https://help.aliyun.com/product/26590.html)，从 华为云迁移 MySQL 到阿里云RDS。
 
 ## 前提条件 {#section_vw2_ycl_5fb .section}
 
--   已经[创建阿里云RDS实例](../cn.zh-CN/RDS for MySQL 快速入门/创建实例.md#)。
--   已经[创建拥有读写权限的账号](../cn.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md#)。
+-   已经[创建阿里云RDS实例](../../../../cn.zh-CN/RDS for MySQL 快速入门/创建RDS for MySQL实例.md#)。
+-   已经[创建拥有读写权限的账号](../../../../cn.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md#)。
 
 ## 迁移限制 {#section_ang_jbk_5fb .section}
 
@@ -27,7 +29,7 @@
 
     **说明：** 若未开启远程连接，请单击**远程连接**进行开启。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/81958/154779990334892_zh-CN.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/81958/155615896434892_zh-CN.jpg)
 
 2.  登录[DTS控制台](https://dts.console.aliyun.com/)。
 3.  在左侧菜单栏单击**数据迁移**，单击右上角**创建迁移任务**。
@@ -36,9 +38,9 @@
     |库类别|参数|说明|
     |---|--|--|
     |源库|实例类型|源库实例类型，这里选择有公网IP的自建数据库。|
-    |实例地区|如果您的实例进行了访问限制，请先放开对应地区公网IP段的访问权限后，再配置数据迁移任务。**说明：** 可以单击右侧**获取DTS IP段**查看、复制对应地区的IP段。
+    |实例地区|如果您的实例进行了访问限制，请先放开对应地区公网IP段的访问权限后，再配置数据迁移任务。 **说明：** 可以单击右侧**获取DTS IP段**查看、复制对应地区的IP段。
 
-|
+ |
     |数据库类型|源数据库类型，这里选择MySQL。|
     |主机名或IP地址|华为云数据库的远程连接地址。|
     |端口|华为云数据库的端口。|
@@ -51,27 +53,32 @@
     |数据库密码|目标实例的对应账号的密码。|
     |连接方式|有**非加密传输**和**SSL安全连接**两种连接方式，选择SSL安全加密连接会显著增加CPU消耗。|
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/81958/154779990334893_zh-CN.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/81958/155615896434893_zh-CN.jpg)
 
 5.  填写完成后单击**测试连接**，确定源库和目标库都测试通过。
 6.  单击**授权白名单并进入下一步**。
-7.  勾选对应的迁移类型，在迁移对象框中将要迁移的数据库选中，单击![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/63394/154779990331842_zh-CN.png)移动到已选择对象框。
+7.  勾选对应的迁移类型，在迁移对象框中将要迁移的数据库选中，移动到已选择对象框。
 
     **说明：** 为保证迁移数据的一致性，建议选择结构迁移+全量数据迁移+增量数据迁移。
 
     结构迁移和全量迁移任务暂不收费，增量迁移根据链路规格按小时收费。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/81958/154779990334894_zh-CN.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/81958/155615896534894_zh-CN.jpg)
 
 8.  单击**预检查并启动**，等待预检查结束。
 
     **说明：** 如果预检查失败，可以根据错误项的提示进行修复，然后重新启动任务。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/81958/154779990334895_zh-CN.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/81958/155615896734895_zh-CN.jpg)
 
 9.  单击**下一步**，在**购买配置确认**对话框中，勾选**《数据传输（按量付费）服务条款》**并单击**立即购买并启动**。
-10. 等待迁移任务完成即可。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/81958/154779990334896_zh-CN.jpg)
+    如果选择了增量迁移，那么进入增量迁移阶段后，源库的更新写入都会被DTS同步到目标RDS实例。迁移任务不会自动结束。如果您只是为了迁移，那么建议在增量迁移无延迟的状态时，源库停写几分钟，等待增量迁移再次进入无延迟状态后，停止掉迁移任务，直接将业务切换到目标RDS实例上即可。
+
+10. 单击目标地域，查看迁移状态。迁移完成时，状态为**已完成**。
+
+    **说明：** 当增量迁移无延迟时，华为云和阿里云RDS上面的数据一致，可以停止迁移任务。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/81958/155615896734896_zh-CN.jpg)
 
 
