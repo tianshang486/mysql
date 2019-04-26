@@ -1,10 +1,11 @@
-# DeleteDBInstance {#doc_api_1059302 .reference}
+# DeleteDBInstance {#doc_api_Rds_DeleteDBInstance .reference}
 
 调用DeleteDBInstance接口释放RDS实例。
 
 调用该接口时，实例必须满足以下条件，否则将操作失败：
 
 -   实例状态为运行中；
+-   实例读写分离任务初始化中；
 -   实例类型为主实例（按量付费类型）、只读实例、灾备实例、临时实例。
 
 ## 调试 {#apiExplorer .section}
