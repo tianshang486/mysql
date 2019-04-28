@@ -16,21 +16,19 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|DBName|String|是|testDB|数据库名称。
+|DBName|String|是|testDB|目标数据库名称。
 
  |
 |BackupMode|String|是|FULL|迁移上云任务类型，取值：
 
- -   **FULL**：通过全量备份文件执去执行还原操作；
+ -   **FULL**：通过全量备份文件执去执行还原操作。
 -   **UPDF**：通过增量文件或者日志文件去还原增量部分的数据。
 
  |
 |IsOnlineDB|String|是|True|是否将还原后的数据库带上线，便于用户访问，取值：
 
- -   True：将数据库带上线；
+ -   True：将数据库带上线。
 -   False：不将数据库带上线。
-
- 默认值为True。
 
  **说明：** 目前SQL Server 2008 R2 版本该值恒定为 True。
 
@@ -47,7 +45,7 @@
  |
 |OssObjectPositions|String|否|oss-ap-southeast-1.aliyuncs.com:rdsmssqlsingapore:autotest\_2008R2\_TestMigration\_FULL.bak|OSS的组成部分。
 
- 取值由3段组成：
+ 取值由3段组成，用英文冒号（:）分隔：
 
  -   OSS Endpoint地址：oss-ap-southeast-1.aliyuncs.com；
 -   OSS Bucket名字：rdsmssqlsingapore；
@@ -62,8 +60,6 @@
 |OSSUrls|String|否|check\_cdn\_oss.sh www.xxxxxx.mobi|备份文件所在OSS共享URL地址（Encode编码后的URL）。
 
  有多个地址时，先使用“|”隔开，再编码后传入参数。
-
- 默认值为空。
 
  **说明：** SQL Server 2008 R2 必须传入该参数。
 
@@ -124,6 +120,7 @@ http(s)://rds.aliyuncs.com/?Action=CreateMigrateTask
 &DBName=testDB
 &BackupMode=FULL
 &IsOnlineDB=True
+&OssObjectPositions=oss-ap-southeast-1.aliyuncs.com:rdsmssqlsingapore:autotest_2008R2_TestMigration_FULL.bak
 &<公共请求参数>
 
 ```
