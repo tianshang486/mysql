@@ -1,8 +1,6 @@
 # CreateMigrateTask {#doc_api_Rds_CreateMigrateTask .reference}
 
-调用CreateMigrateTask接口将OSS上的备份文件还原到RDS实例，实现数据上云，已下线。
-
-**说明：** 该API已下线。
+调用CreateMigrateTask接口将OSS上的备份文件还原到RDS实例，实现数据上云。
 
 ## 调试 {#apiExplorer .section}
 
