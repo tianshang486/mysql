@@ -1,131 +1,169 @@
-# CreateMigrateTask {#reference_ab3_f5l_12b .reference}
+# CreateMigrateTask {#doc_api_Rds_CreateMigrateTask .reference}
 
-通过将OSS上的备份文件还原到RDS实例，实现数据上云。
+调用CreateMigrateTask接口将OSS上的备份文件还原到RDS实例，实现数据上云，已下线。
 
-## 请求参数 {#section_qzx_w32_12b .section}
+**说明：** 该API已下线。
 
-|名称|类型|是否必须|描述|
-|--|--|----|--|
-|Action|String|是| 系统规定参数，取值：
+## 调试 {#apiExplorer .section}
 
- CreateMigrateTask
+前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=CreateMigrateTask)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
 
- |
-|DBInstanceId|String|是|实例ID。|
-|DBName|String|是|数据库名称。|
-|BackupMode|String|是| 迁移上云任务类型，取值为：
+## 请求参数 {#parameters .section}
 
--   FULL：表示通过全量备份文件去执行还原操作。
--   UPDF：表示通过增量文件或者日志文件去还原增量部分的数据。
-
- 默认值为FULL。
+|名称|类型|是否必选|示例值|描述|
+|--|--|----|---|--|
+|Action|String|是|CreateMigrateTask|系统规定参数，取值：**CreateMigrateTask**。
 
  |
-|IsOnlineDB|String|是| 是否将还原后的数据库带上线，便于用户访问，取值为：
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
- -   True：将数据库带上线。
+ |
+|DBName|String|是|testDB|数据库名称。
+
+ |
+|BackupMode|String|是|FULL|迁移上云任务类型，取值：
+
+ -   **FULL**：通过全量备份文件执去执行还原操作；
+-   **UPDF**：通过增量文件或者日志文件去还原增量部分的数据。
+
+ |
+|IsOnlineDB|String|是|True|是否将还原后的数据库带上线，便于用户访问，取值：
+
+ -   True：将数据库带上线；
 -   False：不将数据库带上线。
 
  默认值为True。
 
-**说明：** 对于 SQL Server 2008 R2 版本实例，该值恒定为True。
+ **说明：** 目前SQL Server 2008 R2 版本该值恒定为 True。
 
  |
-|OSSUrls|String|否| 备份文件所在OSS共享URL地址（Encode编码后的URL）。
+|CheckDBMode|String|否|AsyncExecuteDBCheck|打开数据库后一致性检查方法，取值：
+
+ -   SyncExecuteDBCheck：同步执行DB检查；
+-   AsyncExecuteDBCheck：异步执行DB检查。
+
+ 默认值为 AsyncExecuteDBCheck（兼容 SQL Server 2008 R2）。
+
+ **说明：** 当 IsOnlineDB= True时，该值有效。
+
+ |
+|OssObjectPositions|String|否|oss-ap-southeast-1.aliyuncs.com:rdsmssqlsingapore:autotest\_2008R2\_TestMigration\_FULL.bak|OSS的组成部分。
+
+ 取值由3段组成：
+
+ -   OSS Endpoint地址：oss-ap-southeast-1.aliyuncs.com；
+-   OSS Bucket名字：rdsmssqlsingapore；
+-   OSS上的备份文件Key：autotest\_2008R2\_TestMigration\_FULL.bak。
+
+ **说明：** 
+
+ -   该参数对于 SQL Server 2008 R2 版本实例是可选参数。
+-   该参数对于 SQL Server 2008 R2 以上版本实例是必传参数。
+
+ |
+|OSSUrls|String|否|check\_cdn\_oss.sh www.xxxxxx.mobi|备份文件所在OSS共享URL地址（Encode编码后的URL）。
 
  有多个地址时，先使用“|”隔开，再编码后传入参数。
 
  默认值为空。
 
-**说明：** 该参数对于 SQL Server 2008 R2 版本实例是必传参数。
+ **说明：** SQL Server 2008 R2 必须传入该参数。
 
  |
-|OssObjectPositions|String|否| OSS的组成部分。取值由3段组成：oss-ap-southeast-1.aliyuncs.com:rdsmssqlsingapore:/autotest\_2008R2\_TestMigration\_FULL.bak
+|MigrateTaskId|String|否|无|迁移任务ID：
 
--   OSS Endpoint地址：oss-ap-southeast-1.aliyuncs.com
--   OSS Bucket名字：rdsmssqlsingapore
--   OSS上的备份文件Key：/autotest\_2008R2\_TestMigration\_FULL.bak
+ -   BackupMode=FULL时，该值为空。（兼容RDS for SQLServer 2008 R2）；
+-   BackupMode=UPDF时，该值为对应FULL任务的ID。
+
+ 默认值为FULL。
 
  **说明：** 
 
--   该参数对于 SQL Server 2008 R2 版本实例是可选参数。
--   该参数对于 SQL Server 2008 R2 以上版本实例是必传参数。
-
- |
-|MigrateTaskId|String|否|迁移任务ID：-   BackupMode=FULL时，该值为空。（兼容RDS for SQLServer 2008 R2）。
--   BackupMode=UPDF时，该值为对应FULL任务的ID。
-
-默认值为FULL。
-
-**说明：** 
-
--   IsOnlineDB=True时，BackupMode必须取值为FULL。
+ -   IsOnlineDB=True时，BackupMode必须取值为FULL；
 -   IsOnlineDB=False时，BackupMode必须为UPDF。
 
-|
-|CheckDBMode|String|否|打开数据库后一致性检查方法，取值为：-   SyncExecuteDBCheck：同步执行DB检查。
--   AsyncExecuteDBCheck：异步执行DB检查。
+ |
+|AccessKeyId|String|否|LTAIKw8gxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
-默认值为AsyncExecuteDBCheck（兼容 SQL Server 2008 R2）。
+ |
 
-**说明：** 当IsOnlineDB=True时，该值有效。
+## 返回参数 {#resultMapping .section}
 
-|
+|名称|类型|示例值|描述|
+|--|--|---|--|
+|BackupMode|String|FULL|迁移上云任务类型，取值为：
 
-## 返回参数 {#section_a5x_zlh_12b .section}
-
-|名称|类型|描述|
-|--|--|--|
-|<公共返回参数\>|-|详见[公共参数](intl.zh-CN/API参考/使用API/公共参数.md#) 。|
-|RequestId|String|请求ID。|
-|DBInstanceId|String|实例ID。|
-|DBName|String|数据库名称。|
-|TaskId|String|任务ID。|
-|MigrateTaskId|String|迁移任务ID。|
-|BackupMode|String| 迁移上云任务类型，取值为：
-
--   FULL：表示通过全量备份文件去执行还原操作。
+ -   FULL：示通过全量备份文件执去执行还原操作；
 -   UPDF：表示通过增量文件或者日志文件去还原增量部分的数据。
 
  默认值为FULL。
 
  |
+|DBInstanceId|String|rm-uf6wjk5xxxxx|实例ID。
 
-## 错误码 {#section_gqh_tqj_sfb .section}
+ |
+|DBName|String|test02|数据库名称。
 
-以下为本接口特有的错误码。更多错误码，请访问 [API 错误中心](https://error-center.aliyun.com/status/product/Rds)。
+ |
+|MigrateTaskId|String|564563256|迁移任务ID。
 
-|错误代码|描述|HTTP状态码|
-|----|--|-------|
-|InvalidFile|The operation does not support this kind of file.|400|
-|InvalidInstanceState|Current DB instance state does not support this operation.|403|
-|IncorrectDBInstanceType|The DB instance state does not support this operation.|400|
-|InvalidInstanceType|The DB instance type does not support this operation.|400|
-|InvalidInstanceLockMode|The DB instance lock mode does not support this operation.|400|
-|InvalidDBName|The instance does not have the specified DB name.|400|
-|InvalidDBType|Current DB type does not support this operation.|400|
-|InvalidDBState|Current DB state does not support this operation.|400|
-|ExceedUploadTime|UploadTimesQuotaExceeded: Exceeding the daily upload times of this DB.|400|
-|InvalidOSSURL|The Specified OSS URL is not valid.|400|
-|ExceedDiskSize|The file size exceeding the disk size.|400|
+ |
+|RequestId|String|866F5EB8-4650-4061-87F0-379F6F968BCE|请求ID。
 
-## 请求示例 {#section_gdg_kks_c2b .section}
+ |
+|TaskId|String|5451225|任务ID。
 
-```
-https://rds.aliyuncs.com/?Action=CreateMigrateTask
-        &BackupMode=FULL
-        &IsOnlineDB=True
-        &DBName=testDB
-        &DBInstanceId=rm-xxxxxxx
-        &OssObjectPositions=oss-cn-beijing.aliyuncs.com:atp-test-on-ecs:Migration/TestMigration_FULL_20180523225534.bak
-        &<公共请求参数>
-```
+ |
 
-## 返回示例 {#section_trc_4ks_c2b .section}
+## 示例 {#demo .section}
 
-**JSON格式**
+请求示例
+
+``` {#request_demo}
+
+http(s)://rds.aliyuncs.com/?Action=CreateMigrateTask
+&DBInstanceId=rm-uf6wjk5xxxxxxx
+&DBName=testDB
+&BackupMode=FULL
+&IsOnlineDB=True
+&<公共请求参数>
 
 ```
-{"DBInstanceId": "rm-xxxxxxx", "BackupMode": "FULL", "MigrateTaskId": "106121", "RequestId": "67E0DD7F-7219-4F67-AAE7-B27273921303", "TaskId": "68244691", "DBName": "TestDB"}
+
+正常返回示例
+
+`XML` 格式
+
+``` {#xml_return_success_demo}
+<CreateMigrateTaskResponse>
+  <MigrateTaskId>135847</MigrateTaskId>
+  <DBInstanceId>rm-bp178grbxxxxxxx</DBInstanceId>
+  <RequestId>5F2B3757-BD56-40B3-B5F2-FCDD9FA0E2E2</RequestId>
+  <BackupMode>UPDF</BackupMode>
+  <TaskId>128301751</TaskId>
+  <DBName>test02</DBName>
+</CreateMigrateTaskResponse>
+
 ```
+
+`JSON` 格式
+
+``` {#json_return_success_demo}
+{
+	"MigrateTaskId":"135847",
+	"RequestId":"5F2B3757-BD56-40B3-B5F2-FCDD9FA0E2E2",
+	"DBInstanceId":"rm-bp178grbxxxxxxx",
+	"BackupMode":"UPDF",
+	"TaskId":"128301751",
+	"DBName":"test02"
+}
+```
+
+## 错误码 { .section}
+
+|HttpCode|错误码|错误信息|描述|
+|--------|---|----|--|
+|400|InvalidDBName|The instance does not have the specified DB name.|指定数据库名不存在。|
+
+[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
 
