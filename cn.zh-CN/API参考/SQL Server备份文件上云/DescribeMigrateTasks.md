@@ -1,4 +1,4 @@
-# DescribeMigrateTasks {#doc_api_1105034 .reference}
+# DescribeMigrateTasks {#doc_api_Rds_DescribeMigrateTasks .reference}
 
 调用DescribeMigrateTasks接口查询备份数据上云任务列表。
 
@@ -59,9 +59,8 @@
  |
 |└BackupMode|String|FULL|备份数据上云任务类型，取值：
 
- -   **FULL**：全量备份文件一次性迁入；
--   **DIFF**：增量备份文件一次性迁入；
--   **LOG**：增量备份文件多次迁入。
+ -   FULL：表示通过全量备份文件去执行还原操作。
+-   UPDF：表示通过增量文件或者日志文件去还原增量部分的数据。
 
  |
 |└CreateTime|String|2017-05-30T12:11:04Z|备份数据上云任务创建时间。
