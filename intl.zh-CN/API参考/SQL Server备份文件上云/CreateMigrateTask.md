@@ -27,20 +27,20 @@
  |
 |IsOnlineDB|String|是|True|是否将还原后的数据库带上线，便于用户访问，取值：
 
- -   True：将数据库带上线。
--   False：不将数据库带上线。
+ -   **True**：将数据库带上线。
+-   **False**：不将数据库带上线。
 
- **说明：** 目前SQL Server 2008 R2 版本该值恒定为 True。
+ **说明：** 目前SQL Server 2008 R2 版本该值恒定为**True**。
 
  |
 |CheckDBMode|String|否|AsyncExecuteDBCheck|打开数据库后一致性检查方法，取值：
 
- -   SyncExecuteDBCheck：同步执行DB检查；
--   AsyncExecuteDBCheck：异步执行DB检查。
+ -   **SyncExecuteDBCheck**：同步执行DB检查；
+-   **AsyncExecuteDBCheck**：异步执行DB检查。
 
- 默认值为 AsyncExecuteDBCheck（兼容 SQL Server 2008 R2）。
+ 默认值为**AsyncExecuteDBCheck**（兼容 SQL Server 2008 R2）。
 
- **说明：** 当 IsOnlineDB= True时，该值有效。
+ **说明：** 当 **IsOnlineDB**=**True**时，该值有效。
 
  |
 |OssObjectPositions|String|否|oss-ap-southeast-1.aliyuncs.com:rdsmssqlsingapore:autotest\_2008R2\_TestMigration\_FULL.bak|OSS的组成部分。
@@ -66,15 +66,15 @@
  |
 |MigrateTaskId|String|否|无|迁移任务ID：
 
- -   BackupMode=FULL时，该值为空。（兼容RDS for SQLServer 2008 R2）；
--   BackupMode=UPDF时，该值为对应FULL任务的ID。
+ -   **BackupMode**=**FULL**时，该值为空。（兼容RDS for SQLServer 2008 R2）；
+-   **BackupMode**=**UPDF**时，该值为对应FULL任务的ID。
 
  默认值为FULL。
 
  **说明：** 
 
- -   IsOnlineDB=True时，BackupMode必须取值为FULL；
--   IsOnlineDB=False时，BackupMode必须为UPDF。
+ -   **IsOnlineDB**=**True**时，**BackupMode**必须取值为**FULL**；
+-   **IsOnlineDB**=**False**时，**BackupMode**必须为**UPDF**。
 
  |
 |AccessKeyId|String|否|LTAIKw8gxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
@@ -87,10 +87,8 @@
 |--|--|---|--|
 |BackupMode|String|FULL|迁移上云任务类型，取值为：
 
- -   FULL：示通过全量备份文件执去执行还原操作；
--   UPDF：表示通过增量文件或者日志文件去还原增量部分的数据。
-
- 默认值为FULL。
+ -   **FULL**：示通过全量备份文件执去执行还原操作；
+-   **UPDF**：表示通过增量文件或者日志文件去还原增量部分的数据。
 
  |
 |DBInstanceId|String|rm-uf6wjk5xxxxx|实例ID。
