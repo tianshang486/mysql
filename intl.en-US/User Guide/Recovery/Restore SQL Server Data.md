@@ -23,18 +23,18 @@ This method applies to RDS for SQL Server 2016 or 2012 instances.
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the instance is located.
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652855740804_en-US.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652874540804_en-US.png)
 
 3.  Click the instance ID.
 4.  In the left-side navigation pane, choose Backup and Recovery.
 5.  In the upper-right corner of the page, click **Restore**.
-6.  \(This step is for high-availability series only.\) Select**Restore to Existing Instance** and click **OK**.
+6.  \(This step is for high-availability series only.\) Select **Restore to Existing Instance** and click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652855810029_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652874510029_en-US.png)
 
 7.  Set the following parameters, and then click**OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652855810031_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652874710031_en-US.png)
 
     **Note:** If the existing instance already has a database that has the same name as the database to be restored, you need to modify New Name.
 
@@ -83,7 +83,7 @@ This method applies to the following instances:
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the instance is located.
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652855740804_en-US.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652874540804_en-US.png)
 
 3.  Click the instance ID.
 4.  In the left-side navigation pane, choose Backup and Recovery.
@@ -99,7 +99,7 @@ This method applies to the following instances:
 
     |Parameter|Description|
     |---------|-----------|
-    |**Restore Type**|     -   **By Time**: You can restore data to any point in time within the log backup retention period. To view or modify the log backup retention period, see [Back up RDS data](intl.en-US/User Guide/Backup/Back up RDS data.md).
+    |**Restore Type**|     -   **By Time**: You can restore data to any point in time within the log backup retention period. To view or modify the log backup retention period, see [Configure automatic backup \(Set backup policies\)](intl.en-US/User Guide/Backup/Back up RDS data.md#section_f33_lk4_ydb).
     -   **By Backup ID**
  **Note:** **By Time** is displayed only if log backup is enabled.
 
