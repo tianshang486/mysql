@@ -12,7 +12,7 @@ If the data volume is large, the restoration may take a long time.
 
 ## Restore data to an existing RDS instance {#section_huifu .section}
 
-You can restore all or part of the databases in your instance to an existing RDS instance.
+You can restore all or part of the databases in your instance to an existing RDS instance. You can restore data by time or backup set.
 
 **Applicable scope**
 
@@ -23,36 +23,39 @@ This method applies to RDS for SQL Server 2016 or 2012 instances.
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the instance is located.
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155257485240804_en-US.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652855740804_en-US.png)
 
 3.  Click the instance ID.
 4.  In the left-side navigation pane, choose Backup and Recovery.
 5.  In the upper-right corner of the page, click **Restore**.
 6.  \(This step is for high-availability series only.\) Select**Restore to Existing Instance** and click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155257485210029_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652855810029_en-US.png)
 
 7.  Set the following parameters, and then click**OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155257485210031_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652855810031_en-US.png)
 
     **Note:** If the existing instance already has a database that has the same name as the database to be restored, you need to modify New Name.
 
     |Parameter|Description|
     |---------|-----------|
-    |**Restore Method**|To restore data to an existing instance, select **By Backup Set**.|
-    |**Backup Set**|Select the backup set to restore.By default, the system displays all full backup sets under the current instance.
+    |**Restore Method**|     -   **By Time**: You can restore data to any point in time within the log retention period. To view or modify the log retention period, see [Configure automatic backup \(Set backup policies\)](intl.en-US/User Guide/Backup/Back up RDS data.md#section_f33_lk4_ydb).
+    -   **By Backup Set**: You can restore full or incremental backup sets.
+ |
+    |**Restore Time**|Set this parameter if **By Time** is selected.|
+    |**Backup Set**|Set this parameter if **By Time** is selected. Select the backup set to restore.
 
-|
-    |**Instance**|Select the instance to which the backup set will be restored.By default, the system displays the current instance and all instances that belong to the current Alibaba account and current region and have the same database version as the current instance.
+ |
+    |**Instance**|Select the instance to which data will be restored. By default, the system displays the current instance and all instances that belong to the current Alibaba account and current region and have the same database version as the current instance.
 
-**Note:** If many instances are displayed, you can use the search box.
+ **Note:** If many instances are displayed, you can use the search box.
 
-|
-    |**Databases to restore**|     1.  Select the database to restore. All databases in the backup set are displayed and selected by default.
+ |
+    |**Databases to restore**|     1.  Select the databases to restore. All databases are displayed and selected by default.
         -   To restore data of the entire instance, retain the default selection \(All databases are selected\).
         -   To restore certain databases, select only these databases.
-    2.  Set the database names that are displayed after the databases are restored. By default, the database names in the backup set are used.
+    2.  Set the database names that are displayed after the databases are restored. By default, the original database names are used.
 
 **Note:** The database names cannot be the same as the existing database names in the target instance.
 
@@ -80,7 +83,7 @@ This method applies to the following instances:
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the instance is located.
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155257485240804_en-US.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155652855740804_en-US.png)
 
 3.  Click the instance ID.
 4.  In the left-side navigation pane, choose Backup and Recovery.
@@ -105,18 +108,18 @@ This method applies to the following instances:
     -   **Part**: Restore part of the databases in the backup set.
  |
     |**Edition**|     -   High-availability: consists of a master node and a slave node. This edition applies to over 80% of application scenarios.
-    -   AlwaysOn \(Cluster\) Edition: provides one master node, one slave node, and up to seven read-only nodes that horizontally scale read capabilities. For more information, see [Cluster Edition \(AlwaysOn Edition\)](../../../../../intl.en-US/Product Introduction/Product series/Cluster Edition (AlwaysOn Edition).md).
+    -   AlwaysOn \(Cluster\) Edition: provides one master node, one slave node, and up to seven read-only nodes that horizontally scale read capabilities. For more information, see [Cluster Edition \(AlwaysOn Edition\)](../../../../intl.en-US/Product Introduction/Product series/Cluster Edition (AlwaysOn Edition).md).
  |
-    |**Zone**|A zone is an independent area within a region. Different zones within the same region are basically the same.
+    |**Zone**| A zone is an independent area within a region. Different zones within the same region are basically the same.
 
-You can deploy your RDS and ECS instances in the same zone or in different zones.**Note:** The region of the clone instance is the same as that of the original instance.
+ You can deploy your RDS and ECS instances in the same zone or in different zones. **Note:** The region of the clone instance is the same as that of the original instance.
 
-|
-    |**Type**|It is recommended that the specifications and storage of the clone instance be equal to higher than those of the original instance; otherwise, the data restoration may take a long time.
+ |
+    |**Type**| It is recommended that the specifications and storage of the clone instance be equal to higher than those of the original instance; otherwise, the data restoration may take a long time.
 
-Each type of specification provides a specific number of CPU cores, memory, maximum number of connections, and maximum IOPS. For details, see [Instance type list](../../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md).
+ Each type of specification provides a specific number of CPU cores, memory, maximum number of connections, and maximum IOPS. For details, see [Instance type list](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md).
 
-RDS provides the following instance type families:
+ RDS provides the following instance type families:
 
     -   General: A general instance has its own memory and I/O resources, and shares CPU and storage resources with other general instances on the same server.
     -   Dedicated: A dedicated instance has it own CPU, memory, storage, and I/O resources.
