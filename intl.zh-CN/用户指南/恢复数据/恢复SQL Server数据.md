@@ -23,18 +23,18 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择备份集所属实例所在的地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155651667137169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155651720037169_zh-CN.png)
 
 3.  单击备份集所属实例的ID。
 4.  在左侧导航栏中，选择**备份恢复**。
 5.  在页面右上角，单击**数据库恢复**。
 6.  选择**恢复到已有实例**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155651667110029_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155651720010029_zh-CN.png)
 
 7.  设置以下参数，然后单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155651667110031_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155651720010031_zh-CN.png)
 
     **说明：** 若有相同数据库名存在，需要修改恢复后库名。
 
@@ -43,10 +43,8 @@
     |还原方式|     -   **按时间点**：可以设置为日志备份保留时间内的任意时间点。如要查看或修改日志备份保留时间，请参见[备份RDS数据](intl.zh-CN/用户指南/备份数据/备份RDS数据.md#)。
     -   **按备份集**：可以指定全量或增量备份集恢复到指定实例。
  |
-    |还原时间|**按时间点**恢复时选择您需要恢复的时间节点。|
-    |备份集|**按备份集**恢复时选择您要用于恢复的备份集。 系统默认显示当前实例下的所有备份集。
-
- |
+    |还原时间|若还原方式选择的是**按时间点**，则有该参数。选择所需复制数据所在的时间点。|
+    |备份集|若还原方式选择的是**按备份集**，则有该参数。选择要恢复的备份集。|
     |目标实例名|选择要恢复到哪个实例。 系统默认显示属于当前阿里云账号的、在当前地域的、与当前实例版本相同的实例，包括当前实例。
 
  **说明：** 显示的目标实例较多时，可以使用搜索框进行筛选。
@@ -75,7 +73,7 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在的地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155651667137169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155651720037169_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在左侧导航栏中，选择**备份恢复**。
