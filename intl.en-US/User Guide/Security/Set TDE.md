@@ -20,14 +20,14 @@ After TDE is enabled, data is encrypted before being written to the disk and dec
 -   You have logged in with an Alibaba account rather than a RAM user account.
 -   KMS has been activated. If KMS has not been activated, you will be prompted to activate it when attempting to enable TDE.
 
-## Procedure {#section_azm_mw4_ydb .section}
+## Enable TDE and decrypt data {#section_azm_mw4_ydb .section}
 
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/) and select the target instance.
 2.  Click **Security** in the left-side navigation pane.
 3.  On the Security page, click the **SQL TDE** tab.
 4.  Click **Disabled**, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7950/15566149894151_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7950/15566151284151_en-US.png)
 
 5.  Click **OK** to enable TDE.
 
@@ -41,7 +41,7 @@ After TDE is enabled, data is encrypted before being written to the disk and dec
 
 -   For RDS for SQL Server, click **Configure TDE**, select the databases to encrypt, add them to the right, and click **OK**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7950/155661498942085_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7950/155661512842085_en-US.png)
 
 
 ## Decrypt data {#section_e12_sw4_ydb .section}
