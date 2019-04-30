@@ -10,7 +10,7 @@ Linux、Windows等支持Python 2.7运行环境的系统。
 
 ## 前提条件 {#section_0nz_5rd_9tm .section}
 
--   需要Python2.7环境，已安装RDS SDK。
+-   需要Python2.7环境，已安装RDS SDK，详情请参见[Python SDK for RDS使用参考](../../../../cn.zh-CN/SDK参考/Python SDK for RDS使用参考.md#)。
 -   工具要足够的执行权限。
 -   工具所在的客户端要能访问RDS的公网地址。
 
