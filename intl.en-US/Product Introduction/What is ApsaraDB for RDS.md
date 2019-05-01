@@ -36,7 +36,7 @@ You can create RDS instances, configure the network, create databases, create ac
 -   CLI: All operations available on the web console can be performed through the CLI.
 -   [SDK](../../../../intl.en-US/SDK Reference/SDK reference.md#): All operations available on the web console can be performed through the SDK.
 -   [API](../../../../intl.en-US/API Reference/API overview.md#): All operations available on the web console can be performed through APIs.
--   
+
 After you create an RDS instance, you can access it through any common client, such as MySQL-Front, SSMS \(SQL Server Management Studio\), or pgAdmin.
 
 ## RDS pricing {#section_kzx_jg1_42b .section}
