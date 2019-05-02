@@ -8,7 +8,7 @@ The Basic Edition is based on the single-node architecture and separates computi
 
 The following picture shows the architecture of the Basic Edition and High-availability Edition.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7788/15567873221359_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7788/15567875291359_en-US.png)
 
 ## Comparative advantages {#section_wh5_tvw_5db .section}
 
@@ -34,7 +34,7 @@ The Basic Edition provides basic functions such as IP whitelists, monitoring, al
 -   Log management
 -   Read-only instances
 
-For the specific functions supported by different database engines, see [Product series overview](intl.en-US/Product Introduction/Product series/Product series overview.md#).
+For functions supported by different database engines, see [Product series overview](intl.en-US/Product Introduction/Product series/Product series overview.md#).
 
 ## Applicable scenarios {#section_n2s_t7m_smo .section}
 
@@ -53,7 +53,7 @@ For the specific functions supported by different database engines, see [Product
 
 ## Get started {#section_8l7_b5c_euk .section}
 
-Currently, RDS for MySQL, SQL Server, and PostgreSQL provide the Basic Edition. Use the Quick Start to quickly create and connect to an RDS instance.
+Currently, RDS for MySQL, SQL Server, and PostgreSQL provide the Basic Edition. Use Quick Start to quickly create and connect to an RDS instance.
 
 -   [Quick Start for MySQL](../../../../intl.en-US/Quick Start for MySQL/Create an instance.md#)
 -   [Quick Start for SQL Server](../../../../intl.en-US/Quick Start for SQL Server/Create an instance.md#)
