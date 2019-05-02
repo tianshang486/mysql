@@ -8,9 +8,9 @@ The Basic Edition is based on the single-node architecture and separates computi
 
 The following picture shows the architecture of the Basic Edition and High-availability Edition.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7788/15567875291359_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7788/15567876801359_en-US.png)
 
-## Comparative advantages {#section_wh5_tvw_5db .section}
+## Advantages {#section_wh5_tvw_5db .section}
 
 **Performance**
 
@@ -36,7 +36,7 @@ The Basic Edition provides basic functions such as IP whitelists, monitoring, al
 
 For functions supported by different database engines, see [Product series overview](intl.en-US/Product Introduction/Product series/Product series overview.md#).
 
-## Applicable scenarios {#section_n2s_t7m_smo .section}
+## Scenarios {#section_n2s_t7m_smo .section}
 
 -   Small websites or applications
 
