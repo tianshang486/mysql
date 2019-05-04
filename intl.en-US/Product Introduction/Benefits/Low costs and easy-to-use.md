@@ -28,14 +28,14 @@ If you are starting a new business, you can buy an RDS instance of low specifica
 -   Alibaba Cloud ensures the normal operation of RDS through routine maintenance and management, such as hardware/software fault processing and database patch upgrades.
 -   You can also manage databases through the RDS console or API. Supported operations include instance management, database management, backup, recovery, and more.
 
-## 开始使用RDS {#section_m4p_wur_ynx .section}
+## Get started {#section_m4p_wur_ynx .section}
 
 -   [../../../../dita-oss-bucket/SP\_60/DNMYSQ1860058/EN-US\_TP\_7872.md\#](../../../../intl.en-US/User Guide/Quick start.md#)
--   [学习路径图](https://www.alibabacloud.com/getting-started/learningpath/rds)
+-   [Learning path](https://www.alibabacloud.com/getting-started/learningpath/rds)
 
 **Related topics**
 
--   -   [EN-US\_TP\_7775.md\#](intl.en-US/Product Introduction/Benefits/High performance.md#)
+-   [EN-US\_TP\_7775.md\#](intl.en-US/Product Introduction/Benefits/High performance.md#)
 -   [EN-US\_TP\_7776.md\#](intl.en-US/Product Introduction/Benefits/High security.md#)
 -   [EN-US\_TP\_7777.md\#](intl.en-US/Product Introduction/Benefits/High reliability.md#)
 -   [EN-US\_TP\_7778.md\#](intl.en-US/Product Introduction/Benefits/Comparisons between ApsaraDB for RDS and self-hosted databases.md#)
