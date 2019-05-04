@@ -1,39 +1,39 @@
 # High security {#concept_rvl_gy5_tdb .concept}
 
-## Anti-DDoS attack {#section_phx_ly5_tdb .section}
+## DDoS protection {#section_phx_ly5_tdb .section}
 
-When Internet connection is used to access RDS instances, the risk of DDoS attacks occurring on the network is possible.  If this occurs, the RDS security system enables flow cleaning operation first.  If the flow cleaning operation fails or the attack reaches the black hole threshold, black hole processing is triggered. Please refer to attack [Protection and attack protection](https://help.aliyun.com/document_detail/66893.html?spm=a2c4g.11186623.2.4.tuvQ0O) for details.
+If DDoS attacks are detected, the security system of RDS enables traffic cleaning first. If traffic cleaning fails or the attacks reach the blackhole threshold, blackhole filtering is triggered.
 
-**Notice:** We recommend that RDS instances are accessed over the intranet to avoid DDoS attacks.
+**Note:** We recommend accessing RDS instances through the intranet to prevent DDoS attacks.
 
-## Access control policy {#section_qhx_ly5_tdb .section}
+## Access control {#section_qhx_ly5_tdb .section}
 
--   You can define the IP addresses that are allowed to access RDS. IP addresses that have not been specified are denied access.
+-   IP addresses can access RDS only after you add them to the whitelist. IP addresses that are not in the whitelist cannot access RDS.
+-   Each account can only view and operate its own databases.
 
--   Each account can only view and operate its own database.
-
-
-Please refer to [Access control](https://help.aliyun.com/document_detail/53617.html) for more information.
+For more information, see [access control](https://www.alibabacloud.com/help/doc-detail/53617.htm).
 
 ## System security {#section_shx_ly5_tdb .section}
 
--   RDS is protected by multiple firewall layers that can effectively block a variety of malicious attacks and guarantee data security.
+-   RDS is protected by multiple firewall layers that block various network attacks and ensure data security.
+-   Direct logon to the RDS server is not allowed. Only the ports required by certain database services are open.
+-   RDS servers cannot initiate an external connection. It can only accept access requests.
 
--   Direct logon to the RDS server is not allowed. Only the port required by the specific database service is open.
+For more information, see [Network isolation](https://www.alibabacloud.com/help/doc-detail/53618.htm).
 
--   The RDS server cannot initiate an external connection. It can only accept access requests.
+## Professional security team {#section_gcq_o0l_uvv .section}
 
+Aliabab Cloud security team is responsible for ensuring the security of RDS.
 
-For more information, refer to [Access control](https://www.alibabacloud.com/help/zh/doc-detail/53617.htm).
+## Get started {#section_oh2_idp_2it .section}
 
-## Professional support team {#section_uhx_ly5_tdb .section}
+-   [Quick start](../../../../intl.en-US/User Guide/Quick start.md#)
+-   [Learning path](https://www.alibabacloud.com/getting-started/learningpath/rds)
 
-Alibaba Cloud’s security team provide rapid security technology support for RDS.
+**Related topics**
 
-**Related Topics**
-
--   [Cheap and ease-to-use](intl.en-US/Product Introduction/Benefits/Cheap and ease-to-use.md#)
+-   [Low costs and easy-to-use](intl.en-US/Product Introduction/Benefits/Low costs and easy-to-use.md#)
 -   [High performance](intl.en-US/Product Introduction/Benefits/High performance.md#)
--   [High reliability](intl.en-US/Product Introduction/Benefits/High reliability.md#)
--   [EN-US\_TP\_7778.md\#](intl.en-US/Product Introduction/Benefits/Comparison between ApsaraDB for RDS and local databases.md#)
+-   [Disaster tolerance](intl.en-US/Product Introduction/Benefits/Disaster tolerance.md#)
+-   [Comparison between ApsaraDB for RDS and local databases](intl.en-US/Product Introduction/Benefits/Comparisons between ApsaraDB for RDS and self-hosted databases.md#)
 
