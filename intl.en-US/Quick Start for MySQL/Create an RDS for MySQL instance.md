@@ -81,7 +81,7 @@ You have registered an Alibaba Cloud account.
 
     At the upper left corner of the [RDS console](https://rdsnext.console.aliyun.com), select the region where the instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155697641336543_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155697657736543_en-US.png)
 
 2.  [EN-US\_TP\_7816.md\#](intl.en-US/Quick Start for MySQL/Initial configuration/Set the whitelist.md#).
 3.  [Create a databse account](intl.en-US/Quick Start for MySQL/Initial configuration/Create accounts and databases.md#).
@@ -92,7 +92,7 @@ You have registered an Alibaba Cloud account.
 
 How do I authorize a RAM user to manage RDS instances?
 
-Anwser: See [Manage RDS permissions by using RAM](https://www.alibabacloud.com/help/doc-detail/58932.htm).
+Answer: See [Manage RDS permissions by using RAM](https://www.alibabacloud.com/help/doc-detail/58932.htm).
 
 ## Related API {#section_enw_cvk_fde .section}
 
