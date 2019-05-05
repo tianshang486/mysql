@@ -1,8 +1,6 @@
-# DescribeSlowLogs {#doc_api_1106084 .reference}
+# DescribeSlowLogs {#doc_api_Rds_DescribeSlowLogs .reference}
 
 调用DescribeSlowLogs查看慢日志统计情况。
-
-该接口用于查看实例的慢慢日志统计情况，支持分页查询。
 
 **说明：** 该接口暂不支持SQL Server 2017集群版实例。
 
@@ -110,16 +108,16 @@
 |└MaxLockTime|Long|0|最大锁定时长，单位：秒。
 
  |
-|└ParseTotalRowCounts|Long|1|解析总行数。
+|└ParseTotalRowCounts|Long|1|解析SQL总行数。
 
  |
-|└ParseMaxRowCount|Long|1|解析最大行数。
+|└ParseMaxRowCount|Long|1|解析SQL最大行数。
 
  |
-|└ReturnTotalRowCounts|Long|1|返回总行数。
+|└ReturnTotalRowCounts|Long|1|返回SQL总行数。
 
  |
-|└ReturnMaxRowCount|Long|1|返回最大行数。
+|└ReturnMaxRowCount|Long|1|返回SQL最大行数。
 
  |
 |└CreateTime|String|2011-05-30Z|数据生成日期。
