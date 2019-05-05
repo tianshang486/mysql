@@ -12,9 +12,9 @@
 |mysql.n4.xlarge.1|8-core 32 GB|10,000|
 |mysql.n4.2xlarge.1|16-core 64 GB|15,000|
 |mysql.n4.4xlarge.1|32-core 128 GB|20,000|
-|mysql.n8.4xlarge.1|32-core 256 GB| 64,000|
-|mysql.n4.8xlarge.1|56-core 224 GB| 64,000|
-|mysql.n8.8xlarge.1|56-core 480 GB| 64,000|
+|mysql.n8.4xlarge.1|32-core 256 GB|64,000|
+|mysql.n4.8xlarge.1|56-core 224 GB|64,000|
+|mysql.n8.8xlarge.1|56-core 480 GB|64,000|
 |High-availability Edition|5.5/5.6/5.7|Common instances|rds.mysql.t1.small|1-core 1 GB|300|600|5 GB - 2,000 GB|
 |rds.mysql.s1.small|1-core 2 GB|600|1,000|
 |rds.mysql.s2.large|2-core 4 GB|1,200|2,000|
@@ -33,7 +33,7 @@
 |mysql.x4.xlarge.2|8-core 32 GB|5,000|9,000|500 GB or 1,000 GB|
 |mysql.x4.2xlarge.2|16-core 64 GB|10,000|18,000|1,000 GB, 2,000 GB or 3,000 GB|
 |mysql.x4.4xlarge.2|32-core 128 GB|20,000|36,000|2,000 GB or 3,000 GB|
-|Dedicated-host instances|rds.mysql.st.d13|30-core 220 GB| 64,000|20,000|3,000 GB|
+|Dedicated-host instances|rds.mysql.st.d13|30-core 220 GB|64,000|20,000|3,000 GB|
 |rds.mysql.st.h43|60-core 470 GB|100,000|50,000|3,000 GB|
 |Financial Edition \(formerly: Three-node Enterprise Edition\)|5.6|Dedicated instances \(with high CPU\)|mysql.x4.large.3|4-core 16 GB|2,500|4,500|250 GB or 500 GB|
 |mysql.x4.xlarge.3|8-core 32 GB|5,000|9,000|500 GB or 1,000 GB|
@@ -63,41 +63,80 @@
 |mysqlro.x4.xlarge.1|8-core 32 GB|5,000|9,000|500 GB or 1,000 GB|
 |mysqlro.x4.2xlarge.1|16-core 64 GB|10,000|18,000|1,000 GB, 2,000 GB or 3,000 GB|
 |mysqlro.x4.4xlarge.1|32-core 128 GB|20,000|36,000|2,000 GB or 3,000 GB|
-|Dedicated-host instances|rds.mysql.st.d13|30-core 220 GB| 64,000|20,000|3,000 GB|
+|Dedicated-host instances|rds.mysql.st.d13|30-core 220 GB|64,000|20,000|3,000 GB|
 
-## RDS for SQL Server {#section_ptf_rwz_xdb .section}
+## RDS for SQL Server \(master instance\) { .section}
 
 |Series|Version|Type|Type code|CPU/Memory|Maximum number of connections|Maximum IOPS|Storage capacity|
 |------|-------|----|---------|----------|-----------------------------|------------|----------------|
-|Basic Edition|2012 Enterprise \(formerly 2012\)|Common instances|rds.mssql.s2.large|2-core 4 GB|Not limited|IOPS=min\{30 x storage capacity, 20,000\}|20 GB - 2000 GB|
-|rds.mssql.s2.xlarge|2-core 8 GB|
-|rds.mssql.s3.large|4-core, 8 GB|
-|rds.mssql.m1.medium|4-core 16 GB|
-|rds.mssql.c1.large|8-core 16 GB|
-|rds.mssql.c1.xlarge|8-core 32 GB|
-|rds.mssql.c2.xlarge|16-core 64 GB|
-|2012/2016 Web|Dedicated instances|mssql.x2.medium.w1|2-core 4 GB|Not limited|IOPS=min\{30 x storage capacity, 20,000\}|20 GB - 2000 GB|
-|mssql.x2.large.w1|4-core, 8 GB|
-|mssql.x2.xlarge.w1|8-core 16 GB|
-|mssql.x2.2xlarge.w1|16-core 32 GB|
-|mssql.x4.medium.w1|2-core 8 GB|
-|mssql.x4.large.w1|4-core 16 GB|
-|mssql.x4.xlarge.w1|8-core 32 GB|
-|mssql.x4.2xlarge.w1|16-core 64 GB|
-|High-availability Edition|2008 R2 Enterprise|Common instances|rds.mssql.s2.large|2-core 4 GB|1,200|2,000|10 GB - 2,000 GB|
-|rds.mssql.s2.xlarge|2-core 8 GB|2,000|4,000|
-|rds.mssql.s3.large|4-core, 8 GB|2,000|5,000|
-|rds.mssql.m1.medium|4-core 16 GB|4,000|7,000|
-|rds.mssql.c1.large|8-core 16 GB|4,000|8,000|
-|rds.mssql.c1.xlarge|8-core 32 GB|8,000|12,000|
-|rds.mssql.c2.xlarge|16-core 64 GB|16,000|14,000|
-|rds.mssql.c2.xlp2|16-core 96 GB|24,000|16,000|
-|Dedicated instances|mssql.x8.medium.2|2-core 16 GB|2,500|4,500|250 GB|
-|mssql.x8.large.2|4-core 32 GB|5,000|9,000|500 GB|
-|mssql.x8.xlarge.2|8-core 64 GB|10,000|18,000|1,000 GB|
-|mssql.x8.2xlarge.2|16-core 128 GB|20,000|36,000|2,000 GB|
-|Dedicated-host instances|rds.mssql.st.d13|30-core 220 GB| 64,000|20,000|2,000 GB|
-|rds.mssql.st.h43|60-core 470 GB|100,000|50,000|2,000 GB|
+|基础版|2012 企业版|通用型|rds.mssql.s2.large|2核 4GB|不限制|min\{30 x 存储空间, 20000\}|20GB-3000GB|
+|rds.mssql.s2.xlarge|2核 8GB|
+|rds.mssql.s3.large|4核 8GB|
+|rds.mssql.m1.medium|4核 16GB|
+|rds.mssql.c1.large|8核 16GB|
+|rds.mssql.c1.xlarge|8核 32GB|
+|rds.mssql.c2.xlarge|16核 64GB|
+|2012 Web版、2016 Web版|独享型|mssql.x2.medium.w1|2核 4GB|不限制|min\{30 x 存储空间, 20000\}|20GB-3000GB|
+|mssql.x4.medium.w1|2核 8GB|
+|mssql.x2.large.w1|4核 8GB|
+|mssql.x4.large.w1|4核 16GB|
+|mssql.x2.xlarge.w1|8核 16GB|
+|mssql.x4.xlarge.w1|8核 32GB|
+|mssql.x2.2xlarge.w1|16核 32GB|
+|mssql.x4.2xlarge.w1|16核 64GB|
+|高可用版|2008 R2|通用型|rds.mssql.s2.large|2核 4GB|1200|2000|10GB-2000GB|
+|rds.mssql.s2.xlarge|2核 8GB|2000|4000|
+|rds.mssql.s3.large|4核 8GB|2000|5000|
+|rds.mssql.m1.medium|4核 16GB|4000|7000|
+|rds.mssql.c1.large|8核 16GB|4000|8000|
+|rds.mssql.c1.xlarge|8核 32GB|8000|12000|
+|rds.mssql.c2.xlarge|16核 64GB|16000|14000|
+|rds.mssql.c2.xlp2|16核 96GB|24000|16000|
+|独享型|mssql.x8.medium.2|2核 16GB|2500|4500|250GB|
+|mssql.x8.large.2|4核 32GB|5000|9000|500GB|
+|mssql.x8.xlarge.2|8核 64GB|10000|18000|1000GB|
+|mssql.x8.2xlarge.2|16核 128GB|20000|36000|2000GB|
+|独占物理机型|rds.mssql.st.d13|30核 220GB|64000|20000|2000GB|
+|rds.mssql.st.h43|60核 470GB|100000|50000|2000GB|
+|2012企业版、2016企业版|独享型|mssql.x4.medium.e2|2核8GB|无限制|取决于SSD云盘性能|20GB-4000GB|
+|mssql.x8.medium.e2|2核16GB|
+|mssql.x4.large.e2|4核16GB|
+|mssql.x8.large.e2|4核32GB|
+|mssql.x4.xlarge.e2|8核 32GB|
+|mssql.x8.xlarge.e2|8核 64GB|
+|mssql.x4.2xlarge.e2|16核 64GB|
+|mssql.x8.2xlarge.e2|16核 128GB|
+|mssql.x4.3xlarge.e2|24核 96GB|
+|mssql.x4.4xlarge.e2|32核128GB|
+|mssql.x8.4xlarge.e2|32核 256GB|
+|mssql.x8.7xlarge.e2|56核 480GB|
+|mssql.x4.8xlarge.e2|64核256GB|
+|mssql.x8.8xlarge.e2|64核512GB|
+|2012标准版、2016标准版|通用型|mssql.s2.medium.s2|2核4GB|
+|mssql.s2.large.s2|4核8GB|
+|mssql.s2.xlarge.s2|8核16GB|
+|mssql.s2.2xlarge.s2|16核32GB|
+|独享型|mssql.x4.medium.s2|2核 8GB|
+|mssql.x8.medium.s2|2核16GB|
+|mssql.x4.large.s2|4核 16GB|
+|mssql.x8.large.s2|4核32GB|
+|mssql.x4.xlarge.s2|8核 32GB|
+|mssql.x8.xlarge.s2|8核64GB|
+|mssql.x4.2xlarge.s2|16核 64GB|
+|mssql.x8.2xlarge.s2|16核128GB|
+|mssql.x4.3xlarge.s2|24核 96GB|
+|集群版|2017企业版|独享型|mssql.x4.medium.e2|2核 8GB|无限制|取决于SSD云盘性能|20GB-4000GB|
+|mssql.x4.large.e2|4核 16GB|
+|mssql.x4.xlarge.e2|8核 32GB|
+|mssql.x4.2xlarge.e2|16核 64GB|
+|mssql.x4.4xlarge.e2|32核 128GB|
+|mssql.x4.8xlarge.e2|64核 256GB|
+|mssql.x8.medium.e2|2核 16GB|
+|mssql.x8.large.e2|4核 32GB|
+|mssql.x8.xlarge.e2|8核 64GB|
+|mssql.x8.2xlarge.e2|16核 128GB|
+|mssql.x8.4xlarge.e2|32核 256GB|
+|mssql.x8.8xlarge.e2|64核 512GB|
 
 ## RDS for PostgreSQL { .section}
 
@@ -122,7 +161,6 @@
 |rds.pg.s1.small|1-core 2 GB|200|1,000|
 |rds.pg.s2.large|2-core 4 GB|400|2,000|
 |rds.pg.s3.large|4-core, 8 GB|800|5,000|
-|rds.pg.c1.large|8-core 16 GB|1,500|8,000|
 |rds.pg.c1.xlarge|8-core 32 GB|2,000|12,000|
 |rds.pg.c2.xlarge|16-core 64 GB|2,000|14,000|
 |Dedicated instances \(with large memory\)|pg.x8.medium. 2|2-core 16 GB|2,500|4,500|250 GB|
@@ -146,9 +184,9 @@
 |ppas.x8.medium.2|2-core 16 GB|2,500|15,000|
 |ppas.x4.large.2|4-core 16 GB|2,500|20,000|250 GB or 500 GB|
 |ppas.x8.large.2|4-core 32 GB|5,000|30,000|
-|ppas.x4.xlarge.2|8-core 32GB|5,000|40,000|250 GB or 500 GB|
+|ppas.x4.xlarge.2|8-core 32GB|5,000|40,000|500 GB or 1000 GB|
 |ppas.x8.xlarge.2|8-core 64 GB|10,000|60,000|
-|ppas.x4.2xlarge.2|16-core 64 GB|10,000|80,000|250 GB or 500 GB|
+|ppas.x4.2xlarge.2|16-core 64 GB|10,000|80,000|1000 GB or 2000 GB|
 |ppas.x8.2xlarge.2|16-core 128 GB|12,000|120,000|
 |ppas.x4.4xlarge.2|32-core 128 GB|12,000|160,000|2000 GB or 3000 GB|
 |ppas.x8.4xlarge.2|32-core 256 GB|12,000|240,000|
@@ -184,6 +222,14 @@ The following table lists the historical instance types of RDS for SQL Server. T
 |rds.mss1.2xlarge|12|12,000 MB|1,200|6,000|
 |rds.mss1.4xlarge|13|24,000MB|2,000|12,000|
 |rds.mss1.8xlarge|13|48,000 MB|2,000|14,000|
+
+## Historical instance types of RDS for PostgreSQL {#section_ujw_9re_tkw .section}
+
+The following table lists the historical instance types of RDS for PostgreSQL. They are no longer available when you create a new instance.
+
+|Type code|Number of CPU cores|Memory|Maximum number of connections|Maximum IOPS|
+|---------|-------------------|------|-----------------------------|------------|
+|rds.pg.c1.large|8|16 GB|1,500|8,000|
 
 ## Historical instance types of RDS for PPAS {#section_lph_jhd_x2b .section}
 
