@@ -97,10 +97,7 @@
 
  **说明：** 
 
- 
-
 -   SQL Server2017集群版只支持VPC网络；
-
 -   如果数据库类型为MariaDB，该参数必填。
 
  |
@@ -114,7 +111,7 @@
  **说明：** SQL Server 2012/2016/2017只支持标准访问模式。
 
  |
-|VPCId|String|否|vpc-xxxxxxxxxxxx|VPC ID， 多个值用英文逗号（,）隔开。
+|VPCId|String|否|vpc-xxxxxxxxxxxx|VPC ID。
 
  **说明：** 如果数据库类型为MariaDB，该参数必填。
 
@@ -127,18 +124,18 @@
 |PrivateIpAddress|String|否|172.16.201.69|设置实例的内网IP，需要在指定交换机的IP地址范围内。系统默认通过**VPCId**和**VSwitchId**自动分配。
 
  |
-|UsedTime|String|否|2|指定购买时长，取值：
-
- -   当参数**Period**为**Year**时，UsedTime取值为**1~3**；
--   当参数**Period**为**Month**时，UsedTime取值为**1~9**。
-
- **说明：** 若付费类型为**Prepaid**则该参数必须传入。
-
- |
 |Period|String|否|Year|指定预付费实例为包年或者包月类型，取值：
 
  -   **Year**：包年；
 -   **Month**：包月。
+
+ **说明：** 若付费类型为**Prepaid**则该参数必须传入。
+
+ |
+|UsedTime|String|否|2|指定购买时长，取值：
+
+ -   当参数**Period**为**Year**时，UsedTime取值为**1~3**；
+-   当参数**Period**为**Month**时，UsedTime取值为**1~9**。
 
  **说明：** 若付费类型为**Prepaid**则该参数必须传入。
 
