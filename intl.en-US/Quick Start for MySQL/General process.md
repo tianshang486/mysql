@@ -1,20 +1,14 @@
 # General process {#concept_wfd_cy2_vdb .concept}
 
-## Purpose of the Quick Start {#section_jtp_jy2_vdb .section}
-
-This document describes the procedure right from purchasing an RDS instance to its usage. It also elaborates on how to create an ApsaraDB for RDS instance, perform basic settings, and connect to the instance database.
-
-## Target reader {#section_mcd_ky2_vdb .section}
-
--   Users who buy an ApsaraDB for RDS instance for the first time.
--   Users who need to perform basic settings for the instance they created.
--   Users who want to know how to connect to an ApsaraDB for RDS instance.
+This Quick Start describes the procedure from purchasing an RDS instance to using it.
 
 ## Quick Start flowchart {#section_ltp_jy2_vdb .section}
 
-If you use Alibaba Cloud ApsaraDB for RDS for the first time, see [Limits](intl.en-US/Quick Start for MySQL/Limits.md#) and [Instance management interface for MySQL](../../../../intl.en-US/User Guide/Introduction to RDS console/The instance management interface for MySQL.md).
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7813/15570743831776_en-US.png)
 
-The following diagram explains the steps you must follow right from creating an instance to using it.
-
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7813/1776_en-US.png)
+1.  [Create an RDS for MySQL instance](intl.en-US/Quick Start for MySQL/Create an RDS for MySQL instance.md#)
+2.  [Set a whitelist](intl.en-US/Quick Start for MySQL/Initial configuration/Set the whitelist.md#)
+3.  [Apply for an Internet address](intl.en-US/Quick Start for MySQL/Initial configuration/Apply for an Internet address.md#)
+4.  [Create accounts and databases](intl.en-US/Quick Start for MySQL/Initial configuration/Create accounts and databases.md#)
+5.  [Connect to an instance](intl.en-US/Quick Start for MySQL/Connect to an instance.md#)
 
