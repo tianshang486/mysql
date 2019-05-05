@@ -16,13 +16,13 @@ A read-only instance is a read-only copy of the master instance. Changes to the 
     -   SQL Server 2017
 -   Each read-only instance adopts a single-node architecture \(without slave nodes\).
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7826/15431078446089_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7826/15570776506089_en-US.png)
 
 ## Pricing {#section_fwf_5p5_vdb .section}
 
 The billing method of read-only instances is Pay-As-You-Go. For more information, see [Pricing](https://www.alibabacloud.com/product/apsaradb-for-rds?spm=a3c0i.7938564.220486.8.10521d15K8Buqg#pricing).
 
-**Note:** For information about data retention policies for read-only instances, see [Expiration and overdue payment](../../../../intl.en-US/Purchase Guide/Expiration and overdue payment.md).
+**Note:** For information about data retention policies for read-only instances, see [Impact of expiration and overdue payment](../../../../intl.en-US/Purchase Guide/Impact of expiration and overdue payment.md).
 
 ## Features {#section_zx1_zp5_vdb .section}
 
@@ -59,4 +59,10 @@ Read-only instances offer the following features:
 -   You cannot create or delete databases for read-only instances.
 -   You cannot create or delete accounts for read-only instances.
 -   You cannot authorize accounts or modify account passwords for read-only instances.
+
+## FAQs {#section_3az_3n6_ej9 .section}
+
+Can the accounts on the master instance be used on the read-only instances?
+
+Answer: Accounts on the master instance are synchronized to the read-only instances. You can use the accounts to read data from the read-only instances but cannot write data into the read-only instances.
 
