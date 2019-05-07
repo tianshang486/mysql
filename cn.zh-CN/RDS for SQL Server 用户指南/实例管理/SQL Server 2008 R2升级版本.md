@@ -6,11 +6,12 @@
 
 -   仅支持从SQL Server 2008 R2升级到SQL Server 2012/2016企业版、SQL Server 2016标准版。
 -   SQL Server 2008 R2实例的磁盘空间不能低于20GB。
--   SQL Server 2008 R2实例不能开启[TDE](../intl.zh-CN/用户指南/数据安全性/设置透明数据加密.md#)功能。
+-   SQL Server 2008 R2实例不能开启[TDE](cn.zh-CN/RDS for SQL Server 用户指南/数据安全性/设置透明数据加密.md#)功能。
 
 ## 注意事项 {#section_olz_cjr_dhb .section}
 
--   开启了SSL的实例可以直接升级，升级成功后高版本实例数据库连接名不变，但是SSL保护默认关闭，需要重新[设置 SSL 加密](../intl.zh-CN/用户指南/数据安全性/设置 SSL 加密.md#)。
+-   版本升级后无法回退到低版本。
+-   开启了SSL的实例可以直接升级，升级成功后高版本实例数据库连接名不变，但是SSL保护默认关闭，需要重新[设置 SSL 加密](cn.zh-CN/RDS for SQL Server 用户指南/数据安全性/设置 SSL 加密.md#)。
 -   升级版本完成后，切换停机时间依实例大小不同有变化，一般20分钟内完成，建议选择维护时间段切换，并请确保应用具备重连机制。
 
 ## 操作步骤 {#section_wwz_hv4_dhb .section}
@@ -18,12 +19,12 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155644609736543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155719206636543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在基本信息页面，单击**升级版本**，在弹出的对话框中单击**确定**。
 
-    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155644609841115_zh-CN.png)
+    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155719206641115_zh-CN.png)
 
 5.  在升级引擎版本页面修改配置，说明如下：
 
@@ -33,7 +34,7 @@
     |**系列**|**高可用版**：一主一备的经典高可用架构，各方面表现均衡。|
     |**存储类型**|**SSD云盘**和**ESSD云盘**。|
     |**可用区**|目标可用区，支持选择多可用区。|
-    |**规格**|每种规格都有对应的CPU核数、内存、最大连接数和最大IOPS。详情请参见[实例规格表](../intl.zh-CN/云数据库RDS简介/实例规格/实例规格表.md#)。|
+    |**规格**|每种规格都有对应的CPU核数、内存、最大连接数和最大IOPS。详情请参见[实例规格表](../cn.zh-CN/云数据库RDS简介/实例规格/实例规格表.md#)。|
     |**网络类型**|无法选择**经典网络**，必须指定专有网络信息：     -   原实例为经典网络：可以修改专有网络和交换机。
     -   原实例为专有网络或混访模式：不可以修改专有网络，可以修改交换机。可选择的交换机由**可用区**和专有网络决定。
  |
@@ -42,7 +43,7 @@
     -   **可维护时间内进行切换**：立刻进行迁移并在可维护时间段内进行切换。
  |
 
-    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155644609841116_zh-CN.png)
+    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155719206641116_zh-CN.png)
 
 6.  勾选服务条款，单击**确认变更**。
 
@@ -63,5 +64,5 @@
 
 |API|描述|
 |---|--|
-|[UpgradeDBInstanceEngineVersion](../intl.zh-CN/API参考/实例管理/UpgradeDBInstanceEngineVersion.md#)|升级实例数据库版本|
+|[UpgradeDBInstanceEngineVersion](../cn.zh-CN/API参考/实例管理/UpgradeDBInstanceEngineVersion.md#)|升级实例数据库版本|
 
