@@ -22,12 +22,12 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155721214736543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155721254836543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在基本信息页面，单击**升级版本**，在弹出的对话框中单击**确定**。
 
-    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721214741115_zh-CN.png)
+    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721254841115_zh-CN.png)
 
 5.  在升级引擎版本页面修改配置，说明如下：
 
@@ -46,7 +46,7 @@
     -   **可维护时间内进行切换**：立刻进行迁移并在可维护时间段内进行切换。
  |
 
-    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721214841116_zh-CN.png)
+    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721254841116_zh-CN.png)
 
 6.  勾选服务条款，单击**确认变更**。
 
@@ -73,7 +73,10 @@
 2.  选择实例所在地域。
 3.  单击实例的ID。
 4.  在左侧导航栏选择**备份恢复**。
-5.  在临时实例页签选择时间，然后单击**创建高版本临时实例**。
+5.  在临时实例页签选择克隆数据的时间点，然后单击**创建高版本临时实例**。
+
+    ![选择高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721254846604_zh-CN.png)
+
 6.  设置以下参数：
 
     |参数|说明|
@@ -88,7 +91,7 @@
 
     **说明：** 高版本临时实例规格和存储类型都有默认配置，实例存活时间是7天，之后会自动释放。
 
-    ![高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721214846602_zh-CN.png)
+    ![高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721254846602_zh-CN.png)
 
 7.  单击**确定**。
 
