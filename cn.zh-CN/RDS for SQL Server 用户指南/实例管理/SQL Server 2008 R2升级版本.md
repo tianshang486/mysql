@@ -1,6 +1,6 @@
 # SQL Server 2008 R2升级版本 {#concept_t13_1wj_dhb .concept}
 
-您可以将SQL Server 2008 R2实例的引擎从低版本升级到高版本，并且可以在升级时更换可用区。
+您可以将SQL Server 2008 R2实例的引擎从低版本升级到高版本，并且可以在升级时更换可用区，升级前建议您使用临时实例测试兼容性。
 
 ## 前提条件 {#section_x1y_gwj_dhb .section}
 
@@ -11,6 +11,9 @@
 ## 注意事项 {#section_olz_cjr_dhb .section}
 
 -   版本升级后无法回退到低版本。
+
+    **警告：** 由于升级后无法回退，建议您升级前先使用[高版本临时实例](#)测试兼容性等问题。
+
 -   开启了SSL的实例可以直接升级，升级成功后高版本实例数据库连接名不变，但是SSL保护默认关闭，需要重新[设置 SSL 加密](cn.zh-CN/RDS for SQL Server 用户指南/数据安全性/设置 SSL 加密.md#)。
 -   升级版本完成后，切换停机时间依实例大小不同有变化，一般20分钟内完成，建议选择维护时间段切换，并请确保应用具备重连机制。
 
@@ -19,12 +22,12 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155719206636543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155721214736543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在基本信息页面，单击**升级版本**，在弹出的对话框中单击**确定**。
 
-    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155719206641115_zh-CN.png)
+    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721214741115_zh-CN.png)
 
 5.  在升级引擎版本页面修改配置，说明如下：
 
@@ -43,7 +46,7 @@
     -   **可维护时间内进行切换**：立刻进行迁移并在可维护时间段内进行切换。
  |
 
-    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155719206641116_zh-CN.png)
+    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721214841116_zh-CN.png)
 
 6.  勾选服务条款，单击**确认变更**。
 
@@ -59,6 +62,35 @@
  |
 |专有网络|根据升级时选择的专有网络信息生成一个专有网络连接地址，替换原实例的专有网络连接地址。|
 |混访模式|新实例仍然为混访模式，且专有网络和经典网络的连接地址不变，经典网络连接地址的过期时间与之前保持一致。|
+
+## 创建高版本临时实例 {#section_hw0_nlc_1uk .section}
+
+高版本临时实例主要用于升级实例版本前测试兼容性等问题。
+
+**说明：** 只有未开启TDE和SSL的SQL Server 2008 R2实例才能创建高版本临时实例。
+
+1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
+2.  选择实例所在地域。
+3.  单击实例的ID。
+4.  在左侧导航栏选择**备份恢复**。
+5.  在临时实例页签选择时间，然后单击**创建高版本临时实例**。
+6.  设置以下参数：
+
+    |参数|说明|
+    |--|--|
+    |**可用区**|当前可用于创建高版本临时实例的可用区。|
+    |**升级到版本**|目标版本，可选择的版本如下：     -   2016标准版
+    -   2016企业版
+    -   2012企业版
+ |
+    |**VPC**|专有网络，建议与需要连接的ECS实例一致，否则它们无法通过内网互通。|
+    |**交换机**|专有网络下的交换机。|
+
+    **说明：** 高版本临时实例规格和存储类型都有默认配置，实例存活时间是7天，之后会自动释放。
+
+    ![高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721214846602_zh-CN.png)
+
+7.  单击**确定**。
 
 ## 相关API {#section_f11_51p_dhb .section}
 
