@@ -102,9 +102,6 @@
 
 |API|描述|
 |---|--|
-| [ModifyDBInstanceConnectionMode](~~8092#Rds_ModifyDBInstanceConnectionMode~~)
-
- |ModifyDBInstanceConnectionMode|
 | [ModifyDBInstanceProxyConfiguration](~~16813#Rds_ModifyDBInstanceProxyConfiguration~~)
 
  |设置数据库代理。|
