@@ -6,120 +6,56 @@
 
 |API|描述|
 |---|--|
-| [CreateDBInstance](~~8086#Rds_CreateDBInstance~~)
-
- |创建RDS实例。|
-| [DeleteDBInstance](~~8087#Rds_DeleteDBInstance~~)
-
- |释放RDS实例。|
-| [RestartDBInstance](~~8088#Rds_RestartDBInstance~~)
-
- |重启RDS实例。|
-| [RenewInstance](~~8084#Rds_RenewInstance~~)
-
- |续费RDS实例。|
-| [DescribeDBInstanceAttribute](~~8089#Rds_DescribeDBInstanceAttribute~~)
-
- |查看RDS实例的详细信息。|
-| [DescribeDBInstances](~~8090#Rds_DescribeDBInstances~~)
-
- |查看RDS实例列表或被RAM授权的实例列表。|
-| [ModifyDBInstanceSpec](~~8091#Rds_ModifyDBInstanceSpec~~)
-
- |变更RDS实例的规格或存储空间。|
-| [DescribeRegions](~~8093#Rds_DescribeRegions~~)
-
- |查询当前可选的RDS地域和可用区信息。|
-| [DescribeDBInstanceHAConfig](~~8094#Rds_DescribeDBInstanceHAConfig~~)
-
- |查询RDS实例高可用模式和数据复制方式。|
-| [MigrateToOtherZone](~~8095#Rds_MigrateToOtherZone~~)
-
- |将RDS实例迁移至其他可用区。|
+|[CreateDBInstance](intl.zh-CN/API参考/实例管理/CreateDBInstance.md#)|创建RDS实例。|
+|[DeleteDBInstance](intl.zh-CN/API参考/实例管理/DeleteDBInstance.md#)|释放RDS实例。|
+|[RestartDBInstance](intl.zh-CN/API参考/实例管理/RestartDBInstance.md#)|重启RDS实例。|
+|[RenewInstance](intl.zh-CN/API参考/实例管理/RenewInstance.md#)|续费RDS实例。|
+|[DescribeDBInstanceAttribute](intl.zh-CN/API参考/实例管理/DescribeDBInstanceAttribute.md#)|查看RDS实例的详细信息。|
+|[DescribeDBInstances](intl.zh-CN/API参考/实例管理/DescribeDBInstances.md#)|查看RDS实例列表或被RAM授权的实例列表。|
+|[ModifyDBInstanceSpec](intl.zh-CN/API参考/实例管理/ModifyDBInstanceSpec.md#)|变更RDS实例的规格或存储空间。|
+|[DescribeRegions](intl.zh-CN/API参考/实例管理/DescribeRegions.md#)|查询当前可选的RDS地域和可用区信息。|
+|[DescribeDBInstanceHAConfig](intl.zh-CN/API参考/实例管理/DescribeDBInstanceHAConfig.md#)|查询RDS实例高可用模式和数据复制方式。|
+|[MigrateToOtherZone](intl.zh-CN/API参考/实例管理/MigrateToOtherZone.md#)|将RDS实例迁移至其他可用区。|
 | [PurgeDBInstanceLog](~~8096#Rds_PurgeDBInstanceLog~~)
 
  |清理或收缩RDS实例日志。|
-| [UpgradeDBInstanceEngineVersion](~~8097#Rds_UpgradeDBInstanceEngineVersion~~)
-
- |升级实例数据库版本。|
-| [ModifyDBInstanceDescription](~~8098#Rds_ModifyDBInstanceDescription~~)
-
- |修改RDS实例的描述。|
-| [ModifyDBInstanceMaintainTime](~~8099#Rds_ModifyDBInstanceMaintainTime~~)
-
- |修改RDS实例可维护时间段。|
-| [ModifyDBInstanceHAConfig](~~8100#Rds_ModifyDBInstanceHAConfig~~)
-
- |修改实例的高可用模式和数据复制方式。|
-| [SwitchDBInstanceHA](~~8101#Rds_SwitchDBInstanceHA~~)
-
- |切换RDS实例的主备实例。|
-| [CreateReadOnlyDBInstance](~~8102#Rds_CreateReadOnlyDBInstance~~)
-
- |为某个实例创建一个只读实例。|
+|[UpgradeDBInstanceEngineVersion](intl.zh-CN/API参考/实例管理/UpgradeDBInstanceEngineVersion.md#)|升级实例数据库版本。|
+|[ModifyDBInstanceDescription](intl.zh-CN/API参考/实例管理/ModifyDBInstanceDescription.md#)|修改RDS实例的描述。|
+|[ModifyDBInstanceMaintainTime](intl.zh-CN/API参考/实例管理/ModifyDBInstanceMaintainTime.md#)|修改RDS实例可维护时间段。|
+|[ModifyDBInstanceHAConfig](intl.zh-CN/API参考/实例管理/ModifyDBInstanceHAConfig.md#)|修改实例的高可用模式和数据复制方式。|
+|[SwitchDBInstanceHA](intl.zh-CN/API参考/实例管理/SwitchDBInstanceHA.md#)|切换RDS实例的主备实例。|
+|[CreateReadOnlyDBInstance](intl.zh-CN/API参考/实例管理/CreateReadOnlyDBInstance.md#)|为某个实例创建一个只读实例。|
 
 ## CloudDBA数据库性能优化 { .section}
 
 |API|描述|
 |---|--|
-| [CreateDiagnosticReport](~~8104#Rds_CreateDiagnosticReport~~)
-
- |创建诊断报告。|
-| [DescribeDiagnosticReportList](~~8105#Rds_DescribeDiagnosticReportList~~)
-
- |获取诊断报告列表。|
+|[CreateDiagnosticReport](intl.zh-CN/API参考/CloudDBA数据库性能优化/CreateDiagnosticReport.md#)|创建诊断报告。|
+|[DescribeDiagnosticReportList](intl.zh-CN/API参考/CloudDBA数据库性能优化/DescribeDiagnosticReportList.md#)|获取诊断报告列表。|
 
 ## 数据库管理 { .section}
 
 |API|描述|
 |---|--|
-| [ModifyCollationTimeZone](~~21290#Rds_ModifyCollationTimeZone~~)
-
- |修改系统库的字符集排序规则和时区。|
-| [CreateDatabase](~~8112#Rds_CreateDatabase~~)
-
- |创建数据库。|
-| [DeleteDatabase](~~8113#Rds_DeleteDatabase~~)
-
- |删除数据库。|
-| [DescribeDatabases](~~8114#Rds_DescribeDatabases~~)
-
- |查看数据库信息。|
-| [ModifyDBDescription](~~8115#Rds_ModifyDBDescription~~)
-
- |修改数据库备注。|
-| [CopyDatabase](~~8116#Rds_CopyDatabase~~)
-
- |复制SQL Server 2008 R2版数据库。|
-| [CopyDatabaseBetweenInstances](~~18619#Rds_CopyDatabaseBetweenInstances~~)
-
- |在实例间复制数据库。|
-| [DescribeCollationTimeZones](~~41886#Rds_DescribeCollationTimeZones~~)
-
- |查看支持的字符集排序规则和时区。|
+|[ModifyCollationTimeZone](intl.zh-CN/API参考/数据库管理/ModifyCollationTimeZone.md#)|修改系统库的字符集排序规则和时区。|
+|[CreateDatabase](intl.zh-CN/API参考/数据库管理/CreateDatabase.md#)|创建数据库。|
+|[DeleteDatabase](intl.zh-CN/API参考/数据库管理/DeleteDatabase.md#)|删除数据库。|
+|[DescribeDatabases](intl.zh-CN/API参考/数据库管理/DescribeDatabases.md#)|查看数据库信息。|
+|[ModifyDBDescription](intl.zh-CN/API参考/数据库管理/ModifyDBDescription.md#)|修改数据库备注。|
+|[CopyDatabase](intl.zh-CN/API参考/数据库管理/CopyDatabase.md#)|复制SQL Server 2008 R2版数据库。|
+|[CopyDatabaseBetweenInstances](intl.zh-CN/API参考/数据库管理/CopyDatabaseBetweenInstances.md#)|在实例间复制数据库。|
+|[DescribeCollationTimeZones](intl.zh-CN/API参考/数据库管理/DescribeCollationTimeZones.md#)|查看支持的字符集排序规则和时区。|
 
 ## 数据库代理 { .section}
 
 |API|描述|
 |---|--|
-| [ModifyDBInstanceProxyConfiguration](~~16813#Rds_ModifyDBInstanceProxyConfiguration~~)
-
- |设置数据库代理。|
-| [DescribeDBInstanceProxyConfiguration](~~16812#Rds_DescribeDBInstanceProxyConfiguration~~)
-
- |查看数据库代理设置。|
-| [AllocateReadWriteSplittingConnection](~~8107#Rds_AllocateReadWriteSplittingConnection~~)
-
- |申请读写分离地址。|
-| [CalculateDBInstanceWeight](~~8108#Rds_CalculateDBInstanceWeight~~)
-
- |查询系统权重分配值。|
-| [ModifyReadWriteSplittingConnection](~~8109#Rds_ModifyReadWriteSplittingConnection~~)
-
- |修改读写分离链路的延迟阈值和各个实例的读权重。|
-| [ReleaseReadWriteSplittingConnection](~~8110#Rds_ReleaseReadWriteSplittingConnection~~)
-
- |释放读写分离地址。|
+|[ModifyDBInstanceProxyConfiguration](intl.zh-CN/API参考/数据库代理/ModifyDBInstanceProxyConfiguration.md#)|设置数据库代理。|
+|[DescribeDBInstanceProxyConfiguration](intl.zh-CN/API参考/数据库代理/DescribeDBInstanceProxyConfiguration.md#)|查看数据库代理设置。|
+|[AllocateReadWriteSplittingConnection](intl.zh-CN/API参考/数据库代理/AllocateReadWriteSplittingConnection.md#)|申请读写分离地址。|
+|[CalculateDBInstanceWeight](intl.zh-CN/API参考/数据库代理/CalculateDBInstanceWeight.md#)|查询系统权重分配值。|
+|[ModifyReadWriteSplittingConnection](intl.zh-CN/API参考/数据库代理/ModifyReadWriteSplittingConnection.md#)|修改读写分离链路的延迟阈值和各个实例的读权重。|
+|[ReleaseReadWriteSplittingConnection](intl.zh-CN/API参考/数据库代理/ReleaseReadWriteSplittingConnection.md#)|释放读写分离地址。|
 
 ## 账号管理 { .section}
 
