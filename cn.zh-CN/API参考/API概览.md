@@ -16,9 +16,7 @@
 |[DescribeRegions](intl.zh-CN/API参考/实例管理/DescribeRegions.md#)|查询当前可选的RDS地域和可用区信息。|
 |[DescribeDBInstanceHAConfig](intl.zh-CN/API参考/实例管理/DescribeDBInstanceHAConfig.md#)|查询RDS实例高可用模式和数据复制方式。|
 |[MigrateToOtherZone](intl.zh-CN/API参考/实例管理/MigrateToOtherZone.md#)|将RDS实例迁移至其他可用区。|
-| [PurgeDBInstanceLog](~~8096#Rds_PurgeDBInstanceLog~~)
-
- |清理或收缩RDS实例日志。|
+|[PurgeDBInstanceLog](intl.zh-CN/API参考/实例管理/PurgeDBInstanceLog.md#)|清理或收缩RDS实例日志。|
 |[UpgradeDBInstanceEngineVersion](intl.zh-CN/API参考/实例管理/UpgradeDBInstanceEngineVersion.md#)|升级实例数据库版本。|
 |[ModifyDBInstanceDescription](intl.zh-CN/API参考/实例管理/ModifyDBInstanceDescription.md#)|修改RDS实例的描述。|
 |[ModifyDBInstanceMaintainTime](intl.zh-CN/API参考/实例管理/ModifyDBInstanceMaintainTime.md#)|修改RDS实例可维护时间段。|
@@ -61,194 +59,94 @@
 
 |API|描述|
 |---|--|
-| [CreateAccount](~~8118#Rds_CreateAccount~~)
-
- |创建管理数据库的账号。|
-| [DeleteAccount](~~8119#Rds_DeleteAccount~~)
-
- |删除数据库账号。|
-| [DescribeAccounts](~~8120#Rds_DescribeAccounts~~)
-
- |查看实例的帐号信息。|
-| [GrantAccountPrivilege](~~8121#Rds_GrantAccountPrivilege~~)
-
- |授权账号访问数据库。|
-| [RevokeAccountPrivilege](~~8122#Rds_RevokeAccountPrivilege~~)
-
- |撤销账号对数据库的访问权限。|
-| [ModifyAccountDescription](~~8123#Rds_ModifyAccountDescription~~)
-
- |修改数据库账号的描述。|
-| [ResetAccountPassword](~~8124#Rds_ResetAccountPassword~~)
-
- |重置账号密码。|
-| [ResetAccount](~~8125#Rds_ResetAccount~~)
-
- |重置高权限账号的权限。|
+|[CreateAccount](intl.zh-CN/API参考/账号管理/CreateAccount.md#)|创建管理数据库的账号。|
+|[DeleteAccount](intl.zh-CN/API参考/账号管理/DeleteAccount.md#)|删除数据库账号。|
+|[DescribeAccounts](intl.zh-CN/API参考/账号管理/DescribeAccounts.md#)|查看实例的帐号信息。|
+|[GrantAccountPrivilege](intl.zh-CN/API参考/账号管理/GrantAccountPrivilege.md#)|授权账号访问数据库。|
+|[RevokeAccountPrivilege](intl.zh-CN/API参考/账号管理/RevokeAccountPrivilege.md#)|撤销账号对数据库的访问权限。|
+|[ModifyAccountDescription](intl.zh-CN/API参考/账号管理/ModifyAccountDescription.md#)|修改数据库账号的描述。|
+|[ResetAccountPassword](intl.zh-CN/API参考/账号管理/ResetAccountPassword.md#)|重置账号密码。|
+|[ResetAccount](intl.zh-CN/API参考/账号管理/ResetAccount.md#)|重置高权限账号的权限。|
 
 ## 安全管理 { .section}
 
 |API|描述|
 |---|--|
-| [DescribeDBInstanceSSL](~~8128#Rds_DescribeDBInstanceSSL~~)
-
- |查询实例SSL设置。|
-| [DescribeDBInstanceIPArrayList](~~8127#Rds_DescribeDBInstanceIPArrayList~~)
-
- |查看RDS实例IP白名单。|
-| [DescribeDBInstanceTDE](~~8129#Rds_DescribeDBInstanceTDE~~)
-
- |查询实例数据加密状态。|
-| [ModifyDBInstanceSSL](~~8130#Rds_ModifyDBInstanceSSL~~)
-
- |修改实例SSL链路。|
-| [ModifyDBInstanceTDE](~~8131#Rds_ModifyDBInstanceTDE~~)
-
- |修改实例数据加密状态。|
-| [ModifySecurityIps](~~8132#Rds_ModifySecurityIps~~)
-
- |修改白名单。|
-| [MigrateSecurityIPMode](~~17783#Rds_MigrateSecurityIPMode~~)
-
- |把白名单从通用模式切换为高安全模式。|
+|[DescribeDBInstanceSSL](intl.zh-CN/API参考/安全管理/DescribeDBInstanceSSL.md#)|查询实例SSL设置。|
+|[DescribeDBInstanceIPArrayList](intl.zh-CN/API参考/安全管理/DescribeDBInstanceIPArrayList.md#)|查看RDS实例IP白名单。|
+|[DescribeDBInstanceTDE](intl.zh-CN/API参考/安全管理/DescribeDBInstanceTDE.md#)|查询实例数据加密状态。|
+|[ModifyDBInstanceSSL](intl.zh-CN/API参考/安全管理/ModifyDBInstanceSSL.md#)|修改实例SSL链路。|
+|[ModifyDBInstanceTDE](intl.zh-CN/API参考/安全管理/ModifyDBInstanceTDE.md#)|修改实例数据加密状态。|
+|[ModifySecurityIps](intl.zh-CN/API参考/安全管理/ModifySecurityIps.md#)|修改白名单。|
+|[MigrateSecurityIPMode](intl.zh-CN/API参考/安全管理/MigrateSecurityIPMode.md#)|把白名单从通用模式切换为高安全模式。|
 
 ## 网络管理 { .section}
 
 |API|描述|
 |---|--|
-| [DescribeDBInstanceNetInfo](~~8135#Rds_DescribeDBInstanceNetInfo~~)
-
- |查看实例的所有连接地址信息。|
-| [AllocateInstancePublicConnection](~~8134#Rds_AllocateInstancePublicConnection~~)
-
- |申请实例的外网地址。|
-| [ReleaseInstancePublicConnection](~~8139#Rds_ReleaseInstancePublicConnection~~)
-
- |释放实例的外网连接地址。|
-| [ModifyDBInstanceNetworkExpireTime](~~8137#Rds_ModifyDBInstanceNetworkExpireTime~~)
-
- |修改连接地址过期时间。|
-| [ModifyDBInstanceConnectionString](~~8136#Rds_ModifyDBInstanceConnectionString~~)
-
- |修改实例的连接地址和端口。|
-| [ModifyDBInstanceNetworkType](~~8138#Rds_ModifyDBInstanceNetworkType~~)
-
- |切换RDS实例网络类型。|
-| [SwitchDBInstanceNetType](~~8140#Rds_SwitchDBInstanceNetType~~)
-
- |切换内外网地址。|
+|[DescribeDBInstanceNetInfo](intl.zh-CN/API参考/网络管理/DescribeDBInstanceNetInfo.md#)|查看实例的所有连接地址信息。|
+|[AllocateInstancePublicConnection](intl.zh-CN/API参考/网络管理/AllocateInstancePublicConnection.md#)|申请实例的外网地址。|
+|[ReleaseInstancePublicConnection](intl.zh-CN/API参考/网络管理/ReleaseInstancePublicConnection.md#)|释放实例的外网连接地址。|
+|[ModifyDBInstanceNetworkExpireTime](intl.zh-CN/API参考/网络管理/ModifyDBInstanceNetworkExpireTime.md#)|修改连接地址过期时间。|
+|[ModifyDBInstanceConnectionString](intl.zh-CN/API参考/网络管理/ModifyDBInstanceConnectionString.md#)|修改实例的连接地址和端口。|
+|[ModifyDBInstanceNetworkType](intl.zh-CN/API参考/网络管理/ModifyDBInstanceNetworkType.md#)|切换RDS实例网络类型。|
+|[SwitchDBInstanceNetType](intl.zh-CN/API参考/网络管理/SwitchDBInstanceNetType.md#)|切换内外网地址。|
 
 ## 日志管理 { .section}
 
 |API|描述|
 |---|--|
-| [DescribeSlowLogs](~~8142#Rds_DescribeSlowLogs~~)
-
- |查看慢日志统计情况。|
-| [DescribeSlowLogRecords](~~8143#Rds_DescribeSlowLogRecords~~)
-
- |查看实例的慢日志明细。|
-| [DescribeErrorLogs](~~8144#Rds_DescribeErrorLogs~~)
-
- |查看错误日志。|
-| [DescribeBinlogFiles](~~8145#Rds_DescribeBinlogFiles~~)
-
- |查看Binlog日志。|
+|[DescribeSlowLogs](intl.zh-CN/API参考/日志管理/DescribeSlowLogs.md#)|查看慢日志统计情况。|
+|[DescribeSlowLogRecords](intl.zh-CN/API参考/日志管理/DescribeSlowLogRecords.md#)|查看实例的慢日志明细。|
+|[DescribeErrorLogs](intl.zh-CN/API参考/日志管理/DescribeErrorLogs.md#)|查看错误日志。|
+|[DescribeBinlogFiles](intl.zh-CN/API参考/日志管理/DescribeBinlogFiles.md#)|查看Binlog日志。|
 |[DescribeSQLCollectorPolicy](intl.zh-CN/API参考/日志管理/DescribeSQLCollectorPolicy.md#)|查看实例的SQL采集功能是否打开。|
-| [ModifySQLCollectorPolicy](~~8147#Rds_ModifySQLCollectorPolicy~~)
-
- |开启或关闭实例的SQL审计功能。|
-| [DescribeSQLLogRecords](~~8148#Rds_DescribeSQLLogRecords~~)
-
- |查询实例的SQL审计日志。|
-| [DescribeSQLLogFiles](~~8149#Rds_DescribeSQLLogFiles~~)
-
- |查询SQL审计文件列表。|
+|[ModifySQLCollectorPolicy](intl.zh-CN/API参考/日志管理/ModifySQLCollectorPolicy.md#)|开启或关闭实例的SQL审计功能。|
+|[DescribeSQLLogRecords](intl.zh-CN/API参考/日志管理/DescribeSQLLogRecords.md#)|查询实例的SQL审计日志。|
+|[DescribeSQLLogFiles](intl.zh-CN/API参考/日志管理/DescribeSQLLogFiles.md#)|查询SQL审计文件列表。|
 
 ## 备份恢复 { .section}
 
 |API|描述|
 |---|--|
-| [CreateBackup](~~8151#Rds_CreateBackup~~)
-
- |创建备份集。|
-| [CloneDBInstance](~~8152#Rds_CloneDBInstance~~)
-
- |将历史数据恢复至一个新实例（称为克隆实例）。|
-| [DescribeBackups](~~8153#Rds_DescribeBackups~~)
-
- |查看备份集列表。|
+|[CreateBackup](intl.zh-CN/API参考/备份恢复/CreateBackup.md#)|创建备份集。|
+|[CloneDBInstance](intl.zh-CN/API参考/备份恢复/CloneDBInstance.md#)|将历史数据恢复至一个新实例（称为克隆实例）。|
+|[DescribeBackups](intl.zh-CN/API参考/备份恢复/DescribeBackups.md#)|查看备份集列表。|
 |[DescribeBackupTasks](intl.zh-CN/API参考/备份恢复/DescribeBackupTasks.md#)|查询实例的备份任务列表。|
-| [CreateTempDBInstance](~~8154#Rds_CreateTempDBInstance~~)
-
- |创建临时实例。|
-| [DescribeBackupPolicy](~~8155#Rds_DescribeBackupPolicy~~)
-
- |查看实例备份设置。|
-| [ModifyBackupPolicy](~~8156#Rds_ModifyBackupPolicy~~)
-
- |修改备份设置。|
-| [RestoreDBInstance](~~8157#Rds_RestoreDBInstance~~)
-
- |恢复备份集到原实例（覆盖性恢复）。|
-| [DeleteBackup](~~8158#Rds_DeleteBackup~~)
-
- |删除数据备份文件。|
-| [RecoveryDBInstance](~~15241#Rds_RecoveryDBInstance~~)
-
- |恢复数据库。|
-| [DescribeLogBackupFiles](~~21114#Rds_DescribeLogBackupFiles~~)
-
- |查询实例的日志备份文件。|
-| [DescribeBackupDatabase](~~41885#Rds_DescribeBackupDatabase~~)
-
- |查询备份集下的数据库列表。|
+|[CreateTempDBInstance](intl.zh-CN/API参考/备份恢复/CreateTempDBInstance.md#)|创建临时实例。|
+|[DescribeBackupPolicy](intl.zh-CN/API参考/备份恢复/DescribeBackupPolicy.md#)|查看实例备份设置。|
+|[ModifyBackupPolicy](intl.zh-CN/API参考/备份恢复/ModifyBackupPolicy.md#)|修改备份设置。|
+|[RestoreDBInstance](intl.zh-CN/API参考/备份恢复/RestoreDBInstance.md#)|恢复备份集到原实例（覆盖性恢复）。|
+|[DeleteBackup](intl.zh-CN/API参考/备份恢复/DeleteBackup.md#)|删除数据备份文件。|
+|[RecoveryDBInstance](intl.zh-CN/API参考/备份恢复/RecoveryDBInstance.md#)|恢复数据库。|
+|[DescribeLogBackupFiles](intl.zh-CN/API参考/备份恢复/DescribeLogBackupFiles.md#)|查询实例的日志备份文件。|
+|[DescribeBackupDatabase](intl.zh-CN/API参考/备份恢复/DescribeBackupDatabase.md#)|查询备份集下的数据库列表。|
 
 ## SQL Server备份文件上云 { .section}
 
 |API|描述|
 |---|--|
-| [CreateMigrateTask](~~8160#Rds_CreateMigrateTask~~)
-
- |将OSS上的备份文件还原到RDS实例。|
+|[CreateMigrateTask](intl.zh-CN/API参考/SQL Server备份文件上云/CreateMigrateTask.md#)|将OSS上的备份文件还原到RDS实例。|
 |[CreateOnlineDatabaseTask](intl.zh-CN/API参考/SQL Server备份文件上云/CreateOnlineDatabaseTask.md#)|打开数据库。|
-| [DescribeMigrateTasks](~~8161#Rds_DescribeMigrateTasks~~)
-
- |查询备份数据上云任务列表。|
-| [DescribeOssDownloads](~~8162#Rds_DescribeOssDownloads~~)
-
- |查看备份数据上云任务的文件详情。|
+|[DescribeMigrateTasks](intl.zh-CN/API参考/SQL Server备份文件上云/DescribeMigrateTasks.md#)|查询备份数据上云任务列表。|
+|[DescribeOssDownloads](intl.zh-CN/API参考/SQL Server备份文件上云/DescribeOssDownloads.md#)|查看备份数据上云任务的文件详情。|
 
 ## 监控管理 { .section}
 
 |API|描述|
 |---|--|
-| [DescribeResourceUsage](~~8164#Rds_DescribeResourceUsage~~)
-
- |查看实例的空间利用信息。|
-| [DescribeDBInstancePerformance](~~8165#Rds_DescribeDBInstancePerformance~~)
-
- |查看实例性能数据。|
-| [DescribeDBInstanceMonitor](~~8166#Rds_DescribeDBInstanceMonitor~~)
-
- |查询监控频率。|
-| [ModifyDBInstanceMonitor](~~8167#Rds_ModifyDBInstanceMonitor~~)
-
- |修改监控频率。|
+|[DescribeResourceUsage](intl.zh-CN/API参考/监控管理/DescribeResourceUsage.md#)|查看实例的空间利用信息。|
+|[DescribeDBInstancePerformance](intl.zh-CN/API参考/监控管理/DescribeDBInstancePerformance.md#)|查看实例性能数据。|
+|[DescribeDBInstanceMonitor](intl.zh-CN/API参考/监控管理/DescribeDBInstanceMonitor.md#)|查询监控频率。|
+|[ModifyDBInstanceMonitor](intl.zh-CN/API参考/监控管理/ModifyDBInstanceMonitor.md#)|修改监控频率。|
 
 ## 参数管理 { .section}
 
 |API|描述|
 |---|--|
-| [DescribeParameterTemplates](~~8169#Rds_DescribeParameterTemplates~~)
-
- |查看数据库参数模板。|
-| [DescribeParameters](~~8170#Rds_DescribeParameters~~)
-
- |查询实例当前的参数配置。|
-| [ModifyParameter](~~8171#Rds_ModifyParameter~~)
-
- |修改实例参数。|
+|[DescribeParameterTemplates](intl.zh-CN/API参考/参数管理/DescribeParameterTemplates.md#)|查看数据库参数模板。|
+|[DescribeParameters](intl.zh-CN/API参考/参数管理/DescribeParameters.md#)|查询实例当前的参数配置。|
+|[ModifyParameter](intl.zh-CN/API参考/参数管理/ModifyParameter.md#)|修改实例参数。|
 
 ## 数据迁移 { .section}
 
@@ -257,24 +155,14 @@
 |[CreateUploadPathForSQLServer](intl.zh-CN/API参考/数据迁移/CreateUploadPathForSQLServer.md#)|创建文件服务器的账号、密码以及上传文件的路径信息。|
 |[DescribeFilesForSQLServer](intl.zh-CN/API参考/数据迁移/DescribeFilesForSQLServer.md#)|查看文件服务器的文件列表。|
 |[DescribeImportsForSQLServer](intl.zh-CN/API参考/数据迁移/DescribeImportsForSQLServer.md#)|查看SQL Server数据库导入列表以及导入任务情况|
-| [ImportDatabaseBetweenInstances](~~8176#Rds_ImportDatabaseBetweenInstances~~)
-
- |从其它RDS实例迁入数据。|
-| [CancelImport](~~8177#Rds_CancelImport~~)
-
- |取消RDS实例迁移任务。|
+|[ImportDatabaseBetweenInstances](intl.zh-CN/API参考/数据迁移/ImportDatabaseBetweenInstances.md#)|从其它RDS实例迁入数据。|
+|[CancelImport](intl.zh-CN/API参考/数据迁移/CancelImport.md#)|取消RDS实例迁移任务。|
 
 ## 标签管理 { .section}
 
 |API|描述|
 |---|--|
-| [AddTagsToResource](~~8179#Rds_AddTagsToResource~~)
-
- |为RDS实例绑定标签。|
-| [DescribeTags](~~8180#Rds_DescribeTags~~)
-
- |查询RDS实例的标签。|
-| [RemoveTagsFromResource](~~8181#Rds_RemoveTagsFromResource~~)
-
- |解绑RDS实例的标签。|
+|[AddTagsToResource](intl.zh-CN/API参考/标签管理/AddTagsToResource.md#)|为RDS实例绑定标签。|
+|[DescribeTags](intl.zh-CN/API参考/标签管理/DescribeTags.md#)|查询RDS实例的标签。|
+|[RemoveTagsFromResource](intl.zh-CN/API参考/标签管理/RemoveTagsFromResource.md#)|解绑RDS实例的标签。|
 
