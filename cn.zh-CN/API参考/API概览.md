@@ -1,6 +1,6 @@
 # API概览 {#doc_api_overview .concept}
 
-云数据库RDS提供以下相关API接口。
+云数据库RDS提供以下相关API接口。更多API资源和SDK Demo示例代码，请访问[API Explorer](https://api.aliyun.com)。
 
 ## 实例管理 { .section}
 
