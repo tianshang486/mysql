@@ -85,7 +85,7 @@
  |
 |ZoneId|String|否|cn-hangzhou-b|可用区ID。
 
- **说明：** 如果数据库类型为MariaDB，该参数必填。
+ **说明：** 指定了VPC和交换机时，为匹配交换机对应的可用区，该参数必填。
 
  |
 |InstanceNetworkType|String|否|Classic|实例的网络类型，取值：
