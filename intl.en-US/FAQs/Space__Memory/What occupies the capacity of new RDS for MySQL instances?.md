@@ -1,6 +1,6 @@
 # What occupies the capacity of new RDS for MySQL instances? {#concept_ecy_fl4_hhb .concept}
 
-System files ib\_logfile0 and ib\_logfile1 occupy the storage capacity of RDS for MySQL instances.
+In RDS for MySQL instances, system files ib\_logfile0 and ib\_logfile1 occupy certain storage capacity.
 
 After creating an RDS for MySQL instance, you can see that a few GB of storage space has been used. This is because of the system files ib\_logfile0 and ib\_logfile1.
 
