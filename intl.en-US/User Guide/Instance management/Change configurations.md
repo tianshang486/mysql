@@ -4,13 +4,14 @@ You can upgrade or downgrade RDS configurations at any time. The new configurati
 
 ## Configuration items {#section_276_io6_qzd .section}
 
-**Note:** This article describes how to chnage the instance series, specifications, storage capacity, storage type, and zone. If you want to horizontally scale read capabilities, use read-only instances.
+**Note:** This article describes how to chnage the instance series, specifications, storage capacity, storage type, and zone. If you want to horizontally scale read capabilities, use read-only instances by referring to [Introduction to MySQL read-only instances](../../../../intl.en-US/Quick Start for MySQL/Scale instances/Read-only instance/Introduction to MySQL read-only instances.md#), [Introduction to SQL Server read-only instances](../../../../intl.en-US/Quick Start for SQL Server/Read-only instances/Introduction to SQL Server read-only instances.md#), [Introduction to PostgreSQL read-only instances](../../../../intl.en-US/Quick Start for PostgreSQL/Read-only instances/Introduction to PostgreSQL read-only instances.md#), [Introduction to PPAS read-only instances](../../../../intl.en-US/Quick Start for PPAS/Read-only instances/Introduction to PPAS read-only instances.md#).
 
 |Item|Description|
 |----|-----------|
 |Series \(Edition\)| For MySQL 5.7, the Basic Edition can be changed to High-availability Edition.
 
  |
+|Zone|To change the zone, use the "[Instance migration across zones](intl.en-US/User Guide/Instance management/Migrate instance across zones.md#)" function rather than the configuration change function.|
 |[Specifications \(Type\)](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#)| You can change the specifications for any RDS instance.
 
  |
@@ -55,11 +56,11 @@ Your Alibaba Cloud account does not have an unpaid renewal order.
 
     1.  Click **Modify**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7891/15570736243043_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7891/15575541763043_en-US.png)
 
     2.  In the Configuration Information area, change the maintenance period and click **Save**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7891/15570736247257_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7891/15575541777257_en-US.png)
 
     3.  Go back to the configuration change page, refresh the page, and change the configurations again.
 7.  Select **Product Terms of Service and Service Level Notice and Terms of Use** and click **Upgrade Now**.
