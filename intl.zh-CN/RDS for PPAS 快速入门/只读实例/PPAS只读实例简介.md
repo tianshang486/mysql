@@ -16,7 +16,7 @@
 
 只读实例拓扑图如下图所示。
 
-![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133899/155359377239776_zh-CN.png)
+![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133899/155771642939776_zh-CN.png)
 
 ## 计费 {#section_fwf_5p5_vdb .section}
 
@@ -39,4 +39,10 @@
 -   数据迁移：不支持将数据迁移至只读实例。
 -   数据库管理：不支持创建和删除数据库。
 -   账号管理：不支持创建和删除账号，不支持为账号授权以及修改账号密码功能。
+
+## 常见问题 {#section_znt_2jv_fhb .section}
+
+主实例上创建的账号在只读实例上可以用吗？
+
+答：主实例创建的账号会同步到只读实例，只读实例无法管理账号。账号在只读实例上只能进行读操作，不能进行写操作。
 
