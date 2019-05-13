@@ -44,7 +44,7 @@
 |[CopyDatabaseBetweenInstances](intl.zh-CN/API参考/数据库管理/CopyDatabaseBetweenInstances.md#)|在实例间复制数据库。|
 |[DescribeCollationTimeZones](intl.zh-CN/API参考/数据库管理/DescribeCollationTimeZones.md#)|查看支持的字符集排序规则和时区。|
 
-## 数据库代理 { .section}
+## 读写分离 { .section}
 
 |API|描述|
 |---|--|
