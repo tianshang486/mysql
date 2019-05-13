@@ -1,9 +1,10 @@
-# ModifyDBInstanceSpec {#doc_api_1063465 .reference}
+# ModifyDBInstanceSpec {#doc_api_Rds_ModifyDBInstanceSpec .reference}
 
 调用ModifyDBInstanceSpec接口变更RDS实例（包括常规实例和只读实例，不包括灾备实例和临时实例）的规格或存储空间。
 
 调用该接口时，实例必须满足以下条件，否则将操作失败：
 
+-   实例为按量付费实例；
 -   实例状态为运行中；
 -   实例没有正在执行的备份任务；
 -   请求参数中必须至少指定实例规格（DBInstanceClass）和存储空间（DBInstanceStorage）其中一个参数；
@@ -30,12 +31,9 @@
 -   **Prepaid**：预付费。
 
  |
-|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
-
- |
 |DBInstanceClass|String|否|rds.mys2.small|实例规格，详见[实例规格表](~~26312~~)。
 
- **说明：** 至少指定实例规格（DBInstanceClass）和存储空间（DBInstanceStorage）其中一个参数。
+ **说明：** 至少指定实例规格**DBInstanceClass**和存储空间**DBInstanceStorage**其中一个参数。
 
  |
 |DBInstanceStorage|Integer|否|20|自定义存储空间，取值必须为5的整数倍，取值：
@@ -48,7 +46,7 @@
 
  不同付费方式和不同版本实例，支持的取值范围不同，请以控制台创建实例页面为准。
 
- **说明：** 至少指定实例规格（DBInstanceClass）和存储空间（DBInstanceStorage）其中一个参数。
+ **说明：** 至少指定实例规格**DBInstanceClass**和存储空间**DBInstanceStorage**其中一个参数。
 
  |
 |EffectiveTime|String|否|2017-11-06T17:49:12Z|生效时间，取值：
