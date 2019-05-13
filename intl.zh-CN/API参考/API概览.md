@@ -24,13 +24,6 @@
 |[SwitchDBInstanceHA](intl.zh-CN/API参考/实例管理/SwitchDBInstanceHA.md#)|切换RDS实例的主备实例。|
 |[CreateReadOnlyDBInstance](intl.zh-CN/API参考/实例管理/CreateReadOnlyDBInstance.md#)|为某个实例创建一个只读实例。|
 
-## CloudDBA数据库性能优化 { .section}
-
-|API|描述|
-|---|--|
-|[CreateDiagnosticReport](intl.zh-CN/API参考/CloudDBA数据库性能优化/CreateDiagnosticReport.md#)|创建诊断报告。|
-|[DescribeDiagnosticReportList](intl.zh-CN/API参考/CloudDBA数据库性能优化/DescribeDiagnosticReportList.md#)|获取诊断报告列表。|
-
 ## 数据库管理 { .section}
 
 |API|描述|
