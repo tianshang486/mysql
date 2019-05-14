@@ -1,4 +1,4 @@
-# DeleteBackup {#doc_api_1105036 .reference}
+# DeleteBackup {#doc_api_Rds_DeleteBackup .reference}
 
 调用DeleteBackup接口删除数据备份文件。
 
@@ -27,7 +27,7 @@
  |
 |BackupId|String|是|324909958|备份集ID。可通过接口[DescribeBackups](~~26273~~)查询。多组值以英文逗号（,）隔开，单次最多传入100个。
 
- **说明：** 只支持删除[DescribeBackups](~~26273~~)中**StoreStatus**为**Enable**的备份集。
+ **说明：** 只支持删除[DescribeBackups](~~26273~~)中**StoreStatus**为**Enabled**的备份集。
 
  |
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
