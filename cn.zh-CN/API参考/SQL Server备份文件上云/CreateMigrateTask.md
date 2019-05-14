@@ -53,7 +53,7 @@
 
  **说明：** 
 
- -   该参数对于 SQL Server 2008 R2 版本实例是可选参数。
+-   该参数对于 SQL Server 2008 R2 版本实例是可选参数。
 -   该参数对于 SQL Server 2008 R2 以上版本实例是必传参数。
 
  |
@@ -73,7 +73,7 @@
 
  **说明：** 
 
- -   **IsOnlineDB**=**True**时，**BackupMode**必须取值为**FULL**；
+-   **IsOnlineDB**=**True**时，**BackupMode**必须取值为**FULL**；
 -   **IsOnlineDB**=**False**时，**BackupMode**必须为**UPDF**。
 
  |
