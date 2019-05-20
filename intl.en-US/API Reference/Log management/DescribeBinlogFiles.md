@@ -9,7 +9,9 @@ You can call this operation to view binlogs.
 
 ## Debugging {#apiExplorer .section}
 
-You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeBinlogFiles) to perform debugging. API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
+You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeBinlogFiles) to perform debugging.
+
+API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
 
 ## Request parameters {#parameters .section}
 
@@ -139,7 +141,7 @@ Normal response example
 }
 ```
 
-## Error codes { .section}
+## Error codes {#errorcodes .section}
 
 [View error codes](https://error-center.alibabacloud.com/status/product/Rds)
 
