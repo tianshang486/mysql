@@ -3,7 +3,7 @@
 You can call this operation to view binlogs.
 
 -   If **DownloadLink** is null, it indicates that the download link is unavailable.
--   If **DownloadLink** is not null, you can download backup files from this link. The expiration time for this link is specified by**LinkExpiredTime**. Make sure that you download the backup files before the expiration time.
+-   If **DownloadLink** is not null, you can download backup files from this link. The expiration time for this link is specified by **LinkExpiredTime**. Make sure that you download the backup files before the expiration time.
 
 **Note:** This operation is not applicable to SQL Server instances.
 
@@ -38,7 +38,7 @@ You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeBinlo
  |
 |PageNumber|Integer|No|1| The page number. It must be greater than 0 and cannot exceed the maximum value of the Integer data type.
 
- Default value:**1**.
+ Default value: **1**.
 
  |
 |AccessKeyId|String|No|LTAIfCxxxxxxx| The AccessKey ID issued by Alibaba Cloud for users to access services.
@@ -97,7 +97,7 @@ You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeBinlo
 
 ## Examples {#demo .section}
 
-Example request
+Request example
 
 ``` {#request_demo}
 
