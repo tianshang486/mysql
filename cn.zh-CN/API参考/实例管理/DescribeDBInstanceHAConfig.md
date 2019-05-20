@@ -71,10 +71,10 @@
 -   **NotSupport**：引擎类型或者版本不涉及主备同步。
 
  |
-|└LogSyncTime|String|2018-05-05T15:15:00Z|备实例与主实例的日志同步时间差，单位为毫秒。
+|└LogSyncTime|String|2018-05-05T15:15:00Z|备实例收到主实例日志的时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└DataSyncTime|String|2018-05-05T15:15:00Z|备实例上的日志应用时间差，单位为毫秒。
+|└DataSyncTime|String|2018-05-05T15:15:00Z|备实例执行日志完成数据同步的时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF|请求ID。
