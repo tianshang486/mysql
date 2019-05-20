@@ -50,7 +50,7 @@ API Explorer provides various functions to simplify API usage. For example, you 
  |
 |Form|String|No|Stream| Used to generate audit files or return the list of SQL records. Valid values:
 
- -   **File**: Use this value to generate audit files. Only common parameters are returned, so you need to call the[DescribeSQLLogFiles](~~26295~~)operation to obtain the download link of audit files.
+ -   **File**: Use this value to generate audit files. Only common parameters are returned, so you need to call the [DescribeSQLLogFiles](~~26295~~) operation to obtain the download link of audit files.
 -   **Stream**: The list of SQL records is returned. This is the default value.
 
  |
