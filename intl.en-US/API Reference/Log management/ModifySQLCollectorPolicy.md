@@ -15,6 +15,8 @@ This operation is applicable to the following instances:
 
 You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=ModifySQLCollectorPolicy) to perform debugging.
 
+API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
+
 ## Request parameters {#parameters .section}
 
 |Parameter|Type|Required|Example|Description|
@@ -71,4 +73,8 @@ Normal response example
 	"sQLCollectorStatus":"Enable"
 }
 ```
+
+## Error codes { .section}
+
+[View error codes](https://error-center.alibabacloud.com/status/product/Rds)
 
