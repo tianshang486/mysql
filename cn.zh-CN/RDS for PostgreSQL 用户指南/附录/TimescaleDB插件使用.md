@@ -6,15 +6,17 @@ RDS for PostgreSQL基础版和高可用版实例新增TimescaleDB插件1.3.0版�
 
 ## 前提条件 {#section_lcb_463_s1f .section}
 
-2019年5月20日之后创建的实例可直接使用插件TimescaleDB插件1.3.0版本。2019年5月20日之前创建的实例可以重启实例后使用最新的TimescaleDB插件1.3.0版本，少量用户重启后可能遇到如下报错：
+2019年5月20日之后创建的实例可直接使用插件TimescaleDB插件1.3.0版本。2019年5月20日之前创建的实例可以重启实例后使用最新的TimescaleDB插件1.3.0版本。
 
-``` {#codeblock_6ya_tgy_0xd}
+**说明：** 如果重启后提示如下错误信息：
+
+``` {#codeblock_sw9_nq2_omp}
 ERROR:  could not access file "$libdir/timescaledb-0.8.0": No such file or directory
 ```
 
-请在对应数据库执行如下SQL：
+请在对应数据库执行如下SQL更新插件即可：
 
-``` {#codeblock_782_uzj_r1e}
+``` {#codeblock_eeh_lt3_vhw}
 alter extension timescaledb update;
 ```
 
@@ -57,7 +59,7 @@ INSERT INTO conditions(time, location, temperature, humidity)
   VALUES (NOW(), 'office', 70.0, 50.0);
 ```
 
-您还可以使用一次将多行数据插入到超表中，示例如下：
+您还可以一次将多行数据插入到超表中，示例如下：
 
 ```
 INSERT INTO conditions
@@ -83,7 +85,7 @@ SELECT time_bucket('15 minutes', time) AS fifteen_min,
   ORDER BY fifteen_min DESC, max_temp DESC;
 ```
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155831732347336_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155832121147336_zh-CN.png)
 
 您可也使用固有的函数进行分析查询，示例如下：
 
@@ -94,7 +96,7 @@ SELECT percentile_cont(0.5)
   FROM conditions;
 ```
 
-![均值百分查询](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155831732347337_zh-CN.png)
+![均值百分查询](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155832121247337_zh-CN.png)
 
 ```
 --移动平均数（Moving Average）
@@ -106,7 +108,7 @@ SELECT time, AVG(temperature) OVER(ORDER BY time
   ORDER BY time DESC;
 ```
 
-![移动平均数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155831732347338_zh-CN.png)
+![移动平均数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155832121247338_zh-CN.png)
 
 ## 连续聚合视图 {#section_dkx_1wh_thb .section}
 
@@ -149,6 +151,6 @@ SELECT time, AVG(temperature) OVER(ORDER BY time
       AND bucket >= '2019-05-14' AND bucket < '2018-05-16';
     ```
 
-    ![查询连续聚合视图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155831732347340_zh-CN.png)
+    ![查询连续聚合视图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155832121247340_zh-CN.png)
 
 
