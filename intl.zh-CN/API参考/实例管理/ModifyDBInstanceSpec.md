@@ -49,7 +49,7 @@
  **说明：** 至少指定实例规格**DBInstanceClass**和存储空间**DBInstanceStorage**其中一个参数。
 
  |
-|EffectiveTime|String|否|2017-11-06T17:49:12Z|生效时间，取值：
+|EffectiveTime|String|否|MaintainTime|生效时间，取值：
 
  -   **Immediate**：立即生效；
 -   **MaintainTime**：在可运维时间段内生效，请参见[ModifyDBInstanceMaintainTime](~~26249~~)。
