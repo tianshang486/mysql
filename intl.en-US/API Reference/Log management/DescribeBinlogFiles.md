@@ -141,5 +141,5 @@ Normal response example
 
 ## Error codes { .section}
 
-[View error codes](https://error-center.aliyun.com/status/product/Rds)
+[View error codes](https://error-center.alibabacloud.com/status/product/Rds)
 
