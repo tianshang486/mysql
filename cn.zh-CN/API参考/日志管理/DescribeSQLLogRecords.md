@@ -40,10 +40,10 @@
 |QueryKeywords|String|否|rds|用于查询的关键字，多个关键字以空格分隔，不超过10个关键字。
 
  |
-|Database|String|否|Database|数据库名称，默认为所有数据库。查询特定数据库只能输入一个。
+|Database|String|否|Database|数据库名称，默认为所有数据库，也可以输入数据库名称查询，一次只能输入一个。
 
  |
-|User|String|否|user|用户名称，默认为所有。查询特定用户只能输入一个。
+|User|String|否|user|用户名称，默认为所有，也可以输入用户名称查询，一次只能输入一个。
 
  |
 |Form|String|否|Stream|触发审计文件的生成或者返回SQL记录列表，取值：
