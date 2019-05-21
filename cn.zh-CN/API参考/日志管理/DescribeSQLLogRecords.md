@@ -1,4 +1,4 @@
-# DescribeSQLLogRecords {#doc_api_1091128 .reference}
+# DescribeSQLLogRecords {#doc_api_Rds_DescribeSQLLogRecords .reference}
 
 调用DescribeSQLLogRecords接口查询实例的SQL审计日志。
 
@@ -25,10 +25,10 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|StartTime|String|是|2011-06-01T15:00:00Z|查询开始时间，格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|StartTime|String|是|2011-06-01T15:00:00Z|查询开始时间，格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|EndTime|String|是|2011-06-11T15:00:00Z|查询结束时间，大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|EndTime|String|是|2011-06-11T15:00:00Z|查询结束时间，大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
@@ -40,10 +40,10 @@
 |QueryKeywords|String|否|rds|用于查询的关键字，多个关键字以空格分隔，不超过10个关键字。
 
  |
-|Database|String|否|Database|数据库名称，默认为所有数据库。
+|Database|String|否|Database|数据库名称，默认为所有数据库。查询特定数据库只能输入一个。
 
  |
-|User|String|否|user|用户名称，默认为所有。
+|User|String|否|user|用户名称，默认为所有。查询特定用户只能输入一个。
 
  |
 |Form|String|否|Stream|触发审计文件的生成或者返回SQL记录列表，取值：
