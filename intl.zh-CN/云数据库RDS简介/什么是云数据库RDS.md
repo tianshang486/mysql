@@ -33,7 +33,7 @@
 您可以通过以下方式管理RDS实例，进行实例创建、网络设置、数据库创建、账号创建等操作：
 
 -   [控制台](https://rdsnew.console.aliyun.com)：提供图形化的Web界面，操作方便。
--   [CLI](https://help.aliyun.com/product/29991.html)：控制台上所有的操作都可以通过CLI实现。
+-   [CLI](https://www.alibabacloud.com/help/zh/doc-detail/110244.htm)：控制台上所有的操作都可以通过CLI实现。
 -   [SDK](../../../../intl.zh-CN/SDK参考/SDK参考.md)：控制台上所有的操作都可以通过SDK实现。
 -   [API](../../../../intl.zh-CN/API参考/API概览.md)：控制台上所有的操作都可以通过API实现。
 
