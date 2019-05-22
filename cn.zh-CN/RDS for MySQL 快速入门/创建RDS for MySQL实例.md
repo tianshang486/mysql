@@ -1,16 +1,21 @@
 # 创建RDS for MySQL实例 {#concept_wzp_ncf_vdb .concept}
 
-您可以通过阿里云RDS管理控制台或API创建RDS实例。关于实例计费说明，请参见[计费方式](../../../../../intl.zh-CN/云数据库RDS价格/计费方式与收费项.md#)。本文将介绍在RDS管理控制台上创建实例的步骤，关于如何通过API创建实例，请参见[创建RDS实例](../../../../../intl.zh-CN/API参考/实例管理/CreateDBInstance.md#)。
+您可以通过阿里云RDS管理控制台或API创建RDS实例。关于实例计费说明，请参见[计费方式](../../../../cn.zh-CN/云数据库RDS价格/计费方式与收费项.md#)。本文将介绍在RDS管理控制台上创建实例的步骤，关于如何通过API创建实例，请参见[创建RDS实例](../../../../cn.zh-CN/API参考/实例管理/CreateDBInstance.md#)。
+
+## 优惠活动 {#section_q1p_plv_fgb .section}
+
+试用福利价：RDS for MySQL指定规格首次购买6个月仅需10元。具体请参见[优惠活动](https://m.aliyun.com/markets/aliyun/act/mysql_discount)。
 
 ## 前提条件 {#section_hyl_tcf_vdb .section}
 
-已注册阿里云账号。具体操作请参见[创建阿里云账号](https://www.alibabacloud.com/help/doc-detail/50482.html)。
+-   已注册阿里云账号。具体操作请参见[注册阿里云账号](https://help.aliyun.com/knowledge_detail/37195.html)。
+-   若您要创建按时付费的实例，请确保您的阿里云账号的余额大于等于100元。
 
 ## 注意事项 {#section_kmf_kkp_mgb .section}
 
 -   包年包月实例无法转为按量付费实例。
--   按量付费实例可以转为包年包月实例，请参见[按量付费转包年包月](../../../../../intl.zh-CN/用户指南/计费管理/按量付费转包年包月.md#)。
--   同一个主账号，最多可以创建30个按量付费的RDS实例。如需提高此限额，请[提交工单](https://workorder-intl.console.aliyun.com/console.htm#/ticket/createIndex)申请。
+-   按量付费实例可以转为包年包月实例，请参见[按量付费转包年包月](../../../../cn.zh-CN/RDS for MySQL 用户指南/计费管理/按量付费转包年包月.md#)。
+-   同一个主账号，最多可以创建30个按量付费的RDS实例。如需提高此限额，请[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex)申请。
 
 ## 操作步骤 {#section_o45_5cf_vdb .section}
 
@@ -31,19 +36,23 @@
     |资源组| 实例所属的资源组。
 
  |
-    |数据库类型| 即数据库引擎的类型：MySQL、SQL Server、PostgreSQL和PPAS。
+    |数据库类型| 即数据库引擎的类型：MySQL、SQL Server、PostgreSQL、PPAS和MariaDB。
 
  **说明：** 不同地域支持的数据库类型不同，请以实际界面为准。
 
  |
-    |版本| 指数据库版本。RDS for MySQL支持的数据库版本包括MySQL 5.5、5.6、5.7。
+    |版本| 指MySQL的版本。RDS for MySQL支持的版本包括MySQL 5.5、5.6、5.7、8.0。
 
- **说明：** 不同地域所支持的数据库版本不同，请以实际界面为准。
+ **说明：** 不同地域所支持的版本不同，请以实际界面为准。
 
  |
     |系列|     -   基础版：单节点，计算与存储分离，性价比高。
     -   高可用版：一个主节点和一个备节点，经典高可用架构。
- **说明：** 不同数据库版本支持的系列不同，请以实际界面为准。关于各个系列的详细介绍，请参见[产品系列概述](../../../../../intl.zh-CN/云数据库RDS简介/产品系列/产品系列概述.md)。
+    -   金融版：一个主节点和两个备节点，位于同一地域的三个不同的可用区，提供金融级可靠性。仅4个地域提供金融版实例：华东1、华东2、华南1、华北2。
+ **说明：** 不同数据库版本支持的系列不同，请以实际界面为准。关于各个系列的详细介绍，请参见[产品系列概述](../../../../cn.zh-CN/云数据库RDS简介/产品系列/产品系列概述.md)。
+
+ |
+    |存储类型| 本地SSD盘或SSD云盘。更多信息，请参见[存储类型](../../../../cn.zh-CN/云数据库RDS简介/存储类型.md)。
 
  |
     |可用区| 可用区是地域中的一个独立物理区域，不同可用区之间没有实质性区别。
@@ -57,7 +66,7 @@
 **说明：** 请确保RDS实例与需要连接的ECS实例网络类型一致，否则它们无法通过内网互通。
 
  |
-    |规格| 每种规格都有对应的CPU核数、内存、最大连接数和最大IOPS。具体请参见[实例规格表](../../../../../intl.zh-CN/云数据库RDS简介/实例规格/实例规格表.md#)。
+    |规格| 每种规格都有对应的CPU核数、内存、最大连接数和最大IOPS。具体请参见[实例规格表](../../../../cn.zh-CN/云数据库RDS简介/实例规格/实例规格表.md#)。
 
  RDS实例有以下规格族：
 
@@ -75,26 +84,28 @@
 
     **说明：** 对于包年包月实例，您也可以单击**加入购物车**将实例加入到购物车中，最后单击**购物车**进行结算。
 
-6.  在订单确认页面，勾选**《产品服务条款》和《服务级别协议》和《使用条款》**，根据提示完成支付。
+6.  在订单确认页面，勾选**关系型数据库RDS服务条款**，根据提示完成支付。
 
 ## 下一步 {#section_cgn_fdt_2fb .section}
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155134312636543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155851767536543_zh-CN.png)
 
-创建实例后，您需要[设置白名单](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/设置白名单.md)和[创建账号](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](intl.zh-CN/RDS for MySQL 快速入门/初始化配置/申请外网地址.md)。然后就可以[连接实例](intl.zh-CN/RDS for MySQL 快速入门/连接实例.md)。
+创建实例后，您需要[设置白名单](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/设置白名单.md)和[创建账号](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/申请外网地址.md)。然后就可以[连接实例](cn.zh-CN/RDS for MySQL 快速入门/连接MySQL实例.md)。
+
+如果连接实例失败，请参见[解决无法连接实例问题](../../../../cn.zh-CN/常见问题/网络__IP/解决无法连接实例问题.md#)。
 
 ## 常见问题 {#section_x1j_b4f_qgb .section}
 
 -   如何授权子账号管理RDS实例？
 
-    答：请参见[云数据库 RDS 授权](https://www.alibabacloud.com/help/zh/doc-detail/58932.htm)。
+    答：请参见[云数据库 RDS 授权](https://help.aliyun.com/knowledge_detail/58932.html)。
 
 
 ## 相关API {#section_hcn_555_jgb .section}
 
 |API|描述|
 |---|--|
-|[CreateDBInstance](../../../../../intl.zh-CN/API参考/实例管理/CreateDBInstance.md#)|创建RDS实例|
+|[CreateDBInstance](../../../../cn.zh-CN/API参考/实例管理/CreateDBInstance.md#)|创建RDS实例|
 
