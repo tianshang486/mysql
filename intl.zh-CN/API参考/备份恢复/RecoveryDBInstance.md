@@ -65,7 +65,7 @@
  **说明：** **BackupId**和**RestoreTime**两者至少传入一个。
 
  |
-|RestoreTime|String|否|2011-06-11T16:00:00Z|备份保留周期内的任意时间点，格式：*yyyy-MM-dd*T*HH:mm:ss*Z
+|RestoreTime|String|否|2011-06-11T16:00:00Z|备份保留周期内的任意时间点。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  指定此参数时，**DBInstanceId**参数为必须。
 
