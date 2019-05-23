@@ -1,4 +1,4 @@
-# RestoreDBInstance {#doc_api_1164263 .reference}
+# RestoreDBInstance {#doc_api_Rds_RestoreDBInstance .reference}
 
 调用RestoreDBInstance接口恢复备份集到原实例（覆盖性恢复），已下线。
 
@@ -26,7 +26,7 @@
  **说明：** **BackupId**和**RestoreTime**必须传入一个。
 
  |
-|RestoreTime|String|否|2011-06-11T16:00:00Z|用户指定备份保留周期内的任意时间点。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|RestoreTime|String|否|2011-06-11T16:00:00Z|用户指定备份保留周期内的任意时间点。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  **说明：** **BackupId**和**RestoreTime**必须传入一个。
 
