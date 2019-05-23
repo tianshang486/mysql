@@ -23,10 +23,10 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|StartTime|String|是|2017-10-20T01:00Z|查询开始时间，格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|StartTime|String|是|2017-10-20T01:00Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|EndTime|String|是|2017-10-25T01:00Z|查询结束时间，必须大于开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|EndTime|String|是|2017-10-25T01:00Z|查询结束时间，必须大于开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |PageSize|Integer|否|30|每页记录数，取值：
@@ -63,7 +63,7 @@
 -   **UPDF**：表示通过增量文件或者日志文件去还原增量部分的数据。
 
  |
-|└CreateTime|String|2017-05-30T12:11:04Z|备份数据上云任务创建时间。
+|└CreateTime|String|2017-05-30T12:11:04Z|备份数据上云任务创建时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└DBName|String|testDB|数据库名称。
@@ -72,7 +72,7 @@
 |└Description|String|Api description|备份数据上云任务的描述信息。
 
  |
-|└EndTime|String|2017-05-30T13:11:04Z|备份数据上云任务结束时间。
+|└EndTime|String|2017-05-30T13:11:04Z|备份数据上云任务结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└IsDBReplaced|String|True|是否是覆盖性导入。
