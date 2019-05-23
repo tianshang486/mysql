@@ -1,10 +1,10 @@
-# DescribeParameterTemplates {#doc_api_1106178 .reference}
+# DescribeParameterTemplates {#doc_api_Rds_DescribeParameterTemplates .reference}
 
 调用DescribeParameterTemplates接口查看数据库参数模板。
 
 该接口适用的实例版本如下：
 
--   MySQL 5.5/5.6/5.7
+-   MySQL 5.5/5.6/5.7/8.0
 -   SQL Server 2008 R2
 -   PostgreSQL 9.4/10.0
 -   PPAS 9.3/10.0
@@ -32,7 +32,7 @@
  |
 |EngineVersion|String|是|5.6|数据库版本号，取值：
 
- -   MySQL数据库：**5.5/5.6/5.7**；
+ -   MySQL数据库：**5.5/5.6/5.7/8.0**；
 -   SQL Server数据库：**2008r2**；
 -   PostgreSQL数据库：**9.4/10.0**；
 -   PPAS数据库：**9.3/10.0**；
