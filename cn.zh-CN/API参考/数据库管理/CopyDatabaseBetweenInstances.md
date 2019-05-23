@@ -36,7 +36,7 @@
 |BackupId|String|否|1065238746521|源实例备份集ID。按备份集复制数据库时，可以通过查询备份列表接口[DescribeBackups](~~26273~~)获取备份集ID。
 
  |
-|RestoreTime|String|否|2011-06-11T16:00:00Z|按时间点复制数据库，可以选择备份保留周期内的任意时间点。
+|RestoreTime|String|否|2011-06-11T16:00:00Z|按时间点复制数据库，可以选择备份保留周期内的任意时间点。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |SyncUserPrivilege|String|否|NO|是否复制用户和权限：
