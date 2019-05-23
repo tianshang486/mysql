@@ -4,10 +4,10 @@
 
 **说明：** 
 
--   RDS for SQL Server 2012/2016/2017实例暂不支持SQL审计功能。
+-   MySQL 8.0、SQL Server 2012/2016/2017以及MariaDB TX实例暂不支持SQL审计功能。
 -   开启SQL审计功能之前的记录无法查看到。
 
-为了更好地提供服务，RDS for MySQL的SQL审计功能将升级为**SQL洞察**功能，继续为您的数据库提供安全审计、性能诊断等增值服务，升级过程中不影响实例的正常使用，升级后费用更低，功能更丰富，详情请参见[SQL洞察](intl.zh-CN/用户指南/SQL洞察.md#)
+为了更好地提供服务，RDS for MySQL的SQL审计功能将升级为**SQL洞察**功能，继续为您的数据库提供安全审计、性能诊断等增值服务，升级过程中不影响实例的正常使用，升级后费用更低，功能更丰富，详情请参见[SQL洞察](cn.zh-CN/用户指南/SQL洞察.md#)
 
 ## SQL审计与Binlog日志的区别 {#section_uyq_kr4_ydb .section}
 
@@ -21,20 +21,20 @@ RDS for MySQL版的增量数据可以通过SQL审计或Binlog日志来查看，�
 -   开通SQL审计功能后，实例性能不会受到影响。
 -   SQL审计的保存时间为30天。
 -   SQL审计导出的文件可以保存2天，超过2天的会被系统定时清理。
--   SQL审计默认关闭。开启该功能后，实例会产生额外费用，详细收费标准请参见[云数据库RDS详细价格信息](https://www.alibabacloud.com/product/apsaradb-for-rds?spm=a2796.7960336.224002.23.6c085179ylbVEv#pricing)。
+-   SQL审计默认关闭。开启该功能后，实例会产生额外费用，详细收费标准请参见[云数据库RDS详细价格信息](https://www.aliyun.com/price/product#/rds/detail)。
 
 ## 开启SQL审计 {#section_bwj_nr4_ydb .section}
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/154745701637169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155857490337169_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**数据安全性**。
 5.  选择**SQL审计**页签，单击**开启SQL审计**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/154745701621214_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/155857490321214_zh-CN.png)
 
 6.  在弹出的确认框中单击**确定**。
 
@@ -50,14 +50,18 @@ RDS for MySQL版的增量数据可以通过SQL审计或Binlog日志来查看，�
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/154745701637169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155857490337169_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**数据安全性**。
 5.  选择**SQL审计**页签，单击**导出文件**，将SQL审计内容导出并妥善保存至本地。
 6.  导出文件后单击**关闭SQL审计**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/154745701734230_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7947/155857490334230_zh-CN.png)
 
 7.  在弹出的确认框中，单击**确定**。
+
+## 相关文档 {#section_z4k_xr4_ydb .section}
+
+您可以在阿里云数据管理（简称DMS）的控制台上查看通过DMS登录RDS实例的所有访问日志，详情请参见[访问日志](https://help.aliyun.com/document_detail/47574.html)。
 
