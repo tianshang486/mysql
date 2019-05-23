@@ -36,15 +36,7 @@
  **说明：** 至少指定实例规格**DBInstanceClass**和存储空间**DBInstanceStorage**其中一个参数。
 
  |
-|DBInstanceStorage|Integer|否|20|自定义存储空间，取值必须为5的整数倍，取值：
-
- -   MySQL：**5-2000**；
--   SQL Server：**10-3000**；
--   PostgreSQL：**5-2000**；
--   PPAS：**250-500**；
--   MariaDB：**20-1000**。
-
- 不同付费方式和不同版本实例，支持的取值范围不同，请以控制台创建实例页面为准。
+|DBInstanceStorage|Integer|否|20|自定义存储空间，单位：GB。每5GB进行递增，详情请参见[实例规格表](~~26312~~)。
 
  **说明：** 至少指定实例规格**DBInstanceClass**和存储空间**DBInstanceStorage**其中一个参数。
 
@@ -59,7 +51,7 @@
  |
 |EngineVersion|String|否|5.6|数据库版本号，取值：
 
- -   MySQL：**5.5/5.6/5.7**；
+ -   MySQL：**5.5/5.6/5.7/8.0**；
 -   SQLServer：**2008r2/2012/2012\_ent\_ha/2012\_std\_ha/2012\_web/2016\_ent\_ha/2016\_std\_ha/2016\_web/2017\_ent**；
 -   PostgreSQL：**9.4/10.0**；
 -   PPAS：**9.3/10.0**；
