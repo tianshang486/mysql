@@ -1,4 +1,4 @@
-# DescribeDiagnosticReportList {#doc_api_1105951 .reference}
+# DescribeDiagnosticReportList {#doc_api_Rds_DescribeDiagnosticReportList .reference}
 
 调用DescribeDiagnosticReportList接口获取诊断报告列表。
 
@@ -34,19 +34,19 @@
 |ReportList| | |返回的诊断报告列表。
 
  |
-|└DiagnosticTime|String|2018-01-17T12:46:09Z|诊断时间。
+|└DiagnosticTime|String|2018-01-17T12:46:09Z|诊断时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└DownloadURL|String|http://rdsreport-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|公网下载地址，若当前不可下载，则为空串。
 
  |
-|└EndTime|String|2012-06-11T15:00Z|监控数据结束时间。
+|└EndTime|String|2012-06-11T15:00Z|监控数据结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└Score|Integer|100|诊断分数。
 
  |
-|└StartTime|String|2012-06-11T15:00Z|监控数据起始时间。
+|└StartTime|String|2012-06-11T15:00Z|监控数据起始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 
