@@ -1,4 +1,4 @@
-# DescribeErrorLogs {#doc_api_1084653 .reference}
+# DescribeErrorLogs {#doc_api_Rds_DescribeErrorLogs .reference}
 
 调用DescribeErrorLogs接口查看实例某段时间内的错误日志。
 
@@ -18,10 +18,10 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|StartTime|String|是|2011-05-01T20:10Z|查询开始时间，格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|StartTime|String|是|2011-05-01T20:10Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|EndTime|String|是|2011-05-30T20:10Z|查询结束时间，大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|EndTime|String|是|2011-05-30T20:10Z|查询结束时间，大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |PageSize|Integer|否|30|每页记录数，取值：
@@ -61,7 +61,7 @@
 |└ErrorInfo|String|spid52 DBCC TRACEON 3499, server process ID \(SPID\) 52. This is an informational message only; no user action is required|错误日志信息。
 
  |
-|└CreateTime|String|2011-05-30T12:11:04Z|错误日志生成时间。
+|└CreateTime|String|2011-05-30T12:11:04Z|错误日志生成时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |RequestId|String|98504E07-BB0E-40FC-B152-E4882615812C|请求ID。
