@@ -12,7 +12,7 @@
     2.  将网络模式从经典网络切换至目的VPC，同时选择目的虚拟交换机。
     **说明：** 切换步骤请参见[切换网络类型](../../../../cn.zh-CN/RDS for MySQL 用户指南/数据库连接/切换网络类型.md#)。
 
-    ![切换switch](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8398/155858044847821_zh-CN.png)
+    ![切换switch](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8398/155860359647821_zh-CN.png)
 
 -   对于不支持网络类型切换的实例：
 
@@ -22,4 +22,5 @@
     -   [SQL Server实例间数据迁移](https://help.aliyun.com/document_detail/26626.html)
     -   [PostgreSQL实例间数据迁移](../../../../cn.zh-CN/RDS for PostgreSQL 用户指南/数据迁移/RDS 实例间数据迁移.md#)
     -   [PPAS实例间数据迁移](../../../../cn.zh-CN/RDS for PPAS 用户指南/数据迁移/RDS 实例间数据迁移.md#)
+    -   [MariaDB实例间数据迁移](../../../../cn.zh-CN/RDS for MariaDB TX 用户指南/数据迁移/RDS for MariaDB实例间数据迁移.md#)
 
