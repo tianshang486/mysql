@@ -17,7 +17,7 @@
     购买新的实例（购买时选择目的VPC），然后将数据迁移到新的实例，具体的迁移步骤请参见如下文档：
 
     -   [MySQL实例间数据迁移](../../../../cn.zh-CN/RDS for MySQL 用户指南/数据迁移__同步/RDS 实例间数据迁移.md#)
-    -   [SQL Server实例间的数据迁移](https://help.aliyun.com/document_detail/26626.html)
+    -   [SQL Server实例间数据迁移](https://help.aliyun.com/document_detail/26626.html)
     -   [PostgreSQL实例间数据迁移](../../../../cn.zh-CN/RDS for PostgreSQL 用户指南/数据迁移/RDS 实例间数据迁移.md#)
     -   [PPAS实例间数据迁移](../../../../cn.zh-CN/RDS for PPAS 用户指南/数据迁移/RDS 实例间数据迁移.md#)
 
