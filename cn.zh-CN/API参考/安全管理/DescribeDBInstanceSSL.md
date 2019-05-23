@@ -2,7 +2,7 @@
 
 调用DescribeDBInstanceSSL接口查询实例SSL设置。
 
-**说明：** 该接口支持MySQL 5.6、MySQL 5.7高可用本地盘版和SQL Server所有版本。
+**说明：** 该接口支持MySQL 5.6、MySQL 5.7/8.0高可用本地盘版和SQL Server所有版本。
 
 ## 调试 {#apiExplorer .section}
 
@@ -29,7 +29,7 @@
 |ConnectionString|String|rm-uf6wjk5xxxxxx.mysql.rds.aliyuncs.com|受SSL保护的连接地址。
 
  |
-|SSLExpireTime|String|2018-01-17T12:18:15Z|SSL证书有效期。
+|SSLExpireTime|String|2018-01-17T12:18:15Z|SSL证书有效期。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |RequireUpdate|String|Yes|是否需要更新，取值：**Yes | No**
