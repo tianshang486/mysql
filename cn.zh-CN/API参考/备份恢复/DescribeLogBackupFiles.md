@@ -1,4 +1,4 @@
-# DescribeLogBackupFiles {#doc_api_1085892 .reference}
+# DescribeLogBackupFiles {#doc_api_Rds_DescribeLogBackupFiles .reference}
 
 调用DescribeLogBackupFiles接口查询实例的日志备份文件。
 
@@ -16,10 +16,10 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|StartTime|String|是|2018-10-01T08:40Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|StartTime|String|是|2018-10-01T08:40Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|EndTime|String|是|2018-10-31T08:40Z|查询结束时间，必须晚于查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|EndTime|String|是|2018-10-31T08:40Z|查询结束时间，必须晚于查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |PageSize|Integer|否|30|每页记录数，取值：
@@ -56,13 +56,13 @@
 |└IntranetDownloadLink|String|http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|内网下载地址，若当前不可下载，则为空串。有效期1小时。
 
  |
-|└LinkExpiredTime|String|2019-03-01T15:04:13Z|链接过期时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|└LinkExpiredTime|String|2019-03-01T15:04:13Z|链接过期时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└LogBeginTime|String|2018-10-31T08:40Z|日志文件记录的开始时间。
+|└LogBeginTime|String|2018-10-31T08:40Z|日志文件记录的开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└LogEndTime|String|2018-10-31T08:40Z|日志文件记录的结束时间。
+|└LogEndTime|String|2018-10-31T08:40Z|日志文件记录的结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |PageNumber|Integer|1|页码。
