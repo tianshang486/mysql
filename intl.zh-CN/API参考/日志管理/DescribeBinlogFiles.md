@@ -1,4 +1,4 @@
-# DescribeBinlogFiles {#doc_api_1084643 .reference}
+# DescribeBinlogFiles {#doc_api_Rds_DescribeBinlogFiles .reference}
 
 调用DescribeBinlogFiles接口查看Binlog日志。
 
@@ -6,6 +6,7 @@
 -   当**DownloadLink**不为NULL时，用户可以根据此URL下载备份文件，此URL已设置过期时间**LinkExpiredTime**，请在过期时间之前下载。
 
 **说明：** 本接口不适用于SQL Server实例。
+
 
 ## 调试 {#apiExplorer .section}
 
@@ -21,10 +22,10 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|StartTime|String|是|2011-06-01T15:00:00Z|查询开始时间，格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|StartTime|String|是|2011-06-01T15:00:00Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|EndTime|String|是|2011-06-20T15:00:00Z|查询结束时间，大于查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|EndTime|String|是|2011-06-20T15:00:00Z|查询结束时间，大于查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |PageSize|Integer|否|30|每页记录数，取值：
@@ -64,10 +65,10 @@
 |└FileSize|Long|2269410|Binlog文件大小，单位：Byte。
 
  |
-|└LogBeginTime|String|2019-02-09T17:45:21Z|Binlog文件记录的开始时间。
+|└LogBeginTime|String|2019-02-09T17:45:21Z|Binlog文件记录的开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└LogEndTime|String|2019-02-15T13:10:28Z|Binlog文件记录的结束时间。
+|└LogEndTime|String|2019-02-15T13:10:28Z|Binlog文件记录的结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└DownloadLink|String|http://rdsxxxxx.oss.aliyuncs.com/xxxxxx|支持HTTP协议的下载链接URL，NULL表示没有下载链接。
@@ -76,7 +77,7 @@
 |└HostInstanceID|String|5841973|Binlog所在实例编号，用户区分该Binlog日志产生于主实例或备实例。
 
  |
-|└LinkExpiredTime|String|2013-06-09T18:00:00Z|URL过期时间。
+|└LinkExpiredTime|String|2013-06-09T18:00:00Z|URL过期时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└Checksum|String|18358304393468701857|校验和。
