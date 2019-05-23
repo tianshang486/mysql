@@ -107,7 +107,7 @@
 |└ThreadID|String|1025865428|线程ID。
 
  |
-|└ExecuteTime|String|2011-06-11T15:00:23Z|执行时间。
+|└ExecuteTime|String|2011-06-11T15:00:23Z|执行时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |RequestId|String|08A3B71B-FE08-4B03-974F-CC7EA6DB1828|请求ID。
