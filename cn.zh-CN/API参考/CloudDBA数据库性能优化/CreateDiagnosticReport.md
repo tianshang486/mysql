@@ -18,12 +18,12 @@
  |
 |StartTime|String|是|2018-06-11T15:00Z|用于生成诊断报告的监控数据起始时间。
 
- **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+ **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |EndTime|String|是|2018-06-12T15:00Z|用于生成诊断报告的监控数据结束时间。
 
- **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+ **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
