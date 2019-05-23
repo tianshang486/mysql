@@ -1,4 +1,4 @@
-# DescribeDBInstancePerformance {#doc_api_1106175 .reference}
+# DescribeDBInstancePerformance {#doc_api_Rds_DescribeDBInstancePerformance .reference}
 
 调用DescribeDBInstancePerformance接口查看实例性能数据。
 
@@ -8,10 +8,10 @@
 -   查询时间范围大于7天小于等于15天，采集粒度为1小时；
 -   查询时间范围大于等于30天小于等于1年，采集粒度为1天。
 
-**说明：** 
+    **说明：** 
 
--   查询时间范围大于1天小于7天，暂不支持；
--   查询时间范围大于15天小于30天，暂不支持。
+    -   查询时间范围大于1天小于7天，暂不支持；
+    -   查询时间范围大于15天小于30天，暂不支持。
 
 ## 调试 {#apiExplorer .section}
 
@@ -32,10 +32,10 @@
  **说明：** **Key**为**MySQL\_SpaceUsage**或**SQLServer\_SpaceUsage**时，仅支持查询1天内的监控数据。
 
  |
-|StartTime|String|是|2012-06-08T15:00Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm*Z。
+|StartTime|String|是|2012-06-08T15:00Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|EndTime|String|是|2012-06-18T15:00Z|查询结束时间。格式：*yyyy-MM-dd*T*HH:mm*Z。
+|EndTime|String|是|2012-06-18T15:00Z|查询结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 
@@ -49,10 +49,10 @@
 |Engine|String|MySQL|数据库类型。
 
  |
-|StartTime|String|2012-06-10T15:00Z|查询开始时间。
+|StartTime|String|2012-06-10T15:00Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|EndTime|String|2012-06-19T15:00Z|查询结束时间。
+|EndTime|String|2012-06-19T15:00Z|查询结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |PerformanceKeys| | |实例性能参数列表。
@@ -73,7 +73,7 @@
 |└Value|String|0.0&13.6|性能值。
 
  |
-|└Date|String|2011-05-30T03:29:00Z|记录日期。
+|└Date|String|2011-05-30T03:29:00Z|记录日期。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |RequestId|String|A5409D02-D661-4BF3-8F3D-0A814D0574E7|请求ID。
