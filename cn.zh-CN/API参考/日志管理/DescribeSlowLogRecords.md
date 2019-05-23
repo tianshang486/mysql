@@ -1,4 +1,4 @@
-# DescribeSlowLogRecords {#doc_api_1106089 .reference}
+# DescribeSlowLogRecords {#doc_api_Rds_DescribeSlowLogRecords .reference}
 
 调用DescribeSlowLogRecords接口查看实例的慢日志明细。
 
@@ -18,10 +18,10 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxx|实例ID。
 
  |
-|StartTime|String|是|2011-06-01T16:00Z|查询开始时间，格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|StartTime|String|是|2011-06-01T16:00Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|EndTime|String|是|2011-06-20T16:00Z|查询结束时间，需要大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|EndTime|String|是|2011-06-20T16:00Z|查询结束时间，需要大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |SQLHASH|String|否|U2FsdGVkxxxx|慢日志统计里的SQL语句唯一标识符，可用于获取该SQL语句的慢日志明细。
@@ -88,9 +88,7 @@
 |└ReturnRowCounts|Long|1|返回行数。
 
  |
-|└ExecutionStartTime|String|2011-06-11T15:00:08Z|执行开始时间。
-
- **说明：** 格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|└ExecutionStartTime|String|2011-06-11T15:00:08Z|执行开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |DBInstanceId|String|rm-uf6wjk5xxxxxxx|实例ID。
