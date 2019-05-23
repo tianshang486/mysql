@@ -1,4 +1,4 @@
-# CloneDBInstance {#doc_api_1164192 .reference}
+# CloneDBInstance {#doc_api_Rds_CloneDBInstance .reference}
 
 调用CloneDBInstance接口将历史数据恢复至一个新实例（称为克隆实例）。
 
@@ -10,6 +10,7 @@
 -   若要按备份集克隆实例，则主实例必须至少有一个已完成备份的备份集。
 
 **说明：** RDS支持RAM子账号创建克隆实例，请务必保证子账号已添加克隆实例的授权策略，添加授权请参见[云数据库RDS授权](~~58932~~)。
+
 
 实例内数据库账号信息克隆以及其他功能的设置克隆将遵循如下方式：
 
@@ -73,7 +74,7 @@
 |DBInstanceId|String|否|rm-uf6wjk5xxxxxxxxxx|实例ID。
 
  |
-|RestoreTime|String|否|2011-06-11T16:00:00Z|备份保留周期内的任意时间点，格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|RestoreTime|String|否|2011-06-11T16:00:00Z|备份保留周期内的任意时间点。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  **说明：** **BackupId**和**RestoreTime**两者至少传入一个。
 
