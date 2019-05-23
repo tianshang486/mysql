@@ -1,10 +1,10 @@
-# DescribeParameters {#doc_api_1104897 .reference}
+# DescribeParameters {#doc_api_Rds_DescribeParameters .reference}
 
 调用DescribeParameters接口查询实例当前的参数配置。
 
 该接口适用的实例版本如下：
 
--   MySQL 5.5/5.6/5.7
+-   MySQL 5.5/5.6/5.7/8.0
 -   SQL Server 2008 R2
 -   PostgreSQL 9.4/10.0
 -   PPAS 9.3/10.0
