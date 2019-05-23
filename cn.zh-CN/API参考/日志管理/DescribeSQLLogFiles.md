@@ -1,4 +1,4 @@
-# DescribeSQLLogFiles {#doc_api_1106095 .reference}
+# DescribeSQLLogFiles {#doc_api_Rds_DescribeSQLLogFiles .reference}
 
 调用DescribeSQLLogFiles接口查询SQL审计文件列表。
 
@@ -68,10 +68,10 @@
 -   **Generating**：生成中。
 
  |
-|└LogStartTime|String|2015-05-23T07:00:00Z|SQL起始时间。
+|└LogStartTime|String|2015-05-23T07:00:00Z|SQL起始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└LogEndTime|String|2015-05-24T07:00:00Z|SQL结束时间。
+|└LogEndTime|String|2015-05-24T07:00:00Z|SQL结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└LogDownloadURL|String|http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|下载地址。若当前不可下载，则为空。
