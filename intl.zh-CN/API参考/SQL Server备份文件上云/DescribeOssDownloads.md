@@ -1,4 +1,4 @@
-# DescribeOssDownloads {#doc_api_1106157 .reference}
+# DescribeOssDownloads {#doc_api_Rds_DescribeOssDownloads .reference}
 
 调用DescribeOssDownloads接口查看备份数据上云任务的文件详情。
 
@@ -42,13 +42,13 @@
 -   **LOG**：表示日志备份文件。
 
  |
-|└CreateTime|String|2017-08-17T12:45:15Z|备份文件在下载列表中的创建时间。
+|└CreateTime|String|2017-08-17T12:45:15Z|备份文件在下载列表中的创建时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└Description|String|App description|文件描述信息。
 
  |
-|└EndTime|String|2017-08-27T12:45:15Z|结束时间。
+|└EndTime|String|2017-08-27T12:45:15Z|结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└FileName|String|test|备份文件在OSS上的名称。
