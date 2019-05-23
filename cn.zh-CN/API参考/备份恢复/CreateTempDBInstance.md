@@ -1,4 +1,4 @@
-# CreateTempDBInstance {#doc_api_1105050 .reference}
+# CreateTempDBInstance {#doc_api_Rds_CreateTempDBInstance .reference}
 
 调用CreateTempDBInstance接口创建临时实例。
 
@@ -12,6 +12,7 @@
 -   最近一次创建备份集任务已经完成。
 
 **说明：** 临时实例创建成功后，账号和数据库将继承备份集数据。
+
 
 ## 调试 {#apiExplorer .section}
 
@@ -32,7 +33,7 @@
  **说明：** **BackupId**和**RestoreTime**两者至少传入一个。
 
  |
-|RestoreTime|String|否|2011-06-11T16:00:00Z|用户指定备份保留时间内的任意时间点，格式：*yyyy-MM-dd*T*HH:mm:ss*Z。
+|RestoreTime|String|否|2011-06-11T16:00:00Z|用户指定备份保留时间内的任意时间点。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  **说明：** 
 
@@ -90,6 +91,10 @@ http(s)://rds.aliyuncs.com/?Action=CreateTempDBInstance
 ```
 
 ## 错误码 { .section}
+
+|HttpCode|错误码|错误信息|描述|
+|--------|---|----|--|
+|403|OperationDenied.TempDBInstanceExists|The operation is not permitted due to temp instance exist.|临时实例已经存在|
 
 [查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
 
