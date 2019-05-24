@@ -33,7 +33,7 @@ To better familiarize yourself with RDS, the following describes common terms us
 You can create RDS instances, configure the network, create databases, create accounts, and more by using the web console, CLI, SDK, or API, depending on your actual scenario.
 
 -   [Web console](https://rdsnext.console.aliyun.com): RDS provides a graphical web console where you can perform operations easily.
--   [CLI](https://www.alibabacloud.com/help/zh/doc-detail/110244.htm): All operations available on the web console can be performed through the CLI.
+-   CLI: All operations available on the web console can be performed through the CLI.
 -   [SDK](../../../../intl.en-US/SDK Reference/SDK reference.md#): All operations available on the web console can be performed through the SDK.
 -   [API](../../../../intl.en-US/API Reference/API overview.md#): All operations available on the web console can be performed through APIs.
 
