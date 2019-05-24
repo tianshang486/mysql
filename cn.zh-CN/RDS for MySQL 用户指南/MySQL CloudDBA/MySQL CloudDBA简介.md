@@ -2,7 +2,11 @@
 
 MySQL CloudDBA是监控和管理RDS实例性能及运行状况的服务，针对SQL语句的性能、CPU使用率、IOPS使用率、内存使用率、磁盘空间使用率、连接数、锁信息、热点表等，CloudDBA提供了智能的诊断及优化功能，能最大限度发现数据库存在的或潜在的健康问题。CloudDBA的诊断基于单个实例，该诊断会提供问题详情及相应的解决方案，可为您管理实例运行状况带来极大的便利。
 
-**说明：** 目前仅如下版本实例支持此功能：
+**说明：** 您也可以使用[混合云数据库管理平台](https://help.aliyun.com/document_detail/64851.html)HDM（Hybrid Cloud Database Management）实现类似功能。
+
+## 前提条件 {#section_6bd_0u3_qz3 .section}
+
+实例为如下版本：
 
 -   MySQL 5.7 高可用版
 -   MySQL 5.6版
@@ -18,15 +22,15 @@ MySQL CloudDBA主要包含如下功能：
 
     -   [查看实例运行状况](cn.zh-CN/RDS for MySQL 用户指南/MySQL CloudDBA/智能优化/查看实例运行状况.md#)：提供了活跃线程、慢SQL、网络流量和锁状态的监控图，该数据每5秒刷新一次，如下图所示（本文图示仅为示例，请以实际界面为准）。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7899/15516635313051_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7899/15586675773051_zh-CN.png)
 
     -   实例核心资源使用率：显示了实例当前CPU、内存、连接数、IOPS和磁盘空间的使用率，该数据每20秒刷新一次，如下图所示（本文图示仅为示例，请以实际界面为准）。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41831/155166353133834_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41831/155866757733834_zh-CN.png)
 
     -   [诊断实例性能](cn.zh-CN/RDS for MySQL 用户指南/MySQL CloudDBA/智能优化/诊断实例性能.md#)：显示实例性能的诊断评分和诊断结果。系统不会自动进行诊断，您需要手动进行一键诊断，如下图所示（本文图示仅为示例，请以实际界面为准）。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7899/15516635313053_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7899/15586675773053_zh-CN.png)
 
 -   问题诊断：提供实例诊断详情，包括CPU、空间、慢SQL、锁信息、热点表和诊断历史，详情如下所示。
 
