@@ -6,11 +6,11 @@
 
 -   加密密钥由密钥管理服务（KMS）产生和管理，RDS不提供加密所需的密钥和证书。开通TDE后，用户如果要恢复数据到本地，需要先通过RDS解密数据；
 -   开通TDE前需要先开通KMS。如果您未开通KMS，可在开通TDE过程中根据引导开通KMS；
--   对于SQL Server 2008R2，TDE开通后无法从实例级别关闭，只支持数据库级别的开启和关闭；
+-   对于SQL Server企业版，TDE开通后无法从实例级别关闭，只支持数据库级别的开启和关闭；
 -   对于MySQL 5.6，TDE开通后无法关闭；
 -   TDE开通后会增加CPU使用率。
 
-**说明：** 仅支持MySQL 5.6和SQL Server 2008 R2实例。
+**说明：** 仅支持MySQL 5.6和SQL Server企业版实例。
 
 ## 调试 {#apiExplorer .section}
 
@@ -31,7 +31,7 @@
  |
 |DBName|String|否|testDB|想要开启TDE的数据库名称，可以一次输入多个，以英文逗号（,）分隔，最多传入50个。
 
- **说明：** 仅SQL Server 2008 R2实例需要传入此参数。
+ **说明：** 仅SQL Server企业版实例需要传入此参数。
 
  |
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
