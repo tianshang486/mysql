@@ -1,10 +1,10 @@
-# DescribeDBInstanceTDE {#doc_api_1066900 .reference}
+# DescribeDBInstanceTDE {#doc_api_Rds_DescribeDBInstanceTDE .reference}
 
 调用DescribeDBInstanceTDE接口查询实例数据加密状态。
 
 该接口用于查看实例的[透明数据加密](~~33510~~)（Transparent Data Encryption，TDE）配置。
 
-**说明：** 该接口只支持MySQL 5.6和SQL Server 2008 R2实例。
+**说明：** 该接口只支持MySQL 5.6和SQL Server企业版实例。
 
 ## 调试 {#apiExplorer .section}
 
@@ -33,7 +33,7 @@
  |
 |Databases| | |数据库级别的TDE状态列表。
 
- **说明：** 对于SQL Server 2008 R2实例，可以在实例级别的TDE开启时，控制数据库级别的TDE开启或关闭。
+ **说明：** 对于SQL Server企业版实例，可以在实例级别的TDE开启时，控制数据库级别的TDE开启或关闭。
 
  |
 |└DBName|String|test02|数据库名称。
