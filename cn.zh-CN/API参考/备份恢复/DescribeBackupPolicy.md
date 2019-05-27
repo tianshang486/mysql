@@ -24,6 +24,18 @@ RDS实例将根据用户设置的备份设置，定期做备份。
 -   **LogBackupPolicy**：日志备份。
 
  |
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+
+ |
+|CompressType|String|否|1|备份压缩方式，取值：
+
+ -   **0**：不压缩；
+-   **1**：zlib压缩；
+-   **2**：并行zlib压缩；
+-   **4**：quicklz压缩，开启了库表恢复；
+-   **8**：MySQL8.0 quicklz压缩但是还未支持库表恢复。
+
+ |
 
 ## 返回参数 {#resultMapping .section}
 
@@ -32,7 +44,7 @@ RDS实例将根据用户设置的备份设置，定期做备份。
 |BackupRetentionPeriod|Integer|7|数据备份保留天数。
 
  |
-|PreferredBackupTime|String|15:00Z-16:00Z|数据备份时间，格式：*HH:mm*Z-*HH:mm*Z。
+|PreferredBackupTime|String|15:00Z-16:00Z|数据备份时间，格式：*HH:mm*Z-*HH:mm*Z（UTC时间）。
 
  |
 |PreferredBackupPeriod|String|Monday,Wednesday,Friday,Sunday|数据备份周期，多个取值用英文逗号（,）隔开，取值：
@@ -105,10 +117,19 @@ RDS实例将根据用户设置的备份设置，定期做备份。
  **说明：** 参数**LogBackupFrequency**仅适用于SQL Server。
 
  |
-|PreferredNextBackupTime|String|2018-01-19T15:15Z|下次备份时间。
+|PreferredNextBackupTime|String|2018-01-19T15:15Z|下次备份时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |RequestId|String|B87E2AB3-B7C9-4394-9160-7F639F732031|请求ID。
+
+ |
+|CompressType|String|1|备份压缩方式，取值：
+
+ -   **0**：不压缩；
+-   **1**：zlib压缩；
+-   **2**：并行zlib压缩；
+-   **4**：quicklz压缩，开启了库表恢复；
+-   **8**：MySQL8.0 quicklz压缩但是还未支持库表恢复。
 
  |
 
