@@ -1,4 +1,4 @@
-# ModifyBackupPolicy {#doc_api_1105047 .reference}
+# ModifyBackupPolicy {#doc_api_Rds_ModifyBackupPolicy .reference}
 
 调用ModifyBackupPolicy接口修改备份设置。
 
@@ -27,7 +27,7 @@
 -   **LogBackupPolicy**：日志备份。
 
  |
-|PreferredBackupTime|String|否|00:00Z-01:00Z|执行备份任务的时间，格式：*HH:mm*Z-*HH:mm*Z。
+|PreferredBackupTime|String|否|00:00Z-01:00Z|执行备份任务的时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  **说明：** **BackupPolicyMode**为**DataBackupPolicy**时，该参数必传。
 
@@ -114,11 +114,23 @@
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
+|CompressType|String|否|4|备份压缩方式，仅支持MySQL 5.6修改为quicklz压缩，支持库表恢复。取值：**4**。
+
+ |
 
 ## 返回参数 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
+|CompressType|String|4|备份压缩方式，取值：
+
+ -   **0**：不压缩；
+-   **1**：zlib压缩；
+-   **2**：并行zlib压缩；
+-   **4**：quicklz压缩，开启了库表恢复；
+-   **8**：MySQL8.0 quicklz压缩但是还未支持库表恢复。
+
+ |
 |DBInstanceID|String|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
