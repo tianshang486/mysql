@@ -8,8 +8,8 @@
 
     答：Binlog文件没有压缩。
 
-3.  问：Binlog备份启动机制是什么？
+3.  问：Binlog生成、清理和上传的机制是什么？
 
-    答：Binlog根据本地备份设置将备份日志上传到OSS，并清理本地日志。详情请参见[MySQL设置本地Binlog](../../../../intl.zh-CN/RDS for MySQL 用户指南/备份数据/MySQL设置本地Binlog.md#)。
+    答：Binlog写满500MB就会生成新的Binlog日志文件继续写入，同时会根据本地备份设置将备份日志上传到OSS，并清理本地日志。详情请参见[MySQL设置本地Binlog](../../../../intl.zh-CN/RDS for MySQL 用户指南/备份数据/MySQL设置本地Binlog.md#)。
 
 
