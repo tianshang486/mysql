@@ -2,7 +2,10 @@
 
 调用DescribeSlowLogRecords接口查看实例的慢日志明细。
 
-**说明：** 暂不支持SQL Server类型的实例。
+**说明：** 
+
+-   本接口的返回参数每分钟更新一次。
+-   暂不支持SQL Server类型的实例。
 
 ## 调试 {#apiExplorer .section}
 
