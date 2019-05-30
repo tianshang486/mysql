@@ -1,4 +1,4 @@
-# DescribeDBInstances {#doc_api_1091813 .reference}
+# DescribeDBInstances {#doc_api_Rds_DescribeDBInstances .reference}
 
 调用DescribeDBInstances接口查看RDS实例列表或被RAM授权的实例列表。
 
@@ -142,6 +142,12 @@
 |Tag.5.value|String|否|Tagvalue5|当前第五组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。
 
  |
+|ResourceGroupId|String|否|rg-acfmyxxxxx|资源组ID。
+
+ |
+|proxyId|String|否|API|代理模式ID。
+
+ |
 
 ## 返回参数 {#resultMapping .section}
 
@@ -197,7 +203,9 @@
 |└RegionId|String|cn-hangzhou|地域ID。
 
  |
-|└ExpireTime|String|2019-02-27T16:00:00Z|到期时间，按量付费实例无到期时间。
+|└ExpireTime|String|2019-02-27T16:00:00Z|到期时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+
+ **说明：** 按量付费实例无到期时间。
 
  |
 |└DBInstanceStatus|String|Running|实例状态，详情请参见[实例状态表](~~26315~~)。
@@ -241,7 +249,7 @@
 -   **Finance**：金融版（仅支持中国站）。
 
  |
-|└CreateTime|String|2018-11-05T11:26:02Z|创建时间。
+|└CreateTime|String|2018-11-05T11:26:02Z|创建时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└DBInstanceClass|String|rds.mys2.small|实例规格，详见[实例规格表](~~26312~~)。
@@ -250,7 +258,7 @@
 |└DBInstanceStorageType|String|ModuleList.4.ModuleCode|实例储存类型。
 
  |
-|└DestroyTime|String|2018-11-05T11:26:02Z|销毁时间。
+|└DestroyTime|String|2018-11-05T11:26:02Z|销毁时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |└EngineVersion|String|5.7|数据库版本。
@@ -299,51 +307,35 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstances
 
 ``` {#xml_return_success_demo}
 <DescribeDBInstancesResponse>
-  <PageRecordCount>2</PageRecordCount>
   <Items>
     <DBInstance>
-      <DBInstanceDescription>testforRemarks</DBInstanceDescription>
-      <ExpireTime>2014-10-10T16:00:00Z</ExpireTime>
-      <DBInstanceId>rdsmjfirvmjfirv</DBInstanceId>
-      <DBInstanceNetType>Internet</DBInstanceNetType>
-      <PayType>Prepaid</PayType>
-      <DBInstanceStatus>Running</DBInstanceStatus>
-      <DBInstanceType>Primary</DBInstanceType>
-      <Engine>MySQL</Engine>
       <LockMode>Unlock</LockMode>
-      <LockReason/>
-      <RegionId>cn-hangzhou</RegionId>
-      <ZoneId>cn-hangzhou-a</ZoneId>
-      <MasterInstanceId/>
-      <GuardDBInstanceId/>
-      <TempDBInstanceId/>
-      <ReadOnlyDBInstanceIds>
-        <ReadOnlyDBInstanceId/>
-      </ReadOnlyDBInstanceIds>
-    </DBInstance>
-    <DBInstance>
-      <DBInstanceDescription>testforcreate</DBInstanceDescription>
-      <ExpireTime/>
-      <DBInstanceId>rdsabqumfabqumf</DBInstanceId>
       <DBInstanceNetType>Intranet</DBInstanceNetType>
-      <PayType>Postpaid</PayType>
-      <DBInstanceStatus>Running</DBInstanceStatus>
+      <DBInstanceClass>ppas.x4.xlarge.2</DBInstanceClass>
+      <ResourceGroupId>rg-acfnt75uxxxxx</ResourceGroupId>
+      <DBInstanceId>rm-dj120j44xxxxx</DBInstanceId>
+      <VpcCloudInstanceId/>
+      <ZoneId>cn-beijing-MAZ3(c,e)</ZoneId>
+      <ReadOnlyDBInstanceIds/>
+      <ConnectionMode>Standard</ConnectionMode>
+      <InstanceNetworkType>Classic</InstanceNetworkType>
+      <Engine>PPAS</Engine>
+      <MutriORsignle>true</MutriORsignle>
+      <InsId>1</InsId>
+      <ExpireTime/>
+      <CreateTime>2019-03-20T02:18:02Z</CreateTime>
       <DBInstanceType>Primary</DBInstanceType>
-      <Engine>MySQL</Engine>
-      <LockMode>Unlock</LockMode>
+      <RegionId>cn-beijing</RegionId>
+      <EngineVersion>10.0</EngineVersion>
       <LockReason/>
-      <RegionId>cn-hangzhou</RegionId>
-      <MasterInstanceId/>
-      <GuardDBInstanceId/>
-      <TempDBInstanceId/>
-      <ReadOnlyDBInstanceIds>
-        <ReadOnlyDBInstanceId/>
-      </ReadOnlyDBInstanceIds>
+      <DBInstanceStatus>Running</DBInstanceStatus>
+      <PayType>Postpaid</PayType>
     </DBInstance>
   </Items>
+  <TotalRecordCount>1</TotalRecordCount>
   <PageNumber>1</PageNumber>
-  <TotalRecordCount>2</TotalRecordCount>
-  <RequestId>2553A660-E4EB-4AF4-A402-8AFF70A49143</RequestId>
+  <RequestId>0C2B0363-2707-4300-9900-0A65846CE48E</RequestId>
+  <PageRecordCount>1</PageRecordCount>
 </DescribeDBInstancesResponse>
 
 ```
@@ -356,53 +348,43 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstances
 		"DBInstance":[
 			{
 				"LockMode":"Unlock",
-				"DBInstanceNetType":"Internet",
-				"MasterInstanceId":"",
-				"DBInstanceId":"rdsmjfirvmjfirv",
-				"ZoneId":"cn-hangzhou-a",
-				"ReadOnlyDBInstanceIds":{
-					"ReadOnlyDBInstanceId":[]
-				},
-				"DBInstanceDescription":"testforRemarks",
-				"TempDBInstanceId":"",
-				"Engine":"MySQL",
-				"ExpireTime":"2014-10-10T16:00:00Z",
-				"DBInstanceType":"Primary",
-				"RegionId":"cn-hangzhou",
-				"GuardDBInstanceId ":"",
-				"LockReason":"",
-				"DBInstanceStatus":"Running",
-				"PayType":"Prepaid"
-			},
-			{
-				"LockMode":"Unlock",
 				"DBInstanceNetType":"Intranet",
-				"MasterInstanceId":"",
-				"DBInstanceId":"rdsabqumfabqumf",
+				"DBInstanceClass":"ppas.x4.xlarge.2",
+				"ResourceGroupId":"rg-acfnt75uxxxxx",
+				"DBInstanceId":"rm-dj120j44xxxxx",
+				"VpcCloudInstanceId":"",
+				"ZoneId":"cn-beijing-MAZ3(c,e)",
 				"ReadOnlyDBInstanceIds":{
 					"ReadOnlyDBInstanceId":[]
 				},
-				"DBInstanceDescription":"testforcreate",
-				"TempDBInstanceId":"",
-				"Engine":"MySQL",
+				"ConnectionMode":"Standard",
+				"InstanceNetworkType":"Classic",
+				"Engine":"PPAS",
+				"MutriORsignle":true,
+				"InsId":1,
 				"ExpireTime":"",
+				"RegionId":"cn-beijing",
 				"DBInstanceType":"Primary",
-				"RegionId":"cn-hangzhou",
+				"CreateTime":"2019-03-20T02:18:02Z",
 				"LockReason":"",
-				"GuardDBInstanceId ":"",
+				"EngineVersion":"10.0",
 				"DBInstanceStatus":"Running",
 				"PayType":"Postpaid"
 			}
 		]
 	},
-	"TotalRecordCount":2,
 	"PageNumber":1,
-	"RequestId":"2553A660-E4EB-4AF4-A402-8AFF70A49143",
-	"PageRecordCount":2
+	"TotalRecordCount":1,
+	"RequestId":"0C2B0363-2707-4300-9900-0A65846CE48E",
+	"PageRecordCount":1
 }
 ```
 
 ## 错误码 { .section}
+
+|HttpCode|错误码|错误信息|描述|
+|--------|---|----|--|
+|400|InvalidDBInstanceType.ValueNotSupport|The specified parameter"DBInstanceType" is not valid.|参数DBInstanceType无效。|
 
 [查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
 
