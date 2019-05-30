@@ -13,7 +13,7 @@
 |Action|String|是|DescribeDBInstances|系统规定参数，取值：**DescribeDBInstances**。
 
  |
-|RegionId|String|是|cn-hangzhou|地域ID，可以通过函数[DescribeRegions](~~26243~~)查看。
+|RegionId|String|是|cn-hangzhou|地域ID，可以通过接口[DescribeRegions](~~26243~~)查看。
 
  |
 |ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
@@ -109,6 +109,12 @@
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
+|proxyId|String|否|API|代理模式ID。
+
+ |
+|ResourceGroupId|String|否|rg-acfmyxxxxx|资源组ID。
+
+ |
 |Tags|String|否|\{“key1”:”value1”\}|查询绑定有该标签的实例，包括TagKey和TagValue。单次最多支持传入5组值，格式：\{"key1":"value1","key2":"value2"...\}。
 
  |
@@ -140,12 +146,6 @@
 
  |
 |Tag.5.value|String|否|Tagvalue5|当前第五组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。
-
- |
-|ResourceGroupId|String|否|rg-acfmyxxxxx|资源组ID。
-
- |
-|proxyId|String|否|API|代理模式ID。
 
  |
 
