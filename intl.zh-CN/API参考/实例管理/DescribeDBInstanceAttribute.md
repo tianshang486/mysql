@@ -1,4 +1,4 @@
-# DescribeDBInstanceAttribute {#doc_api_1101599 .reference}
+# DescribeDBInstanceAttribute {#doc_api_Rds_DescribeDBInstanceAttribute .reference}
 
 调用DescribeDBInstanceAttribute接口查看RDS实例的详细信息。
 
@@ -125,15 +125,15 @@
 |└AccountMaxQuantity|Integer|50|可创建账号的最大数量。
 
  |
-|└CreationTime|String|2011-05-30T12:11:04Z|创建时间。
+|└CreationTime|String|2011-05-30T12:11:04Z|创建时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└ExpireTime|String|2019-03-27T16:00:00Z|到期时间。
+|└ExpireTime|String|2019-03-27T16:00:00Z|到期时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  **说明：** 按量付费实例无到期时间。
 
  |
-|└MaintainTime|String|00:00Z-02:00Z|实例可维护时间段。
+|└MaintainTime|String|00:00Z-02:00Z|实例可维护时间段，是UTC时间，+8小时才是控制台上显示的可维护时间段。
 
  |
 |└AvailabilityValue|String|100.0%|实例可用性状态，单位：百分比。
@@ -194,6 +194,12 @@
 
  |
 |└DBInstanceId| |rm-uf6wjk5xxxxxxxxxx|实例ID。
+
+ |
+|└MasterZone|String|5454284|主可用区ID。
+
+ |
+|└ReadonlyInstanceSQLDelayedTime|String|30|只读实例延迟复制时间，只读实例延迟**ReadonlyInstanceSQLDelayedTime**的时间后再同步主实例数据，单位：秒。
 
  |
 |└ResourceGroupId|String|rg-acfmyxxxxxxxxxx|资源组ID。
