@@ -2,7 +2,7 @@
 
 You can call this operation to create an RDS instance.
 
-**Before performing this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing) of RDS.** 
+**Before performing this operation, make sure that you fully understand the [billing methods](../../../../intl.en-US/Purchase Guide/Billing methods and billing items.md#section_25l_g7t_kzx) and [pricing](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing) of RDS.** 
 
 For more information about RDS instance types, see [Instance types](~~26312~~).
 
@@ -104,7 +104,7 @@ API Explorer provides various functions to simplify API usage. For example, you 
  -   **Standard**: standard mode
 -   **Safe**: database proxy mode
 
- **Note:** SQL Server 2012, 2016, and 2017 supports only the standard mode.
+ **Note:** SQL Server 2012, 2016, and 2017 support only the standard mode.
 
  |
 |VPCId|String|No|vpc-xxxxxxxxxxxx| The ID of the VPC.
@@ -117,7 +117,7 @@ API Explorer provides various functions to simplify API usage. For example, you 
  **Note:** For MariaDB, this parameter is required.
 
  |
-|PrivateIpAddress|String|No|172.16.201.69| The intranet IP address of the instance. It must be within the IP address range provided by the switch. By default, the system automatically assigns an IP address through **VPCId** and **VSwitchId**.
+|PrivateIpAddress|String|No|172.16.201.69| The intranet IP address of the instance. It must be within the IP address range provided by the switch. By default, the system automatically assigns an IP address based on **VPCId** and **VSwitchId**.
 
  |
 |Period|String|No|Year| The prepayment period of the instance. Valid values:
