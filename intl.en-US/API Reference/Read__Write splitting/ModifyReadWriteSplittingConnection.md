@@ -19,7 +19,7 @@ API Explorer provides various functions to simplify API usage. For example, you 
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|ModifyReadWriteSplittingConnection| The operation that you want to perform. Set the value to**ModifyReadWriteSplittingConnection**.
+|Action|String|Yes|ModifyReadWriteSplittingConnection| The operation that you want to perform. Set the value to **ModifyReadWriteSplittingConnection**.
 
  |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx| The ID of the master instance.
@@ -44,7 +44,7 @@ API Explorer provides various functions to simplify API usage. For example, you 
  -   **Standard**: Read weights are distributed according to instance specifications.
 -   **Custom**: Read weights are specified by you.
 
- **Note:** Either **MaxDelayTime** or **DistributionType**is required.
+ **Note:** Either **MaxDelayTime** or **DistributionType** is required.
 
  |
 |Weight|String|No|\{“Instanceid1“:”100”,”Instanceid2”:”200”\}| The read weight distribution. Enter the read weights for the master instance and its read-only instances. It must be a multiple of 100. The maximum value is 10000. Format: \{“Instanceid1“:”Weight”,”Instanceid2”:”Weight”...\}.
