@@ -1,6 +1,6 @@
 # CreateAccount {#doc_api_1105955 .reference}
 
-You can call this operation to create a RDS database account.
+You can call this operation to create an RDS database account.
 
 When you call this operation, the instance must meet the following requirements:
 
@@ -105,7 +105,7 @@ Normal response examples
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_kjh_i6q_yb3 .section}
 
 [View error codes](https://error-center.alibabacloud.com/status/product/Rds)
 
