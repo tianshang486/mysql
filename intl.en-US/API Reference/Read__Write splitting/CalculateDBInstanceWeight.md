@@ -2,7 +2,7 @@
 
 You can call this operation to query the read weights distributed by the system.
 
-If [read/write splitting](~~51073~~) is enabled, you can call this operation to query the read weights specified by the system. To query custom read weights, see[DescribeDBInstanceNetInfo](~~26237~~).
+If [read/write splitting](~~51073~~) is enabled, you can call this operation to query the read weights specified by the system. To query custom read weights, see [DescribeDBInstanceNetInfo](~~26237~~).
 
 This operation is applicable to the following instances:
 
@@ -97,7 +97,7 @@ Normal response example
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_kkp_aqp_o4a .section}
 
 [View error codes](https://error-center.alibabacloud.com/status/product/Rds)
 
