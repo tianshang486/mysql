@@ -7,7 +7,7 @@ You can call this operation to renew an RDS instance.
 The instance must meet the following requirements:
 
 -   The billing method of the instance is Subscription.
--   -   Your Alibaba Cloud account has sufficient balance or has been bound to a credit card.
+-   Your Alibaba Cloud account has sufficient balance or has been bound to a credit card.
 
 **Note:** Coupons under your account will be preferentially used during payment.
 
@@ -68,7 +68,6 @@ API Explorer provides various functions to simplify API usage. For example, you 
 Request example
 
 ``` {#request_demo}
-
 http(s)://rds.aliyuncs.com/?Action=RenewInstance
 &DBInstanceId=rm-uf6wjk5xxxxxxxxxx 
 &Period=12 
@@ -95,7 +94,7 @@ Normal response examples
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_762_qjr_2ze .section}
 
 [View error codes](https://error-center.alibabacloud.com/status/product/Rds)
 
