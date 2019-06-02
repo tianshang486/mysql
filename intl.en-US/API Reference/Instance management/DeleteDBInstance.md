@@ -5,7 +5,7 @@ You can call this operation to release an RDS instance.
 When you perform this operation, the instance must meet the following requirements:
 
 -   The instance is in the running state.
--   The instance is a Pay-As-You-Go type primary instance, read-only instance, disaster recovery instance, or temporary instance.
+-   The instance is a Pay-As-You-Go master instance, read-only instance, disaster recovery instance, or temporary instance.
 
 ## Debugging {#apiExplorer .section}
 
