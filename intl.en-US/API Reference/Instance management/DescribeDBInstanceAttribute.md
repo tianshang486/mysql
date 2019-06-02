@@ -45,8 +45,8 @@ API Explorer provides various functions to simplify API usage. For example, you 
 
  -   **Primary**: master instance
 -   **Readonly**: read-only instance
--   **Guard**disaster recovery instance
--   **Temp**temporary instance
+-   **Guard**: disaster recovery instance
+-   **Temp**: temporary instance
 
  |
 |└Category|String|Basic| The edition \(series\) of the instance. Valid values:
@@ -87,7 +87,7 @@ API Explorer provides various functions to simplify API usage. For example, you 
 -   **h**: dedicated-host instance
 
  |
-|└DBInstanceClass|String|rds.mys2.small| The instance type \(specifications\).
+|└DBInstanceClass|String|rds.mys2.small| The instance type \(specifications\). For more information, see [Instance type list](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#).
 
  |
 |└DBInstanceMemory|Long|4096| The memory of the instance. Unit: MB.
@@ -202,7 +202,7 @@ API Explorer provides various functions to simplify API usage. For example, you 
 |└ResourceGroupId|String|rg-acfmyxxxxxxxxxx| The ID of the resource group.
 
  |
-|└SecurityIPMode|String|normal| The whitelist mode.
+|└SecurityIPMode|String|normal| The IP whitelist mode.
 
  |
 |└SlaveZones| | | The information about SlaveZones.
@@ -232,7 +232,7 @@ API Explorer provides various functions to simplify API usage. For example, you 
 Request example
 
 ``` {#request_demo}
-http(s)://rds.aliyuncs.com/? Action=DescribeDBInstanceAttribute
+http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
 &DBInstanceId=rm-uf6wjk5xxxxxxxxxx
 &<Common request parameters>
 ```
@@ -361,7 +361,7 @@ Normal response examples
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_evi_47a_oo7 .section}
 
 [View error codes](https://error-center.alibabacloud.com/status/product/Rds)
 
