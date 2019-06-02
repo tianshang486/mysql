@@ -2,7 +2,7 @@
 
 You can call this operation to restart an RDS instance.
 
-If a large number of transactions need to be submitted or rolled back, the restart process may be prolonged for about one minute.
+**Note:** If a large number of transactions need to be submitted or rolled back, the restart process may take about one more minute.
 
 This operation must meet the following requirements:
 
@@ -69,7 +69,7 @@ Normal response examples
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_0wl_ifi_5o5 .section}
 
 [View error codes](https://error-center.alibabacloud.com/status/product/Rds)
 
