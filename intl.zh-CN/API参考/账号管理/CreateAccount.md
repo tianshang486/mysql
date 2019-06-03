@@ -1,4 +1,4 @@
-# CreateAccount {#doc_api_1105955 .reference}
+# CreateAccount {#doc_api_Rds_CreateAccount .reference}
 
 调用CreateAccount接口创建管理数据库的账号。
 
@@ -47,7 +47,7 @@
 -   特殊字符为!@\#$&%^\*\(\)\_+-=
 
  |
-|AccountDescription|String|否|测试账号A|账号描述，长度为2~256个字符。以中文、英文字母开头，可以包含可以包含数字、中文、英文、下划线（\_）、短横线（-）。
+|AccountDescription|String|否|测试账号A|账号描述，长度为2~256个字符。以中文、英文字母开头，可以包含数字、中文、英文、下划线（\_）、短横线（-）。
 
  **说明：** 不能以 http:// 和 https:// 开头。
 
