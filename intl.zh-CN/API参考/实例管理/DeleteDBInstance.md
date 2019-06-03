@@ -5,7 +5,7 @@
 调用该接口时，实例必须满足以下条件，否则将操作失败：
 
 -   实例状态为运行中；
--   实例读写分离任务初始化中；
+-   实例已关闭读写分离；
 -   实例类型为主实例（按量付费类型）、只读实例、灾备实例、临时实例。
 
 ## 调试 {#apiExplorer .section}
@@ -20,9 +20,6 @@
 
  |
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
-
- |
-|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
 
  |
 |AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
