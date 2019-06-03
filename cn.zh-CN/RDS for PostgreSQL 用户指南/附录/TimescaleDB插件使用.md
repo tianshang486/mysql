@@ -2,7 +2,7 @@
 
 RDS for PostgreSQL基础版和高可用版实例新增TimescaleDB插件1.3.0版本，支持时序数据的自动分片、高效写入、检索、准实时聚合等。
 
-本文将介绍插件的基本使用方法，详细使用请参考[TimescaleDB](https://docs.timescale.com/v1.3/using-timescaledb)。
+目前RDS for PostgreSQL 10对外开放的是Open Source版本的TimescaleDB，由于License等问题，可能暂不支持一些高级特性，详情参见[TimescaleDB](https://www.timescale.com/products)。
 
 ## 前提条件 {#section_lcb_463_s1f .section}
 
@@ -24,7 +24,7 @@ alter extension timescaledb update;
 
 使用pgAdmin客户端[连接实例](../../../../cn.zh-CN/RDS for PostgreSQL 快速入门/连接实例.md#section_yfs_phg_wdb)，添加TimescaleDB，命令如下：
 
-```
+``` {#codeblock_hcx_rc9_3m9}
 CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;
 ```
 
@@ -43,7 +43,7 @@ CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;
 
 2.  创建时序表，示例如下：
 
-    ```
+    ``` {#codeblock_u7t_l3y_dja}
     SELECT create_hypertable('conditions', 'time');
     ```
 
@@ -54,14 +54,14 @@ CREATE EXTENSION IF NOT EXISTS timescaledb CASCADE;
 
 您可以使用标准SQL命令将数据插入超表（Hypertables），示例如下：
 
-```
+``` {#codeblock_iic_b3v_vpj}
 INSERT INTO conditions(time, location, temperature, humidity)
   VALUES (NOW(), 'office', 70.0, 50.0);
 ```
 
 您还可以一次将多行数据插入到超表中，示例如下：
 
-```
+``` {#codeblock_h9g_98x_xty}
 INSERT INTO conditions
   VALUES
     (NOW(), 'office', 70.0, 50.0),
@@ -73,7 +73,7 @@ INSERT INTO conditions
 
 您可以使用高级SQL查询检索数据，示例如下：
 
-```
+``` {#codeblock_615_wlj_oel}
 --过去3小时内，每15分钟采集一次数据，按时间和温度排序。
 SELECT time_bucket('15 minutes', time) AS fifteen_min,
     location, COUNT(*),
@@ -85,20 +85,20 @@ SELECT time_bucket('15 minutes', time) AS fifteen_min,
   ORDER BY fifteen_min DESC, max_temp DESC;
 ```
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155832121147336_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155955557647336_zh-CN.png)
 
 您可也使用固有的函数进行分析查询，示例如下：
 
-```
+``` {#codeblock_ugr_ing_843}
 --均值查询（Median）
 SELECT percentile_cont(0.5)
   WITHIN GROUP (ORDER BY temperature)
   FROM conditions;
 ```
 
-![均值百分查询](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155832121247337_zh-CN.png)
+![均值百分查询](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155955557647337_zh-CN.png)
 
-```
+``` {#codeblock_ez0_9vy_04m}
 --移动平均数（Moving Average）
 SELECT time, AVG(temperature) OVER(ORDER BY time
       ROWS BETWEEN 9 PRECEDING AND CURRENT ROW)
@@ -108,49 +108,5 @@ SELECT time, AVG(temperature) OVER(ORDER BY time
   ORDER BY time DESC;
 ```
 
-![移动平均数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155832121247338_zh-CN.png)
-
-## 连续聚合视图 {#section_dkx_1wh_thb .section}
-
-例如想要每小时查询聚合的每个设备读数，操作步骤如下：
-
-1.  创建超表device\_readings，示例如下：
-
-    ```
-    CREATE TABLE device_readings (
-          observation_time  TIMESTAMPTZ       NOT NULL,
-          device_id         TEXT              NOT NULL,
-          metric            DOUBLE PRECISION  NOT NULL,
-          PRIMARY KEY(observation_time, device_id)
-    );
-    SELECT create_hypertable('device_readings', 'observation_time');
-    ```
-
-2.  创建一个连续聚合视图device\_summary，示例如下：
-
-    ```
-    CREATE VIEW device_summary
-    WITH (timescaledb.continuous) --该标志用于保证视图连续。
-    AS
-    SELECT
-      time_bucket('1 hour', observation_time) as bucket, --time_bucket是必须的。
-      device_id,
-      avg(metric) as metric_avg, --可以使用任何并行聚合。
-      max(metric)-min(metric) as metric_spread --聚合和常量可以使用表达式。
-    FROM
-      device_readings
-    GROUP BY bucket, device_id; --必须按time_bucket进行分组，但也可以添加其他列的分组。
-    ```
-
-3.  查询连续聚合视图device\_summary，示例如下：
-
-    ```
-    --查询2019年5月14~15日的聚合数据。
-    SELECT * FROM device_summary
-    WHERE device_id = 'device1'
-      AND bucket >= '2019-05-14' AND bucket < '2018-05-16';
-    ```
-
-    ![查询连续聚合视图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155832121247340_zh-CN.png)
-
+![移动平均数](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/219313/155955557647338_zh-CN.png)
 
