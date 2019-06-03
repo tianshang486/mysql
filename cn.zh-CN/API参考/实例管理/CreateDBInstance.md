@@ -32,7 +32,7 @@
 |EngineVersion|String|是|5.6|数据库版本，取值：
 
  -   MySQL：**5.5/5.6/5.7/8.0**；
--   SQLServer：**2008r2/2012/2012\_ent\_ha/2012\_std\_ha/2012\_web/2016\_ent\_ha/2016\_std\_ha/2016\_web/2017\_ent**；
+-   SQL Server：**2008r2/2012/2012\_ent\_ha/2012\_std\_ha/2012\_web/2016\_ent\_ha/2016\_std\_ha/2016\_web/2017\_ent**；
 -   PostgreSQL：**9.4/10.0**；
 -   PPAS：**9.3/10.0**；
 -   MariaDB：**10.3**。
