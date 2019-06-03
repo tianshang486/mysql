@@ -1,4 +1,4 @@
-# AllocateReadWriteSplittingConnection {#doc_api_1064456 .reference}
+# AllocateReadWriteSplittingConnection {#doc_api_Rds_AllocateReadWriteSplittingConnection .reference}
 
 调用AllocateReadWriteSplittingConnection接口申请读写分离地址。
 
@@ -40,7 +40,7 @@
  **说明：** 当只读实例延迟超过该阈值时，读取流量不发往该实例。
 
  |
-|NetType|String|否|Public|读写分离连接串的网络类型，取值：
+|NetType|String|否|Intranet|读写分离连接串的网络类型，取值：
 
  -   **Internet**：外网；
 -   **Intranet**：内网。
