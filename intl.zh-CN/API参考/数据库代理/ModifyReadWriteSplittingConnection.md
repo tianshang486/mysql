@@ -7,10 +7,7 @@
 -   实例状态为运行中；
 -   实例中没有正在执行的迁移任务。
 
-**说明：** 
-
--   适用于MySQL实例和SQL Server 2017集群版实例。
--   参数**MaxDelayTime**不适用于SQL Server 2017集群版实例。
+**说明：** 适用于MySQL实例和SQL Server 2017集群版实例。
 
 ## 调试 {#apiExplorer .section}
 
@@ -31,11 +28,11 @@
  **说明：** 默认以“实例名+rw”字符串组成前缀。
 
  |
-|MaxDelayTime|String|否|12|延迟阈值，单位为秒。当只读实例延迟时间超过该阈值时，读取流量不发往该实例
+|MaxDelayTime|String|否|12|延迟阈值，单位为秒。当只读实例延迟时间超过该阈值时，读取流量不发往该实例。不传该参数则保持原值。
 
  **说明：** 
 
--   不传该参数则保持原值；
+-   参数**MaxDelayTime**不适用于SQL Server 2017集群版实例；
 -   至少传入**MaxDelayTime**或**DistributionType**中的一个。
 
  |
