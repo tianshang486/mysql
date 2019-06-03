@@ -18,7 +18,7 @@
 |Action|String|是|DescribeTags|系统规定参数，取值：**DescribeTags**。
 
  |
-|RegionId|String|是|cn-hangzhou|地域ID，长度不超过50个字符，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
+|RegionId|String|是|cn-hangzhou|地域ID，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
 
  |
 |DBInstanceId|String|否|rm-uf6wjk5xxxxxxx|实例ID。
@@ -30,6 +30,12 @@
 
  |
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+
+ |
+|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
+
+ |
+|proxyId|String|否|API|代理模式ID。
 
  |
 
