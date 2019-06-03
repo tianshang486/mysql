@@ -17,7 +17,7 @@
 |Action|String|是|CreateDBInstance|系统规定参数，取值：**CreateDBInstance**。
 
  |
-|RegionId|String|是|cn-hangzhou|地域ID，长度不超过50个字符，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
+|RegionId|String|是|cn-hangzhou|地域ID，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
 
  |
 |Engine|String|是|MySQL|数据库类型，取值：
