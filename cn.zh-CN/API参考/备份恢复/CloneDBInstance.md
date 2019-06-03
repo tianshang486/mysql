@@ -34,7 +34,7 @@
 -   **Prepaid**：预付费（包年包月）。
 
  |
-|RegionId|String|否|cn-hangzhou|地域ID，长度不超过50个字符，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
+|RegionId|String|否|cn-hangzhou|地域ID，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
 
  |
 |ZoneId|String|否|cn-hangzhou-b|可用区ID。
