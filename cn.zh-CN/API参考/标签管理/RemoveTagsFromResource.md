@@ -23,10 +23,13 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|RegionId|String|是|cn-hangzhou|地域ID，长度不超过50个字符，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
+|RegionId|String|是|cn-hangzhou|地域ID，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
 
  |
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+
+ |
+|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
 
  |
 |Tag.1.key|String|否|key1|要解绑的第一组标签的Tagkey。需要解绑的标签，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。
@@ -62,6 +65,9 @@
 |Tags|String|否|\{"key1":"value1"\}|需要解绑的一组标签，包括TagKey和TagValue。格式：\{"key1":"value1"\}。
 
  **说明：** TagKey不能为空，TagValue可以为空。
+
+ |
+|proxyId|String|否|API|代理模式ID。
 
  |
 
