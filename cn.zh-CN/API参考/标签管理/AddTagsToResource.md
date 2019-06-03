@@ -1,4 +1,4 @@
-# AddTagsToResource {#doc_api_1091691 .reference}
+# AddTagsToResource {#doc_api_Rds_AddTagsToResource .reference}
 
 调用AddTagsToResource接口为实例绑定标签。
 
@@ -21,7 +21,7 @@
 |Action|String|是|AddTagsToResource|系统规定参数，取值：**AddTagsToResource**。
 
  |
-|RegionId|String|是|cn-hagnzhou|地域ID，长度不超过50个字符，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
+|RegionId|String|是|cn-hagnzhou|地域ID，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
 
  |
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
