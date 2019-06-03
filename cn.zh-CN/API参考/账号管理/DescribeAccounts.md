@@ -1,4 +1,4 @@
-# DescribeAccounts {#doc_api_1105966 .reference}
+# DescribeAccounts {#doc_api_Rds_DescribeAccounts .reference}
 
 调用DescribeAccounts接口查看实例的帐号信息。
 
@@ -82,7 +82,7 @@
 -   **Super**：高权限账号。
 
  |
-|└PrivExceeded|String|0|授权是否超过限制，取值：
+|└PrivExceeded|String|0|账号管理的数据库是否超过最大数量限制，取值：
 
  -   **1**：是；
 -   **0**：否。
