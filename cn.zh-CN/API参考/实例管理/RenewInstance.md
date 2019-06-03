@@ -1,4 +1,4 @@
-# RenewInstance {#doc_api_1105139 .reference}
+# RenewInstance {#doc_api_Rds_RenewInstance .reference}
 
 调用RenewInstance接口对RDS实例进行续费。
 
@@ -7,8 +7,10 @@
 调用该接口时，实例必须满足以下条件，否则将操作失败：
 
 -   该接口仅支持续费包年包月的RDS实例；
--   付款时，默认优先使用您账号下可用的优惠券；
 -   您的账号必须支持账号余额支付或信用支付。
+
+**说明：** 付款时，默认优先使用您账号下可用的优惠券；
+
 
 ## 调试 {#apiExplorer .section}
 
