@@ -87,7 +87,7 @@
 -   **h**：独占物理机。
 
  |
-|└DBInstanceClass|String|rds.mys2.small|实例规格。
+|└DBInstanceClass|String|rds.mys2.small|实例规格，详情请参见[实例规格表](~~26312~~)。
 
  |
 |└DBInstanceMemory|Long|4096|实例内存，单位：M。
@@ -96,7 +96,7 @@
 |└DBInstanceStorage|Integer|10|实例存储空间，单位：GB。
 
  |
-|└DBInstanceNetType|String|Internet|实例的网络连接类型，取值：
+|└DBInstanceNetType|String|Internet|实例是内网或外网，取值：
 
  -   **Internet**：外网；
 -   **Intranet**：内网。
@@ -188,9 +188,6 @@
 -   **cloud\_ssd**：SSD云盘。
 
  |
-|└DispenseMode|String|ClassicDispenseMode|分配模式。
-
- |
 |└Extra| | |扩展信息。
 
  |
@@ -258,7 +255,6 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
       <AccountMaxQuantity>99999</AccountMaxQuantity>
       <CurrentKernelVersion>rds_20170714</CurrentKernelVersion>
       <DBInstanceCPU>2</DBInstanceCPU>
-      <IPType>IPv4</IPType>
       <ZoneId>cn-hangzhou-f</ZoneId>
       <ReadOnlyDBInstanceIds/>
       <ConnectionMode>Standard</ConnectionMode>
@@ -320,7 +316,6 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
 				},
 				"CurrentKernelVersion":"rds_20170714",
 				"DBInstanceCPU":"2",
-				"IPType":"IPv4",
 				"ZoneId":"cn-hangzhou-f",
 				"ConnectionMode":"Standard",
 				"ReadOnlyDBInstanceIds":{
@@ -341,8 +336,8 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceAttribute
 				"SupportUpgradeAccountType":"No",
 				"AccountType":"Mix",
 				"LockMode":"Unlock",
-				"MaxIOPS":600,
 				"DBInstanceNetType":"Intranet",
+				"MaxIOPS":600,
 				"DBInstanceClass":"mysql.n2.medium.1",
 				"DBMaxQuantity":99999,
 				"DBInstanceId":"rm-bp176xxxxx",
