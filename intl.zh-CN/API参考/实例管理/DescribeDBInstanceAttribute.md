@@ -47,7 +47,14 @@
 -   **Temp**：临时实例。
 
  |
-|└Category|String|Basic| |
+|└Category|String|Basic|实例系列，取值：
+
+ -   **Basic**：基础版；
+-   **HighAvailability**：高可用版；
+-   **AlwaysOn**：集群版；
+-   **Finance**：金融版（仅中国站支持）。
+
+ |
 |└InstanceNetworkType|String|Classic|实例的网络类型，取值：
 
  -   **Classic**：经典网络；

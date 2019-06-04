@@ -51,7 +51,8 @@
 
  -   **Basic**：基础版；
 -   **HighAvailability**：高可用版；
--   **Finance**：金融版（仅支持中国站）。
+-   **AlwaysOn**：集群版；
+-   **Finance**：金融版（仅中国站支持）。
 
  |
 |└InstanceNetworkType|String|Classic|实例的网络类型，取值：
