@@ -1,6 +1,6 @@
 # RenewInstance {#doc_api_Rds_RenewInstance .reference}
 
-调用RenewInstance接口对RDS实例进行续费。
+调用RenewInstance接口对RDS实例进行手动续费。
 
  **请确保在使用该接口前，已充分了解RDS产品的收费方式和[价格](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing)。** 
 
@@ -39,7 +39,7 @@
 |ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
 
  |
-|AutoPay|String|否|True|是否自动付费。取值：
+|AutoPay|String|否|True|续费时是否自动付费。取值：
 
  -   **True**：自动付费。请确保账号有足够的余额。
 -   **False**：控制台手动付费。具体操作为：登录控制台，在右上角选择**费用\>进入费用中心**，在**订单管理**找到目标订单进行支付。
