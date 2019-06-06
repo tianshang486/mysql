@@ -19,7 +19,7 @@
 
 -   操作系统中已安装数据恢复工具Percona XtraBackup。MySQL 5.6及之前的版本需要安装 Percona XtraBackup 2.3。MySQL 5.7版本需要安装 Percona XtraBackup 2.4。可以从Percona XtraBackup官网下载安装，安装指导请参见官方文档 [Percona XtraBackup 2.3](https://www.percona.com/doc/percona-xtrabackup/2.3/installation.html)、[Percona XtraBackup 2.4](https://www.percona.com/doc/percona-xtrabackup/2.4/installation.html)。
 
-## 备份恢复操作步骤 { .section}
+## 备份恢复操作步骤 {#section_ooe_3fz_r97 .section}
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com)。
 2.  在页面左上角，选择实例所在地域。
@@ -29,16 +29,18 @@
 6.  选择查询的时间范围，然后单击**查询**。
 7.  在数据备份列表中，找到要下载的数据备份，并单击其右侧的**下载**。
 
-    ![下载数据备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155798735547407_zh-CN.png)
+    **说明：** 如果没有**下载**按钮，请确认您的实例版本是否支持[下载物理备份文件](../../../../intl.zh-CN/用户指南/备份数据/下载数据备份和日志备份.md#)。对于不支持的实例版本，建议您通过[逻辑备份恢复](intl.zh-CN/常见问题/数据备份__恢复/RDS for MySQL 逻辑备份文件恢复到自建数据库.md#)，或者通过[数据库恢复](../../../../intl.zh-CN/用户指南/恢复数据/恢复MySQL数据.md#)功能将数据恢复到支持下载物理备份文件的实例上再进行操作。
+
+    ![下载数据备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155980129147407_zh-CN.png)
 
 8.  在实例备份文件下载窗口，单击**复制外网地址**，获取数据备份文件外网下载地址。
 
-    ![复制外网下载地址](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155798735547408_zh-CN.png)
+    ![复制外网下载地址](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155980129147408_zh-CN.png)
 
 9.  登录云服务器ECS。
 10. 执行如下命令，下载数据备份文件。
 
-    ```
+    ``` {#codeblock_8q1_jx0_mvl}
     wget -c '<数据备份文件外网下载地址>' -O <自定义文件名>.tar.gz
     					
     ```
@@ -60,19 +62,19 @@
 
     对于tar 压缩包 （.tar.gz 后缀），使用命令：
 
-    ```
+    ``` {#codeblock_xpo_vum_r09}
     tar -izxvf <数据备份文件名>.tar.gz -C /home/mysql/data
     ```
 
     对于xbstream 压缩包 （.xb.gz 后缀），使用命令：
 
-    ```
+    ``` {#codeblock_o3v_gfv_syk}
     gzip -d -c <数据备份文件名>.xb.gz | xbstream -x -v -C /home/mysql/data
     ```
 
     对于xbstream 文件包 \(\_qp.xb 后缀\)，使用命令：
 
-    ```
+    ``` {#codeblock_y11_9a2_tgq}
     ## 解包
     cat <数据备份文件名>_qp.xb | xbstream -x -v -C /home/mysql/data
     ## 解压
@@ -83,37 +85,37 @@
 
 12. 执行如下命令，查询解压后生成的文件。
 
-    ```
+    ``` {#codeblock_0eg_uzq_fls}
     ls -l /home/mysql/data
     					
     ```
 
     命令执行成功后，系统会返回如下结果，其中蓝色字体为生成备份文件时RDS实例所包含的数据库。
 
-    ![查看解压文件](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155798735547410_zh-CN.jpg)
+    ![查看解压文件](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155980129147410_zh-CN.jpg)
 
 13. 执行如下命令，恢复解压好的备份文件。
 
-    ```
+    ``` {#codeblock_1pd_fvx_w4h}
     innobackupex --defaults-file=/home/mysql/data/backup-my.cnf --apply-log /home/mysql/data
     					
     ```
 
     若系统返回如下类似结果，则说明备份文件已成功恢复到本地数据库。
 
-    ![恢复成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155798735547412_zh-CN.jpg)
+    ![恢复成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155980129147412_zh-CN.jpg)
 
 14. 为避免版本问题，需修改backup-my.cnf参数，具体操作步骤如下。
     1.  执行如下命令，以文本方式编辑backup-my.cnf文件。
 
-        ```
+        ``` {#codeblock_62v_93u_j4y}
         vi /home/mysql/data/backup-my.cnf
         							
         ```
 
     2.  如果有如下参数，需要注释掉。
 
-        ```language-bash
+        ``` {#codeblock_nl2_snh_63t .language-bash}
         #innodb_log_checksum_algorithm
         #innodb_fast_checksum
         #innodb_log_block_size
@@ -126,7 +128,7 @@
 
         **说明：** 如果本地使用的是MyISAM引擎，和阿里云的InnoDB不兼容，需要多注释掉如下参数并增加skip-grant-tables参数：
 
-        ```
+        ``` {#codeblock_c4d_5nf_abd}
         #innodb_log_checksum_algorithm=strict_crc32
         #redo_log_version=1
         skip-grant-tables
@@ -135,27 +137,27 @@
     3.  按**Esc**键，然后输入`:wq`并回车进行保存。
 15. 执行如下命令，修改文件属主，并确定文件所属为MySQL用户。
 
-    ```language-bash
+    ``` {#codeblock_nat_wuy_eou .language-bash}
     chown -R mysql:mysql /home/mysql/data
     					
     ```
 
 16. 执行如下命令，启动MySQL进程。
 
-    ```
+    ``` {#codeblock_s00_cqo_7pc}
     mysqld_safe --defaults-file=/home/mysql/data/backup-my.cnf --user=mysql --datadir=/home/mysql/data &
     					
     ```
 
 17. 执行如下命令，登录MySQL数据库以验证进程启动成功。
 
-    ```
+    ``` {#codeblock_o16_aau_cpg}
     mysql -uroot -p<数据库密码>
     					
     ```
 
     若系统返回如下结果，进程启动成功，则说明已成功执行参数注释和修改文件属主。
 
-    ![启动成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155798735547413_zh-CN.jpg)
+    ![启动成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155980129147413_zh-CN.jpg)
 
 
