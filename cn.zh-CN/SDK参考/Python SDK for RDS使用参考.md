@@ -9,18 +9,18 @@
 1.  进入[阿里云开发工具包](https://develop.aliyun.com/tools/sdk#/python)的Python SDK页面。
 2.  单击**从PyPI上获取安装包**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82215/155288653835006_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82215/155979051535006_zh-CN.png)
 
 3.  单击**Download files**，在右侧下载压缩文件。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82215/155288653835007_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/82215/155979051535007_zh-CN.png)
 
 
 ## 请求步骤 {#section_ur2_pqn_fgb .section}
 
 1.  发起调用，导入相关产品的SDK。
 
-    ```
+    ``` {#codeblock_9yu_1vc_b43}
     from aliyunsdkcore.client import AcsClient
     from aliyunsdkcore.acs_exception.exceptions import ClientException
     from aliyunsdkcore.acs_exception.exceptions import ServerException
@@ -29,7 +29,7 @@
 
 2.  新建AcsClient。
 
-    ```
+    ``` {#codeblock_yze_bs5_yfq}
     client = AcsClient(
     "<access-key-id>", 
     "<access-key-secret>",
@@ -38,8 +38,12 @@
 
 3.  设置域名。
 
-    ```
-    client.addEndpoint("<region-id>", "<region-id>", "< product>", "<endpoint>");
+    ``` {#codeblock_bl8_oif_1n9}
+    client.addEndpoint(
+    "<region-id>", 
+    "<region-id>", 
+    "< product>", 
+    "<endpoint>");
     ```
 
     **说明：** 域名请参见[表 1](#table_rjg_k5n_fgb)。
@@ -94,31 +98,31 @@
 
 4.  创建Request对象（查询实例详情），并设置请求参数。
 
-    ```
+    ``` {#codeblock_vy1_uru_ol3}
     request =DescribeDBInstanceAttributeRequest();
     request.set_DBInstanceId("实例名称");
     ```
 
 5.  初始化客户端。
 
-    ```
+    ``` {#codeblock_cvo_fuq_thz}
     response = client.do_action_with_exception(request)
     ```
 
 6.  调用返回结果。
 
-    ```
+    ``` {#codeblock_a3o_k0o_zkc}
     print response
     ```
 
 
-## 实例生命周期参考实例 {#section_sws_3xn_fgb .section}
+## 实例生命周期参考示例 {#section_sws_3xn_fgb .section}
 
-1.  **创建实例。**
+1.  **创建实例** 
 
     **调用示例**
 
-    ```
+    ``` {#codeblock_489_qgi_hue}
     from aliyunsdkcore.client import AcsClient
     from aliyunsdkcore.acs_exception.exceptions import ClientException
     from aliyunsdkcore.acs_exception.exceptions import ServerException
@@ -154,19 +158,19 @@
 
     **返回结果**
 
-    ```
+    ``` {#codeblock_2dj_cbo_67f}
     {
-      "OrderId":"202796346400941",
-      "DBInstanceId":"pgm-1111111111",
+      "OrderId":"20279634xxxxxxx",
+      "DBInstanceId":"pgm-xxxxxxx",
       "RequestId":"BAF2A62B-804B-4C6C-BEE4-BAD2CA4C79E1"
     }
     ```
 
-2.  **实例变配。**
+2.  **实例变配** 
 
     **调用示例**
 
-    ```
+    ``` {#codeblock_ik0_g4h_ckj}
     from aliyunsdkcore.client import AcsClient
     from aliyunsdkcore.acs_exception.exceptions import ClientException
     from aliyunsdkcore.acs_exception.exceptions import ServerException
@@ -179,7 +183,7 @@
             "cn-hangzhou"
             );
     request =ModifyDBInstanceSpecRequest();
-    request.set_DBInstanceId("pgm-1111111111");
+    request.set_DBInstanceId("pgm-xxxxxxx");
     request.set_PayType("Postpaid");
     request.set_DBInstanceClass("pg.n2.small.1");
     try:
@@ -189,20 +193,20 @@
             print e
     except ClientException as e:
             print e
-    
+    					
     ```
 
     **返回结果**
 
-    ```
+    ``` {#codeblock_fuq_c8g_pam}
     {"RequestId":"B77F7694-B632-4C2A-BEA5-F8E44AD3A97E"}
     ```
 
-3.  **创建只读实例。**
+3.  **创建只读实例** 
 
     **调用示例**
 
-    ```
+    ``` {#codeblock_804_gnx_4ld}
     from aliyunsdkcore.client import AcsClient
     from aliyunsdkcore.acs_exception.exceptions import ClientException
     from aliyunsdkcore.acs_exception.exceptions import ServerException
@@ -215,11 +219,11 @@
             "cn-hangzhou"
             );
     request =CreateReadOnlyDBInstanceRequest();
-    request.set_DBInstanceId("rm-11111111111111");
+    request.set_DBInstanceId("rm-xxxxxxx");
     request.set_EngineVersion("5.6");
     request.set_DBInstanceClass("rds.mysql.s1.small");
     request.set_DBInstanceStorage("20");
-    request.set_DBInstanceDescription("aaa");
+    request.set_DBInstanceDescription("testDesc");
     request.set_PayType("Postpaid");
     request.set_ZoneId("cn-hangzhou-b");
     request.set_InstanceNetworkType("Classic");
@@ -234,22 +238,22 @@
 
     **返回结果**
 
-    ```
+    ``` {#codeblock_hbm_8ab_333}
     {
-            "OrderId": "1214369754489523", 
-            "ConnectionString": "rr-bp1111111111.mysql.rds.aliyuncs.com", 
-            "DBInstanceId": "rr-bp1111111111", 
+            "OrderId": "1214369xxxxxxx", 
+            "ConnectionString": "rr-bpxxxxxxx.mysql.rds.aliyuncs.com", 
+            "DBInstanceId": "rr-bpxxxxxxx", 
             "Port": "3306", 
             "RequestId": "1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC"
-           
+    
     }
     ```
 
-4.  **重启实例。**
+4.  **重启实例** 
 
     **调用示例**
 
-    ```
+    ``` {#codeblock_9hk_1dk_q7s}
     from aliyunsdkcore.client import AcsClient
     from aliyunsdkcore.acs_exception.exceptions import ClientException
     from aliyunsdkcore.acs_exception.exceptions import ServerException
@@ -262,7 +266,7 @@
             "cn-hangzhou"
             );
     request =RestartDBInstanceRequest();
-    request.set_DBInstanceId("rm-bp1111111111");
+    request.set_DBInstanceId("rm-bpxxxxxxx");
     try:
             response = client.do_action_with_exception(request)
             print response
@@ -274,15 +278,15 @@
 
     **返回结果**
 
-    ```
+    ``` {#codeblock_2xx_b1b_e9o}
     {"RequestId":"EED6E546-099A-4434-AB09-C85DD396E17B"}
     ```
 
-5.  **实例列表。**
+5.  **实例列表** 
 
     **调用示例**
 
-    ```
+    ``` {#codeblock_ds3_wqh_w1z}
     from aliyunsdkcore.client import AcsClient
     from aliyunsdkcore.acs_exception.exceptions import ClientException
     from aliyunsdkcore.acs_exception.exceptions import ServerException
@@ -307,7 +311,7 @@
 
     **返回结果**
 
-    ```
+    ``` {#codeblock_om5_pv0_0ci}
     {
         "Items": {
             "DBInstance": [
@@ -315,8 +319,8 @@
                     "LockMode": "Unlock",
                     "DBInstanceNetType": "Intranet",
                     "DBInstanceClass": "rds.mysql.s2.large",
-                    "ResourceGroupId": "rg-acf1111111111",
-                    "DBInstanceId": "rm-bp1111111111111",
+                    "ResourceGroupId": "rg-acfxxxxxxx",
+                    "DBInstanceId": "rm-bpxxxxxxx",
                     "VpcCloudInstanceId": "",
                     "ZoneId": "cn-hangzhou-f",
                     "ReadOnlyDBInstanceIds": {
@@ -340,8 +344,8 @@
                     "LockMode": "Unlock",
                     "DBInstanceNetType": "Intranet",
                     "DBInstanceClass": "rds.mysql.s2.large",
-                    "ResourceGroupId": "rg-acf1111111111",
-                    "DBInstanceId": "rm-bp1111111111111",
+                    "ResourceGroupId": "rg-acfxxxxxxx",
+                    "DBInstanceId": "rm-bpxxxxxxx",
                     "VpcCloudInstanceId": "",
                     "ZoneId": "cn-hangzhou-g",
                     "ReadOnlyDBInstanceIds": {
