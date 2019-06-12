@@ -8,7 +8,7 @@ RDS supports two billing methods.
 |--------------|-----------|
 |Subscription| -   Indicates prepayment. You need to pay when creating an instance.
 -   For long-term requirements, Subscription is more cost-effective than Pay-As-You-Go. Moreover, the longer the subscription, the higher the discount.
--   Subscription instances cannot be released manually. To release a Subscription instance before the contract period ends, you need to pay an extra fee.
+-   Subscription instances cannot be released manually.
 -   Subscription instances cannot be converted to Pay-As-You-Go instances.
 
  |
@@ -24,7 +24,7 @@ RDS supports two billing methods.
 |----|----------------|
 |Master instance|The price depends on the [RDS instance specifications](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#). The billing method is Subscription or Pay-As-You-Go.|
 |Storage|The billing method is Subscription or Pay-As-You-Go, depending on the billing method of the master instance.|
-|[Read-only instance](../../../../intl.en-US/Quick Start for MySQL/Scale instances/Read-only instance/Introduction to read-only instances.md#)|The billing method is Pay-As-You-Go. The costs depend on the read-only instance specifications.|
+|[Read-only instance](../../../../intl.en-US/Quick Start for MySQL/Scale instances/Read-only instance/Introduction to MySQL read-only instances.md#)|The billing method is Pay-As-You-Go. The costs depend on the read-only instance specifications.|
 |[Clone instance](../../../../intl.en-US/User Guide/Recovery/Restore MySQL data.md#)|A clone instance is the instance created when you restore data to a new instance. The costs are the same as those of a master instance.|
 |[Backup space](../../../../intl.en-US/User Guide/Backup/Back up RDS data.md#)|No charge is incurred if the size of the backups \(data and log backups\) of an instance do not exeed the [free quota](../../../../intl.en-US/User Guide/Backup/View the free quota of the backup space.md#). If they exceed the free quota, the excess space used is billed by hour.|
 |[Monitoring](../../../../intl.en-US/User Guide/Monitoring and Alarming/Set the monitoring frequency.md#)| -   Free: monitoring frequency of once every 60 or 300 seconds
