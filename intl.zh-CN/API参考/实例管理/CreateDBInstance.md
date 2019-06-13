@@ -75,7 +75,7 @@
 -   SQL Server实例：**Chinese\_PRC\_CI\_AS、Chinese\_PRC\_CS\_AS、SQL\_Latin1\_General\_CP1\_CI\_AS、SQL\_Latin1\_General\_CP1\_CS\_AS、Chinese\_PRC\_BIN**。
 
  |
-|DBInstanceDescription|String|否|测试数据库|实例名称，长度为2~256个字符。以中文、英文字母开头，可以包含可以包含数字、中文、英文、下划线（\_）、短横线（-）。
+|DBInstanceDescription|String|否|测试数据库|实例名称，长度为2~256个字符。以中文、英文字母开头，可以包含数字、中文、英文、下划线（\_）、短横线（-）。
 
  **说明：** 不能以 http:// 和 https:// 开头。
 
@@ -83,7 +83,7 @@
 |ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
 
  |
-|ZoneId|String|否|cn-hangzhou-b|可用区ID。
+|ZoneId|String|否|cn-hangzhou-b|可用区ID。多可用区用英文冒号（:）分隔。
 
  **说明：** 指定了VPC和交换机时，为匹配交换机对应的可用区，该参数必填。
 
@@ -168,10 +168,14 @@
 |OrderId|String|1007893702xxxxx|订单ID。
 
  |
-|ConnectionString|String|rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com|数据库内网连接地址。
+|ConnectionString|String|rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com|数据库连接地址。
+
+ **说明：** 参数**DBInstanceNetType**决定该地址为内网或外网。
 
  |
-|Port|String|3306|数据库内网连接端口。
+|Port|String|3306|数据库连接端口。
+
+ **说明：** 参数**DBInstanceNetType**决定该端口为内网或外网。
 
  |
 |RequestId|String|1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC|请求ID。
