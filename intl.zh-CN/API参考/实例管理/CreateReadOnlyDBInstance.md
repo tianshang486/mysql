@@ -1,4 +1,4 @@
-# CreateReadOnlyDBInstance {#doc_api_1105949 .reference}
+# CreateReadOnlyDBInstance {#doc_api_Rds_CreateReadOnlyDBInstance .reference}
 
 调用CreateReadOnlyDBInstance接口为某个实例创建一个只读实例。
 
@@ -6,7 +6,7 @@
 
 -   主实例的版本必须为以下其中一种：
     -   MySQL 5.6
-    -   MySQL 5.7高可用版（本地SSD盘）
+    -   MySQL 5.7/8.0高可用版（本地SSD盘）
     -   SQL Server 2017集群版
 -   对于MySQL类型实例：
     -   如果主实例内存≥64GB，最多允许创建10个只读实例。
@@ -45,13 +45,14 @@
 
  -   **5.6**
 -   **5.7**
+-   **8.0**
 -   **2017\_ent**
 
  |
 |PayType|String|是|Postpaid|付费类型，仅支持按量付费，取值：**Postpaid**。
 
  |
-|DBInstanceDescription|String|否|测试只读实例|实例描述，长度为2~256个字符。以中文、英文字母开头，可以包含可以包含数字、中文、英文、下划线（\_）、短横线（-）。
+|DBInstanceDescription|String|否|测试只读实例|实例描述，长度为2~256个字符。以中文、英文字母开头，可以包含数字、中文、英文、下划线（\_）、短横线（-）。
 
  **说明：** 不能以 http:// 和 https:// 开头。
 
@@ -152,10 +153,13 @@ http(s)://rds.aliyuncs.com/?Action=CreateReadOnlyDBInstance
 
 |HttpCode|错误码|错误信息|描述|
 |--------|---|----|--|
+|400|InvalidEngineVersion.Malformed|The specified parameter "EngineVersion" is not valid.|指定EngineVersion参数无效。|
 |400|InvalidSecurityIPList.Malformed|The specified parameter "SecurityIPList" is not valid.|指定的SecurityIPList参数无效。|
 |400|InvalidSecurityIPList.Duplicate|The Security IP address is not in the available range or occupied.|指定的安全IP地址已被占用或不在有效区间内。|
 |400|InvalidParameter|The specified parameter "dbInstanceId" is not valid.|指定dbInstanceId参数无效。|
 |403|OperationDenied.PrimaryDBInstanceStatus|The operation is not permitted due to status of primary instance.|主实例状态不支持，实例处于运行态，才能做此操作。|
+|400|OperationDenied|VPC IP is in use, please check.|该Ip已经被使用，请您更换IP再重试。|
+|404|IncorrectDBInstanceConnType|Current DB instance conn type does not support this operation.|当前DB实例连接类型不支持此操作。|
 |400|InvalidZoneId.NotSupported|The Specified vpc Zone not supported.|当前可用区不支持生产 VPC 实例，请您更换可用区再试。|
 
 [查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)

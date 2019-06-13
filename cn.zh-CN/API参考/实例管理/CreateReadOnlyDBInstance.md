@@ -52,7 +52,7 @@
 |PayType|String|是|Postpaid|付费类型，仅支持按量付费，取值：**Postpaid**。
 
  |
-|DBInstanceDescription|String|否|测试只读实例|实例描述，长度为2~256个字符。以中文、英文字母开头，可以包含可以包含数字、中文、英文、下划线（\_）、短横线（-）。
+|DBInstanceDescription|String|否|测试只读实例|实例描述，长度为2~256个字符。以中文、英文字母开头，可以包含数字、中文、英文、下划线（\_）、短横线（-）。
 
  **说明：** 不能以 http:// 和 https:// 开头。
 
