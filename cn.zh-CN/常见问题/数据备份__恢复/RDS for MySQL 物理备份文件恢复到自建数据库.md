@@ -19,6 +19,15 @@
 
 -   操作系统中已安装数据恢复工具Percona XtraBackup。MySQL 5.6及之前的版本需要安装 Percona XtraBackup 2.3。MySQL 5.7版本需要安装 Percona XtraBackup 2.4。可以从Percona XtraBackup官网下载安装，安装指导请参见官方文档 [Percona XtraBackup 2.3](https://www.percona.com/doc/percona-xtrabackup/2.3/installation.html)、[Percona XtraBackup 2.4](https://www.percona.com/doc/percona-xtrabackup/2.4/installation.html)。
 
+## 前提条件 {#section_hqi_9kq_hlg .section}
+
+实例版本如下：
+
+-   MySQL 8.0高可用本地盘版
+-   MySQL 5.7高可用本地盘版
+-   MySQL 5.6
+-   MySQL 5.5
+
 ## 备份恢复操作步骤 {#section_ooe_3fz_r97 .section}
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com)。
@@ -29,13 +38,13 @@
 6.  选择查询的时间范围，然后单击**查询**。
 7.  在数据备份列表中，找到要下载的数据备份，并单击其右侧的**下载**。
 
-    **说明：** 如果没有**下载**按钮，请确认您的实例版本是否支持[下载物理备份文件](../../../../intl.zh-CN/用户指南/备份数据/下载数据备份和日志备份.md#)。对于不支持的实例版本，建议您通过[逻辑备份恢复](intl.zh-CN/常见问题/数据备份__恢复/RDS for MySQL 逻辑备份文件恢复到自建数据库.md#)，或者通过[数据库恢复](../../../../intl.zh-CN/用户指南/恢复数据/恢复MySQL数据.md#)功能将数据恢复到支持下载物理备份文件的实例上再进行操作。
+    **说明：** 如果没有**下载**按钮，请确认您的实例版本是否支持[下载物理备份文件](../../../../intl.zh-CN/用户指南/备份数据/下载数据备份和日志备份.md#)。
 
-    ![下载数据备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155980129147407_zh-CN.png)
+    ![下载数据备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156039158547407_zh-CN.png)
 
 8.  在实例备份文件下载窗口，单击**复制外网地址**，获取数据备份文件外网下载地址。
 
-    ![复制外网下载地址](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155980129147408_zh-CN.png)
+    ![复制外网下载地址](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156039158647408_zh-CN.png)
 
 9.  登录云服务器ECS。
 10. 执行如下命令，下载数据备份文件。
@@ -92,7 +101,7 @@
 
     命令执行成功后，系统会返回如下结果，其中蓝色字体为生成备份文件时RDS实例所包含的数据库。
 
-    ![查看解压文件](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155980129147410_zh-CN.jpg)
+    ![查看解压文件](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156039158647410_zh-CN.jpg)
 
 13. 执行如下命令，恢复解压好的备份文件。
 
@@ -103,7 +112,7 @@
 
     若系统返回如下类似结果，则说明备份文件已成功恢复到本地数据库。
 
-    ![恢复成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155980129147412_zh-CN.jpg)
+    ![恢复成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156039158647412_zh-CN.jpg)
 
 14. 为避免版本问题，需修改backup-my.cnf参数，具体操作步骤如下。
     1.  执行如下命令，以文本方式编辑backup-my.cnf文件。
@@ -158,6 +167,6 @@
 
     若系统返回如下结果，进程启动成功，则说明已成功执行参数注释和修改文件属主。
 
-    ![启动成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/155980129147413_zh-CN.jpg)
+    ![启动成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156039158747413_zh-CN.jpg)
 
 
