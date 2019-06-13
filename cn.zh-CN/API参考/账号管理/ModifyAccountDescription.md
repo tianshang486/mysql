@@ -1,4 +1,4 @@
-# ModifyAccountDescription {#doc_api_1064592 .reference}
+# ModifyAccountDescription {#doc_api_Rds_ModifyAccountDescription .reference}
 
 调用ModifyAccountDescription接口修改数据库账号的描述。
 
@@ -21,7 +21,7 @@
 |AccountName|String|是|test1|账号名称。
 
  |
-|AccountDescription|String|是|测试账号A|账号描述，长度为2~256个字符。以中文、英文字母开头，可以包含可以包含数字、中文、英文、下划线（\_）、短横线（-）。
+|AccountDescription|String|是|测试账号A|账号描述，长度为2~256个字符。以中文、英文字母开头，可以包含数字、中文、英文、下划线（\_）、短横线（-）。
 
  **说明：** 不能以 http:// 和 https:// 开头。
 
