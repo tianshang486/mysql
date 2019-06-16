@@ -26,7 +26,7 @@ API Explorer provides various functions to simplify API usage. For example, you 
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx| The ID of the master instance.
 
  |
-|ConnectionStringPrefix|String|否|rr-m5exxxxx-rw.mysql.rds.aliyuncs.com| The prefix of the read/write splitting address. It must be unique and start with a letter. It contains at most 30 characters, including lowercase letters or hyphens \(-\).
+|ConnectionStringPrefix|String|No|rr-m5exxxxx-rw.mysql.rds.aliyuncs.com| The prefix of the read/write splitting address. It must be unique and start with a letter. It contains at most 30 characters, including lowercase letters or hyphens \(-\).
 
  **Note:** By default, the prefix is "instance name + rw".
 
@@ -103,7 +103,7 @@ Normal response examples
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_spe_zdl_ig2 .section}
 
 [View error codes](https://error-center.alibabacloud.com/status/product/Rds)
 
