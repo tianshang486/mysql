@@ -1,6 +1,6 @@
 # CheckCreateDdrDBInstance {#doc_api_Rds_CheckCreateDdrDBInstance .reference}
 
-调用CheckCreateDdrDBInstance接口预检查备份集是否支持跨地域恢复。
+调用CheckCreateDdrDBInstance接口预检查某RDS实例是否有跨地域备份集用于跨地域恢复。
 
 ## 调试 {#apiExplorer .section}
 
