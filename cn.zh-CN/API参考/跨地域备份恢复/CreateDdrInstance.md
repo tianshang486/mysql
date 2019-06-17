@@ -50,12 +50,10 @@
 -   **Prepaid**：预付费（包年包月）。
 
  |
-|RestoreType|String|是|0|恢复类型，取值：
+|RestoreType|String|是|0|恢复方式，取值：
 
  -   **0**：基于备份集恢复，您还需要传入参数**BackupSetID**；
 -   **1**：基于时间点恢复，您还需要传入参数**RestoreTime**、**SourceRegion**、**SourceDBInstanceName**。
-
- 默认值：**0**。
 
  |
 |SecurityIPList|String|是|127.0.0.1|目的实例的[IP白名单](~~43185~~)，多个IP地址请以英文逗号（,）隔开，不可重复，最多1000个。支持如下两种格式：
@@ -100,7 +98,7 @@
  -   **Standard**：标准访问模式；
 -   **Safe**：数据库代理模式。
 
- 默认为RDS系统分配。
+ 默认值：**Standard**。
 
  |
 |SystemDBCharset|String|否|uft8|目的实例的字符集，取值：
