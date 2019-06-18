@@ -4,7 +4,7 @@
 
 查看数据备份文件请参见[DescribeCrossRegionBackups](~~121733~~)。
 
-**说明：** 仅适用于如下实例：
+仅适用于如下实例：
 
 -   MySQL 5.7高可用本地SSD盘版
 -   MySQL 5.6
