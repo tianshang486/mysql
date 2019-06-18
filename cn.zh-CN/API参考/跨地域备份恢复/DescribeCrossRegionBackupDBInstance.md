@@ -1,6 +1,11 @@
 # DescribeCrossRegionBackupDBInstance {#doc_api_Rds_DescribeCrossRegionBackupDBInstance .reference}
 
-调用DescribeCrossRegionBackupDBInstance接口查询所选地域的实例跨地域备份设置。
+调用DescribeCrossRegionBackupDBInstance接口查询所选地域的哪些实例开启了跨地域备份，以及这些实例的跨地域备份设置。
+
+**说明：** 仅适用于如下实例：
+
+-   MySQL 5.7高可用本地SSD盘版
+-   MySQL 5.6
 
 ## 调试 {#apiExplorer .section}
 
@@ -33,7 +38,7 @@
  默认值：30。
 
  |
-|DBInstanceId|String|否|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|否|rm-uf6wjk5xxxxxxxxxx|实例ID。一次最多传入30个实例ID，以英文逗号（,）分隔。
 
  |
 
@@ -82,7 +87,7 @@
 |└CrossBackupRegion|String|cn-shanghai|跨地域备份目的地域ID。
 
  |
-|└CrossBackupType|String|1|跨地域备份类型。当前仅支持每个备份都保存，默认值：**1**。
+|└CrossBackupType|String|1|跨地域备份保存类型。默认值：**1**，表示每个备份都保存。
 
  |
 |└DBInstanceDescription|String|测试数据库|实例名称，长度为2~256个字符。以中文、英文字母开头，可以包含数字、中文、英文、下划线（\_）、短横线（-）。
@@ -147,7 +152,6 @@ http(s)://rds.aliyuncs.com/?Action=DescribeCrossRegionBackupDBInstance
 <DescribeCrossRegionBackupDBInstanceResponse>
   <Items>
     <Item>
-      <DBInstanceStatusDesc>ACTIVATION</DBInstanceStatusDesc>
       <LockMode>Unlock</LockMode>
       <CrossBackupType>1</CrossBackupType>
       <LogBackupEnabled>Enable</LogBackupEnabled>
@@ -180,7 +184,6 @@ http(s)://rds.aliyuncs.com/?Action=DescribeCrossRegionBackupDBInstance
 	"Items":{
 		"Item":[
 			{
-				"DBInstanceStatusDesc":"ACTIVATION",
 				"LockMode":"Unlock",
 				"CrossBackupType":"1",
 				"LogBackupEnabled":"Enable",
