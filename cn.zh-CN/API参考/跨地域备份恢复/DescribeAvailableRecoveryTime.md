@@ -1,6 +1,13 @@
 # DescribeAvailableRecoveryTime {#doc_api_Rds_DescribeAvailableRecoveryTime .reference}
 
-调用DescribeAvailableRecoveryTime接口查询所选备份文件可恢复的时间段。
+调用DescribeAvailableRecoveryTime接口查询某跨地域备份文件可恢复哪个时间段的数据。
+
+查看普通备份文件可恢复哪个时间段的数据请参见[DescribeBackups](~~26273~~)。
+
+**说明：** 仅适用于如下实例：
+
+-   MySQL 5.7高可用本地SSD盘版
+-   MySQL 5.6
 
 ## 调试 {#apiExplorer .section}
 
@@ -13,7 +20,7 @@
 |Action|String|是|DescribeAvailableRecoveryTime|系统规定参数，取值：**DescribeAvailableRecoveryTime**。
 
  |
-|CrossBackupId|Integer|是|14377|跨地域备份文件ID。
+|CrossBackupId|Integer|是|14377|跨地域备份文件ID。可以通过接口[DescribeCrossRegionBackups](~~121733~~)查看备份集ID。
 
  |
 |RegionId|String|否|cn-hangzhou|地域ID。
