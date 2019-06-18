@@ -4,7 +4,7 @@
 
 查看日志备份文件请参见[DescribeCrossRegionLogBackupFiles](~~121734~~)。
 
-**说明：** 仅适用于如下实例：
+仅适用于如下实例：
 
 -   MySQL 5.7高可用本地SSD盘版
 -   MySQL 5.6
