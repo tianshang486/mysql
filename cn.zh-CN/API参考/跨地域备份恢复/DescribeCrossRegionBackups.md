@@ -1,6 +1,13 @@
 # DescribeCrossRegionBackups {#doc_api_Rds_DescribeCrossRegionBackups .reference}
 
-调用DescribeCrossRegionBackups接口查看跨地域数据备份文件列表。
+调用DescribeCrossRegionBackups接口查看某RDS实例跨地域数据备份文件列表。
+
+查看日志备份文件请参见[DescribeCrossRegionLogBackupFiles](~~121734~~)。
+
+**说明：** 仅适用于如下实例：
+
+-   MySQL 5.7高可用本地SSD盘版
+-   MySQL 5.6
 
 ## 调试 {#apiExplorer .section}
 
@@ -78,19 +85,19 @@
 |RequestId|String|60912B41-7579-4B5D-B289-8856030F0A6A|请求ID。
 
  |
-|Items| | |跨地域数据备份列表。
+|Items| | |跨地域备份列表。
 
  |
 |└BackupEndTime|String|2019-06-15T12:10Z|跨地域备份结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└BackupMethod|String|P|跨地域数据备份方式，取值：
+|└BackupMethod|String|P|跨地域备份方式，取值：
 
  -   **L**：逻辑备份；
 -   **P**：物理备份。
 
  |
-|└BackupSetScale|Integer|0|备份文件的备份等级，取值：
+|└BackupSetScale|Integer|0|备份文件的备份策略，取值：
 
  -   **0**：实例备份；
 -   **1**：单库备份。
@@ -124,13 +131,13 @@
 |└CrossBackupDownloadLink|String|http://rdsddrbak-shanghai.oss-cn-shanghai.aliyuncs.com/xxxxx|跨地域备份文件外网下载链接。
 
  |
-|└CrossBackupId|Integer|14377|跨地域数据备份文件ID。
+|└CrossBackupId|Integer|14377|跨地域备份文件ID。
 
  |
 |└CrossBackupRegion|String|cn-shanghai|跨地域备份的目的地域ID。
 
  |
-|└CrossBackupSetFile|String|cn-hangzhou\_rm-xxxxx\_hins81xxx\_data\_20190612134426\_qp.xb|跨地域数据备份文件压缩包名称。
+|└CrossBackupSetFile|String|cn-hangzhou\_rm-xxxxx\_hins81xxx\_data\_20190612134426\_qp.xb|跨地域备份文件压缩包名称。
 
  |
 |└CrossBackupSetLocation|String|oss|备份文件存储位置。
@@ -148,10 +155,10 @@
 |└EngineVersion|String|5.6|数据库版本。
 
  |
-|└InstanceId|Integer|8161055|实例编号。
+|└InstanceId|Integer|8161055|实例编号。用于区分该备份集产生于主实例或备实例。
 
  |
-|└RestoreRegions| |"cn-hangzhou", "cn-shanghai"|可以跨地域进行备份的地域列表。
+|└RestoreRegions| |"cn-hangzhou", "cn-shanghai"|备份文件可以进行恢复的地域列表，即备份文件可以恢复到哪些地域。
 
  |
 
