@@ -2,7 +2,7 @@
 
 调用DescribeInstanceCrossBackupPolicy接口查询跨地域备份设置。
 
-**说明：** 仅适用于如下实例：
+仅适用于如下实例：
 
 -   MySQL 5.7高可用本地SSD盘版
 -   MySQL 5.6
