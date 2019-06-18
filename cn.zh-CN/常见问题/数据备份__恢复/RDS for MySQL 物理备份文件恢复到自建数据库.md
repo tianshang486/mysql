@@ -39,11 +39,11 @@
 
     **说明：** 如果没有**下载**按钮，请确认您的实例版本是否支持[下载物理备份文件](../../../../intl.zh-CN/用户指南/备份数据/下载数据备份和日志备份.md#)。
 
-    ![下载数据备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156039182847407_zh-CN.png)
+    ![下载数据备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156083947847407_zh-CN.png)
 
 8.  在实例备份文件下载窗口，单击**复制外网地址**，获取数据备份文件外网下载地址。
 
-    ![复制外网下载地址](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156039182847408_zh-CN.png)
+    ![复制外网下载地址](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156083947847408_zh-CN.png)
 
 9.  登录云服务器ECS。
 10. 执行如下命令，下载数据备份文件。
@@ -100,7 +100,7 @@
 
     命令执行成功后，系统会返回如下结果，其中蓝色字体为生成备份文件时RDS实例所包含的数据库。
 
-    ![查看解压文件](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156039182847410_zh-CN.jpg)
+    ![查看解压文件](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156083947847410_zh-CN.jpg)
 
 13. 执行如下命令，恢复解压好的备份文件。
 
@@ -111,7 +111,7 @@
 
     若系统返回如下类似结果，则说明备份文件已成功恢复到本地数据库。
 
-    ![恢复成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156039182847412_zh-CN.jpg)
+    ![恢复成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156083947947412_zh-CN.jpg)
 
 14. 为避免版本问题，需修改backup-my.cnf参数，具体操作步骤如下。
     1.  执行如下命令，以文本方式编辑backup-my.cnf文件。
@@ -121,7 +121,7 @@
         							
         ```
 
-    2.  如果有如下参数，需要注释掉。
+    2.  自建数据库不支持如下参数，需要注释掉。
 
         ``` {#codeblock_nl2_snh_63t .language-bash}
         #innodb_log_checksum_algorithm
@@ -134,13 +134,21 @@
         #master_key_id
         ```
 
-        **说明：** 如果本地使用的是MyISAM引擎，和阿里云的InnoDB不兼容，需要多注释掉如下参数并增加skip-grant-tables参数：
+        **说明：** 
 
-        ``` {#codeblock_c4d_5nf_abd}
-        #innodb_log_checksum_algorithm=strict_crc32
-        #redo_log_version=1
-        skip-grant-tables
-        ```
+        -   如果本地使用的是MyISAM引擎，和阿里云的InnoDB不兼容，需要多注释掉如下参数并增加skip-grant-tables参数：
+
+            ``` {#codeblock_a4z_eiq_jli}
+            #innodb_log_checksum_algorithm=strict_crc32
+            #redo_log_version=1
+            skip-grant-tables
+            ```
+
+        -   如果本地使用的是MyIAM引擎，且对系统表进行操作时报错（存储引擎相关），请按如下操作进行存储引擎的转换：
+
+            ``` {#codeblock_ksm_3u3_jrp}
+            alter engine <表名> engine=myisam;
+            ```
 
     3.  按**Esc**键，然后输入`:wq`并回车进行保存。
 15. 执行如下命令，修改文件属主，并确定文件所属为MySQL用户。
@@ -166,6 +174,6 @@
 
     若系统返回如下结果，进程启动成功，则说明已成功执行参数注释和修改文件属主。
 
-    ![启动成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156039182947413_zh-CN.jpg)
+    ![启动成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156083947947413_zh-CN.jpg)
 
 
