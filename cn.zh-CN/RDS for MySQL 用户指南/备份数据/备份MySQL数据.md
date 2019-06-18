@@ -2,11 +2,19 @@
 
 备份数据用于应付数据丢失或损坏，您可以设置备份策略自动备份MySQL数据和日志，或者手动备份MySQL数据。
 
-## 注意事项 {#section_jyb_zgx_wfb .section}
+**说明：** 本文介绍的是默认的备份功能，备份文件存储于实例所在地域。您还可以将备份文件存储于另一个地域，详情请参见[跨地域备份](cn.zh-CN/RDS for MySQL 用户指南/备份数据/跨地域备份.md#)。
 
--   实例备份文件占用备份空间，空间使用量超出免费的额度将会产生额外的费用，请合理设计备份周期，以满足业务需求的同时，兼顾备份空间的合理利用。关于免费额度详情，请参见[查看备份空间免费额度](cn.zh-CN/RDS for MySQL 用户指南/备份数据/查看备份空间免费额度.md#)。
+## 费用 {#section_p9f_5fb_ks3 .section}
+
+每个RDS实例的备份空间都有一定量的免费额度，实例备份文件占用备份空间，空间使用量超出免费的额度将会产生额外的费用，请合理设计备份周期，以满足业务需求的同时，兼顾备份空间的合理利用。关于免费额度详情，请参见[查看备份空间免费额度](cn.zh-CN/RDS for MySQL 用户指南/备份数据/查看备份空间免费额度.md#)。
+
+**说明：** 
+
 -   关于具体的计费方式与收费项，请参见[计费方式与收费项](../cn.zh-CN/云数据库RDS价格/计费方式与收费项.md#)。
 -   关于备份空间使用量的计费标准，请参见[云数据库 RDS 详细价格信息](https://www.aliyun.com/price/product#/rds/detail)。
+
+## 注意事项 {#section_jyb_zgx_wfb .section}
+
 -   备份期间不要执行DDL操作，避免锁表导致备份失败。
 -   尽量选择业务低峰期进行备份。
 -   若数据量较大，花费的时间可能较长，请耐心等待。
@@ -46,7 +54,7 @@
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156075627436543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156082651436543_zh-CN.png)
 
 3.  单击目标实例的ID，进入基本信息页面。
 4.  在菜单中选择**备份恢复**。
@@ -69,7 +77,7 @@
 
  |
 
-    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156075627437578_zh-CN.png)
+    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156082651537578_zh-CN.png)
 
 
 ## 手动备份MySQL数据 {#section_yvd_yk4_ydb .section}
@@ -79,17 +87,17 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156075627436543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156082651436543_zh-CN.png)
 
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 5.  设置好备份方式、备份策略，单击**确定**。
 
-    ![物理备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156075627440345_zh-CN.png)
+    ![物理备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156082651540345_zh-CN.png)
 
     **说明：** 如果是**逻辑备份** \> **单库备份**，请在左侧选择要备份的数据库，单击**\>**将要备份的数据库加入列表。若您还没有数据库，请先[创建数据库](../cn.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md#)。
 
-    ![单库逻辑备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156075627540344_zh-CN.png)
+    ![单库逻辑备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156082651540344_zh-CN.png)
 
 
 ## 常见问题 {#section_h54_lrx_pgb .section}
