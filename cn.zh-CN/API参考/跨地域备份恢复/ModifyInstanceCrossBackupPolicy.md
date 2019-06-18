@@ -2,6 +2,11 @@
 
 调用ModifyInstanceCrossBackupPolicy接口修改RDS跨地域备份设置。
 
+**说明：** 仅适用于如下实例：
+
+-   MySQL 5.7高可用本地SSD盘版
+-   MySQL 5.6
+
 ## 调试 {#apiExplorer .section}
 
 前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=ModifyInstanceCrossBackupPolicy)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
@@ -28,7 +33,7 @@
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
-|BackupEnabled|String|否|1|跨地域备份总开关，取值：
+|BackupEnabled|String|否|1|跨地域备份总开关（数据备份+日志备份），取值：
 
  -   **0**：关闭；
 -   **1**：开启。
