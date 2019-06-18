@@ -2,7 +2,7 @@
 
 调用CheckCreateDdrDBInstance接口预检查某RDS实例是否可以用跨地域备份集进行跨地域恢复。
 
-**说明：** 仅适用于如下实例：
+仅适用于如下实例：
 
 -   MySQL 5.7高可用本地SSD盘版
 -   MySQL 5.6
