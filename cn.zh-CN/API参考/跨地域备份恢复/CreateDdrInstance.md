@@ -2,10 +2,12 @@
 
 调用CreateDdrInstance接口跨地域恢复数据到新实例。
 
-**说明：** 
+恢复前可以调用[CheckCreateDdrDBInstance](~~121721~~)接口预检查某RDS实例是否可以用跨地域备份集进行跨地域恢复。
 
--   恢复前可以调用[CheckCreateDdrDBInstance](~~121721~~)接口预检查某RDS实例是否有跨地域备份集用于跨地域恢复。
--   恢复前可以调用[DescribeAvailableCrossRegion](~~121735~~)接口查询所选地域当前可以进行跨地域备份的目的地域。。
+**说明：** 仅适用于如下实例：
+
+-   MySQL 5.7高可用本地SSD盘版
+-   MySQL 5.6
 
 ## 调试 {#apiExplorer .section}
 
