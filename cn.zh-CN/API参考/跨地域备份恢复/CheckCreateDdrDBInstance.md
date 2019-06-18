@@ -1,6 +1,11 @@
 # CheckCreateDdrDBInstance {#doc_api_Rds_CheckCreateDdrDBInstance .reference}
 
-调用CheckCreateDdrDBInstance接口预检查某RDS实例是否有跨地域备份集用于跨地域恢复。
+调用CheckCreateDdrDBInstance接口预检查某RDS实例是否可以用跨地域备份集进行跨地域恢复。
+
+**说明：** 仅适用于如下实例：
+
+-   MySQL 5.7高可用本地SSD盘版
+-   MySQL 5.6
 
 ## 调试 {#apiExplorer .section}
 
@@ -18,6 +23,8 @@
  |
 |Engine|String|是|MySQL|目的数据库类型，取值：**MySQL**。
 
+ **说明：** 当前仅RDS for MySQL支持跨地域备份。
+
  |
 |DBInstanceClass|String|是|rds.mysql.s1.small|目的实例规格，详见[实例规格表](~~26312~~)。
 
@@ -33,7 +40,7 @@
 -   **5.7**。
 
  |
-|RestoreType|String|是|0|恢复类型，取值：
+|RestoreType|String|是|0|恢复方式，取值：
 
  -   **0**：基于备份集恢复，您还需要传入参数**BackupSetID**；
 -   **1**：基于时间点恢复，您还需要传入参数**RestoreTime**、**SourceRegion**、**SourceDBInstanceName**。
