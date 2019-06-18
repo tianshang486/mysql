@@ -2,7 +2,7 @@
 
 调用DescribeCrossRegionBackupDBInstance接口查询所选地域的哪些实例开启了跨地域备份，以及这些实例的跨地域备份设置。
 
-**说明：** 仅适用于如下实例：
+仅适用于如下实例：
 
 -   MySQL 5.7高可用本地SSD盘版
 -   MySQL 5.6
