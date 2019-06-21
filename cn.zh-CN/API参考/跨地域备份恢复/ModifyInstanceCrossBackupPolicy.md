@@ -2,7 +2,7 @@
 
 调用ModifyInstanceCrossBackupPolicy接口修改RDS跨地域备份设置。
 
-**说明：** 仅适用于如下实例：
+仅适用于如下实例：
 
 -   MySQL 5.7高可用本地SSD盘版
 -   MySQL 5.6
@@ -18,7 +18,7 @@
 |Action|String|是|ModifyInstanceCrossBackupPolicy|系统规定参数，取值：**ModifyInstanceCrossBackupPolicy**。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。一次最多传入30个实例ID，以英文逗号（,）分隔。
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
 
  |
 |RegionId|String|是|cn-hangzhou|源实例地域ID，可以通过接口[DescribeRegions](~~26243~~)查看地域ID。
