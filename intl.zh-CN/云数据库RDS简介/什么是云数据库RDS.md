@@ -39,6 +39,7 @@
 
 创建RDS实例后，您可以通过以下方式访问RDS实例：
 
+-   DMS：您可以[通过DMS登录到RDS实例](../../../../intl.zh-CN/用户指南/附录/通过DMS登录RDS数据库.md)，在Web界面进行数据库开发工作。
 -   客户端：RDS兼容原生的数据库协议，您可以使用通用的数据库客户端工具访问RDS实例。例如，MySQL-Front、SSMS（SQL Server Management Studio）、pgAdmin等。
 
 ## RDS定价 {#section_kzx_jg1_42b .section}
