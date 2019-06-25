@@ -4,7 +4,7 @@
 
 如果已创建聚簇索引，再次创建会失败，报错如下。
 
-![重复创建报错](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8390/155807230947471_zh-CN.png)
+![重复创建报错](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8390/156144806047471_zh-CN.png)
 
 ## 使用sp\_helpindex查看索引 {#section_4ze_jyu_g6p .section}
 
@@ -26,5 +26,7 @@ DROP INDEX <索引名> ON <数据库名>.<表名>
 
 ## 重新计算统计信息 {#section_0wu_ntv_0wk .section}
 
-统计信息，实际就是创建索引时的`STATISTICS_NORECOMPUTE`选项，其意思就是是否重新计算统计信息，默认值是OFF，即需要重新计算（因为该选项本身就是否定的意思no-recompute），一般来说都需要重新计算。
+统计信息指的是创建索引时的STATISTICS\_NORECOMPUTE选项。一般来说都需要重新计算，详情请参见[CREATE INDEX](https://docs.microsoft.com/zh-cn/previous-versions/sql/sql-server-2008-r2/ms188783(v=sql.105))。
+
+**说明：** STATISTICS\_NORECOMPUTE的默认值是OFF，即需要重新计算（因为该选项本身就是否定的意思）。
 
