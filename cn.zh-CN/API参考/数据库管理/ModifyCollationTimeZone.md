@@ -1,19 +1,8 @@
-# ModifyCollationTimeZone {#doc_api_1091836 .reference}
+# ModifyCollationTimeZone {#doc_api_1101360 .reference}
 
-调用ModifyCollationTimeZone接口修改系统库的字符集排序规则和时区。
+调用ModifyCollationTimeZone接口修改系统库的字符集排序规则和时区，已下线。
 
-对于RDS for SQL Server 2012或以上版本的实例，您可以修改系统库的字符集排序规则和时区。系统库包括master、msdb、tempdb和model。
-
-调用该接口时，实例必须满足以下条件，否则将操作失败：
-
--   实例类型为RDS for SQL Server 2012或以上版本；
--   实例中没有任何用户数据库（即您创建的数据库，非系统数据库）。
-
-**说明：** 
-
--   默认的字符集排序规则：Chinese\_PRC\_CI\_AS；
--   默认的时区：China Standard Time。
--   修改期间，实例将处于不可用状态。修改时区需要大约1分钟，修改字符集排序规则需要2到10分钟。
+**说明：** 该API已下线。
 
 ## 调试 {#apiExplorer .section}
 
@@ -23,37 +12,37 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|ModifyCollationTimeZone|系统规定参数，取值为**ModifyCollationTimeZone**。
+| Action |String|是|ModifyCollationTimeZone| 系统规定参数，取值为 **ModifyCollationTimeZone** 。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
+| DBInstanceId |String|是|rm-uf6wjk5xxxxxxx| 实例ID。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+| AccessKeyId |String|否|LTAIfCxxxxxxx| 阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
-|Collation|String|否|Latin1\_General\_CI\_AS|系统字符集排序规则，取值：
+| Collation |String|否|Latin1\_General\_CI\_AS| 系统字符集排序规则，取值：
 
- -   **Latin1\_General\_CI\_AS**
--   **Latin1\_General\_CS\_AS**
--   **SQL\_Latin1\_General\_CP1\_CI\_AS**
--   **SQL\_Latin1\_General\_CP1\_CS\_AS**
--   **Chinese\_PRC\_CS\_AS**
--   **Chinese\_PRC\_BIN**
--   **Chinese\_PRC\_CI\_AS**
--   **Japanese\_CI\_AS**
--   **Japanese\_CS\_AS**
--   **Chinese\_Taiwan\_Stroke\_CI\_AS**
--   **Chinese\_Taiwan\_Stroke\_CS\_AS**
+ -    **Latin1\_General\_CI\_AS** 
+-    **Latin1\_General\_CS\_AS** 
+-    **SQL\_Latin1\_General\_CP1\_CI\_AS** 
+-    **SQL\_Latin1\_General\_CP1\_CS\_AS** 
+-    **Chinese\_PRC\_CS\_AS** 
+-    **Chinese\_PRC\_BIN** 
+-    **Chinese\_PRC\_CI\_AS** 
+-    **Japanese\_CI\_AS** 
+-    **Japanese\_CS\_AS** 
+-    **Chinese\_Taiwan\_Stroke\_CI\_AS** 
+-    **Chinese\_Taiwan\_Stroke\_CS\_AS** 
 
  默认为不修改。
 
- **说明：** **Collation**与**Timezone**必须传入至少一个。
+ **说明：** **Collation** 与 **Timezone** 必须传入至少一个。
 
  |
-|Timezone|String|否|China Standard Time|系统时区，默认为不修改。
+| Timezone |String|否|China Standard Time| 系统时区，默认为不修改。
 
- **说明：** **Collation**与**Timezone**必须传入至少一个。
+ **说明：** **Collation** 与 **Timezone** 必须传入至少一个。
 
  |
 
@@ -61,19 +50,19 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|Collation|String|Latin1\_General\_CI\_AS|系统字符集排序规则。
+|Collation|String|Latin1\_General\_CI\_AS| 系统字符集排序规则。
 
  |
-|DBInstanceId|String|rm-uf6wjk5xxxxxxx|实例ID。
+|DBInstanceId|String|rm-uf6wjk5xxxxxxx| 实例ID。
 
  |
-|RequestId|String|8EA054AF-DFA7-497D-9F57-790FFC974C0B|请求ID。
+|RequestId|String|8EA054AF-DFA7-497D-9F57-790FFC974C0B| 请求ID。
 
  |
-|TaskId|String|114413215|任务ID。
+|TaskId|String|114413215| 任务ID。
 
  |
-|Timezone|String|China Standard Time|时区。
+|Timezone|String|China Standard Time| 时区。
 
  |
 
@@ -92,7 +81,7 @@ http(s)://rds.aliyuncs.com/?Action=ModifyCollationTimeZone
 
 正常返回示例
 
-`XML` 格式
+ `XML` 格式
 
 ``` {#xml_return_success_demo}
 <ModifyCollationTimeZoneResponse>
@@ -105,7 +94,7 @@ http(s)://rds.aliyuncs.com/?Action=ModifyCollationTimeZone
 
 ```
 
-`JSON` 格式
+ `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
@@ -119,5 +108,5 @@ http(s)://rds.aliyuncs.com/?Action=ModifyCollationTimeZone
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+ [查看本产品错误码](https://error-center.aliyun.com/status/product/Rds) 
 
