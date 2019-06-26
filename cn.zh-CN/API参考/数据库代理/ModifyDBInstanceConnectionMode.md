@@ -12,19 +12,19 @@
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-|Action|String|是|ModifyDBInstanceConnectionMode|系统规定参数，取值：ModifyDBInstanceConnectionMode。
+| Action |String|是|ModifyDBInstanceConnectionMode| 系统规定参数，取值：ModifyDBInstanceConnectionMode。
 
  |
-|ConnectionMode|String|是|Performance|Performance为标准访问模式；Safe为高安全访问模式。
+| ConnectionMode |String|是|Performance| Performance为标准访问模式；Safe为高安全访问模式。
 
  |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxx|实例名。
+| DBInstanceId |String|是|rm-uf6wjk5xxxxxx| 实例名。
 
  |
-|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+| AccessKeyId |String|否|LTAIfCxxxxxxx| 阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
-|OwnerAccount|String|否|testuser@aliyun.com|用户主账号。
+| OwnerAccount |String|否|testuser@aliyun.com| 用户主账号。
 
  |
 
@@ -32,7 +32,7 @@
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF|请求ID
+|RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF| 请求ID
 
  |
 
@@ -51,7 +51,7 @@ http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceConnectionMode
 
 正常返回示例
 
-`XML` 格式
+ `XML` 格式
 
 ``` {#xml_return_success_demo}
 <ModifyDBInstanceConnectionModeResponse>
@@ -60,7 +60,7 @@ http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceConnectionMode
 
 ```
 
-`JSON` 格式
+ `JSON` 格式
 
 ``` {#json_return_success_demo}
 {
@@ -70,5 +70,5 @@ http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceConnectionMode
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+ [查看本产品错误码](https://error-center.aliyun.com/status/product/Rds) 
 
