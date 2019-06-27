@@ -8,7 +8,7 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
 
 **说明：** 大量行锁冲突、行锁等待或后台任务也有可能会导致实例的CPU使用率过高，但这些情况出现的概率非常低，本文不做讨论。
 
-本文通过一个简化的模型来说明系统资源、语句执行成本以及QPS（Query Per Second每秒执行的查询数）之间的关系：
+下文通过一个简化的模型来说明系统资源、语句执行成本以及QPS（Query Per Second每秒执行的查询数）之间的关系：
 
 -   条件：应用模型恒定（应用没有修改）。
 -   avg\_lgc\_io：执行每条查询需要的平均逻辑 IO。
@@ -17,7 +17,7 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
 
 ## 解决方法 {#section_q1r_sf2_ggb .section}
 
-您可以利用数据管理（DMS）或者[CloudDBA](../../../../../cn.zh-CN/RDS for MySQL 用户指南/MySQL CloudDBA/MySQL CloudDBA简介.md#)解决MySQL/MariaDB实例CPU使用率过高的问题。本文主要介绍使用DMS来解决CPU使用率过高的问题，如何通过CloudDBA来解决CPU使用率过高的问题，可以参考文档[利用CloudDBA解决MySQL实例CPU使用率过高的问题](https://help.aliyun.com/document_detail/65233.html)。
+您可以利用数据管理（DMS）或者[CloudDBA](../../../../cn.zh-CN/RDS for MySQL 用户指南/性能优化__诊断（CloudDBA）/MySQL CloudDBA简介.md#)解决MySQL/MariaDB实例CPU使用率过高的问题。下文主要介绍使用DMS来解决CPU使用率过高的问题，如何通过CloudDBA来解决CPU使用率过高的问题，可以参考文档[利用CloudDBA解决MySQL实例CPU使用率过高的问题](https://help.aliyun.com/document_detail/65233.html)。
 
 数据管理工具提供了几种辅助排查并解决实例性能问题的功能，主要有：
 
@@ -42,7 +42,7 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
 
 ## 典型示例 {#section_gch_kg2_ggb .section}
 
-以CPU使用率为100%的典型场景为例，本文介绍了两个引起该状况的原因及其解决方案，即应用负载（QPS）高和查询执行成本（查询访问表数据行数avg\_lgc\_io）高。其中，由于查询执行成本高（查询访问表数据行数多）而导致实例CPU使用率高是MySQL非常常见的问题。
+以CPU使用率为100%的典型场景为例，下文介绍了两个引起该状况的原因及其解决方案，即应用负载（QPS）高和查询执行成本（查询访问表数据行数avg\_lgc\_io）高。其中，由于查询执行成本高（查询访问表数据行数多）而导致实例CPU使用率高是MySQL非常常见的问题。
 
 -   应用负载（QPS）高
     -   现象描述
@@ -77,7 +77,7 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
         1.  通过如下方式定位效率低的查询：
             -   通过 `show processlist;` 或 `show full processlist;` 命令查看当前执行的查询，如下图所示：
 
-                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/155479177935232_zh-CN.png)
+                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156161344435232_zh-CN.png)
 
                 对于查询时间长、运行状态（State 列）是**Sending data**、**Copying to tmp table**、**Copying to tmp table on disk**、**Sorting result**、**Using filesort**等都可能是有性能问题的查询（SQL）。
 
@@ -85,7 +85,7 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
 
                 -   若在QPS高导致CPU使用率高的场景中，查询执行时间通常比较短，`show processlist;`命令或实例会话中可能会不容易捕捉到当前执行的查询。您可以通过执行如下命令进行查询：
 
-                    ```
+                    ``` {#codeblock_32b_gqq_z9x}
                     explain select b.* from perf_test_no_idx_01 a, perf_test_no_idx_02 b where a.created_on >= 2015-01-01 and a.detail = b.detail
                     ```
 
@@ -94,11 +94,11 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
                 1.  在DMS控制台上[登录数据库](https://help.aliyun.com/document_detail/47714.html?spm=a2c4g.11186623.2.21.a665446edOcZDv)。
                 2.  选择**性能** \> **实例会话**，打开实例会话页面，如下图所示。
 
-                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/155479177935253_zh-CN.png)
+                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156161344435253_zh-CN.png)
 
                 3.  单击SQL列中的查询文本，即可显示完整的查询和其执行计划，如下图所示。
 
-                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/155479177935257_zh-CN.png)
+                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156161344435257_zh-CN.png)
 
         2.  得到需要优化的查询后，可以通过DMS控制台上SQL诊断来获取查询的优化建议：
 
@@ -107,11 +107,11 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
             1.  在DMS 控制台上[登录数据库](https://help.aliyun.com/document_detail/47714.html?spm=a2c4g.11186623.2.26.317b446eTd7q5l)。
             2.  选择**SQL操作** \> **SQL窗口**，如下图所示。
 
-                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/155479177935257_zh-CN.png)
+                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156161344435257_zh-CN.png)
 
             3.  单击SQL诊断，即可得到优化建议，如下图所示。
 
-                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/155479177935258_zh-CN.png)
+                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156161344435258_zh-CN.png)
 
         3.  根据优化建议，添加索引，查询执行成本就会大幅减少，实例CPU使用率100%的问题解决。
 
