@@ -4,7 +4,6 @@
 
 调用该接口时，实例必须满足以下条件，否则将操作失败：
 
--   实例为按量付费实例；
 -   实例状态为运行中；
 -   实例没有正在执行的备份任务；
 -   请求参数中必须至少指定实例规格（DBInstanceClass）和存储空间（DBInstanceStorage）其中一个参数；
@@ -25,7 +24,7 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|待变更配置的实例ID。
 
  |
-|PayType|String|是|Postpaid|付费类型，取值：
+|PayType|String|是|Postpaid|实例当前的付费类型，取值：
 
  -   **Postpaid**：按量付费；
 -   **Prepaid**：预付费。
@@ -36,15 +35,7 @@
  **说明：** 至少指定实例规格**DBInstanceClass**和存储空间**DBInstanceStorage**其中一个参数。
 
  |
-|DBInstanceStorage|Integer|否|20|自定义存储空间，取值必须为5的整数倍，取值：
-
- -   MySQL：**5-2000**；
--   SQL Server：**10-3000**；
--   PostgreSQL：**5-2000**；
--   PPAS：**250-500**；
--   MariaDB：**20-1000**。
-
- 不同付费方式和不同版本实例，支持的取值范围不同，请以控制台创建实例页面为准。
+|DBInstanceStorage|Integer|否|20|自定义存储空间，单位：GB。每5GB进行递增，详情请参见[实例规格表](~~26312~~)。
 
  **说明：** 至少指定实例规格**DBInstanceClass**和存储空间**DBInstanceStorage**其中一个参数。
 
@@ -59,7 +50,7 @@
  |
 |EngineVersion|String|否|5.6|数据库版本号，取值：
 
- -   MySQL：**5.5/5.6/5.7**；
+ -   MySQL：**5.5/5.6/5.7/8.0**；
 -   SQLServer：**2008r2/2012/2012\_ent\_ha/2012\_std\_ha/2012\_web/2016\_ent\_ha/2016\_std\_ha/2016\_web/2017\_ent**；
 -   PostgreSQL：**9.4/10.0**；
 -   PPAS：**9.3/10.0**；
