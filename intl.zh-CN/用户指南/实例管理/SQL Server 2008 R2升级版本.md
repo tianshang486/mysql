@@ -1,12 +1,11 @@
 # SQL Server 2008 R2升级版本 {#concept_t13_1wj_dhb .concept}
 
-您可以将SQL Server 2008 R2实例的引擎从低版本升级到高版本，并且可以在升级时更换可用区，升级前建议您使用临时实例测试兼容性。
+您可以将SQL Server 2008 R2实例的引擎从低版本升级到高版本，并且可以在升级时更换可用区，升级前建议您使用高版本临时实例测试兼容性。
 
 ## 前提条件 {#section_x1y_gwj_dhb .section}
 
--   仅支持从SQL Server 2008 R2升级到SQL Server 2012/2016企业版、SQL Server 2016标准版。
--   SQL Server 2008 R2实例的磁盘空间不能低于20GB。
--   SQL Server 2008 R2实例不能开启[TDE](../intl.zh-CN/用户指南/数据安全性/设置透明数据加密.md#)功能。
+-   SQL Server 2008 R2实例的存储空间总量不能低于20GB。
+-   SQL Server 2008 R2实例未开启[TDE](../intl.zh-CN/用户指南/数据安全性/设置透明数据加密.md#)功能。
 
 ## 注意事项 {#section_olz_cjr_dhb .section}
 
@@ -14,7 +13,9 @@
 
     **警告：** 由于升级后无法回退，建议您升级前先使用[高版本临时实例](#)测试兼容性等问题。
 
--   开启了SSL的实例可以直接升级，升级成功后高版本实例数据库连接名不变，但是SSL保护默认关闭，需要重新[设置 SSL 加密](../intl.zh-CN/用户指南/数据安全性/设置 SSL 加密.md#)。
+-   仅支持从SQL Server 2008 R2升级到SQL Server 2012/2016企业版、SQL Server 2016标准版。
+-   开启了SSL的实例可以直接升级，升级成功后高版本实例数据库连接地址不变，但是SSL保护默认关闭，需要重新[设置 SSL 加密](../intl.zh-CN/用户指南/数据安全性/设置SSL加密.md#)。
+-   SQL Server 2008 R2升级到SQL Server 2012/2016企业版会保留TDE功能，升级到SQL Server 2016标准版则没有TDE功能。
 -   升级版本完成后，切换停机时间依实例大小不同有变化，一般20分钟内完成，建议选择维护时间段切换，并请确保应用具备重连机制。
 
 ## 操作步骤 {#section_wwz_hv4_dhb .section}
@@ -22,12 +23,12 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155721415536543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156212534236543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在基本信息页面，单击**升级版本**，在弹出的对话框中单击**确定**。
 
-    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721415541115_zh-CN.png)
+    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156212534241115_zh-CN.png)
 
 5.  在升级引擎版本页面修改配置，说明如下：
 
@@ -35,7 +36,7 @@
     |----|--|
     |**升级到版本**|选择不同的目标版本，对应的**系列**、**存储类型**、**规格**选项也会变化。|
     |**系列**|**高可用版**：一主一备的经典高可用架构，各方面表现均衡。|
-    |**存储类型**|**SSD云盘**和**ESSD云盘**。|
+    |**存储类型**|**SSD云盘**。|
     |**可用区**|目标可用区，支持选择多可用区。|
     |**规格**|每种规格都有对应的CPU核数、内存、最大连接数和最大IOPS。详情请参见[实例规格表](../intl.zh-CN/云数据库RDS简介/实例规格/实例规格表.md#)。|
     |**网络类型**|无法选择**经典网络**，必须指定专有网络信息：     -   原实例为经典网络：可以修改专有网络和交换机。
@@ -46,7 +47,7 @@
     -   **可维护时间内进行切换**：立刻进行迁移并在可维护时间段内进行切换。
  |
 
-    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721415541116_zh-CN.png)
+    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156212534341116_zh-CN.png)
 
 6.  勾选服务条款，单击**确认变更**。
 
@@ -75,7 +76,7 @@
 4.  在左侧导航栏选择**备份恢复**。
 5.  在临时实例页签选择克隆数据的时间点，然后单击**创建高版本临时实例**。
 
-    ![选择高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721415546604_zh-CN.png)
+    ![选择高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156212534346604_zh-CN.png)
 
 6.  设置以下参数：
 
@@ -91,7 +92,7 @@
 
     **说明：** 高版本临时实例规格和存储类型都有默认配置，实例存活时间是7天，之后会自动释放。
 
-    ![高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/155721415546602_zh-CN.png)
+    ![高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156212534346602_zh-CN.png)
 
 7.  单击**确定**。
 
