@@ -56,7 +56,7 @@
  |
     |存储类型|SSD云盘或ESSD云盘。更多信息，请参见[存储类型](../../../../cn.zh-CN/云数据库RDS简介/存储类型.md)。|
     |存储空间|该存储空间包括数据空间、系统文件空间、Binlog文件空间和事务文件空间。|
-    |数据加密|仅香港地域提供，可以选择不加密或者使用KMS加密。|
+    |数据加密|仅香港地域提供，可以选择不加密或者使用[KMS加密](https://help.aliyun.com/document_detail/108805.html)。|
 
 4.  设置购买时长（仅针对包年包月实例）和实例数量，然后单击右侧的**立即购买**。
 5.  在订单确认页面，勾选服务条款，单击**去开通**完成支付。
@@ -119,7 +119,7 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156263941849667_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156264282149667_zh-CN.png)
 
 创建实例后，您需要[设置白名单](cn.zh-CN/RDS for PostgreSQL 快速入门/初始化配置/设置白名单.md)和[创建账号](cn.zh-CN/RDS for PostgreSQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](https://help.aliyun.com/document_detail/97738.html)。然后就可以[连接实例](cn.zh-CN/RDS for PostgreSQL 快速入门/连接实例.md)。
 
