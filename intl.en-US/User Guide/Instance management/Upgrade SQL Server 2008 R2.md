@@ -1,11 +1,14 @@
 # Upgrade SQL Server 2008 R2 {#concept_t13_1wj_dhb .concept}
 
-You can upgrade RDS for SQL Server 2008 R2 to a later version, and migrate instances across zones during the upgrade. We recommend that you use a temporary instance to test the version compatibility before performing the upgrade.
+You can upgrade RDS for SQL Server 2008 R2 to a later version, and migrate to other zones during the upgrade. We recommend that you use a temporary instance of the later version to test the version compatibility before performing the upgrade.
 
 ## Prerequisites {#section_x1y_gwj_dhb .section}
 
 -   The storage capacity of your SQL Server 2008 R2 instance is at least 20 GB.
--   The [TDE](../intl.en-US/User Guide/Security/Set TDE.md#) feature of your SQL Server 2008 R2 instance is disabled.
+-   The [TDE](../intl.en-US/User Guide/Security/Set TDE.md#) feature of your SQL Server 2008 R2 instance has not been enabled.
+
+    **Note:** If TDE is enabled, you must disable TDE for all databases and then open a ticket for disabling instance-level TDE.
+
 
 ## Precautions {#section_olz_cjr_dhb .section}
 
@@ -13,9 +16,9 @@ You can upgrade RDS for SQL Server 2008 R2 to a later version, and migrate insta
 
     **Warning:** We recommend that you use [a temporary instance of the target version](#) to test the version compatibility before the upgrade.
 
--   You can upgrade an instance from SQL Server 2008 R2 to SQL Server 2012/2016 Enterprise Edition or SQL Server 2016 Standard Edition only.
--   If SSL is enabled for your instance, you can upgrade your instance version directly. After the upgrade is completed, the instance connection address remains unchanged, but SSL is disabled by default. You need to re-enable it. For more information, see [Set SSL encryption](../intl.en-US/User Guide/Security/Set SSL encryption.md#).
--   The TDE feature remains after you upgrade your instance from SQL Server 2008 R2 to SQL Server 2012/2016 Enterprise Edition, but does not exist after you upgrade your instance to SQL Server 2016 Standard Edition.
+-   You can upgrade from SQL Server 2008 R2 to SQL Server 2012/2016 Enterprise Edition or SQL Server 2016 Standard Edition only.
+-   If SSL is enabled for your instance, you can still upgrade your instance version directly. After the upgrade is completed, the instance connection address remains unchanged, but SSL is disabled by default. You need to re-enable it. For more information, see [Set SSL encryption](../intl.en-US/User Guide/Security/Set SSL encryption.md#).
+-   The TDE feature remains if you upgrade your instance from SQL Server 2008 R2 to SQL Server 2012/2016 Enterprise Edition, but does not exist if you upgrade your instance to SQL Server 2016 Standard Edition.
 -   After the upgrade is completed, you need to switch over services. The downtime caused by the switchover varies depending on the instance size. In most cases, the switchover is completed within 20 minutes. We recommend that you switch over services when the system is being maintained. Make sure each application can be reconnected in the event of a disconnection.
 
 ## Procedure {#section_wwz_hv4_dhb .section}
@@ -23,12 +26,12 @@ You can upgrade RDS for SQL Server 2008 R2 to a later version, and migrate insta
 1.  Log on to the [ApsaraDB for RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where your instance is located.
 
-    ![Select a region](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156230605236543_en-US.png)
+    ![Select a region](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156273734736543_en-US.png)
 
 3.  Click the ID of your instance.
 4.  On the Basic Information page, click **Upgrade Version**. In the message that appears, click **Confirm**.
 
-    ![Upgrade the database version](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156230605241115_en-US.png)
+    ![Upgrade the database version](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156273734741115_en-US.png)
 
 5.  On the Upgrade Engine Version page, modify your instance configurations as follows.
 
@@ -47,7 +50,7 @@ You can upgrade RDS for SQL Server 2008 R2 to a later version, and migrate insta
     -   **Switch Within Maintenance Window**: Data is migrated immediately, and services are switched over during a maintenance period.
  |
 
-    ![Upgrade configuration](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156230605241116_en-US.png)
+    ![Upgrade configuration](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156273734741116_en-US.png)
 
 6.  Select the terms of service and click **Confirm**.
 
@@ -76,7 +79,7 @@ Before the upgrade, we recommend that you create a temporary instance of the tar
 4.  In the left-side navigation pane, click **Backup and Restoration**.
 5.  On the Temporary Instance tab, specify the time at which you want to clone data, and click **Create Temporary Instance of Higher Version**.
 
-    ![Select a temporary instance of the target version](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156230605246604_en-US.png)
+    ![Select a temporary instance of the target version](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156273734846604_en-US.png)
 
 6.  In the dialog box that appears, configure the following parameters.
 
@@ -92,7 +95,7 @@ Before the upgrade, we recommend that you create a temporary instance of the tar
 
     **Note:** The system provides a default instance type and a default storage type for a temporary instance. The temporary instance will be automatically released after seven days.
 
-    ![Temporary instance of the target version](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156230605346602_en-US.png)
+    ![Temporary instance of the target version](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156273734846602_en-US.png)
 
 7.  Click **OK**.
 
