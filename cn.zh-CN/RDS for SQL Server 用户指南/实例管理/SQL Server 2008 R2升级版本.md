@@ -7,6 +7,9 @@
 -   SQL Server 2008 R2实例的存储空间总量不能低于20GB。
 -   SQL Server 2008 R2实例未开启[TDE](cn.zh-CN/RDS for SQL Server 用户指南/数据安全性/设置透明数据加密.md#)功能。
 
+    **说明：** 已开启TDE的需要关闭所有数据库的TDE功能，然后提交工单申请关闭实例级别的TDE功能。
+
+
 ## 注意事项 {#section_olz_cjr_dhb .section}
 
 -   版本升级后无法回退到低版本。
@@ -23,12 +26,12 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156256390736543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156272713036543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在基本信息页面，单击**升级版本**，在弹出的对话框中单击**确定**。
 
-    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156256390741115_zh-CN.png)
+    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156272713041115_zh-CN.png)
 
 5.  在升级引擎版本页面修改配置，说明如下：
 
@@ -47,7 +50,7 @@
     -   **可维护时间内进行切换**：立刻进行迁移并在可维护时间段内进行切换。
  |
 
-    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156256390741116_zh-CN.png)
+    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156272713141116_zh-CN.png)
 
 6.  勾选服务条款，单击**确认变更**。
 
@@ -76,7 +79,7 @@
 4.  在左侧导航栏选择**备份恢复**。
 5.  在临时实例页签选择克隆数据的时间点，然后单击**创建高版本临时实例**。
 
-    ![选择高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156256390846604_zh-CN.png)
+    ![选择高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156272713146604_zh-CN.png)
 
 6.  设置以下参数：
 
@@ -92,7 +95,7 @@
 
     **说明：** 高版本临时实例规格和存储类型都有默认配置，实例存活时间是7天，之后会自动释放。
 
-    ![高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156256390846602_zh-CN.png)
+    ![高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156272713146602_zh-CN.png)
 
 7.  单击**确定**。
 
