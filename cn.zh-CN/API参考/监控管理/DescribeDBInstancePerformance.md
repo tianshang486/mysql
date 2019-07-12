@@ -2,16 +2,21 @@
 
 调用DescribeDBInstancePerformance接口查看实例性能数据。
 
-根据性能参数查看某个实例、某时间段范围内的性能监控数据。根据查询时间范围的不同，有如下3种输出形式：
+根据性能参数查看某个实例、某时间段范围内的性能监控数据。根据[监控频率](~~26200~~)（[ModifyDBInstanceMonitor](~~26282~~)）和查询时间范围的不同，有如下几种输出形式：
 
--   查询时间范围小于等于1天，采集粒度为5分钟；
--   查询时间范围大于7天小于等于15天，采集粒度为1小时；
--   查询时间范围大于等于30天小于等于1年，采集粒度为1天。
-
-    **说明：** 
-
-    -   查询时间范围大于1天小于7天，暂不支持；
-    -   查询时间范围大于15天小于30天，暂不支持。
+-   监控频率为5秒：
+    -   查询时间范围大于7天，采集粒度为1天；
+    -   查询时间范围大于1天，小于等于7天，采集粒度为1小时；
+    -   查询时间范围大于1小时，小于等于1天，采集粒度为1分钟；
+    -   查询时间范围小于等于1小时，采集粒度为5秒。
+-   监控频率为60秒：
+    -   查询范围大于30天的，返回粒度为1天；
+    -   查询范围大于7天小于30天的，返回粒度为1小时；
+    -   查询范围小于7天的，返回粒度为1分钟。
+-   监控频率为300秒：
+    -   查询范围大于30天的，返回粒度为1天；
+    -   查询范围大于7天小于30天的，返回粒度为1小时；
+    -   查询范围小于7天的，返回粒度为5分钟。
 
 ## 调试 {#apiExplorer .section}
 
@@ -39,7 +44,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -58,22 +63,22 @@
 |PerformanceKeys| | |实例性能参数列表。
 
  |
-|└Key|String|MySQL\_Sessions|性能参数。
+|Key|String|MySQL\_Sessions|性能参数。
 
  |
-|└Unit|String|KB|数据单位。
+|Unit|String|KB|数据单位。
 
  |
-|└ValueFormat|String|recv\_k&sent\_k|性能值的格式。如果性能值由多个参数构成，以“&”分隔，例如com\_delete&com\_insert&com\_insert\_select&com\_replace。
+|ValueFormat|String|recv\_k&sent\_k|性能值的格式。如果性能值由多个参数构成，以“&”分隔，例如com\_delete&com\_insert&com\_insert\_select&com\_replace。
 
  |
-|└Values| | |数组格式：\{value1, value2, …\}。
+|Values| | |数组格式：\{value1, value2, …\}。
 
  |
-|└Value|String|0.0&13.6|性能值。
+|Value|String|0.0&13.6|性能值。
 
  |
-|└Date|String|2011-05-30T03:29:00Z|记录日期。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|Date|String|2011-05-30T03:29:00Z|记录日期。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |RequestId|String|A5409D02-D661-4BF3-8F3D-0A814D0574E7|请求ID。
@@ -144,5 +149,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstancePerformance
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
