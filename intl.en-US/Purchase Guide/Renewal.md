@@ -1,18 +1,27 @@
 # Renewal {#concept_hql_dl2_vdb .concept}
 
-The following table provides billing information for RDS instance renewal.
+Renewal refers to extending the validity period of a Subscription instance.
 
-|Billing method|Renewal description|
-|--------------|-------------------|
-|Subscription| -   To avoid data loss in case you miss the renewal time, you can activate automatic renewal when you buy an instance.
+A Pay-As-You-Go instance does not expire. Therefore, you do not need to renew it. You only need to ensure that your Alibaba Cloud account has sufficient balance.
 
--   You can renew the instance within the contract period or within 15 days after contract expiration.
--   The renewed instance is billed based on the new configuration and length of service time you select during renewal. For more information about billing standards, see [Pricing](https://www.alibabacloud.com/product/apsaradb-for-rds?spm=a3c0i.7938564.220486.9.42173afcq1FHk9#pricing).
+## Pricing {#section_54o_i57_5y0 .section}
 
--   For more information about the renewal procedure, see [Manually renew the subscription instance](../../../../intl.en-US/User Guide/Instance management/Manually renew the subscription instance.md#).
+The pricing for a renewed Subscription instance is the same as that for a new Subscription instance. For more information, see [Price calculator](https://www.alibabacloud.com/pricing-calculator).
 
- |
-|Pay-As-You-Go| -   A Pay-As-You-Go instance is billed according to the actual usage time, so no renewal is required.
+## Payment time {#section_ge0_f4n_4wa .section}
 
- |
+-   Automatic renewal: At 08:00 three days before the instance expires, the system attemps to automatically deduct the renewal fees from your account. If the payment fails, the system attempts to complete the payment once per day until the payment succeeds before the instance expires. Ensure that your Alibaba Cloud account has sufficient balance.
+
+    **Note:** If your Subscription instance will expire in one day, you can only manually renew it.
+
+-   Manual renewal: The payment time depends on when you manually pay the fees for your Subscription instance.
+
+## Operation guides {#section_9kq_kpm_cwl .section}
+
+-   [Manually renew a Subscription instance](../../../../intl.en-US/User Guide/Billing management/Manually renew a Subscription instance.md)
+-   [Enable auto-renewal for a Subscription instance](../../../../intl.en-US/User Guide/Billing management/Enable auto-renewal for a Subscription instance.md)
+
+## Related topic {#section_dqt_hc7_h8e .section}
+
+[Impact of expiration and overdue payment](intl.en-US/Purchase Guide/Impact of expiration and overdue payment.md#)
 
