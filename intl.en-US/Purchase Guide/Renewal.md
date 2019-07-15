@@ -10,11 +10,11 @@ The pricing for a renewed Subscription instance is the same as that for a new Su
 
 ## Payment time {#section_ge0_f4n_4wa .section}
 
--   Automatic renewal: At 08:00 three days before the instance expires, the system attemps to automatically deduct the renewal fees from your account. If the payment fails, the system attempts to complete the payment once per day until the payment succeeds before the instance expires. Ensure that your Alibaba Cloud account has sufficient balance.
+-   Automatic renewal: At 08:00 three days before the instance expires, the system automatically deducts the renewal fees from your account. If the payment fails, the system attempts to complete the payment once per day until the payment succeeds before the instance expires. Ensure that your Alibaba Cloud account has sufficient balance.
 
     **Note:** If your Subscription instance will expire in one day, you can only manually renew it.
 
--   Manual renewal: The payment time depends on when you manually pay the fees for your Subscription instance.
+-   Manual renewal: The payment time depends on when you manually pay the renewal fees for your Subscription instance.
 
 ## Operation guides {#section_9kq_kpm_cwl .section}
 
