@@ -17,7 +17,7 @@
 -   网络类型：您可以选择将实例创建在经典网络或VPC中。专有网络VPC（Virtual Private Cloud）是阿里云上一种隔离的网络环境，安全性比传统的经典网络更高，建议您选择VPC。
 -   产品系列：分为基础版、高可用版和集群版。关于各个系列的介绍，请参见[产品系列概述](intl.zh-CN/云数据库RDS简介/产品系列/产品系列概述.md)。
 -   规格族：分为通用型、独享型、独占物理机型。关于各个规格族的介绍，请参见[实例规格族](intl.zh-CN/云数据库RDS简介/实例规格/实例规格族.md)。
--   存储类型：分为SSD本地盘和SSD云盘。具体请参见[存储类型](intl.zh-CN/云数据库RDS简介/存储类型.md)。
+-   存储类型：分为SSD本地盘、SSD云盘和ESSD云盘。具体请参见[存储类型](intl.zh-CN/云数据库RDS简介/存储类型.md)。
 
 ## 相关服务 {#section_r45_z21_42b .section}
 
@@ -39,7 +39,7 @@
 
 创建RDS实例后，您可以通过以下方式访问RDS实例：
 
--   DMS：您可以[通过DMS登录到RDS实例](../../../../intl.zh-CN/用户指南/附录/通过DMS登录RDS数据库.md)，在Web界面进行数据库开发工作。
+-   DMS：您可以[通过DMS登录到RDS实例](../../../../intl.zh-CN/用户指南/数据库连接/通过DMS登录RDS数据库.md)，在Web界面进行数据库开发工作。
 -   客户端：RDS兼容原生的数据库协议，您可以使用通用的数据库客户端工具访问RDS实例。例如，MySQL-Front、SSMS（SQL Server Management Studio）、pgAdmin等。
 
 ## RDS定价 {#section_kzx_jg1_42b .section}
