@@ -27,9 +27,9 @@
 **上传账套数据备份文件**
 
 1.  登录[OSS控制台](https://oss.console.aliyun.com/overview)。
-2.  在左侧单击![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318350835_zh-CN.png)创建存储空间。
+2.  在左侧单击![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450450835_zh-CN.png)创建存储空间。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318350836_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450450836_zh-CN.png)
 
 3.  设置如下参数。
 
@@ -45,19 +45,19 @@
 
     **说明：** 详细的参数介绍请参见[创建存储空间](https://help.aliyun.com/document_detail/31885.html)。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318450846_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450550846_zh-CN.png)
 
 4.  单击**确定**。
 5.  在左侧选择刚创建的存储空间。
 6.  选择**文件管理** \> **上传文件**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318450848_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450550848_zh-CN.png)
 
 7.  将要上传的数据库备份文件拖拽到**上传文件**区域；或者单击**直接上传**，选择备份文件。
 
     **说明：** 详细的参数介绍请参见[上传文件](https://help.aliyun.com/document_detail/31886.html)。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318450849_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450550849_zh-CN.png)
 
 
 **创建高权限账号**
@@ -106,7 +106,7 @@
 
     **说明：** 如果您是第一次使用OSS备份数据恢复上云功能，该页面会提示您给RDS官方服务账号授予访问OSS的权限，单击**授权地址**并**授权地址**即可。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318450875_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450550875_zh-CN.png)
 
 8.  单击**确定**。
 
@@ -127,7 +127,7 @@
 
     -   如果ECS与RDS在相同VPC内，请填写ECS的私有IP。私有IP可以在ECS实例的实例详情页面查看。
     -   如果ECS与RDS在不同VPC内，请填写ECS的公网IP，且需要为RDS实例[申请外网地址](../../../../cn.zh-CN/RDS for SQL Server 快速入门/初始化配置/申请外网地址.md#)。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318450870_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450550870_zh-CN.png)
 
 6.  单击**确定**。
 7.  选择分布式事务白名单页签。
@@ -143,9 +143,9 @@
 
  |
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318550885_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450650885_zh-CN.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318550883_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450650883_zh-CN.png)
 
 10. 单击**确定**。
 
@@ -169,7 +169,7 @@
  |
     |**优先级**|填写**1**。|
     |**授权类型**|选择**IPv4地址段访问**。|
-    |**授权对象**|查看RDS实例的**数据安全性** \> **分布式事务白名单**页面，将RDS实例信息的2个IP地址填写到**授权对象**框。![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318550892_zh-CN.png)
+    |**授权对象**|查看RDS实例的**数据安全性** \> **分布式事务白名单**页面，将RDS实例信息的2个IP地址填写到**授权对象**框。![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450650892_zh-CN.png)
 
 |
     |**描述**|长度为2~256个字符，不能以http://或https://开头。|
@@ -183,24 +183,24 @@
 2.  打开hosts文件，路径为C:\\Windows\\System32\\drivers\\etc\\hosts。
 3.  查看RDS实例的**数据安全性** \> **分布式事务白名单**页面，将RDS实例信息的2条信息填写到hosts文件的结尾处。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318550896_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450650896_zh-CN.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318550898_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450750898_zh-CN.png)
 
 4.  保存hosts文件。
 5.  在**控制面板** \> **系统和安全** \> **管理工具**页面打开**组件服务**。
 6.  选择**组件服务** \> **计算机** \> **我的电脑** \> **Distributed Transaction Coordinator**。
 7.  在右侧**本地DTC**上单击鼠标右键，选择**属性**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318650901_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450750901_zh-CN.png)
 
 8.  选择安全页签，参照下图进行设置。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318650903_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450850903_zh-CN.png)
 
 9.  单击**确定**，在弹出的MSDTC服务对话框中单击**是**，等待MSDTC服务重新启动完成。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318750906_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450850906_zh-CN.png)
 
 
 ## 账套管理初始化 {#section_qnz_69u_5xl .section}
@@ -213,25 +213,28 @@
 
 2.  解压替换到金蝶的安装目录：K3ERP\\KDSYSTEM\\KDCOM。
 3.  打开金蝶K/3 WISE软件。
-4.  在账套管理数据库设置页面设置相关身份验证信息和**数据服务器**。
+4.  在弹出的账套管理数据库设置页面设置相关身份验证信息和**数据服务器**。
 
     **说明：** **数据服务器**填写RDS实例的内网地址。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318751668_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450851668_zh-CN.png)
 
-5.  在系统的下拉菜单里预设连接信息。
+5.  在系统的下拉菜单里单击**预设连接**，设置预设连接，方便使用。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318751669_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450851669_zh-CN.png)
 
 6.  在数据库的下拉菜单里单击**注册账套**。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450851676_zh-CN.png)
+
 7.  选择对应的数据库，并单击**所有**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318751670_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450951670_zh-CN.png)
 
 
-## 下一步 {#section_7wl_ome_4lj .section}
+## 登录使用金蝶K/3 WISE {#section_7wl_ome_4lj .section}
 
 全部设置完成后，ECS实例和RDS实例之间就能够支持分布式事务，您也可以正常登录并使用金蝶K/3 WISE。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333318751672_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/803375/156333450951672_zh-CN.png)
 
