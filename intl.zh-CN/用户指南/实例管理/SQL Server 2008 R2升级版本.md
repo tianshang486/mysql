@@ -26,12 +26,12 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156273736036543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156344238336543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在基本信息页面，单击**升级版本**，在弹出的对话框中单击**确定**。
 
-    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156273736041115_zh-CN.png)
+    ![升级数据库版本](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156344238441115_zh-CN.png)
 
 5.  在升级引擎版本页面修改配置，说明如下：
 
@@ -39,18 +39,24 @@
     |----|--|
     |**升级到版本**|选择不同的目标版本，对应的**系列**、**存储类型**、**规格**选项也会变化。|
     |**系列**|**高可用版**：一主一备的经典高可用架构，各方面表现均衡。|
-    |**存储类型**|**SSD云盘**。|
+    |**存储类型**|     -   **SSD云盘**：基于分布式存储架构的弹性块存储设备。将数据存储于SSD云盘，即实现了计算与存储分离。
+    -   **ESSD云盘**：增强型SSD云盘，是阿里云全新推出的超高性能云盘产品。ESSD云盘基于新一代分布式块存储架构，结合25GE网络和RDMA技术，为您提供单盘高达100万的随机读写能力和更低的单路时延能力。
+ |
     |**可用区**|目标可用区，支持选择多可用区。|
     |**规格**|每种规格都有对应的CPU核数、内存、最大连接数和最大IOPS。详情请参见[实例规格表](../intl.zh-CN/云数据库RDS简介/实例规格/实例规格表.md#)。|
     |**网络类型**|无法选择**经典网络**，必须指定专有网络信息：     -   原实例为经典网络：可以修改专有网络和交换机。
     -   原实例为专有网络或混访模式：不可以修改专有网络，可以修改交换机。可选择的交换机由**可用区**和专有网络决定。
  |
-    |**交换机**|目标交换机。升级至多可用区时需要选择多个目标交换机。|
+    |**交换机**|目标交换机。升级至多可用区时需要选择多个目标交换机。 **说明：** 
+
+    -   如果选择的是默认VPC，目标交换机支持默认交换机和非默认交换机。
+    -   如果选择的是非默认VPC，目标交换机只支持非默认交换机。
+ |
     |**切换时间**|     -   **数据迁移结束后立即切换**：立刻进行迁移并切换。
     -   **可维护时间内进行切换**：立刻进行迁移并在可维护时间段内进行切换。
  |
 
-    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156273736041116_zh-CN.png)
+    ![升级配置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156344238441116_zh-CN.png)
 
 6.  勾选服务条款，单击**确认变更**。
 
@@ -79,7 +85,7 @@
 4.  在左侧导航栏选择**备份恢复**。
 5.  在临时实例页签选择克隆数据的时间点，然后单击**创建高版本临时实例**。
 
-    ![选择高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156273736146604_zh-CN.png)
+    ![选择高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156344238446604_zh-CN.png)
 
 6.  设置以下参数：
 
@@ -95,7 +101,7 @@
 
     **说明：** 高版本临时实例规格和存储类型都有默认配置，实例存活时间是7天，之后会自动释放。
 
-    ![高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156273736146602_zh-CN.png)
+    ![高版本临时实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/142817/156344238446602_zh-CN.png)
 
 7.  单击**确定**。
 
