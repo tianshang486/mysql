@@ -51,6 +51,8 @@
 -   **HighAvailability**：高可用版；
 -   **Finance**：金融版（仅支持中国站）。
 
+ 默认返回所有实例类型的参数模板。
+
  |
 
 ## 返回数据 {#resultMapping .section}
