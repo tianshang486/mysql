@@ -17,9 +17,9 @@ A whitelist can be used to improve the security of your RDS instance. We recomme
 -   If you log on to DMS but the DMS server IP address has not been added to the whitelist, DMS prompts you to add the IP address and automatically generates a whitelist containing the IP address.
 -   You must confirm which **network isolation mode** your RDS instance is in before configuring the whitelist. Refer to the corresponding operations based on the network isolation mode.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156347189035435_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156347196035435_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156347189035436_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156347196035436_en-US.png)
 
 **Note:** The internal networks to which RDS instances belong are divided into two types: **classic network** and **VPC**.
 
@@ -31,7 +31,7 @@ A whitelist can be used to improve the security of your RDS instance. We recomme
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner of the page, select the region where the target instance is located.
 
-    ![Select a region](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156347189036543_en-US.png)
+    ![Select a region](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156347196036543_en-US.png)
 
 3.  Find the target instance and click its ID.
 4.  In the left-side navigation pane, click **Data Security**.
@@ -44,7 +44,7 @@ A whitelist can be used to improve the security of your RDS instance. We recomme
 
     -   To allow ECS to access RDS through the intranet \(VPC or classic network\), make sure that the two instances are in the same region and have the same [network type](../../../../intl.en-US/User Guide/Instance management/Set network type.md#). Otherwise, the connection fails.
     -   You can also click **Create Whitelist** to create a new whitelist. In the displayed Create Whitelist dialog box, select a network type: **VPC** or **Classic Network/Public IP**.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156347189135445_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156347196135445_en-US.png)
 
 6.  In the displayed Edit Whitelist dialog box, add the IP addresses that need to access the instance, and then click **OK**.
 
@@ -53,7 +53,7 @@ A whitelist can be used to improve the security of your RDS instance. We recomme
     -   You can click **Add Internal IP Addresses of ECS Instances** to display the IP addresses of all the ECS instances under your Alibaba Cloud accoun. and add to the whitelist.
     **Note:** After you add any IP address to the **default** whitelist, the default IP address 127.0.0.1 is automatically removed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15634718911795_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15634719611795_en-US.png)
 
 
 **If the network isolation mode is standard whitelist mode**
@@ -66,7 +66,7 @@ A whitelist can be used to improve the security of your RDS instance. We recomme
 
     **Note:** You can also click **Create Whitelist** to create another whitelist.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15634718911794_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15634719611794_en-US.png)
 
 6.  In the displayed Edit Whitelist dialog box, add the IP addresses that need to access the instance, and then click **OK**.
 
@@ -75,10 +75,10 @@ A whitelist can be used to improve the security of your RDS instance. We recomme
     -   You can click **Add Internal IP Addresses of ECS Instances** to display the IP addresses of all the ECS instances under your Alibaba Cloud accoun. and add to the whitelist.
     **Note:** After you add any IP address to the **default** whitelist, the default address 127.0.0.1 is automatically removed.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15634718911795_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15634719611795_en-US.png)
 
 
-**Common errors**
+**Common incorrect settings**
 
 -   If the IP address whitelist contains only the default address 127.0.0.1, no device is allowed to access the RDS instance. Therefore, you need to add IP addresses of devices to the whitelist to allow access to the instance.
 -   The IP address in the whitelist is 0.0.0.0, but the correct format is 0.0.0.0/0.
