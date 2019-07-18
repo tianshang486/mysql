@@ -1,10 +1,10 @@
-# DescribeParameterTemplates {#doc_api_1106178 .reference}
+# DescribeParameterTemplates {#doc_api_Rds_DescribeParameterTemplates .reference}
 
 调用DescribeParameterTemplates接口查看数据库参数模板。
 
 该接口适用的实例版本如下：
 
--   MySQL 5.5/5.6/5.7
+-   MySQL 5.5/5.6/5.7/8.0
 -   SQL Server 2008 R2
 -   PostgreSQL 9.4/10.0
 -   PPAS 9.3/10.0
@@ -32,7 +32,7 @@
  |
 |EngineVersion|String|是|5.6|数据库版本号，取值：
 
- -   MySQL数据库：**5.5/5.6/5.7**；
+ -   MySQL数据库：**5.5/5.6/5.7/8.0**；
 -   SQL Server数据库：**2008r2**；
 -   PostgreSQL数据库：**9.4/10.0**；
 -   PPAS数据库：**9.3/10.0**；
@@ -45,15 +45,15 @@
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
-|Category|String|否|basic|实例类别，取值：
+|Category|String|否|Basic|实例类别，取值：
 
- -   **basic**：基础版；
--   **standard**：标准版；
--   **enterprise**：金融版（仅支持中国站）。
+ -   **Basic**：基础版；
+-   **HighAvailability**：高可用版；
+-   **Finance**：金融版（仅支持中国站）。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -69,22 +69,22 @@
 |Parameters| | |参数列表。
 
  |
-|└ParameterName|String|auto\_increment\_increment|参数名。
+|ParameterName|String|auto\_increment\_increment|参数名。
 
  |
-|└ParameterValue|String|1|参数默认值。
+|ParameterValue|String|1|参数默认值。
 
  |
-|└ForceModify|String|true|参数是否可修改，取值：**true | false**
+|ForceModify|String|true|参数是否可修改，取值：**true | false**
 
  |
-|└ForceRestart|String|false|是否重启才生效，取值：**true | false**
+|ForceRestart|String|false|是否重启才生效，取值：**true | false**
 
  |
-|└CheckingCode|String|\[10-3000\]|参数取值范围。
+|CheckingCode|String|\[10-3000\]|参数取值范围。
 
  |
-|└ParameterDescription|String|determines the starting point for the AUTO\_INCREMENT column value.|参数描述。
+|ParameterDescription|String|determines the starting point for the AUTO\_INCREMENT column value.|参数描述。
 
  |
 |RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF|请求ID。
@@ -157,5 +157,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeParameterTemplates
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
