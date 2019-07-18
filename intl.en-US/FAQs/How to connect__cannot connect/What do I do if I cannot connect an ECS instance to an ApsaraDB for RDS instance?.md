@@ -92,7 +92,7 @@ If the communication is abnormal, you can modify the NIC configuration file of y
 
     **Note:** If the DNS1 and DNS2 parameters are set, you need to change their settings to the IP addresses shown above.
 
-    ![Modify the configuration of your DNS.](images/38364_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41754/156343635151765_en-US.png)
 
 3.  Run the following command to restart your network service:
 
@@ -106,8 +106,6 @@ If the communication is abnormal, you can modify the NIC configuration file of y
      cat  /etc/resolv.conf
     ```
 
-    ![The configuration of your DNS is modified.](images/38363_en-US.png)
-
 
 Common connection failures and solutions 
 
@@ -116,34 +114,34 @@ Common connection failures and solutions
 |MySQL or MariaDB TX| -   ERROR 2003 \(HY000\): Can’t connect to MySQL server on ‘XXX’ \(10038, 10060, or 110\)
 -   Cannot connect to the database: XXX
 
- |The network connection is abnormal.|[Click here.](https://help.aliyun.com/knowledge_detail/91274.html)|
+ |The network connection is abnormal.|[Click here.](https://www.alibabacloud.com/help/zh/faq-detail/91274.htm)|
 | -   ERROR 1045 \(HY000\): \#28000ip not in whitelist
 -   ERROR 2801 \(HY000\): \#RDS00ip not in whitelist, client ip is XXX
 
- |The IP address whitelist is set improperly.|[Click here.](https://help.aliyun.com/knowledge_detail/91275.html)|
+ |The IP address whitelist is set improperly.|[Click here.](https://www.alibabacloud.com/help/zh/faq-detail/91275.htm)|
 | -   ERROR 1045 \(28000\): Access denied for user ‘XXX’@’XXX’ \(using password: YES or NO\)
 
- |The user name or password is incorrect.|[Click here.](https://help.aliyun.com/knowledge_detail/91277.html)|
+ |The user name or password is incorrect.|[Click here.](https://www.alibabacloud.com/help/zh/faq-detail/91277.htm)|
 | -   ERROR 2005 \(HY000\): Unknown MySQL server host ‘xxxxxxx’ \(110 or 11004\)
 -   SQLSTATE\[HY000\] \[2002\] php\_network\_getaddresses: getaddrinfo failed: Name or service not known
 -   Name or service not known
 
- |The DNS cannot parse IP addresses properly.|[Click here.](https://help.aliyun.com/knowledge_detail/92120.html)|
+ |The DNS cannot parse IP addresses properly.|[Click here.](https://www.alibabacloud.com/help/zh/faq-detail/92120.htm)|
 |SQL Server| Cannot connect to XXX.
 
  A network-related or instance-specific error occurs when a connection is being established with SQL Server. The server cannot be found or accessed. Check whether the instance name is correct. Also check whether the SQL Server is configured and allows remote access. \(provider: TCP Provider, error: 0 - The receiver fails to respond correctly within the specified period or the host to be connected does not respond.\) \(Microsoft SQL Server, error: 10060 or 258\)
 
- |The network connection is abnormal.|[Click here.](https://help.aliyun.com/knowledge_detail/91689.html)|
+ |The network connection is abnormal.|[Click here.](https://www.alibabacloud.com/help/zh/faq-detail/91689.htm)|
 | Cannot connect to XXX.
 
  A connection is established with the server, but an error occurs during the login. provider: TCP Provider, error: 0 - The specified network name is no longer available.\)\( Microsoft SQL Server, error: 64\)
 
- |The IP address whitelist is set improperly.|[Click here.](https://help.aliyun.com/document_detail/26198.html)|
+ |The IP address whitelist is set improperly.|[Click here.](https://www.alibabacloud.com/help/zh/faq-detail/26198.htm)|
 |PostgreSQL/PPAS| Unable to connect to server:
 
  could not connect to server: Connection timed out \(0x0000274C/10060\)Is the server running on host “XXX.rds.aliyuncs.com” and acceptingTCP/IP connections on port XXX?
 
- |The network connection is abnormal.|[Click here.](https://help.aliyun.com/knowledge_detail/91707.html)|
+ |The network connection is abnormal.|[Click here.](https://www.alibabacloud.com/help/zh/faq-detail/91707.htm)|
 | -   server closed the connection unexpectedly This probably means the server terminated abnormally before or while processing the request.
 -   Error connecting to the server: FATAL: no pg\_hba.conf entry
 
