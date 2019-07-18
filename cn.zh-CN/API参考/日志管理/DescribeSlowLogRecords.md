@@ -21,10 +21,10 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxx|实例ID。
 
  |
-|StartTime|String|是|2011-06-01T16:00Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|StartTime|String|是|2011-06-01T16:00Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm*Z（UTC时间）。
 
  |
-|EndTime|String|是|2011-06-20T16:00Z|查询结束时间，需要大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|EndTime|String|是|2011-06-20T16:00Z|查询结束时间，需要大于查询开始时间，与查询开始时间间隔小于31天。格式：*yyyy-MM-dd*T*HH:mm*Z（UTC时间）。
 
  |
 |SQLHASH|String|否|U2FsdGVkxxxx|慢日志统计里的SQL语句唯一标识符，可用于获取该SQL语句的慢日志明细。
@@ -51,7 +51,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -70,28 +70,28 @@
 |Items| | |慢日志明细列表。
 
  |
-|└HostAddress|String|192.101.2.11|连接数据库的客户端地址。
+|HostAddress|String|192.101.2.11|连接数据库的客户端地址。
 
  |
-|└DBName|String|testDB|数据库名称。
+|DBName|String|testDB|数据库名称。
 
  |
-|└SQLText|String|update test.zxb set id=0 limit 1;|查询语句。
+|SQLText|String|update test.zxb set id=0 limit 1;|查询语句。
 
  |
-|└QueryTimes|Long|20|执行时长，单位：秒。
+|QueryTimes|Long|20|执行时长，单位：秒。
 
  |
-|└LockTimes|Long|12|锁定时长，单位：秒。
+|LockTimes|Long|12|锁定时长，单位：秒。
 
  |
-|└ParseRowCounts|Long|100|解析行数。
+|ParseRowCounts|Long|100|解析行数。
 
  |
-|└ReturnRowCounts|Long|1|返回行数。
+|ReturnRowCounts|Long|1|返回行数。
 
  |
-|└ExecutionStartTime|String|2011-06-11T15:00:08Z|执行开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|ExecutionStartTime|String|2011-06-11T15:00:08Z|执行开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |DBInstanceId|String|rm-uf6wjk5xxxxxxx|实例ID。
@@ -172,5 +172,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSlowLogRecords
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
