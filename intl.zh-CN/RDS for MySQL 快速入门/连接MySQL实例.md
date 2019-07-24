@@ -10,7 +10,7 @@
 
 DMS是阿里云提供的图形化的数据管理工具，可用于管理关系型数据库和NoSQL数据库，支持数据管理、结构管理、用户授权、安全审计、数据趋势、数据追踪、BI图表、性能与优化等功能。
 
-具体操作请参见[通过DMS登录RDS数据库](../../../../intl.zh-CN/用户指南/附录/通过DMS登录RDS数据库.md#)。
+具体操作请参见[通过DMS登录RDS数据库](../../../../intl.zh-CN/用户指南/数据库连接/通过DMS登录RDS数据库.md#)。
 
 ## 使用客户端连接实例 {#section_fbz_ym5_vdb .section}
 
@@ -19,7 +19,7 @@ DMS是阿里云提供的图形化的数据管理工具，可用于管理关系�
 1.  启动MySQL-Front客户端。
 2.  在连接管理对话框中，单击**新建**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15611011402607_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15639316702607_zh-CN.png)
 
 3.  输入要连接的RDS实例信息，然后单击**确定**。
 
@@ -35,7 +35,7 @@ DMS是阿里云提供的图形化的数据管理工具，可用于管理关系�
     3.  找到目标实例，单击实例ID。
     4.  在**基本信息**栏中，即可查看内外网地址及内外网端口信息。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15611011402609_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15639316712609_zh-CN.png)
 
  |
     |**端口**|若使用内网连接，需输入RDS实例的内网端口。若使用外网连接，需输入RDS实例的外网端口。|
@@ -46,6 +46,42 @@ DMS是阿里云提供的图形化的数据管理工具，可用于管理关系�
 
     若连接信息无误，即会成功连接实例。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15611011402610_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15639316712610_zh-CN.png)
 
+
+## 使用命令行连接实例 {#section_5sn_ny9_2ce .section}
+
+如果您的服务器安装了MySQL，可以通过命令行连接RDS for MySQL数据库，连接方式如下：
+
+``` {#codeblock_nlp_l4x_t34}
+mysql -h<主机名> -P<端口> -u<用户名> -p<密码> -D<数据库>
+```
+
+|选项|说明|示例|
+|--|--|--|
+|-h|RDS实例的内网地址或外网地址。连接地址请参见[设置连接地址](../../../../intl.zh-CN/RDS for MySQL 用户指南/数据库连接/设置连接地址.md#)。|`rm-bpxxxxxxxxxxxxxx.mysql.rds.aliyuncs.com`|
+|-P|RDS实例的端口号。 -   若使用内网连接，需输入RDS实例的内网端口。
+-   若使用外网连接，需输入RDS实例的外网端口。
+
+ **说明：** 
+
+-   默认端口为3306。
+-   如果端口号为默认端口，该参数可以不填。
+
+ |`3306`|
+|-u|要访问RDS实例的账号名称。|`root`|
+|-p|以上账号的密码。 **说明：** 该参数非必填参数。
+
+-   如果不填写该参数，后续操作中会重新要求输入密码。
+-   如果填写该参数，`-p`与数据库密码之间不能有空格。
+
+ |`password233`|
+|-D|需要登录的数据库名称。 **说明：** 
+
+-   该参数非必填参数。
+-   可以不输入`-D`仅输入数据库名称。
+
+ |`mysql`|
+
+![](images/52311_zh-CN.png "命令行连接示例")
 
