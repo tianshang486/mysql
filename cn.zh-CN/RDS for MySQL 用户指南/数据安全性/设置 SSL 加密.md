@@ -11,7 +11,7 @@
 -   仅以下版本实例支持SSL加密：
     -   MySQL 8.0 高可用本地盘版
     -   MySQL 5.7 高可用本地盘版
-    -   MySQL 5.6 金融版
+    -   MySQL 5.6 三节点企业版（原金融版）
     -   MySQL 5.6 高可用版
 
 ## 开启SSL加密 {#section_hjf_z54_ydb .section}
@@ -19,24 +19,24 @@
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155851851436543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156396153636543_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧菜单栏中单击**数据安全性**。
 5.  选择**SSL**标签页。
 6.  单击**未开通**前面的开关，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15585185144147_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15639615364147_zh-CN.png)
 
 7.  在设置 SSL对话框中选择要开通SSL加密的链路，单击**确定**，开通 SSL 加密。
 
     **说明：** 用户可以根据需要，选择加密内网链路或者外网链路，但只可以加密一条链路。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15585185144148_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15639615364148_zh-CN.png)
 
 8.  单击**下载证书**，下载SSL CA证书，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15585185144149_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15639615364149_zh-CN.png)
 
     下载的文件为压缩包，包含如下三个文件：
 
@@ -48,27 +48,49 @@
 
         **说明：** 在java中使用JKS证书文件时，jdk7和jdk8需要修改默认的jdk安全配置，在需要SSL访问的数据库所在机器的`jre/lib/security/java.security`文件中，修改如下两项配置：
 
-        ```
+        ``` {#codeblock_6ts_vfz_9m4}
         jdk.tls.disabledAlgorithms=SSLv3, RC4, DH keySize < 224
         jdk.certpath.disabledAlgorithms=MD2, RSA keySize < 1024
         ```
 
         若不修改jdk安全配置，会报如下错误。其它类似报错，一般也都由Java安全配置导致。
 
-        ```
+        ``` {#codeblock_r1z_mnu_pt1}
         javax.net.ssl.SSLHandshakeException: DHPublicKey does not comply to algorithm constraints
         ```
 
 
 ## 配置SSL CA证书 {#section_mdn_nv4_ydb .section}
 
-开通SSL加密后，应用或者客户端连接RDS时需要配置SSL CA证书。本文以MySQL Workbench为例，介绍SSL CA证书安装方法。其它应用或者客户端请参见对应产品的使用说明。
+开通SSL加密后，应用或者客户端连接RDS时需要配置SSL CA证书。本文以MySQL Workbench和Navicat为例，介绍SSL CA证书安装方法。其它应用或者客户端请参见对应产品的使用说明。
+
+**MySQL Workbench配置方法**
 
 1.  打开MySQL Workbench。
 2.  选择**Database** \> **Manage Connections** 。
 3.  启用**Use SSL**，并导入SSL CA证书，如下图所示。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15585185144150_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15639615374150_zh-CN.png)
+
+
+**Navicat配置方法**
+
+1.  打开Navicat。
+2.  在目标数据库上单击鼠标右键，选择**编辑连接** 。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41826/156396153752885_zh-CN.png)
+
+3.  选择SSL页签，选择.pem格式CA证书的路径。参照下图进行设置。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41826/156396153752887_zh-CN.png)
+
+4.  单击**确定**。
+
+    **说明：** 如果报`connection is being used`错误，是由于之前的会话未断开，请关闭Navicat重新打开。
+
+5.  双击目标数据库测试能否正常连接。
+
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41826/156396153752889_zh-CN.png)
 
 
 ## 更新证书有效期 {#section_42v_8li_qjg .section}
@@ -77,5 +99,5 @@ SSL的证书有效期为1年，请在1年内更新证书有效期，否则使用
 
 **说明：** **更新有效期**操作将会重启实例，重启前请做好业务安排，谨慎操作。
 
-![更新证书有效期](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/155851851445367_zh-CN.png)
+![更新证书有效期](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/156396153745367_zh-CN.png)
 
