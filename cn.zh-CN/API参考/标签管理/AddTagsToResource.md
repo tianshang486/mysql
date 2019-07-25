@@ -10,9 +10,9 @@
 -   TagKey最长为64个字符，TagValue最长为128个字符；
 -   每个实例最多绑定10个Tag，每个实例绑定的TagKey不能重复。若绑定带有重复TagKey的Tag，则后绑定的Tag将覆盖之前的Tag。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=AddTagsToResource)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=AddTagsToResource&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -67,8 +67,14 @@
 |Tag.5.value|String|否|value5|当前第五组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。
 
  |
+|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
 
-## 返回参数 {#resultMapping .section}
+ |
+|proxyId|String|否|API|代理模式ID。
+
+ |
+
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -96,9 +102,7 @@ http(s)://rds.aliyuncs.com/?Action=AddTagsToResource
 
 ``` {#xml_return_success_demo}
 <AddTagsToResourceResponse>
-  <requestId>224DB9F7-3100-4899-AB9C-C938BCCB43E7</requestId>
-</AddTagsToResourceResponse>
-
+	  <requestId>224DB9F7-3100-4899-AB9C-C938BCCB43E7</requestId></AddTagsToResourceResponse>
 ```
 
 `JSON` 格式
@@ -111,5 +115,5 @@ http(s)://rds.aliyuncs.com/?Action=AddTagsToResource
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
