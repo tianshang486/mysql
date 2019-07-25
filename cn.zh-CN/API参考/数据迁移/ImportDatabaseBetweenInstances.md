@@ -1,4 +1,4 @@
-# ImportDatabaseBetweenInstances {#doc_api_1091655 .reference}
+# ImportDatabaseBetweenInstances {#doc_api_Rds_ImportDatabaseBetweenInstances .reference}
 
 调用ImportDatabaseBetweenInstances接口从其它RDS实例迁入数据。
 
@@ -18,9 +18,9 @@
 -   暂不支持SQL Server 2017集群版实例。
 -   支持批量数据库迁入。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=ImportDatabaseBetweenInstances)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=ImportDatabaseBetweenInstances&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -39,14 +39,13 @@
 
  -   对于MySQL实例，值为数组，MySQL类型要求源数据库和目的数据库名称必须一致。例如：
 
-    ```
+```
 {“DBNames”:[“mydb”,”mydb2”]}
-    ```
+```
 
+表示将两个数据库mydb和mydb2进行数据迁入，源实例和目的实例都要有这两个数据库。
 
- 表示将两个数据库mydb和mydb2进行数据迁入，源实例和目的实例都要有这两个数据库。
-
- -   对于SQL Server实例，值为key-value对，key为原数据库，目标为迁移目标数据库，SQL Server允许源数据库和目标数据库名称可以不一致。例如：
+-   对于SQL Server实例，值为key-value对，key为原数据库，目标为迁移目标数据库，SQL Server允许源数据库和目标数据库名称可以不一致。例如：
 
     ```
 {“DBNames”:{“srcdb”:”destdb”,”srcdb2”:”destmydb2”}}
@@ -60,7 +59,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -91,10 +90,9 @@ http(s)://rds.aliyuncs.com/?Action=ImportDatabaseBetweenInstances
 
 ``` {#xml_return_success_demo}
 <ImportDatabaseBetweenInstancesResponse>
-  <ImportId>2122321</ImportId>
-  <RequestId>5A77D650-27A1-4E08-AD9E-59008EDB6927</RequestId>
+           <ImportId>2122321</ImportId>
+         <RequestId>5A77D650-27A1-4E08-AD9E-59008EDB6927</RequestId>
 </ImportDatabaseBetweenInstancesResponse>
-
 ```
 
 `JSON` 格式
@@ -108,5 +106,5 @@ http(s)://rds.aliyuncs.com/?Action=ImportDatabaseBetweenInstances
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
