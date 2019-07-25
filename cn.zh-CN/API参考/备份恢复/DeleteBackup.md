@@ -11,9 +11,9 @@
 -   如果日志备份已关闭，RDS实例不支持按时间点恢复功能。此时您可以删除已生成超过7天的任意数据备份文件；
 -   如果日志备份已开启，且日志备份保留时间小于数据备份保留时间，则超过日志备份保留时间的数据备份文件可以删除。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DeleteBackup)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DeleteBackup&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -34,7 +34,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -61,9 +61,7 @@ http(s)://rds.aliyuncs.com/?Action=DeleteBackup
 
 ``` {#xml_return_success_demo}
 <DeleteBackupResponse>
-  <RequestId>37441409-FFD1-40AA-8EC5-9ECF5E2F7C29</RequestId>
-</DeleteBackupResponse>
-
+	  <RequestId>37441409-FFD1-40AA-8EC5-9ECF5E2F7C29</RequestId></DeleteBackupResponse>
 ```
 
 `JSON` 格式
@@ -76,5 +74,5 @@ http(s)://rds.aliyuncs.com/?Action=DeleteBackup
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
