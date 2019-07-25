@@ -93,7 +93,7 @@
 
     -   购买包年包月实例时，可以勾选**自动续费**，系统将根据您的购买时长进行自动续费。例如，您购买3个月的实例并勾选**自动续费**，则每次自动续费时会缴纳3个月的费用。
     -   对于包年包月实例，您也可以单击**加入购物车**将实例加入到购物车中，最后单击**购物车**进行结算。
-5.  在订单确认页面，勾选**关系型数据库RDS服务条款**，根据提示完成支付。
+5.  在订单确认页面，勾选相关协议，根据提示完成支付。
 
 ## 创建RDS实例（新版） {#section_ipk_49i_rd5 .section}
 
@@ -101,7 +101,7 @@
 
     **说明：** 您也可以在当前创建RDS实例页面上方单击**体验新版**切换到新版创建RDS实例页面。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156395906552745_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156402144152745_zh-CN.png)
 
 2.  在左上角选择实例所在的地域，即实例所在的地理位置。
 
@@ -110,7 +110,7 @@
     -   购买后无法更换地域。
     -   请根据目标用户所在的地理位置就近选择地域，提升用户访问速度。
     -   请确保RDS实例与需要连接的ECS实例创建于同一个地域，否则它们无法通过内网互通，只能通过外网互通，无法发挥最佳性能。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156395906552746_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156402144152746_zh-CN.png)
 
 3.  设置以下参数。
 
@@ -119,7 +119,7 @@
     |**计费方式**|无|     -   **包年包月**：属于预付费，即在新建实例时需要支付费用。适合长期需求，价格比按量付费更实惠，且购买时长越长，折扣越多。
     -   **按量付费**：属于后付费，即按小时扣费。适合短期需求，用完可立即释放实例，节省费用。
  |
-    |**数据库类型**|无|即数据库引擎的类型，这里选择**MySQL**。 **说明：** 不同地域支持的数据库类型不同，请以实际界面为准。
+    |**数据库类型**|无|即数据库引擎的类型，这里选择**MySQL数据库**。 **说明：** 不同地域支持的数据库类型不同，请以实际界面为准。
 
  |
     |**版本系列**|**版本**|指MySQL的版本。当前支持MySQL 5.5、5.6、5.7、8.0。|
@@ -163,7 +163,7 @@
 
 4.  检查当前配置，确认配置和费用。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156395906652764_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156402144252764_zh-CN.png)
 
 5.  单击**确认订单**。
 
@@ -173,14 +173,14 @@
 
     **说明：** 如果有优惠券，可以在本页面选择对应的优惠券。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156395906652773_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156402144252773_zh-CN.png)
 
 
 ## 下一步 {#section_cgn_fdt_2fb .section}
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156395906636543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156402144236543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/设置白名单.md)和[创建账号](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/申请外网地址.md)。然后就可以[连接实例](cn.zh-CN/RDS for MySQL 快速入门/连接MySQL实例.md)。
 
