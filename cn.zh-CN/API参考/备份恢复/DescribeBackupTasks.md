@@ -2,9 +2,9 @@
 
 调用DescribeBackupTasks接口查询实例的备份任务列表。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeBackupTasks)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeBackupTasks&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -39,26 +39,29 @@
 |AccessKeyId|String|否|LTAIfCxxxxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
+|Flag|String|否|-|备用参数。
 
-## 返回参数 {#resultMapping .section}
+ |
+
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
 |Items| | |备份任务详情。
 
  |
-|└BackupId|String|346650271|任务生成的备份集ID。
+|BackupId|String|346650271|任务生成的备份集ID。
 
  **说明：** 当返回参数**BackupStatus**=**Finished**之后，可以通过传入请求参数**BackupJobId**查看备份集ID。
 
  |
-|└BackupJobId|String|4762614|备份任务ID。
+|BackupJobId|String|4762614|备份任务ID。
 
  |
-|└BackupProgressStatus|String|NoStart|备份程序状态。
+|BackupProgressStatus|String|NoStart|备份程序状态。
 
  |
-|└BackupStatus|String|NoStart|备份任务状态，取值：
+|BackupStatus|String|NoStart|备份任务状态，取值：
 
  -   **NoStart**：未开始；
 -   **Checking**：检查备份；
@@ -69,16 +72,16 @@
 -   **Failed**：备份失败。
 
  |
-|└JobMode|String|Automated|备份模式，取值：
+|JobMode|String|Automated|备份模式，取值：
 
  -   **Automated**：系统自动备份；
 -   **Manual**：手动备份。
 
  |
-|└Process|String|25|任务进度百分比。
+|Process|String|25|任务进度百分比。
 
  |
-|└TaskAction|String|NormalBackupTask|任务类型，取值：
+|TaskAction|String|NormalBackupTask|任务类型，取值：
 
  -   **TempBackupTask**：临时备份任务；
 -   **NormalBackupTask**：普通备份任务。
@@ -106,18 +109,16 @@ http(s)://rds.aliyuncs.com/?Action=DescribeBackupTasks
 
 ``` {#xml_return_success_demo}
 <DescribeBackupTasksResponse>
-  <Items>
-    <BackupJob>
-      <JobMode>Automated</JobMode>
-      <BackupProgressStatus>NoStart</BackupProgressStatus>
-      <TaskAction>NormalBackupTask</TaskAction>
-      <BackupStatus>NoStart</BackupStatus>
-      <BackupJobId>4762614</BackupJobId>
-    </BackupJob>
-  </Items>
-  <RequestId>90496720-2319-42A8-87CD-FCE4DF95EBED</RequestId>
-</DescribeBackupTasksResponse>
-
+	  <Items>
+		    <BackupJob>
+			      <JobMode>Automated</JobMode>
+			      <BackupProgressStatus>NoStart</BackupProgressStatus>
+			      <TaskAction>NormalBackupTask</TaskAction>
+			      <BackupStatus>NoStart</BackupStatus>
+			      <BackupJobId>4762614</BackupJobId>
+		    </BackupJob>
+	  </Items>
+	  <RequestId>90496720-2319-42A8-87CD-FCE4DF95EBED</RequestId></DescribeBackupTasksResponse>
 ```
 
 `JSON` 格式
@@ -141,5 +142,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeBackupTasks
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
