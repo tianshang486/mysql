@@ -9,9 +9,9 @@
 -   MySQL 5.7高可用本地SSD盘版
 -   MySQL 5.6
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeCrossRegionBackups)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeCrossRegionBackups&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -58,7 +58,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -88,77 +88,77 @@
 |Items| | |跨地域备份列表。
 
  |
-|└BackupEndTime|String|2019-06-15T12:10Z|跨地域备份结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|BackupEndTime|String|2019-06-15T12:10Z|跨地域备份结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└BackupMethod|String|P|跨地域备份方式，取值：
+|BackupMethod|String|P|跨地域备份方式，取值：
 
  -   **L**：逻辑备份；
 -   **P**：物理备份。
 
  |
-|└BackupSetScale|Integer|0|备份文件的备份策略，取值：
+|BackupSetScale|Integer|0|备份文件的备份策略，取值：
 
  -   **0**：实例备份；
 -   **1**：单库备份。
 
  |
-|└BackupSetStatus|Integer|0|备份文件状态，取值：
+|BackupSetStatus|Integer|0|备份文件状态，取值：
 
  -   **0**：完成备份；
 -   **1**：备份失败。
 
  |
-|└BackupStartTime|String|2019-05-30T12:10Z|跨地域备份开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|BackupStartTime|String|2019-05-30T12:10Z|跨地域备份开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└BackupType|String|F|跨地域备份类型，取值：
+|BackupType|String|F|跨地域备份类型，取值：
 
  -   **F**：全量；
 -   **I**：增量。
 
  |
-|└Category|String|HighAvailability|实例系列，取值：
+|Category|String|HighAvailability|实例系列，取值：
 
  -   **Basic**：基础版；
 -   **HighAvailability**：高可用版；
 -   **Finance**：金融版（仅中国站支持）。
 
  |
-|└ConsistentTime|String|2019-06-12T05:44:46Z|备份文件里数据的时间点。
+|ConsistentTime|String|2019-06-12T05:44:46Z|备份文件里数据的时间点。
 
  |
-|└CrossBackupDownloadLink|String|http://rdsddrbak-shanghai.oss-cn-shanghai.aliyuncs.com/xxxxx|跨地域备份文件外网下载链接。
+|CrossBackupDownloadLink|String|http://rdsddrbak-shanghai.oss-cn-shanghai.aliyuncs.com/xxxxx|跨地域备份文件外网下载链接。
 
  |
-|└CrossBackupId|Integer|14377|跨地域备份文件ID。
+|CrossBackupId|Integer|14377|跨地域备份文件ID。
 
  |
-|└CrossBackupRegion|String|cn-shanghai|跨地域备份的目的地域ID。
+|CrossBackupRegion|String|cn-shanghai|跨地域备份的目的地域ID。
 
  |
-|└CrossBackupSetFile|String|cn-hangzhou\_rm-xxxxx\_hins81xxx\_data\_20190612134426\_qp.xb|跨地域备份文件压缩包名称。
+|CrossBackupSetFile|String|cn-hangzhou\_rm-xxxxx\_hins81xxx\_data\_20190612134426\_qp.xb|跨地域备份文件压缩包名称。
 
  |
-|└CrossBackupSetLocation|String|oss|备份文件存储位置。
+|CrossBackupSetLocation|String|oss|备份文件存储位置。
 
  |
-|└CrossBackupSetSize|Long|5312836|跨地域备份文件大小，单位：Byte。
+|CrossBackupSetSize|Long|5312836|跨地域备份文件大小，单位：Byte。
 
  |
-|└DBInstanceStorageType|String|ssd|存储类型。
+|DBInstanceStorageType|String|ssd|存储类型。
 
  |
-|└Engine|String|MySQL|数据库类型。
+|Engine|String|MySQL|数据库类型。
 
  |
-|└EngineVersion|String|5.6|数据库版本。
+|EngineVersion|String|5.6|数据库版本。
 
  |
-|└InstanceId|Integer|8161055|实例编号。用于区分该备份集产生于主实例或备实例。
+|InstanceId|Integer|8161055|实例编号。用于区分该备份集产生于主实例或备实例。
 
  |
-|└RestoreRegions| |"cn-hangzhou", "cn-shanghai"|备份文件可以进行恢复的地域列表，即备份文件可以恢复到哪些地域。
+|RestoreRegions| |"cn-hangzhou", "cn-shanghai"|备份文件可以进行恢复的地域列表，即备份文件可以恢复到哪些地域。
 
  |
 
@@ -182,38 +182,37 @@ http(s)://rds.aliyuncs.com/?Action=DescribeCrossRegionBackups
 ``` {#xml_return_success_demo}
 <DescribeCrossRegionBackupsResponse>
   <Items>
-    <Item>
-      <CrossBackupSetFile>cn-hangzhou_rm-bpxxxxx_hins798xxxx_data_20190611125201.tar.gz</CrossBackupSetFile>
-      <BackupSetScale>0</BackupSetScale>
-      <BackupType>F</BackupType>
-      <InstanceId>7980000</InstanceId>
-      <CrossBackupId>14358</CrossBackupId>
-      <BackupEndTime>2019-06-11T04:55:02Z</BackupEndTime>
-      <BackupMethod>P</BackupMethod>
-      <CrossBackupSetLocation>oss</CrossBackupSetLocation>
-      <CrossBackupSetSize>2179643</CrossBackupSetSize>
-      <Engine>mysql</Engine>
-      <BackupStartTime>2019-06-11T04:52:46Z</BackupStartTime>
-      <CrossBackupDownloadLink>http://rdsddrbak-zb.oss-cn-zhangjiakou.aliyuncs.com/cn-hangzhou_rm-bpxxxxx_hins7986073_data_20190611125201.tar.gz?OSSAccessKeyId=LTAxxxxx&amp;Expires=1560501641&amp;Signature=laK0kxxxxx%3D</CrossBackupDownloadLink>
-      <Category>HighAvailability</Category>
-      <CrossBackupRegion>cn-zhangjiakou</CrossBackupRegion>
-      <RestoreRegions>
-        <RestoreRegion>cn-hangzhou</RestoreRegion>
-        <RestoreRegion>cn-zhangjiakou</RestoreRegion>
-      </RestoreRegions>
-      <EngineVersion>5.7</EngineVersion>
-      <DBInstanceStorageType>ssd</DBInstanceStorageType>
-    </Item>
-  </Items>
-  <TotalRecordCount>1</TotalRecordCount>
-  <PageNumber>1</PageNumber>
-  <RequestId>60912B41-7579-4B5D-B289-8856030F0A6A</RequestId>
-  <RegionId>cn-hangzhou</RegionId>
-  <EndTime>2019-06-11T08:00:00Z</EndTime>
-  <StartTime>2019-06-10T00:00:00Z</StartTime>
-  <PageRecordCount>30</PageRecordCount>
-</DescribeCrossRegionBackupsResponse>
-
+		    <Item>
+			      <CrossBackupSetFile>cn-hangzhou_rm-bpxxxxx_hins798xxxx_data_20190611125201.tar.gz</CrossBackupSetFile>
+			      <BackupSetScale>0</BackupSetScale>
+			      <BackupType>F</BackupType>
+			      <InstanceId>7980000</InstanceId>
+			      <CrossBackupId>14358</CrossBackupId>
+			      <BackupEndTime>2019-06-11T04:55:02Z</BackupEndTime>
+			      <BackupMethod>P</BackupMethod>
+			      <CrossBackupSetLocation>oss</CrossBackupSetLocation>
+			      <CrossBackupSetSize>2179643</CrossBackupSetSize>
+			      <Engine>mysql</Engine>
+			      <BackupStartTime>2019-06-11T04:52:46Z</BackupStartTime>
+			      <CrossBackupDownloadLink>http://rdsddrbak-zb.oss-cn-zhangjiakou.aliyuncs.com/cn-hangzhou_rm-bpxxxxx_hins7986073_data_20190611125201.tar.gz?OSSAccessKeyId=LTAxxxxx&amp;Expires=1560501641&amp;Signature=laK0kxxxxx%3D</CrossBackupDownloadLink>
+			      <Category>HighAvailability</Category>
+			      <CrossBackupRegion>cn-zhangjiakou</CrossBackupRegion>
+			      <RestoreRegions>
+				        <RestoreRegion>cn-hangzhou</RestoreRegion>
+				        <RestoreRegion>cn-zhangjiakou</RestoreRegion>
+			      </RestoreRegions>
+			      <EngineVersion>5.7</EngineVersion>
+			      <DBInstanceStorageType>ssd</DBInstanceStorageType>
+		    </Item>
+	  </Items>
+	  <TotalRecordCount>1</TotalRecordCount>
+	  <PageNumber>1</PageNumber>
+	  <RequestId>60912B41-7579-4B5D-B289-8856030F0A6A</RequestId>
+	  <RegionId>cn-hangzhou</RegionId>
+	  <EndTime>2019-06-11T08:00:00Z</EndTime>
+	  <StartTime>2019-06-10T00:00:00Z</StartTime>
+	  <PageRecordCount>30</PageRecordCount>
+    </DescribeCrossRegionBackupsResponse>
 ```
 
 `JSON` 格式
@@ -260,5 +259,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeCrossRegionBackups
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
