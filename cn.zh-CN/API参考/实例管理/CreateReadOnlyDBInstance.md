@@ -13,9 +13,9 @@
     -   如果主实例内存＜64GB，最多允许创建5个只读实例。
 -   对于SQL Server类型实例，最多允许创建7个只读实例。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=CreateReadOnlyDBInstance)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=CreateReadOnlyDBInstance&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -83,8 +83,25 @@
 |ResourceGroupId|String|否|rg-acfmyxxxxxxxxxx|资源组ID。
 
  |
+|DBInstanceStorageType|String|否|local\_ssd|实例储存类型，取值：
 
-## 返回参数 {#resultMapping .section}
+ -   **local\_ssd**/**ephemeral\_ssd**：本地SSD盘；
+-   **cloud\_ssd**：SSD云盘；
+-   **cloud\_essd**：ESSD云盘。
+
+ **说明：** MySQL仅支持本地盘存储类型，SQL Server仅支持云盘存储类型。
+
+ |
+|Category|String|否|HighAvailability|实例系列，取值：
+
+ -   **Basic**：基础版；
+-   **HighAvailability**：高可用版；
+-   **AlwaysOn**：集群版；
+-   **Finance**：金融版（仅中国站支持）。
+
+ |
+
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -128,13 +145,12 @@ http(s)://rds.aliyuncs.com/?Action=CreateReadOnlyDBInstance
 
 ``` {#xml_return_success_demo}
 <CreateReadOnlyDBInstanceResponse>
-  <OrderId>10078937xxxxx</OrderId>
-  <ConnectionString>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com </ConnectionString>
-  <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
-  <port>3306</port>
-  <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId>
+     <OrderId>10078937xxxxx</OrderId>
+     <ConnectionString>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com </ConnectionString>
+     <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
+     <port>3306</port>
+     <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId>
 </CreateReadOnlyDBInstanceResponse>
-
 ```
 
 `JSON` 格式
@@ -162,5 +178,5 @@ http(s)://rds.aliyuncs.com/?Action=CreateReadOnlyDBInstance
 |404|IncorrectDBInstanceConnType|Current DB instance conn type does not support this operation.|当前DB实例连接类型不支持此操作。|
 |400|InvalidZoneId.NotSupported|The Specified vpc Zone not supported.|当前可用区不支持生产 VPC 实例，请您更换可用区再试。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
