@@ -1,12 +1,12 @@
-# CopyDatabase {#doc_api_1084576 .reference}
+# CopyDatabase {#doc_api_Rds_CopyDatabase .reference}
 
 调用CopyDatabase接口复制数据库SQL Server 2008 R2版，已下线。
 
 **说明：** 该API已下线。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=CopyDatabase)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=CopyDatabase&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -19,7 +19,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -54,9 +54,7 @@ http(s)://rds.aliyuncs.com/?Action=CopyDatabase
 
 ``` {#xml_return_success_demo}
 <CopyDatabaseResponse>
-  <RequestID>5A77D650-27A1-4E08-AD9E-59008EDB6927</RequestID>
-</CopyDatabaseResponse>
-
+	  <RequestID>5A77D650-27A1-4E08-AD9E-59008EDB6927</RequestID></CopyDatabaseResponse>
 ```
 
 `JSON` 格式
@@ -71,7 +69,9 @@ http(s)://rds.aliyuncs.com/?Action=CopyDatabase
 
 |HttpCode|错误码|错误信息|描述|
 |--------|---|----|--|
+|400|InvalidDBName.Format|Specified DB name is not valid.|指定数据库名无效。|
 |400|InvalidDBName.Forbid|Specified DB name is a keyword in RDS.|指定的数据库名是RDS保留字。|
+|400|InvalidDBName.Duplicate|Specified DB name already exists in the This instance.|该实例已存在同名的数据库。|
 |400|InvalidAccountName.Format|Specified account name is not valid.|指定的帐户名无效。|
 |400|InvalidAccountName.Forbid|Specified account name is a keyword in RDS.|指定的帐户名是RDS中的关键字。|
 |400|InvalidCharacterSetName.Format|Specified character set name is not valid.|指定的字符集名称无效。|
@@ -80,5 +80,5 @@ http(s)://rds.aliyuncs.com/?Action=CopyDatabase
 |400|InvalidDBDescription.Format|Specified DB description is not valid.|指定的DB描述无效。|
 |403|DBLimitExceeded|DBQuotaExceeded: Exceeding the allowed amount of DB.|DB数量达到了上限。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
