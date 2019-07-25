@@ -11,9 +11,9 @@
 -   PostgreSQL
 -   PPAS
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeSQLLogFiles)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeSQLLogFiles&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -42,7 +42,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -58,26 +58,26 @@
 |Items| | |审计文件列表。
 
  |
-|└FileID|String|custinsxxxxx.csv|文件名称。
+|FileID|String|custinsxxxxx.csv|文件名称。
 
  |
-|└LogStatus|String|Success|文件当前状态，取值：
+|LogStatus|String|Success|文件当前状态，取值：
 
  -   **Success**：生成成功；
 -   **Failed**：生成失败；
 -   **Generating**：生成中。
 
  |
-|└LogStartTime|String|2015-05-23T07:00:00Z|SQL起始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|LogStartTime|String|2015-05-23T07:00:00Z|SQL起始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└LogEndTime|String|2015-05-24T07:00:00Z|SQL结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|LogEndTime|String|2015-05-24T07:00:00Z|SQL结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└LogDownloadURL|String|http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|下载地址。若当前不可下载，则为空。
+|LogDownloadURL|String|http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|下载地址。若当前不可下载，则为空。
 
  |
-|└LogSize|String|3000|日志文件大小，单位：Byte。
+|LogSize|String|3000|日志文件大小，单位：Byte。
 
  |
 |RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF|请求ID。
@@ -102,19 +102,17 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSQLLogFiles
 
 ``` {#xml_return_success_demo}
 <DescribeSQLLogFilesResponse>
-  <items>
-    <FileID>ZUBaS964T3OYtxxxxxxxx</FileID>
-    <LogStatus>Success</LogStatus>
-    <LogStartTime>2015-05-23T07:00:00Z</LogStartTime>
-    <LogEndTime>2015-05-23T07:00:00Z</LogEndTime>
-    <LogDownloadURL>xxxxxx.cn-hangzhou.oss.aliyun-inc.com/xxxxx</LogDownloadURL>
-    <LogSize>257</LogSize>
-  </items>
-  <pageRecordCount>1</pageRecordCount>
-  <requestId> 1AD222E9-E606-4A42-BF6D-8A4442913CEF</requestId>
-  <totalRecordCount>1</totalRecordCount>
-</DescribeSQLLogFilesResponse>
-
+	  <items>
+		    <FileID>ZUBaS964T3OYtxxxxxxxx</FileID>
+		    <LogStatus>Success</LogStatus>
+		    <LogStartTime>2015-05-23T07:00:00Z</LogStartTime>
+		    <LogEndTime>2015-05-23T07:00:00Z</LogEndTime>
+		    <LogDownloadURL>xxxxxx.cn-hangzhou.oss.aliyun-inc.com/xxxxx</LogDownloadURL>
+		    <LogSize>257</LogSize>
+	  </items>
+	  <pageRecordCount>1</pageRecordCount>
+	  <requestId> 1AD222E9-E606-4A42-BF6D-8A4442913CEF</requestId>
+	  <totalRecordCount>1</totalRecordCount></DescribeSQLLogFilesResponse>
 ```
 
 `JSON` 格式
@@ -139,5 +137,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSQLLogFiles
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
