@@ -101,7 +101,7 @@
 
     **说明：** 您也可以在当前创建RDS实例页面上方单击**体验新版**切换到新版创建RDS实例页面。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156402144152745_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156410540952745_zh-CN.png)
 
 2.  在左上角选择实例所在的地域，即实例所在的地理位置。
 
@@ -110,7 +110,7 @@
     -   购买后无法更换地域。
     -   请根据目标用户所在的地理位置就近选择地域，提升用户访问速度。
     -   请确保RDS实例与需要连接的ECS实例创建于同一个地域，否则它们无法通过内网互通，只能通过外网互通，无法发挥最佳性能。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156402144152746_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156410541052746_zh-CN.png)
 
 3.  设置以下参数。
 
@@ -163,7 +163,7 @@
 
 4.  检查当前配置，确认配置和费用。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156402144252764_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156410541052764_zh-CN.png)
 
 5.  单击**确认订单**。
 
@@ -173,14 +173,14 @@
 
     **说明：** 如果有优惠券，可以在本页面选择对应的优惠券。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156402144252773_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156410541052773_zh-CN.png)
 
 
 ## 下一步 {#section_cgn_fdt_2fb .section}
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156402144236543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156410541036543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/设置白名单.md)和[创建账号](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/申请外网地址.md)。然后就可以[连接实例](cn.zh-CN/RDS for MySQL 快速入门/连接MySQL实例.md)。
 
