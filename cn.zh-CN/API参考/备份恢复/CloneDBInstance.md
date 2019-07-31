@@ -9,7 +9,7 @@
 -   实例已开启日志备份（用于按时间点恢复）；
 -   若要按备份集克隆实例，则主实例必须至少有一个已完成备份的备份集。
 
-**说明：** RDS支持RAM子账号创建克隆实例，请务必保证子账号已添加克隆实例的授权策略，添加授权请参见 [云数据库RDS授权](~~58932~~) 。
+**说明：** RDS支持RAM子账号创建克隆实例，请务必保证子账号已添加克隆实例的授权策略，添加授权请参见[云数据库RDS授权](~~58932~~)。
 
 
 实例内数据库账号信息克隆以及其他功能的设置克隆将遵循如下方式：
@@ -17,102 +17,127 @@
 -   实例内的白名单设置、SQL审计设置、阈值报警设置、备份设置、参数设置将和当前实例状态保持一致；
 -   实例内的数据信息、账号信息与备份文件或时间点当时信息一致。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=CloneDBInstance)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=CloneDBInstance&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
-| Action |String|是|CloneDBInstance| 系统规定参数，取值： **CloneDBInstance** 。
+|Action|String|是|CloneDBInstance|系统规定参数，取值：**CloneDBInstance**。
 
  |
-| PayType |String|是|Postpaid| 付费类型，取值：
+|PayType|String|是|Postpaid|付费类型，取值：
 
- -    **Postpaid** ：后付费（按量付费）；
--    **Prepaid** ：预付费（包年包月）。
-
- |
-| RegionId |String|否|cn-hangzhou| 地域ID，可以通过接口 [DescribeRegions](~~26243~~) 查看可用的地域ID。
+ -   **Postpaid**：后付费（按量付费）；
+-   **Prepaid**：预付费（包年包月）。
 
  |
-| ZoneId |String|否|cn-hangzhou-b| 可用区ID。
+|DBInstanceStorageType|String|是|cloud\_essd|实例存储类型，取值：
+
+ -   **local\_ssd**/**ephemeral\_ssd**：本地SSD盘；
+-   **cloud\_ssd**：SSD云盘；
+-   **cloud\_essd**：ESSD云盘。
 
  |
-| DBInstanceClass |String|否|mysql.n1.micro.1| 实例规格，详见 [实例规格表](~~26312~~) 。
+|RegionId|String|否|cn-hangzhou|地域ID，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。
+
+ |
+|ZoneId|String|否|cn-hangzhou-b|可用区ID。
+
+ |
+|DBInstanceClass|String|否|mysql.n1.micro.1|实例规格，详见[实例规格表](~~26312~~)。
 
  **说明：** 默认规格和主实例一致。
 
  |
-| DBInstanceStorage |Integer|否|1000| 实例存储空间，单位：GB。每5GB进行递增，详见 [实例规格表](~~26312~~) 。
+|DBInstanceStorage|Integer|否|1000|实例存储空间，单位：GB。每5GB进行递增，详见[实例规格表](~~26312~~)。
 
  **说明：** 默认存储空间和主实例一致。
 
  |
-| DbNames |String|否|testDB| 数据库名称。
+|DbNames|String|否|testDB|数据库名称。
 
  |
-| InstanceNetworkType |String|否|VPC| 实例的网络类型，取值：
+|InstanceNetworkType|String|否|VPC|实例的网络类型，取值：
 
- -    **VPC** ：专有网络；
--    **Classic** ：经典网络。
+ -   **VPC**：专有网络；
+-   **Classic**：经典网络。
 
  **说明：** 默认网络类型和主实例一致。
 
  |
-| BackupId |String|否|9026262| 备份集ID。
+|BackupId|String|否|9026262|备份集ID。
 
- 您可以通过 [DescribeBackups](~~26273~~) 接口获取备份列表。
+ 您可以通过[DescribeBackups](~~26273~~)接口获取备份列表。
 
- **说明：** **BackupId** 和 **RestoreTime** 两者至少传入一个。
-
- |
-| DBInstanceId |String|否|rm-uf6wjk5xxxxxxxxxx| 实例ID。
+ **说明：** **BackupId**和**RestoreTime**两者至少传入一个。
 
  |
-| RestoreTime |String|否|2011-06-11T16:00:00Z| 备份保留周期内的任意时间点。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
-
- **说明：** **BackupId** 和 **RestoreTime** 两者至少传入一个。
+|DBInstanceId|String|否|rm-uf6wjk5xxxxxxxxxx|实例ID。
 
  |
-| VPCId |String|否|vpc-uf6f7l4fg90xxxxxxxxxx| VPC ID。
+|RestoreTime|String|否|2011-06-11T16:00:00Z|备份保留周期内的任意时间点。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+
+ **说明：** **BackupId**和**RestoreTime**两者至少传入一个。
 
  |
-| VSwitchId |String|否|vsw-uf6adz52c2pxxxxxxxxxx| VSwitch ID。
+|VPCId|String|否|vpc-uf6f7l4fg90xxxxxxxxxx|VPC ID。
 
  |
-| PrivateIpAddress |String|否|172.16.201.69| 新实例的内网IP，需要在指定交换机的IP地址范围内。系统默认通过 **VPCId** 和 **VSwitchId** 自动分配。
+|VSwitchId|String|否|vsw-uf6adz52c2pxxxxxxxxxx|VSwitch ID。
 
  |
-| UsedTime |String|否|1| 购买时长，取值：
-
- -   当参数 **Period** 为 **Year** 时，UsedTime取值为 **1~3** ；
--   当参数 **Period** 为 **Month** 时，UsedTime取值为 **1~9** 。
-
- **说明：** 若付费类型为 **Prepaid** 则该参数必须传入。
+|PrivateIpAddress|String|否|172.16.201.69|新实例的内网IP，需要在指定交换机的IP地址范围内。系统默认通过**VPCId**和**VSwitchId**自动分配。
 
  |
-| Period |String|否|Year| 预付费实例为包年或者包月类型，取值：
+|UsedTime|String|否|1|购买时长，取值：
 
- -    **Year** ：包年；
--    **Month** ：包月。
+ -   当参数**Period**为**Year**时，UsedTime取值为**1~3**；
+-   当参数**Period**为**Month**时，UsedTime取值为**1~9**。
 
- **说明：** 若付费类型为 **Prepaid** 则该参数必须传入。
+ **说明：** 若付费类型为**Prepaid**则该参数必须传入。
+
+ |
+|Period|String|否|Year|预付费实例为包年或者包月类型，取值：
+
+ -   **Year**：包年；
+-   **Month**：包月。
+
+ **说明：** 若付费类型为**Prepaid**则该参数必须传入。
+
+ |
+|Category|String|否|HighAvailability|实例系列，取值：
+
+ -   **Basic**：基础版；
+-   **HighAvailability**：高可用版；
+-   **AlwaysOn**：集群版；
+-   **Finance**：金融版（仅中国站支持）。
+
+ |
+|RestoreTable|String|否|1|是否进行库表恢复，取值为**1**时表示进行库表恢复，否则不填。
+
+ |
+|TableMeta|String|否|\[\{"type":"db","name":"testdb1","newname":"testdb1\_new","tables":\[\{"type":"table","name":"testdb1table1","newname":"testdb1table1\_new"\}\]\}\]|进行库表恢复时，指定恢复的库表信息。格式：
+
+ ```
+[{"type":"db","name":"<数据库1名称>","newname":"<新数据库1名称>","tables":[{"type":"table","name":"<数据库1内的表1名称>","newname":"<新的表1名称>"},{"type":"table","name":"<数据库1内的表2名称>","newname":"<新的表2名称>"}]},{"type":"db","name":"<数据库1名称>","newname":"<新数据库2名称>","tables":[{"type":"table","name":"<数据库2内的表3名称>","newname":"<新的表3名称>"},{"type":"table","name":"<数据库2内的表4名称>","newname":"<新的表4名称>"}]}]
+```
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
-|DBInstanceId|String|rm-uf6wjk5xxxxxxx| 实例ID。
+|DBInstanceId|String|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|OrderId|String|100789370xxxxx| 订单ID。
+|OrderId|String|100789370xxxxx|订单ID。
 
  |
-|RequestId|String|1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC| 请求ID。
+|RequestId|String|1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC|请求ID。
 
  |
 
@@ -131,18 +156,16 @@ http(s)://rds.aliyuncs.com/?Action=CloneDBInstance
 
 正常返回示例
 
- `XML` 格式
+`XML` 格式
 
 ``` {#xml_return_success_demo}
 <CloneDBInstanceResponse>
-  <OrderId>100789370xxxxx</OrderId>
-  <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
-  <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId>
-</CloneDBInstanceResponse>
-
+	  <OrderId>100789370xxxxx</OrderId>
+	  <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
+	  <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId></CloneDBInstanceResponse>
 ```
 
- `JSON` 格式
+`JSON` 格式
 
 ``` {#json_return_success_demo}
 {
@@ -154,5 +177,5 @@ http(s)://rds.aliyuncs.com/?Action=CloneDBInstance
 
 ## 错误码 { .section}
 
- [查看本产品错误码](https://error-center.aliyun.com/status/product/Rds) 
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
