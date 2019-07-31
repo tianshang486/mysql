@@ -7,9 +7,9 @@
 -   MySQL 5.7高可用本地SSD盘版
 -   MySQL 5.6
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeInstanceCrossBackupPolicy)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeInstanceCrossBackupPolicy&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -28,7 +28,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -114,27 +114,26 @@ http(s)://rds.aliyuncs.com/?Action=DescribeInstanceCrossBackupPolicy
 ``` {#xml_return_success_demo}
 <DescribeInstanceCrossBackupPolicyResponse>
   <DBInstanceStatusDesc>ACTIVATION</DBInstanceStatusDesc>
-  <LockMode>Unlock</LockMode>
-  <BackupEnabledTime>2019-06-12T05:44:21Z</BackupEnabledTime>
-  <CrossBackupType>1</CrossBackupType>
-  <LogBackupEnabled>Enable</LogBackupEnabled>
-  <BackupEnabled>Enable</BackupEnabled>
-  <RetentType>1</RetentType>
-  <DBInstanceId>rm-bpxxxxx</DBInstanceId>
-  <DBInstanceDescription/>
-  <Retention>15</Retention>
-  <Engine>mysql</Engine>
-  <LogBackupEnabledTime>2019-06-12T05:44:21Z</LogBackupEnabledTime>
-  <CrossBackupRegion>cn-shanghai</CrossBackupRegion>
-  <StorageOwner>rds</StorageOwner>
-  <RegionId>cn-hangzhou</RegionId>
-  <RequestId>CB7667B2-72C8-497B-9BD8-3B343CEF51AB</RequestId>
-  <EngineVersion>5.6</EngineVersion>
-  <StorageType>oss</StorageType>
-  <Endpoint/>
-  <DBInstanceStatus>1</DBInstanceStatus>
-</DescribeInstanceCrossBackupPolicyResponse>
-
+	  <LockMode>Unlock</LockMode>
+	  <BackupEnabledTime>2019-06-12T05:44:21Z</BackupEnabledTime>
+	  <CrossBackupType>1</CrossBackupType>
+	  <LogBackupEnabled>Enable</LogBackupEnabled>
+	  <BackupEnabled>Enable</BackupEnabled>
+	  <RetentType>1</RetentType>
+	  <DBInstanceId>rm-bpxxxxx</DBInstanceId>
+	  <DBInstanceDescription></DBInstanceDescription>
+	  <Retention>15</Retention>
+	  <Engine>mysql</Engine>
+	  <LogBackupEnabledTime>2019-06-12T05:44:21Z</LogBackupEnabledTime>
+	  <CrossBackupRegion>cn-shanghai</CrossBackupRegion>
+	  <StorageOwner>rds</StorageOwner>
+	  <RegionId>cn-hangzhou</RegionId>
+	  <RequestId>CB7667B2-72C8-497B-9BD8-3B343CEF51AB</RequestId>
+	  <EngineVersion>5.6</EngineVersion>
+	  <StorageType>oss</StorageType>
+	  <Endpoint></Endpoint>
+	  <DBInstanceStatus>1</DBInstanceStatus>
+    </DescribeInstanceCrossBackupPolicyResponse>
 ```
 
 `JSON` 格式
@@ -166,5 +165,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeInstanceCrossBackupPolicy
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
