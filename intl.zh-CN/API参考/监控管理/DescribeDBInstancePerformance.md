@@ -12,20 +12,20 @@
         -   查询时间范围小于等于1小时，采集粒度为5秒。
     -   监控频率为60秒：
         -   查询范围大于30天的，采集粒度为1天；
-        -   查询范围大于7天小于30天的，采集粒度为1小时；
-        -   查询范围小于7天的，采集粒度为1分钟。
+        -   查询范围大于7天小于等于30天的，采集粒度为1小时；
+        -   查询范围小于等于7天的，采集粒度为1分钟。
     -   监控频率为300秒：
         -   查询范围大于30天的，采集粒度为1天；
-        -   查询范围大于7天小于30天的，采集粒度为1小时；
-        -   查询范围小于7天的，采集粒度为5分钟。
+        -   查询范围大于7天小于等于30天的，采集粒度为1小时；
+        -   查询范围小于等于7天的，采集粒度为5分钟。
 -   MySQL 5.7高可用云盘版和MariaDB：
     -   查询范围大于30天的，采集粒度为1天；
-    -   查询范围大于7天小于30天的，采集粒度为1小时；
-    -   查询范围小于7天的，采集粒度为1分钟。
+    -   查询范围大于7天小于等于30天的，采集粒度为1小时；
+    -   查询范围小于等于7天的，采集粒度为1分钟。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeDBInstancePerformance)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeDBInstancePerformance&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -111,21 +111,19 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstancePerformance
 
 ``` {#xml_return_success_demo}
 <DescribeDBInstancePerformanceResponse>
-  <RequestId>A5409D02-D661-4BF3-8F3D-0A814D0574E7</RequestId>
-  <DBInstanceID> rm-uf6wjk5xxxxxxx</DBInstanceID>
-  <StartTime>2012-06-11T15:00Z</StartTime>
-  <EndTime>2013-10-17T15:00Z</EndTime>
-  <Engine>MySQL</Engine>
-  <PerformanceKeys>
-    <PerformanceKey>
-      <Key>MySQL_NetworkTraffic</Key>
-      <Unit>KB</Unit>
-      <ValueFormat>recv_k&amp;sent_k</ValueFormat>
-      <Values/>
-    </PerformanceKey>
-  </PerformanceKeys>
-</DescribeDBInstancePerformanceResponse>
-
+	  <RequestId>A5409D02-D661-4BF3-8F3D-0A814D0574E7</RequestId>
+	  <DBInstanceID> rm-uf6wjk5xxxxxxx</DBInstanceID>
+	  <StartTime>2012-06-11T15:00Z</StartTime>
+	  <EndTime>2013-10-17T15:00Z</EndTime>
+	  <Engine>MySQL</Engine>
+	  <PerformanceKeys>
+		    <PerformanceKey>
+			      <Key>MySQL_NetworkTraffic</Key>
+			      <Unit>KB</Unit>
+			      <ValueFormat>recv_k&amp;sent_k</ValueFormat>
+			      <Values></Values>
+		    </PerformanceKey>
+	  </PerformanceKeys></DescribeDBInstancePerformanceResponse>
 ```
 
 `JSON` 格式
