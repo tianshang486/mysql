@@ -32,20 +32,20 @@ ApsaraDB RDS for MySQL is fully compatible with MySQL. You can connect to an RDS
     3.  Find the RDS instance and click its ID.
     4.  On the displayed **Basic Information** page, find the private and public IP addresses and their corresponding port numbers.
 
-![基本信息](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15653394732609_en-US.png)
+![基本信息](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15653397452609_en-US.png)
 
  |
     |**User**|The username of the account that you use to access the RDS instance.|
     |**Password**|The password of the account that you use to access the RDS instance.|
     |**Port**|The port for the RDS instance to establish a connection. If you use the private IP address of the RDS instance to establish a connection, enter the private port number. If you use the public IP address of the RDS instance to establish a connection, enter the public port number.|
 
-    ![HeidiSQL客户端设置连接信息](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/156533947354911_en-US.png)
+    ![HeidiSQL客户端设置连接信息](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/156533974554911_en-US.png)
 
 4.  Click **Open**.
 
     If the entered information is correct, the RDS instance can be connected.
 
-    ![HeidiSQL客户端实例连接成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15653394742610_en-US.png)
+    ![HeidiSQL客户端实例连接成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15653397452610_en-US.png)
 
 
 ## Use the CLI to connect to an RDS instance {#section_jch_n19_l3p .section}
