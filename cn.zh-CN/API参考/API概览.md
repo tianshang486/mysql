@@ -2,12 +2,6 @@
 
 云数据库 MySQL 版提供以下相关API接口。
 
-## 使用API {#section_cxo_mi0_drr .section}
-
-|API|描述|
-|---|--|
-|[请求结构](intl.zh-CN/API参考/使用API/请求结构.md)|请求结构|
-
 ## 实例管理 {#section_rzf_r5r_qld .section}
 
 |API|描述|
@@ -32,13 +26,6 @@
 |[SwitchDBInstanceHA](intl.zh-CN/API参考/实例管理/SwitchDBInstanceHA.md)|调用SwitchDBInstanceHA接口切换RDS实例的主备实例。|
 |[CreateReadOnlyDBInstance](intl.zh-CN/API参考/实例管理/CreateReadOnlyDBInstance.md)|调用CreateReadOnlyDBInstance接口为某个实例创建一个只读实例。|
 |[ModifyDBInstanceAutoUpgradeMinorVersion](intl.zh-CN/API参考/实例管理/ModifyDBInstanceAutoUpgradeMinorVersion.md)|调用ModifyDBInstanceAutoUpgradeMinorVersion接口修改RDS实例升级小版本的方式。|
-
-## CloudDBA数据库性能优化 {#section_ilm_ukh_ri5 .section}
-
-|API|描述|
-|---|--|
-|[CreateDiagnosticReport](intl.zh-CN/API参考/CloudDBA数据库性能优化/CreateDiagnosticReport.md)|调用CreateDiagnosticReport接口创建诊断报告。|
-|[DescribeDiagnosticReportList](intl.zh-CN/API参考/CloudDBA数据库性能优化/DescribeDiagnosticReportList.md)|调用DescribeDiagnosticReportList接口获取诊断报告列表。|
 
 ## 数据库管理 {#section_pxh_8lb_a8w .section}
 
