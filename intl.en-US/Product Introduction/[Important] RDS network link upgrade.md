@@ -22,7 +22,7 @@ To check whether an instance is in safe mode \(database proxy mode\), follow the
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target instance is located.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/156402166437659_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/64586/156567898637659_en-US.png)
 
 3.  Find the target instance and click its ID.
 4.  In the left-side navigation pane, click **Database Connection**. Then, check the **Database Proxy \(Safe Mode\)** field.
