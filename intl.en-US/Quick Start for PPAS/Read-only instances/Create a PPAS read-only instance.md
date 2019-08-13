@@ -23,16 +23,16 @@ For more information, see [Introduction to PPAS read-only instances](intl.en-US/
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156566582036543_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156567840636543_en-US.png)
 
 3.  Find the target instance and click its ID.
 4.  Click **Add Read-only Instance**.
 
-    ![添加只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/156566582039780_en-US.png)
+    ![添加只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/156567840639780_en-US.png)
 
 5.  On the purchase page, select the instance configuration and click **Buy Now**.
 
-    ![购买界面](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/156566582139782_en-US.png)
+    ![购买界面](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/156567840739782_en-US.png)
 
     **Note:** 
 
@@ -50,11 +50,11 @@ The instance creation takes a few minutes.
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the read-only instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156566582036543_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156567840636543_en-US.png)
 
 3.  In the instance list, find the read-only instance and click its ID.
 
-    ![选择只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/156566582139783_en-US.png)
+    ![选择只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/156567840739783_en-US.png)
 
 
 **View a read-only instance on the Basic Information page of the master instance**
@@ -62,19 +62,19 @@ The instance creation takes a few minutes.
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the master instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156566582036543_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156567840636543_en-US.png)
 
 3.  Find the master instance and click its ID.
 4.  On the Basic Information page of the master instance, move the pointer over the number below **Read-only Instance** and click the ID of the read-only instance.
 
-    ![主实例内跳转只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/156566582139784_en-US.png)
+    ![主实例内跳转只读实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/156567840739784_en-US.png)
 
 
 ## View the delay of a read-only instance {#section_sww_dv5_vdb .section}
 
 When a read-only instance synchronizes data from the master instance, the read-only instance may lag behind the master instance by a small amount of time. You can view the delay on the Basic Information page of the read-only instance.
 
-![只读实例延迟](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/156566582239785_en-US.png)
+![只读实例延迟](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133902/156567840839785_en-US.png)
 
 ## APIs {#section_hcn_555_jgb .section}
 
