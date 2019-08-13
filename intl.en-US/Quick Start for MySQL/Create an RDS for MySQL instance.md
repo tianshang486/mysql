@@ -23,8 +23,8 @@ You have registered an Alibaba Cloud account.
 
     |Parameter|Description|
     |---------|-----------|
-    |**Region**|Indicates the location of the RDS instance you want to purchase. The region cannot be changed after the purchase.     -   Select the region closest to your users for high access speed.
-    -   Make sure to select the region where your ECS instance is deployed so that the ECS instance can access the RDS instance through the intranet; otherwise, they intercommunicate through the Internet and the access speed is affected.
+    |**Region**|Indicates the location of the RDS instance you want to purchase. You cannot change the region once you confirm your order.     -   Select the region closest to your users to increase the access speed.
+    -   Select the region where your ECS instance is located so that the ECS instance can access the RDS instance through the intranet. If the ECS instance and RDS instance are located in different regions, they can communicate only through the Internet and hence performance is degraded.
  |
     |**Database Engine**| The supported database engines are MySQL, Microsoft SQL Server, PostgreSQL, PPAS \(compatible with Oracle\), and MariaDB TX.
 
@@ -38,29 +38,29 @@ You have registered an Alibaba Cloud account.
  **Note:** The available versions vary depending on the region you select.
 
  |
-    |**Edition**|     -   **Basic Edition**: It provides a single node and separates computing from storage, and is extremely cost-effective.
-    -   **High-availability Edition**: It adopts the high-availability architecture with one master node and one slave node. It is applicable to over 80% of scenarios.
+    |**Edition**|     -   **Basic**: This edition provides a single node and separates computing from storage. It is extremely cost-effective.
+    -   **High-availability**: This edition adopts the high-availability architecture with one master node and one slave node. It is applicable to over 80% of scenarios.
  **Note:** The available product series vary depending on the region you select. For more information on the product series, see [Product series overview](../../../../intl.en-US/Product Introduction/Product series/Product series overview.md#).
 
  |
     |**Zone**| A zone is a physical area within a region. Different zones in the same region are basically the same.
 
- You can deploy the master and slave nodes of an RDS instance in the same zone or in different zones.
+ You can deploy the master and slave nodes of your RDS instance in the same zone or in different zones.
 
  |
-    |**Network type**|     -   **Classic Network**: indicates the traditional network type.
-    -   **VPC** \(recommended\): short for Virtual Private Cloud. A VPC is an isolated network environment and therefore provides higher security and performance than the classic network.
+    |**Network Type**|     -   **Classic Network**: indicates a traditional network.
+    -   **VPC** \(recommended\): short for Virtual Private Cloud. A VPC is an isolated network environment and therefore provides higher security and performance than a classic network.
 
-**Note:** Make sure the network type is the same as that of your ECS instance so that the ECS instance can access the RDS instance through the intranet.
+**Note:** Make sure the network type of the RDS instance is the same as that of your ECS instance so that the ECS instance can access the RDS instance through the intranet.
 
  |
-    |**Type**| Indicates instance specifications. For specific resources \(CPU cores, memory, maximum number of connections, and IOPS\) provided by each instance type, see [Instance type list](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#).
+    |**Type**| Indicates the specifications of the RDS instance. Each instance type supports a specific number of CPU cores, memory size, maximum number of connections, and maximum IOPS. For more information, see [Instance type list](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#).
 
- RDS supports the following instance type families:
+ RDS for MySQL supports the following instance type families:
 
-     -   **General-purpose instance**: owns dedicated memory and I/O resources, but shares CPU and storage resources with other general-purpose instances on the same server.
+     -   **General-purpose instance**: owns dedicated memory and I/O resources, but shares CPU and storage resources with the other general-purpose instances on the same server.
     -   **Dedicated instance**: owns dedicated CPU, memory, storage, and I/O resources.
-    -   **Dedicated host**: owns all the CPU, memory, storage, and I/O resources on the server on which it is located.
+    -   **Dedicated host**: owns all the CPU, memory, storage, and I/O resources on the server where it is located.
  For example, **8 Cores 32 GB \(Basic\)** indicates a general-purpose instance, and **8 Cores 32 GB \(Dedicated\)** indicates a dedicated instance.
 
  |
@@ -80,11 +80,11 @@ You have registered an Alibaba Cloud account.
 
 1.  In the upper left corner of the [RDS console](https://rdsnext.console.aliyun.com), select the region where the instance is located, and view the instance details.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156346434136543_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156567572536543_en-US.png)
 
 2.  [Configure a whitelist](intl.en-US/Quick Start for MySQL/Initial configuration/Configure a whitelist.md#).
-3.  [Create a databse account](intl.en-US/Quick Start for MySQL/Initial configuration/Create accounts and databases.md#).
-4.  [Apply for an Internet address](intl.en-US/Quick Start for MySQL/Initial configuration/Apply for an Internet address.md#) \(if you want to access RDS through the Internet\).
+3.  [Create accounts](intl.en-US/Quick Start for MySQL/Initial configuration/Create accounts and databases.md#).
+4.  [Apply for an Internet address](intl.en-US/Quick Start for MySQL/Initial configuration/Apply for an Internet address.md#) \(if you want to access the RDS instance through the Internet\).
 5.  [Connect to the RDS instance](intl.en-US/Quick Start for MySQL/Connect to an RDS for MySQL instance.md#).
 
 ## FAQ {#section_0a8_omz_gyu .section}
