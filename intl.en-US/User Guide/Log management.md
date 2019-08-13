@@ -9,7 +9,7 @@ This topic describes how to manage logs through the RDS console and SQL statemen
     -   [Restore SQL Server Data](intl.en-US/User Guide/Recovery/Restore SQL Server Data.md#)
     -   [Restore PostgreSQL or PPAS data](intl.en-US/User Guide/Recovery/Restore PostgreSQL or PPAS data.md#)
     -   [Restore MariaDB data](intl.en-US/User Guide/Recovery/Restore MariaDB data.md#)
-    -   [RDS for MySQL 逻辑备份文件恢复到自建数据库](../../../../intl.en-US/FAQs/Data backup__recovery/(RDS for MySQL) Restore logical backup file to on-premises database.md#)
+    -   [\(RDS for MySQL\) Restore logical backup file to on-premises database](../../../../intl.en-US/FAQs/Data backup__recovery/(RDS for MySQL) Restore logical backup file to on-premises database.md#)
 
 ## Manage logs by using the RDS console {#section_qf4_jz4_ydb .section}
 
