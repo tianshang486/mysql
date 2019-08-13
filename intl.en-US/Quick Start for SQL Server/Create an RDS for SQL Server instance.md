@@ -81,7 +81,7 @@ You have registered an Alibaba Cloud account. For more information, see [Sign up
 
 1.  In the upper left corner of the [RDS console](https://rdsnext.console.aliyun.com), select the region where the instance is located, and view the instance details.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156401353236543_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156567623936543_en-US.png)
 
 2.  [Configure a whitelist](intl.en-US/Quick Start for SQL Server/Initial configuration/Configure a whitelist.md).
 3.  [Create accounts](intl.en-US/Quick Start for SQL Server/Initial configuration/Creating accounts and databases/Create databases and accounts for an RDS for SQL Server 2008 R2 instance.md).
