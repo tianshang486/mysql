@@ -8,15 +8,15 @@ When you call this operation, the instance must be in the running state.
 
 ## Debugging {#apiExplorer .section}
 
-You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DeleteAccount) to perform debugging.
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=DeleteAccount) to perform debugging.
 
-API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
+OpenAPI Explorer provides various functions to simplify API usage. For example, you can retrieve APIs, call APIs, and generate SDK sample code.
 
 ## Request parameters {#parameters .section}
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|DeleteAccount| The operation that you want to perform. Set the value to **DeleteAccount**.
+|Action|String|Yes|DeleteAccount| The operation that you want to perform. Set this parameter to DeleteAccount.
 
  |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx| The ID of the instance.
@@ -53,21 +53,20 @@ Normal response examples
 
 `XML` format
 
-``` {#xml_return_success_demo}
-<DeleteAccountResponse> 
-  <RequestID>91E855E5-7E80-4955-929B-C74EE1D38C66</RequestID>
-</DeleteAccountResponse> 
+``` {#codeblock_mzw_ek3_wxh}
+<DeleteAccountResponse>
+	  <RequestID>91E855E5-7E80-4955-929B-C74EE1D38C66</RequestID></DeleteAccountResponse>
 ```
 
 `JSON` format
 
-``` {#json_return_success_demo}
+``` {#codeblock_uvb_mde_rrf}
 {
 	"RequestID":"91E855E5-7E80-4955-929B-C74EE1D38C66"
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_ykf_0h9_3x6 .section}
 
-[View error codes](https://error-center.alibabacloud.com/status/product/Rds)
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
