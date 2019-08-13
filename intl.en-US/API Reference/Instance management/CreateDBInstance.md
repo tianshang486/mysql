@@ -2,13 +2,13 @@
 
 You can call this operation to create an RDS instance.
 
-**Before performing this operation, make sure that you fully understand the [billing methods](../../../../intl.en-US/Purchase Guide/Billing methods and billing items.md#section_25l_g7t_kzx) and [pricing](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing) of RDS.** 
+Before performing this operation, make sure that you fully understand the [billing methods](../../../../intl.en-US/Purchase Guide/Billing methods and billing items.md#section_25l_g7t_kzx) and [pricing](https://www.alibabacloud.com/product/apsaradb-for-rds#pricing) of RDS.
 
 For more information about RDS instance types, see [Instance types](~~26312~~).
 
 ## Debugging {#apiExplorer .section}
 
-You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=CreateDBInstance) to perform debugging.
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=CreateDBInstance) to perform debugging.
 
 API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
 
@@ -16,65 +16,60 @@ API Explorer provides various functions to simplify API usage. For example, you 
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|CreateDBInstance| The operation that you want to perform. Set the value to **CreateDBInstance**.
+|Action|String|Yes|CreateDBInstance| The operation that you want to perform. Set this parameter to CreateDBInstance.
 
  |
-|RegionId|String|Yes|cn-hangzhou| The ID of the region. You can call [DescribeRegions](~~26243~~) to view the available regions of Alibaba Cloud.
+|RegionId|String|Yes|cn-hangzhou| The ID of the region. You can call the [DescribeRegions](intl.en-US/API Reference/Instance management/DescribeRegions.md#) API operation to view the available regions of Alibaba Cloud.
 
  |
 |Engine|String|Yes|MySQL| The engine type of the database. Valid values:
 
- -   **MySQL**
--   **SQLServer**
--   **PostgreSQL**
--   **PPAS**
--   **MariaDB**
+ -   MySQL
+-   SQLServer
+-   PostgreSQL
+-   PPAS
+-   MariaDB
 
  |
 |EngineVersion|String|Yes|5.6| The version of the database. Valid values:
 
- -   MySQL: **5.5/5.6/5.7/8.0**
--   SQL Server: **2008r2/2012/2012\_ent\_ha/2012\_std\_ha/2012\_web/2016\_ent\_ha/2016\_std\_ha/2016\_web/2017\_ent**
--   PostgreSQL: **9.4/10.0**
--   PPAS: **9.3/10.0**
--   MariaDB: **10.3**
+ -   MySQL: 5.5 | 5.6 | 5.7 | 8.0.
+-   SQL Server: 2008r2 | 2012 | 2012\_ent\_ha | 2012\_std\_ha | 2012\_web | 2016\_ent\_ha | 2016\_std\_ha | 2016\_web | 2017\_ent.
+-   PostgreSQL: 9.4 | 10.0.
+-   PPAS: 9.3 | 10.0.
+-   MariaDB: 10.3.
 
  |
 |DBInstanceClass|String|Yes|rds.mysql.s1.small| The instance type \(specifications\). For more information, see [Instance types](~~26312~~).
 
  |
-|DBInstanceStorage|Integer|Yes|20| The storage capacity of the instance. Valid values:
+|DBInstanceStorage|Integer|Yes|20| The storage capacity of the instance. Unit: GB.
 
- -   MySQL/PostgreSQL/PPAS High-availability Edition: **5 to 2000**
--   MySQL 5.7 with cloud SSDs or MariaDB: **20 to 1000**
--   SQL Server 2008 R2: **10 to 2000**
--   SQL Server 2012, 2016, or 2017: **20 to 3000**
-
- This value must be a multiple of 5. Unit: GB. For more information, see [Instance types](~~26312~~).
+ This value must be a multiple of 5. For more information, see [Instance type list](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#).
 
  |
 |DBInstanceNetType|String|Yes|Internet| The network type of the instance. Valid values:
 
- -   **Internet**
--   **Intranet**
+ -   Internet
+-   Intranet
 
  |
 |PayType|String|Yes|Postpaid| The billing method of the instance. Valid values:
 
- -   **Postpaid**: Pay-As-You-Go
--   **Prepaid**: Subscription
+ -   Postpaid: Pay-As-You-Go
+-   Prepaid: Subscription
 
  |
-|SecurityIPList|String|Yes|10.23.12.27/24| The [IP whitelist](~~43185~~) of the instance. Separate multiple IP addresses with commas \(,\). It can include up to 1,000 IP addresses. The IP addresses support two formats:
+|SecurityIPList|String|Yes|10.23.12.27/24| The [IP address whitelist](../../../../intl.en-US/Quick Start for MySQL/Initial configuration/Configure a whitelist.md#) of the instance. Separate multiple IP addresses with commas \(,\). It can include up to 1,000 IP addresses. The IP addresses support two formats:
 
- -   IP address format, such as, 10.23.12.24.
--   Classless Inter-Domain Routing \(CIDR\) format, such as, 10.23.12.24/24 \(where /24 indicates the number of bits for the prefix of the IP address, in the range of 1 to 32.\)
+ -   IP address format. For example, 10.23.12.24.
+-   Classless Inter-Domain Routing \(CIDR\) format. For example, 10.23.12.24/24 \(where /24 indicates the number of bits for the prefix of the IP address, in the range of 1 to 32.\)
 
  |
 |SystemDBCharset|String|No|GBK| The character set. Valid values:
 
- -   MySQL or MariaDB: **utf8, gbk, latin1, or utf8mb4**
--   SQL Server: **Chinese\_PRC\_CI\_AS, Chinese\_PRC\_CS\_AS, SQL\_Latin1\_General\_CP1\_CI\_AS, SQL\_Latin1\_General\_CP1\_CS\_AS, and Chinese\_PRC\_BIN**
+ -   MySQL or MariaDB: utf8 | gbk | latin1 | utf8mb4.
+-   SQL Server: Chinese\_PRC\_CI\_AS | Chinese\_PRC\_CS\_AS | SQL\_Latin1\_General\_CP1\_CI\_AS | SQL\_Latin1\_General\_CP1\_CS\_AS | Chinese\_PRC\_BIN.
 
  |
 |DBInstanceDescription|String|No|Test database| The instance description. It starts with a letter and contains 2 to 256 characters, including letters, digits, underscores \(\_\), and hyphens \(-\).
@@ -82,7 +77,7 @@ API Explorer provides various functions to simplify API usage. For example, you 
  **Note:** It cannot start with http:// or https://.
 
  |
-|ClientToken|String|No|ETnLKlblzczshOTUbOCzxxxxxxxxxx| The client token that is used to ensure the idempotency of requests. The parameter value is generated by the client and is unique among different requests, which is a string of up to 64 ASCII characters.
+|ClientToken|String|No|ETnLKlblzczshOTUbOCzxxxxxxxxxx| The client token that is used to guarantee the idempotency of requests. The client token is generated by the client and is unique among different requests. It is a string of up to 64 ASCII characters.
 
  |
 |ZoneId|String|No|cn-hangzhou-b| The ID of the zone.
@@ -90,8 +85,10 @@ API Explorer provides various functions to simplify API usage. For example, you 
  |
 |InstanceNetworkType|String|No|Classic| The network type of the instance. Valid values:
 
- -   **VPC**
--   **Classic** \(default value\)
+ -   VPC
+-   Classic
+
+ Default value: Classic
 
  **Note:** 
 
@@ -101,8 +98,8 @@ API Explorer provides various functions to simplify API usage. For example, you 
  |
 |ConnectionMode|String|No|Standard| The access mode of the instance. Valid values:
 
- -   **Standard**: standard mode
--   **Safe**: database proxy mode
+ -   Standard: standard mode.
+-   Safe: database proxy mode.
 
  **Note:** SQL Server 2012, 2016, and 2017 support only the standard mode.
 
@@ -117,40 +114,40 @@ API Explorer provides various functions to simplify API usage. For example, you 
  **Note:** For MariaDB, this parameter is required.
 
  |
-|PrivateIpAddress|String|No|172.16.201.69| The intranet IP address of the instance. It must be within the IP address range provided by the switch. By default, the system automatically assigns an IP address based on **VPCId** and **VSwitchId**.
+|PrivateIpAddress|String|No|172.16.201.69| The intranet IP address of the instance. It must be within the IP address range provided by the switch. By default, the system automatically assigns an IP address based on the VPCId and VSwitchId.
 
  |
 |Period|String|No|Year| The prepayment period of the instance. Valid values:
 
- -   **Year**
--   **Month**
+ -   Year
+-   Month
 
- **Note:** If the billing method is **Prepaid**, this parameter is required.
+ **Note:** If the billing method is Prepaid, this parameter is required.
 
  |
 |UsedTime|String|No|2| The subscription length. Valid values:
 
- -   If Period is set to **Year**, UsedTime can be **1 to 3**.
--   If Period is set to **Month**, UsedTime can be **1 to 9**.
+ -   If the Period parameter is set to Year, the value of the UsedTime parameter ranges from 1 to 3.
+-   If the Period parameter is set to Month, the value of the UsedTime parameter ranges from 1 to 9.
 
- **Note:** If the billing method is **Prepaid**, this parameter is required.
+ **Note:** If the billing method is Prepaid, this parameter is required.
 
  |
-|AutoRenew|String|No|true| Whether the instance will be automatically renewed. Valid values:
+|AutoRenew|String|No|true| Indicates whether the instance is automatically renewed. Valid values:
 
 -   true
 -   false
 
  **Note:** 
 
--   If Period is set to **Year**, the automatic renewal period is 1 year.
--   If Period is set to **Month**, the automatic renewal period is 1 month.
+-   If the Period parameter is set to Year, the automatic renewal period is 1 year.
+-   If the Period parameter is set to Month, the automatic renewal period is 1 month.
 
  |
 |DBInstanceStorageType|String|No|cloud\_ssd| The storage type of the instance. Valid values:
 
- -   **local\_ssd**: local SSD \(recommended\).
--   **cloud\_ssd**: cloud SSD.
+ -   local\_ssd: local SSD \(recommended\).
+-   cloud\_ssd: cloud SSD.
 
  |
 |BusinessInfo|String|No|121436975448952| The extended business information.
@@ -167,10 +164,12 @@ API Explorer provides various functions to simplify API usage. For example, you 
 |OrderId|String|1007893702xxxxx| The ID of the order.
 
  |
-|ConnectionString|String|rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com| The intranet address of the database.
+|ConnectionString|String|rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com| The connection address of the database.
 
  |
-|Port|String|3306| The intranet port of the database.
+|Port|String|3306| The port of the database.
+
+ **Note:** The DBInstanceNetType parameter determines whether the value of this parameter is a port for establishing a private or public connection.
 
  |
 |RequestId|String|1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC| The ID of the request.
@@ -199,19 +198,18 @@ Normal response examples
 
 `XML` format
 
-``` {#xml_return_success_demo}
+``` {#codeblock_i70_vfo_wgs}
 <CreateDBInstanceResponse>
-  <OrderId>1007893702xxxxx</OrderId> 
-  <ConnectionString>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</ConnectionString> 
-  <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId> 
-  <Port>3306</Port>
-  <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId> 
-</CreateDBInstanceResponse>
+	  <OrderId>1007893702xxxxx</OrderId>
+	  <ConnectionString>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</ConnectionString>
+	  <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
+	  <Port>3306</Port>
+	  <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId></CreateDBInstanceResponse>
 ```
 
 `JSON` format
 
-``` {#json_return_success_demo}
+``` {#codeblock_wjw_2g8_6tj}
 {
 	"Port":"3306",
 	"ConnectionString":"rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com",
@@ -227,5 +225,5 @@ Normal response examples
 |----------------|----------|-------------|-----------|
 |400|InvalidZoneId.NotSupported|The Specified vpc Zone not supported.|The zone does not support VPC instances. Change the zone and retry.|
 
-[View error codes](https://error-center.alibabacloud.com/status/product/Rds)
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds)
 
