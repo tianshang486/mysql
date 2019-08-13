@@ -14,14 +14,14 @@ Before using RDS, you must create databases and accounts for your RDS instance. 
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the target instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156566537536543_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156567832236543_en-US.png)
 
 3.  Find the target instance and click its ID.
 4.  In the left-side navigation pane, click **Accounts**.
 5.  Click **Create Initial Account**.
 6.  Enter the account information.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653756102_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783226102_en-US.png)
 
     Parameter description:
 
@@ -36,15 +36,15 @@ Before using RDS, you must create databases and accounts for your RDS instance. 
 9.  Start the pgAdmin 4 client.
 10. Right-click **Servers** and choose **Create** \> **Server** from the shortcut menu.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653764047_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783234047_en-US.png)
 
 11. In the Create Server dialog box, click the **General** tab and enter the server name.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653764048_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783234048_en-US.png)
 
 12. Click the Connection tab and enter the information about the instance to be connected.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653764049_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783234049_en-US.png)
 
     Parameter description:
 
@@ -54,7 +54,7 @@ Before using RDS, you must create databases and accounts for your RDS instance. 
         3.  Find the target instance and click its ID.
         4.  On the Basic Information page, find the Internet/intranet IP address and Internet/intranet port number of the instance.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653764050_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783234050_en-US.png)
 
     -   **Port**: the port number of the RDS instance. If your application accesses the RDS instance through the intranet, enter the intranet port number of the RDS instance. If your application accesses the RDS instance through the Internet, enter the Internet port number of the RDS instance.
     -   **Username**: the name of the initial account name for the RDS instance.
@@ -64,11 +64,11 @@ Before using RDS, you must create databases and accounts for your RDS instance. 
 
     **Note:** postgres is the default system database of the RDS instance. Do not perform any operation in this database.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653764051_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783234051_en-US.png)
 
 15. Double-click **postgres** and choose **Tools** \> **Query Tool**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653774052_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783244052_en-US.png)
 
 16. Enter the following command on the **Query-1** tab page to create a database:
 
@@ -76,17 +76,17 @@ Before using RDS, you must create databases and accounts for your RDS instance. 
     create database <database name>;
     ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653774053_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783244053_en-US.png)
 
 17. Click **Execute/Refresh**, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653774054_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783244054_en-US.png)
 
     If the execution is successful, the new database is created.
 
 18. Right-click **Databases** and choose **Refresh** from the shortcut menu. Then you can find the new database.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653774055_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783244055_en-US.png)
 
 19. Enter the following command on the Query-1 tab page to create an account:
 
@@ -94,17 +94,17 @@ Before using RDS, you must create databases and accounts for your RDS instance. 
     CREATE ROLE "username" CREATEDB CREATEROLE LOGIN ENCRYPTED PASSWORD 'password';
     ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653774056_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783244056_en-US.png)
 
 20. Click **Execute/Refresh**, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653784057_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783254057_en-US.png)
 
     If the execution is successful, the new account is created.
 
 21. Right-click **Login/Group Roles** and choose **Refresh** from the shortcut menu. Then you can find the new account.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656653784058_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7862/15656783254058_en-US.png)
 
 
 ## FAQ {#section_0q7_cg3_rz1 .section}
