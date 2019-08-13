@@ -16,17 +16,17 @@ This topic is applicable only to RDS for SQL Server 2008 R2 instances. For more 
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156567769336543_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156567790536543_en-US.png)
 
 3.  Find the target instance and click its ID.
 4.  In the left-side navigation pane, click **Accounts**.
 5.  Click **Create Account**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15656776942761_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15656779052761_en-US.png)
 
 6.  Enter the account information.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15656776942762_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15656779052762_en-US.png)
 
     |Parameter|Description|
     |---------|-----------|
@@ -37,7 +37,7 @@ This topic is applicable only to RDS for SQL Server 2008 R2 instances. For more 
     2.  Click **Add** to add the selected databases to the right area.
     3.  Set the account's permission on each database, which can be **Read/Write** or **Read-only**. You can also click the button \(for example, **Full Control Read-only**\) in the upper-right corner to set the permissions for the databases in batches.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15656776942763_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15656779052763_en-US.png)
 
  |
     |**Password**| The password contains 8 to 32 characters, including at least three of the following types of characters: uppercase letters, lowercase letters, digits, and special characters. The allowed special characters are as follows:
@@ -60,11 +60,11 @@ You can create up to 50 databases for an RDS for SQL Server 2008 R2 instance.
 4.  In the left-side navigation pane, click **Databases**.
 5.  Click **Create Database**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15656776942764_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15656779052764_en-US.png)
 
 6.  Enter the database information.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15656776942765_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7838/15656779052765_en-US.png)
 
     |Parameter|Description|
     |---------|-----------|
