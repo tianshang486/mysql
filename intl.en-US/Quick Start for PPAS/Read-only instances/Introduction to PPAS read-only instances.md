@@ -16,7 +16,7 @@ A read-only instance is a read-only copy of the master instance. Changes to the 
 
 The following figure shows the topology of read-only instances.
 
-![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/134807/156320987440410_en-US.png)
+![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/134807/156566595540410_en-US.png)
 
 ## Pricing {#section_fwf_5p5_vdb .section}
 
@@ -43,7 +43,7 @@ Read-only instances offer the following features:
 -   You cannot create or delete accounts for read-only instances.
 -   You cannot authorize accounts or modify account passwords for read-only instances.
 
-## FAQ { .section}
+## FAQ {#section_zuh_apx_9v1 .section}
 
 Q: Does an account created in the master instance have permissions on read-only instances?
 
