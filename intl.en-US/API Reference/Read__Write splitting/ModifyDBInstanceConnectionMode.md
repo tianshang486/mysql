@@ -1,25 +1,75 @@
-# ModifyDBInstanceConnectionMode {#reference_pyz_mm2_12b .reference}
+# ModifyDBInstanceConnectionMode {#doc_api_1094269 .reference}
 
-## Description {#section_l21_v32_12b .section}
+You can call this operation to enable or disable the database proxy.
 
-This API is used to enable or disable the database proxy function. This API is no longer supported.
+**Note:** This operation is deprecated.
 
-**Note:** This API is no longer supported.
+## Debugging {#apiExplorer .section}
 
-## Request parameters {#section_qzx_w32_12b .section}
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=ModifyDBInstanceConnectionMode) to perform debugging. OpenAPI Explorer allows you to perform various operations to simplify API usage. For example, you can retrieve APIs, call APIs, and dynamically generate SDK example code.
 
-|Name|Type|Required|Description|
-|----|----|--------|-----------|
-|Action|String|Yes|Required parameter. Value: ModifyDBInstanceConnectionMode.|
-|DBInstanceId|String|Yes|Instance ID|
-|ConnectionMode|String|Yes| -   Performance: Disable the database proxy function.
--   Safe: Enable the database proxy function.
+## Request parameters {#parameters .section}
+
+|Parameter|Type|Required|Example|Description|
+|---------|----|--------|-------|-----------|
+|Action|String|Yes|ModifyDBInstanceConnectionMode| The operation that you want to perform. Set this parameter to ModifyDBInstanceConnectionMode.
+
+ |
+|ConnectionMode|String|Yes|Performance| The access mode of the instance. Valid values:
+
+-   Performance: standard mode.
+-   Safe: safe mode.
+
+ |
+|DBInstanceId|String|Yes|rm-uf6wjk5xxxxxx| The name of the instance.
+
+ |
+|AccessKeyId|String|No|LTAIfCxxxxxxx| The AccessKey ID that Alibaba Cloud issues to a user for service access.
+
+ |
+|OwnerAccount|String|No|testuser@aliyun.com| The Apsara Stack tenant account.
 
  |
 
-## Response parameters {#section_rpk_z32_12b .section}
+## Response parameters {#resultMapping .section}
 
-|Name|Type|Description|
-|----|----|-----------|
-|<Common return parameters\>|-|For more information, see [Public parameters](intl.en-US/API Reference/Use APIs/Public parameters.md#).|
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF| The ID of the request.
+
+ |
+
+## Examples {#demo .section}
+
+Sample requests
+
+``` {#request_demo}
+
+http(s)://rds.aliyuncs.com/? Action=ModifyDBInstanceConnectionMode
+&ConnectionMode=Performance 
+&DBInstanceId=rm-uf6wjk5xxxxxx 
+&<Common request parameters>
+
+```
+
+Successful response examples
+
+`XML` format
+
+``` {#codeblock_3e6_jec_rfy}
+<ModifyDBInstanceConnectionModeResponse>
+	  <RequestId>D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD</RequestId></ModifyDBInstanceConnectionModeResponse>
+```
+
+`JSON` format
+
+``` {#codeblock_93t_iz0_rsz}
+{
+	"RequestId":"D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD"
+}
+```
+
+## Error codes {#section_zyf_vqp_y2c .section}
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
