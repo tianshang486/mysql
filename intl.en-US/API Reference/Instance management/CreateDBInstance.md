@@ -8,9 +8,7 @@ For more information about RDS instance types, see [Instance types](~~26312~~).
 
 ## Debugging {#apiExplorer .section}
 
-You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=CreateDBInstance) to perform debugging.
-
-API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=CreateDBInstance) to perform debugging. OpenAPI Explorer provides various functions to simplify API usage. For example, you can retrieve APIs, call APIs, and generate SDK sample code.
 
 ## Request parameters {#parameters .section}
 
