@@ -2,7 +2,7 @@
 
 You can call this operation to query the list of SQL audit files of an RDS instance.
 
-This operation is applicable to the following instances:
+This operation is applicable to the following database engine versions:
 
 -   MySQL 5.5
 -   MySQL 5.6
@@ -13,15 +13,15 @@ This operation is applicable to the following instances:
 
 ## Debugging {#apiExplorer .section}
 
-You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeSQLLogFiles) to perform debugging.
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=DescribeSQLLogFiles) to perform debugging.
 
-API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
+OpenAPI Explorer provides various functions to simplify API usage. For example, you can retrieve APIs, call APIs, and generate SDK sample code.
 
 ## Request parameters {#parameters .section}
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|DescribeSQLLogFiles| The operation that you want to perform. Set the value to**DescribeSQLLogFiles**.
+|Action|String|Yes|DescribeSQLLogFiles| The operation that you want to perform. Set this parameter to DescribeSQLLogFiles.
 
  |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxx| The ID of the instance.
@@ -30,14 +30,14 @@ API Explorer provides various functions to simplify API usage. For example, you 
 |FileName|String|No|custinsxxxxx.csv| The name of the audit file.
 
  |
-|PageSize|Integer|No|20| The number of records on each page. Valid values: **1 to 50**.
+|PageSize|Integer|No|20| The number of records on each page. Value range: 1 to 50.
 
- Default value: **20**.
+ Default value: 20.
 
  |
-|PageNumber|Integer|No|1| The page number. Valid values: **1 to 100,000**.
+|PageNumber|Integer|No|1| The page number. Value range: 1 to 100000.
 
- Default value: **1**.
+ Default value: 1.
 
  |
 |AccessKeyId|String|No|LTAIfCxxxxxxxxxx| The AccessKey ID issued by Alibaba Cloud for users to access services.
@@ -57,29 +57,29 @@ API Explorer provides various functions to simplify API usage. For example, you 
 |PageRecordCount|Integer|10| The number of records on the current page.
 
  |
-|Items| | | The list of audit files.
+|Items|N/A|N/A| The list of audit files.
 
  |
-|└FileID|String|custinsxxxxx.csv| The name of the file.
+|FileID|String|custinsxxxxx.csv| The name of the file.
 
  |
-|└LogStatus|String|Success| The status of the file. Valid values:
+|LogStatus|String|Success| The status of the file. Valid values:
 
- -   **Success**.
--   **Failed**.
--   **Generating**.
-
- |
-|└LogStartTime|String|2015-05-23T07:00:00Z| The SQL start time.
+ -   Success
+-   Failed
+-   Generating
 
  |
-|└LogEndTime|String|2015-05-24T07:00:00Z| The SQL end time.
+|LogStartTime|String|2015-05-23T07:00:00Z| The SQL start time. Format: yyyy-MM-ddTHH:mm:ssZ.
 
  |
-|└LogDownloadURL|String|http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx| The download link. If the download is unavailable, this link is empty.
+|LogEndTime|String|2015-05-24T07:00:00Z| The SQL end time. Format: yyyy-MM-ddTHH:mm:ssZ.
 
  |
-|└LogSize|String|3,000| The size of the audit file. Unit: byte.
+|LogDownloadURL|String|http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx| The download link. If the download is unavailable, this parameter is null.
+
+ |
+|LogSize|String|3,000| The size of the audit file. Unit: byte.
 
  |
 |RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF| The ID of the request.
@@ -101,32 +101,30 @@ Normal response example
 
 `XML` format
 
-``` {#xml_return_success_demo}
-<DescribeSQLLogFilesResponse> 
-  <items>
-    <FileID>ZUBaS964T3OYtxxxxxxxx</FileID>
-    <LogStatus>Success</LogStatus>
-    <LogStartTime>2015-05-23T07:00:00Z</LogStartTime>
-    <LogEndTime>2015-05-23T07:00:00Z</LogEndTime>
-    <LogDownloadURL>xxxxxx.cn-hangzhou.oss.aliyun-inc.com/xxxxx</LogDownloadURL>
-    <LogSize>257</LogSize>
-  </items>
-  <pageRecordCount>1</pageRecordCount>
-  <requestId> 1AD222E9-E606-4A42-BF6D-8A4442913CEF</requestId>
-  <totalRecordCount>1</totalRecordCount>
-</DescribeSQLLogFilesResponse> 
-
+``` {#codeblock_zx4_nmq_v6u}
+<DescribeSQLLogFilesResponse>
+	  <items>
+		    <FileID>ZUBaS964T3OYtxxxxxxxx</FileID>
+		    <LogStatus>Success</LogStatus>
+		    <LogStartTime>2015-05-23T07:00:00Z</LogStartTime>
+		    <LogEndTime>2015-05-23T07:00:00Z</LogEndTime>
+		    <LogDownloadURL>xxxxxx.cn-hangzhou.oss.aliyun-inc.com/xxxxx</LogDownloadURL>
+		    <LogSize>257</LogSize>
+	  </items>
+	  <pageRecordCount>1</pageRecordCount>
+	  <requestId> 1AD222E9-E606-4A42-BF6D-8A4442913CEF</requestId>
+	  <totalRecordCount>1</totalRecordCount></DescribeSQLLogFilesResponse>
 ```
 
 `JSON` format
 
-``` {#json_return_success_demo}
+``` {#codeblock_ta3_ycp_aqn}
 {
 	"totalRecordCount":1,
 	"requestId":" 1AD222E9-E606-4A42-BF6D-8A4442913CEF",
 	"items":[
 		{
-			"StartTime":"2015-05-23T07:00:00Z"
+			"LogStartTime":"2015-05-23T07:00:00Z",
 			"LogEndTime":"2015-05-23T07:00:00Z",
 			"LogStatus":"Success",
 			"FileID":"ZUBaS964T3OYtxxxxxxxx",
@@ -138,7 +136,7 @@ Normal response example
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_xa5_x61_i85 .section}
 
-[View error codes](https://error-center.alibabacloud.com/status/product/Rds)
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
