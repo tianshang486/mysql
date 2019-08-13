@@ -3,13 +3,13 @@
 This topic describes how to manage logs through the RDS console and SQL statements. You can query error logs and slow query logs for fault analysis. All RDS instances except RDS for MySQL \(Basic Edition\) support log managment.
 
 -   For information about log backup policies and rules, see [Back up RDS data](intl.en-US/User Guide/Backup/Back up RDS data.md#).
--   For information about how to download log backup files, see [Download RDS data and log backup](intl.en-US/User Guide/Backup/Download data and log backup files.md#).
+-   For information about how to download log backup files, see [Download data and log backup files](intl.en-US/User Guide/Backup/Download data and log backup files.md#).
 -   For information about how to restore data through log backup files, see:
     -   [Restore MySQL data](intl.en-US/User Guide/Recovery/Restore MySQL data.md#)
     -   [Restore SQL Server Data](intl.en-US/User Guide/Recovery/Restore SQL Server Data.md#)
     -   [Restore PostgreSQL or PPAS data](intl.en-US/User Guide/Recovery/Restore PostgreSQL or PPAS data.md#)
     -   [Restore MariaDB data](intl.en-US/User Guide/Recovery/Restore MariaDB data.md#)
-    -   [\(RDS for MySQL\) Restore logical backup file to on-premises database](../../../../intl.en-US/FAQs/Data backup__recovery/(RDS for MySQL) Restore logical backup file to on-premises database.md#)
+    -   [RDS for MySQL 逻辑备份文件恢复到自建数据库](../../../../intl.en-US/FAQs/Data backup__recovery/(RDS for MySQL) Restore logical backup file to on-premises database.md#)
 
 ## Manage logs by using the RDS console {#section_qf4_jz4_ydb .section}
 
