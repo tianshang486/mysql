@@ -12,7 +12,7 @@ This operation is appliable to the following database engine versions:
 
 ## Debugging {#apiExplorer .section}
 
-You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeParameterTemplates) to perform debugging. API Explorer allows you to perform various operations to simplify API usage. For example, you can retrieve APIs, call APIs, and dynamically generate SDK example code.
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=DescribeParameterTemplates) to perform debugging. OpenAPI Explorer allows you to perform various operations to simplify API usage. For example, you can retrieve APIs, call APIs, and dynamically generate SDK example code.
 
 ## Request parameters {#parameters .section}
 
@@ -159,7 +159,7 @@ and performance.",
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_foz_xnx_iqs .section}
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
