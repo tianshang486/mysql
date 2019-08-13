@@ -9,20 +9,20 @@ When you perform this operation, the instance must meet the following requiremen
 
 **Note:** 
 
--   The removed privileges are: SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, and TRIGGER.
+-   The removed privileges are as follows: SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, REFERENCES, INDEX, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EVENT, and TRIGGER.
 -   This operation is not applicable to SQL Server 2017 Cluster Edition, PostgreSQL, and PPAS instances.
 
 ## Debugging {#apiExplorer .section}
 
-You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=RevokeAccountPrivilege) to perform debugging.
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=RevokeAccountPrivilege) to perform debugging.
 
-API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
+OpenAPI Explorer provides various functions to simplify API usage. For example, you can retrieve APIs, call APIs, and generate SDK sample code.
 
 ## Request parameters {#parameters .section}
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|RevokeAccountPrivilege| The operation that you want to perform. Set the value to **RevokeAccountPrivilege**.
+|Action|String|Yes|RevokeAccountPrivilege| The operation that you want to perform. Set this parameter to RevokeAccountPrivilege.
 
  |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx| The ID of the instance.
@@ -63,21 +63,20 @@ Normal response examples
 
 `XML` format
 
-``` {#xml_return_success_demo}
+``` {#codeblock_wqd_25y_qcj}
 <RevokeAccountPrivilegeResponse>
-  <RequestId>E22099CA-A61E-4992-A0B7-CE82DC175626</RequestId> 
-</RevokeAccountPrivilegeResponse> 
+	  <RequestId>E22099CA-A61E-4992-A0B7-CE82DC175626</RequestId></RevokeAccountPrivilegeResponse>
 ```
 
 `JSON` format
 
-``` {#json_return_success_demo}
+``` {#codeblock_k8s_r2f_rxr}
 {
 	"RequestId":"E22099CA-A61E-4992-A0B7-CE82DC175626"
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_7ot_7ui_ndw .section}
 
-[View error codes](https://error-center.alibabacloud.com/status/product/Rds)
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
