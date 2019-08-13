@@ -6,7 +6,7 @@ You can call this operation to view the list of RDS instances or the list of ins
 
 You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=DescribeDBInstances) to perform debugging.
 
-API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
+OpenAPI Explorer provides various functions to simplify API usage. For example, you can retrieve APIs, call APIs, and generate SDK sample code.
 
 ## Request parameters {#parameters .section}
 
