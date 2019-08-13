@@ -6,15 +6,15 @@ You can call this operation to modify the description of an RDS database account
 
 ## Debugging {#apiExplorer .section}
 
-You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=ModifyAccountDescription) to perform debugging.
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=ModifyAccountDescription) to perform debugging.
 
-API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
+OpenAPI Explorer provides various functions to simplify API usage. For example, you can retrieve APIs, call APIs, and generate SDK sample code.
 
 ## Request parameters {#parameters .section}
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|ModifyAccountDescription| The operation that you want to perform. Set the value to **ModifyAccountDescription**.
+|Action|String|Yes|ModifyAccountDescription| The operation that you want to perform. Set this parameter to ModifyAccountDescription.
 
  |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx| The ID of the instance.
@@ -57,21 +57,20 @@ Normal response examples
 
 `XML` format
 
-``` {#xml_return_success_demo}
-<ModifyAccountDescriptionResponse> 
-  <RequestId> 17F57FEE-EA4F-4337-8D2E-9C23CAA63D74</RequestId>
-</ModifyAccountDescriptionResponse> 
+``` {#codeblock_cqc_2wf_79d}
+<ModifyAccountDescriptionResponse>
+	  <RequestId> 17F57FEE-EA4F-4337-8D2E-9C23CAA63D74</RequestId></ModifyAccountDescriptionResponse>
 ```
 
 `JSON` format
 
-``` {#json_return_success_demo}
+``` {#codeblock_bat_muw_ek2}
 {
 	"RequestId":" 17F57FEE-EA4F-4337-8D2E-9C23CAA63D74"
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_uo9_r0y_asu .section}
 
-[View error codes](https://error-center.alibabacloud.com/status/product/Rds)
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
