@@ -8,15 +8,15 @@ When you call this operation, the instance must be in the running state.
 
 ## Debugging {#apiExplorer .section}
 
-You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=GrantAccountPrivilege) to perform debugging.
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=GrantAccountPrivilege) to perform debugging.
 
-API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
+OpenAPI Explorer provides various functions to simplify API usage. For example, you can retrieve APIs, call APIs, and generate SDK sample code.
 
 ## Request parameters {#parameters .section}
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|GrantAccountPrivilege| The operation that you want to perform. Set the value to **GrantAccountPrivilege**.
+|Action|String|Yes|GrantAccountPrivilege| The operation that you want to perform. Set this parameter to GrantAccountPrivilege.
 
  |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxxxxx| The ID of the instance.
@@ -30,11 +30,11 @@ API Explorer provides various functions to simplify API usage. For example, you 
  |
 |AccountPrivilege|String|Yes|ReadWrite| The account privilege. Valid values:
 
- -   **ReadWrite**
--   **ReadOnly**
--   **DDLOnly**: This value is only for MySQL and MariaDB.
--   **DMLOnly**: This value is only for MySQL and MariaDB.
--   **DBOwner**: This value is only for SQL Server.
+ -   ReadWrite
+-   ReadOnly
+-   DDLOnly: This value is only for MySQL and MariaDB.
+-   DMLOnly: This value is only for MySQL and MariaDB.
+-   DBOwner: This value is only for SQL Server.
 
  |
 
@@ -64,21 +64,20 @@ Normal response examples
 
 `XML` format
 
-``` {#xml_return_success_demo}
-<GrantAccountPrivilegeResponse> 
-  <RequestId>81BC9559-7B22-4B7F-B705-5F56DEECDEA7</RequestId>
-</GrantAccountPrivilegeResponse> 
+``` {#codeblock_rvu_as7_grx}
+<GrantAccountPrivilegeResponse>
+	  <RequestId>81BC9559-7B22-4B7F-B705-5F56DEECDEA7</RequestId></GrantAccountPrivilegeResponse>
 ```
 
 `JSON` format
 
-``` {#json_return_success_demo}
+``` {#codeblock_99i_h1t_92r}
 {
 	"RequestId":"81BC9559-7B22-4B7F-B705-5F56DEECDEA7"
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_x2n_a3y_fh8 .section}
 
-[View error codes](https://error-center.alibabacloud.com/status/product/Rds)
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
