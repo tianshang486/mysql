@@ -16,7 +16,7 @@ A read-only instance is a read-only copy of the master instance. Changes to the 
 
 The following figures shows the topology of read-only instances.
 
-![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133899/156320962639776_en-US.png)
+![pgsql拓扑图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/133899/156566606439776_en-US.png)
 
 ## Pricing {#section_fwf_5p5_vdb .section}
 
