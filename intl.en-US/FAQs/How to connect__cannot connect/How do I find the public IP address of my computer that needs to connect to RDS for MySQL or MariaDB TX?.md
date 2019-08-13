@@ -25,7 +25,7 @@ If the public IP address of your computer is not fixed and your RDS instance is 
     mysql -h*<RDS Connection address\>* -u*<Username\>* -p*<Password\>* -P3306
     ```
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8224/156402041433319_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8224/156567905233319_en-US.jpg)
 
 3.  Check the process information.
 
@@ -35,7 +35,7 @@ If the public IP address of your computer is not fixed and your RDS instance is 
 
     As shown in the following figure, the value of **Host** for the **show processlist** record is the real public IP address of your computer.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8224/156402041533320_en-US.jpg)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8224/156567905233320_en-US.jpg)
 
 4.  Remove 0.0.0.0/0 from the whitelist and add the real public IP address of your computer to the whitelist.
 
