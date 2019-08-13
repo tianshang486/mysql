@@ -2,7 +2,7 @@
 
 You can call this operation to enable or disable the SQL audit feature of an instance.
 
-This operation is applicable to the following instances:
+This operation is applicable to the following database engine versions:
 
 -   MySQL 5.5
 -   MySQL 5.6
@@ -13,21 +13,21 @@ This operation is applicable to the following instances:
 
 ## Debugging {#apiExplorer .section}
 
-You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=ModifySQLCollectorPolicy) to perform debugging.
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=ModifySQLCollectorPolicy) to perform debugging.
 
-API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
+OpenAPI Explorer provides various functions to simplify API usage. For example, you can retrieve APIs, call APIs, and generate SDK sample code.
 
 ## Request parameters {#parameters .section}
 
-|Parameter|Type|Required|Example|Description|
-|---------|----|--------|-------|-----------|
-|Action|String|Yes|ModifySQLCollectorPolicy| The operation that you want to perform. Set the value to **ModifySQLCollectorPolicy**.
+|Parameter|Type|Required?|Example|Description|
+|---------|----|---------|-------|-----------|
+|Action|String|Yes|ModifySQLCollectorPolicy| The operation that you want to perform. Set this parameter to ModifySQLCollectorPolicy.
 
  |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx| The ID of the instance.
 
  |
-|SQLCollectorStatus|String|Yes|Enable| Indicates whether to enable or disable the SQL audit feature. Valid values: **Enable | Disable**.
+|SQLCollectorStatus|String|Yes|Enable| Indicates whether to enable or disable the SQL audit feature. Valid values: Enable | Disable.
 
  |
 |AccessKeyId|String|No|LTAIfCxxxxxxx| The AccessKey ID issued by Alibaba Cloud for users to access services.
@@ -58,23 +58,22 @@ Normal response example
 
 `XML` format
 
-``` {#xml_return_success_demo}
-<ModifySQLCollectorPolicyResponse> 
-  <requestId>C3565F9F-76E9-4F7E-A662-D1B2488EC2FC</requestId>
-  <sQLCollectorStatus>Enable</sQLCollectorStatus>
-</ModifySQLCollectorPolicyResponse> 
+``` {#codeblock_acp_dk9_xqo}
+<ModifySQLCollectorPolicyResponse>
+	  <requestId>C3565F9F-76E9-4F7E-A662-D1B2488EC2FC</requestId>
+	  <sQLCollectorStatus>Enable</sQLCollectorStatus></ModifySQLCollectorPolicyResponse>
 ```
 
 `JSON` format
 
-``` {#json_return_success_demo}
+``` {#codeblock_ha6_7i0_726}
 {
 	"requestId":"C3565F9F-76E9-4F7E-A662-D1B2488EC2FC",
 	"sQLCollectorStatus":"Enable"
 }
 ```
 
-## Error codes { .section}
+## Error codes {#section_shx_ok9_nlx .section}
 
-[View error codes](https://error-center.alibabacloud.com/status/product/Rds)
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
