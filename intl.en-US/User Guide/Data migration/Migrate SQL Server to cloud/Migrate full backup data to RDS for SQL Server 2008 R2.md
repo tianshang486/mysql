@@ -12,7 +12,7 @@ A target database has been created in RDS. For more information, see [Create dat
 
 When you migrate data to the cloud, no additional fees are charged for RDS but you must pay for OSS, as shown in the following figure.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656791174362_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656793824362_en-US.png)
 
 Figure description:
 
@@ -93,12 +93,12 @@ Figure description:
         -   For the procedure of uploading multiple files or a file larger than 5 GB, see [Multipart upload](https://www.alibabacloud.com/help/doc-detail/31850.htm). To perform this step on GUIs, see [ossbrowser](https://www.alibabacloud.com/help/doc-detail/61872.htm).
     2.  In the left-side navigation pane of the [OSS console](https://oss.console.aliyun.com/), select the bucket where the backup file belongs.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656791174363_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656793834363_en-US.png)
 
     3.  Select **Files**.
     4.  Click the name of the target backup file.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656791184364_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656793834364_en-US.png)
 
     5.  In the **Validity Period \(Seconds\)** field, change the validity period of the link. We recommend that you set the validity period to 28,800 seconds, namely, 8 hours.
 
@@ -106,7 +106,7 @@ Figure description:
 
     6.  Click **Copy File URL**. The default URL is the Internet connection address of the file.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656791184365_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656793834365_en-US.png)
 
     7.  If you want to migrate data through the intranet, change the endpoint in the backup file URL to the intranet endpoint. The intranet endpoint varies with the network type and region. For more information, see [Access domain name and data center](https://www.alibabacloud.com/help/doc-detail/31837.htm).
 
@@ -119,7 +119,7 @@ Figure description:
     4.  In the left-side navigation pane, click **Databases** to go to the Databases page.
     5.  Find the target database and in the **Actions** column click **Migrate Backup Files from OSS**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656791184366_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656793834366_en-US.png)
 
     6.  In the Import Guide dialog box, read the prompt and click **Next** to go to the **Upload the backup files to** step.
     7.  Read the prompt and click **Next** to go to the **Import data** step.
@@ -127,7 +127,7 @@ Figure description:
 
         **Note:** Currently, RDS supports only one cloud migration solution, that is, **One-time full backup file migration**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656791184367_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7997/15656793834367_en-US.png)
 
     9.  Click **OK**.
     10. In the left-side navigation pane, click **Data Migration to Cloud** to go to the page listing the tasks of migrating backup files from OSS to RDS.
