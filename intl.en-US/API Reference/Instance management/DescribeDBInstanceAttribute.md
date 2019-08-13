@@ -4,7 +4,7 @@ You can call this operation to view the details of an RDS instance.
 
 ## Debugging {#apiExplorer .section}
 
-You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeDBInstanceAttribute) to perform debugging.
+You can use [OpenAPI Explorer](https://api.aliyun.com/#product=Rds&api=DescribeDBInstanceAttribute) to perform debugging.
 
 API Explorer provides various functions to simplify API usage. For example, you can search APIs, call APIs, and generate SDK sample code.
 
@@ -12,16 +12,16 @@ API Explorer provides various functions to simplify API usage. For example, you 
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|DescribeDBInstanceAttribute| The operation that you want to perform. Set the value to **DescribeDBInstanceAttribute**.
+|Action|String|Yes|DescribeDBInstanceAttribute| The operation that you want to perform. Set this parameter to DescribeDBInstanceAttribute.
 
  |
-|DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxxxxx| The ID of the instance. You can enter a maximum of 30 instance IDs at a time. Separate multiple instance IDs with commas \(,\).
+|DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxxxxx| The ID of the instance. You can enter up to 30 instance IDs at a time. Separate multiple instance IDs with commas \(,\).
 
  |
 |Expired|String|No|False| Indicates whether the instance has expired. Valid values:
 
- -   **True**
--   **False**
+ -   True
+-   False
 
  |
 
@@ -29,198 +29,205 @@ API Explorer provides various functions to simplify API usage. For example, you 
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|Items| | | A list of instances.
+|Items|N/A|N/A| A list of instances.
 
  |
-|└DBInstanceId|String|rm-uf6wjk5xxxxxxxxxx| The ID of an instance.
+|DBInstanceId|String|rm-uf6wjk5xxxxxxxxxx| The ID of an instance.
 
  |
-|└PayType|String|Postpaid| The billing method of the instance. Valid values:
+|PayType|String|Postpaid| The billing method of the instance. Valid values:
 
- -   **Postpaid**: Pay-As-You-Go.
--   **Prepaid**: Subscription.
-
- |
-|└DBInstanceType|String|Primary| The role of the instance. Valid values:
-
- -   **Primary**: master instance
--   **Readonly**: read-only instance
--   **Guard**: disaster recovery instance
--   **Temp**: temporary instance
+ -   Postpaid: Pay-As-You-Go.
+-   Prepaid: Subscription.
 
  |
-|└Category|String|Basic| The edition \(series\) of the instance. Valid values:
+|DBInstanceType|String|Primary| The role of the instance. Valid values:
 
- -   **Basic**
--   **HighAvailability**
-
- |
-|└InstanceNetworkType|String|Classic| The intranet type of the instance. Valid values:
-
- -   **Classic**
--   **VPC**
+ -   Primary: master instance.
+-   Readonly: read-only instance.
+-   Guard: disaster recovery instance.
+-   Temp: temporary instance.
 
  |
-|└RegionId|String|cn-hangzhou| The ID of the region.
+|Category|String|Basic| The edition \(series\) of the instance. Valid values:
+
+ -   Basic
+-   HighAvailability
+-   AlwaysOn
 
  |
-|└ZoneId|String|cn-hangzhou-a| The ID of the zone.
+|InstanceNetworkType|String|Classic| The intranet type of the instance. Valid values:
+
+ -   Classic
+-   VPC
 
  |
-|└ConnectionString|String|rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com| The intranet address of the instance.
+|RegionId|String|cn-hangzhou| The ID of the region.
 
  |
-|└Port|String|3306| The intranet port of the instance.
+|ZoneId|String|cn-hangzhou-a| The ID of the zone.
 
  |
-|└Engine|String|MySQL| The type of the database engine.
+|ConnectionString|String|rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com| The private IP address of the instance.
 
  |
-|└EngineVersion|String|5.5| The version of the database engine.
+|Port|String|3306| The private port of the instance.
 
  |
-|└DBInstanceClassType|String|s| The type family of the instance. Valid values:
-
- -   **s**: shared instance
--   **x**: common instance
--   **d**: dedicated instance
--   **h**: dedicated-host instance
+|Engine|String|MySQL| The type of the database engine.
 
  |
-|└DBInstanceClass|String|rds.mys2.small| The instance type \(specifications\). For more information, see [Instance type list](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#).
+|EngineVersion|String|5.5| The version of the database engine.
 
  |
-|└DBInstanceMemory|Long|4096| The memory of the instance. Unit: MB.
+|DBInstanceClassType|String|s| The type family of the instance. Valid values:
+
+ -   s: shared instance.
+-   x: common instance.
+-   d: dedicated instance.
+-   h: dedicated-host instance.
 
  |
-|└DBInstanceStorage|Integer|10| The storage capacity of the instance. Unit: GB.
+|DBInstanceClass|String|rds.mys2.small| The instance type \(specifications\). For more information, see [Instance type list](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#).
 
  |
-|└DBInstanceNetType|String|Internet| The network type of the instance. Valid values:
-
- -   **Internet**
--   **Intranet**
+|DBInstanceMemory|Long|4096| The memory of the instance. Unit: MB.
 
  |
-|└DBInstanceStatus|String|Running| The status of the instance. For more information, see [Instance status](~~26315~~).
+|DBInstanceStorage|Integer|10| The storage capacity of the instance. Unit: GB.
 
  |
-|└DBInstanceDescription|String|Test database| The description of the instance.
+|DBInstanceNetType|String|Internet| The network type of the instance. Valid values:
+
+ -   Internet
+-   Intranet
 
  |
-|└LockMode|String|Unlock| The lock mode of the instance. Valid values:
-
- -   **Unlock**: The instance is not locked, indicating the instance is operating normally.
--   **ManualLock**: The instance is locked manually.
--   **LockByExpiration**: The instance is locked automatically after the instance expires.
--   **LockByRestoration**: The instance is locked automatically during the instance rollback.
--   **LockByDiskQuota**: The instance is locked automatically due to full disk space.
+|DBInstanceStatus|String|Running| The status of the instance. For more information, see [Instance status table](intl.en-US/API Reference/Appendix/Instance status table.md#).
 
  |
-|└LockReason|String|instance\_expired| The reason why the instance is locked.
+|DBInstanceDescription|String|Test database| The description of the instance.
 
  |
-|└DBMaxQuantity|Integer|200| The maximum number of databases that can be created in an instance.
+|LockMode|String|Unlock| The lock mode of the instance. Valid values:
+
+ -   Unlock: The instance is not locked, indicating the instance is operating normally.
+-   ManualLock: The instance is locked manually.
+-   LockByExpiration: The instance is locked automatically after the instance expires.
+-   LockByRestoration: The instance is locked automatically during the instance rollback.
+-   LockByDiskQuota: The instance is locked automatically due to full disk space.
 
  |
-|└AccountMaxQuantity|Integer|50| The maximum number of accounts that can be created in an instance.
+|LockReason|String|instance\_expired| The reason why the instance is locked.
 
  |
-|└CreationTime|String|2011-05-30T12:11:04Z| The time when the instance is created. Format: yyyy-MM-ddTHH:mm:ssZ \(UTC time\)
+|DBMaxQuantity|Integer|200| The maximum number of databases that can be created in an instance.
 
  |
-|└ExpireTime|String|2019-03-27T16:00:00Z| The expiration time. Format: yyyy-MM-ddTHH:mm:ssZ \(UTC time\)
+|AccountMaxQuantity|Integer|50| The maximum number of accounts that can be created in an instance.
+
+ |
+|CreationTime|String|2011-05-30T12:11:04Z| The time when the instance is created. Format: yyyy-MM-ddTHH:mm:ssZ \(UTC time\).
+
+ |
+|ExpireTime|String|2019-03-27T16:00:00Z| The expiration time. Format: yyyy-MM-ddTHH:mm:ssZ \(UTC time\).
 
  **Note:** Pay-As-You-Go instances never expire.
 
  |
-|└MaintainTime|String|00:00Z-02:00Z| The maintenance period of the instance. The value is UTC time. The value plus 8 hours is the maintenance period displayed on the web console.
+|MaintainTime|String|00:00Z-02:00Z| The maintenance period of the instance. The value is UTC time. The value plus 8 hours is the maintenance period displayed on the web console.
 
  |
-|└AvailabilityValue|String|100.0%| The availability of the instance. Unit: %.
+|AvailabilityValue|String|100.0%| The availability of the instance. Unit: %.
 
  |
-|└MaxIOPS|Integer|150| The maximum number of I/O requests per second.
+|MaxIOPS|Integer|150| The maximum number of I/O requests per second.
 
  |
-|└MaxConnections|Integer|60| The maximum number of concurrent connections.
+|MaxConnections|Integer|60| The maximum number of concurrent connections.
 
  |
-|└MasterInstanceId|String|rm-uf6wjk5xxxxxxxxxx| The ID of the master instance of the current instance. If this parameter is not returned \(null\), the current instance itself is a master instance.
+|MasterInstanceId|String|rm-uf6wjk5xxxxxxxxxx| The ID of the master instance of the current instance. If this parameter is not returned \(null\), the current instance itself is a master instance.
 
  |
-|└IncrementSourceDBInstanceId|String|rm-uf6wjk5xxxxxxxxxx| The ID of the incremental data source. The incremental data source of a disaster recovery instance or read-only instance is the master instance. If this parameter is not returned \(null\), the current instance itself is a master instance.
+|IncrementSourceDBInstanceId|String|rm-uf6wjk5xxxxxxxxxx| The ID of the incremental data source. The incremental data source of a disaster recovery instance or read-only instance is the master instance. If this parameter is not returned \(null\), the current instance itself is a master instance.
 
  |
-|└GuardDBInstanceId|String|rm-uf64zsuxxxxxxxxxx| The ID of the disaster recovery instance \(if any\) attached to the current instance.
+|GuardDBInstanceId|String|rm-uf64zsuxxxxxxxxxx| The ID of the disaster recovery instance \(if any\) attached to the current instance.
 
  |
-|└TempDBInstanceId|String|rm-uf64zsuxxxxxxxxxx| The ID of the temporary instance \(if any\) attached to the current instance.
+|TempDBInstanceId|String|rm-uf64zsuxxxxxxxxxx| The ID of the temporary instance \(if any\) attached to the current instance.
 
  |
-|└ReadOnlyDBInstanceIds| | | The IDs of read-only instances attached to the master instance.
+|ReadOnlyDBInstanceIds|N/A|N/A| The IDs of read-only instances attached to the master instance.
 
  |
-|└DBInstanceId|String|rm-bpxxxxxxxxx| The ID of a read-only instance.
+|DBInstanceId|String|rm-bpxxxxxxxxx| The ID of a read-only instance.
 
  |
-|└AdvancedFeatures|String|LinkedServer| This parameter is only applicable to SQL Server instances and indicates advanced features. Valid values:
+|AdvancedFeatures|String|LinkedServer| This parameter is only applicable to SQL Server instances and indicates advanced features. Valid values:
 
- -   **LinkedServer**
--   **DistributeTransaction**
-
- |
-|└Collation|String|Chinese\_PRC\_CI\_AS| The sorting rule of character sets.
+ -   LinkedServer
+-   DistributeTransaction
 
  |
-|└ConnectionMode|String|Standard| The access mode of the instance. Valid values:
+|AutoUpgradeMinorVersion|String|Auto| The method of upgrading an instance to a minor version. Valid values:
 
- -   **Standard**: standard mode
--   **Safe**: database proxy mode
-
- |
-|└CurrentKernelVersion|String|rds\_20181010| The current kernel version.
+ -   Auto: The system automatically upgrades an instance to a minor version.
+-   Manual: The system prompts you to upgrade an instance to a minor version only when the version is deprecated.
 
  |
-|└DBInstanceStorageType|String|local\_ssd| The storage type of the instance. Valid values:
-
- -   **local\_ssd**: local SSD
--   **cloud\_ssd**: cloud SSD
+|Collation|String|Chinese\_PRC\_CI\_AS| The sorting rule of character sets.
 
  |
-|└DispenseMode|String|ClassicDispenseMode| The allocation mode.
+|ConnectionMode|String|Standard| The access mode of the instance. Valid values:
+
+ -   Standard: standard mode.
+-   Safe: database proxy mode.
 
  |
-|└Extra| | | The extended information about the instance.
+|CurrentKernelVersion|String|rds\_20181010| The current kernel version.
 
  |
-|└DBInstanceId| |rm-uf6wjk5xxxxxxxxxx| The ID of the instance.
+|DBInstanceStorageType|String|local\_ssd| The storage type of the instance. Valid values:
+
+ -   local\_ssd: local SSD.
+-   cloud\_ssd: cloud SSD.
 
  |
-|└MasterZone|String|5454284|The ID of the master zone.|
-|└ReadonlyInstanceSQLDelayedTime|String|30|After the latency of ReadonlyInstanceSQLDelayedTime, read-only instances synchronize data from the master instance. Unit: seconds|
-|└ResourceGroupId|String|rg-acfmyxxxxxxxxxx| The ID of the resource group.
+|DispenseMode|String|ClassicDispenseMode| The allocation mode.
 
  |
-|└SecurityIPMode|String|normal| The IP whitelist mode.
+|Extra|N/A|N/A| The extended information about the instance.
 
  |
-|└SlaveZones| | | The information about SlaveZones.
+|DBInstanceId|N/A|rm-uf6wjk5xxxxxxxxxx| The ID of the instance.
 
  |
-|└ZoneId|String|cn-hangzhou-a| The ID of the zone.
+|MasterZone|String|5454284|The ID of the master zone.|
+|ReadonlyInstanceSQLDelayedTime|String|30|After the latency of ReadonlyInstanceSQLDelayedTime, read-only instances synchronize data from the master instance. Unit: second.|
+|ResourceGroupId|String|rg-acfmyxxxxxxxxxx| The ID of the resource group.
 
  |
-|└TimeZone|String|Central Standard Time| The time zone.
+|SecurityIPMode|String|normal| The IP whitelist mode.
 
  |
-|└VSwitchId|String|vsw-xxxxxx| The ID of the VSwitch.
+|SlaveZones|N/A|N/A| The information about SlaveZones.
 
  |
-|└VpcCloudInstanceId|String|vpc-23rsxdfxxxxxxx| The ID of the VPC instance.
+|ZoneId|String|cn-hangzhou-a| The ID of the zone.
 
  |
-|└VpcId|String|vpc-xxxxxxxxx| The ID of the VPC.
+|TimeZone|String|Central Standard Time| The time zone.
+
+ |
+|VSwitchId|String|vsw-xxxxxx| The ID of the VSwitch.
+
+ |
+|VpcCloudInstanceId|String|vpc-23rsxdfxxxxxxx| The ID of the VPC instance.
+
+ |
+|VpcId|String|vpc-xxxxxxxxx| The ID of the VPC.
 
  |
 |RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF| The ID of the request.
@@ -241,65 +248,64 @@ Normal response examples
 
 `XML` format
 
-``` {#xml_return_success_demo}
+``` {#codeblock_y8n_vy0_04z}
 <DescribeDBInstanceAttributeResponse>
-  <Items>
-    <DBInstanceAttribute>
-      <Extra> 
-        <DBInstanceId/> 
-      </Extra> 
-      <ConnectionString>rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com</ConnectionString> 
-      <AccountMaxQuantity>99999</AccountMaxQuantity> 
-      <CurrentKernelVersion>rds_20170714</CurrentKernelVersion> 
-      <DBInstanceCPU>2</DBInstanceCPU> 
-      <IPType>IPv4</IPType> 
-      <ZoneId>cn-hangzhou-f</ZoneId> 
-      <ReadOnlyDBInstanceIds/> 
-      <ConnectionMode>Standard</ConnectionMode> 
-      <VSwitchId>vsw-bp1w9oueixxxxx</VSwitchId> 
-      <VpcId>vpc-bp1opxu1zkhxxxxx</VpcId> 
-      <Engine>MySQL</Engine>
-      <MaintainTime>18:00Z-22:00Z</MaintainTime> 
-      <MaxConnections>4000</MaxConnections> 
-      <DBInstanceType>Primary</DBInstanceType>
-      <DBInstanceMemory>4096</DBInstanceMemory> 
-      <EngineVersion>5.7</EngineVersion> 
-      <DBInstanceStorageType>cloud_ssd</DBInstanceStorageType> 
-      <DBInstanceStatus>Running</DBInstanceStatus>
-      <SecurityIPMode>normal</SecurityIPMode> 
-      <PayType>Prepaid</PayType>
-      <SupportUpgradeAccountType>No</SupportUpgradeAccountType> 
-      <AccountType>Mix</AccountType> 
-      <LockMode>Unlock</LockMode>
-      <DBInstanceNetType>Intranet</DBInstanceNetType>
-      <MaxIOPS>600</MaxIOPS> 
-      <DBInstanceClass>mysql.n2.medium. 1</DBInstanceClass> 
-      <DBMaxQuantity>99999</DBMaxQuantity> 
-      <ResourceGroupId>rg-acfmyxxxxx</ResourceGroupId> 
-      <DBInstanceId>rm-bp176xxxxx</DBInstanceId> 
-      <VpcCloudInstanceId>rm-bp176gz7xxxxx</VpcCloudInstanceId> 
-      <DBInstanceClassType>x</DBInstanceClassType>
-      <LatestKernelVersion/> 
-      <InstanceNetworkType>VPC</InstanceNetworkType> 
-      <DBInstanceStorage>20</DBInstanceStorage> 
-      <SupportCreateSuperAccount>No</SupportCreateSuperAccount> 
-      <CreationTime>2018-11-28T01:32:08Z</CreationTime> 
-      <Category>Basic</Category> 
-      <Port>3306</Port>
-      <InsId>1</InsId> 
-      <ExpireTime>2018-12-28T16:00:00Z</ExpireTime> 
-      <RegionId>cn-hangzhou</RegionId>
-      <AvailabilityValue>100.0%</AvailabilityValue>
-      <SecurityIPList>1.1.1.1</SecurityIPList> 
-    </DBInstanceAttribute>
-  </Items>
-  <RequestId>CFE76192-2F85-4D18-975E-465B77C129C4</RequestId> 
-</DescribeDBInstanceAttributeResponse>
+		  <Items>
+		    <DBInstanceAttribute>
+			      <Extra>
+				        <DBInstanceId></DBInstanceId>
+			      </Extra>
+			      <ConnectionString>rm-uf6wjk5xxxxxxxxxx.mysql.rds.aliyuncs.com</ConnectionString>
+			      <AccountMaxQuantity>99999</AccountMaxQuantity>
+			      <CurrentKernelVersion>rds_20170714</CurrentKernelVersion>
+			      <DBInstanceCPU>2</DBInstanceCPU>
+			      <ZoneId>cn-hangzhou-f</ZoneId>
+			      <ReadOnlyDBInstanceIds></ReadOnlyDBInstanceIds>
+			      <ConnectionMode>Standard</ConnectionMode>
+			      <VSwitchId>vsw-bp1w9oueixxxxx</VSwitchId>
+			      <VpcId>vpc-bp1opxu1zkhxxxxx</VpcId>
+			      <Engine>MySQL</Engine>
+			      <MaintainTime>18:00Z-22:00Z</MaintainTime>
+			      <MaxConnections>4000</MaxConnections>
+			      <DBInstanceType>Primary</DBInstanceType>
+			      <DBInstanceMemory>4096</DBInstanceMemory>
+			      <EngineVersion>5.7</EngineVersion>
+			      <DBInstanceStorageType>cloud_ssd</DBInstanceStorageType>
+			      <DBInstanceStatus>Running</DBInstanceStatus>
+			      <SecurityIPMode>normal</SecurityIPMode>
+			      <PayType>Prepaid</PayType>
+			      <SupportUpgradeAccountType>No</SupportUpgradeAccountType>
+			      <AccountType>Mix</AccountType>
+			      <LockMode>Unlock</LockMode>
+			      <DBInstanceNetType>Intranet</DBInstanceNetType>
+			      <MaxIOPS>600</MaxIOPS>
+			      <DBInstanceClass>mysql.n2.medium.1</DBInstanceClass>
+			      <DBMaxQuantity>99999</DBMaxQuantity>
+			      <ResourceGroupId>rg-acfmyxxxxx</ResourceGroupId>
+			      <DBInstanceId>rm-bp176xxxxx</DBInstanceId>
+			      <VpcCloudInstanceId>rm-bp176gz7xxxxx</VpcCloudInstanceId>
+			      <DBInstanceClassType>x</DBInstanceClassType>
+			      <LatestKernelVersion></LatestKernelVersion>
+			      <InstanceNetworkType>VPC</InstanceNetworkType>
+			      <DBInstanceStorage>20</DBInstanceStorage>
+			      <SupportCreateSuperAccount>No</SupportCreateSuperAccount>
+			      <CreationTime>2018-11-28T01:32:08Z</CreationTime>
+			      <Category>Basic</Category>
+			      <Port>3306</Port>
+			      <InsId>1</InsId>
+			      <ExpireTime>2018-12-28T16:00:00Z</ExpireTime>
+			      <RegionId>cn-hangzhou</RegionId>
+			      <AvailabilityValue>100.0%</AvailabilityValue>
+			      <SecurityIPList>1.1.1.1</SecurityIPList>
+		    </DBInstanceAttribute>
+	  </Items>
+	  <RequestId>CFE76192-2F85-4D18-975E-465B77C129C4</RequestId>
+	</DescribeDBInstanceAttributeResponse>
 ```
 
 `JSON` format
 
-``` {#json_return_success_demo}
+``` {#codeblock_qxp_32m_s8d}
 {
 	"Items":{
 		"DBInstanceAttribute":[
@@ -313,7 +319,6 @@ Normal response examples
 				},
 				"CurrentKernelVersion":"rds_20170714",
 				"DBInstanceCPU":"2",
-				"IPType":"IPv4",
 				"ZoneId":"cn-hangzhou-f",
 				"ConnectionMode":"Standard",
 				"ReadOnlyDBInstanceIds":{
@@ -334,9 +339,9 @@ Normal response examples
 				"SupportUpgradeAccountType":"No",
 				"AccountType":"Mix",
 				"LockMode":"Unlock",
-				"MaxIOPS":600,
 				"DBInstanceNetType":"Intranet",
-				"DBInstanceClass":"mysql.n2.medium. 1",
+				"MaxIOPS":600,
+				"DBInstanceClass":"mysql.n2.medium.1",
 				"DBMaxQuantity":99999,
 				"DBInstanceId":"rm-bp176xxxxx",
 				"ResourceGroupId":"rg-acfmyxxxxx",
@@ -361,7 +366,7 @@ Normal response examples
 }
 ```
 
-## Error codes {#section_evi_47a_oo7 .section}
+## Error codes {#section_pfv_06h_uxz .section}
 
-[View error codes](https://error-center.alibabacloud.com/status/product/Rds)
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
