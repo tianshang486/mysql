@@ -58,11 +58,11 @@ Your Alibaba Cloud account does not have an unpaid renewal order.
 
     1.  Click **Modify**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7891/15656606483043_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7891/15658369053043_en-US.png)
 
     2.  In the Configuration Information section, change the maintenance period and click **Save**.
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7891/15656606487257_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7891/15658369067257_en-US.png)
 
     3.  Go back to the configuration change page, refresh the page, and change the configurations again.
 7.  Select **Product Terms of Service and Service Level Notice and Terms of Use** and click **Upgrade Now**.
@@ -75,7 +75,7 @@ Your Alibaba Cloud account does not have an unpaid renewal order.
 
 2.  Can I change the zone and edition of an instance?
 
-    You can change the zone and edition of an instance as needed. For more information, see [Migrate instances across zones](intl.en-US/User Guide/Instance management/Migrate instances across zones.md#). For information about how to change the edition of an instance, see [Upgrade the database](intl.en-US/User Guide/Instance management/Upgrade the database version.md#) and [SQL Server 2008 R2升级版本](https://www.alibabacloud.com/help/zh/doc-detail/111658.htm).
+    You can change the zone and edition of an instance as needed. For more information, see [Migrate instances across zones](intl.en-US/User Guide/Instance management/Migrate instances across zones.md#). For information about how to change the edition of an instance, see [Upgrade the database](intl.en-US/User Guide/Instance management/Upgrade the database version.md#) and [Upgrade SQL Server 2008 R2](https://www.alibabacloud.com/help/zh/doc-detail/111658.htm).
 
 3.  Do I need to migrate data if I only want to expand the storage capacity of an instance?
 
