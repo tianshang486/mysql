@@ -4,9 +4,9 @@
 
 **说明：** 备份集的状态**BackupStatus**必须是**Success**，才能用于恢复。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeBackups)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeBackups&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -33,10 +33,10 @@
 -   **Manual**：手动备份。
 
  |
-|StartTime|String|否|2011-06-01T16:00Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|StartTime|String|否|2011-06-01T16:00Z|查询开始时间。格式：*yyyy-MM-dd*T*HH:mm*Z（UTC时间）。
 
  |
-|EndTime|String|否|2011-06-15T16:00Z|查询结束时间，需要大于查询开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|EndTime|String|否|2011-06-15T16:00Z|查询结束时间，需要大于查询开始时间。格式：*yyyy-MM-dd*T*HH:mm*Z（UTC时间）。
 
  |
 |PageSize|Integer|否|30|每页记录数，取值：
@@ -54,7 +54,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -70,58 +70,58 @@
 |Items| | |备份集列表。
 
  |
-|└BackupId|String|321020562|备份集ID。
+|BackupId|String|321020562|备份集ID。
 
  |
-|└DBInstanceId|String|rm-uf6wjk5xxxxxxx|实例ID。
+|DBInstanceId|String|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|└HostInstanceID|String|5882781|产生备份集的实例编号，用于区分该备份集产生于主实例或备实例。
+|HostInstanceID|String|5882781|产生备份集的实例编号，用于区分该备份集产生于主实例或备实例。
 
  |
-|└BackupStatus|String|Success|备份集状态。
+|BackupStatus|String|Success|备份集状态。
 
  |
-|└BackupStartTime|String|2019-02-03T12:20:00Z|本次备份开始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|BackupStartTime|String|2019-02-03T12:20:00Z|本次备份开始时间。格式：*yyyy-MM-dd*T*HH:mm*Z（UTC时间）。
 
  |
-|└BackupEndTime|String|2019-02-13T12:20:00Z|本次备份结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|BackupEndTime|String|2019-02-13T12:20:00Z|本次备份结束时间。格式：*yyyy-MM-dd*T*HH:mm*Z（UTC时间）。
 
  |
-|└BackupType|String|FullBackup|备份类型，取值：
+|BackupType|String|FullBackup|备份类型，取值：
 
  -   **FullBackup**：全量备份；
 -   **IncrementalBackup**：增量备份。
 
  |
-|└BackupMode|String|Automated|备份模式，取值：
+|BackupMode|String|Automated|备份模式，取值：
 
  -   **Automated**：系统自动备份；
 -   **Manual**：手动备份。
 
  |
-|└BackupMethod|String|Physical|备份方式，取值：
+|BackupMethod|String|Physical|备份方式，取值：
 
  -   **Logical**：逻辑备份；
 -   **Physical**：物理备份。
 
  |
-|└BackupDownloadURL|String|http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|公网下载地址，若当前不可下载，则为空串。
+|BackupDownloadURL|String|http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|公网下载地址，若当前不可下载，则为空串。
 
  |
-|└BackupIntranetDownloadURL|String|http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxx|内网下载地址，若当前不可下载，则为空串。
+|BackupIntranetDownloadURL|String|http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxx|内网下载地址，若当前不可下载，则为空串。
 
  |
-|└BackupSize|Long|2167808|备份文件大小，单位：Byte。
+|BackupSize|Long|2167808|备份文件大小，单位：Byte。
 
  |
-|└StoreStatus|String|Disabled|该数据备份是否可删除，取值：
+|StoreStatus|String|Disabled|该数据备份是否可删除，取值：
 
  -   **Enabled**：可删除；
 -   **Disabled**：不可删除。
 
  |
-|└MetaStatus|String|OK|库表恢复的备份集状态，取值：
+|MetaStatus|String|OK|库表恢复的备份集状态，取值：
 
  -   **OK**：正常；
 -   **LARGE**：表数量过多，不能用于库表恢复；
@@ -152,34 +152,32 @@ http(s)://rds.aliyuncs.com/?Action=DescribeBackups
 
 ``` {#xml_return_success_demo}
 <DescribeBackupsResponse>
-  <Items>
-    <Backup>
-      <StoreStatus>Disabled</StoreStatus>
-      <HostInstanceID>5882781</HostInstanceID>
-      <BackupLocation>OSS</BackupLocation>
-      <BackupIntranetDownloadURL>http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/custins10430291/hins5882781_data_20190213201955.tar.gz?OSSAccessKeyId=xxxxxxxx&amp;Expires=1231230&amp;Signature=zIBwxxxxxxx5ga3p%2BVxxxxxxxx%3D</BackupIntranetDownloadURL>
-      <BackupType>FullBackup</BackupType>
-      <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
-      <BackupEndTime>2019-02-13T12:22:53Z</BackupEndTime>
-      <BackupMethod>Physical</BackupMethod>
-      <BackupId>321020562</BackupId>
-      <BackupStartTime>2019-02-13T12:20:37Z</BackupStartTime>
-      <BackupDownloadURL>http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/custins10430291/hins5882781_data_20190213201955.tar.gz?OSSAccessKeyId=xxxxxxx&amp;Expires=1231230&amp;Signature=zIBwxxxxxxxxUs5ga3p%2BVxxxxxxxk%3D</BackupDownloadURL>
-      <MetaStatus/>
-      <BackupDBNames>spdb,sys,test20181221,test-20181228,test_20181115,test_20181116</BackupDBNames>
-      <BackupMode>Automated</BackupMode>
-      <BackupSize>2167808</BackupSize>
-      <BackupStatus>Success</BackupStatus>
-      <BackupScale>DBInstance</BackupScale>
-    </Backup>
-  </Items>
-  <TotalBackupSize>8672256</TotalBackupSize>
-  <PageNumber>1</PageNumber>
-  <TotalRecordCount>1</TotalRecordCount>
-  <RequestId>B0E0F374-919F-4BD9-BCAC-AE68122A0D68</RequestId>
-  <PageRecordCount>1</PageRecordCount>
-</DescribeBackupsResponse>
-
+	  <Items>
+		    <Backup>
+			      <StoreStatus>Disabled</StoreStatus>
+			      <HostInstanceID>5882781</HostInstanceID>
+			      <BackupLocation>OSS</BackupLocation>
+			      <BackupIntranetDownloadURL>http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/custins10430291/hins5882781_data_20190213201955.tar.gz?OSSAccessKeyId=xxxxxxxx&amp;Expires=1231230&amp;Signature=zIBwxxxxxxx5ga3p%2BVxxxxxxxx%3D</BackupIntranetDownloadURL>
+			      <BackupType>FullBackup</BackupType>
+			      <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
+			      <BackupEndTime>2019-02-13T12:22:53Z</BackupEndTime>
+			      <BackupMethod>Physical</BackupMethod>
+			      <BackupId>321020562</BackupId>
+			      <BackupStartTime>2019-02-13T12:20:37Z</BackupStartTime>
+			      <BackupDownloadURL>http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/custins10430291/hins5882781_data_20190213201955.tar.gz?OSSAccessKeyId=xxxxxxx&amp;Expires=1231230&amp;Signature=zIBwxxxxxxxxUs5ga3p%2BVxxxxxxxk%3D</BackupDownloadURL>
+			      <MetaStatus></MetaStatus>
+			      <BackupDBNames>spdb,sys,test20181221,test-20181228,test_20181115,test_20181116</BackupDBNames>
+			      <BackupMode>Automated</BackupMode>
+			      <BackupSize>2167808</BackupSize>
+			      <BackupStatus>Success</BackupStatus>
+			      <BackupScale>DBInstance</BackupScale>
+		    </Backup>
+	  </Items>
+	  <TotalBackupSize>8672256</TotalBackupSize>
+	  <PageNumber>1</PageNumber>
+	  <TotalRecordCount>1</TotalRecordCount>
+	  <RequestId>B0E0F374-919F-4BD9-BCAC-AE68122A0D68</RequestId>
+	  <PageRecordCount>1</PageRecordCount></DescribeBackupsResponse>
 ```
 
 `JSON` 格式
@@ -219,5 +217,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeBackups
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
