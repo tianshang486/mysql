@@ -1,6 +1,6 @@
 # Log management {#concept_ujc_hz4_ydb .concept}
 
-This topic describes how to manage logs through the RDS console and SQL statements. You can query error logs and slow query logs for fault analysis. All RDS instances except RDS for MySQL \(Basic Edition\) support log managment.
+This topic describes how to manage logs through the RDS console and SQL statements. You can query error logs and slow query logs for fault analysis. All RDS instances except RDS for MySQL \(Basic Edition\) support log management.
 
 -   For information about log backup policies and rules, see [Back up RDS data](intl.en-US/User Guide/Backup/Back up RDS data.md#).
 -   For information about how to download log backup files, see [Download data and log backup files](intl.en-US/User Guide/Backup/Download data and log backup files.md#).
@@ -35,7 +35,7 @@ The procedure is as follows:
     |----------|-------|
     |Error Log|Records the SQL statements that are failed to be executed in the past month.|
     |Slow Query Log|     -   Records the SQL statements that lasted for over one second \(for MySQL and MariaDB, you can modify this time threshold by modifying the long\_query\_time parameter in Parameters\) in the past month. Similar SQL statements are displayed once only.
-    -   The list does not include slow SQL logs of the past two hours. To query these logs, check the **slow\_log\_view** table in the MySQL database.
+    -   The list does not include slow SQL logs of the past two hours. To query these logs, check the slow\_log\_view table in the MySQL database.
  |
     |Slow Query Log Summary|Provides statistics and analysis reports for SQL statements that lasted for over one second \(For MySQL and MariaDB, you can modify this time threshold by modifying the long\_query\_time parameter in Parameters\) in the past month.|
     |Primary/Secondary Instance Switch Log|Available to instances of the MySQL High-Availability edition and MariaDB TX instances.|
