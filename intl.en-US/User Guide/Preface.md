@@ -2,36 +2,28 @@
 
 ## Overview {#section_nkl_hdh_wdb .section}
 
-ApsaraDB for Relational Database Service \(RDS\) is a stable and reliable online database service with auto-scaling capabilities. Based on Apsara’s distributed file system and high-performance storage of ephemeral SSD, RDS supports MySQL, SQL Server, PostgreSQL, and PPAS engines, and provides a complete set of solutions for disaster recovery, backup, restoration, monitoring, migration, and others. This helps you to operate and manage your own database. To learn about the benefits of RDS, see [Benefits](../../../../intl.en-US/Product Introduction/Benefits/Cheap and ease-to-use.md#).
+ApsaraDB for Relational Database Service \(RDS\) is a stable and reliable online database service with auto-scaling capabilities. Based on Apsara distributed file system and high-performance SDD storage, RDS supports the MySQL, SQL Server, PostgreSQL, and PPAS \(compatible with Oracle\) database engines, and provides a complete set of solutions for disaster recovery, backup, recovery, monitoring, migration, and others. This helps you operate and manage your own database. For the benefits of RDS, see [Benefits](../../../../intl.en-US/Product Introduction/Benefits/Low costs and easy-to-use.md#).
 
-This document describes RDS features and functions and further explains the procedure to configure RDS through the [RDS console](https://rds.console.aliyun.com/) . With the help of this information you can also manage the RDS through APIs and SDKs.
+This document describes RDS features and functions and further explains the procedure to configure RDS through the [RDS console](https://rds.console.aliyun.com/). You can also manage RDS through APIs and SDKs.
 
-If you need technical assistance, you can open the [RDS console](https://rds.console.aliyun.com/) and choose **Support \> Open a new ticket** or [click here](https://workorder-intl.console.aliyun.com/#/ticket/createIndex)  to submit a ticket.
+If you need technical assistance, you can call 95187. Alternatively, you can open the [RDS console](https://rds.console.aliyun.com/) and in the upper-right corner, choose **More** \> **Support** \> **Open a new ticket** to submit a ticket. If your business is complex, you can purchase a [support plan](https://www.alibabacloud.com/support/after-sales) to your exclusive support from IM enterprise groups, technical assistance managers \(TAMs\), and service managers.
 
-For more information about functions and pricing of RDS, log on to the [official website of ApsaraDB for RDS](https://www.alibabacloud.com/product/apsaradb-for-rds).
+For more information, visit [ApsaraDB RDS for MySQL](https://www.alibabacloud.com/product/apsaradb-for-rds) .
 
-## Declaration {#section_hnn_3dh_wdb .section}
+## Disclaimer {#section_hnn_3dh_wdb .section}
 
-Some product features or services described in this document may be unavailable for certain regions. See the relevant commercial contracts for specific Terms and Conditions.
+Some features or services described in this document may be unavailable for certain regions. See the relevant commercial contracts for specific terms and conditions. This document serves as a user guide only. No content in this document can constitute any express or implied warranty.
 
-This document serves as a user guide. No content in this document can constitute any express or implied warranty.
+## General terms {#section_n8e_yta_o06 .section}
 
-The content of this document is updated as per the product upgrade and many other respective factors. You must first verify the document with your latest corresponding software version.
+-   Instance: A database service process that takes up physical memory independently. You can set different memory size, disk space, and database type, among which the memory specification determines the performance of the instance. After the instance is created, you can change the instance configuration and delete the instance at any time.
+-   Database: A logical unit created in an instance. Multiple databases that each have a unique name can be created in an instance.
+-   Region and zone: A region is a physical data center. A zone is a physical area that has independent power supply and network within a region. For more information, see [Alibaba Cloud Global Infrastructure](https://www.alibabacloud.com/global-locations).
 
-## Consideration {#section_jks_jdh_wdb .section}
-
-RDS includes multiple types of databases. This document takes the MySQL database as an example to describe the features and usage of all the RDS products. Some types of databases may not include certain features. The actual interface may vary slightly.
-
-## General terms { .section}
-
--   Instance: A database service process that takes up physical memory independently. You can set different memory size, disk space, and database type, among which the memory specification determines the performance of the instance. After the instance is created, you can change the configuration and delete the instance at any time.
--   Database: A logical unit created in an instance. Multiple databases can be created in an instance, and the database name is unique within the instance.
--   Region and zone: A region is a physical datacenter. A zone is a physical area that has independent power supply and networks. For more information, see [Alibaba Cloud Global Infrastructure](https://www.alibabacloud.com/global-locations).
-
-## General terms {#section_pyp_ndh_wdb .section}
+## Common conventions {#section_pyp_ndh_wdb .section}
 
 |Term|Description|
 |----|-----------|
-|Local database/Source database|Refers to the database deployed in the local equipment room or the database not on the ApsaraDB. In most cases, it refers to the source database to be migrated to the ApsaraDB in this document.|
-|RDS for XX \(MySQL, SQL Server, PostgreSQL, PPAS\)|It indicates the RDS of a specific database type, for example, RDS for MySQL means the instance enabled on the RDS and whose database type is MySQL.|
+|On-premises database|A database deployed in your on-premises equipment room or one that is not on ApsaraDB.|
+|RDS for XX \(MySQL, SQL Server, PostgreSQL, PPAS, or MariaDB\)|A type of RDS instance that runs on a specific database engine. For example, RDS for MySQL refers to RDS instances that run on the MySQL database engine.|
 
