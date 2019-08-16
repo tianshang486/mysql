@@ -12,9 +12,9 @@
 
 **说明：** 仅支持MySQL 5.6和SQL Server企业版实例。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=ModifyDBInstanceTDE)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=ModifyDBInstanceTDE&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -38,7 +38,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -65,9 +65,7 @@ http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceTDE
 
 ``` {#xml_return_success_demo}
 <ModifyDBInstanceTDEResponse>
-  <requestId>777C4593-8053-427B-99E2-105593277CAB</requestId>
-</ModifyDBInstanceTDEResponse>
-
+	  <requestId>777C4593-8053-427B-99E2-105593277CAB</requestId></ModifyDBInstanceTDEResponse>
 ```
 
 `JSON` 格式
@@ -80,5 +78,5 @@ http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceTDE
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
