@@ -1,12 +1,12 @@
-# DescribeRegions {#doc_api_1063468 .reference}
+# DescribeRegions {#doc_api_Rds_DescribeRegions .reference}
 
 调用DescribeRegions接口查询当前可选的RDS地域和可用区信息。
 
 调用创建实例接口[CreateDBInstance](~~26228~~)之前，可以先用本接口查询RegionId和ZoneId。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeRegions)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeRegions&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -16,17 +16,17 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
 |Regions| | |可选的地域和可用区列表。
 
  |
-|└RegionId|String|cn-hangzhou|地域ID。
+|RegionId|String|cn-hangzhou|地域ID。
 
  |
-|└ZoneId|String|cn-hangzhou-b|可用区ID。
+|ZoneId|String|cn-hangzhou-b|可用区ID。
 
  |
 |RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF|请求ID。
@@ -50,23 +50,21 @@ https://rds.aliyuncs.com/?Action=DescribeRegions
 
 ``` {#xml_return_success_demo}
 <DescribeRegionsResponse>
-  <Regions>
-    <RDSRegion>
-      <RegionId>cn-hangzhou</RegionId>
-      <ZoneId>cn-hangzhou-b</ZoneId>
-    </RDSRegion>
-    <RDSRegion>
-      <RegionId>cn-qingdao</RegionId>
-      <ZoneId>cn-qingdao-b</ZoneId>
-    </RDSRegion>
-    <RDSRegion>
-      <RegionId>cn-shenzhen</RegionId>
-      <ZoneId>cn-shenzhen-a</ZoneId>
-    </RDSRegion>
-  </Regions>
-  <RequestId>A36D9720-7902-42A4-B8B9-014A2135E6C3</RequestId>
-</DescribeRegionsResponse>
-
+	  <Regions>
+		    <RDSRegion>
+			      <RegionId>cn-hangzhou</RegionId>
+			      <ZoneId>cn-hangzhou-b</ZoneId>
+		    </RDSRegion>
+		    <RDSRegion>
+			      <RegionId>cn-qingdao</RegionId>
+			      <ZoneId>cn-qingdao-b</ZoneId>
+		    </RDSRegion>
+		    <RDSRegion>
+			      <RegionId>cn-shenzhen</RegionId>
+			      <ZoneId>cn-shenzhen-a</ZoneId>
+		    </RDSRegion>
+	  </Regions>
+	  <RequestId>A36D9720-7902-42A4-B8B9-014A2135E6C3</RequestId></DescribeRegionsResponse>
 ```
 
 `JSON` 格式
@@ -95,5 +93,5 @@ https://rds.aliyuncs.com/?Action=DescribeRegions
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
