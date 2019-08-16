@@ -62,7 +62,7 @@
  |
     |存储类型|SSD云盘或ESSD云盘。更多信息，请参见[存储类型](../cn.zh-CN/云数据库RDS简介/存储类型.md)。|
     |存储空间|该存储空间包括数据空间、系统文件空间、Binlog文件空间和事务文件空间。|
-    |数据加密|仅香港地域提供，可以选择不加密或者使用[KMS加密](https://help.aliyun.com/document_detail/108805.html)。|
+    |数据加密|可以选择不加密或者使用[KMS加密](https://help.aliyun.com/document_detail/108805.html)。当前仅中国（香港）、华东2（上海）地域提供，其他地域逐步开放。|
 
 4.  设置购买时长（仅针对包年包月实例）和实例数量，然后单击右侧的**立即购买**。
 5.  在订单确认页面，勾选服务条款，单击**去开通**完成支付。
@@ -132,7 +132,7 @@
 
     **说明：** 您也可以在当前创建RDS实例页面上方单击**体验新版**切换到新版创建RDS实例页面。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156456686952745_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156592540952745_zh-CN.png)
 
 2.  在左上角选择实例所在的地域，即实例所在的地理位置。
 
@@ -141,7 +141,7 @@
     -   购买后无法更换地域。
     -   请根据目标用户所在的地理位置就近选择地域，提升用户访问速度。
     -   请确保RDS实例与需要连接的ECS实例创建于同一个地域，否则它们无法通过内网互通，只能通过外网互通，无法发挥最佳性能。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156456686952746_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156592541052746_zh-CN.png)
 
 3.  设置以下参数。
 
@@ -192,7 +192,7 @@
 
 4.  检查当前配置，确认配置和费用。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156456686952764_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156592541052764_zh-CN.png)
 
 5.  单击**确认订单**。
 
@@ -202,14 +202,14 @@
 
     **说明：** 如果有优惠券，可以在本页面选择对应的优惠券。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156456686952773_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156592541052773_zh-CN.png)
 
 
 ## 下一步 {#section_msy_dgt_2fb .section}
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156456686949667_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156592541049667_zh-CN.png)
 
 创建实例后，您需要[设置白名单](cn.zh-CN/RDS for PostgreSQL 快速入门/初始化配置/设置白名单.md)和[创建账号](cn.zh-CN/RDS for PostgreSQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](https://help.aliyun.com/document_detail/97738.html)。然后就可以[连接实例](cn.zh-CN/RDS for PostgreSQL 快速入门/连接实例.md)。
 
