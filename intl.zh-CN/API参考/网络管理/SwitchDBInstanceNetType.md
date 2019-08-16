@@ -14,12 +14,12 @@
     -   实例系列为**单机基础版**，实例版本为**MySQL 5.7、SQL Server 2016 web 基础系列、2012 web 基础系列、2012 企业版 基础系列、PostgreSQL 10.0**，访问模式为**标准模式**，连接地址可切换为**内网地址、外网地址、内网地址和外网地址**；
     -   实例系列为**双机高可用版**，实例版本为**MySQL 5.5/5.6/5.7、SQL Server 2008 R2、2016标准版 高可用系列、2012标准版 高可用系列、2016企业版 高可用系列、2012企业版 高可用系列、PostgreSQL 9.4、PPAS 9.3、10.0**，访问模式为**标准模式**，连接地址可切换为**内网地址、外网地址**；
     -   实例系列为**双机高可用版**，实例版本为**MySQL 5.5/5.6/5.7、SQL Server 2008 R2、2016标准版 高可用系列、2012标准版 高可用系列、2016企业版 高可用系列、2012企业版 高可用系列、PostgreSQL 9.4、PPAS 9.3、10.0**，访问模式为**高安全模式**，连接地址可切换为**内网地址、外网地址、内网地址和外网地址**；
-    -   实例系列为**金融版**，实例版本为**MySQL 5.6**，访问模式为**标准模式**，连接地址可切换为**内网地址、外网地址**；
-    -   实例系列为**金融版**，实例版本为**MySQL 5.6**，访问模式为**高安全模式**，连接地址可切换为**内网地址、外网地址、内网地址和外网地址**。
+    -   实例系列为**三节点企业版**，实例版本为**MySQL 5.6**，访问模式为**标准模式**，连接地址可切换为**内网地址、外网地址**；
+    -   实例系列为**三节点企业版**，实例版本为**MySQL 5.6**，访问模式为**高安全模式**，连接地址可切换为**内网地址、外网地址、内网地址和外网地址**。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=SwitchDBInstanceNetType)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=SwitchDBInstanceNetType&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -52,7 +52,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -79,9 +79,7 @@ http(s)://rds.aliyuncs.com/?Action=SwitchDBInstanceNetType
 
 ``` {#xml_return_success_demo}
 <SwitchDBInstanceNetTypeResponse>
-  <RequestId> 65BDA532-28AF-4122-AA39-B382721EEE64</RequestId>
-</SwitchDBInstanceNetTypeResponse>
-
+	  <RequestId> 65BDA532-28AF-4122-AA39-B382721EEE64</RequestId></SwitchDBInstanceNetTypeResponse>
 ```
 
 `JSON` 格式
@@ -94,5 +92,5 @@ http(s)://rds.aliyuncs.com/?Action=SwitchDBInstanceNetType
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
