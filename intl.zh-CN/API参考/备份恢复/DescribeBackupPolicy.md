@@ -4,9 +4,9 @@
 
 RDS实例将根据用户设置的备份设置，定期做备份。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeBackupPolicy)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeBackupPolicy&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -37,7 +37,7 @@ RDS实例将根据用户设置的备份设置，定期做备份。
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -79,16 +79,16 @@ RDS实例将根据用户设置的备份设置，定期做备份。
 |DuplicationLocation| | |备份文件的存储位置。
 
  |
-|└Location| | |位置信息。
+|Location| | |位置信息。
 
  |
-|└Bucket|String|mybucket|转储的目标OSS Bucket的名称。
+|Bucket|String|mybucket|转储的目标OSS Bucket的名称。
 
  |
-|└Endpoint|String|oss-cn-shanghai.aliyuncs.com|转储目的域的名称。
+|Endpoint|String|oss-cn-shanghai.aliyuncs.com|转储目的域的名称。
 
  |
-|└Sotrage|String|OSS|备份存储介质。
+|Sotrage|String|OSS|备份存储介质。
 
  |
 |EnableBackupLog|String|1|是否开启日志备份，取值：
@@ -151,15 +151,13 @@ http(s)://rds.aliyuncs.com/?Action=DescribeBackupPolicy
 
 ``` {#xml_return_success_demo}
 <DescribeBackupPolicyResponse>
-  <backupLog>Enable</backupLog>
-  <backupRetentionPeriod>7</backupRetentionPeriod>
-  <logBackupRetentionPeriod>7</logBackupRetentionPeriod>
-  <preferredBackupPeriod>Monday,Wednesday,Friday,Sunday</preferredBackupPeriod>
-  <preferredBackupTime>15:00Z-16:00Z</preferredBackupTime>
-  <preferredNextBackupTime>2018-01-19T15:15Z</preferredNextBackupTime>
-  <requestId>B87E2AB3-B7C9-4394-9160-7F639F732031</requestId>
-</DescribeBackupPolicyResponse>
-
+	  <backupLog>Enable</backupLog>
+	  <backupRetentionPeriod>7</backupRetentionPeriod>
+	  <logBackupRetentionPeriod>7</logBackupRetentionPeriod>
+	  <preferredBackupPeriod>Monday,Wednesday,Friday,Sunday</preferredBackupPeriod>
+	  <preferredBackupTime>15:00Z-16:00Z</preferredBackupTime>
+	  <preferredNextBackupTime>2018-01-19T15:15Z</preferredNextBackupTime>
+	  <requestId>B87E2AB3-B7C9-4394-9160-7F639F732031</requestId></DescribeBackupPolicyResponse>
 ```
 
 `JSON` 格式
@@ -178,5 +176,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeBackupPolicy
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
