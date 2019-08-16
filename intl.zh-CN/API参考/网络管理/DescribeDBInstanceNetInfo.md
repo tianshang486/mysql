@@ -2,9 +2,9 @@
 
 调用DescribeDBInstanceNetInfo接口查看实例的所有连接地址信息。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeDBInstanceNetInfo)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeDBInstanceNetInfo&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -27,21 +27,27 @@
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
+|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。
 
-## 返回参数 {#resultMapping .section}
+ |
+|Flag|String|否|-|备用参数。
+
+ |
+
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
 |DBInstanceNetInfos| | |实例的连接地址信息列表。
 
  |
-|└ConnectionString|String|rm-uf6wxxxxx.mysql.rds.aliyuncs.com|连接地址。
+|ConnectionString|String|rm-uf6wxxxxx.mysql.rds.aliyuncs.com|连接地址。
 
  |
-|└IPAddress|String|192.168.12.84|IP地址。
+|IPAddress|String|192.168.12.84|IP地址。
 
  |
-|└IPType|String|Public|网络类型。
+|IPType|String|Public|网络类型。
 
  -   经典网络类型取值：
     -   **Inner**：内网；
@@ -51,66 +57,66 @@
     -   **Public**：外网。
 
  |
-|└Port|String|3306|连接端口。
+|Port|String|3306|连接端口。
 
  |
-|└VPCId|String|vpc-uf6f7l4fg90xxxxxxxxxx|VPC ID。
+|VPCId|String|vpc-uf6f7l4fg90xxxxxxxxxx|VPC ID。
 
  |
-|└VSwitchId|String|vsw-uf6adz52c2pxxxxxxxxxx|交换机ID。
+|VSwitchId|String|vsw-uf6adz52c2pxxxxxxxxxx|交换机ID。
 
  |
-|└ConnectionStringType|String|Normal|连接地址类型，取值：
+|ConnectionStringType|String|Normal|连接地址类型，取值：
 
  -   **Normal**：普通连接地址；
 -   **ReadWriteSplitting**：读写分离连接地址。
 
  |
-|└MaxDelayTime|String|12|延迟阈值，只在读写分离连接地址返回该参数，单位：秒。
+|MaxDelayTime|String|12|延迟阈值，只在读写分离连接地址返回该参数，单位：秒。
 
  **说明：** 超过该延迟阈值的只读实例不会被分配流量。
 
  |
-|└DistributionType|String|Standard|读请求分配策略，只在读写分离连接地址返回该参数，取值：
+|DistributionType|String|Standard|读请求分配策略，只在读写分离连接地址返回该参数，取值：
 
  -   **Standard**：按规格权重自动分配；
 -   **Custom**：自定义分配权重。
 
  |
-|└DBInstanceWeights| | |实例权重信息列表，开通了读写分离地址的实例会返回该参数。
+|DBInstanceWeights| | |实例权重信息列表，开通了读写分离地址的实例会返回该参数。
 
  |
-|└DBInstanceId|String|rm-uf6wjk5xxxxxxx|实例ID。
+|DBInstanceId|String|rm-uf6wjk5xxxxxxx|实例ID。
 
  |
-|└DBInstanceType|String|Master|实例类型，取值：
+|DBInstanceType|String|Master|实例类型，取值：
 
  -   **Master**：主实例；
 -   **Readonly**：只读实例。
 
  |
-|└Weight|String|100|实例当前权重。
+|Weight|String|100|实例当前权重。
 
  |
-|└Availability|String|Unavailable|实例可用状态，取值：
+|Availability|String|Unavailable|实例可用状态，取值：
 
  -   **Unavailable**：不可用；
 -   **Available**：可用。
 
  |
-|└ExpiredTime|String|1209534|混访模式下，经典网络的剩余时间，单位：秒。
+|ExpiredTime|String|1209534|混访模式下，经典网络的剩余时间，单位：秒。
 
  |
-|└SecurityIPGroups| | |实例的IP白名单分组列表。
+|SecurityIPGroups| | |实例的IP白名单分组列表。
 
  |
-|└SecurityIPGroupName|String|Default|IP白名单分组名称。
+|SecurityIPGroupName|String|Default|IP白名单分组名称。
 
  |
-|└SecurityIPs|String|127.0.0.1|白名单IP。
+|SecurityIPs|String|127.0.0.1|白名单IP。
 
  |
-|└Upgradeable|String|Disabled|IP版本是否能够升级，取值：**true | false**
+|Upgradeable|String|Disabled|IP版本是否能够升级，取值：**true | false**
 
  **说明：** IPv4版本可以升级到IPv6版本。
 
@@ -149,19 +155,18 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceNetInfo
 
 ``` {#xml_return_success_demo}
 <DescribeDBInstanceNetInfoResponse>
-  <dBInstanceNetInfos>
-    <connectionString>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</connectionString>
-    <connectionStringType>Normal</connectionStringType>
-    <iPAddress>192.168.xx.xx</iPAddress>
-    <iPType>Public</iPType>
-    <port>3306</port>
-    <upgradeable>Disabled</upgradeable>
-    <vPCId/>
-  </dBInstanceNetInfos>
-  <instanceNetworkType>Classic</instanceNetworkType>
-  <requestId>777C4593-8053-427B-99E2-105593277CAB</requestId>
+	  <dBInstanceNetInfos>
+		    <connectionString>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</connectionString>
+		    <connectionStringType>Normal</connectionStringType>
+		    <iPAddress>192.168.xx.xx</iPAddress>
+		    <iPType>Public</iPType>
+		    <port>3306</port>
+		    <upgradeable>Disabled</upgradeable>
+		    <vPCId></vPCId>
+	  </dBInstanceNetInfos>
+	  <instanceNetworkType>Classic</instanceNetworkType>
+	  <requestId>777C4593-8053-427B-99E2-105593277CAB</requestId>
 </DescribeDBInstanceNetInfoResponse>
-
 ```
 
 `JSON` 格式
@@ -188,5 +193,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstanceNetInfo
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
