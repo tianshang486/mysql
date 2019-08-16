@@ -2,9 +2,9 @@
 
 调用DescribeDBInstances接口查看RDS实例列表或被RAM授权的实例列表。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeDBInstances)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeDBInstances&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -149,7 +149,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -168,19 +168,19 @@
 |Items| | |由实例信息组成的数组。
 
  |
-|└DBInstanceId|String|rm-uf6wjk5xxxxxxxxxx|实例ID。
+|DBInstanceId|String|rm-uf6wjk5xxxxxxxxxx|实例ID。
 
  |
-|└DBInstanceDescription|String|测试数据库|实例描述。
+|DBInstanceDescription|String|测试数据库|实例描述。
 
  |
-|└PayType|String|Postpaid|实例的付费类型，取值：
+|PayType|String|Postpaid|实例的付费类型，取值：
 
  -   **Postpaid**：按量付费；
 -   **Prepaid**：包年包月。
 
  |
-|└DBInstanceType|String|Primary|实例类型，取值：
+|DBInstanceType|String|Primary|实例类型，取值：
 
  -   **Primary**：主实例；
 -   **ReadOnly**：只读实例；
@@ -188,39 +188,39 @@
 -   **Temp**：临时实例。
 
  |
-|└InstanceNetworkType|String|Classic|实例的网络类型，取值：
+|InstanceNetworkType|String|Classic|实例的网络类型，取值：
 
  -   **Classic**：经典网络；
 -   **VPC**：VPC网络。
 
  |
-|└ConnectionMode|String|Performance|实例的访问模式，取值：
+|ConnectionMode|String|Performance|实例的访问模式，取值：
 
  -   **Standard**：标准访问模式；
 -   **Safe**：数据库代理模式。
 
  |
-|└RegionId|String|cn-hangzhou|地域ID。
+|RegionId|String|cn-hangzhou|地域ID。
 
  |
-|└ExpireTime|String|2019-02-27T16:00:00Z|到期时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|ExpireTime|String|2019-02-27T16:00:00Z|到期时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  **说明：** 按量付费实例无到期时间。
 
  |
-|└DBInstanceStatus|String|Running|实例状态，详情请参见[实例状态表](~~26315~~)。
+|DBInstanceStatus|String|Running|实例状态，详情请参见[实例状态表](~~26315~~)。
 
  |
-|└Engine|String|MySQL|数据库类型。
+|Engine|String|MySQL|数据库类型。
 
  |
-|└DBInstanceNetType|String|Internet|实例的网络连接类型，取值：
+|DBInstanceNetType|String|Internet|实例的网络连接类型，取值：
 
  -   **Internet**：外网连接；
 -   **Intranet**：内网连接。
 
  |
-|└LockMode|String|Unlock|实例的锁定状态。取值：
+|LockMode|String|Unlock|实例的锁定状态。取值：
 
  -   **Unlock**：正常；
 -   **ManualLock**：手动触发锁定；
@@ -230,62 +230,68 @@
 -   **Released**：实例已释放。此时实例无法进行解锁，只能使用备份数据重新创建新实例，重建时间较长，请耐心等待。
 
  |
-|└LockReason|String|instance\_expired|实例被锁定的原因。
+|LockReason|String|instance\_expired|实例被锁定的原因。
 
  |
-|└MasterInstanceId|String|rm-uf6wjk5xxxxxxxxxx|主实例的ID，如果没有返回此参数（即为null）则表示该实例是主实例。
+|MasterInstanceId|String|rm-uf6wjk5xxxxxxxxxx|主实例的ID，如果没有返回此参数（即为null）则表示该实例是主实例。
 
  |
-|└GuardDBInstanceId|String|rm-uf64zsuxxxxxxxxxx|主实例如果有灾备实例，该参数即为灾备实例的ID。
+|GuardDBInstanceId|String|rm-uf64zsuxxxxxxxxxx|主实例如果有灾备实例，该参数即为灾备实例的ID。
 
  |
-|└TempDBInstanceId|String|rm-uf64zsuxxxxxxxxxx|主实例如果有临时实例，该参数即为临时实例的ID。
+|TempDBInstanceId|String|rm-uf64zsuxxxxxxxxxx|主实例如果有临时实例，该参数即为临时实例的ID。
 
  |
-|└Category|String|Basic|实例系列：
+|AutoUpgradeMinorVersion|String|Auto|实例升级小版本的方式，取值：
+
+ -   **Auto**：自动升级小版本；
+-   **Manual**：不自动升级，仅在当前版本下线时才强制升级。
+
+ |
+|Category|String|Basic|实例系列：
 
  -   **Basic**：基础版；
 -   **HighAvailability**：高可用版；
 -   **Finance**：金融版（仅支持中国站）。
 
  |
-|└CreateTime|String|2018-11-05T11:26:02Z|创建时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|CreateTime|String|2018-11-05T11:26:02Z|创建时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└DBInstanceClass|String|rds.mys2.small|实例规格，详见[实例规格表](~~26312~~)。
+|DBInstanceClass|String|rds.mys2.small|实例规格，详见[实例规格表](~~26312~~)。
 
  |
-|└DBInstanceStorageType|String|ModuleList.4.ModuleCode|实例储存类型。
+|DBInstanceStorageType|String|ModuleList.4.ModuleCode|实例储存类型。
 
  |
-|└DestroyTime|String|2018-11-05T11:26:02Z|销毁时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|DestroyTime|String|2018-11-05T11:26:02Z|销毁时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
-|└EngineVersion|String|5.7|数据库版本。
+|EngineVersion|String|5.7|数据库版本。
 
  |
-|└MutriORsignle|Boolean|true|是否是多可用区，取值：**true | false**
+|MutriORsignle|Boolean|true|是否是多可用区，取值：**true | false**
 
  |
-|└ReadOnlyDBInstanceIds| | |主实例下如果有只读实例，该参数为只读实例的ID列表。
+|ReadOnlyDBInstanceIds| | |主实例下如果有只读实例，该参数为只读实例的ID列表。
 
  |
-|└DBInstanceId|String|rr-uf6wjk5xxxxxxx|只读实例ID。
+|DBInstanceId|String|rr-uf6wjk5xxxxxxx|只读实例ID。
 
  |
-|└ResourceGroupId|String|rg-acfmyxxxxxxx|资源组ID。
+|ResourceGroupId|String|rg-acfmyxxxxxxx|资源组ID。
 
  |
-|└VSwitchId|String|vsw-uf6adz52c2pxxxxxxx|交换机ID。
+|VSwitchId|String|vsw-uf6adz52c2pxxxxxxx|交换机ID。
 
  |
-|└VpcCloudInstanceId|String|rm-uf6wjk5xxxxxxx|专有网络实例ID。
+|VpcCloudInstanceId|String|rm-uf6wjk5xxxxxxx|专有网络实例ID。
 
  |
-|└VpcId|String|vpc-uf6f7l4fg90xxxxxxx|VPC ID。
+|VpcId|String|vpc-uf6f7l4fg90xxxxxxx|VPC ID。
 
  |
-|└ZoneId|String|cn-hangzhou-a|可用区ID。
+|ZoneId|String|cn-hangzhou-a|可用区ID。
 
  |
 
@@ -308,36 +314,35 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstances
 ``` {#xml_return_success_demo}
 <DescribeDBInstancesResponse>
   <Items>
-    <DBInstance>
-      <LockMode>Unlock</LockMode>
-      <DBInstanceNetType>Intranet</DBInstanceNetType>
-      <DBInstanceClass>ppas.x4.xlarge.2</DBInstanceClass>
-      <ResourceGroupId>rg-acfnt75uxxxxx</ResourceGroupId>
-      <DBInstanceId>rm-dj120j44xxxxx</DBInstanceId>
-      <VpcCloudInstanceId/>
-      <ZoneId>cn-beijing-MAZ3(c,e)</ZoneId>
-      <ReadOnlyDBInstanceIds/>
-      <ConnectionMode>Standard</ConnectionMode>
-      <InstanceNetworkType>Classic</InstanceNetworkType>
-      <Engine>PPAS</Engine>
-      <MutriORsignle>true</MutriORsignle>
-      <InsId>1</InsId>
-      <ExpireTime/>
-      <CreateTime>2019-03-20T02:18:02Z</CreateTime>
-      <DBInstanceType>Primary</DBInstanceType>
-      <RegionId>cn-beijing</RegionId>
-      <EngineVersion>10.0</EngineVersion>
-      <LockReason/>
-      <DBInstanceStatus>Running</DBInstanceStatus>
-      <PayType>Postpaid</PayType>
-    </DBInstance>
-  </Items>
-  <TotalRecordCount>1</TotalRecordCount>
-  <PageNumber>1</PageNumber>
-  <RequestId>0C2B0363-2707-4300-9900-0A65846CE48E</RequestId>
-  <PageRecordCount>1</PageRecordCount>
+		    <DBInstance>
+			      <LockMode>Unlock</LockMode>
+			      <DBInstanceNetType>Intranet</DBInstanceNetType>
+			      <DBInstanceClass>ppas.x4.xlarge.2</DBInstanceClass>
+			      <ResourceGroupId>rg-acfnt75uxxxxx</ResourceGroupId>
+			      <DBInstanceId>rm-dj120j44xxxxx</DBInstanceId>
+			      <VpcCloudInstanceId></VpcCloudInstanceId>
+			      <ZoneId>cn-beijing-MAZ3(c,e)</ZoneId>
+			      <ReadOnlyDBInstanceIds></ReadOnlyDBInstanceIds>
+			      <ConnectionMode>Standard</ConnectionMode>
+			      <InstanceNetworkType>Classic</InstanceNetworkType>
+			      <Engine>PPAS</Engine>
+			      <MutriORsignle>true</MutriORsignle>
+			      <InsId>1</InsId>
+			      <ExpireTime></ExpireTime>
+			      <CreateTime>2019-03-20T02:18:02Z</CreateTime>
+			      <DBInstanceType>Primary</DBInstanceType>
+			      <RegionId>cn-beijing</RegionId>
+			      <EngineVersion>10.0</EngineVersion>
+			      <LockReason></LockReason>
+			      <DBInstanceStatus>Running</DBInstanceStatus>
+			      <PayType>Postpaid</PayType>
+		    </DBInstance>
+	  </Items>
+	  <TotalRecordCount>1</TotalRecordCount>
+	  <PageNumber>1</PageNumber>
+	  <RequestId>0C2B0363-2707-4300-9900-0A65846CE48E</RequestId>
+	  <PageRecordCount>1</PageRecordCount>
 </DescribeDBInstancesResponse>
-
 ```
 
 `JSON` 格式
@@ -386,5 +391,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDBInstances
 |--------|---|----|--|
 |400|InvalidDBInstanceType.ValueNotSupport|The specified parameter"DBInstanceType" is not valid.|参数DBInstanceType无效。|
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
