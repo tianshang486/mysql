@@ -36,7 +36,7 @@ AliSQL是阿里云深度定制的独立MySQL分支，除了社区版的所有功
  | InnoDB
 
  |
-|Oracle Compatibility|Sequence Engine|未提供|未提供|MySQL 8.0支持|MySQL 8.0支持|
+|Oracle Compatibility|[Sequence Engine](cn.zh-CN/AliSQL/Sequence Engine.md#)|未提供|未提供|MySQL 8.0支持|MySQL 8.0支持|
 |MySQL Enterprise Monitor|[Enterprise Dashboard](../../../../cn.zh-CN/RDS for MySQL 用户指南/监控与报警/查看资源和引擎监控.md#)|未提供|√|开发中|Enhanced Monitor|
 |[Enterprise Advisors](../../../../cn.zh-CN/RDS for MySQL 用户指南/CloudDBA（新）/实时性能.md#)|未提供|√|开发中|CloudDBA|
 |[Query Analyzer](../../../../cn.zh-CN/RDS for MySQL 用户指南/SQL洞察.md#)|未提供|√|开发中|Performance Insight|
