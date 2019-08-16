@@ -7,9 +7,9 @@
 -   本接口的返回参数每分钟更新一次。
 -   暂不支持SQL Server类型的实例。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeSlowLogRecords)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeSlowLogRecords&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -120,27 +120,26 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSlowLogRecords
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<DescribeSlowLogRecordsResponse>
-  <RequestId>542BB8D6-4268-45CC-A557-B03EFD7AB30A</RequestId>
-  <DBInstanceID>rm-uf6wjk5xxxxxxx</DBInstanceID>
-  <Engine>MySQL</Engine>
-  <TotalRecordCount>1</TotalRecordCount>
-  <PageNumber>1</PageNumber>
-  <PageRecordCount>1</PageRecordCount>
-  <Items>
-    <SQLSlowRecord>
-      <HostAddress>192.101.2.11</HostAddress>
-      <DBName>test</DBName>
-      <SQLText>update test.zxb set id=0 limit 1</SQLText>
-      <QueryTimes>123</QueryTimes>
-      <LockTimes>12</LockTimes>
-      <ParseRowCounts>125</ParseRowCounts>
-      <ReturnRowCounts>1</ReturnRowCounts>
-      <ExecutionStartTime>2011-06-11T15:00:08Z</ExecutionStartTime>
-    </SQLSlowRecord>
-  </Items>
+<DescribeSlowLogRecordsResponse> 
+    <RequestId>542BB8D6-4268-45CC-A557-B03EFD7AB30A</RequestId>
+    <DBInstanceID>rm-uf6wjk5xxxxxxx</DBInstanceID> 
+    <Engine>MySQL</Engine>
+    <TotalRecordCount>1</TotalRecordCount>
+    <PageNumber>1</PageNumber>
+    <PageRecordCount>1</PageRecordCount>
+    <Items>
+        <SQLSlowRecord>
+          <HostAddress>192.101.2.11</HostAddress>
+          <DBName>test</DBName>
+          <SQLText>update test.zxb set id=0 limit 1</SQLText>
+          <QueryTimes>123</QueryTimes>
+          <LockTimes>12</LockTimes>
+          <ParseRowCounts>125</ParseRowCounts>
+          <ReturnRowCounts>1</ReturnRowCounts>
+          <ExecutionStartTime>2011-06-11T15:00:08Z</ExecutionStartTime>
+        </SQLSlowRecord>
+    </Items>
 </DescribeSlowLogRecordsResponse>
-
 ```
 
 `JSON` 格式
