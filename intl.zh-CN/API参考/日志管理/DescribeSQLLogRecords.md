@@ -11,9 +11,9 @@
 -   PostgreSQL
 -   PPAS
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeSQLLogRecords)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeSQLLogRecords&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -70,7 +70,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -86,28 +86,28 @@
 |Items| | |SQL审计日志列表。
 
  |
-|└DBName|String|testDB|数据库名称。
+|DBName|String|testDB|数据库名称。
 
  |
-|└AccountName|String|accounttest|执行操作的账号名称。
+|AccountName|String|accounttest|执行操作的账号名称。
 
  |
-|└HostAddress|String|192.168.0.121|连接数据库的客户端IP地址。
+|HostAddress|String|192.168.0.121|连接数据库的客户端IP地址。
 
  |
-|└SQLText|String|update test.zxb set id=0 limit 1|SQL语句。
+|SQLText|String|update test.zxb set id=0 limit 1|SQL语句。
 
  |
-|└TotalExecutionTimes|Long|600|执行耗时，单位：微秒。
+|TotalExecutionTimes|Long|600|执行耗时，单位：微秒。
 
  |
-|└ReturnRowCounts|Long|30|返回记录数。
+|ReturnRowCounts|Long|30|返回记录数。
 
  |
-|└ThreadID|String|1025865428|线程ID。
+|ThreadID|String|1025865428|线程ID。
 
  |
-|└ExecuteTime|String|2011-06-11T15:00:23Z|执行时间。
+|ExecuteTime|String|2011-06-11T15:00:23Z|执行时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
 
  |
 |RequestId|String|08A3B71B-FE08-4B03-974F-CC7EA6DB1828|请求ID。
@@ -134,23 +134,21 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSQLLogRecords
 
 ``` {#xml_return_success_demo}
 <DescribeSQLLogRecordsResponse>
-  <PageNumber>1</PageNumber>
-  <TotalRecordCounts>1</TotalRecordCounts>
-  <ItemsCounts>1</ItemsCounts>
-  <SQLItems>
-    <SQLItem>
-      <DBName>test</DBName>
-      <AccountName>accounttest</AccountName>
-      <HostAddress>192.168.0.121</HostAddress>
-      <SQLText>update test.zxb set id=0 limit 1</SQLText>
-      <TotalExecutionTimes>12</TotalExecutionTimes>
-      <ReturnRowCounts>34</ReturnRowCounts>
-      <ExecuteTime>2011-06-11T15:00:23Z</ExecuteTime>
-    </SQLItem>
-  </SQLItems>
-  <RequestId>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</RequestId>
-</DescribeSQLLogRecordsResponse>
-
+	  <PageNumber>1</PageNumber>
+	  <TotalRecordCounts>1</TotalRecordCounts>
+	  <ItemsCounts>1</ItemsCounts>
+	  <SQLItems>
+		    <SQLItem>
+			      <DBName>test</DBName>
+			      <AccountName>accounttest</AccountName>
+			      <HostAddress>192.168.0.121</HostAddress>
+			      <SQLText>update test.zxb set id=0 limit 1</SQLText>
+			      <TotalExecutionTimes>12</TotalExecutionTimes>
+			      <ReturnRowCounts>34</ReturnRowCounts>
+			      <ExecuteTime>2011-06-11T15:00:23Z</ExecuteTime>
+		    </SQLItem>
+	  </SQLItems>
+	  <RequestId>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</RequestId></DescribeSQLLogRecordsResponse>
 ```
 
 `JSON` 格式
@@ -179,5 +177,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSQLLogRecords
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
