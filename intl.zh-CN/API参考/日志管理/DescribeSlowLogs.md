@@ -4,9 +4,9 @@
 
 **说明：** 该接口暂不支持SQL Server 2017集群版实例。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeSlowLogs)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeSlowLogs&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -53,7 +53,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -78,67 +78,67 @@
 |Items| | |慢日志信息列表。
 
  |
-|└DBName|String|RDS\_MySQL|数据库名称。
+|DBName|String|RDS\_MySQL|数据库名称。
 
  |
-|└SQLText|String|select id,name from tb\_table|SQL语句。
+|SQLText|String|select id,name from tb\_table|SQL语句。
 
  |
-|└SQLServerTotalExecutionCounts|Long|1|SQL Server总执行次数。
+|SQLServerTotalExecutionCounts|Long|1|SQL Server总执行次数。
 
  |
-|└MySQLTotalExecutionCounts|Long|1|MySQL总执行次数。
+|MySQLTotalExecutionCounts|Long|1|MySQL总执行次数。
 
  |
-|└SQLServerTotalExecutionTimes|Long|1000|SQL Server总执行时间，单位：毫秒。
+|SQLServerTotalExecutionTimes|Long|1000|SQL Server总执行时间，单位：毫秒。
 
  |
-|└MySQLTotalExecutionTimes|Long|1|MySQL总执行时间，单位：秒。
+|MySQLTotalExecutionTimes|Long|1|MySQL总执行时间，单位：秒。
 
  |
-|└MaxExecutionTime|Long|60|最大执行时长，单位：秒。
+|MaxExecutionTime|Long|60|最大执行时长，单位：秒。
 
  |
-|└ReportTime|String|2011-05-30Z|数据报表生成日期。
+|ReportTime|String|2011-05-30Z|数据报表生成日期。
 
  |
-|└TotalLockTimes|Long|0|锁定总时长，单位：秒。
+|TotalLockTimes|Long|0|锁定总时长，单位：秒。
 
  |
-|└MaxLockTime|Long|0|最大锁定时长，单位：秒。
+|MaxLockTime|Long|0|最大锁定时长，单位：秒。
 
  |
-|└ParseTotalRowCounts|Long|1|解析SQL总行数。
+|ParseTotalRowCounts|Long|1|解析SQL总行数。
 
  |
-|└ParseMaxRowCount|Long|1|解析SQL最大行数。
+|ParseMaxRowCount|Long|1|解析SQL最大行数。
 
  |
-|└ReturnTotalRowCounts|Long|1|返回SQL总行数。
+|ReturnTotalRowCounts|Long|1|返回SQL总行数。
 
  |
-|└ReturnMaxRowCount|Long|1|返回SQL最大行数。
+|ReturnMaxRowCount|Long|1|返回SQL最大行数。
 
  |
-|└CreateTime|String|2011-05-30Z|数据生成日期。
+|CreateTime|String|2011-05-30Z|数据生成日期。
 
  |
-|└AvgExecutionTime|Long|1|平均执行时间，单位：秒。
+|AvgExecutionTime|Long|1|平均执行时间，单位：秒。
 
  |
-|└SQLHASH|String|U2FsdGVkxxxx|慢日志统计里的SQL语句唯一标识符，可用于获取该SQL语句的慢日志明细。
+|SQLHASH|String|U2FsdGVkxxxx|慢日志统计里的SQL语句唯一标识符，可用于获取该SQL语句的慢日志明细。
 
  |
-|└SQLIdStr|String|521584|对应的是慢日志统计模版SQL的ID，现已废弃，请使用**SQLHASH**。
+|SQLIdStr|String|521584|对应的是慢日志统计模版SQL的ID，现已废弃，请使用**SQLHASH**。
 
  |
-|└SlowLogId|Long|26584213|慢查询汇总标识ID。
+|SlowLogId|Long|26584213|慢查询汇总标识ID。
 
  |
-|└TotalLogicalReadCounts|Long|1|总逻辑读。
+|TotalLogicalReadCounts|Long|1|总逻辑读。
 
  |
-|└TotalPhysicalReadCounts|Long|1|总物理读。
+|TotalPhysicalReadCounts|Long|1|总物理读。
 
  |
 |DBInstanceId|String|rm-uf6wjk5xxxxxxx|实例ID。
@@ -167,27 +167,26 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSlowLogs
 `XML` 格式
 
 ``` {#xml_return_success_demo}
-<DescribeSlowLogsResponse>
-  <RequestId>A5409D02-D661-4BF3-8F3D-0A814D0574E7</RequestId>
-  <DBInstanceID>rm-uf6wjk5xxxxxxx</DBInstanceID>
-  <Engine>SQLServer</Engine>
-  <StartTime>2011-06-11Z</StartTime>
-  <EndTime>2011-12-11Z</EndTime>
-  <TotalRecordCount>1</TotalRecordCount>
-  <PageNumber>1</PageNumber>
-  <PageRecordCount>1</PageRecordCount>
-  <Items>
-    <SQLSlowLog>
-      <SQLText>update test.zxb set id=0 limit 1</SQLText>
-      <SQLServerTotalExecutionCounts>178</SQLServerTotalExecutionCounts>
-      <SQLServerTotalExecutionTimes>189</SQLServerTotalExecutionTimes>
-      <TotalLogicalReadcounts>89</TotalLogicalReadcounts>
-      <TotalPhysicalReadcounts>90</TotalPhysicalReadcounts>
-      <ReportTime>2013-11-12Z</ReportTime>
-    </SQLSlowLog>
-  </Items>
+<DescribeSlowLogsResponse> 
+    <RequestId>A5409D02-D661-4BF3-8F3D-0A814D0574E7</RequestId>
+    <DBInstanceID>rm-uf6wjk5xxxxxxx</DBInstanceID> 
+    <Engine>SQLServer</Engine>
+    <StartTime>2011-06-11Z</StartTime> 
+    <EndTime>2011-12-11Z</EndTime> 
+    <TotalRecordCount>1</TotalRecordCount>
+    <PageNumber>1</PageNumber>
+    <PageRecordCount>1</PageRecordCount>
+    <Items>
+        <SQLSlowLog>
+          <SQLText>update test.zxb set id=0 limit 1</SQLText>
+          <SQLServerTotalExecutionCounts>178</SQLServerTotalExecutionCounts>
+          <SQLServerTotalExecutionTimes>189</SQLServerTotalExecutionTimes>
+          <TotalLogicalReadcounts>89</TotalLogicalReadcounts>
+          <TotalPhysicalReadcounts>90</TotalPhysicalReadcounts>
+          <ReportTime>2013-11-12Z</ReportTime>
+       </SQLSlowLog>
+    </Items>
 </DescribeSlowLogsResponse>
-
 ```
 
 `JSON` 格式
@@ -219,5 +218,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSlowLogs
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
