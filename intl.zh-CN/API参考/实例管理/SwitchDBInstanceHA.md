@@ -2,13 +2,11 @@
 
 调用SwitchDBInstanceHA接口切换RDS实例的主备实例。
 
-本接口可用于切换高可用版或金融版RDS实例的主备实例，切换主备实例后，原来的备实例成为主实例并承担业务流量。
-
 本接口可用于切换高可用版RDS实例的主备实例，切换主备实例后，原来的备实例成为主实例并承担业务流量。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=SwitchDBInstanceHA)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=SwitchDBInstanceHA&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -20,7 +18,7 @@
 |DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
 
  |
-|NodeId|String|是|349054|备实例编号，实例的唯一标识，通过接口[DescribeDBInstanceHAConfig](~~26244~~)可查询该值。
+|NodeId|String|是|349054|备实例的唯一标识，通过接口[DescribeDBInstanceHAConfig](~~26244~~)可查询该值。
 
  |
 |Force|String|否|No|切换方式，取值：
@@ -43,7 +41,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -70,9 +68,7 @@ http(s)://rds.aliyuncs.com/?Action=SwitchDBInstanceHA
 
 ``` {#xml_return_success_demo}
 <SwitchDBInstanceHAResponse>
-  <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId>
-</SwitchDBInstanceHAResponse>
-
+	  <RequestId>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</RequestId></SwitchDBInstanceHAResponse>
 ```
 
 `JSON` 格式
@@ -85,5 +81,5 @@ http(s)://rds.aliyuncs.com/?Action=SwitchDBInstanceHA
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
