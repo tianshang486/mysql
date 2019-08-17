@@ -6,9 +6,9 @@
 
 **说明：** SQL Server 2017集群版不支持该接口。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeDiagnosticReportList)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeDiagnosticReportList&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -24,7 +24,7 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -34,19 +34,19 @@
 |ReportList| | |返回的诊断报告列表。
 
  |
-|└DiagnosticTime|String|2018-01-17T12:46:09Z|诊断时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|DiagnosticTime|String|2018-01-17T12:46:09Z|诊断时间。
 
  |
-|└DownloadURL|String|http://rdsreport-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|公网下载地址，若当前不可下载，则为空串。
+|DownloadURL|String|http://rdsreport-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx|公网下载地址，若当前不可下载，则为空串。
 
  |
-|└EndTime|String|2012-06-11T15:00Z|监控数据结束时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|EndTime|String|2018-01-10T15:31:00Z|监控数据结束时间。
 
  |
-|└Score|Integer|100|诊断分数。
+|Score|Integer|100|诊断分数。
 
  |
-|└StartTime|String|2012-06-11T15:00Z|监控数据起始时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|StartTime|String|2018-01-10T15:30:00Z|监控数据起始时间。
 
  |
 
@@ -68,16 +68,14 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDiagnosticReportList
 
 ``` {#xml_return_success_demo}
 <DescribeDiagnosticReportListResponse>
-  <reportList>
-    <diagnosticTime>2018-01-17T12:46:09Z</diagnosticTime>
-    <downloadURL>http://rdsreport-hzi-v2.oss-cn-hangzhou-i.aliyuncs.com/xxxxx</downloadURL>
-    <endTime>2018-01-10T15:31:00Z</endTime>
-    <score>100</score>
-    <startTime>2018-01-10T15:30:00Z</startTime>
-  </reportList>
-  <requestId>B7E9A79C-DE1B-4398-845F-D654FC0958BD</requestId>
-</DescribeDiagnosticReportListResponse>
-
+	  <reportList>
+		    <diagnosticTime>2018-01-17T12:46:09Z</diagnosticTime>
+		    <downloadURL>http://rdsreport-hzi-v2.oss-cn-hangzhou-i.aliyuncs.com/xxxxx</downloadURL>
+		    <endTime>2018-01-10T15:31:00Z</endTime>
+		    <score>100</score>
+		    <startTime>2018-01-10T15:30:00Z</startTime>
+	  </reportList>
+	  <requestId>B7E9A79C-DE1B-4398-845F-D654FC0958BD</requestId></DescribeDiagnosticReportListResponse>
 ```
 
 `JSON` 格式
@@ -99,5 +97,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDiagnosticReportList
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
