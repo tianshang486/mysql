@@ -27,7 +27,7 @@
 -   **LogBackupPolicy**：日志备份。
 
  |
-|PreferredBackupTime|String|否|00:00Z-01:00Z|执行备份任务的时间。格式：*yyyy-MM-dd*T*HH:mm:ss*Z（UTC时间）。
+|PreferredBackupTime|String|否|00:00Z-01:00Z|执行备份任务的时间。格式：*HH:mm*Z-*HH:mm*Z（UTC时间）。
 
  **说明：** **BackupPolicyMode**为**DataBackupPolicy**时，该参数必传。
 
