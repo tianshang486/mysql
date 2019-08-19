@@ -14,5 +14,5 @@
 
 The following figure shows a trajectory object.
 
-![](images/38819_en-US.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/124633/156620876438819_en-US.png)
 
