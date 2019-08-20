@@ -8,7 +8,7 @@ The public IP address of your computer dynamically changes, therefore the IP add
 
 **Precautions**
 
-If the public IP address of your computer changes and the connection to the RDS instance is established in a production environment, we recommend that you use a private network connection instead or add an appropriate CIDR block to the IP address whitelist of the RDS instance. This helps to guarantee a stable connection despite changes to the public IP address of your computer.
+If the public IP address of your computer changes and the established connection to the RDS instance is used in a production environment, we recommend that you use a private network connection instead or add an appropriate CIDR block to the IP address whitelist of the RDS instance. This helps to guarantee a stable connection despite changes to the public IP address of your computer.
 
 **Procedure**
 
@@ -16,7 +16,7 @@ If the public IP address of your computer changes and the connection to the RDS 
 
     **Note:** The IP address 0.0.0.0/0 indicates that all IP addresses are allowed to access the RDS instance.
 
-2.  Connect your computer to the RDS instance. For more information, see [Connect to an RDS for SQL Server instance](../../../../intl.en-US/Quick Start for SQL Server/Connect to an RDS for SQL Server instance.md#).
+2.  Use a client to connect your computer to the RDS instance. For more information, see [Connect to an RDS for SQL Server instance](../../../../intl.en-US/Quick Start for SQL Server/Connect to an RDS for SQL Server instance.md#).
 3.  Run the following commands to query the IP address of your computer:
 
     ``` {#codeblock_ti5_zct_8m4 .language-sql}
@@ -36,7 +36,7 @@ You want to obtain all IP addresses that are connected to the RDS instance, or y
 **Procedure**
 
 1.  Add the IP address 0.0.0.0/0 to the IP address whitelist of the RDS instance. For more information, see[Configure a whitelist](../../../../intl.en-US/Quick Start for SQL Server/Initial configuration/Configure a whitelist.md#).
-2.  Connect your computer to the RDS instance.
+2.  Use a client to connect your computer to the RDS instance.
 3.  Run the following commands to query all IP addresses that are connected to the RDS instance.
 
     ``` {#codeblock_5dn_gpk_dzw .language-sql}
