@@ -27,7 +27,7 @@ If the public IP address of your computer changes and the established connection
 
 4.  Delete the IP address 0.0.0.0/0 that you added to the IP address whitelist in Step **1**, and add the real outbound IP address of your computer to the IP address whitelist.
 
-## Obtain all IP addresses that are connected to an RDS instance {#section_vsk_1ym_1gb .section}
+## Obtain all IP addresses connected to an RDS instance {#section_vsk_1ym_1gb .section}
 
 **Problem description**
 
