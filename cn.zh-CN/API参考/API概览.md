@@ -2,7 +2,7 @@
 
 云数据库 MySQL 版提供以下相关API接口。
 
-## 实例管理 {#section_w6r_gxs_y5c .section}
+## 实例管理 {#section_hta_9zc_cel .section}
 
 |API|描述|
 |---|--|
@@ -27,7 +27,7 @@
 |[CreateReadOnlyDBInstance](cn.zh-CN/API参考/实例管理/CreateReadOnlyDBInstance.md)|调用CreateReadOnlyDBInstance接口为某个实例创建一个只读实例。|
 |[ModifyDBInstanceAutoUpgradeMinorVersion](cn.zh-CN/API参考/实例管理/ModifyDBInstanceAutoUpgradeMinorVersion.md)|调用ModifyDBInstanceAutoUpgradeMinorVersion接口修改RDS实例升级小版本的方式。|
 
-## 历史事件 {#section_g1w_pyo_k0c .section}
+## 历史事件 {#section_0se_skl_nkx .section}
 
 |API|描述|
 |---|--|
@@ -35,14 +35,14 @@
 |[DescribeActionEventPolicy](cn.zh-CN/API参考/历史事件/DescribeActionEventPolicy.md)|调用DescribeActionEventPolicy接口查看RDS历史事件功能开启情况。|
 |[ModifyActionEventPolicy](cn.zh-CN/API参考/历史事件/ModifyActionEventPolicy.md)|调用ModifyActionEventPolicy接口开启或关闭RDS历史事件功能。|
 
-## CloudDBA数据库性能优化 {#section_glr_sqt_sa3 .section}
+## CloudDBA数据库性能优化 {#section_zl3_hfa_yih .section}
 
 |API|描述|
 |---|--|
 |[CreateDiagnosticReport](cn.zh-CN/API参考/CloudDBA数据库性能优化/CreateDiagnosticReport.md)|调用CreateDiagnosticReport接口创建诊断报告。|
 |[DescribeDiagnosticReportList](cn.zh-CN/API参考/CloudDBA数据库性能优化/DescribeDiagnosticReportList.md)|调用DescribeDiagnosticReportList接口获取诊断报告列表。|
 
-## 数据库管理 {#section_vwy_vwz_poc .section}
+## 数据库管理 {#section_xzv_zw7_yto .section}
 
 |API|描述|
 |---|--|
@@ -55,7 +55,7 @@
 |[CopyDatabaseBetweenInstances](cn.zh-CN/API参考/数据库管理/CopyDatabaseBetweenInstances.md)|调用CopyDatabaseBetweenInstances接口在实例间复制数据库。|
 |[DescribeCollationTimeZones](cn.zh-CN/API参考/数据库管理/DescribeCollationTimeZones.md)|调用DescribeCollationTimeZones接口查看支持的字符集排序规则和时区。|
 
-## 数据库代理 {#section_48c_qog_xks .section}
+## 数据库代理 {#section_kbm_5uw_kow .section}
 
 |API|描述|
 |---|--|
@@ -67,7 +67,7 @@
 |[ModifyReadWriteSplittingConnection](cn.zh-CN/API参考/数据库代理/ModifyReadWriteSplittingConnection.md)|调用ModifyReadWriteSplittingConnection接口修改读写分离链路的延迟阈值和各个实例的读权重。|
 |[ReleaseReadWriteSplittingConnection](cn.zh-CN/API参考/数据库代理/ReleaseReadWriteSplittingConnection.md)|调用ReleaseReadWriteSplittingConnection接口释放读写分离地址。|
 
-## 账号管理 {#section_l1t_ynm_8e4 .section}
+## 账号管理 {#section_9g4_pbk_ppl .section}
 
 |API|描述|
 |---|--|
@@ -80,7 +80,7 @@
 |[ResetAccountPassword](cn.zh-CN/API参考/账号管理/ResetAccountPassword.md)|调用ResetAccountPassword接口重置账号密码。|
 |[ResetAccount](cn.zh-CN/API参考/账号管理/ResetAccount.md)|调用ResetAccount接口重置高权限账号的权限。|
 
-## 安全管理 {#section_5f0_6ed_ele .section}
+## 安全管理 {#section_umk_xaw_eoy .section}
 
 |API|描述|
 |---|--|
@@ -95,7 +95,7 @@
 |[DescribeDTCSecurityIpHostsForSQLServer](cn.zh-CN/API参考/安全管理/DescribeDTCSecurityIpHostsForSQLServer.md)|调用DescribeDTCSecurityIpHostsForSQLServer接口查询RDS实例的分布式事务白名单信息。|
 |[ModifyDTCSecurityIpHostsForSQLServer](cn.zh-CN/API参考/安全管理/ModifyDTCSecurityIpHostsForSQLServer.md)|调用ModifyDTCSecurityIpHostsForSQLServer接口设置分布式事务白名单。|
 
-## 网络管理 {#section_g8m_ven_wfy .section}
+## 网络管理 {#section_iox_1ac_sez .section}
 
 |API|描述|
 |---|--|
@@ -107,7 +107,7 @@
 |[ReleaseInstancePublicConnection](cn.zh-CN/API参考/网络管理/ReleaseInstancePublicConnection.md)|调用ReleaseInstancePublicConnection接口释放实例的外网连接地址。|
 |[SwitchDBInstanceNetType](cn.zh-CN/API参考/网络管理/SwitchDBInstanceNetType.md)|调用SwitchDBInstanceNetType接口切换内外网地址。|
 
-## 日志管理 {#section_wmf_kma_tcj .section}
+## 日志管理 {#section_bjb_6os_vdj .section}
 
 |API|描述|
 |---|--|
@@ -119,7 +119,7 @@
 |[DescribeSQLLogRecords](cn.zh-CN/API参考/日志管理/DescribeSQLLogRecords.md)|调用DescribeSQLLogRecords接口查询实例的SQL审计日志。|
 |[DescribeSQLLogFiles](cn.zh-CN/API参考/日志管理/DescribeSQLLogFiles.md)|调用DescribeSQLLogFiles接口查询SQL审计文件列表。|
 
-## 备份恢复 {#section_ck6_r2t_ekh .section}
+## 备份恢复 {#section_3fz_jci_h3v .section}
 
 |API|描述|
 |---|--|
@@ -135,8 +135,9 @@
 |[DescribeBackupTasks](cn.zh-CN/API参考/备份恢复/DescribeBackupTasks.md)|调用DescribeBackupTasks接口查询实例的备份任务列表。|
 |[DescribeLogBackupFiles](cn.zh-CN/API参考/备份恢复/DescribeLogBackupFiles.md)|调用DescribeLogBackupFiles接口查询实例的日志备份文件。|
 |[DescribeBackupDatabase](cn.zh-CN/API参考/备份恢复/DescribeBackupDatabase.md)|调用DescribeBackupDatabase接口查询备份集下的数据库列表，已下线。|
+|[RestoreTable](cn.zh-CN/API参考/备份恢复/RestoreTable.md)|调用RestoreTable接口恢复RDS实例的某个数据库或表到原实例上。|
 
-## 跨地域备份恢复 {#section_jw0_fq1_exq .section}
+## 跨地域备份恢复 {#section_flk_dup_75j .section}
 
 |API|描述|
 |---|--|
@@ -150,7 +151,7 @@
 |[DescribeAvailableRecoveryTime](cn.zh-CN/API参考/跨地域备份恢复/DescribeAvailableRecoveryTime.md)|调用DescribeAvailableRecoveryTime接口查询某跨地域备份文件可恢复哪个时间段的数据。|
 |[DescribeCrossRegionBackupDBInstance](cn.zh-CN/API参考/跨地域备份恢复/DescribeCrossRegionBackupDBInstance.md)|调用DescribeCrossRegionBackupDBInstance接口查询所选地域的哪些实例开启了跨地域备份，以及这些实例的跨地域备份设置。|
 
-## SQL Server备份文件上云 {#section_r21_ytt_jf2 .section}
+## SQL Server备份文件上云 {#section_k7d_5vq_3db .section}
 
 |API|描述|
 |---|--|
@@ -159,7 +160,7 @@
 |[DescribeOssDownloads](cn.zh-CN/API参考/SQL Server备份文件上云/DescribeOssDownloads.md)|调用DescribeOssDownloads接口查看备份数据上云任务的文件详情。|
 |[CreateOnlineDatabaseTask](cn.zh-CN/API参考/SQL Server备份文件上云/CreateOnlineDatabaseTask.md)|在备份数据上云时调用CreateOnlineDatabaseTask接口打开数据库。|
 
-## 监控管理 {#section_sm7_4jo_o7k .section}
+## 监控管理 {#section_1hi_s1k_rsb .section}
 
 |API|描述|
 |---|--|
@@ -168,7 +169,7 @@
 |[DescribeDBInstanceMonitor](cn.zh-CN/API参考/监控管理/DescribeDBInstanceMonitor.md)|调用DescribeDBInstanceMonitor接口查询监控频率。|
 |[ModifyDBInstanceMonitor](cn.zh-CN/API参考/监控管理/ModifyDBInstanceMonitor.md)|调用ModifyDBInstanceMonitor修改监控频率。|
 
-## 参数管理 {#section_nf7_ye0_unb .section}
+## 参数管理 {#section_xuu_pxj_dg4 .section}
 
 |API|描述|
 |---|--|
@@ -176,14 +177,14 @@
 |[DescribeParameters](cn.zh-CN/API参考/参数管理/DescribeParameters.md)|调用DescribeParameters接口查询实例当前的参数配置。|
 |[ModifyParameter](cn.zh-CN/API参考/参数管理/ModifyParameter.md)|调用ModifyParameter接口修改实例参数。|
 
-## 数据迁移 {#section_crv_agz_iir .section}
+## 数据迁移 {#section_9e6_kjv_li5 .section}
 
 |API|描述|
 |---|--|
 |[ImportDatabaseBetweenInstances](cn.zh-CN/API参考/数据迁移/ImportDatabaseBetweenInstances.md)|调用ImportDatabaseBetweenInstances接口从其它RDS实例迁入数据。|
 |[CancelImport](cn.zh-CN/API参考/数据迁移/CancelImport.md)|调用CancelImport接口用于取消RDS实例迁移任务。|
 
-## 标签管理 {#section_fpi_93b_pw8 .section}
+## 标签管理 {#section_asw_jue_7ng .section}
 
 |API|描述|
 |---|--|
