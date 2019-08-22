@@ -21,7 +21,7 @@ Procedure:
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target RDS instance is located.
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156635122437169_en-US.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156645484137169_en-US.png)
 
 3.  Find the target RDS instance and click its ID.
 4.  In the left-side navigation pane, click **Data Security**.
@@ -29,7 +29,7 @@ Procedure:
 
     **Note:** You can also click **Create Whitelist** to create a whitelist.
 
-    ![编辑默认白名单](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7948/15663512244139_en-US.png)
+    ![编辑默认白名单](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7948/15664548414139_en-US.png)
 
 6.  In the Edit Whitelist dialog box, enter IP addresses or CIDR blocks and click **OK**.
 
@@ -38,7 +38,7 @@ Procedure:
     -   If you click **Add Internal IP Addresses of ECS Instances**, the IP addresses of all ECS instances under your Alibaba Cloud account are displayed in the **Whitelist** field.
     **Note:** After you add IP addresses or CIDR blocks to the **default** whitelist, the system automatically deletes the default IP address 127.0.0.1.
 
-    ![修改默认白名单对话框](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15663512241795_en-US.png)
+    ![修改默认白名单对话框](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15664548411795_en-US.png)
 
 
 Common errors:
@@ -81,7 +81,7 @@ Procedure:
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target RDS instance is located.
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156635122437169_en-US.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156645484137169_en-US.png)
 
 3.  Find the target RDS instance and click its ID.
 4.  In the left-side navigation pane, click **Data Security**.
