@@ -1,20 +1,17 @@
 # ModifyDBInstanceTDE {#doc_api_Rds_ModifyDBInstanceTDE .reference}
 
-调用ModifyDBInstanceTDE接口修改实例数据加密状态。
+调用ModifyDBInstanceTDE接口开启RDS实例透明数据加密功能。
 
-该接口用于为实例设置[透明数据加密](~~33510~~)（Transparent Data Encryption，TDE）。
+透明数据加密TDE可对数据文件执行实时I/O加密和解密，数据在写入磁盘之前进行加密，从磁盘读入内存时进行解密。详情请参见[透明数据加密](~~33510~~)。
 
--   加密密钥由密钥管理服务（KMS）产生和管理，RDS不提供加密所需的密钥和证书。开通TDE后，用户如果要恢复数据到本地，需要先通过RDS解密数据；
--   开通TDE前需要先开通KMS。如果您未开通KMS，可在开通TDE过程中根据引导开通KMS；
--   对于SQL Server企业版，TDE开通后无法从实例级别关闭，只支持数据库级别的开启和关闭；
--   对于MySQL 5.6，TDE开通后无法关闭；
--   TDE开通后会增加CPU使用率。
+调用该接口时，实例必须满足以下条件，否则将操作失败：
 
-**说明：** 仅支持MySQL 5.6和SQL Server企业版实例。
+-   已开通KMS。如果您未开通KMS，可在开通TDE过程中根据引导开通KMS；
+-   实例类型为MySQL 5.6或SQL Server企业版实例。
 
-## 调试 {#apiExplorer .section}
+## 调试 {#api_explorer .section}
 
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=ModifyDBInstanceTDE)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=ModifyDBInstanceTDE&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -31,14 +28,24 @@
  |
 |DBName|String|否|testDB|想要开启TDE的数据库名称，可以一次输入多个，以英文逗号（,）分隔，最多传入50个。
 
- **说明：** 仅SQL Server企业版实例需要传入此参数。
+ **说明：** 仅SQL Server企业版实例可以传入此参数。
 
  |
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
+|EncryptionKey|String|否|749c1df7-xxxx-xxxx-xxxx-xxxxxxxxxxxx|自定义秘钥ID。
 
-## 返回参数 {#resultMapping .section}
+ **说明：** 仅MySQL实例可以传入此参数。
+
+ |
+|RoleArn|String|否|acs:ram::1406926xxxxx:role/aliyunrdsinstanceencryptiondefaultrole|角色的全局资源描述符，用来指定具体角色。详情请参见[RAM角色概览](~~93689~~)。
+
+ **说明：** 仅MySQL实例可以传入此参数。
+
+ |
+
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
@@ -65,9 +72,8 @@ http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceTDE
 
 ``` {#xml_return_success_demo}
 <ModifyDBInstanceTDEResponse>
-  <requestId>777C4593-8053-427B-99E2-105593277CAB</requestId>
+	  <requestId>777C4593-8053-427B-99E2-105593277CAB</requestId>
 </ModifyDBInstanceTDEResponse>
-
 ```
 
 `JSON` 格式
@@ -80,5 +86,5 @@ http(s)://rds.aliyuncs.com/?Action=ModifyDBInstanceTDE
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
 
