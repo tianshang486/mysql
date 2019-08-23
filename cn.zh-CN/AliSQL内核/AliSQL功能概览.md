@@ -33,7 +33,11 @@ AliSQL是阿里云深度定制的独立MySQL分支，除了社区版的所有功
 
  | InnoDB
 
+ X-Engine
+
  | InnoDB
+
+ X-Engine
 
  |
 |Oracle Compatibility|[Sequence Engine](cn.zh-CN/AliSQL内核/Sequence Engine.md#)|未提供|未提供|MySQL 8.0支持|MySQL 8.0支持|
@@ -42,13 +46,11 @@ AliSQL是阿里云深度定制的独立MySQL分支，除了社区版的所有功
 |[Query Analyzer](../../../../cn.zh-CN/RDS for MySQL 用户指南/SQL洞察.md#)|未提供|√|开发中|Performance Insight|
 |[Replication Monitor](../../../../cn.zh-CN/RDS for MySQL 用户指南/监控与报警/查看资源和引擎监控.md#)|未提供|√|开发中|√|
 |[Enhanced OS Metrics](../../../../cn.zh-CN/RDS for MySQL 用户指南/监控与报警/查看资源和引擎监控.md#)|未提供|未提供|未提供|Enhanced Monitor|
-|MySQL Enterprise Backup|[Hot backup for InnoDB](../../../../cn.zh-CN/RDS for MySQL 用户指南/备份数据/备份MySQL数据.md#)|未提供|√|√|√|
+|MySQL Enterprise Backup|[Hot backup for InnoDB](../../../../cn.zh-CN/RDS for MySQL 用户指南/数据库备份/备份MySQL数据.md#)|未提供|√|√|√|
 |[Full, Incremental, Partial, Optimistic Backups](../../../../cn.zh-CN/RDS for MySQL 用户指南/恢复数据/MySQL单库单表恢复.md#)|未提供|√|√|库表级备份|
 |[Full, Partial, Selective, Hot Selective restore](../../../../cn.zh-CN/RDS for MySQL 用户指南/恢复数据/MySQL单库单表恢复.md#)|未提供|√|√|库表级恢复|
-|[Encryption](../../../../cn.zh-CN/RDS for MySQL 用户指南/数据安全性/设置透明数据加密.md#)|未提供|√|TDE|TDE|
-|[Compression](../../../../cn.zh-CN/常见问题/备份__恢复__迁移/RDS for MySQL 物理备份文件恢复到自建数据库.md#)|√|√|Xtrabackup|Xtrabackup|
 |[Point-In-Time-Recovery](../../../../cn.zh-CN/RDS for MySQL 用户指南/恢复数据/恢复MySQL数据.md#)|未提供|√|√|√|
-|[Cross-Region Backup](../../../../cn.zh-CN/RDS for MySQL 用户指南/备份数据/跨地域备份.md#)|未提供|未提供|未提供|跨地域备份|
+|[Cross-Region Backup](../../../../cn.zh-CN/RDS for MySQL 用户指南/数据库备份/跨地域备份.md#)|未提供|未提供|未提供|跨地域备份|
 |[Recycle bin](cn.zh-CN/AliSQL内核/Recycle Bin.md#)|未提供|未提供|MySQL 8.0支持|MySQL 8.0支持|
 |[Flashback](../../../../cn.zh-CN/RDS for MySQL 用户指南/恢复数据/恢复MySQL数据.md#)|未提供|未提供|√|√|
 |MySQL Enterprise Security|[Enterprise TDE](../../../../cn.zh-CN/RDS for MySQL 用户指南/数据安全性/设置透明数据加密.md#)|本地秘钥替换|√|BYOK TDE，Key Rotating|BYOK TDE，Key Rotating|
@@ -57,18 +59,14 @@ AliSQL是阿里云深度定制的独立MySQL分支，除了社区版的所有功
 |[Enterprise Audit](../../../../cn.zh-CN/RDS for MySQL 用户指南/SQL洞察.md#)|未提供|√|SQL洞察|SQL洞察|
 |国内安全加密算法SM4|未提供|未提供|√|√|
 |MySQL Enterprise Scalability|[Thread Pool](cn.zh-CN/AliSQL内核/Thread Pool.md#)|未提供|√|MySQL 8.0支持|MySQL 8.0支持|
-|[Enhanced Parallel Query](../../../../cn.zh-CN/RDS for MySQL 快速入门/扩展实例/只读实例/MySQL只读实例简介.md#)|未提供|未提供|只读实例|只读实例|
 |[Enterprise Readonly Request Extention](../../../../cn.zh-CN/RDS for MySQL 快速入门/扩展实例/只读实例/MySQL只读实例简介.md#)|未提供|未提供|√|只读实例|
-|MySQL Enterprise Reliability|[Zero Data Loss](cn.zh-CN/云数据库RDS简介/产品系列/三节点企业版.md#)|未提供|未提供|XDB，RPO=0|三节点企业版|
-|[SQL Outline](cn.zh-CN/AliSQL内核/Statement Outline.md#)|未提供|未提供|固定执行计划|固定执行计划|
-|[Hot Massive Update](../../../../cn.zh-CN/RDS for MySQL 用户指南/实例管理/升级内核小版本.md#)|未提供|未提供|秒杀补丁|秒杀补丁|
-|[Hot SQL Limit](cn.zh-CN/AliSQL内核/Statement Concurrency Control.md#)|未提供|未提供|SQL限流|SQL限流|
-|[Hot SQL Firewall](cn.zh-CN/云数据库RDS简介/产品优势/高安全性.md#)|未提供|未提供|SQL防火墙|SQL防火墙|
-|MySQL Enterprise High-Availability|[Enterprise Automatic Failover Switch](cn.zh-CN/云数据库RDS简介/产品优势/灾备设计.md#)|未提供|未提供|需要第三方HA机制|√|
-|[Flashback Standby](cn.zh-CN/云数据库RDS简介/产品优势/灾备设计.md#)|未提供|未提供|√|快速搭建备库|
-|Parallel Replication|√|√|√|√|
-|Group Replication|√|√|√|√|
-|[InnoDB Cluster](cn.zh-CN/云数据库RDS简介/产品系列/三节点企业版.md#)|√|√|XDB，RPO=0|三节点企业版|
+|MySQL Enterprise Reliability|[Zero Data Loss](cn.zh-CN/云数据库RDS简介/产品系列/三节点企业版.md#)|未提供|未提供|√|三节点企业版|
+|[SQL Outline](cn.zh-CN/AliSQL内核/Statement Outline.md#)|未提供|未提供|√|√|
+|[Hot Massive Update](../../../../cn.zh-CN/RDS for MySQL 用户指南/实例管理/升级内核小版本.md#)|未提供|未提供|√|√|
+|[Hot SQL Limit](cn.zh-CN/AliSQL内核/Statement Concurrency Control.md#)|未提供|未提供|√|√|
+|[Hot SQL Firewall](cn.zh-CN/云数据库RDS简介/产品优势/高安全性.md#)|未提供|未提供|√|√|
+|MySQL Enterprise High-Availability|[Enterprise Automatic Failover Switch](cn.zh-CN/云数据库RDS简介/产品优势/灾备设计.md#)|未提供|未提供|需要第三方HA机制|高可用版|
+|[InnoDB Cluster](cn.zh-CN/云数据库RDS简介/产品系列/三节点企业版.md#)|√|√|√|三节点企业版|
 |[Multi-Source Replication](../../../../cn.zh-CN/RDS for MySQL 快速入门/扩展实例/只读实例/MySQL只读实例简介.md#)|√|√|√|只读实例高可用|
 |[Cross-Region Standby](../../../../cn.zh-CN/RDS for MySQL 快速入门/扩展实例/灾备实例.md#)|未提供|未提供|未提供|灾备实例|
 
