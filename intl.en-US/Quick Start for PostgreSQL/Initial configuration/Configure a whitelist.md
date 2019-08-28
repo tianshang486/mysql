@@ -24,7 +24,7 @@ We recommend that you periodically check and adjust your whitelists to maintain 
 1.  Log on to the [PostgreSQL console](https://postgresql.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target RDS instance is located.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156698595949667_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156698652449667_en-US.png)
 
 3.  Find the target RDS instance and click the instance ID.
 4.  In the left-side navigation pane, choose **Data Security** \> **Whitelist Configuration**.
@@ -32,7 +32,7 @@ We recommend that you periodically check and adjust your whitelists to maintain 
 
     **Note:** You can also click **Create Whitelist** to create a whitelist.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7848/156698596049689_en-US.png)
+    ![编辑白名单-点击编辑按钮](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7848/156698652449689_en-US.png)
 
 6.  In the Edit Whitelist dialog box, enter IP addresses or CIDR blocks and click **OK**. Detailed rules are as follows:
 
@@ -41,7 +41,7 @@ We recommend that you periodically check and adjust your whitelists to maintain 
     -   If you select **Load Internal IP** for **Creation Method**, then you can select an IP address from the **Load Internal IP** drop-down list.
     **Note:** After you add IP addresses or CIDR blocks to the **default** whitelist, the system automatically deletes the default IP address **127.0.0.1**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7848/156698596049771_en-US.png)
+    ![创建白名单](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7848/156698652449771_en-US.png)
 
 
 ## PostgreSQL 10 High-availability Edition \(with local SSDs\), PostgreSQL 10 Basic Edition, or PostgreSQL 9.4 {#section_wyv_ws4_ydb .section}
@@ -53,16 +53,16 @@ We recommend that you periodically check and adjust your whitelists to maintain 
 -   If you attempt to connect the RDS instance to DMS without adding the IP address of DMS to a whitelist of the RDS instance, the system displays a message, stating that you can connect to DMS only after you add the IP address of DMS to a whitelist of the RDS instance.
 -   Before configuring a whitelist, you must confirm which network isolation mode the RDS instance works in. Then you can decide which operations you must take accordingly.
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156698596035435_en-US.png)
+![白名单设置-1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156698652435435_en-US.png)
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156698596035436_en-US.png)
+![白名单设置-2](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156698652535436_en-US.png)
 
 **Configure an enhanced whitelist**
 
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target RDS instance is located.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156698595949667_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156698652449667_en-US.png)
 
 3.  Find the target RDS instance and click the instance ID.
 4.  In the left-side navigation pane, click **Data Security**.
@@ -75,7 +75,7 @@ We recommend that you periodically check and adjust your whitelists to maintain 
 
     -   If you want to connect the RDS instance to an ECS instance through a private IP address \(on a VPC or classic network\), make sure that the RDS instance and ECS instance have the same network type. If their network types are different, they cannot communicate. For more information, see [Set network type](../intl.en-US/User Guide/Instance management/Set network type.md#).
     -   You can also click **Create Whitelist** to create a whitelist. In the displayed dialog box, you can select the **VPC** or **Classic Network/Public IP** network type.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156698596035445_en-US.png)
+    ![默认经典网络白名单](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/156698652535445_en-US.png)
 
 6.  In the displayed dialog box, enter IP addresses or CIDR blocks and click **OK**. Detailed rules are as follows,
 
@@ -84,7 +84,7 @@ We recommend that you periodically check and adjust your whitelists to maintain 
     -   If you click **Add Internal IP Addresses of ECS Instances**, then the IP addresses of all ECS instances under your Alibaba Cloud account are displayed in the **Whitelist** field.
     **Note:** After you add IP addresses or CIDR blocks to the **default** whitelist, the system automatically deletes the default IP address 127.0.0.1.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15669859601795_en-US.png)
+    ![编辑白名单](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15669865251795_en-US.png)
 
 
 **Configure a standard whitelist**
@@ -92,7 +92,7 @@ We recommend that you periodically check and adjust your whitelists to maintain 
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target RDS instance is located.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156698595949667_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156698652449667_en-US.png)
 
 3.  Find the target RDS instance and click the instance ID.
 4.  In the left-side navigation pane, click **Data Security**.
@@ -100,7 +100,7 @@ We recommend that you periodically check and adjust your whitelists to maintain 
 
     **Note:** You can also click **Create Whitelist** to create a whitelist.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15669859611794_en-US.png)
+    ![编辑白名单-编辑按钮](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15669865251794_en-US.png)
 
 6.  In the Edit Whitelist dialog box, enter IP addresses or CIDR blocks and click **OK**. Detailed rules are as follows,
 
@@ -109,7 +109,7 @@ We recommend that you periodically check and adjust your whitelists to maintain 
     -   If you click **Add Internal IP Addresses of ECS Instances**, the IP addresses of all ECS instances under your Alibaba Cloud account are displayed in the **Whitelist** field.
     **Note:** After you add IP addresses or CIDR blocks to the **default** whitelist, the system automatically deletes the default IP address **127.0.0.1**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15669859601795_en-US.png)
+    ![编辑白名单](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7816/15669865251795_en-US.png)
 
 
 ## Common configuration errors {#section_yfw_d16_fm2 .section}
@@ -150,7 +150,7 @@ For more information, see [Create a security group](https://www.alibabacloud.com
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target RDS instance is located.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156698595949667_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7846/156698652449667_en-US.png)
 
 3.  Find the target RDS instance and click the instance ID.
 4.  In the left-side navigation pane, click **Data Security**.
