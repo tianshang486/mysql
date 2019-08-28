@@ -23,24 +23,24 @@ The DB engine versions and editions that support SSL encryption are as follows:
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target RDS instance is located.
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156698853037169_en-US.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156698913337169_en-US.png)
 
 3.  Find the target RDS instance and click the instance ID.
 4.  In the left-side navigation pane, click **Data Security**.
 5.  Click the **SSL Encryption** tab.
 6.  Click the switch next to **Disabled** in the **SSL Encryption** parameter.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15669885304147_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15669891344147_en-US.png)
 
 7.  In the Configure SSL dialog box, select the endpoint for which you want to enable SSL encryption, then click **OK**.
 
     **Note:** You can choose to encrypt the private or public endpoint, but note that you can encrypt only one endpoint.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15669885304148_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15669891344148_en-US.png)
 
 8.  Click **Download CA Certificate** to download the SSL CA certificate files in a compressed package.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15669885304149_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15669891344149_en-US.png)
 
     The compressed package consists of the following three files:
 
@@ -71,27 +71,27 @@ After SSL encryption is enabled, you must configure the SSL CA certificate for y
 3.  Select If avaliable from the **Use SSL** drop-down list.
 4.  In the **SSL CA File** field, click .... Then, select the .pem file.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15669885304150_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/15669891344150_en-US.png)
 
 
 ## Renew the validity period of the SSL CA certificate {#section_q09_pr3_6zz .section}
 
 **Note:** **This operation** causes your RDS instance to restart. You must make proper service arrangements before this operation.
 
-![更新证书有效期](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/156698853045367_en-US.png)
+![更新证书有效期](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7949/156698913445367_en-US.png)
 
 ## Disable SSL encryption {#section_374_d4f_5si .section}
 
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target RDS instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156698853036543_en-US.png)
+    ![选择地域](../DNmysql1824527/../DNMYSQ1820581/images/36543_en-US.png)
 
 3.  Find the target RDS instance and click the instance ID.
 4.  In the left-side navigation pane, click **Data Security**.
 5.  Click the **SSL Encryption** tab.
 6.  Click the switch next to **Enabled** in the **SSL Encryption** parameter. In the displayed Disable SSL Encryption dialog box, click **OK**.
 
-    ![关闭SSL加密](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41826/156698853057405_en-US.png)
+    ![关闭SSL加密](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41826/156698913457405_en-US.png)
 
 
