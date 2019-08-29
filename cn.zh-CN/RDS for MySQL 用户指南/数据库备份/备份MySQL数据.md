@@ -54,7 +54,7 @@
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156637332336543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156704987136543_zh-CN.png)
 
 3.  单击目标实例的ID，进入基本信息页面。
 4.  在菜单中选择**备份恢复**。
@@ -76,8 +76,9 @@
  **说明：** MySQL 5.7 SSD云盘（基础版）的备份文件保存7天，不可修改。
 
  |
+    |单库单表|通过备份指定恢复误删的数据库或表。默认为开启，无法关闭。仅MySQL 5.6高可用版和MySQL 5.7 高可用版（本地SSD盘）实例支持单库单表恢复。详情请参见[MySQL单库单表恢复](cn.zh-CN/RDS for MySQL 用户指南/数据库恢复/MySQL单库单表恢复.md#)。|
 
-    ![备份设置](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156637332337578_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156704987158453_zh-CN.png)
 
 
 ## 手动备份MySQL数据 {#section_yvd_yk4_ydb .section}
@@ -87,17 +88,17 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择目标实例所在地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156637332336543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156704987136543_zh-CN.png)
 
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 5.  设置好备份方式、备份策略，单击**确定**。
 
-    ![物理备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156637332440345_zh-CN.png)
+    ![物理备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156704987140345_zh-CN.png)
 
     **说明：** 如果是**逻辑备份** \> **单库备份**，请在左侧选择要备份的数据库，单击**\>**将要备份的数据库加入列表。若您还没有数据库，请先[创建数据库](../cn.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md#)。
 
-    ![单库逻辑备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156637332440344_zh-CN.png)
+    ![单库逻辑备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67073/156704987140344_zh-CN.png)
 
 
 ## 常见问题 {#section_h54_lrx_pgb .section}
@@ -118,7 +119,7 @@
 ## 相关文档 {#section_wfb_2ft_cgb .section}
 
 -   [下载数据备份和日志备份](cn.zh-CN/RDS for MySQL 用户指南/数据库备份/下载数据备份和日志备份.md#)
--   [恢复MySQL数据](cn.zh-CN/RDS for MySQL 用户指南/恢复数据/恢复MySQL数据.md#)
+-   [恢复MySQL数据](cn.zh-CN/RDS for MySQL 用户指南/数据库恢复/恢复MySQL数据.md#)
 
 ## 相关API {#section_hcn_555_jgb .section}
 
