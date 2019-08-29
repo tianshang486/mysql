@@ -8,7 +8,7 @@ This topic describes how to grant backup file download permissions to a RAM user
 2.  In the left-side navigation pane, choose **Permissions** \> **Policies**.
 3.  Click **Create Policy** and set the parameters.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/79847/156704660234182_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/79847/156704675434182_en-US.png)
 
     The policy content is as follows:
 
@@ -32,7 +32,7 @@ This topic describes how to grant backup file download permissions to a RAM user
 5.  In the left-side navigation pane, choose **Permissions** \> **Grants**.
 6.  Click **Grant Permission** and add the new permission policy to the target RAM user.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/79847/156704660234183_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/79847/156704675434183_en-US.png)
 
 7.  Click **OK**.
 
