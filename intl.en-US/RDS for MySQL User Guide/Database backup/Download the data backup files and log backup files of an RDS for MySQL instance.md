@@ -8,14 +8,14 @@ An RDS for MySQL instance with SSDs does not support the download of data backup
 
 ## Limits {#section_prg_zhx_wfb .section}
 
-A RAM user who has only the read-only permissions cannot download backup files. You can add the required permissions to a RAM user in the RAM console. For more information, see [Grant backup file download permissions to a RAM user with only read-only permissions](intl.en-US//Grant backup file download permissions to a RAM user with only read-only permissions.md#).
+A RAM user who has only the read-only permissions cannot download backup files. You can add the required permissions to a RAM user in the RAM console. For more information, see [Grant backup file download permissions to a RAM user with only read-only permissions](intl.en-US/RDS for MySQL User Guide/Appendixes/Grant backup file download permissions to a RAM user with only read-only permissions.md#).
 
 |DB engine|Data backup download|Log backup download|
 |---------|--------------------|-------------------|
 |MySQL| -   MySQL 5.5/5.6/5.7/8.0 \(with local SSDs\): support the download of full physical data backup files and logical data backup files.
 -   MySQL 5.7/8.0 Basic/High-availability Edition \(with ESSDs/SSDs\): do not support the download of data backup files.
 
- |All versions support the download of log backup files. **Note:** For more information about binary logs, see [How do I use the mysqlbinlog command to view the binary logs of an RDS for MySQL instance?](../intl.en-US/FAQs/Data backup__recovery/How do I use the mysqlbinlog command to view the binary logs of an RDS for MySQL instance?.md#).
+ |All versions support the download of log backup files. **Note:** For more information about binary logs, see [How do I use the mysqlbinlog command to view the binary logs of an RDS for MySQL instance?](../intl.en-US/FAQs/Data backup__recovery/How do I use the mysqlbinlog command to view the binary logs of an RDS for MySQL instance?.md#)
 
  |
 
@@ -24,7 +24,7 @@ A RAM user who has only the read-only permissions cannot download backup files. 
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  In the upper-left corner, select the region where the target RDS instance is located.
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156697268736543_en-US.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156704880836543_en-US.png)
 
 3.  Find the target RDS instance and click the instance ID.
 4.  In the left-side navigation pane, click **Backup and Restoration**.
@@ -43,7 +43,7 @@ A RAM user who has only the read-only permissions cannot download backup files. 
         -   The start time of the log backup file must be later than the generation time of the selected data backup file and earlier than the time point from which you want to restore data.
 8.  In the Download Instance Backup Set or Download Binary Log dialog box, select a download method.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7966/15669726926231_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7966/15670488086231_en-US.png)
 
     |Download method|Description|
     |---------------|-----------|
@@ -67,7 +67,7 @@ A RAM user who has only the read-only permissions cannot download backup files. 
 
     RDS for MySQL works in the master/slave HA architecture. Therefore, both the master and slave instances generate binary logs. You can distinguish between two binary log files that have the same name based on their **Instance ID**s. To view the IDs of the master and slave instances, you can go to the Service Availability page.
 
-    ![实例编号](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67074/156697269238570_en-US.png)
+    ![实例编号](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/67074/156704880838570_en-US.png)
 
 2.  What can I use the downloaded data and log backup files for?
 
