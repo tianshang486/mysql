@@ -1,15 +1,12 @@
-# DescribeDatabases {#doc_api_1063920 .reference}
+# DescribeDatabases {#doc_api_Rds_DescribeDatabases .reference}
 
 调用DescribeDatabases接口查看实例下的数据库信息。
 
-**说明：** 
+**说明：** 如果请求参数错误，返回数据为空。
 
--   如果请求参数错误，返回数据为空；
--   该接口不支持PostgreSQL、PPAS实例。
+## 调试 {#api_explorer .section}
 
-## 调试 {#apiExplorer .section}
-
-前往【[API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeDatabases)】在线调试，API Explorer 提供在线调用 API、动态生成 SDK Example 代码和快速检索接口等能力，能显著降低使用云 API 的难度，强烈推荐使用。
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeDatabases&type=RPC&version=2014-08-15)
 
 ## 请求参数 {#parameters .section}
 
@@ -49,53 +46,45 @@
 
  |
 
-## 返回参数 {#resultMapping .section}
+## 返回数据 {#resultMapping .section}
 
 |名称|类型|示例值|描述|
 |--|--|---|--|
 |Databases| | |数据库信息列表。
 
  |
-|└DBName|String|testDB01|数据库名称。
+|DBName|String|testDB01|数据库名称。
 
  |
-|└DBInstanceId|String|rm-uf6wjk5xxxxxxx|数据库所属实例ID。
+|DBInstanceId|String|rm-uf6wjk5xxxxxxx|数据库所属实例ID。
 
  |
-|└Engine|String|MySQL|数据库实例类型。
+|Engine|String|MySQL|数据库实例类型。
 
  |
-|└DBStatus|String|Creating|数据库状态，取值：
+|DBStatus|String|Creating|数据库状态，取值：
 
  -   **Creating**：创建中；
 -   **Running**：使用中；
 -   **Deleting**：删除中。
 
  |
-|└CharacterSetName|String|utf8|字符集，取值：
-
- -   MySQL/MariaDB实例：**utf8、gbk、latin1、utf8mb4**；
--   SQL Server实例：**Chinese\_PRC\_CI\_AS、Chinese\_PRC\_CS\_AS、SQL\_Latin1\_General\_CP1\_CI\_AS、SQL\_Latin1\_General\_CP1\_CS\_AS、Chinese\_PRC\_BIN**。
+|CharacterSetName|String|utf8|字符集。
 
  |
-|└DBDescription|String|测试数据库|数据库描述。
+|DBDescription|String|测试数据库|数据库描述。
 
  |
-|└Accounts| | |拥有数据库相关权限的账号信息。
+|Accounts| | |拥有数据库相关权限的账号信息。
 
  |
-|└Account|String|test|账号名称。
+|Account|String|test|账号名称。
 
  |
-|└AccountPrivilege|String|DMLOnly|账号对该数据库拥有的权限，取值：
-
- -   **ReadWrite**：读写权限；
--   **ReadOnly**：只读权限；
--   **DDLOnly**：仅DDL权限；
--   **DMLOnly**：只DML权限。
+|AccountPrivilege|String|DMLOnly|账号对该数据库拥有的权限。
 
  |
-|└AccountPrivilegeDetail|String|SELECT|账号对该数据库具有的权限。
+|AccountPrivilegeDetail|String|SELECT|账号对该数据库具有的权限。
 
  |
 |RequestId|String|2603CA96-B17D-4903-BC04-61A2C829CD94|请求ID。
@@ -120,29 +109,27 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDatabases
 
 ``` {#xml_return_success_demo}
 <DescribeDatabasesResponse>
-  <RequestId>2603CA96-B17D-4903-BC04-61A2C829CD94</RequestId>
-  <Databases>
-    <Database>
-      <Engine>MySQL</Engine>
-      <CharacterSetName>utf8</CharacterSetName>
-      <DBStatus>Creating</DBStatus>
-      <DBDescription/>
-      <DBInstanceId>rdsaiiabnaiiabn</DBInstanceId>
-      <Accounts/>
-      <DBName>testdb</DBName>
-    </Database>
-    <Database>
-      <Engine>MySQL</Engine>
-      <CharacterSetName>gbk</CharacterSetName>
-      <DBStatus>Creating</DBStatus>
-      <DBDescription/>
-      <DBInstanceId>rdsaiiabnaiiabn</DBInstanceId>
-      <Accounts/>
-      <DBName>testdb2</DBName>
-    </Database>
-  </Databases>
-</DescribeDatabasesResponse>
-
+	  <RequestId>2603CA96-B17D-4903-BC04-61A2C829CD94</RequestId>
+	  <Databases>
+		    <Database>
+			      <Engine>MySQL</Engine>
+			      <CharacterSetName>utf8</CharacterSetName>
+			      <DBStatus>Creating</DBStatus>
+			      <DBDescription></DBDescription>
+			      <DBInstanceId>rdsaiiabnaiiabn</DBInstanceId>
+			      <Accounts></Accounts>
+			      <DBName>testdb</DBName>
+		    </Database>
+		    <Database>
+			      <Engine>MySQL</Engine>
+			      <CharacterSetName>gbk</CharacterSetName>
+			      <DBStatus>Creating</DBStatus>
+			      <DBDescription></DBDescription>
+			      <DBInstanceId>rdsaiiabnaiiabn</DBInstanceId>
+			      <Accounts></Accounts>
+			      <DBName>testdb2</DBName>
+		    </Database>
+	  </Databases></DescribeDatabasesResponse>
 ```
 
 `JSON` 格式
@@ -181,5 +168,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeDatabases
 
 ## 错误码 { .section}
 
-[查看本产品错误码](https://error-center.aliyun.com/status/product/Rds)
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 

@@ -2,10 +2,7 @@
 
 调用DescribeDatabases接口查看实例下的数据库信息。
 
-**说明：** 
-
--   如果请求参数错误，返回数据为空；
--   该接口不支持PostgreSQL、PPAS实例。
+**说明：** 如果请求参数错误，返回数据为空。
 
 ## 调试 {#api_explorer .section}
 
@@ -72,10 +69,7 @@
 -   **Deleting**：删除中。
 
  |
-|CharacterSetName|String|utf8|字符集，取值：
-
- -   MySQL/MariaDB实例：**utf8、gbk、latin1、utf8mb4**；
--   SQL Server实例：**Chinese\_PRC\_CI\_AS、Chinese\_PRC\_CS\_AS、SQL\_Latin1\_General\_CP1\_CI\_AS、SQL\_Latin1\_General\_CP1\_CS\_AS、Chinese\_PRC\_BIN**。
+|CharacterSetName|String|utf8|字符集。
 
  |
 |DBDescription|String|测试数据库|数据库描述。
@@ -87,12 +81,7 @@
 |Account|String|test|账号名称。
 
  |
-|AccountPrivilege|String|DMLOnly|账号对该数据库拥有的权限，取值：
-
- -   **ReadWrite**：读写权限；
--   **ReadOnly**：只读权限；
--   **DDLOnly**：仅DDL权限；
--   **DMLOnly**：只DML权限。
+|AccountPrivilege|String|DMLOnly|账号对该数据库拥有的权限。
 
  |
 |AccountPrivilegeDetail|String|SELECT|账号对该数据库具有的权限。
