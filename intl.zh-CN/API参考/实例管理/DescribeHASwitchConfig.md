@@ -1,0 +1,85 @@
+# DescribeHASwitchConfig {#doc_api_Rds_DescribeHASwitchConfig .reference}
+
+调用DescribeHASwitchConfig接口查看RDS实例主备自动切换设置。
+
+主备实例切换后原来的主实例会变成备实例。详情请参见[切换主备实例](~~96054~~)。
+
+调用该接口时，实例必须为高可用版。
+
+## 调试 {#api_explorer .section}
+
+[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=DescribeHASwitchConfig&type=RPC&version=2014-08-15)
+
+## 请求参数 {#parameters .section}
+
+|名称|类型|是否必选|示例值|描述|
+|--|--|----|---|--|
+|Action|String|是|DescribeHASwitchConfig|系统规定参数，取值：**DescribeHASwitchConfig**。
+
+ |
+|RegionId|String|是|cn-hangzhou|地域ID，可以通过接口[DescribeRegions](~~26243~~)查看地域ID。
+
+ |
+|DBInstanceId|String|是|rm-uf6wjk5xxxxxxxxxx|实例ID。
+
+ |
+|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
+
+ |
+
+## 返回数据 {#resultMapping .section}
+
+|名称|类型|示例值|描述|
+|--|--|---|--|
+|HAConfig|String|Manual|主备自动切换设置，取值：
+
+ -   **Auto**：出现故障时自动切换主备实例；
+-   **Manual**：已临时关闭自动切换。
+
+ |
+|ManualHATime|String|2019-08-29T15:00:00Z|临时关闭截止时间。
+
+ |
+|RequestId|String|4FDF4B79-2741-4C5F-8C76-4B953FC5C2B1|请求ID。
+
+ |
+
+## 示例 {#demo .section}
+
+请求示例
+
+``` {#request_demo}
+
+http(s)://rds.aliyuncs.com/?Action=DescribeHASwitchConfig
+&RegionId=cn-hangzhou
+&DBInstanceId=rm-uf6wjk5xxxxxxxxxx
+&<公共请求参数>
+
+```
+
+正常返回示例
+
+`XML` 格式
+
+``` {#xml_return_success_demo}
+<DescribeHASwitchConfigResponse>
+  <ManualHATime>2019-08-29T15:00:00Z</ManualHATime>
+	  <RequestId>4FDF4B79-2741-4C5F-8C76-4B953FC5C2B1</RequestId>
+	  <HAConfig>Manual</HAConfig>
+</DescribeHASwitchConfigResponse>
+```
+
+`JSON` 格式
+
+``` {#json_return_success_demo}
+{
+	"ManualHATime":"2019-08-29T15:00:00Z",
+	"RequestId":"4FDF4B79-2741-4C5F-8C76-4B953FC5C2B1",
+	"HAConfig":"Manual"
+}
+```
+
+## 错误码 { .section}
+
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
+
