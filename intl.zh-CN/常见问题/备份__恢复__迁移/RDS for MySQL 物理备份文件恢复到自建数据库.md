@@ -44,11 +44,11 @@
 
     **说明：** 如果没有**下载**按钮，请确认您的实例版本是否支持[下载物理备份文件](../../../../intl.zh-CN/用户指南/备份数据/下载数据备份和日志备份.md#)。
 
-    ![下载数据备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156635040247407_zh-CN.png)
+    ![下载数据备份](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156704635047407_zh-CN.png)
 
 8.  在实例备份文件下载窗口，单击**复制外网地址**，获取数据备份文件外网下载地址。
 
-    ![复制外网下载地址](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156635040247408_zh-CN.png)
+    ![复制外网下载地址](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156704635047408_zh-CN.png)
 
 9.  登录云服务器ECS。
 10. 执行如下命令，下载数据备份文件。
@@ -105,7 +105,7 @@
 
     命令执行成功后，系统会返回如下结果，其中蓝色字体为生成备份文件时RDS实例所包含的数据库。
 
-    ![查看解压文件](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156635040247410_zh-CN.jpg)
+    ![查看解压文件](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156704635047410_zh-CN.jpg)
 
 13. 执行如下命令，恢复解压好的备份文件。
 
@@ -116,7 +116,7 @@
 
     若系统返回如下类似结果，则说明备份文件已成功恢复到本地数据库。
 
-    ![恢复成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156635040247412_zh-CN.jpg)
+    ![恢复成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156704635047412_zh-CN.jpg)
 
     **说明：** 请确保您的Percona XtraBackup版本正确，MySQL 5.6及之前的版本需要安装 Percona XtraBackup 2.3，MySQL 5.7版本需要安装 Percona XtraBackup 2.4，MySQL 8.0版本需要安装 Percona XtraBackup 8.0。
 
@@ -172,8 +172,10 @@
     					
     ```
 
-    **说明：** 建议您参考[官方文档](https://dev.mysql.com/doc/refman/8.0/en/resetting-permissions.html)重置root账户的密码。
+    **说明：** 
 
+    -   如果提示没有找到mysqld\_safe，请确认您的数据库引擎是否为MySQL。
+    -   建议您参考[官方文档](https://dev.mysql.com/doc/refman/8.0/en/resetting-permissions.html)重置root账户的密码。
 17. 执行如下命令，登录MySQL数据库以验证进程启动成功。
 
     ``` {#codeblock_o16_aau_cpg}
@@ -183,6 +185,6 @@
 
     若系统返回如下结果，进程启动成功，则说明已成功执行参数注释和修改文件属主。
 
-    ![启动成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156635040347413_zh-CN.jpg)
+    ![启动成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8199/156704635047413_zh-CN.jpg)
 
 
