@@ -4,7 +4,7 @@
 
 调用该接口时，实例必须为如下版本：
 
--   MySQL所有版本；
+-   MySQL所有版本（MySQL 5.7基础版除外）；
 -   SQL Server 2008 R2；
 -   MariaDB 10.3。
 
