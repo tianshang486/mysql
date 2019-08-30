@@ -2,6 +2,56 @@
 
 This topic provides an overview of APIs provided by RDS for MySQL.
 
+## Instance management {#section_qoy_tra_wjr .section}
+
+|API|Description|
+|---|-----------|
+|[DestroyDBInstance](intl.en-US/API Reference/Instance management/DestroyDBInstance.md)|Used to destroy an RDS instance. This API has been deprecated.|
+|[ModifyDBInstanceDelayReplicationTime](intl.en-US/API Reference/Instance management/ModifyDBInstanceDelayReplicationTime.md)|Used to change the data replication delay time allowed for a read-only instance. This API has been deprecated.|
+|[CreateDBInstance](intl.en-US/API Reference/Instance management/CreateDBInstance.md)|Used to create an RDS instance.|
+|[DeleteDBInstance](intl.en-US/API Reference/Instance management/DeleteDBInstance.md)|Used to release an RDS instance.|
+|[RestartDBInstance](intl.en-US/API Reference/Instance management/RestartDBInstance.md)|Used to restart an RDS instance.|
+|[RenewInstance](intl.en-US/API Reference/Instance management/RenewInstance.md)|Used to manually renew an RDS instance.|
+|[DescribeDBInstanceAttribute](intl.en-US/API Reference/Instance management/DescribeDBInstanceAttribute.md)|Used to view details about an RDS instance.|
+|[DescribeDBInstances](intl.en-US/API Reference/Instance management/DescribeDBInstances.md)|Used to list all RDS instances or only the RDS instances authorized by RAM.|
+|[ModifyDBInstanceSpec](intl.en-US/API Reference/Instance management/ModifyDBInstanceSpec.md)|Used to change the type or storage space of an RDS instance \(including common instances and read-only instances, but excluding disaster recovery instances and temporary instances\).|
+|[DescribeRegions](intl.en-US/API Reference/Instance management/DescribeRegions.md)|Used to query the available RDS regions and zones.|
+|[DescribeDBInstanceHAConfig](intl.en-US/API Reference/Instance management/DescribeDBInstanceHAConfig.md)|Used to query the high availability mode and data replication mode of an RDS instance.|
+|[MigrateToOtherZone](intl.en-US/API Reference/Instance management/MigrateToOtherZone.md)|Used to migrate an RDS instance to a different zone.|
+|[PurgeDBInstanceLog](intl.en-US/API Reference/Instance management/PurgeDBInstanceLog.md)|Used to delete or compress the logs of an RDS instance.|
+|[UpgradeDBInstanceEngineVersion](intl.en-US/API Reference/Instance management/UpgradeDBInstanceEngineVersion.md)|Used to upgrade the database version of an RDS instance.|
+|[ModifyDBInstanceDescription](intl.en-US/API Reference/Instance management/ModifyDBInstanceDescription.md)|Used to modify the description of an RDS instance.|
+|[ModifyDBInstanceMaintainTime](intl.en-US/API Reference/Instance management/ModifyDBInstanceMaintainTime.md)|Used to change the maintenance window of an RDS instance.|
+|[ModifyDBInstanceHAConfig](intl.en-US/API Reference/Instance management/ModifyDBInstanceHAConfig.md)|Used to change the high availability mode and data replication mode of an RDS instance.|
+|[SwitchDBInstanceHA](intl.en-US/API Reference/Instance management/SwitchDBInstanceHA.md)|Used to switch between a master RDS instance and its slave RDS instance.|
+|[CreateReadOnlyDBInstance](intl.en-US/API Reference/Instance management/CreateReadOnlyDBInstance.md)|Used to create a read-only RDS instance for a master RDS instance.|
+|[ModifyDBInstanceAutoUpgradeMinorVersion](intl.en-US/API Reference/Instance management/ModifyDBInstanceAutoUpgradeMinorVersion.md)|Used to change the method of upgrading the minor version of an RDS instance.|
+
+## Database management {#section_d15_biz_jl6 .section}
+
+|API|Description|
+|---|-----------|
+|[ModifyCollationTimeZone](intl.en-US/API Reference/Database management/ModifyCollationTimeZone.md)|Used to change the character set sorting rule and time zone of the system library for an RDS instance. This API has been deprecated.|
+|[CreateDatabase](intl.en-US/API Reference/Database management/CreateDatabase.md)|Used to create a database under an RDS instance.|
+|[DeleteDatabase](intl.en-US/API Reference/Database management/DeleteDatabase.md)|Used to delete a database under an RDS instance.|
+|[DescribeDatabases](intl.en-US/API Reference/Database management/DescribeDatabases.md)|Used to view information about the databases under an RDS instance.|
+|[ModifyDBDescription](intl.en-US/API Reference/Database management/ModifyDBDescription.md)|Used to modify the description of a database.|
+|[CopyDatabase](intl.en-US/API Reference/Database management/CopyDatabase.md)|Used to replicate an RDS for SQL Server 2008 R2 instance. This API has been deprecated.|
+|[CopyDatabaseBetweenInstances](intl.en-US/API Reference/Database management/CopyDatabaseBetweenInstances.md)|Used to replicate databases between RDS instances.|
+|[DescribeCollationTimeZones](intl.en-US/API Reference/Database management/DescribeCollationTimeZones.md)|Used to view the available character set sorting rules and time zones.|
+
+## Database proxy {#section_lkr_lxi_ej7 .section}
+
+|API|Description|
+|---|-----------|
+|[ModifyDBInstanceConnectionMode](intl.en-US/API Reference/Read__Write splitting/ModifyDBInstanceConnectionMode.md)|Used to enable or disable the database proxy. This API has been deprecated.|
+|[ModifyDBInstanceProxyConfiguration](intl.en-US/API Reference/Read__Write splitting/ModifyDBInstanceProxyConfiguration.md)|Used to set the database proxy. This API has been deprecated.|
+|[DescribeDBInstanceProxyConfiguration](intl.en-US/API Reference/Read__Write splitting/DescribeDBInstanceProxyConfiguration.md)|Used to view the database proxy setting. This API has been deprecated.|
+|[AllocateReadWriteSplittingConnection](intl.en-US/API Reference/Read__Write splitting/AllocateReadWriteSplittingConnection.md)|Used to apply for a read/write splitting address.|
+|[CalculateDBInstanceWeight](intl.en-US/API Reference/Read__Write splitting/CalculateDBInstanceWeight.md)|Used to query the weight allocated to an RDS instance.|
+|[ModifyReadWriteSplittingConnection](intl.en-US/API Reference/Read__Write splitting/ModifyReadWriteSplittingConnection.md)|Used to change the delay threshold for connecting a read/write splitting link and the read weights allocated to a master RDS instance and each of its read-only instances.|
+|[ReleaseReadWriteSplittingConnection](intl.en-US/API Reference/Read__Write splitting/ReleaseReadWriteSplittingConnection.md)|Used to release a read/write splitting address.|
+
 ## Account management {#section_ssw_qum_cfa .section}
 
 |API|Description|
