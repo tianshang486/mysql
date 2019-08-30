@@ -2,7 +2,11 @@
 
 调用DescribeSlowLogs查看慢日志统计情况。
 
-**说明：** 该接口暂不支持SQL Server 2017集群版实例。
+调用该接口时，实例必须为如下版本：
+
+-   MySQL所有版本；
+-   SQL Server 2008 R2；
+-   MariaDB 10.3。
 
 ## 调试 {#api_explorer .section}
 
@@ -33,6 +37,8 @@
 -   **TotalQueryTimes**：总执行时间最多；
 -   **TotalLogicalReads**：总逻辑读最多；
 -   **TotalPhysicalReads**：总物理读最多。
+
+ **说明：** 仅SQL Server 2008 R2实例支持本参数。
 
  |
 |PageSize|Integer|否|30|每页记录数，取值：
@@ -218,5 +224,5 @@ http(s)://rds.aliyuncs.com/?Action=DescribeSlowLogs
 
 ## 错误码 { .section}
 
-访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
+访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
 
