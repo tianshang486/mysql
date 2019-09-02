@@ -25,28 +25,23 @@ This topic provides an overview of APIs provided by RDS for MySQL.
 |[ModifyDBInstanceHAConfig](intl.en-US/API Reference/Instance management/ModifyDBInstanceHAConfig.md)|Used to change the high availability mode and data replication mode of an RDS instance.|
 |[SwitchDBInstanceHA](intl.en-US/API Reference/Instance management/SwitchDBInstanceHA.md)|Used to switch between a master RDS instance and its slave RDS instance.|
 |[CreateReadOnlyDBInstance](intl.en-US/API Reference/Instance management/CreateReadOnlyDBInstance.md)|Used to create a read-only RDS instance for a master RDS instance.|
-|[ModifyDBInstanceAutoUpgradeMinorVersion](intl.en-US/API Reference/Instance management/ModifyDBInstanceAutoUpgradeMinorVersion.md)|Used to change the method of upgrading the minor version of an RDS instance.|
 
 ## Database management {#section_d15_biz_jl6 .section}
 
 |API|Description|
 |---|-----------|
-|[ModifyCollationTimeZone](intl.en-US/API Reference/Database management/ModifyCollationTimeZone.md)|Used to change the character set sorting rule and time zone of the system library for an RDS instance. This API has been deprecated.|
 |[CreateDatabase](intl.en-US/API Reference/Database management/CreateDatabase.md)|Used to create a database under an RDS instance.|
 |[DeleteDatabase](intl.en-US/API Reference/Database management/DeleteDatabase.md)|Used to delete a database under an RDS instance.|
 |[DescribeDatabases](intl.en-US/API Reference/Database management/DescribeDatabases.md)|Used to view information about the databases under an RDS instance.|
 |[ModifyDBDescription](intl.en-US/API Reference/Database management/ModifyDBDescription.md)|Used to modify the description of a database.|
 |[CopyDatabase](intl.en-US/API Reference/Database management/CopyDatabase.md)|Used to replicate an RDS for SQL Server 2008 R2 instance. This API has been deprecated.|
 |[CopyDatabaseBetweenInstances](intl.en-US/API Reference/Database management/CopyDatabaseBetweenInstances.md)|Used to replicate databases between RDS instances.|
-|[DescribeCollationTimeZones](intl.en-US/API Reference/Database management/DescribeCollationTimeZones.md)|Used to view the available character set sorting rules and time zones.|
 
 ## Database proxy {#section_lkr_lxi_ej7 .section}
 
 |API|Description|
 |---|-----------|
 |[ModifyDBInstanceConnectionMode](intl.en-US/API Reference/Read__Write splitting/ModifyDBInstanceConnectionMode.md)|Used to enable or disable the database proxy. This API has been deprecated.|
-|[ModifyDBInstanceProxyConfiguration](intl.en-US/API Reference/Read__Write splitting/ModifyDBInstanceProxyConfiguration.md)|Used to set the database proxy. This API has been deprecated.|
-|[DescribeDBInstanceProxyConfiguration](intl.en-US/API Reference/Read__Write splitting/DescribeDBInstanceProxyConfiguration.md)|Used to view the database proxy setting. This API has been deprecated.|
 |[AllocateReadWriteSplittingConnection](intl.en-US/API Reference/Read__Write splitting/AllocateReadWriteSplittingConnection.md)|Used to apply for a read/write splitting address.|
 |[CalculateDBInstanceWeight](intl.en-US/API Reference/Read__Write splitting/CalculateDBInstanceWeight.md)|Used to query the weight allocated to an RDS instance.|
 |[ModifyReadWriteSplittingConnection](intl.en-US/API Reference/Read__Write splitting/ModifyReadWriteSplittingConnection.md)|Used to change the delay threshold for connecting a read/write splitting link and the read weights allocated to a master RDS instance and each of its read-only instances.|
@@ -113,10 +108,8 @@ This topic provides an overview of APIs provided by RDS for MySQL.
 |[ModifyBackupPolicy](intl.en-US/API Reference/Backup and recovery/ModifyBackupPolicy.md)|Used to modify the backup settings of an RDS instance.|
 |[RestoreDBInstance](intl.en-US/API Reference/Backup and recovery/RestoreDBInstance.md)|Used to restore an RDS instance by using a backup set. The existing data in the RDS instance is overwritten by the backup set. This API has been deprecated.|
 |[DeleteBackup](intl.en-US/API Reference/Backup and recovery/DeleteBackup.md)|Used to delete the data backup files of an RDS instance.|
-|[RecoveryDBInstance](intl.en-US/API Reference/Backup and recovery/RecoveryDBInstance.md)|Used to restore the databases of an RDS instance.|
 |[DescribeBackupTasks](intl.en-US/API Reference/Backup and recovery/DescribeBackupTasks.md)|Used to list the backup tasks of an RDS instance.|
 |[DescribeLogBackupFiles](intl.en-US/API Reference/Backup and recovery/DescribeLogBackupFiles.md)|Used to query the log backup files of an RDS instance.|
-|[DescribeBackupDatabase](intl.en-US/API Reference/Backup and recovery/DescribeBackupDatabase.md)|Used to list the databases in a backup set for an RDS instance. This API has been deprecated.|
 
 ## Migration of backup files to the cloud for an RDS for SQL Server instance {#section_bfg_eqc_q78 .section}
 
