@@ -21,7 +21,7 @@
 
     **说明：** 软件会自动检测ECS内的SQL Server报表服务器实例，如果有多个实例，需要您手动选择。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253389/156714889854639_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253389/156738817654639_zh-CN.png)
 
 3.  在左侧导航栏根据您的业务情况设置**服务账号**、**WEB服务URL**。 
 
@@ -33,19 +33,19 @@
     2.  确认服务器名称，单击**下一步**。
     3.  填写报表服务器数据库名称并选择脚本使用的语言，单击**下一步**。 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253389/156714889854641_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253389/156738817754641_zh-CN.png)
 
     4.  设置账户连接报表服务器的凭据，单击**下一步**。
     5.  确认摘要，单击**下一步**，等待报表服务器数据库创建完成。 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253389/156714889854642_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253389/156738817754642_zh-CN.png)
 
     6.  单击**完成**。
     **说明：** 详细设置说明请参见[官方文档](https://docs.microsoft.com/en-us/sql/reporting-services/install-windows/install-reporting-services?view=sql-server-2017)。
 
 5.  在左侧导航栏选择**WEB门户URL**，单击**应用**，等待应用完成后单击URL登录报表服务器的WEB管理页面。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253389/156714889854644_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253389/156738817754644_zh-CN.png)
 
 6.  在右上角选择**新建** \> **数据源**。
 7.  设置新建数据源的各项参数。 
@@ -57,9 +57,9 @@
     |**隐藏此项**|勾选后会隐藏此数据源。|
     |**启用此数据源**|勾选后才会启用此数据源。|
     |**连接**|**类型**|数据源类型。选择**Microsoft SQL Server**。|
-    |**连接字符串**|RDS for SQL Server实例的域名和数据库名。格式：`Data Source=<RDS for SQL Server实例域名>; Initial Catalog=<数据库名>` **说明：** 请确保RDS实例的IP白名单已放通ECS实例的IP，详情请参见[设置白名单](../../../../intl.zh-CN/RDS for SQL Server 用户指南/数据安全性/设置白名单.md#)。
+    |**连接字符串**|RDS for SQL Server实例的域名和数据库名。格式：`Data Source=<RDS for SQL Server实例域名>; Initial Catalog=<数据库名>` **说明：** 请确保RDS实例的IP白名单已放通ECS实例的IP，详情请参见[设置白名单](../../../../intl.zh-CN/RDS for SQL Server 快速入门/初始化配置/设置白名单.md#)。
 
- ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253389/156714889854649_zh-CN.png)
+ ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/1253389/156738817754649_zh-CN.png)
 
 |
     |**凭据**|**登录数据源**|选择**使用以下凭据**。|
