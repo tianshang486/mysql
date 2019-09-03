@@ -1,54 +1,58 @@
 # Connect to an instance {#concept_nks_hwg_wdb .concept}
 
-You can connect to an RDS instance through a PostgreSQL client. This document introduces the connection procedure by taking the pgAdmin 4 client as an example.
+You can use a database client or Data Management Service \(DMS\) to connect to an RDS instance. This topic describes how to connect to an RDS instance by using DMS and the pgAdmin 4 client.
 
 ## Background information {#section_jgt_kwg_wdb .section}
 
-Here, we take the pgAdmin 4 client as an example to connect to an RDS instance. You can see this method when using other clients. When you connect to an RDS instance through clients, choose to use the [intranet or Internet address](../../../../intl.en-US/User Guide/Network management/Set intranet and Internet addresses.md) as follows:
+You can log on to DMS from the [RDS console](https://rds.console.aliyun.com/?spm=5176.doc49015.2.2.1qi2e9) and then connect to an RDS instance. [DMS](https://dms-intl.console.aliyun.com/#/dms/login) offers an integrated solution for data and schema management, access security, BI charts, data trends, data tracking, performance and optimization, and server management. DMS can be used to manage non-relational databases and relational databases, such as MySQL, SQL Server, PostgreSQL, MongoDB, and Redis. It can also be used to manage Linux servers.
 
--   Use the intranet address when your client is installed on the ECS that is located in the same region and the same [network type](https://www.alibabacloud.com/help/doc-detail/26194.htm) with those of the RDS instance to be connected.
+You can also use a database client to connect to an RDS instance. ApsaraDB RDS for PPAS is fully compatible with PPAS. You can connect to RDS in the similar way you connect to an on-premises PPAS server. This topic describes how to use the pgAdmin 4 client to connect to an RDS instance. This topic also serves as a reference if you choose to use other database clients. When you use a client to connect to an RDS instance, you must [set internal and public IP addresses](../../../../intl.en-US/User Guide/Connection management/Configure endpoints.md) as follows:
 
--   Use the Internet address for the other situations.
+-   If your client is deployed in an ECS instance and the instance is in the same region and has the same network type as the target RDS instance, then you can use the internal IP address. For example, ECS and RDS instances are both in the VPC located in China \(Hangzhou\). You can use the internal IP address provided to create a secure connection.
+-   Use the public IP address for other situations.
 
+## Use DMS to connect to an RDS instance {#section_m4j_sxr_kdn .section}
 
-## Procedure { .section}
+For more information about how to connect to an RDS instance through DMS, see [Log on to the RDS database through DMS](https://www.alibabacloud.com/help/doc-detail/64703.htm).
 
-1.  Add the IP address accessing the RDS instance to RDS whitelist. For more information, see [Set a whitelist](../../../../intl.en-US/Quick Start for MySQL/Initial configuration/Set a whitelist.md#).
+## Use a client to connect to an RDS instance {#section_j0g_k5v_lhq .section}
+
+1.  Add the IP address that is used to access the RDS instance to the RDS whitelist. For more information about how to configure a whitelist, see [Configure a whitelist](intl.en-US/Quick Start for PPAS/Initial configuration/Configure a whitelist.md#).
 2.  Start the pgAdmin 4 client.
-3.  Right click **Servers**, and then select **Create** \> **Server**, as shown in the following figure.
+3.  Right-click **Servers** and choose **Create** \> **Server** from the shortcut menu.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7863/2976_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7863/15674943612976_en-US.png)
 
-4.  On the **General** tab of the **Create - Server** window, enter the server name, as shown in the following figure.
+4.  On the General tab of the Create - Server dialog box, enter the name of the server, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7863/2977_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7863/15674943622977_en-US.png)
 
-5.  Select the **Connection** tab and enter the information of the instance to be connected, as shown in the following figure.
+5.  Click the Connection tab, and enter the information of the target RDS instance, as shown in the following figure.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7863/2978_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7863/15674943622978_en-US.png)
 
     Parameter description:
 
-    -   Host name/address: refers to the connection address of the RDS instance. If your application accesses the RDS instance by using the intranet, enter the intranet address of the RDS instance. If your application accesses the RDS instance by using the Internet, enter the Internet address of the RDS instance. Do the following steps to find the connection address and port number of the RDS instance:
+    -   **Host name/address**: the connection address of the RDS instance. If it is an internal connection, enter the internal IP address of the RDS instance. If it is an external connection, enter the public IP address of the RDS instance. To view the connection address and the port information of the RDS instance, take these steps:
 
         1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
-        2.  Select the region where the target instance is located.
-        3.  Click the ID of the instance to visit the Basic Information page.
-        4.  Find the connection addresses and port numbers of the RDS instance.
+        2.  In the upper-left corner, select the region where the target instance is located.
+        3.  Find the target instance and click its ID.
+        4.  On the Basic Information page, find the Internet/intranet IP address and Internet/intranet port number of the instance.
 
-            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7863/2979_en-US.png)
+            ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7863/15674943622979_en-US.png)
 
-    -   Port: refers to the port number of the RDS instance. If your application accesses the RDS instance by using the intranet, enter the intranet port number of the RDS instance. If your application accesses the RDS instance by using the Internet, enter the Internet port number of the RDS instance.
+    -   **Port**: the port number of the RDS instance. If it is an internal connection, enter the port number for internal connections. If it is an external connection, enter the port number for external connections.
 
-    -   Username: refers to the initial account name of the RDS instance.
+    -   **Username**: the name of the initial account name for the RDS instance.
 
-    -   Password: refers to the password corresponding to the initial account name of the RDS instance.
+    -   **Password**: the password of the initial account for the RDS instance.
 
 6.  Click **Save**.
-7.  If the connection information is correct, select **Servers** \> **server name** \> **Databases** \> **edb** or **postgres**, and the following interface appears, which indicates that the connection to RDS instance is successful.
+7.  If the connection information is correct, choose **Servers** \> **Server Name** \> **Databases** \> **edb** or **postgres**. The following page is displayed, which indicates that the connection to the RDS instance is successful.
 
-    **Note:** edb and postgres are default system databases of the RDS instance. Do not perform any operation in these databases.
+    **Note:** Edb and postgres are default system databases of the RDS instance. Do not perform any operation in the two databases.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7863/2980_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7863/15674943622980_en-US.png)
 
 
