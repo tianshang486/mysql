@@ -6,12 +6,12 @@ MySQL实例可能会由于数据文件长时间未整理导致实例空间满，
 
 当实例由于实例空间满自动锁定时，控制台可以在**基本信息** \> **运行状态**看到如下信息：
 
-![实例空间满自动锁](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/85053/155902405435652_zh-CN.png)
+![实例空间满自动锁](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/85053/156750486535652_zh-CN.png)
 
 ## 前提条件 {#section_xgd_ny1_3gb .section}
 
--   对于MySQL 5.6版本的实例，升级实例存储空间后即可解锁实例，关于如何升级实例存储空间，请参见[变更配置](../../../../cn.zh-CN/RDS for MySQL 用户指南/实例管理/变更配置.md#)，若实例存储空间已到最大值，请提交工单联系客服临时解锁实例，再进行后续操作。
--   对于MySQL 5.5/5.7版本的实例，请提交工单联系客服临时解锁实例，再进行后续操作。
+-   对于MySQL 5.6/5.7/8.0版本的实例，请[升级内核小版本](../../../../cn.zh-CN/RDS for MySQL 用户指南/实例管理/升级内核小版本.md#)（需要版本号高于20190815，支持[实例锁优化](../../../../cn.zh-CN/AliSQL内核/AliSQL Release Notes.md#)），升级后即可执行删除数据的操作。
+-   对于MySQL 5.5版本的实例，请提交工单联系客服临时解锁实例，再进行后续操作。
 
 ## 实施步骤 {#section_ayd_ny1_3gb .section}
 
@@ -24,14 +24,14 @@ MySQL实例可能会由于数据文件长时间未整理导致实例空间满，
 
 **操作步骤**
 
-1.  [通过 DMS登录数据库](../../../../cn.zh-CN/RDS for MySQL 用户指南/附录/通过DMS登录RDS数据库.md#)。
+1.  [通过 DMS登录数据库](../../../../cn.zh-CN/RDS for MySQL 用户指南/数据库连接/通过DMS登录RDS数据库.md#)。
 2.  选择**SQL操作** \> **SQL窗口**，执行如下命令查看数据库的文件大小，分析其中可以删除的历史数据文件或无用数据文件。
 
-    ```
+    ``` {#codeblock_mtc_cul_jk8}
     SELECT file_name, concat(TOTAL_EXTENTS,'M') as 'FIle_size' FROM INFORMATION_SCHEMA.FILES  order by TOTAL_EXTENTS DESC 
     ```
 
-    ![查看文件大小](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/85053/155902405435653_zh-CN.png)
+    ![查看文件大小](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/85053/156750486535653_zh-CN.png)
 
 3.  使用`drop`、`truncate`或者`delete`命令均可以清理数据。
 
