@@ -19,21 +19,23 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择备份集所属实例所在的地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155651724136543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156756702936543_zh-CN.png)
 
 3.  单击备份集所属实例的ID。
 4.  在左侧导航栏中，选择**备份恢复**。
 5.  在页面右上角，单击**数据库恢复**。
 6.  选择**恢复到已有实例**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155651724110029_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/156756702910029_zh-CN.png)
 
 7.  设置以下参数，然后单击**确定**。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155651724210031_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/156756702910031_zh-CN.png)
 
-    **说明：** 若有相同数据库名存在，需要修改恢复后库名。
+    **说明：** 
 
+    -   若有相同数据库名存在，需要修改恢复后库名。
+    -   恢复后库名只能使用小写字母、数字、下划线（\_）和短横线（-）。
     |参数|说明|
     |--|--|
     |还原方式|     -   **按时间点**：可以设置为日志备份保留时间内的任意时间点。如要查看或修改日志备份保留时间，请参见[备份SQL Server数据](cn.zh-CN/RDS for SQL Server 用户指南/备份数据/备份SQL Server数据.md#)。
@@ -69,7 +71,7 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择实例所在的地域。
 
-    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/155651724136543_zh-CN.png)
+    ![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156756702936543_zh-CN.png)
 
 3.  单击实例的ID。
 4.  在左侧导航栏中，选择**备份恢复**。
