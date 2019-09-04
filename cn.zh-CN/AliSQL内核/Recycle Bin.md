@@ -40,14 +40,14 @@ Recycle Bin设计了如下五个参数。
     Recycle Bin会从不同的数据库回收到统一的\_\_recycle\_bin\_\_数据库中，所以需要保证目标表表名唯一，所以定义了如下命名格式：
 
     ``` {#codeblock_zxm_wn3_1f4}
-    "__" + <Storge Engine> + <SE private id>
+    "__" + <Storage Engine> + <SE private id>
     ```
 
     参数说明如下。
 
     |参数|说明|
     |--|--|
-    |Storge Engine|存储引擎名称。|
+    |Storage Engine|存储引擎名称。|
     |SE private id|存储引擎为每一个表生成的唯一值。例如在InnoDB引擎中就是table id。|
 
 -   独立回收
