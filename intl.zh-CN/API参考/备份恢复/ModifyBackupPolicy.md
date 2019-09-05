@@ -114,7 +114,9 @@
 |AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。
 
  |
-|CompressType|String|否|4|备份压缩方式，仅支持MySQL 5.6修改为quicklz压缩，支持库表恢复。取值：**4**。
+|CompressType|String|否|4|备份压缩方式，支持库表恢复。取值：**4**。
+
+ **说明：** 支持的实例版本为MySQL 5.7 高可用版（本地SSD盘）和MySQL 5.6高可用版。
 
  |
 
