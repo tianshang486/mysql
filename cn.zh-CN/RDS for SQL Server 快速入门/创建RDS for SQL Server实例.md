@@ -48,10 +48,16 @@
  |
     |存储类型|     -   **本地SSD盘**：与数据库引擎位于同一节点的SSD盘。将数据存储于本地SSD盘，可以降低I/O延时。
     -   **SSD云盘**：基于分布式存储架构的弹性块存储设备。将数据存储于SSD云盘，即实现了计算与存储分离。
+
+**说明：** **SSD云盘**支持**云盘加密**，能够最大限度保护您的数据安全，您的业务和应用程序无需做额外的改动。详情请参见[云盘加密](../cn.zh-CN/RDS for SQL Server 用户指南/数据安全性/云盘加密.md#)。
+
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156766450059199_zh-CN.png)
+
     -   **ESSD云盘**：增强型（Enhanced）SSD云盘，是阿里云全新推出的超高性能云盘产品。ESSD云盘基于新一代分布式块存储架构，结合25GE网络和RDMA技术，为您提供单盘高达100万的随机读写能力和更低的单路时延。
  更多信息，请参见[存储类型](../cn.zh-CN/云数据库RDS简介/存储类型.md)。
 
  |
+    |密钥|**云盘加密**所使用的的密钥。密钥的创建请参见[管理密钥](https://help.aliyun.com/document_detail/108805.html)。|
     |可用区| 可用区是地域中的一个独立物理区域，不同可用区之间没有实质性区别。您可以选择将RDS实例的主备节点创建在同一可用区或不同可用区。
 
  相比单可用区，多可用区能提供可用区级别的容灾。
@@ -87,7 +93,7 @@
 
     **说明：** 您也可以在当前创建RDS实例页面上方单击**体验新版**切换到新版创建RDS实例页面。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156410584352745_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156766450052745_zh-CN.png)
 
 2.  在左上角选择实例所在的地域，即实例所在的地理位置。
 
@@ -96,7 +102,7 @@
     -   购买后无法更换地域。
     -   请根据目标用户所在的地理位置就近选择地域，提升用户访问速度。
     -   请确保RDS实例与需要连接的ECS实例创建于同一个地域，否则它们无法通过内网互通，只能通过外网互通，无法发挥最佳性能。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156410584352746_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156766450052746_zh-CN.png)
 
 3.  设置以下参数。
 
@@ -149,7 +155,7 @@
 
 4.  检查当前配置，确认配置和费用。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156410584352764_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156766450052764_zh-CN.png)
 
 5.  单击**确认订单**。
 
@@ -159,14 +165,14 @@
 
     **说明：** 如果有优惠券，可以在本页面选择对应的优惠券。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156410584352773_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156766450052773_zh-CN.png)
 
 
 ## 下一步 {#section_cgn_fdt_2fb .section}
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156410584336543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156766450036543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](cn.zh-CN/RDS for SQL Server 快速入门/初始化配置/设置白名单.md)和[创建账号](cn.zh-CN/RDS for SQL Server 快速入门/初始化配置/创建数据库和账号/创建数据库和账号SQL Server 2008 R2版.md)，如果是通过外网连接，还需要[申请外网地址](cn.zh-CN/RDS for SQL Server 快速入门/初始化配置/申请外网地址.md#)。然后就可以[连接实例](cn.zh-CN/RDS for SQL Server 快速入门/连接实例.md)。
 
