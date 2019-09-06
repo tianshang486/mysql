@@ -259,5 +259,5 @@ Response example:
 
 ## Errors {#section_ky4_7jr_f7j .section}
 
-For a list of error codes, visit the [错误中心](https://error-center.alibabacloud.com/status/product/Rds).
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
