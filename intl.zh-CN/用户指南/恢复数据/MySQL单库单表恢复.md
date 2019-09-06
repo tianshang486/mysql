@@ -4,13 +4,17 @@ RDS for MySQL支持单库和单表的数据恢复，可以通过备份指定恢�
 
 ## 前提条件 {#section_o5q_1p4_ydb .section}
 
--   实例为RDS for MySQL 5.6 高可用版。
--   地域为新加坡。如果实例位于其它地域，请在控制台**备份恢复** \> **备份设置**里开启单库单表恢复功能。
+-   实例为如下版本：
+    -   MySQL 5.6 高可用版
+    -   MySQL 5.7 高可用版（本地SSD盘）
+-   控制台**备份恢复** \> **备份设置**里开启单库单表恢复功能。
 
-    ![控制台开通库表恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155538605344546_zh-CN.png)
+    ![控制台开通库表恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/156775923344546_zh-CN.png)
 
-    **注意：** 开通单库单表恢复功能后，备份格式会修改，用于支持库表恢复，且开通之后无法关闭该功能。
+    **注意：** 
 
+    -   开通单库单表恢复功能后，备份格式会修改，用于支持库表恢复，且开通之后无法关闭该功能。
+    -   新实例默认开启该功能，无法关闭。
 -   如果是恢复到原实例，原实例需要满足如下条件：
     -   运行中且没有被锁定。
     -   当前没有迁移任务。
@@ -37,9 +41,9 @@ RDS for MySQL支持单库和单表的数据恢复，可以通过备份指定恢�
 
     **说明：** 如未看到**数据库 库/表级别恢复**按钮，请参见[前提条件](#)。
 
-    ![库/表级别恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155538605337783_zh-CN.png)
+    ![库/表级别恢复](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/156775923437783_zh-CN.png)
 
-    ![库/表级别恢复参数设置1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155538605337784_zh-CN.png)
+    ![库/表级别恢复参数设置1](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/156775923437784_zh-CN.png)
 
     |参数名称|说明|
     |----|--|
@@ -66,7 +70,7 @@ RDS for MySQL支持单库和单表的数据恢复，可以通过备份指定恢�
 
     **说明：** 若**回档位置**选择的是**回档到新实例**，会跳转到实例购买页面，设置新实例的参数并完成支付即可。
 
-    ![库/表级别恢复新建实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/155538605337786_zh-CN.png)
+    ![库/表级别恢复新建实例](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/115355/156775923437786_zh-CN.png)
 
     |参数名称|说明|
     |----|--|
@@ -93,4 +97,11 @@ RDS for MySQL支持单库和单表的数据恢复，可以通过备份指定恢�
     -   **专有网络**（推荐）：也称为VPC（Virtual Private Cloud）。VPC是一种隔离的网络环境，安全性和性能均高于传统的经典网络。
  |
 
+
+## 相关API {#section_3lc_5m8_tio .section}
+
+|API|描述|
+|---|--|
+|[RestoreTable](../../../../intl.zh-CN/API参考/备份恢复/RestoreTable.md#)|恢复RDS实例的某个数据库或表到原实例上。|
+|[CloneDBInstance](../../../../intl.zh-CN/API参考/备份恢复/CloneDBInstance.md#)|恢复RDS实例的某个数据库或表到新实例上。|
 
