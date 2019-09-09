@@ -1,6 +1,6 @@
 # API概览 {#doc_8073 .concept}
 
-云数据库 MySQL 版提供以下相关API接口。
+云数据库RDS提供以下相关API接口。
 
 ## 实例管理 {#section_r50_7sr_lla .section}
 
