@@ -6,8 +6,6 @@
 
 |API|描述|
 |---|--|
-|[DestroyDBInstance](intl.zh-CN/API参考/实例管理/DestroyDBInstance.md)|该接口用于销毁RDS实例，已下线。|
-|[ModifyDBInstanceDelayReplicationTime](intl.zh-CN/API参考/实例管理/ModifyDBInstanceDelayReplicationTime.md)|该接口用于修改只读实例延迟时间，已下线。|
 |[CreateDBInstance](intl.zh-CN/API参考/实例管理/CreateDBInstance.md)|调用CreateDBInstance接口创建一个RDS实例。|
 |[DeleteDBInstance](intl.zh-CN/API参考/实例管理/DeleteDBInstance.md)|调用DeleteDBInstance接口释放RDS实例。|
 |[RestartDBInstance](intl.zh-CN/API参考/实例管理/RestartDBInstance.md)|调用RestartDBInstance接口重启RDS实例。|
@@ -29,21 +27,6 @@
 |[ModifyHASwitchConfig](intl.zh-CN/API参考/实例管理/ModifyHASwitchConfig.md)|调用ModifyHASwitchConfig接口开启或关闭RDS实例的主备切换功能。|
 |[DescribeHASwitchConfig](intl.zh-CN/API参考/实例管理/DescribeHASwitchConfig.md)|调用DescribeHASwitchConfig接口查看RDS实例主备自动切换设置。|
 |[DescribeAvailableResource](intl.zh-CN/API参考/实例管理/DescribeAvailableResource.md)|调用DescribeAvailableResource接口查询某地域可售卖资源信息。|
-
-## 历史事件 {#section_pzg_ftv_bcj .section}
-
-|API|描述|
-|---|--|
-|[DescribeEvents](intl.zh-CN/API参考/历史事件/DescribeEvents.md)|调用DescribeEvents接口查询RDS事件记录列表。|
-|[DescribeActionEventPolicy](intl.zh-CN/API参考/历史事件/DescribeActionEventPolicy.md)|调用DescribeActionEventPolicy接口查看RDS历史事件功能开启情况。|
-|[ModifyActionEventPolicy](intl.zh-CN/API参考/历史事件/ModifyActionEventPolicy.md)|调用ModifyActionEventPolicy接口开启或关闭RDS历史事件功能。|
-
-## CloudDBA数据库性能优化 {#section_eet_uxb_t5e .section}
-
-|API|描述|
-|---|--|
-|[CreateDiagnosticReport](intl.zh-CN/API参考/CloudDBA数据库性能优化/CreateDiagnosticReport.md)|调用CreateDiagnosticReport接口创建诊断报告。|
-|[DescribeDiagnosticReportList](intl.zh-CN/API参考/CloudDBA数据库性能优化/DescribeDiagnosticReportList.md)|调用DescribeDiagnosticReportList接口获取诊断报告列表。|
 
 ## 数据库管理 {#section_cta_k8m_rux .section}
 
