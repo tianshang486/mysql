@@ -71,6 +71,9 @@ This topic provides an overview of APIs provided by RDS for MySQL.
 |[ModifyDBInstanceTDE](intl.en-US/API Reference/Security management/ModifyDBInstanceTDE.md)|Used to change the data encryption status of an RDS instance.|
 |[ModifySecurityIps](intl.en-US/API Reference/Security management/ModifySecurityIps.md)|Used to modify the IP address whitelist of an RDS instance.|
 |[MigrateSecurityIPMode](intl.en-US/API Reference/Security management/MigrateSecurityIPMode.md)|Used to change the standard mode to the enhanced security mode for a whitelist.|
+|[DescribeDBInstanceIpHostname](intl.en-US/API Reference/Security management/DescribeDBInstanceIpHostname.md#)|Used to query the host name of the ECS instance connected to an RDS instance.|
+|[DescribeDTCSecurityIpHostsForSQLServer](intl.en-US/API Reference/Security management/DescribeDTCSecurityIpHostsForSQLServer.md#)|Used to query the distributed transaction whitelist of an RDS instance.|
+|[ModifyDTCSecurityIpHostsForSQLServer](intl.en-US/API Reference/Security management/ModifyDTCSecurityIpHostsForSQLServer.md#)|Used to configure a distributed transaction whitelist for an RDS instance.|
 
 ## Network management {#section_piv_av6_vf1 .section}
 
@@ -110,6 +113,20 @@ This topic provides an overview of APIs provided by RDS for MySQL.
 |[DeleteBackup](intl.en-US/API Reference/Backup and recovery/DeleteBackup.md)|Used to delete the data backup files of an RDS instance.|
 |[DescribeBackupTasks](intl.en-US/API Reference/Backup and recovery/DescribeBackupTasks.md)|Used to list the backup tasks of an RDS instance.|
 |[DescribeLogBackupFiles](intl.en-US/API Reference/Backup and recovery/DescribeLogBackupFiles.md)|Used to query the log backup files of an RDS instance.|
+
+## Cross-region backup and restoration {#section_xru_ha9_sp1 .section}
+
+|API|Description|
+|---|-----------|
+|[CheckCreateDdrDBInstance](intl.en-US/API Reference/Cross-region backup and restoration/CheckCreateDdrDBInstance.md#)|Used to check whether the data of an RDS instance can be restored to a new RDS instance in a different region by using a cross-region backup set.|
+|[CreateDdrInstance](intl.en-US/API Reference/Cross-region backup and restoration/CreateDdrInstance.md#)|Used to restore the data of an RDS instance to a new RDS instance in a different region.|
+|[ModifyInstanceCrossBackupPolicy](intl.en-US/API Reference/Cross-region backup and restoration/ModifyInstanceCrossBackupPolicy.md#)|Used to modify the cross-region backup settings of an RDS instance.|
+|[DescribeInstanceCrossBackupPolicy](intl.en-US/API Reference/Cross-region backup and restoration/DescribeInstanceCrossBackupPolicy.md#)|Used to query the cross-region backup settings of an RDS instance.|
+|[DescribeCrossRegionBackups](intl.en-US/API Reference/Cross-region backup and restoration/DescribeCrossRegionBackups.md#)|Used to list the cross-region data backup files of an RDS instance.|
+|[DescribeCrossRegionLogBackupFiles](intl.en-US/API Reference/Cross-region backup and restoration/DescribeCrossRegionLogBackupFiles.md#)|Used to list the cross-region log backup files of an RDS instance.|
+|[DescribeAvailableCrossRegion](intl.en-US/API Reference/Cross-region backup and restoration/DescribeAvailableCrossRegion.md#)|Used to query the available destination regions for an RDS instance.|
+|[DescribeAvailableRecoveryTime](intl.en-US/API Reference/Cross-region backup and restoration/DescribeAvailableRecoveryTime.md#)|Used to query the time range within which the data of a cross-region backup file can be restored.|
+|[DescribeCrossRegionBackupDBInstance](intl.en-US/API Reference/Cross-region backup and restoration/DescribeCrossRegionBackupDBInstance.md#)|Used to query which RDS instances have cross-region backup enabled in a specified region, and the cross-region backup settings of these instances.|
 
 ## Migration of backup files to the cloud for an RDS for SQL Server instance {#section_bfg_eqc_q78 .section}
 
