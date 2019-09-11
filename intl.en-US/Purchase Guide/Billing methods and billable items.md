@@ -22,7 +22,7 @@ RDS supports two billing methods.
 
 |Item|Billing standard|
 |----|----------------|
-|Master instance|The price depends on the [RDS instance specifications](../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md#). The billing method is Subscription or Pay-As-You-Go.|
+|Master instance|The price depends on the [RDS instance specifications](../../../../intl.en-US/Product Introduction/Instance types/Instance types.md#). The billing method is Subscription or Pay-As-You-Go.|
 |Storage|The billing method is Subscription or Pay-As-You-Go, depending on the billing method of the master instance.|
 |[Read-only instance](../../../../intl.en-US/Quick Start for MySQL/Scale instances/Read-only instance/Introduction to MySQL read-only instances.md#)|The billing method is Pay-As-You-Go. The costs depend on the read-only instance specifications.|
 |[Clone instance](../../../../intl.en-US/User Guide/Recovery/Restore MySQL data.md#)|A clone instance is the instance created when you restore data to a new instance. The costs are the same as those of a master instance.|
