@@ -2,11 +2,19 @@
 
 您可以通过设置备份策略调整RDS数据备份和日志备份的周期来实现自动备份，也可以手动备份RDS数据。
 
-## 注意事项 {#section_jyb_zgx_wfb .section}
+**说明：** 本文介绍的是默认的备份功能，备份文件存储于实例所在地域。RDS for MySQL还支持将备份文件存储于另一个地域，详情请参见[跨地域备份](../../../../cn.zh-CN/RDS for MySQL 用户指南/数据库备份/跨地域备份.md#)。
 
--   实例备份文件占用备份空间，空间使用量超出免费的额度将会产生额外的费用，请合理设计备份周期，以满足业务需求的同时，兼顾备份空间的合理利用。关于免费额度详情，请参见[查看备份空间免费额度](cn.zh-CN/用户指南/备份数据/查看备份空间免费额度.md#)。
+## 费用 {#section_1cc_mbc_cwz .section}
+
+每个RDS实例的备份空间都有一定量的免费额度，实例备份文件占用备份空间，空间使用量超出免费的额度将会产生额外的费用，请合理设计备份周期，以满足业务需求的同时，兼顾备份空间的合理利用。关于免费额度详情，请参见[查看备份空间免费额度](cn.zh-CN/用户指南/备份数据/查看备份空间免费额度.md#)。
+
+**说明：** 
+
 -   关于具体的计费方式与收费项，请参见[计费方式与收费项](../../../../cn.zh-CN/云数据库RDS价格/计费方式与收费项.md#)。
 -   关于备份空间使用量的计费标准，请参见[云数据库 RDS 详细价格信息](https://www.aliyun.com/price/product#/rds/detail)。
+
+## 注意事项 {#section_jyb_zgx_wfb .section}
+
 -   备份期间不要执行DDL操作，避免锁表导致备份失败。
 -   尽量选择业务低峰期进行备份。
 -   若数据量较大，花费的时间可能较长，请耐心等待。
@@ -14,14 +22,14 @@
 
 ## 备份说明 {#section_oyj_3k4_ydb .section}
 
-阿里云数据库支持数据备份和日志备份。如要按照时间点恢复数据，需启用日志备份。各类型数据库备份策略如下：
+阿里云数据库RDS支持数据备份和日志备份。如要按照时间点恢复数据，需启用日志备份。各类型数据库备份策略如下：
 
 |数据库类型|数据备份|日志备份|
 |-----|----|----|
 |MySQL| -   MySQL 5.5/5.6/5.7/8.0 本地SSD盘（含高可用版和金融版）：
     -   自动备份支持全量物理备份。
     -   手动备份支持全量物理备份、全量逻辑备份和单库逻辑备份。
--   MySQL 5.7/8.0 SSD云盘（高可用版）：
+-   MySQL 5.7/8.0 ESSD云盘/SSD云盘（高可用版）：
 
 仅支持快照备份，可恢复至新建实例，不支持下载。
 
@@ -75,7 +83,7 @@
 1.  登录 [RDS 管理控制台](https://rds.console.aliyun.com)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155857483637169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156827182437169_zh-CN.png)
 
 3.  单击目标实例的ID，进入基本信息页面。
 4.  在菜单中选择 **备份恢复**。
@@ -115,12 +123,12 @@
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择目标实例所在地域。
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/155857483637169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156827182437169_zh-CN.png)
 
 3.  单击目标实例的 ID，进入基本信息页面。
 4.  单击页面右上角的**备份实例**，打开备份实例对话框。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15585748364105_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7964/15682718254105_zh-CN.png)
 
     **说明：** 
 
@@ -131,11 +139,11 @@
 
 ## 常见问题 {#section_h54_lrx_pgb .section}
 
-1.  RDS的数据备份是否可以关闭？
+-   RDS的数据备份是否可以关闭？
 
     答：不可以关闭。可以减少备份频率，一周至少2次。数据备份保留天数最少7天，最多730天。
 
-2.  RDS的日志备份是否可以关闭？
+-   RDS的日志备份是否可以关闭？
 
     答：MySQL/PostgreSQL基础版实例和SQL Server实例不可以关闭，其他实例在备份设置内关闭日志备份开关即可。
 
