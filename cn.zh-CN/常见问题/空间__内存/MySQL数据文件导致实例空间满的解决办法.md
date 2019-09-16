@@ -6,7 +6,7 @@ MySQL实例可能会由于数据文件长时间未整理导致实例空间满，
 
 当实例由于实例空间满自动锁定时，控制台可以在**基本信息** \> **运行状态**看到如下信息：
 
-![实例空间满自动锁](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/85053/156750486535652_zh-CN.png)
+![实例空间满自动锁](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/85053/156859702235652_zh-CN.png)
 
 ## 前提条件 {#section_xgd_ny1_3gb .section}
 
@@ -31,7 +31,7 @@ MySQL实例可能会由于数据文件长时间未整理导致实例空间满，
     SELECT file_name, concat(TOTAL_EXTENTS,'M') as 'FIle_size' FROM INFORMATION_SCHEMA.FILES  order by TOTAL_EXTENTS DESC 
     ```
 
-    ![查看文件大小](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/85053/156750486535653_zh-CN.png)
+    ![查看文件大小](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/85053/156859702235653_zh-CN.png)
 
 3.  使用`drop`、`truncate`或者`delete`命令均可以清理数据。
 
@@ -40,6 +40,9 @@ MySQL实例可能会由于数据文件长时间未整理导致实例空间满，
     -   **drop**：使用`drop table <数据库名>.<表名>`删除不需要的表。
     -   **truncate**：使用`truncate table <数据库名>.<表名>`删除不需要的表。
     -   **delete**：
+
+        **说明：** 未临时解锁的实例不支持**delete**操作，仅支持**drop**和**truncate**。
+
         1.  使用`delete from <数据库名>.<表名>`删除表中数据。
         2.  使用`optimize table <数据库名>.<表名>`回收空间。
 
