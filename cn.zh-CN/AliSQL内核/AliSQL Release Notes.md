@@ -2,6 +2,17 @@
 
 ## MySQL 8.0 {#section_qws_5xk_n2b .section}
 
+**20190915**
+
+-   新特性
+
+    支持事务性本机过程。
+
+-   Bug修复
+
+    修复Cmd\_set\_current\_connection内存泄露问题。
+
+
 **20190816**
 
 -   新特性
@@ -30,6 +41,16 @@
     -   屏蔽无效表名的错误日志。
 
 ## MySQL 5.7 {#section_4d5_4iq_4a4 .section}
+
+**20190915**
+
+-   新特性
+
+    [Thread Pool](cn.zh-CN/AliSQL内核/Thread Pool.md#)：将线程和会话分离，在拥有大量会话的同时，只需要少量线程完成活跃会话的任务即可。
+
+-   Bug修复
+    -   修复MySQL测试用例rpl\_kill\_query。
+    -   修复MySQL测试用例innitialize-sha256。
 
 **20190815**
 
