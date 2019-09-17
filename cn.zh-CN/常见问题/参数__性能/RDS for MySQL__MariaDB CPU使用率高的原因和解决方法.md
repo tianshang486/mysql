@@ -75,7 +75,7 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
         1.  通过如下方式定位效率低的查询：
             -   通过 `show processlist;` 或 `show full processlist;` 命令查看当前执行的查询，如下图所示：
 
-                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868588635232_zh-CN.png)
+                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868735135232_zh-CN.png)
 
                 对于查询时间长、运行状态（State 列）是**Sending data**、**Copying to tmp table**、**Copying to tmp table on disk**、**Sorting result**、**Using filesort**等都可能是有性能问题的查询（SQL）。
 
@@ -92,11 +92,11 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
                 1.  在DMS控制台上[登录数据库](https://help.aliyun.com/document_detail/47714.html?spm=a2c4g.11186623.2.21.a665446edOcZDv)。
                 2.  选择**性能** \> **实例会话**，打开实例会话页面，如下图所示。
 
-                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868588635253_zh-CN.png)
+                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868735135253_zh-CN.png)
 
                 3.  单击SQL列中的查询文本，即可显示完整的查询语句，如下图所示。
 
-                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868588635257_zh-CN.png)
+                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868735135257_zh-CN.png)
 
         2.  得到需要优化的查询后，可以通过DMS控制台上SQL诊断来获取查询的优化建议：
 
@@ -105,11 +105,11 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
             1.  在DMS 控制台上[登录数据库](https://help.aliyun.com/document_detail/47714.html?spm=a2c4g.11186623.2.26.317b446eTd7q5l)。
             2.  选择**SQL操作** \> **SQL窗口**，如下图所示。
 
-                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868588635257_zh-CN.png)
+                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868735135257_zh-CN.png)
 
             3.  单击SQL诊断，即可得到优化建议，如下图所示。
 
-                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868588735258_zh-CN.png)
+                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868735135258_zh-CN.png)
 
         3.  根据优化建议，添加索引，查询执行成本就会大幅减少，实例CPU使用率100%的问题解决。
 
