@@ -75,28 +75,23 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
         1.  通过如下方式定位效率低的查询：
             -   通过 `show processlist;` 或 `show full processlist;` 命令查看当前执行的查询，如下图所示：
 
-                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868735135232_zh-CN.png)
+                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868754635232_zh-CN.png)
 
                 对于查询时间长、运行状态（State 列）是**Sending data**、**Copying to tmp table**、**Copying to tmp table on disk**、**Sorting result**、**Using filesort**等都可能是有性能问题的查询（SQL）。
 
                 **说明：** 
 
-                -   若在QPS高导致CPU使用率高的场景中，查询执行时间通常比较短，`show processlist;`命令或实例会话中可能会不容易捕捉到当前执行的查询。您可以通过执行如下命令进行查询：
-
-                    ``` {#codeblock_32b_gqq_z9x}
-                    explain select b.* from perf_test_no_idx_01 a, perf_test_no_idx_02 b where a.created_on >= 2015-01-01 and a.detail = b.detail
-                    ```
-
+                -   若在QPS高导致CPU使用率高的场景中，查询执行时间通常比较短，`show processlist;`命令或实例会话中可能会不容易捕捉到当前执行的查询。您可以执行命令`explain select b.* from perf_test_no_idx_01 a, perf_test_no_idx_02 b where a.created_on >= 2015-01-01 and a.detail = b.detail`进行查询：
                 -   您可以通过执行类似`kill 101031643;`的命令来终止长时间执行的会话，终止会话请参见 [RDS for MySQL 如何终止会话](https://help.aliyun.com/document_detail/41713.html?spm=a2c4g.11186623.2.19.a665446edOcZDv)。关于长时间执行会话的管理，请参见 [RDS for MySQL 管理长时间运行查询](https://help.aliyun.com/document_detail/41735.html?spm=a2c4g.11186623.2.20.a665446edOcZDv)。
             -   通过DMS查看当前执行的查询，查询步骤如下：
                 1.  在DMS控制台上[登录数据库](https://help.aliyun.com/document_detail/47714.html?spm=a2c4g.11186623.2.21.a665446edOcZDv)。
                 2.  选择**性能** \> **实例会话**，打开实例会话页面，如下图所示。
 
-                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868735135253_zh-CN.png)
+                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868754635253_zh-CN.png)
 
                 3.  单击SQL列中的查询文本，即可显示完整的查询语句，如下图所示。
 
-                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868735135257_zh-CN.png)
+                    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868754635257_zh-CN.png)
 
         2.  得到需要优化的查询后，可以通过DMS控制台上SQL诊断来获取查询的优化建议：
 
@@ -105,11 +100,11 @@ RDS for MySQL/MariaDB使用过程中，会遇到CPU使用率过高甚至达到10
             1.  在DMS 控制台上[登录数据库](https://help.aliyun.com/document_detail/47714.html?spm=a2c4g.11186623.2.26.317b446eTd7q5l)。
             2.  选择**SQL操作** \> **SQL窗口**，如下图所示。
 
-                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868735135257_zh-CN.png)
+                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868754635257_zh-CN.png)
 
             3.  单击SQL诊断，即可得到优化建议，如下图所示。
 
-                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868735135258_zh-CN.png)
+                ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/8195/156868754735258_zh-CN.png)
 
         3.  根据优化建议，添加索引，查询执行成本就会大幅减少，实例CPU使用率100%的问题解决。
 
