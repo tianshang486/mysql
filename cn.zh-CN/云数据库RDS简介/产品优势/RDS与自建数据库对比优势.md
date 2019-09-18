@@ -1,5 +1,7 @@
 # RDS与自建数据库对比优势 {#concept_u4w_sy5_tdb .concept}
 
+本文将RDS和自建数据库从多个方面进行对比，介绍RDS具有的优势。
+
 ## 特性对比 {#section_ukk_wy5_tdb .section}
 
 |对比项|云数据库RDS|自购服务器搭建数据库服务|
@@ -207,7 +209,7 @@
  |
 |安全| -   事前防护：[白名单](../../../../cn.zh-CN/RDS for SQL Server 快速入门/初始化配置/设置白名单.md#)、[专有网络隔离](https://help.aliyun.com/document_detail/34217.html)；
 -   事中保护：[连接链路加密](../../../../cn.zh-CN/RDS for SQL Server 用户指南/数据安全性/设置 SSL 加密.md#)、[数据落盘加密](../../../../cn.zh-CN/RDS for SQL Server 用户指南/数据安全性/设置透明数据加密TDE.md#)；
--   事后审计：[SQL审计（数据库审计）](../../../../cn.zh-CN/RDS for SQL Server 用户指南/SQL审计与历史事件/SQL审计.md#)、[历史事件](../../../../cn.zh-CN/RDS for MySQL 用户指南/SQL审计与历史事件/历史事件.md#)；
+-   事后审计：[SQL审计（数据库审计）](../../../../cn.zh-CN/RDS for SQL Server 用户指南/SQL审计与历史事件/SQL审计（数据库审计）.md#)、[历史事件](../../../../cn.zh-CN/RDS for MySQL 用户指南/SQL审计与历史事件/历史事件.md#)；
 -   微软安全更新，阿里技术兜底。
 
  | -   事前防护：白名单、安全组、专有网络隔离；
