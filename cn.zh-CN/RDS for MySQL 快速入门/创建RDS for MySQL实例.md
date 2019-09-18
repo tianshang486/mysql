@@ -1,8 +1,12 @@
 # 创建RDS for MySQL实例 {#concept_wzp_ncf_vdb .concept}
 
-您可以通过阿里云RDS管理控制台或API创建RDS实例。关于如何通过API创建实例，请参见[创建RDS实例](../../../../cn.zh-CN/API参考/实例管理/CreateDBInstance.md#)。关于实例计费说明，请参见[计费方式](../../../../cn.zh-CN/云数据库RDS价格/计费方式与收费项.md#)。
+您可以通过阿里云RDS管理控制台或API创建RDS实例。本文介绍如何通过控制台创建RDS for MySQL实例。
 
-本文将介绍在RDS管理控制台上创建实例的步骤，除了当前版本的创建实例页面，您也可以体验新版创建实例页面。操作详情请参见：
+关于如何通过API创建实例，请参见[创建RDS实例](../../../../cn.zh-CN/API参考/实例管理/CreateDBInstance.md#)。
+
+关于实例计费说明，请参见[计费方式](../../../../cn.zh-CN/云数据库RDS价格/计费方式与收费项.md#)。
+
+除了新版本的创建实例页面，您也可以切换回旧版创建实例页面。操作详情请参见：
 
 -   [创建RDS实例（新版）](#section_ipk_49i_rd5)
 -   [创建RDS实例（旧版）](#section_zqp_z5z_hvg)
@@ -28,7 +32,7 @@
 
     **说明：** 您也可以在当前创建RDS实例页面上方单击**返回旧版**切换到旧版创建RDS实例页面。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156861656560573_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156880002360573_zh-CN.png)
 
 2.  设置以下参数。
 
@@ -86,15 +90,15 @@
 
     **说明：** 如果有优惠券，可以在本页面选择对应的优惠券。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156861656552773_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156880002352773_zh-CN.png)
 
 
 ## 创建RDS实例（旧版） {#section_zqp_z5z_hvg .section}
 
 1.  进入[旧版RDS实例创建](https://rds-buy.aliyun.com/#/create/rds)页面。
 2.  选择计费方式。
-    -   **按量付费**：属于后付费，即按小时扣费。适合短期需求，用完可立即释放实例，节省费用。
-    -   **包年包月**：属于预付费，即在新建实例时需要支付费用。适合长期需求，价格比按量付费更实惠，且购买时长越长，折扣越多。
+    -   按量付费：属于后付费，即按小时扣费。适合短期需求，用完可立即释放实例，节省费用。
+    -   包年包月：属于预付费，即在新建实例时需要支付费用。适合长期需求，价格比按量付费更实惠，且购买时长越长，折扣越多。
 3.  设置以下参数。
 
     |参数|说明|
@@ -128,7 +132,7 @@
 
 **说明：** **SSD云盘**支持**云盘加密**，能够最大限度保护您的数据安全，您的业务和应用程序无需做额外的改动。详情请参见[云盘加密](../../../../cn.zh-CN/RDS for MySQL 用户指南/数据安全性/云盘加密.md#)。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156861656659199_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156880002359199_zh-CN.png)
 
     -   **ESSD云盘**：增强型（Enhanced）SSD云盘，是阿里云全新推出的超高性能云盘产品。ESSD云盘基于新一代分布式块存储架构，结合25GE网络和RDMA技术，为您提供单盘高达100万的随机读写能力和更低的单路时延。
  更多信息，请参见[存储类型](../../../../cn.zh-CN/云数据库RDS简介/存储类型.md)。
@@ -153,7 +157,7 @@
      -   通用型：独享被分配的内存和I/O资源，与同一服务器上的其他通用型实例共享CPU和存储资源。
     -   独享型：独享被分配的CPU、内存、存储和I/O资源。
     -   独占物理机型：是独享型的顶配，独占整台服务器的CPU、内存、存储和I/O资源。
- 例如，**8核32GB**是通用型实例规格，**8核32GB（独享套餐）**是独享型实例规格，**30核220GB（独占主机）**是独占物理机型实例规格。
+ 例如，8核32GB是通用型实例规格，8核32GB（独享套餐）是独享型实例规格，30核220GB（独占主机）是独占物理机型实例规格。
 
  |
     |**存储空间**| 该存储空间包括数据空间、系统文件空间、Binlog文件空间和事务文件空间。
@@ -172,7 +176,7 @@
 
 在控制台左上角，选择实例所在的地域即可查看到刚刚创建的实例。
 
-![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156861656636543_zh-CN.png)
+![选择地域](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7814/156880002336543_zh-CN.png)
 
 创建实例后，您需要[设置白名单](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/设置白名单.md)和[创建账号](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/创建账号和数据库.md)，如果是通过外网连接，还需要[申请外网地址](cn.zh-CN/RDS for MySQL 快速入门/初始化配置/申请外网地址.md)。然后就可以[连接实例](cn.zh-CN/RDS for MySQL 快速入门/连接MySQL实例.md)。
 
