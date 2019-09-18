@@ -1,10 +1,10 @@
 # SQL洞察 {#task_msp_gz1_mfb .task}
 
-RDS for MySQL的SQL审计功能将升级为**SQL洞察**功能，继续为您的数据库提供安全审计、性能诊断等增值服务，升级过程中不影响实例的正常使用，升级后费用更低，功能更丰富。
+RDS for MySQL的SQL审计功能将升级为SQL洞察功能，继续为您的数据库提供安全审计、性能诊断等增值服务，升级过程中不影响实例的正常使用，升级后费用更低，功能更丰富。
 
 实例需要为如下版本：
 
--   MySQL 8.0高可用版（本地SSD盘）
+-   MySQL 8.0高可用版
 -   MySQL 5.7高可用版
 -   MySQL 5.6
 -   MySQL 5.5
@@ -22,7 +22,7 @@ RDS for MySQL的SQL审计功能将升级为**SQL洞察**功能，继续为您的
 RDS for MySQL版的增量数据可以通过SQL洞察或Binlog日志来查看，但是两者又有区别：
 
 -   SQL洞察：类似于MySQL的审计日志，会统计所有DML和DDL操作信息，这些信息是系统通过网络协议分析所得。SQL洞察不解析实际的参数值，在SQL查询量较大的时候会丢失少量记录。因此通过这种方式来统计增量数据可能会出现不准确的情况。
--   Binlog日志：准确记录数据库所有的增、删、改操作信息以及恢复用户的增量数据。Binlog日志先暂存在实例中，系统定期将实例中已经写完数据的Binlog日志转移至OSS保存7天。无法保存正在写入数据的Binlog文件，所以单击**一键上传Binlog**后仍有部分Binlog日志没有被上传。这种方式可以准确记录数据库的增量数据，但是无法获取实时日志。
+-   Binlog日志：准确记录数据库所有的增、删、改操作信息以及恢复用户的增量数据。Binlog日志先暂存在实例中，系统定期将实例中已经写完数据的Binlog日志转移至OSS保存7天。无法保存正在写入数据的Binlog文件，所以单击一键上传Binlog后仍有部分Binlog日志没有被上传。这种方式可以准确记录数据库的增量数据，但是无法获取实时日志。
 
 ## 注意事项 {#section_rs8_3vo_yxe .section}
 
@@ -30,7 +30,7 @@ RDS for MySQL版的增量数据可以通过SQL洞察或Binlog日志来查看，�
 
 **说明：** 如果需要查询更大时间范围的SQL记录，请您导出后进行查询。导出功能会异步导出日志， 适合大时间范围内的查询。
 
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41829/156810244456771_zh-CN.png)
+![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/41829/156879659056771_zh-CN.png)
 
 ## 功能说明 {#section_ltz_buz_0f3 .section}
 
@@ -42,15 +42,15 @@ RDS for MySQL版的增量数据可以通过SQL洞察或Binlog日志来查看，�
 
     可以按照数据库、用户、客户端IP、线程ID、执行时长、扫描行数等进行多维度检索，并支持导出和下载搜索结果。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244413817_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659013817_zh-CN.png)
 
 -   SQL分析
 
     新增SQL分析功能，可以对指定时间段的SQL日志进行可视化交互式分析，找出异常SQL，定位性能问题。
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244413818_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659013818_zh-CN.png)
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244413819_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659013819_zh-CN.png)
 
 -   降低成本
 
@@ -62,13 +62,13 @@ RDS for MySQL版的增量数据可以通过SQL洞察或Binlog日志来查看，�
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。 
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156810244437169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156879659037169_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**SQL洞察**。
 5.  单击**立即开通**。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244513750_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659013750_zh-CN.png)
 
 6.  选择SQL审计日志的保存时长，单击**开通服务**。 
 
@@ -76,7 +76,7 @@ RDS for MySQL版的增量数据可以通过SQL洞察或Binlog日志来查看，�
 
     -   试用版：可以长期使用，但是审计日志仅保存一天，即只能查询一天范围内的数据；不支持数据导出等高级功能；不保障数据完整性。
     -   非试用版：可以保存审计日志30天、6个月、1年、3年或5年。按小时扣费，USD 0.0018/\(GB\*小时\)。
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244513755_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659013755_zh-CN.png)
 
 
 ## 修改SQL日志的存储时长 {#section_xou_s8d_59s .section}
@@ -84,17 +84,17 @@ RDS for MySQL版的增量数据可以通过SQL洞察或Binlog日志来查看，�
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。 
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156810244437169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156879659037169_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**SQL洞察**。
 5.  单击**服务设置**。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244513804_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659013804_zh-CN.png)
 
 6.  修改存储时长。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244513805_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659013805_zh-CN.png)
 
 
 ## 关闭SQL洞察 {#section_e12_do8_eix .section}
@@ -106,26 +106,26 @@ SQL洞察功能关闭后，SQL审计日志会被清空。请将SQL审计日志�
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。 
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156810244437169_zh-CN.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7882/156879659037169_zh-CN.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在左侧导航栏中单击**SQL洞察**。
 5.  单击**导出**。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244513823_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659113823_zh-CN.png)
 
 6.  在弹出的对话框中，单击**确定**。
 7.  导出完成后，在**导出列表**中，下载已导出的文件并妥善保存。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244513831_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659113831_zh-CN.png)
 
 8.  单击**服务设置**。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244513804_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659013804_zh-CN.png)
 
 9.  关闭SQL洞察的开关。 
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244513807_zh-CN.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659113807_zh-CN.png)
 
 
 ## 常见问题 {#section_kya_bgw_lhz .section}
@@ -134,7 +134,7 @@ SQL洞察功能关闭后，SQL审计日志会被清空。请将SQL审计日志�
 
 答：您可以在右上角选择**费用** \> **进入费用中心**，然后在左侧菜单栏的**消费记录** \> **消费明细**里查询相应实例的SQL日志大小。
 
-![SQL洞察日志大小](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156810244639928_zh-CN.png)
+![SQL洞察日志大小](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/23711/156879659139928_zh-CN.png)
 
 **说明：** **SQL审计**即SQL洞察的日志大小。
 
