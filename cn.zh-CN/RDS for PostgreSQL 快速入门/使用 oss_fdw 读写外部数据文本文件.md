@@ -93,7 +93,7 @@ FUNCTION oss\_fdw\_list\_file \(relname text, schema text DEFAULT ‘public’\)
 -   文件大小的单位是字节。
 
 
-```
+``` {#codeblock_jwy_e08_5g2}
 select * from oss_fdw_list_file('t_oss');
               name              |   size    
 --------------------------------+-----------
@@ -109,7 +109,7 @@ oss\_fdw.rds\_read\_one\_file：在读模式下，指定某个外表匹配的文
 
 例如，set oss\_fdw.rds\_read\_one\_file = ‘oss\_test/example16.csv.1’;
 
-```
+``` {#codeblock_t2z_0gy_493}
 set oss_fdw.rds_read_one_file = 'oss_test/test.gz.2';
 select * from oss_fdw_list_file('t_oss');
               name              |   size    
@@ -120,7 +120,7 @@ select * from oss_fdw_list_file('t_oss');
 
 ## oss\_fdw用例 {#section_pgb_bjg_wdb .section}
 
-```
+``` {#codeblock_87p_c87_is8}
 # PostgreSQL 创建插件
 create extension oss_fdw;  ---对于PPAS，则执行select rds_manage_extension('create','oss_fdw');
 # 创建 server 
@@ -165,9 +165,9 @@ explain insert into ossexample select * from example;
 
 -   数据导入的性能和PostgreSQL集群的资源（CPU IO MEM MET）相关，也和OSS相关。
 
--   为保证数据导入的性能，请确保云数据库PostgreSQL与OSS所在Region相同，相关信息请参考[OSS endpoint 信息](https://www.alibabacloud.com/help/doc-detail/31834.htm)。
+-   为保证数据导入的性能，请确保云数据库PostgreSQL与OSS所在Region相同，相关信息请参考[OSS endpoint 信息](https://help.aliyun.com/document_detail/oss/user_guide/oss_concept/endpoint.html)。
 
--   如果读取外表的SQL时触发 ERROR: oss endpoint userendpoint not in aliyun white list, 建议使用[阿里云各可用区公共 endpoint](https://www.alibabacloud.com/help/doc-detail/31837.htm)。如果问题仍无法解决，请通过工单反馈。
+-   如果读取外表的SQL时触发`ERROR: oss endpoint userendpoint not in aliyun white list`，建议使用[阿里云各可用区公共 endpoint](https://help.aliyun.com/document_detail/31837.html)。如果问题仍无法解决，请通过工单反馈。
 
 
 ## 错误处理 {#section_owy_djg_wdb .section}
@@ -185,22 +185,22 @@ explain insert into ossexample select * from example;
 
 请参考以下链接中的文档了解和处理各类错误，超时相关的错误可以使用oss\_ext相关参数处理。
 
--   [OSS help 页面](https://www.alibabacloud.com/help/product/31815.htm)
+-   [OSS help 页面](https://help.aliyun.com/product/8314910_oss.html)
 
 -   [PostgreSQL CREATE FOREIGN TABLE 手册](http://www.postgresql.org/docs/9.4/static/sql-createforeigntable.html)
 
--   [OSS 错误处理](https://www.alibabacloud.com/help/doc-detail/32141.htm)
+-   [OSS 错误处理](https://help.aliyun.com/document_detail/32141.html)
 
--   [OSS 错误响应](https://www.alibabacloud.com/help/doc-detail/32005.htm)
+-   [OSS 错误响应](https://help.aliyun.com/document_detail/32005.html)
 
 
 ## id和key隐藏 {#section_pmk_fjg_wdb .section}
 
-CREATE SERVER中的id和key信息如果不做任何处理，用户可以使用`select * from pg_foreign_server`看到明文信息，会暴露用户的id和key。我们通过对id和key进行对称加密实现对id和key的隐藏\(不同的实例使用不同的密钥，最大限度保护用户信息\)，但无法使用类似GP一样的方法，增加一个数据类型，会导致老实例不兼容。
+CREATE SERVER中的id和key信息如果不做任何处理，用户可以使用`select * from pg_foreign_server`看到明文信息，会暴露用户的id和key。我们通过对id和key进行对称加密实现对id和key的隐藏（不同的实例使用不同的密钥，最大限度保护用户信息），但无法使用类似GP一样的方法，增加一个数据类型，会导致老实例不兼容。
 
 最终的加密后的信息如下：
 
-```
+``` {#codeblock_x2p_xv1_vxc}
 postgres=# select * from pg_foreign_server ;
   srvname  | srvowner | srvfdw | srvtype | srvversion | srvacl |                                                                              srvoptions
 -----------+----------+--------+---------+------------+--------+------------------------------------------------------------------------------------------------------------------------------------
@@ -208,5 +208,5 @@ postgres=# select * from pg_foreign_server ;
  ossserver |       10 |  16390 |         |            |        | {host=oss-cn-hangzhou-zmf.aliyuncs.com，id=MD5xxxxxxxx，key=MD5xxxxxxxx，bucket=067862}
 ```
 
-加密后的信息将会以MD5开头\(总长度为len，len%8==3\)，这样导出之后再导入不会再次加密，但是用户不能创建MD5开头的key和id。
+加密后的信息将会以MD5开头（总长度为len，len%8==3），这样导出之后再导入不会再次加密，但是用户不能创建MD5开头的key和id。
 
