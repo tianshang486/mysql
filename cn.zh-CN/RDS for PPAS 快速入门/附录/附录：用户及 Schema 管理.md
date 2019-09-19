@@ -6,38 +6,46 @@
 
 **说明：** 本例中，myadmin 是建立实例时创建的管理账号，newuser 是当前需要新建的账号。
 
-1.  建立有登录权限的用户。
+1.  用初始管理帐号登录数据库，如控制台中已经建立初始帐号的 myadmin。
 
+    ``` {#codeblock_3wo_6qn_99m}
+    psql -U myadmin -h intranet4example.pg.rds.aliyuncs.com -p 3433 pg001
+    Password for user myadmin:
+    psql.bin (9.4.4, server 9.4.1)
+    Type "help" for help.
     ```
-    CREATE USER newuser LOGIN PASSWORD 'password';
+
+2.  建立普通帐号 newuser，密码为 password
+
+    ``` {#codeblock_gp8_q1w_1pu}
+    CREATE USER newuser LOGIN PASSWORD'password';
     ```
 
     参数说明如下：
 
-    -   USER：要创建的用户名，如 **newuser**。
-    -   PASSWORD：用户名对应的密码，如 **password**。
-2.  为新用户建立 schema。
+    -   USER：要创建的用户名。
+    -   password：用户名对应的密码。
+3.  用新用户 newuser 进行数据库登录。
 
-    ```
-    CREATE SCHEMA newuser;GRANT newuser to myuser;ALTER SCHEMA myuser OWNER TO newuser;REVOKE newuser FROM myuser;
-    ```
-
-    **说明：** 
-
-    -   如果在进行 `ALTER SCHEMA newuser OWNER TO newuser` 之前没有将 newuser 加入到 myuser 角色，将会出现如下权限问题：
-
-        ```
-        ERROR: must be member of role "newuser"
-        ```
-
-    -   从安全角度出发，在处理完 OWNER 的授权后，请将 newuser 移出 myuser 角色以提高安全性。
-3.  用新用户 newuser 进行数据库登陆。
-
-    ```
+    ``` {#codeblock_963_bcr_5nt}
     psql -U newuser -h intranet4example.pg.rds.aliyuncs.com -p 3433 pg001
     Password for user newuser:
     psql.bin (9.4.4, server 9.4.1)
     Type "help" for help.
     ```
 
+4.  建立新的业务DATABASE，并建立与用户 newuser 同名的 SCHEMA 作为业务的默认操作空间
+
+    ``` {#codeblock_nc1_4k8_91i}
+    CREATE DATABASE mydb;
+    \c mydb;
+    CREATE SCHEMA newuser;
+    ```
+
+
+**说明：** 
+
+-   通过以上操作，用户 myadmin 将保持作为数据库的初始管理帐号。
+-   所有用户业务操作都通过 mydb 进行处理，系统原生的系统库 edb 及 postgres 会存有系统表数据，不建议将业务数据放到系统库中。
+-   以上操作以后库 mydb 库的主属用户将是 myuser，通过帐号 myuser 或以在此库建立任意对象
 
