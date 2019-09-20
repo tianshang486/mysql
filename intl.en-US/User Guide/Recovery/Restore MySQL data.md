@@ -2,8 +2,7 @@
 
 You can restore data of RDS for MySQL in either of the following ways:
 
--   Restore data to a clone instance. For details, see this article.
--   Restore certain databases or tables rather than the entire instance. For details, see [Restore databases or tables for MySQL](https://www.alibabacloud.com/help/doc-detail/107685.htm).
+Restore data to a clone instance. For details, see this article.
 
  
 
@@ -36,7 +35,7 @@ The costs are the same as purchasing a new instance. For details, see [Pricing](
 1.  Log on to the [RDS console](https://rds.console.aliyun.com/).
 2.  Select the region where the instance is located.
 
-    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/155257459440804_en-US.png)
+    ![地域截图](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/17685/156895027340804_en-US.png)
 
 3.  Click the instance ID.
 4.  In the left-side navigation pane, choose Backup and Recovery.
@@ -56,21 +55,21 @@ The costs are the same as purchasing a new instance. For details, see [Pricing](
  **Note:** **By Time** is displayed only if log backup is enabled.
 
  |
-    |**Edition**|    -   Basic Edition: consists of a single node and separates computing from storage. This edition is cost-effective but is not recommended for production environments.
+    |**Edition**|     -   Basic Edition: consists of a single node and separates computing from storage. This edition is cost-effective but is not recommended for production environments.
     -   High-availability: consists of a master node and a slave node. This edition applies to over 80% of application scenarios.
-For more information, see [Product series overview](../../../../../intl.en-US/Product Introduction/Product series/Product series overview.md).|
-    |**Zone**|A zone is an independent area within a region. Different zones within the same region are basically the same.
+ For more information, see [Product series overview](../../../../intl.en-US/Product Introduction/Product series/Product series overview.md).|
+    |**Zone**| A zone is an independent area within a region. Different zones within the same region are basically the same.
 
-You can deploy your RDS and ECS instances in the same zone or in different zones.Certain regions allow you deploy a High-availability instance across zones, such as **Zone F + Zone G**. This indicates that the master and slave nodes of the High-availability instance are in two different zones so that the disaster recovery capability is higher. This does not incur extra costs.
+ You can deploy your RDS and ECS instances in the same zone or in different zones. Certain regions allow you deploy a High-availability instance across zones, such as **Zone F + Zone G**. This indicates that the master and slave nodes of the High-availability instance are in two different zones so that the disaster recovery capability is higher. This does not incur extra costs.
 
-**Note:** The region of the clone instance is the same as that of the original instance.
+ **Note:** The region of the clone instance is the same as that of the original instance.
 
-|
-    |**Type**|It is recommended that the specifications and storage of the clone instance be equal to higher than those of the original instance; otherwise, the data restoration may take a long time.
+ |
+    |**Type**| It is recommended that the specifications and storage of the clone instance be equal to higher than those of the original instance; otherwise, the data restoration may take a long time.
 
-Each type of specification provides a specific number of CPU cores, memory, maximum number of connections, and maximum IOPS. For details, see [Instance type list](../../../../../intl.en-US/Product Introduction/Instance types/Instance type list.md).
+ Each type of specification provides a specific number of CPU cores, memory, maximum number of connections, and maximum IOPS. For details, see [Instance types](../../../../intl.en-US/Product Introduction/Instance types/Instance types.md).
 
-RDS provides the following instance type families:
+ RDS provides the following instance type families:
 
     -   General: A general instance has its own memory and I/O resources, and shares CPU and storage resources with other general instances on the same server.
     -   Dedicated: A dedicated instance has it own CPU, memory, storage, and I/O resources.
@@ -86,7 +85,7 @@ RDS provides the following instance type families:
 
 ## Log on to the clone instance and verify the data {#section_k2y_np4_ydb .section}
 
-For information about how to log on to an instance, see [Connect to an instance](../../../../../intl.en-US/Quick Start for MySQL/Connect to an instance.md).
+For information about how to log on to an instance, see [Connect to an RDS for MySQL instance](../../../../intl.en-US/Quick Start for MySQL/Connect to an RDS for MySQL instance.md).
 
 ## Migrate data to the original instance {#section_jtd_v11_ydb .section}
 
@@ -105,7 +104,7 @@ DDL operations are not allowed during the migration; otherwise, the migration ma
 3.  Click **Create Migration Task**.
 4.  Enter the task name, source database information, and target database information.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/155257459440810_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/156895027440810_en-US.png)
 
     -   Task name: A default task name is generated automatically . It is recommended that you set a meaningful name so that the task can be identified easily.
 
@@ -119,7 +118,7 @@ DDL operations are not allowed during the migration; otherwise, the migration ma
 
         -   **Database Account**: Enter the account name of the clone instance.
         -   **Database Password**: Enter the password of the preceding account.
-        -   **Connection method**: Generally, select **Non-encrypted connection**. If [SSL encryption](intl.en-US/User Guide/Security/Set SSL encryption.md#) has been enabled for the instance, select **SSL secure connection**.
+        -   **Connection method**: Generally, select **Non-encrypted connection**. If [SSL encryption](intl.en-US/User Guide/Security/Configure SSL encryption.md#) has been enabled for the instance, select **SSL secure connection**.
 
             **Note:** This parameter is displayed only if you have selected certain RDS instances.
 
@@ -133,7 +132,7 @@ DDL operations are not allowed during the migration; otherwise, the migration ma
 
         -   **Database Account**: Enter the account name of the original instance.
         -   **Database Password**: Enter the password of the preceding account.
-        -   **Connection method**: Generally, select **Non-encrypted connection**. If [SSL encryption](intl.en-US/User Guide/Security/Set SSL encryption.md#) has been enabled for the instance, select **SSL secure connection**.
+        -   **Connection method**: Generally, select **Non-encrypted connection**. If [SSL encryption](intl.en-US/User Guide/Security/Configure SSL encryption.md#) has been enabled for the instance, select **SSL secure connection**.
 
             **Note:** This parameter is displayed only if you have selected certain RDS instances.
 
@@ -147,18 +146,18 @@ DDL operations are not allowed during the migration; otherwise, the migration ma
 
     -   In the right pane, place your mouse over an object and click **Edit** to modify the object name.
     -   Rename the object in the target instance.
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/155257459440814_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/156895027740814_en-US.png)
 
 8.  Click **Pre-check and Start**.
     -   If the pre-check succeeds, go to step 11.
     -   If the pre-check fails, go to step 9.
-9.  If the pre-check fails, click ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/22161/155257459440827_en-US.png) next to the failed item to view details.
+9.  If the pre-check fails, click ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/22161/156895027840827_en-US.png) next to the failed item to view details.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15525745943951_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7959/15689502783951_en-US.png)
 
 10. After fixing all problems, select the migration task in the migration task list and click **Start**.
 
-    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/155257459440816_en-US.png)
+    ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7967/156895028040816_en-US.png)
 
 11. If the pre-check succeeds, click **Next**.
 12. On the Confirm Purchase Configuration dialog box, confirm the configuration, select **Service Terms of Data Transmission \(Pay-As-You-Go\)**, and click **Buy and Start Now**.
