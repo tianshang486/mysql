@@ -37,7 +37,7 @@ You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeTags)
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|Items| | | The array that consists of tag data.
+|Items|N/A|None| The array that consists of tag data.
 
  |
 |└TagKey|String|key1| The tag key.
@@ -46,7 +46,7 @@ You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeTags)
 |└TagValue|String|value1| The tag value.
 
  |
-|└DBInstanceIds| |rm-uf6wjk5xxxxxxx| The IDs of instances to which the tag has been bound.
+|└DBInstanceIds|N/A|rm-uf6wjk5xxxxxxx| The IDs of instances to which the tag has been bound.
 
  |
 |RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF| The ID of the request.
@@ -128,5 +128,5 @@ Successful response examples
 |400|Tag.Malformed|The specified parameter Type is not valid.|The error message returned when the TagKey is invalid.|
 |400|Tag.Malformed|The specified parameter Type is not valid.|The error message returned when the TagValue is invalid.|
 
-[View error codes](https://error-center.aliyun.com/status/product/Rds)
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds?spm=5176.10421674.0.0.17f7ebed4WFmrN).
 
