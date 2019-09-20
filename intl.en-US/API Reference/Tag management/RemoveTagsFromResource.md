@@ -108,5 +108,5 @@ Successful response examples
 
 ## Error codes {#section_uvw_lgn_1gl .section}
 
-For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds?spm=5176.10421674.0.0.17f7ebed4WFmrN)
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds?spm=5176.10421674.0.0.17f7ebed4WFmrN).
 
