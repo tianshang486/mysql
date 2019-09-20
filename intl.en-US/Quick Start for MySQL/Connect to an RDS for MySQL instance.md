@@ -1,10 +1,10 @@
 # Connect to an RDS for MySQL instance {#concept_n1v_qpf_vdb .concept}
 
-After completing the initial configurations, you can use Data Management Service \(DMS\), a database client, or the CLI to connect to ApsaraDB RDS for MySQL.
+This topic describes how to connect to an RDS for MySQL instance. After completing the initial configurations, you can use Data Management Service \(DMS\), a database client, or the CLI to connect to ApsaraDB RDS for MySQL.
 
 ## Background information {#section_ixn_v5c_dhb .section}
 
-After you [create an instance](intl.en-US/Quick Start for MySQL/Create an RDS for MySQL instance.md), [configure a whitelist](intl.en-US/Quick Start for MySQL/Initial configuration/Configure a whitelist.md#), and [create an account](intl.en-US/Quick Start for MySQL/Initial configuration/Create accounts and databases.md), you can use DMS, a database client, or CLI to connect to your RDS instance. You can also set the IP address, port, and account information in applications to connect.
+After you [create an instance](intl.en-US/Quick Start for MySQL/Create an RDS for MySQL instance.md), [configure a whitelist](intl.en-US/Quick Start for MySQL/Initial configuration/Configure a whitelist for an RDS for MySQL instance.md#), and [create an account](intl.en-US/Quick Start for MySQL/Initial configuration/Create accounts and databases for an RDS for MySQL instance.md), you can use DMS, a database client, or CLI to connect to your RDS instance. You can also set the IP address, port, and account information in applications to connect.
 
 ## Use DMS to connect to an RDS instance {#section_pgl_xm5_vdb .section}
 
@@ -32,20 +32,20 @@ ApsaraDB RDS for MySQL is fully compatible with MySQL. You can connect to an RDS
     3.  Find the RDS instance and click its ID.
     4.  On the displayed **Basic Information** page, find the private and public IP addresses and their corresponding port numbers.
 
-![基本信息](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15653397452609_en-US.png)
+![基本信息](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15689433542609_en-US.png)
 
  |
     |**User**|The username of the account that you use to access the RDS instance.|
     |**Password**|The password of the account that you use to access the RDS instance.|
     |**Port**|The port for the RDS instance to establish a connection. If you use the private IP address of the RDS instance to establish a connection, enter the private port number. If you use the public IP address of the RDS instance to establish a connection, enter the public port number.|
 
-    ![HeidiSQL客户端设置连接信息](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/156533974554911_en-US.png)
+    ![HeidiSQL客户端设置连接信息](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/156894335454911_en-US.png)
 
 4.  Click **Open**.
 
     If the entered information is correct, the RDS instance can be connected.
 
-    ![HeidiSQL客户端实例连接成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15653397452610_en-US.png)
+    ![HeidiSQL客户端实例连接成功](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/7823/15689433542610_en-US.png)
 
 
 ## Use the CLI to connect to an RDS instance {#section_jch_n19_l3p .section}
@@ -58,7 +58,7 @@ mysql -h<Host name> -P<Port number> -u<Username> -p<Password> -D<RDS instance na
 
 |Field|Description|Example|
 |-----|-----------|-------|
-|-h|The private or public IP address of the RDS instance. For more information, see [Set intranet and Internet addresses](../../../../intl.en-US/User Guide/Connection management/Set connection addresses.md#).|`rm-bpxxxxxxxxxxxxxx.mysql.rds.aliyuncs.com`|
+|-h|The private or public IP address of the RDS instance. For more information, see [Configure endpoints](../../../../intl.en-US/User Guide/Connection management/Configure endpoints.md#).|`rm-bpxxxxxxxxxxxxxx.mysql.rds.aliyuncs.com`|
 |-P|The port for the RDS instance to establish a connection. -   If you use the private IP address of the RDS instance to establish a connection, enter the private port number.
 -   If you use the public IP address of the RDS instance to establish a connection, enter the public port number.
 
