@@ -50,7 +50,7 @@ option参数说明如下。
 ## 示例
 
 ```
---使用裁剪范围。
+--使用裁剪缓存范围。
 SELECT ST_AsImage(raster_obj, 
                   '(-180,-90), (0,0)'::Box) 
 FROM raster_table    
@@ -63,7 +63,7 @@ SELECT ST_AsImage(raster_obj,
 FROM raster_table    
 WHERE id=1;
 
---指定波段使用裁剪范围。
+--指定波段使用裁剪缓存范围。
 SELECT ST_AsImage(raster_obj, 
                   '(-180,-90), (0,0)'::Box,
                  1,
@@ -90,7 +90,7 @@ SELECT ST_AsImage(rast,
 FROM raster_table    
 WHERE id=1;
 
---指定象元坐标裁剪并使用统计值拉伸。
+--指定象元坐标裁剪缓存并使用统计值拉伸。
 SELECT ST_AsImage(rast, 
                   '(0,0), (200,100)'::Box, 
                   0, 
