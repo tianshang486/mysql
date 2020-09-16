@@ -1,0 +1,84 @@
+# 备份加密
+
+备份加密是利用备份工具的加密能力对RDS MySQL实例备份进行加密，开发人员无需更改任何应用程序。如果需要使用加密的备份，需要先下载备份，然后在解压缩时进行解密。
+
+-   实例类型为如下之一：
+    -   RDS MySQL 8.0高可用版（本地SSD盘）
+    -   RDS MySQL 5.7高可用版（本地SSD盘）
+    -   RDS MySQL 5.6高可用版（本地SSD盘）
+-   [开通KMS](/cn.zh-CN/产品定价/开通方法.md)。
+
+加密使用的密钥由密钥管理服务（KMS）产生和管理，RDS不提供加密所需的密钥和证书。您不仅可以使用阿里云自动生成的密钥，也可以使用自带的密钥材料进行加密。
+
+如果您需要使用自带的密钥材料进行备份加密，首先需要创建一个[服务关联角色]()，RDS服务通过该角色获取KMS密钥列表、密钥属性以及别名后，才能在控制台给您展示加密密钥列表，并且在实例加密之后展示加密信息。
+
+开通加密服务的操作中，RDS服务会标记您选择的密钥，备份系统会在之后的备份操作中通过服务关联角色使用密钥进行备份加密。
+
+## 注意事项
+
+-   备份加密开通后无法关闭。
+-   备份加密开通后无法修改密钥。
+-   备份加密开通后，您如果要恢复数据到本地，需要先通过RDS解密。
+-   使用已有自定义密钥时，需要注意：
+    -   禁用密钥、设置密钥删除计划或者删除密钥材料都会造成密钥不可用，从而使基于该密钥加密备份的实例运维操作失败，可能会影响实例的可用性。基于该加密备份的克隆和恢复等操作也会失败。
+    -   需要使用主账号或者具有如下权限的子账号：
+
+        ```
+        {
+            "Version": "1",
+            "Statement": [
+                {
+                    "Action": [
+                        "ram:CreateServiceLinkedRole"
+                    ],
+                    "Resource": "*",
+                    "Effect": "Allow",
+                    "Condition": {
+                        "StringEquals": {
+                            "ram:ServiceName": "backupencryption.rds.aliyuncs.com"
+                        }
+                    }
+                },
+                {
+                    "Action": [
+                        "kms:ListResourceTags",
+                        "kms:TagResource"
+                    ],
+                    "Effect": "Allow",
+                    "Resource": [
+                        "acs:kms:*:*:*"
+                    ]
+                }
+            ]
+        }
+        ```
+
+
+## 解密数据
+
+1.  获取Plaintext。
+
+    如果您需要使用加密的备份，请首先根据备份的加密信息Ciphertext和主密钥获取对应的Plaintext。您可以调用API [Decrypt](/cn.zh-CN/API参考/密钥/Decrypt.md)获取Plaintext。
+
+    ![plaintext](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4737320061/p166878.png)
+
+2.  获取解密密码。
+
+    获取的Plaintext为base64编码的二进制串，在经过base64解码之后，把各个二进制转换为对应的十六进制即为本次解密的密码。以下为Python代码示例：
+
+    ```
+    import base64
+    import binascii
+    plaintext = 'your plaintext'
+    password = binascii.b2a_hex(base64.decodestring(plaintext))
+    ```
+
+3.  获取加密算法。
+
+    备份加密默认使用的算法为AES256，算法的具体信息可以在备份的详情页面查看。
+
+4.  解密数据。
+
+    在获取解密密码和算法之后，即可在备份工具使用`--decrypt`和`--encrypt-key`选项指定对应的参数，从而完成解密操作。
+
+
