@@ -134,6 +134,16 @@
 -   [变更配置](/cn.zh-CN/RDS MySQL 数据库/变更实例/变更配置.md)
 -   [解决CPU、内存、空间、IOPS使用率偏高的问题](~~101186~~)
 
+## 购买实例
+
+如何购买实例请参见：
+
+-   [创建RDS MySQL实例](/cn.zh-CN/RDS MySQL 数据库/快速入门/创建RDS MySQL实例.md)
+-   [创建RDS SQL Server实例](/cn.zh-CN/RDS SQL Server 数据库/快速入门/创建RDS SQL Server实例.md)
+-   [创建RDS PostgreSQL实例](/cn.zh-CN/RDS PostgreSQL 数据库/快速入门/创建RDS PostgreSQL实例.md)
+-   [创建RDS PPAS实例](/cn.zh-CN/RDS PPAS 数据库/快速入门/创建RDS PPAS实例.md)
+-   [创建RDS MariaDB实例](/cn.zh-CN/RDS MariaDB TX 数据库/快速入门/创建RDS MariaDB实例.md)
+
 ## 相关文档
 
 -   [价格计算器](https://www.aliyun.com/pricing-calculator?spm=5176.8064714.321464.pricing_version_2.64a85fb0ctJ33N#/add/3884821/rds/rds)
