@@ -205,7 +205,7 @@ Enhanced SSD: 50 GB to 32,000 GB
 Enhanced SSD of PL2: 500 GB to 32,000 GB
 
 Enhanced SSD of PL3: 1,500 GB to 32,000 GB |
-|pg.n2.medium.2c|2核 4GB|100|
+|pg.n2.medium.2c|2 CPU core, 4 GB|100|
 |Dedicated instance|pg.x2.medium.2c|2 CPU cores, 4 GB|400|
 |pg.x4.medium.2c|2 CPU cores, 8 GB|800|
 |pg.x8.medium.2c|2 CPU cores, 16 GB|1,600|
