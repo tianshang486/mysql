@@ -7,14 +7,14 @@ This topic describes the release notes of minor AliSQL versions.
 20200630
 
 -   New features:
-    -   The faster DDL feature provides an optimized buffer pool management mechanism. This mechanism reduces the impact of data definition language \(DDL\) operations and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/AliSQL Kernel/Faster DDL.md).
+    -   The faster DDL feature provides an optimized buffer pool management mechanism. This mechanism reduces the impact of data definition language \(DDL\) operations and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/AliSQL Kernel/Stability/Faster DDL.md).
     -   The maximum number of connections that are allowed is increased to 500,000.
 -   Performance optimization:
     -   Thread pools are optimized.
     -   The memory allocation mechanism is optimized. You can specify the maximum number of memory resources that are allowed for Performance Schema based on the instance type.
     -   SQL log files are no longer detected.
     -   Transparent Data Encryption \(TDE\) caches the keys that are provided by Key Management Service \(KMS\).
-    -   The status of threads that are running under concurrency control \(CCL\) can be modified. For more information, see [Statement concurrency control](/intl.en-US/AliSQL Kernel/Statement concurrency control.md).
+    -   The status of threads that are running under concurrency control \(CCL\) can be modified. For more information, see [Statement concurrency control](/intl.en-US/AliSQL Kernel/Stability/Statement concurrency control.md).
 -   Bugs fixed:
     -   The bug that causes the system to consider a semicolon \(;\) to be a part of the command used to create an outline is fixed.
     -   The bug that causes the server to unexpectedly exit in the event of table changes is fixed.
@@ -25,8 +25,8 @@ This topic describes the release notes of minor AliSQL versions.
 20200430
 
 -   New features:
-    -   The Binlog in Redo feature is introduced. This feature writes binary logs to the redo log file before the binary logs are written to disks. This reduces I/O consumption and improves database performance. For more information, see [Binlog in Redo](/intl.en-US/AliSQL Kernel/Binlog in Redo.md).
-    -   The Data Protect feature is introduced. This feature supports the customization of security policies that are used to manage the permissions on DROP and TRUNCATE statements. This allows you to avoid data losses caused by the unintentional execution of these statements. For more information, see [Data Protect](/intl.en-US/AliSQL Kernel/Data Protect.md).
+    -   The Binlog in Redo feature is introduced. This feature writes binary logs to the redo log file before the binary logs are written to disks. This reduces I/O consumption and improves database performance. For more information, see [Binlog in Redo](/intl.en-US/AliSQL Kernel/Performance/Binlog in Redo.md).
+    -   The Data Protect feature is introduced. This feature supports the customization of security policies that are used to manage the permissions on DROP and TRUNCATE statements. This allows you to avoid data losses caused by the unintentional execution of these statements. For more information, see [Data Protect](/intl.en-US/AliSQL Kernel/Security/Data Protect.md).
     -   The code for row caching in X-Engine is restructured.
     -   The XA\_RECOVER\_ADMIN permission is provided.
 -   Performance optimization:
@@ -42,7 +42,7 @@ This topic describes the release notes of minor AliSQL versions.
 
 -   New feature:
 
-    The `TRUNCATE TABLE` statement is supported. After you execute this statement on a table, this statement moves the table to a dedicated directory used for the recycle bin. Then, this statement creates a table by using the schema of the table that you truncate. For more information, see [Recycle Bin](/intl.en-US/AliSQL Kernel/Recycle Bin.md).
+    The `TRUNCATE TABLE` statement is supported. After you execute this statement on a table, this statement moves the table to a dedicated directory used for the recycle bin. Then, this statement creates a table by using the schema of the table that you truncate. For more information, see [Recycle Bin](/intl.en-US/AliSQL Kernel/Security/Recycle Bin.md).
 
 -   Performance optimization:
     -   The output of Transmission Control Protocol \(TCP\) errors is disabled by default.
@@ -55,7 +55,7 @@ This topic describes the release notes of minor AliSQL versions.
 20200229
 
 -   New features:
-    -   The performance agent feature is introduced. For more information, see [Performance Agent](/intl.en-US/AliSQL Kernel/Performance Agent.md). This feature is provided as a MySQL plug-in. It allows you to collect and analyze the performance metrics of an RDS instance in an efficient manner.
+    -   The performance agent feature is introduced. For more information, see [Performance Agent](/intl.en-US/AliSQL Kernel/Stability/Performance Agent.md). This feature is provided as a MySQL plug-in. It allows you to collect and analyze the performance metrics of an RDS instance in an efficient manner.
     -   Network round-trip time is introduced to the semi-synchronous mode. This allows you to better understand the performance of an RDS instance.
 -   Performance optimization:
     -   Statement-level CCL is allowed on read-only RDS instances.
@@ -76,12 +76,12 @@ This topic describes the release notes of minor AliSQL versions.
 
 -   New feature:
 
-    Three hints are introduced. These hints can be used in the SELECT, UPDATE, INSERT, and DELETE statements to commit and roll back transactions at faster speeds. For more information, see [Inventory Hint](/intl.en-US/AliSQL Kernel/Inventory Hint.md).
+    Three hints are introduced. These hints can be used in the SELECT, UPDATE, INSERT, and DELETE statements to commit and roll back transactions at faster speeds. For more information, see [Inventory Hint](/intl.en-US/AliSQL Kernel/Performance/Inventory Hint.md).
 
 -   Performance optimization:
     -   CCL is optimized. When an RDS instance is started, CCL queue structures are initialized before CCL rules.
     -   The file deletion mechanism is optimized. When you asynchronously delete small files, links to the small files are canceled.
-    -   The performance of thread pools is optimized. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Thread Pool.md).
+    -   The performance of thread pools is optimized. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Feature/Thread Pool.md).
     -   Restoration inconsistency checks are disabled by default.
     -   The permissions required to configure variables are changed.
         -   The user role that is authorized to configure the following variables is changed to standard user:
@@ -100,7 +100,7 @@ This topic describes the release notes of minor AliSQL versions.
 
 -   New feature:
 
-    Deleted tables are transferred to the recycle bin. These tables can be retrieved from the recycle bin before the specified retention period elapses. For more information, see [Recycle Bin](/intl.en-US/AliSQL Kernel/Recycle Bin.md).
+    Deleted tables are transferred to the recycle bin. These tables can be retrieved from the recycle bin before the specified retention period elapses. For more information, see [Recycle Bin](/intl.en-US/AliSQL Kernel/Security/Recycle Bin.md).
 
 -   Performance optimization:
     -   The mechanism that is used to process short-lived connections is optimized.
@@ -117,7 +117,7 @@ This topic describes the release notes of minor AliSQL versions.
 
 New feature:
 
-Bucket-level queuing is supported. Statements that request the same resources are queued in one bucket to reduce overheads. For more information, see [Statement Queue](/intl.en-US/AliSQL Kernel/Statement Queue.md).
+Bucket-level queuing is supported. Statements that request the same resources are queued in one bucket to reduce overheads. For more information, see [Statement Queue](/intl.en-US/AliSQL Kernel/Performance/Statement Queue.md).
 
 20191101
 
@@ -130,8 +130,8 @@ Bucket-level queuing is supported. Statements that request the same resources ar
     -   A mechanism is introduced to stop the creation of temporary tables on an RDS instance when the RDS instance is locked.
     -   X-Engine is provided to store transactions based on a log-structured merge \(LSM\) tree.
 -   Performance optimization:
-    -   The thread pool feature is optimized to reduce mutexes. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Thread Pool.md).
-    -   The returning feature is optimized to monitor thread pools. For more information, see [Performance Insight](/intl.en-US/AliSQL Kernel/Performance Insight.md).
+    -   The thread pool feature is optimized to reduce mutexes. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Feature/Thread Pool.md).
+    -   The returning feature is optimized to monitor thread pools. For more information, see [Performance Insight](/intl.en-US/AliSQL Kernel/Stability/Performance Insight.md).
     -   Parameter adjustment:
         -   `primary_fast_lookup`: a session parameter. Default value: true.
         -   `thread_pool_enabled`: a global parameter. Default value: true.
@@ -140,7 +140,7 @@ Bucket-level queuing is supported. Statements that request the same resources ar
 
 -   New features:
     -   The TDE feature is introduced. This feature supports real-time I/O encryption and decryption on data files. Data is encrypted before it is written to disks and decrypted before it is read from disks to the memory. For more information, see [TDE](/intl.en-US/RDS MySQL Database/Data security/Configure TDE for an ApsaraDB RDS for MySQL instance.md).
-    -   The returning feature allows data manipulation language \(DML\) statements to return result sets. In addition, the DBMS\_TRANS package is provided for you to use this feature. For more information, see [Returning](/intl.en-US/AliSQL Kernel/Returning.md).
+    -   The returning feature allows data manipulation language \(DML\) statements to return result sets. In addition, the DBMS\_TRANS package is provided for you to use this feature. For more information, see [Returning](/intl.en-US/AliSQL Kernel/Feature/Returning.md).
     -   The forced conversion from the MyISAM or MEMORY storage engine to the InnoDB storage engine is supported. If the global variable **force\_mysiam\_to\_innodb** or **force\_memory\_to\_innodb** is set to **ON**, a table is converted from the MyISAM or MEMORY storage engine to the InnoDB storage engine when the table is created or modified.
     -   The permissions that allow standard accounts to switch over services between primary and secondary RDS instances are disabled. Only privileged accounts have these permissions.
     -   A performance proxy plug-in is provided. This plug-in obtains performance data and saves the data as TXT files to your computer. These files are deleted by using a round-robin algorithm. Only the latest second-level files are retained.
@@ -162,12 +162,12 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
 20190816
 
 -   New features:
-    -   The thread pool feature is introduced to separate threads from sessions. If a large number of sessions exist, the system can run a small number of threads to complete the tasks in active sessions. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Thread Pool.md).
-    -   The CCL feature allows you to specify the maximum number of concurrent requests that are allowed. This enables the system to handle traffic bursts, process statements that consume excessive resources, and adapt to changes of SQL models. This also ensures the continuity and stability of your database service. For more information, see [Statement concurrency control](/intl.en-US/AliSQL Kernel/Statement concurrency control.md).
-    -   The statement outline feature supports optimizer hints and index hints. These hints are used to stabilize the execution of query plans on an RDS instance. For more information, see [Statement outline](/intl.en-US/AliSQL Kernel/Statement outline.md).
-    -   The Sequence engine is introduced to simplify the acquisition of sequence values. For more information, see [Sequence Engine](/intl.en-US/AliSQL Kernel/Sequence Engine.md).
-    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, a background thread is started to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/AliSQL Kernel/Purge Large File Asynchronously.md).
-    -   The performance insight feature is introduced to support load monitoring, association analysis, and performance optimization at the instance level. This allows you to evaluate the loads of an RDS instance. This also allows you to locate performance issues to improve your database stability. For more information, see [Performance Insight](/intl.en-US/AliSQL Kernel/Performance Insight.md).
+    -   The thread pool feature is introduced to separate threads from sessions. If a large number of sessions exist, the system can run a small number of threads to complete the tasks in active sessions. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Feature/Thread Pool.md).
+    -   The CCL feature allows you to specify the maximum number of concurrent requests that are allowed. This enables the system to handle traffic bursts, process statements that consume excessive resources, and adapt to changes of SQL models. This also ensures the continuity and stability of your database service. For more information, see [Statement concurrency control](/intl.en-US/AliSQL Kernel/Stability/Statement concurrency control.md).
+    -   The statement outline feature supports optimizer hints and index hints. These hints are used to stabilize the execution of query plans on an RDS instance. For more information, see [Statement outline](/intl.en-US/AliSQL Kernel/Feature/Statement outline.md).
+    -   The Sequence engine is introduced to simplify the acquisition of sequence values. For more information, see [Sequence Engine](/intl.en-US/AliSQL Kernel/Feature/Sequence Engine.md).
+    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, a background thread is started to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/AliSQL Kernel/Stability/Purge Large File Asynchronously.md).
+    -   The performance insight feature is introduced to support load monitoring, association analysis, and performance optimization at the instance level. This allows you to evaluate the loads of an RDS instance. This also allows you to locate performance issues to improve your database stability. For more information, see [Performance Insight](/intl.en-US/AliSQL Kernel/Stability/Performance Insight.md).
     -   An optimized instance locking mechanism is introduced. This mechanism allows you to drop and truncate tables on an RDS instance even if the RDS instance is locked.
 -   Bugs fixed:
     -   The bug that causes the system to incorrectly calculate file sizes is fixed.
@@ -190,11 +190,11 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
 20200630
 
 -   New features:
-    -   Three hints are introduced to the inventory hint feature. These hints are used in SELECT, UPDATE, INSERT, and DELETE statements to commit and roll back transactions at faster speeds. This allows you to increase the throughput of your application. For more information, see [Inventory Hint](/intl.en-US/AliSQL Kernel/Inventory Hint.md).
-    -   The CCL feature allows you to specify the maximum number of concurrent requests that are allowed. This enables the system to handle traffic bursts, process statements that consume excessive resources, and adapt to changes of SQL models. This also ensures the continuity and stability of your database service. For more information, see [Statement concurrency control](/intl.en-US/AliSQL Kernel/Statement concurrency control.md).
-    -   The statement queue feature supports bucket-level queuing. Statements that request the same resources are queued in one bucket to reduce overheads. For more information, see [Statement Queue](/intl.en-US/AliSQL Kernel/Statement Queue.md).
-    -   The statement outline feature supports optimizer hints and index hints. These hints are used to stabilize the execution of query plans on an RDS instance. For more information, see [Statement outline](/intl.en-US/AliSQL Kernel/Statement outline.md).
-    -   The faster DDL feature provides an optimized buffer pool management mechanism. This mechanism reduces the impact of DDL operations and increases the number of concurrent DDL operations that are allowed. For more information, see[Faster DDL](/intl.en-US/AliSQL Kernel/Faster DDL.md).
+    -   Three hints are introduced to the inventory hint feature. These hints are used in SELECT, UPDATE, INSERT, and DELETE statements to commit and roll back transactions at faster speeds. This allows you to increase the throughput of your application. For more information, see [Inventory Hint](/intl.en-US/AliSQL Kernel/Performance/Inventory Hint.md).
+    -   The CCL feature allows you to specify the maximum number of concurrent requests that are allowed. This enables the system to handle traffic bursts, process statements that consume excessive resources, and adapt to changes of SQL models. This also ensures the continuity and stability of your database service. For more information, see [Statement concurrency control](/intl.en-US/AliSQL Kernel/Stability/Statement concurrency control.md).
+    -   The statement queue feature supports bucket-level queuing. Statements that request the same resources are queued in one bucket to reduce overheads. For more information, see [Statement Queue](/intl.en-US/AliSQL Kernel/Performance/Statement Queue.md).
+    -   The statement outline feature supports optimizer hints and index hints. These hints are used to stabilize the execution of query plans on an RDS instance. For more information, see [Statement outline](/intl.en-US/AliSQL Kernel/Feature/Statement outline.md).
+    -   The faster DDL feature provides an optimized buffer pool management mechanism. This mechanism reduces the impact of DDL operations and increases the number of concurrent DDL operations that are allowed. For more information, see[Faster DDL](/intl.en-US/AliSQL Kernel/Stability/Faster DDL.md).
     -   The maximum number of connections that are allowed is increased to 500,000.
 -   Performance optimization:
     -   The `call dbms_admin.show_native_procedure();` command is provided to view all of the procedures on an RDS instance.
@@ -211,7 +211,7 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
 
 -   New feature:
 
-    The Data Protect feature is introduced. This feature supports the customization of security policies that are used to manage the permissions on DROP and TRUNCATE statements. This allows you to avoid data losses caused by the unintentional execution of these statements. For more information, see [Data Protect](/intl.en-US/AliSQL Kernel/Data Protect.md).
+    The Data Protect feature is introduced. This feature supports the customization of security policies that are used to manage the permissions on DROP and TRUNCATE statements. This allows you to avoid data losses caused by the unintentional execution of these statements. For more information, see [Data Protect](/intl.en-US/AliSQL Kernel/Security/Data Protect.md).
 
 -   Performance optimization:
 
@@ -225,7 +225,7 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
 20200331
 
 -   New features:
-    -   The fast query cache is introduced. It is developed by Alibaba Cloud based on the native MySQL query cache. It uses a new design and implementation mechanism to improve query performance. For more information, see [A new version is available.](/intl.en-US/AliSQL Kernel/Fast query cache.md).
+    -   The fast query cache is introduced. It is developed by Alibaba Cloud based on the native MySQL query cache. It uses a new design and implementation mechanism to improve query performance. For more information, see [A new version is available.](/intl.en-US/AliSQL Kernel/Performance/Fast query cache.md).
     -   Two metadata locks are introduced from Percona Server 5.7: LOCK TABLES FOR BACKUP \(LTFB\) and LOCK BINLOG FOR BACKUP \(LBFB\).
 -   Performance optimization:
     -   Thread pools are optimized to ensure compatibility with earlier MySQL versions.
@@ -241,7 +241,7 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
 20200229
 
 -   New features:
-    -   The performance agent feature is introduced. For more information, see [Performance Agent](/intl.en-US/AliSQL Kernel/Performance Agent.md). This feature is provided as a MySQL plug-in. It allows you to collect and analyze the performance metrics of an RDS instance in an efficient manner.
+    -   The performance agent feature is introduced. For more information, see [Performance Agent](/intl.en-US/AliSQL Kernel/Stability/Performance Agent.md). This feature is provided as a MySQL plug-in. It allows you to collect and analyze the performance metrics of an RDS instance in an efficient manner.
     -   Network round-trip time is introduced to the semi-synchronous mode. This allows you to better understand the performance of an RDS instance.
 -   Performance optimization:
     -   The time required to execute the PAUSE statement is reduced in various CPU architectures.
@@ -258,7 +258,7 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
 Performance optimization:
 
 -   The file deletion mechanism is optimized. When you asynchronously delete small files, links to the small files are canceled.
--   The performance of thread pools is optimized. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Thread Pool.md).
+-   The performance of thread pools is optimized. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Feature/Thread Pool.md).
 -   The default value of the thread\_pool\_enabled parameter is changed to OFF.
 
 20191225
@@ -289,10 +289,10 @@ The bug that causes the system to display variables in SQL logs that are generat
     -   A mechanism is introduced to allow the system to access the primary index of a table with a primary key.
     -   A mechanism is introduced to prevent the automatic conversion of tables from the MEMORY to MyISAM storage engines. These tables include system tables and the tables that are invoked by threads in the initializing state.
 -   Performance optimization:
-    -   The thread pool feature is optimized to reduce mutexes. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Thread Pool.md).
+    -   The thread pool feature is optimized to reduce mutexes. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Feature/Thread Pool.md).
     -   An SQL log caching mechanism is introduced to increase SQL logging performance.
-    -   The performance insight feature is optimized to monitor thread pools. For more information, see [Performance Insight](/intl.en-US/AliSQL Kernel/Performance Insight.md).
-    -   The thread pool feature is enabled by default. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Thread Pool.md).
+    -   The performance insight feature is optimized to monitor thread pools. For more information, see [Performance Insight](/intl.en-US/AliSQL Kernel/Stability/Performance Insight.md).
+    -   The thread pool feature is enabled by default. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Feature/Thread Pool.md).
 -   Bugs fixed:
     -   The bug that prevents the release of locks on user tables when these tables are being managed or maintained is fixed.
     -   More TCP errors are added.
@@ -321,13 +321,13 @@ Parameter adjustment:
 
 New feature:
 
-The thread pool feature is introduced to separate threads from sessions. If a large number of sessions exist, the system can run a small number of threads to complete the tasks in active sessions. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Thread Pool.md).
+The thread pool feature is introduced to separate threads from sessions. If a large number of sessions exist, the system can run a small number of threads to complete the tasks in active sessions. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Feature/Thread Pool.md).
 
 20190815
 
 -   New features:
-    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, a background thread is started to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/AliSQL Kernel/Purge Large File Asynchronously.md).
-    -   The performance insight feature is introduced to support load monitoring, association analysis, and performance optimization at the instance level. This feature allows you to evaluate the loads of an RDS instance. This feature also allows you to locate performance issues to ensure the stability of your database service. For more information, see [Performance Insight](/intl.en-US/AliSQL Kernel/Performance Insight.md).
+    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, a background thread is started to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/AliSQL Kernel/Stability/Purge Large File Asynchronously.md).
+    -   The performance insight feature is introduced to support load monitoring, association analysis, and performance optimization at the instance level. This feature allows you to evaluate the loads of an RDS instance. This feature also allows you to locate performance issues to ensure the stability of your database service. For more information, see [Performance Insight](/intl.en-US/AliSQL Kernel/Stability/Performance Insight.md).
     -   An optimized instance locking mechanism is introduced. This mechanism allows you to drop and truncate tables on an RDS instance even if the RDS instance is locked.
 -   Bugs fixed:
     -   The bug that allows you to set the rds\_prepare\_begin\_id option in the `set rds_current_connection` command is fixed.
@@ -419,9 +419,9 @@ New features:
 20200630
 
 -   New features:
-    -   The performance agent feature is introduced. For more information, see [Performance Agent](/intl.en-US/AliSQL Kernel/Performance Agent.md). This feature is provided as a MySQL plug-in. It allows you to collect and analyze the performance metrics of an RDS instance in an efficient manner.
+    -   The performance agent feature is introduced. For more information, see [Performance Agent](/intl.en-US/AliSQL Kernel/Stability/Performance Agent.md). This feature is provided as a MySQL plug-in. It allows you to collect and analyze the performance metrics of an RDS instance in an efficient manner.
     -   The maximum number of connections that are allowed is increased to 500,000.
-    -   The faster DDL feature is introduced. This feature provides an optimized buffer pool management mechanism. This mechanism reduces the impact of DDL operations and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/AliSQL Kernel/Faster DDL.md).
+    -   The faster DDL feature is introduced. This feature provides an optimized buffer pool management mechanism. This mechanism reduces the impact of DDL operations and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/AliSQL Kernel/Stability/Faster DDL.md).
 -   Performance optimization:
     -   The global parameter max\_execution\_time is introduced. If the execution duration of an SQL statement exceeds the value of this parameter, the execution is paused.
     -   Thread pools are optimized.
@@ -432,7 +432,7 @@ New features:
 
 20200430
 
--   The Data Protect feature is introduced. This feature supports the customization of security policies that are used to manage the permissions on DROP and TRUNCATE statements. This allows you to avoid data losses caused by the unintentional execution of these statements. For more information, see [Data Protect](/intl.en-US/AliSQL Kernel/Data Protect.md).
+-   The Data Protect feature is introduced. This feature supports the customization of security policies that are used to manage the permissions on DROP and TRUNCATE statements. This allows you to avoid data losses caused by the unintentional execution of these statements. For more information, see [Data Protect](/intl.en-US/AliSQL Kernel/Security/Data Protect.md).
 -   The mdl\_info table is provided to store information about metadata locks.
 -   The bug that a conflict occurs when the thread pool and ic\_reduce features are both enabled is fixed.
 
@@ -461,7 +461,7 @@ Performance optimization:
 
 -   New feature:
 
-    The thread pool feature is introduced to separate threads from sessions. If a large number of sessions exist, the system can run a small number of threads to complete the tasks in active sessions. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Thread Pool.md).
+    The thread pool feature is introduced to separate threads from sessions. If a large number of sessions exist, the system can run a small number of threads to complete the tasks in active sessions. For more information, see [Thread Pool](/intl.en-US/AliSQL Kernel/Feature/Thread Pool.md).
 
 -   Performance optimization:
 
@@ -496,7 +496,7 @@ Bugs fixed:
 -   New features:
     -   The rotation of slow query logs is supported. Every CSV slow query log file is assigned a unique name and a new file. This prevents data losses during the collection of slow query logs. You can run the `show variables like '%rotate_log_table%';` command to check whether the rotation of slow query logs is enabled.
     -   A new SM4 encryption algorithm is introduced to replace the original SM4 encryption algorithm.
-    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, a background thread is started to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/AliSQL Kernel/Purge Large File Asynchronously.md).
+    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, a background thread is started to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/AliSQL Kernel/Stability/Purge Large File Asynchronously.md).
     -   The output of TCP errors is supported. TCP errors in read, read-wait, and write-wait events along with their error codes are returned by using end\_connection events. In addition, logs with information about the errors are generated.
     -   An SQL log caching mechanism is introduced to increase SQL logging performance.
 -   Bugs fixed:
