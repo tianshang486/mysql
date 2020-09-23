@@ -97,7 +97,10 @@ Procedure
     -   The **By Time** option appears only when the log backup function is enabled.
     -   You can restore some or all of the databases on the original RDS instance. |
     |**Database**|Specify whether you want to restore some or all of the databases on the original RDS instance. If you select **Part**, you must manually enter the names of the databases that you want to restore. In addition, you must separate the database names with commas \(,\).|
-    |**Edition**|
+    |**Edition**|    -   **Basic**: Your database system consists of only one instance. Computing is separated from storage to increase cost-effectiveness.
+    -   **High-availability**: Your database system consists of one primary instance and one secondary instance. The primary and secondary instances work in the classic high-availability architecture.
+    -   **AlwaysOn**: Your database system consists of one primary instance, one secondary instance, and up to seven read-only instances that are created to process more read requests.
+**Note:** The RDS editions available vary based on the region and database engine version you select. For more information, see [ApsaraDB for RDS edition overview](/intl.en-US/Product Introduction/Product editions/Overview of ApsaraDB for RDS editions.md). |
     |**Zone**|The zone to which the RDS instance belongs. A zone is an independent physical location within a region. The **Zone of Primary Node** parameter specifies the zone to which the primary RDS instance belongs. The **Zone of Secondary Node** parameter specifies the zone to which the secondary RDS instance belongs.
 
 You can select the **Single-zone Deployment** or **Multi-zone Development** method.
@@ -111,8 +114,10 @@ The multi-zone deployment method provides zone-level disaster recovery. We recom
     -   After the RDS instance is created, you can view information about the RDS instance and its secondary RDS instance on the **Service Availability** page.
     -   If you select the RDS Basic Edition, the database system consists of only one RDS instance and supports only the single-zone deployment method.
 ![Select zones](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/0650359951/p87361.png) |
-    |**Instance Type**|
-    |**Capacity**|
+    |**Instance Type**|    -   **Entry-level**: belongs to the general-purpose instance family. A general-purpose instance exclusively occupies the memory and I/O resources allocated to it, but shares CPU and storage resources with the other general-purpose instances that are deployed on the same server.
+    -   **Enterprise-level**: belongs to the dedicated or dedicated host instance family. A dedicated instance exclusively occupies the CPU, memory, storage, and I/O resources allocated to it. The top configuration of the dedicated instance family is the dedicated host. A dedicated host instance occupies all the CPU, memory, storage, and I/O resources on the server where it is housed.
+**Note:** Each instance type supports a specific number of CPU cores, memory capacity, maximum number of connections, and maximum IOPS. For more information, see [Primary instance types](/intl.en-US/Product Introduction/Product specifications/Primary instance types.md). |
+    |**Capacity**|The storage capacity that the RDS instance has available to store data files, system files, binary log files, and transaction files. You can adjust the storage capacity in increments of 5 GB. **Note:** The dedicated instance family supports exclusive allocations of resources. The storage capacity of each instance type with local SSDs in this family is fixed. For more information, see [Primary instance types](/intl.en-US/Product Introduction/Product specifications/Primary instance types.md). |
 
 8.  Click **Next: Instance Configuration**.
 
