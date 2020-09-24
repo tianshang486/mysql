@@ -28,11 +28,11 @@ ApsaraDB RDS for PostgreSQL instances support two types of database accounts: pr
 
 1.  Log on to the [ApsaraDB for RDS console](https://rds.console.aliyun.com/).
 
-2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where the target RDS instance resides.
+2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where your RDS instance resides.
 
     ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
-3.  Find the target instance and click the instance ID.
+3.  Find your RDS instance and click its ID.
 
 4.  In the left-side navigation pane, click **Accounts**.
 
@@ -64,11 +64,11 @@ ApsaraDB RDS for PostgreSQL instances support two types of database accounts: pr
 
 1.  Log on to the [ApsaraDB for RDS console](https://rds.console.aliyun.com/).
 
-2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where the target RDS instance resides.
+2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where your RDS instance resides.
 
     ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
-3.  Find the target instance and click the instance ID.
+3.  Find your RDS instance and click its ID.
 
 4.  In the left-side navigation pane, click **Accounts**.
 
