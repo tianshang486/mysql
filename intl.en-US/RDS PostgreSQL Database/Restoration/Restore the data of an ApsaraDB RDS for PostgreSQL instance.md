@@ -28,11 +28,11 @@ The price of the new RDS instance is the same as the price that you must pay whe
 
 1.  Log on to the [ApsaraDB for RDS console](https://rds.console.aliyun.com/).
 
-2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where the target RDS instance resides.
+2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where your RDS instance resides.
 
     ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
-3.  Find the target instance and click the instance ID.
+3.  Find your RDS instance and click its ID.
 
 4.  In the left-side navigation pane, click **Backup and Restoration**.
 
@@ -53,8 +53,8 @@ The price of the new RDS instance is the same as the price that you must pay whe
 You can select the **Single-zone Deployment** or **Multi-zone Development** method.
 
     -   **Single-zone Deployment**: The **Zone of Primary Node** and the **Zone of Secondary Node** are the same.
-    -   **Multi-zone Deployment**: The **Zone of Primary Node** and the **Zone of Secondary Node** are different. After you select the **Zone of Primary Node**, the system automatically allocates the **Zone of Secondary Node**.
-The multi-zone deployment method provides zone-level disaster recovery for your business. We recommend that you select Multi-zone Deployment.
+    -   **Multi-zone Deployment**: The **Zone of Primary Node** and the **Zone of Secondary Node** are different. After you specify the **Zone of Primary Node**, the system automatically allocates the **Zone of Secondary Node**.
+The multi-zone deployment method provides zone-level disaster recovery. We recommend that you select the multi-zone deployment method.
 
 **Note:**
 
@@ -70,8 +70,8 @@ The multi-zone deployment method provides zone-level disaster recovery for your 
 
     |Parameter|Description|
     |---------|-----------|
-    |**Network Type**|    -   **Classic Network**: a traditional type of network.
-    -   **VPC**: A virtual private cloud \(VPC\) is an isolated network that provides higher security and better performance than the classic network. If you select the VPC network type, you must also specify the **VPC** and **VSwitch of Primary Node** parameters.
+    |**Network Type**|    -   **Classic Network**: the traditional type of network.
+    -   **VPC**: A virtual private cloud \(VPC\) is an isolated network that provides higher security and better performance than the classic network. If you select the VPC network type, you must also specify the **VPC** and the **VSwitch of Primary Node**.
 **Note:** The RDS instance must have the same network type as the ECS instance that you want to connect. If the RDS and ECS instances both have the VPC network type, they must also reside in the same VPC. Otherwise, the RDS and ECS instances cannot communicate over an internal network. |
     |**Resource Group**|The resource group to which the new RDS instance belongs.|
 
