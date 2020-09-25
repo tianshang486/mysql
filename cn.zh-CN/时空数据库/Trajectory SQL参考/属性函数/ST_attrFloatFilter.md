@@ -1,29 +1,29 @@
-# ST\_attrFloatFilter {#reference_swc_d2q_3gb .reference}
+# ST\_attrFloatFilter
 
 指定轨迹属性字段，根据固定值，过滤出符合条件的轨迹点，返回过滤后的属性字段值（数组）。
 
-## 语法 {#section_og1_4hn_qfb .section}
+## 语法
 
 ```
 float8[] ST_attrFloatFilter(trajectory traj, cstring attr_field_name,cstring operator, float8 value);
 float8[] ST_attrFloatFilter(trajectory traj, cstring attr_field_name,cstring operator, float8 value1, float8 value2);
 ```
 
-## 参数 {#section_cxv_qhn_qfb .section}
+## 参数
 
 |参数名称|描述|
 |----|--|
 |traj|轨迹对象。|
 |attr\_field\_name|指定的属性名称。|
-|operator|过滤符'=','!=','\>', '<', '\>=', '<=', '\[\]', '\(\]', '\[\)', '\(\)'.|
+|operator|过滤符，支持以下字符：=, !=, \>, <, \>=, <=, \[\], \(\], \[\), \(\) |
 |value、value1|属性固定值、下限。|
 |value2|属性固定值-上限|
 
-## 描述 {#section_qmn_klq_3gb .section}
+## 描述
 
 只支持类型为float的属性字段。
 
-## 示例 {#section_lmw_qhn_qfb .section}
+## 示例
 
 ```
 create table traj(id integer, traj trajectory);
