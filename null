@@ -1,83 +1,112 @@
-# AddTagsToResource
+# DescribeTags
 
-调用AddTagsToResource接口为实例绑定标签。
+You can call this operation to query the tags of RDS instances.
 
-为实例绑定已有的或新创建的标签，限制如下：
+This operation must meet the following requirements:
 
--   每个标签（Tag）由标签键（TagKey）和标签值（TagValue）组成，TagKey不能为空，TagValue可以为空；
--   TagKey和TagValue的值不允许以aliyun开头；
--   TagKey和TagValue不区分大小写；
--   TagKey最长为64个字符，TagValue最长为128个字符；
--   每个实例最多绑定10个Tag，每个实例绑定的TagKey不能重复。若绑定带有重复TagKey的Tag，则后绑定的Tag将覆盖之前的Tag。
+-   If an instance ID is specified, all tags bound to this instance can be queried, and the other filtering conditions are invalid.
+-   If you only specify TagKeys, the results for tags which match the TagKey condition are returned. If you specify both TagKeys and TagValues, the results for tags which match both conditions are returned.
 
-## 调试
+## Debugging
 
-[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=AddTagsToResource&type=RPC&version=2014-08-15)
+You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=DescribeTags) to perform debugging. API Explorer allows you to perform various API operations to simplify API usage. For example, you can retrieve APIs, call APIs, and dynamically generate SDK example code.
 
-## 请求参数
+## Request parameters
 
-|名称|类型|是否必选|示例值|描述|
-|--|--|----|---|--|
-|Action|String|是|AddTagsToResource|系统规定参数，取值：**AddTagsToResource**。 |
-|RegionId|String|是|cn-hagnzhou|地域ID，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。 |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
+|Parameter|Type|Required?|Example|Description|
+|---------|----|---------|-------|-----------|
+|Action|String|Yes|DescribeTags|The operation that you want to perform. Set the value to**DescribeTags**. |
+|RegionId|String|Yes|cn-hangzhou|The region ID. The maximum length of the region ID is 50 characters. You can call the [DescribeRegions](~~26243~~) operation to view IDs of the available regions. |
+|DBInstanceId|String|No|rm-uf6wjk5xxxxxxx|The ID of the instance.
 
- **说明：** 支持传入最多30个实例ID进行批量操作，用英文逗号（,）隔开。 |
-|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。 |
-|Tags|String|否|\{“key1”:”value1”,“key2”:””\}|需要绑定的Tag列表，包括TagKey和TagValue。单次最多支持传入5组值，格式：\{"key1":"value1","key2":"value2"...\}。
+ **Note:** If you specify this parameter, the other filtering conditions are invalid. |
+|Tags|String|No|\{“key1”:”value1”\}|The tags to be queried. Each tag includes a TagKey and a TagValue. Format: \{“key1”:”value1”\}. |
+|AccessKeyId|String|No|LTAIfCxxxxxxx|The AccessKey ID issued by Alibaba Cloud for users to access services. |
 
- **说明：** TagKey不能为空，TagValue可以为空。 |
-|Tag.1.key|String|否|key1|当前第一组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.2.key|String|否|key2|当前第二组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.3.key|String|否|key3|当前第三组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.4.key|String|否|key4|当前第四组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.5.key|String|否|key5|当前第五组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.1.value|String|否|value1|当前第一组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.2.value|String|否|value2|当前第二组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.3.value|String|否|value3|当前第三组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.4.value|String|否|value4|当前第四组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.5.value|String|否|value5|当前第五组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。 |
-|proxyId|String|否|API|代理模式ID。 |
+## Response parameters
 
-## 返回数据
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|Items|N/A|None|The array that consists of tag data. |
+|└TagKey|String|key1|The tag key. |
+|└TagValue|String|value1|The tag value. |
+|└DBInstanceIds|N/A|rm-uf6wjk5xxxxxxx|The IDs of instances to which the tag has been bound. |
+|RequestId|String|1AD222E9-E606-4A42-BF6D-8A4442913CEF|The ID of the request. |
 
-|名称|类型|示例值|描述|
-|--|--|---|--|
-|RequestId|String|224DB9F7-3100-4899-AB9C-C938BCCB43E7|请求ID。 |
+## Examples
 
-## 示例
-
-请求示例
+Sample requests
 
 ```
 
-http(s)://rds.aliyuncs.com/?Action=AddTagsToResource
-&RegionId=cn-hagnzhou
-&DBInstanceId=rm-uf6wjk5xxxxxxx
-&Tags=%7B%22test%22%3A%221%22%7D
-&<公共请求参数>
+http(s)://rds.aliyuncs.com/? Action=DescribeTags
+&RegionId=cn-hangzhou 
+&<Common request parameters>
 
 ```
 
-正常返回示例
+Successful response examples
 
-`XML` 格式
+`XML` format
 
 ```
-<AddTagsToResourceResponse>
-	  <requestId>224DB9F7-3100-4899-AB9C-C938BCCB43E7</requestId></AddTagsToResourceResponse>
+<DescribeTagsResponse>
+  <Items> 
+    <TagInfos> 
+      <TagValue>1</TagValue> 
+      <TagKey>Test</TagKey>
+      <DBInstanceIds> 
+        <DBInstanceIds>rm-uf6wjk5xxxxxxx</DBInstanceIds> 
+      </DBInstanceIds> 
+    </TagInfos>
+  </Items> 
+  <RequestId>6D709088-6D7D-4152-99F4-C2FE86463862</RequestId> 
+</DescribeTagsResponse> 
+
 ```
 
-`JSON` 格式
+`JSON` format
 
 ```
 {
-	"requestId":"224DB9F7-3100-4899-AB9C-C938BCCB43E7"
+	"Items":{
+		"TagInfos":[
+			{
+				"TagValue":"1",
+				"TagKey":"test",
+				"DBInstanceIds":{
+					"DBInstanceIds":[
+						"rm-uf6wjk5xxxxxxx"
+					]
+				}
+			}
+		]
+	},
+	"RequestId":"6D709088-6D7D-4152-99F4-C2FE86463862"
 }
 ```
 
-## 错误码
+## Error codes
 
-访问[错误中心](https://error-center.aliyun.com/status/product/Rds)查看更多错误码。
+|HTTP status code|Error code|Error message|Description|
+|----------------|----------|-------------|-----------|
+|400|Tag.NoRegionIdExist|the region Id can not be blank.|The error message returned when the instance ID is null while you renew an instance and change the configuration of an instance.|
+|400|Tag.NoTagInfoExist|all the tags and tagN parameters is null.|The error message returned when the tag parameter is invalid.|
+|400|Tag.TagKeyCanNotBeAll|tag key can not be all.|The error message returned when the TagKey is invalid.|
+|400|Tag.TagKeyDuplex|tag key must be sole in one operation.|The error message returned when the TagKey is not unique.|
+|400|Tag.NoDBInstanceIdExist|the dbinstance Id can not be blank.|The error message returned when the instance ID is null when you renew an instance and change the configuration of an instance.|
+|400|Tag.TooManyDBInstanceIds|the dbinstance Ids is more than 30.|The error message returned when the number of instance IDs exceeds 30.|
+|400|Tag.TooManyTagsForOneInstance|total 10 tags can be added to one resource.|The error message returned when the number of tags bound to one resource exceeds 10.|
+|400|Tag.SetTagInfoAtTwoParamters|only tags or tagN parameter could be setted.|The error message returned when the settings of your tag parameter are canceled.|
+|400|Tag.Allow5TagInfos|only 5 tags allowed in one operation.|The error message returned when more than five tags are used in a single operation.|
+|400|Tag.TagKeyIsBlank|tag key can not be blank.|The error message returned when the TagKey is null.|
+|400|Tag.TagKeyStartWith.aliyun|tag key and value can not be started with aliyun.|The error message returned when the TagKeyStartWith is invalid.|
+|400|Tag.TagKeyTooLong|the max tag key's length is 64.|The error message returned when the TagKey contains more than 64 characters.|
+|400|Tag.TagValueTooLong|the max tag value's length is 128.|The error message returned when the TagValue contains more than 128 characters.|
+|400|Tag.InvalidTagsParamter|tags paramter is invalid.|The error message returned when the tag parameter is invalid.|
+|404|InvalidDBInstanceId.NotFound|The DBInstanceId provided does not exist in our records.|The error message returned when the instance ID does not exist. Confirm that the instance ID has been deleted from the current account.|
+|400|Tag.Malformed|The specified parameter Type is not valid.|The error message returned when the TagKey is invalid.|
+|400|Tag.Malformed|The specified parameter Type is not valid.|The error message returned when the TagValue is invalid.|
+
+For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds?spm=5176.10421674.0.0.17f7ebed4WFmrN).
 
