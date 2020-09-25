@@ -1,75 +1,75 @@
 # AddTagsToResource
 
-调用AddTagsToResource接口为实例绑定标签。
+You can call this operation to bind the existing or newly created tags to an instance.
 
-为实例绑定已有的或新创建的标签，限制如下：
+This operation must meet the following requirements:
 
--   每个标签（Tag）由标签键（TagKey）和标签值（TagValue）组成，TagKey不能为空，TagValue可以为空；
--   TagKey和TagValue的值不允许以aliyun开头；
--   TagKey和TagValue不区分大小写；
--   TagKey最长为64个字符，TagValue最长为128个字符；
--   每个实例最多绑定10个Tag，每个实例绑定的TagKey不能重复。若绑定带有重复TagKey的Tag，则后绑定的Tag将覆盖之前的Tag。
+-   Each tag is composed of a TagKey and a TagValue. The TagKey is required, and the TagValue is optional.
+-   The values of TagKey and TagValue cannot start with aliyun.
+-   The values of TagKey and TagValue are case-insensitive.
+-   The maximum length of TagKey is 64 characters, and the maximum length of TagValue is 128 characters.
+-   Each instance can be bound to a maximum of 10 tags. Each of tags bound to the same instance must have a unique TagKey. If you bind a new tag to the instance which has an existing tag, the new tag overwrites the existing tag.
 
-## 调试
+## Debugging
 
-[您可以在OpenAPI Explorer中直接运行该接口，免去您计算签名的困扰。运行成功后，OpenAPI Explorer可以自动生成SDK代码示例。](https://api.aliyun.com/#product=Rds&api=AddTagsToResource&type=RPC&version=2014-08-15)
+You can use [API Explorer](https://api.aliyun.com/#product=Rds&api=AddTagsToResource) to perform debugging. API Explorer allows you to perform various API operations to simplify API usage. For example, you can retrieve APIs, call APIs, and dynamically generate SDK example code.
 
-## 请求参数
+## Request parameters
 
-|名称|类型|是否必选|示例值|描述|
-|--|--|----|---|--|
-|Action|String|是|AddTagsToResource|系统规定参数，取值：**AddTagsToResource**。 |
-|RegionId|String|是|cn-hagnzhou|地域ID，可以通过接口[DescribeRegions](~~26243~~)查看可用的地域ID。 |
-|DBInstanceId|String|是|rm-uf6wjk5xxxxxxx|实例ID。
+|Parameter|Type|Required?|Example|Description|
+|---------|----|---------|-------|-----------|
+|Action|String|Yes|AddTagsToResource|The operation that you want to perform. Set the value to **AddTagsToResource**. |
+|RegionId|String|Yes|cn-hangzhou|The region ID. The maximum length of the region ID is 50 characters. You can call the [DescribeRegions](~~26243~~) operation to view IDs of the available regions. |
+|DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx|The ID of the instance.
 
- **说明：** 支持传入最多30个实例ID进行批量操作，用英文逗号（,）隔开。 |
-|AccessKeyId|String|否|LTAIfCxxxxxxx|阿里云颁发给用户的访问服务所用的密钥ID。 |
-|Tags|String|否|\{“key1”:”value1”,“key2”:””\}|需要绑定的Tag列表，包括TagKey和TagValue。单次最多支持传入5组值，格式：\{"key1":"value1","key2":"value2"...\}。
+ **Note:** Up to 30 instance IDs can be entered in a single request. Separate multiple instance IDs with commas \(,\). |
+|AccessKeyId|String|No|LTAIfCxxxxxxx|The AccessKey ID issued by Alibaba Cloud for users to access services. |
+|Tags|String|No|\{“key1”:”value1”,“key2”:””\}|The list of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. Format: \{"key1":"value1","key2":"value2"...\}.
 
- **说明：** TagKey不能为空，TagValue可以为空。 |
-|Tag.1.key|String|否|key1|当前第一组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.2.key|String|否|key2|当前第二组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.3.key|String|否|key3|当前第三组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.4.key|String|否|key4|当前第四组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.5.key|String|否|key5|当前第五组key。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.1.value|String|否|value1|当前第一组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.2.value|String|否|value2|当前第二组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.3.value|String|否|value3|当前第三组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.4.value|String|否|value4|当前第四组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|Tag.5.value|String|否|value5|当前第五组value。需要绑定的Tag，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。 |
-|ClientToken|String|否|ETnLKlblzczshOTUbOCzxxxxxxx|用于保证请求的幂等性，防止重复提交请求。由客户端生成该参数值，要保证在不同请求间唯一，最大值不超过64个ASCII字符，且该参数值中不能包含非ASCII字符。 |
-|proxyId|String|否|API|代理模式ID。 |
+ **Note:** The TagKey is required, and the TagValue is optional. |
+|Tag. 1.key|String|No|key1|The TagKeys of the first set of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. The TagKey is required, and the TagValue is optional. |
+|Tag. 2.key|String|No|key2|The TagKeys of the second set of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. The TagKey is required, and the TagValue is optional. |
+|Tag. 3.key|String|No|key3|The TagKeys of the third set of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. The TagKey is required, and the TagValue is optional. |
+|Tag. 4.key|String|No|key4|The TagKeys of the fourth set of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. The TagKey is required, and the TagValue is optional. |
+|Tag. 5.key|String|No|key5|The TagKeys of the fifth set of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. The TagKey is required, and the TagValue is optional. |
+|Tag. 1.value|String|No|value1|The TagValues of the first set of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. The TagKey is required, and the TagValue is optional. |
+|Tag. 2.value|String|No|value2|The TagValues of the second set of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. The TagKey is required, and the TagValue is optional. |
+|Tag. 3.value|String|No|value3|The TagValues of the third set of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. The TagKey is required, and the TagValue is optional. |
+|Tag. 4.value|String|No|value4|The TagValues of the fourth set of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. The TagKey is required, and the TagValue is optional. |
+|Tag. 5.value|String|No|value5|The TagValues of the fifth set of tags to be bound. Each tag includes a TagKey and a TagValue. Up to five key-value pairs can be entered in a single request. The TagKey is required, and the TagValue is optional. |
 
-## 返回数据
+## Response parameters
 
-|名称|类型|示例值|描述|
-|--|--|---|--|
-|RequestId|String|224DB9F7-3100-4899-AB9C-C938BCCB43E7|请求ID。 |
+|Parameter|Type|Example|Description|
+|---------|----|-------|-----------|
+|RequestId|String|224DB9F7-3100-4899-AB9C-C938BCCB43E7|The ID of the request. |
 
-## 示例
+## Examples
 
-请求示例
+Sample requests
 
 ```
 
-http(s)://rds.aliyuncs.com/?Action=AddTagsToResource
-&RegionId=cn-hagnzhou
-&DBInstanceId=rm-uf6wjk5xxxxxxx
-&Tags=%7B%22test%22%3A%221%22%7D
-&<公共请求参数>
+http(s)://rds.aliyuncs.com/? Action=AddTagsToResource
+&RegionId=cn-hangzhou
+&DBInstanceId=rm-uf6wjk5xxxxxxx 
+&Tags=%7B%22test%22%3A%221%22%7D 
+&<Common request parameters>
 
 ```
 
-正常返回示例
+Successful response examples
 
-`XML` 格式
+`XML` format
 
 ```
 <AddTagsToResourceResponse>
-	  <requestId>224DB9F7-3100-4899-AB9C-C938BCCB43E7</requestId></AddTagsToResourceResponse>
+  <requestId>224DB9F7-3100-4899-AB9C-C938BCCB43E7</requestId> 
+</AddTagsToResourceResponse> 
+
 ```
 
-`JSON` 格式
+`JSON` format
 
 ```
 {
@@ -77,7 +77,7 @@ http(s)://rds.aliyuncs.com/?Action=AddTagsToResource
 }
 ```
 
-## 错误码
+## Error codes
 
-访问[错误中心](https://error-center.alibabacloud.com/status/product/Rds)查看更多错误码。
+[View error codes](https://error-center.aliyun.com/status/product/Rds)
 
