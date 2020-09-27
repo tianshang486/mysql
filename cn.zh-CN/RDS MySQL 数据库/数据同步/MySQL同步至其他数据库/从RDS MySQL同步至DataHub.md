@@ -102,7 +102,7 @@ DTS在将数据变更同步至DataHub实例的Topic时，目标Topic中除了存
 |:------|-------|:-|
 |`dts_record_id`|`new_dts_sync_dts_record_id`|增量日志的记录id，为该日志唯一标识。 **说明：**
 
--   id的值唯一且递增。
+-   正常情况下是全局唯一自增的，在容灾的情况下会有回退且无法保证自增和唯一。
 -   如果增量日志的操作类型为UPDATE，那么增量更新会被拆分成两条记录（分别记录更新前和更新后的值），且`dts_record_id`的值相同。 |
 |`dts_operation_flag`|`new_dts_sync_dts_operation_flag`|操作类型，取值： -   I：INSERT操作。
 -   D：DELETE操作。
