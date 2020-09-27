@@ -50,7 +50,7 @@ The shp2pgsql command line tool is used to convert Esri shapefiles into SQL file
 
 ## Load vector data by using ogr2ogr
 
-The ogr2ogr command line tool is provided by GDAL/OGR to convert data. It supports common vector data types, such as Esri ShapFile, MapInfo, and FileGDB. For more information, see [ogr2ogr](https://postgis.net/docs/using_postgis_dbmanagement.html#idm2274). For more information, visit [https://gdal.org/drivers/vector/index.html](https://gdal.org/drivers/vector/index.html).
+The ogr2ogr command line tool is provided by GDAL/OGR to convert data. It supports common vector data types, such as Esri ShapFile, MapInfo, and FileGDB. For more information, see [ogr2ogr](https://postgis.net/docs/using_postgis_dbmanagement.html#idm2274). For more information, visit [Vector drivers](https://gdal.org/drivers/vector/index.html).
 
 **Note:** Before you load vector data by using the ogr2ogr command line tool, make sure that GDAL supports the PostGIS vector driver.
 
