@@ -24,8 +24,8 @@ Monitoring and alerting are implemented through CloudMonitor. With CloudMonitor,
 
     ![Set alarm rules](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2350359951/p95893.png)
 
-7.  Create an alert group. For more information, see [create an alert contact and an alert Contact Group](https://www.alibabacloud.com/help/zh/doc-detail/104004.htm).
-8.  Create an alarm rule. For more information, see [apsaradb for RDS](https://www.alibabacloud.com/help/zh/doc-detail/28587.htm).
+7.  Create an alert group. For more information, see [Create an alert contact or alert group](/intl.en-US/Alarm service/Alert contacts/Create an alert contact or alert group.md).
+8.  Create an alarm rule. For more information, see [Create a threshold-triggered alert rule](/intl.en-US/Alarm service/Alarm rules/Create a threshold-triggered alert rule.md).
 
     **Note:** You can also use tags to automatically monitor resources. For more information, see [Monitor resources based on tags](/intl.en-US/Best Practices/Monitor resources based on tags.md).
 
@@ -38,7 +38,7 @@ Monitoring and alerting are implemented through CloudMonitor. With CloudMonitor,
 4.  On the Alarm Rules tab, find the alert and select one of the following operations:
     -   View: views the details of an alert rule.
     -   Alarm Logs: views the alert history for a certain period of time.
-    -   Modify: modifies alerts. For more information about the parameters, see [alarm rule parameters](https://www.alibabacloud.com/help/zh/doc-detail/119898.htm).
+    -   Modify: modifies alerts. For more information about the parameters, see [Alarm rule parameters](/intl.en-US/Alarm service/Alarm rules/Alarm rule parameters.md).
     -   Disable: disables the selected alert rules. If an alert rule is disabled, no alert is triggered even though the monitored metric meets the conditions.
     -   Delete: deletes the selected alert rules. An alert rule cannot be restored after you delete the rule. You can only add it again.
 
