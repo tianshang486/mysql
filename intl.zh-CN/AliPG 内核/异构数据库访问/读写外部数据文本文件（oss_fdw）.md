@@ -182,7 +182,7 @@ select * from oss_fdw_list_file('t_oss');
 
 ## ID和Key隐藏
 
-CREATE SERVER中的ID和Key信息如果不做任何处理，用户可以使用`select * from pg_foreign_server`看到明文信息，会暴露用户的id和key。我们通过对ID和Key进行对称加密实现对ID和Key的隐藏（不同的实例使用不同的密钥，最大限度保护用户信息），但无法使用类似GP一样的方法，增加一个数据类型，会导致老实例不兼容。
+CREATE SERVER中的ID和Key信息如果不做任何处理，用户可以使用`select * from pg_foreign_server`看到明文信息，会暴露用户的ID和Key。我们通过对ID和Key进行对称加密实现对ID和Key的隐藏（不同的实例使用不同的密钥，最大限度保护用户信息），但无法使用类似GP一样的方法，增加一个数据类型，会导致老实例不兼容。
 
 最终加密后的信息如下：
 
