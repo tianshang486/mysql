@@ -22,7 +22,7 @@ Before you call this operation, make sure that the following requirements are me
 |Action|String|Yes|DeleteBackup|The operation that you want to perform. Set the value to **DeleteBackup**. |
 |BackupId|String|Yes|324909958|The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query backup set IDs. Up to 100 IDs can be specified in a single request. Separate multiple IDs with commas \(,\).
 
-**Note:** Only the backup sets whose **StoreStatus**is**Enabled**when you call the[DescribeBackups](~~26273~~) operation can be deleted. |
+**Note:** Only the backup sets whose **StoreStatus** is **Enabled** when you call the [DescribeBackups](~~26273~~) operation can be deleted. |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx|The ID of the instance. |
 
 ## Response parameters
