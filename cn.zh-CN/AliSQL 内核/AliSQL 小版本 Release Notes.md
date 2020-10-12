@@ -78,6 +78,7 @@
 -   新特性
     -   [Performance Agent](/cn.zh-CN/AliSQL 内核/稳定/Performance Agent.md)：更加便捷的性能数据统计方案。通过MySQL插件的方式，实现MySQL实例内部各项性能数据的采集与统计。
     -   在半同步模式下添加网络往返时间，并记录到性能数据。
+    -   X-Engine引擎支持在线DDL功能。
 -   性能优化
     -   允许在只读实例上进行语句级并发控制（CCL）操作。
     -   备实例支持Outline。
@@ -92,6 +93,10 @@
     -   修复io\_statistics表出现错误time值的问题。
     -   修复无效压缩算法导致崩溃的问题。
     -   修复用户列与5.6不兼容的问题。
+-   修补程序
+    -   [Faster DDL](/cn.zh-CN/AliSQL 内核/稳定/Faster DDL.md)：优化DDL操作过程中的Buffer Pool管理机制，降低DDL操作带来的性能影响，提升在线DDL操作的并发数。
+    -   线程池性能优化。
+    -   修复缓冲区计数泄漏问题。
 
 20200110
 
