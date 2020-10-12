@@ -19,8 +19,6 @@ If a subscription RDS instance is locked due to expiration, you can go to the re
 
     The RDS instance is immediately unlocked after the renewal is complete.
 
-    ![](../images/p9429.png)
-
 
 ## Rebuild an RDS instance
 
