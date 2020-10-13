@@ -1,0 +1,149 @@
+# Client error codes
+
+## Common errors
+
+|Error code|Error message|HTTP status code|
+|----------|-------------|----------------|
+|MissingParameter|The input parameter “parameter name” that is mandatory for processing this request is not supplied.|400|
+|InvalidParameter|The specified parameter “Action or Version” is not valid.|400|
+|InvalidAccessKeyId.NotFound|The Access Key ID provided does not exist in our records.|404|
+|IncompleteSignature|The request signature does not conform to Aliyun standards.|400|
+|IllegalTimestamp|The input parameter "Timestamp" that is mandatory for processing this request is not supplied.|400|
+|InvalidOwnerId|The specified OwnerId is not valid.|400|
+|InvalidOwnerAccount|The specified OwnerAccount is not valid.|400|
+|InvalidOwner|OwnerId and OwnerAccount can’t be used at one API access.|400|
+|Throttling|Request was denied due to request throttling.|400|
+|InvalidAction|The specified action is not valid.|403|
+|ActionUnauthorized|The specified action is not available for you|403|
+|UnsupportedHTTPMethod|This http method not supported.|403|
+|UnsupportedParameter|The parameter "<parameter name\>" is not supported.|400|
+|Forbidden.InstanceNotFound|The specified DB instance does not exist.|404|
+|Forbidden.RAM|The user is not authorized to operate the specified resource, or this operation does not support RAM.|403|
+|Forbedden.NotSupportRAM|This action does not support accessed by RAM mode.|403|
+|Forbidden.RiskControl|This operation is forbidden by Aliyun Risk Control system.|403|
+|InsufficientBalance|Your account does not have enough balance.|400|
+|Forbidden.Authentication|This operation is forbidden by Aliyun Realname Authentication system.|403|
+|Invalid<parameter name\>.ValueNotSupported|The specified parameter “parameter name” is not valid.|400|
+|Invalid<parameter name\>.Malformed|The specified parameter "parameter name n" is not valid.|400|
+|InvalidParameter|The specified parameter " parameter name n " is not valid.|400|
+
+## Operation-specific errors
+
+|Error code|Error message|HTTP status code|
+|----------|-------------|----------------|
+|InvalidRegionId.NotFound|The DBInstanceId provided does not exist in our records.|404|
+|InvalidSecurityIPList.Duplicate|The Security IP address is not in the available range or occupied.|400|
+|InvalidSecurityIPListLength.Malformed|The security IP address is beyond the available range or is already used.|400|
+|InvalidEngineVersionInRegion.NotAvailable|The EngineVersion in the Region is not available.|403|
+|InvaildEngineInRegion.NotAvailable|The Engine in the Region is not available.|403|
+|InvaildDBInstanceClassInRegion.NotAvailable|The DBInstanceClass in the Region is not available.|403|
+|OperationDenied|The resource is out of usage.|403|
+|RegionUnauthorized|There is no authority to create instance in the specified region.|403|
+|QuotaExceeded.CreateInstance|The quota of create instance exceeds.|403|
+|InvalidDBInstanceId.NotFound|The specified DBInstanceId does not exist.|404|
+|MissingParameter|The input parameters “DBInstanceClass” and “DBInstanceStorage” all blank or no change.|400|
+|OperationDenied.DBInstanceType|The operation is not permitted due to type of instance.|400|
+|OperationDenied.DBInstanceStorageReduce|The operation is not permitted due to reduce storage.|403|
+|OperationDenied.DBInstanceStatus|The operation is not permitted due to instance status.|403|
+|DependencyViolation|The operation is not permitted due to instance mount read only or guard instance.|403|
+|InvalidConnectionStringPrefix.Duplicate|The connection string is not in the available range or occupied.|400|
+|QuotaExceeded.SwitchTime|The quota of switch time exceed.|400|
+|OperationDenied.LockMode|The operation is not permitted due to lock of instance.|403|
+|InvalidSecurityIps.Duplicate|The quota of security ip exceeds.|400|
+|OperationDenied.CurrentEngineVersion|The operation is not permitted due to specified current version .|400|
+|OperationDenied.ReadOnlyDBInstanceLower|The operation is not permitted due to higher read only instance version .|403|
+|OperationDenied.GuardDBInstanceLower|The operation is not permitted due to higher guard instance version .|403|
+|OperationDenied.MasterDBInstanceState|The status of the specified master instance does not support this operation.|403|
+|QuotaExceeded.DBName|The quota of db exceeds.|400|
+|InvalidDBName.Duplicate|The specified DB name is invalid or already exists.|400|
+|InvalidParameter.Keyword|The specified DBName is a reserved keyword.|400|
+|OperationDenied.DBStatus|The status of the database does not support this operation.|403|
+|OperationDenied.DBInstanceEngine|The operation is not permitted due to engine of instance.|403|
+|FTPServiceUnavailable|The service is unavailable now; wait several minutes and try again.|403|
+|QuotaExceeded.Upload|The quota of file exceeds.|403|
+|InvalidFileName.NotCompleted|The specified “FileName” is not completed .|404|
+|InvalidFileName.NotAvailable|The specified “FileName” is not Available .|404|
+|QuotaExceeded.FileSize|The quota of file size exceeds.|403|
+|QuotaExceeded.DBInstanceStorage|The quota of instance storage exceeds.|403|
+|InvalidDBInfo.Malformed|The specified parameter “DBInfo” is not valid or db not exist.|400|
+|OperationDenied.Region|The operation is not permitted due to different region.|403|
+|OperationDenied.Engine|The operation is not permitted due to different engine.|403|
+|OperationDenied.DBInstanceId|The operation is not permitted due to DBInstanceId and SourceDBInstanceId is same.|403|
+|InvalidTaskId.NotFound|The ImportId provided does not exist in our records.|400|
+|OperationDenied.IncorrectTaskStatus|The operation is not permitted due to status of import.|403|
+|InvalidAccountName.keyword|The specified AccountName is a reserved keyword.|400|
+|InvalidAccountName.Duplicate|The specified AccountName already exists.|400|
+|QuotaExceeded.AccountName|The quota of account exceeds.|403|
+|OperationDenied.AccountStatus|The status of the account does not support this operation.|403|
+|InvalidDBName.NotFound|The specified database does not exist.|404|
+|OperationDenied.AccountType|The operation is not permitted due to type of account.|403|
+|OperationDenied.BackupJobExists|You cannot perform this operation; a backup job exists.|403|
+|OperationDenied.NoDatabase|The operation is not permitted due to no database.|403|
+|InvalidStartTimeAndEndTime.Malformed|The EndTime must be later than or equal to the StartTime.|400|
+|OperationDenied.BackupJobExists|You cannot perform this operation; a backup job exists.|403|
+|InvalidBackupId.NotFound|The BackupId provided does not exist in our records.|404|
+|OperationDenied.NotFoundBackup|The operation is not permitted due to no backup.|403|
+|OperationDenied.BackupStatus|The operation is not permitted due to type of backup.|403|
+|OperationDenied.BackupMethod|The operation is not permitted method of backup.|403|
+|OperationDenied.TempDBInstanceExists|You cannot perform this operation; a temp instance exists.|403|
+|Forbidden.Authentication|The operation is forbidden by Aliyun Realname Authentication System.|403|
+|IncorrectDBInstanceConnType|Current DB instance conn type does not support this operation.|404|
+|IncorrecttVpcId.Mismatch|The specified parameter "VpcId" is not valid.|400|
+|IntranetNetTypeNotExists|Current DB instance net type does not support this operation.|404|
+|InvalidDBInstanceName.NotFound|The DBInstanceId provided does not exist in our records.|403|
+|InvalidConnectionMode.ValueNotSupported|The specified parameter “ConnectionMode” is not valid.|400|
+|InvalidConnectionString.Duplicate Specified|connection string already exists in the Aliyun RDS.|403|
+|InvalidConnectionString.Duplicate Specified|connection string or port want to be modified is the same with current net type.|400|
+|InvalidConnectionStringPrefix.Duplicated|The specified connection string already exists.|403|
+|InvalidCurrentConnectionString.NotFound|Specified current connection string doesn't exist.|400|
+|InvalidDBInstanceId.NotFound|The specified DBInstanceId does not exist.|400|
+|InvalidDBInstanceId.QuotaExceeded|The quota of instance id exceeds.|400|
+|InvalidDBInstanceNetType.NotFound|The Specified DB instance net type is not found.|404|
+|InvalidDBinstanceNetType.ValueNotSupport|The specified parameter “DBinstanceNetType” is not valid.|400|
+|InvalidDBInstanceType.ValueNotSupport|The specified parameter “DBInstanceType” is not valid.|400|
+|InvalidEngineVersion.Malformed|The specified parameter "EngineVersion" is not valid.|400|
+|InvalidInstanceNetworkType.ValueNotSupported|The specified parameter “InstanceNetworkType” is not valid.|400|
+|InvalidParameter|The specified parameter “dbInstanceId” is not valid.|400|
+|InvalidPort.Malformed|Specified port is not valid.|400|
+|InvalidPrivateIpAddress.Duplicated|Specified private IP address is duplicated.|400|
+|InvalidPrivateIpAddress.Mismatch|Specified private IP address is not in the CIDR block of virtual switch.|400|
+|InvalidVPCId.NotFound|The specified connection string or port does not match the current network type.|400|
+|InvalidVSwitchId.Mismatch|Specified instance and virtual switch are not in the same zone.|400|
+|InvalidVSwitchId.NotFound|Specified virtual switch is not found in specified VPC.|400|
+|NetTypeExists|Specified net type already existed.|400|
+|NetTypeExists|Specified public net type already existed.|403|
+|OperationDenied.DBInstanceNetType|The network type of the specified instance does not support this operation.|403|
+|OperationDenied.DBInstanceStatus|The specified connection string or port does not match the current network type.|403|
+|OperationDenied.DBInstanceType|The operation is not permitted due to type of instance.|403|
+|OperationDenied.LockMode|The instance is locked.|403|
+|OperationDenied.Switch|Specified instance cannot be switched.|400|
+|OperationDenied.Switch|Specified instance cannot be switched to VPC.|403|
+|OperationDenied.SwitchToVPC|Specified instance cannot be switched to VPC.|403|
+|OperationDenied|The requested resource is sold out in the specified zone; try other types of resources or other regions and zones.|403|
+|OperationDenied|The vpc cloudinstanceIp is use, please check params.|406|
+|OperationDenied|The vpc service is error, please check params.|400|
+|PARAMETER\_ERROR|The vpc request parameter may not be null.|406|
+|PARAMETER\_MUST\_NOT\_NULL|The parameter must not be null.|406|
+|PublicConnectionExists|PublicConnection exists.|403|
+|bpcIzNoNotEqualsRdsMultIzNo|Specified vpc IzNo not equal rds IzNo.|400|
+|IncorrectDBInstanceState|CurrentDB instance state does not support this operation.|403|
+|IncorrectDBInstanceType|CurrentDB instance type does not support this operation.|400|
+|IncorrectDBInstanceLockMode|CurrentDB instance lock mode does not support this operation.|400|
+|ParamNotSupportedForCurrentVersion|Parameteris not supported for current version.|400|
+|InvalideStatus.Format|MigrateTask Status is not valid.|400|
+|EngineVersionNotSupported|EngineVersion specified cannot be replicate with the source DB Instance.|400|
+|EngineNotSupported|Engine specified cannot be supported the operation..|400|
+|ConnectionModeNotSupported|ConnectionMode specified cannot be replicate with the source DB Instance.|400|
+|InvalidConfigurationValue.Malformed|Specified ConfigurationValue is not valid.|403|
+|InvalidConfigurationValueStatus.Malformed|Specified ProxyConfigurationValue \(status\) is not valid..|403|
+|InvalidConfigurationValueOrther.Malformed|Specified ProxyConfigurationValue \(check\_interval\_seconds or max\_failed\_login\_attempts or blocking\_seconds \) is not valid.|403|
+|ProxyConnectionPersistExists|Specified same ProxyConnectionPersist already exists.|400|
+|ProxyConnectionPersist.NotFound|Specified same ProxyConnectionPersist already exists.|400|
+|ProxyConnectionPersist.NotFound|Specified ProxyConnectionPersist is not found.|400|
+|ProxyConnectionPersistParametersInvalid|ProxyConnectionPersist parameter out of range|400|
+|InvalidConfigValue|ProxyConnectionPersist parameter config table not exits or data error.|400|
+|InvalidDBInstance.NotFound|Specified instance does not exist or not support.|400|
+|ProxyConnectionPersist.NotFound|Specified ProxyConnectionPersist is not found.|400|
+|ProxyConnectionPersistParametersInvalid|ProxyConnectionPersist parameter out of range.|400|
+|InvalidConfigValue|parameter config table not exits or data error.|400|
+
