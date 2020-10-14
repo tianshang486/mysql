@@ -20,7 +20,7 @@ Before you call this operation, make sure that the following requirements are me
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|RevokeAccountPrivilege|The operation that you want to perform. Set the value to**RevokeAccountPrivilege**. |
+|Action|String|Yes|RevokeAccountPrivilege|The operation that you want to perform. Set the value to **RevokeAccountPrivilege**. |
 |AccountName|String|Yes|test1|The name of the account. |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx|The ID of the instance. |
 |DBName|String|Yes|testDB|The name of the database. You can revoke all permissions of the account on this database. Separate multiple databases with commas \(,\). |
@@ -49,7 +49,7 @@ Sample success responses
 
 ```
 <RevokeAccountPrivilegeResponse>
-	  <RequestId>E22099CA-A61E-4992-A0B7-CE82DC175626</RequestId>
+      <RequestId>E22099CA-A61E-4992-A0B7-CE82DC175626</RequestId>
 </RevokeAccountPrivilegeResponse>
 ```
 
