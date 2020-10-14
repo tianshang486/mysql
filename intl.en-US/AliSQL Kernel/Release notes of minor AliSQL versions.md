@@ -407,7 +407,7 @@ New feature: Thread IDs can be configured in handshake packets.
 New features:
 
 -   The RDS High-availability Edition is supported.
--   The SQL Audit feature is supported.For more information, see [SQL audit]().
+-   The SQL Audit feature is supported. For more information, see [SQL audit]().
 -   The protection for RDS instances on which snapshot backups are being created is enhanced.
 
 ## ApsaraDB RDS for MySQL 5.7 on RDS Enterprise Edition
