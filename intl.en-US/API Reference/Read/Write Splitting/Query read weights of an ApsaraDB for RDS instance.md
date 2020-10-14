@@ -2,7 +2,7 @@
 
 Queries read weights of an ApsaraDB for RDS instance.
 
-When[read/write splitting](~~51073~~)is enabled, this operation is used to calculate the read weights specified by the system. For custom read weights, see [DescribeDBInstanceNetInfo](~~26237~~).
+When [read/write splitting](~~51073~~) is enabled, this operation is used to calculate the read weights specified by the system. For custom read weights, see [DescribeDBInstanceNetInfo](~~26237~~).
 
 Before you call this operation, make sure that the instance runs one of the following database engine versions and RDS editions:
 
@@ -30,7 +30,7 @@ Before you call this operation, make sure that the instance runs one of the foll
 |DBInstanceId|String|rm-uf6wjk5xxxxxxx|The ID of the instance. |
 |DBInstanceType|String|Master|The type of the instance. Valid values:
 
- -   **Master:** The instance is primary.
+-   **Master:** The instance is primary.
 -   **Readonly:** The instance is read-only. |
 |Weight|String|100|The read weight that is calculated by the system in real time. |
 |ReadonlyInstanceSQLDelayedTime|String|30|The replication latency between the read-only instance and the primary instance. The read-only instance replicates data from the primary instance based on the latency specified by the **ReadonlyInstanceSQLDelayedTime** parameter. Unit: seconds. |
@@ -52,13 +52,13 @@ Sample success responses
 
 ```
 <CalculateDBInstanceWeightResponse>
-	  <items>
-		    <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
-		    <DBInstanceType>Master</DBInstanceType>
-		    <Weight></Weight>
-		    <Availability></Availability>
-	  </items>
-	  <requestId>C816A4BF-A6EC-4722-95F9-2055859CCFD2</requestId>
+      <items>
+            <DBInstanceId>rm-uf6wjk5xxxxxxx</DBInstanceId>
+            <DBInstanceType>Master</DBInstanceType>
+            <Weight></Weight>
+            <Availability></Availability>
+      </items>
+      <requestId>C816A4BF-A6EC-4722-95F9-2055859CCFD2</requestId>
 </CalculateDBInstanceWeightResponse>
 ```
 
