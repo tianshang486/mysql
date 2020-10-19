@@ -60,7 +60,7 @@
 |[单库单表恢复](/intl.zh-CN/RDS MySQL 数据库/恢复/MySQL单库单表恢复.md)|×|√|×|×|×|
 |[跨地域恢复](/intl.zh-CN/RDS MySQL 数据库/恢复/跨地域恢复数据.md)|×|√|×|×|×|
 |独享代理|[数据库独享代理](/intl.zh-CN/RDS MySQL 数据库/数据库代理（读写分离）/数据库独享代理.md)|√|√|√|√|×|
-|AliSQL|[AliSQL](/intl.zh-CN/AliSQL 内核/AliSQL 功能概览.md)|√|√|√|√|√|
+|AliSQL|[AliSQL](/intl.zh-CN/自研内核 AliSQL/AliSQL 功能概览.md)|√|√|√|√|√|
 |标签管理|[创建标签](/intl.zh-CN/RDS MySQL 数据库/标签/创建标签.md)|√|√|√|√|√|
 |[删除标签](/intl.zh-CN/RDS MySQL 数据库/标签/删除标签.md)|√|√|√|√|√|
 |[根据标签筛选实例](/intl.zh-CN/RDS MySQL 数据库/标签/根据标签筛选实例.md)|√|√|√|√|√|
@@ -123,7 +123,7 @@
 |[单库单表恢复](/intl.zh-CN/RDS MySQL 数据库/恢复/MySQL单库单表恢复.md)|×|√|×|×|×|
 |[跨地域恢复](/intl.zh-CN/RDS MySQL 数据库/恢复/跨地域恢复数据.md)|×|√|×|×|×|
 |独享代理|[数据库独享代理](/intl.zh-CN/RDS MySQL 数据库/数据库代理（读写分离）/数据库独享代理.md)|√|√|√|√|×|
-|AliSQL|[AliSQL](/intl.zh-CN/AliSQL 内核/AliSQL 功能概览.md)|√|√|√|√|√|
+|AliSQL|[AliSQL](/intl.zh-CN/自研内核 AliSQL/AliSQL 功能概览.md)|√|√|√|√|√|
 |标签管理|[创建标签](/intl.zh-CN/RDS MySQL 数据库/标签/创建标签.md)|√|√|√|√|√|
 |[删除标签](/intl.zh-CN/RDS MySQL 数据库/标签/删除标签.md)|√|√|√|√|√|
 |[根据标签筛选实例](/intl.zh-CN/RDS MySQL 数据库/标签/根据标签筛选实例.md)|√|√|√|√|√|
@@ -185,7 +185,7 @@
 |[单库单表恢复](/intl.zh-CN/RDS MySQL 数据库/恢复/MySQL单库单表恢复.md)|√|
 |[跨地域恢复](/intl.zh-CN/RDS MySQL 数据库/恢复/跨地域恢复数据.md)|√|
 |独享代理|[数据库独享代理](/intl.zh-CN/RDS MySQL 数据库/数据库代理（读写分离）/数据库独享代理.md)|×|
-|AliSQL|[AliSQL](/intl.zh-CN/AliSQL 内核/AliSQL 功能概览.md)|√|
+|AliSQL|[AliSQL](/intl.zh-CN/自研内核 AliSQL/AliSQL 功能概览.md)|√|
 |标签管理|[创建标签](/intl.zh-CN/RDS MySQL 数据库/标签/创建标签.md)|√|
 |[删除标签](/intl.zh-CN/RDS MySQL 数据库/标签/删除标签.md)|√|
 |[根据标签筛选实例](/intl.zh-CN/RDS MySQL 数据库/标签/根据标签筛选实例.md)|√|
@@ -248,7 +248,7 @@
 |[单库单表恢复](/intl.zh-CN/RDS MySQL 数据库/恢复/MySQL单库单表恢复.md)|×|
 |[跨地域恢复](/intl.zh-CN/RDS MySQL 数据库/恢复/跨地域恢复数据.md)|×|
 |独享代理|[数据库独享代理](/intl.zh-CN/RDS MySQL 数据库/数据库代理（读写分离）/数据库独享代理.md)|×|
-|AliSQL|[AliSQL](/intl.zh-CN/AliSQL 内核/AliSQL 功能概览.md)|x|
+|AliSQL|[AliSQL](/intl.zh-CN/自研内核 AliSQL/AliSQL 功能概览.md)|x|
 |标签管理|[创建标签](/intl.zh-CN/RDS MySQL 数据库/标签/创建标签.md)|√|
 |[删除标签](/intl.zh-CN/RDS MySQL 数据库/标签/删除标签.md)|√|
 |[根据标签筛选实例](/intl.zh-CN/RDS MySQL 数据库/标签/根据标签筛选实例.md)|√|
