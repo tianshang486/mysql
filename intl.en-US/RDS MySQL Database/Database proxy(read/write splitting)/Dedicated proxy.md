@@ -9,7 +9,7 @@ This topic describes the dedicated proxy feature of ApsaraDB RDS for MySQL. This
     -   MySQL 5.7 with a minor engine version of 20191128 or later on RDS Enterprise Edition
     -   MySQL 5.7 with a minor engine version of 20190925 or later on RDS High-availability Edition
     -   MySQL 5.6 with a minor engine version of 20200229 or later on RDS High-availability Edition
-    **Note:** You can log on to the ApsaraDB for RDS console and go to the Basic Information page of the primary RDS instance. In the **Configuration Information** section of the page, you can check whether the **Upgrade Minor Engine Version** button exists. If the button exists, you can click it to view and update the minor engine version of the primary RDS instance. If the button does not exist, you are using the latest minor engine version. For more information, see [Upgrade the minor engine version of an ApsaraDB RDS for MySQL instance](/intl.en-US/RDS MySQL Database/Version upgrade/Upgrade the minor engine version of an ApsaraDB RDS for MySQL instance.md).
+    **Note:** You can log on to the ApsaraDB for RDS console and go to the Basic Information page of the primary RDS instance. In the **Configuration Information** section of the page, you can check whether the **Upgrade Minor Version** button exists. If the button exists, you can click it to view and update the minor engine version of the primary RDS instance. If the button does not exist, you are using the latest minor engine version. For more information, see [Upgrade the minor engine version of an ApsaraDB RDS for MySQL instance](/intl.en-US/RDS MySQL Database/Version upgrade/Upgrade the minor engine version of an ApsaraDB RDS for MySQL instance.md).
 
     ![Upgrade Minor Engine Version](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6040359951/p61646.png)
 
@@ -101,8 +101,8 @@ Dedicated proxies support only the pay-as-you-go billing method. The following t
 
     **Note:**
 
-    -   If your RDS instance uses standard or enhanced SSDs, you cannot select the Internet Address network type.
-    -   We recommend that you specify the number of dedicated proxies as the rounded-up integer of the total number of CPU cores of your RDS instance and its read-only RDS instances divided by 8. A maximum of 60 dedicated proxies are supported.
+    -   If RDS instances have different configurations, their default proxy endpoints are of different network types. For more information, see [t1938621.md\#]().
+    -   We recommend that you specify the number of dedicated proxies as the rounded-up integer of the total number of CPU cores of your RDS instance and its read-only RDS instances divided by 8. A maximum of 60 dedicated proxies are supported
 
         For example, if your RDS instance has eight CPU cores and its read-only RDS instances have four CPU cores, the recommended number of dedicated proxies is 2 based on the following formula: \(8 + 4\)/8 = 1.5 \(rounded up to 2\).
 
@@ -126,11 +126,7 @@ After the dedicated proxy feature is enabled, you can use the generated proxy en
 
 For more information, see [Connection pool](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Connection pool.md). |
 |**Transaction Splitting**|Specifies whether to enable the transaction splitting function for the proxy endpoint. For more information, see [Transaction splitting](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Transaction splitting.md). **Note:** You can click **Enable** or **Disable** to the right of the Transaction Splitting parameter to enable or disable this function. |
-|**Endpoint**|The proxy endpoint that is generated after the dedicated proxy feature is enabled. This endpoint connects to all of the dedicated proxies that are enabled on your RDS instance. The read/write splitting function is also bound to this endpoint. You can add additional endpoints. These include the public endpoint, classic network endpoint, and VPC endpoint. You can also change the proxy endpoint or delete all the other endpoints except the proxy endpoint.**Note:** You can click **Change Endpoint** to the right of the displayed endpoint to change the proxy endpoint. The proxy endpoint must meet the following requirements:
-
--   The proxy endpoint must start with a lowercase letter.
--   The proxy endpoint can contain letters, digits, and hyphens \(-\).
--   The proxy endpoint must be 1 to 40 characters in length. |
+|**Endpoint**|The proxy endpoint that is generated after the dedicated proxy feature is enabled. This endpoint connects to all of the dedicated proxies that are enabled on your RDS instance. The read/write splitting function is also bound to this endpoint. You can also create, modify, or delete additional proxy endpoints. For more information, see [t1938621.md\#]().|
 |**Port**|The port that is associated with the proxy endpoint. **Note:** To change the port, you can click **Change Port** to the right of the displayed port number. Valid values: 1000 to 5999. |
 |**Endpoint Type**|The network type of the proxy endpoint. You cannot change the network type.|
 |**Proxy**|**Proxy Type**|The type of proxy that is enabled on your RDS instance. Only the **Dedicated Proxy** type is supported.|
@@ -185,7 +181,7 @@ For example, if your RDS instance has eight CPU cores and its read-only RDS inst
 
 ## Update the minor engine version of the dedicated proxy instance
 
-**Note:** When you update the minor engine version of the dedicated proxy instance, the dedicated proxy instance will restart. The restart incurs a transient connection error of about 30 seconds. The time when the dedicated proxy instance will restart depends on the **Upgrade Time** that you specify. You can select **Upgrade Immediate** or **Upgrade within maintenance period**. We recommend that you update the minor engine version of the dedicated proxy instance during off-peak hours. Otherwise, make sure that your application is configured to automatically reconnect to your database system.
+**Note:** If you update the minor engine version of the dedicated proxy instance, the dedicated proxy instance will restart. The restart causes a transient connection error of about 30 seconds. The time when the dedicated proxy instance will restart depends on the **Upgrade Time** that you specify. You can select **Upgrade Immediate** or **Upgrade within maintenance period**. We recommend that you update the minor engine version of the dedicated proxy instance during off-peak hours. Otherwise, make sure that your application is configured to automatically reconnect to your database system.
 
 1.  Log on to the [ApsaraDB for RDS console](https://rds.console.aliyun.com/).
 
@@ -234,16 +230,16 @@ For example, if your RDS instance has eight CPU cores and its read-only RDS inst
     After you enable the dedicated proxy feature, the proxy endpoint and the read/write splitting endpoint are the same. The backend uses the proxy endpoint to implement read/write splitting.
 
 
-## Operations
+## Related operations
 
 |Operation|Description|
 |---------|-----------|
 |[ModifyDBProxy](/intl.en-US/API Reference/Database proxy/Enable or disable the Dedicated Proxy feature.md)|Enables or disables the dedicated proxy feature on an ApsaraDB for RDS instance.|
-|[ModifyDBProxyInstance](/intl.en-US/API Reference/Database proxy/Modify settings of dedicated proxy.md)|Modifies the settings of the dedicated proxy feature on an ApsaraDB for RDS instance.|
-|[DescribeDBProxy](/intl.en-US/API Reference/Database proxy/Query settings of dedicated proxy.md)|Queries details about the dedicated proxies that are enabled on an ApsaraDB for RDS instance.|
-|[DescribeDBProxyEndpoint](/intl.en-US/API Reference/Database proxy/Query endpoint of dedicated proxy.md)|Queries information about the proxy endpoint of an ApsaraDB for RDS instance.|
-|[ModifyDBProxyEndpoint](/intl.en-US/API Reference/Database proxy/Modify endpoint of dedicated proxy.md)|Modifies information about the proxy endpoint of an ApsaraDB for RDS instance.|
-|[DescribeDBProxyPerformance](/intl.en-US/API Reference/Database proxy/Query performance metrics of dedicated proxy.md)|Queries the performance of the dedicated proxies that are enabled on an ApsaraDB for RDS instance.|
+|[ModifyDBProxyInstance](/intl.en-US/API Reference/Database proxy/Modify settings of a dedicated proxy.md)|Modifies the settings of the dedicated proxy feature on an ApsaraDB for RDS instance.|
+|[DescribeDBProxy](/intl.en-US/API Reference/Database proxy/Query dedicated proxy details.md)|Queries details about the dedicated proxies that are enabled on an ApsaraDB for RDS instance.|
+|[DescribeDBProxyEndpoint](/intl.en-US/API Reference/Database proxy/Query the endpoint of the dedicated proxy.md)|Queries information about the proxy endpoint of an ApsaraDB for RDS instance.|
+|[ModifyDBProxyEndpoint](/intl.en-US/API Reference/Database proxy/Modify the endpoint of the dedicated proxy.md)|Modifies information about the proxy endpoint of an ApsaraDB for RDS instance.|
+|[DescribeDBProxyPerformance](/intl.en-US/API Reference/Database proxy/Query performance metrics of a dedicated proxy.md)|Queries the performance of the dedicated proxies that are enabled on an ApsaraDB for RDS instance.|
 |[CreateDBProxyEndpointAddress](/intl.en-US/API Reference/Database proxy/Create proxy endpoint.md)|Creates an endpoint that is used to connect to the dedicated proxies of an ApsaraDB for RDS instance.|
 |[ModifyDBProxyEndpointAddress](/intl.en-US/API Reference/Database proxy/Modify proxy endpoint.md)|Modifies the endpoint that is used to connect to the dedicated proxies of an ApsaraDB for RDS instance.|
 |[DeleteDBProxyEndpointAddress](/intl.en-US/API Reference/Database proxy/Delete proxy endpoint.md)|Deletes the endpoint that is used to connect to the dedicated proxies of an ApsaraDB for RDS instance.|
