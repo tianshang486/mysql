@@ -15,6 +15,10 @@
 
 DMS是阿里云提供的图形化的数据管理工具，可用于管理关系型数据库和NoSQL数据库，支持数据管理、结构管理、用户授权、安全审计、数据趋势、数据追踪、BI图表、性能与优化等功能。
 
+您可以在**数据库管理**页面右侧单击**SQL查询**登录数据库。
+
+![SQL查询](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6122613061/p174701.png)
+
 具体操作请参见[通过DMS登录RDS数据库](/intl.zh-CN/RDS MySQL 数据库/数据库连接/通过DMS登录RDS数据库.md)。
 
 ## 使用客户端连接实例
