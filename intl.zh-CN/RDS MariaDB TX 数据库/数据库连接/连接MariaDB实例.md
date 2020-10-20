@@ -16,7 +16,7 @@ DMS是阿里云提供的图形化的数据管理工具，可用于管理关系�
 
 您可以在**数据库管理**页面右侧单击**SQL查询**登录数据库。
 
-![SQL查询](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6122613061/p174701.png)
+![SQL查询](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8414713061/p174701.png)
 
 ## 使用客户端连接实例
 
