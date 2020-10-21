@@ -4,7 +4,7 @@
 
 数据管理DMS是一种集数据管理、结构管理、用户授权、安全审计、数据趋势、数据追踪、BI图表、性能与优化和服务器管理于一体的数据管理服务。
 
-## 新版DMS登录RDS数据库
+## 通过新版DMS登录RDS数据库
 
 前提条件
 
@@ -23,7 +23,7 @@
 
 5.  在右侧单击**SQL查询**。
 
-    ![SQL查询](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6122613061/p174701.png)
+    ![SQL查询](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8414713061/p174701.png)
 
 6.  在DMS的**登录实例**页面，输入实例数据库的账号密码，单击**登录**。
 
@@ -34,7 +34,9 @@
 7.  登录后请刷新页面，然后在左侧**已登录实例**菜单双击目标数据库内的模式，即可切换到目标模式。
 
 
-## 旧版DMS登录RDS数据库
+**说明：** 除了通过RDS控制台跳转到DMS进行登录，您还可以登录DMS控制台直接录入RDS实例，录入后可以在DMS控制台快速登录数据库。详情请参见[云数据库录入]()。
+
+## 通过旧版DMS登录RDS数据库
 
 **说明：** DMS已经升级为新版，建议您使用新版DMS登录RDS数据库。
 
