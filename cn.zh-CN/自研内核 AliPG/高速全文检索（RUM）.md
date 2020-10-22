@@ -2,6 +2,11 @@
 
 RDS PostgreSQL提供RUM插件，实现高速全文检索。
 
+RDS PostgreSQL版本如下：
+
+-   PostgreSQL 11
+-   PostgreSQL 10
+
 GIN索引（通用倒排索引）支持通过tsvector和tsquery两种数据类型进行全文检索，但是有如下几个问题：
 
 -   排序慢
