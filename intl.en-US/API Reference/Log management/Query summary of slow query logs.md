@@ -1,12 +1,12 @@
 # Query summary of slow query logs
 
-Queries the summary of slow query logs for an RDS instance.
+You can call the DescribeSlowLogs operation to query the summary of slow query logs of an ApsaraDB RDS instance.
 
-When you call this operation, ensure that the version of the instance is as follows:
+Before you call this operation, make sure that the instance runs one of the following database engine versions and RDS editions:
 
--   All MySQL versions except MySQL 5.7 Basic edition.
+-   All MySQL editions \(except MySQL 5.7 that is used with the RDS Basic edition\)
 -   SQL Server 2008 R2
--   MariaDB 10.3.
+-   MariaDB 10.3
 
 ## Debugging
 
@@ -16,58 +16,59 @@ When you call this operation, ensure that the version of the instance is as foll
 
 |Parameter|Type|Required|Example|Description|
 |---------|----|--------|-------|-----------|
-|Action|String|Yes|DescribeSlowLogs|The operation that you want to perform. Set the value to**DescribeSlowLogs**. |
+|Action|String|Yes|DescribeSlowLogs|The operation that you want to perform. Set the value to **DescribeSlowLogs**. |
 |DBInstanceId|String|Yes|rm-uf6wjk5xxxxxxx|The ID of the instance. |
-|EndTime|String|Yes|2011-05-30Z|The end time of the query. It must be later than the start time. The time span between the start and end time must be less than 31 days. Specify the time in the *yyyy-MM-dd*Z format. |
-|StartTime|String|Yes|2011-05-01Z|The start time of the query. Format: *yyyy-MM-dd*Z. |
-|DBName|String|No|RDS\_MySQL|The name of the PolarDB-X database. |
-|SortKey|String|No|TotalExecutionCounts|The basis on which query results are sorted. Valid values:
+|EndTime|String|Yes|2011-05-30Z|The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the *yyyy-MM-dd*Z format. |
+|StartTime|String|Yes|2011-05-01Z|The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*Z format. |
+|DBName|String|No|RDS\_MySQL|The name of the database to query. |
+|SortKey|String|No|TotalExecutionCounts|The dimension based on which to sort the query results. Valid values:
 
--   **TotalExecutionCounts**: the maximum number of total executions.
--   **TotalQueryTimes**: total execution time
--   **TotalLogicalReads**: total logic read most
--   **TotalPhysicalReads**: total physical read most
+ -   **TotalExecutionCounts**: sorts the query results based on the total number of execution times.
+-   **TotalQueryTimes**: sorts the query results based on the total execution duration.
+-   **TotalLogicalReads**: sorts the query results based on the total number of logical reads.
+-   **TotalPhysicalReads**: sorts the query results based on the total number of physical reads.
 
-**Note:** This parameter is only supported by SQL Server 2008 R2 instances. |
-|PageSize|Integer|No|30|The number of records on each page. Valid values:**30**~**100**. Default value: **30**. |
+ **Note:** This parameter is supported only for instances that run SQL Server 2008 R2. |
+|PageSize|Integer|No|30|The number of entries to return on each page. Valid values: **30** to **100**. Default value: **30**. |
 |PageNumber|Integer|No|1|The number of the page to return. Pages start from page 1.
 
-Default value: **1**. |
+ Default value: **1**. |
 
 ## Response parameters
 
 |Parameter|Type|Example|Description|
 |---------|----|-------|-----------|
-|RequestId|String|2553A660-E4EB-4AF4-A402-8AFF70A49143|The ID of the request. |
-|DBInstanceId|String|rm-uf6wjk5xxxxxxx|The ID of the instance. |
-|Engine|String|MySQL|The database engine that the instance is running. |
-|StartTime|String|2011-05-30Z|The start time of the query. |
-|EndTime|String|2011-05-30Z|The end time of the query. |
-|TotalRecordCount|Integer|5|The total number of backup sets. |
+|Engine|String|MySQL|The database engine that the instance runs. |
+|StartTime|String|2011-05-30Z|The beginning of the time range queried. |
+|EndTime|String|2011-05-30Z|The end of the time range queried. |
+|TotalRecordCount|Integer|5|The total number of entries returned. |
 |PageNumber|Integer|1|The page number of the returned page. |
-|PageRecordCount|Integer|10|The number of slow SQL queries on the current page. |
-|Items|Array| |The log information about slow queries. |
-|SlowLogId|Long|26584213|The ID of slow query summary. |
-|SQLHASH|String|U2FsdGVkxxxx|The unique ID of the SQL statement included in the slow query log statistics. You can use the unique ID to query logs of slow queries on the SQL statement. |
-|SQLIdStr|String|521584|The SQL ID in the slow log statistics template. It is deprecated. Use **SQLHASH**instead. |
-|DBName|String|RDS\_MySQL|The name of the PolarDB-X database. |
-|SQLText|String|select id,name from tb\_table|The SQL statement. |
-|MySQLTotalExecutionCounts|Long|1|The total number of MySQL executions. |
-|MySQLTotalExecutionTimes|Long|1|The total execution time of MySQL. Unit: seconds. |
+|PageRecordCount|Integer|10|The number of SQL statements returned on the current page. |
+|Items|Array of SQLSlowLog| |An array that consists of slow query logs. |
+|SQLSlowLog| | | |
+|DBName|String|RDS\_MySQL|The name of the database queried. |
+|SQLText|String|select id,name from tb\_table|The SQL statement recorded in the log. |
+|SQLServerTotalExecutionCounts|Long|1|The total execution times of the SQL statement if the instance runs SQL Server. |
+|MySQLTotalExecutionCounts|Long|1|The total execution times of the SQL statement if the instance runs MySQL. |
+|SQLServerTotalExecutionTimes|Long|1000|The total execution duration of the SQL statement if the instance runs SQL Server. Unit: milliseconds. |
+|MySQLTotalExecutionTimes|Long|1|The total execution duration of the SQL statement if the instance runs MySQL. Unit: seconds. |
+|MaxExecutionTime|Long|60|The longest execution duration of the SQL statement among all logged execution durations. Unit: seconds. |
+|ReportTime|String|2011-05-30Z|The date when the log was generated. |
 |TotalLockTimes|Long|0|The total lock duration of the SQL statement. Unit: seconds. |
-|MaxLockTime|Long|0|The maximum lock duration of the SQL statement. Unit: seconds. |
-|ParseTotalRowCounts|Long|1|The total rows of parsed SQL statements. |
-|ParseMaxRowCount|Long|1|The maximum row of parsed SQL statements. |
-|ReturnTotalRowCounts|Long|1|The total rows of returned SQL statements. |
-|ReturnMaxRowCount|Long|1|The maximum row of returned SQL statements |
-|CreateTime|String|2011-05-30Z|The date when the data is generated. |
-|SQLServerTotalExecutionCounts|Long|1|The total number of SQL Server executions. |
-|SQLServerTotalExecutionTimes|Long|1000|The total execution time of SQL Server. Unit: milliseconds. |
+|MaxLockTime|Long|0|The longest lock duration of the SQL statement among all logged lock durations. Unit: seconds. |
+|ParseTotalRowCounts|Long|1|The total number of rows parsed by the SQL statement. |
+|ParseMaxRowCount|Long|1|The largest number of rows parsed by the SQL statement among all logged numbers. |
+|ReturnTotalRowCounts|Long|1|The total number of rows returned by the SQL statement. |
+|ReturnMaxRowCount|Long|1|The largest number of rows returned by the SQL statement among all logged numbers. |
+|CreateTime|String|2011-05-30Z|The date when the SQL statement was executed. |
+|AvgExecutionTime|Long|1|The average execution duration of the SQL statement. Unit: seconds. |
+|SQLHASH|String|U2FsdGVkxxxx|The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement. |
+|SQLIdStr|String|521584|The ID of the SQL statement. This parameter is replaced by the **SQLHASH** parameter. |
+|SlowLogId|Long|26584213|The ID of the log. |
 |TotalLogicalReadCounts|Long|1|The total number of logical reads. |
 |TotalPhysicalReadCounts|Long|1|The total number of physical reads. |
-|ReportTime|String|2011-05-30Z|The date when the data report is generated. |
-|MaxExecutionTime|Long|60|The maximum execution time. Unit: seconds. |
-|AvgExecutionTime|Long|1|The average execution time. Unit: seconds. |
+|DBInstanceId|String|rm-uf6wjk5xxxxxxx|The ID of the instance. |
+|RequestId|String|2553A660-E4EB-4AF4-A402-8AFF70A49143|The ID of the request. |
 
 ## Examples
 
@@ -135,7 +136,7 @@ Sample success responses
 }
 ```
 
-## Error code
+## Error codes
 
 For a list of error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Rds).
 
