@@ -52,7 +52,6 @@
 |审计|[SQL洞察](/intl.zh-CN/RDS MySQL 数据库/日志/审计/历史事件/SQL洞察.md)|√|√|√|√|×|
 |[日志管理](/intl.zh-CN/RDS MySQL 数据库/日志/审计/历史事件/查看日志.md)|√|√|√|√|×|
 |数据库备份|[备份数据](/intl.zh-CN/RDS MySQL 数据库/备份/备份MySQL数据.md)|√|√|√|√|√|
-|[备份加密]()|×|√|×|×|×|
 |[免费额度](/intl.zh-CN/RDS MySQL 数据库/备份/查看备份空间免费额度.md)|√|√|√|√|√|
 |[下载备份](/intl.zh-CN/RDS MySQL 数据库/备份/下载数据备份和日志备份.md)|√|√|√|√|√|
 |[跨地域备份](/intl.zh-CN/RDS MySQL 数据库/备份/跨地域备份数据.md)|×|√|×|×|×|
@@ -115,7 +114,6 @@
 |审计|[SQL洞察](/intl.zh-CN/RDS MySQL 数据库/日志/审计/历史事件/SQL洞察.md)|√|√|√|√|×|
 |[日志管理](/intl.zh-CN/RDS MySQL 数据库/日志/审计/历史事件/查看日志.md)|√|√|√|√|×|
 |数据库备份|[备份数据](/intl.zh-CN/RDS MySQL 数据库/备份/备份MySQL数据.md)|√|√|√|√|√|
-|[备份加密]()|×|√|×|×|×|
 |[免费额度](/intl.zh-CN/RDS MySQL 数据库/备份/查看备份空间免费额度.md)|√|√|√|√|√|
 |[下载备份](/intl.zh-CN/RDS MySQL 数据库/备份/下载数据备份和日志备份.md)|√|√|√|√|√|
 |[跨地域备份](/intl.zh-CN/RDS MySQL 数据库/备份/跨地域备份数据.md)|×|√|×|×|×|
@@ -177,7 +175,6 @@
 |审计|[SQL洞察](/intl.zh-CN/RDS MySQL 数据库/日志/审计/历史事件/SQL洞察.md)|√|
 |[日志管理](/intl.zh-CN/RDS MySQL 数据库/日志/审计/历史事件/查看日志.md)|√|
 |数据库备份|[备份数据](/intl.zh-CN/RDS MySQL 数据库/备份/备份MySQL数据.md)|√|
-|[备份加密]()|√|
 |[免费额度](/intl.zh-CN/RDS MySQL 数据库/备份/查看备份空间免费额度.md)|√|
 |[下载备份](/intl.zh-CN/RDS MySQL 数据库/备份/下载数据备份和日志备份.md)|√|
 |[跨地域备份](/intl.zh-CN/RDS MySQL 数据库/备份/跨地域备份数据.md)|√|
@@ -240,7 +237,6 @@
 |审计|[SQL洞察](/intl.zh-CN/RDS MySQL 数据库/日志/审计/历史事件/SQL洞察.md)|√|
 |[日志管理](/intl.zh-CN/RDS MySQL 数据库/日志/审计/历史事件/查看日志.md)|√|
 |数据库备份|[备份数据](/intl.zh-CN/RDS MySQL 数据库/备份/备份MySQL数据.md)|√|
-|[备份加密]()|×|
 |[免费额度](/intl.zh-CN/RDS MySQL 数据库/备份/查看备份空间免费额度.md)|√|
 |[下载备份](/intl.zh-CN/RDS MySQL 数据库/备份/下载数据备份和日志备份.md)|√|
 |[跨地域备份](/intl.zh-CN/RDS MySQL 数据库/备份/跨地域备份数据.md)|×|
