@@ -5,7 +5,7 @@ You can call the ModifySQLCollectorPolicy operation to enable or disable the SQL
 Before you call this operation, make sure that the instance must run one of the following database engines:
 
 -   MySQL
--   -   PostgreSQL
+-   PostgreSQL
 -   PPAS
 
 ## Debugging
