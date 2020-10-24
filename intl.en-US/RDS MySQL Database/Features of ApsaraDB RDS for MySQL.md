@@ -53,7 +53,6 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |Audit|[SQL Explorer](/intl.en-US/RDS MySQL Database/Audit/SQL Explorer.md)|√|√|√|√|×|
 |[Log management](/intl.en-US/RDS MySQL Database/Audit/Manage logs.md)|√|√|√|√|×|
 |Database backup|[Back up an RDS instance](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
-|[t1952299.md\#]()|×|√|×|×|×|
 |[View the free quota for backup storage of an RDS instance](/intl.en-US/RDS MySQL Database/Backup/View the free quota for backup storage of an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Download a backup file of an RDS instance](/intl.en-US/RDS MySQL Database/Backup/Download data and log backup files of an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Back up an RDS instance across regions](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance across regions.md)|×|√|×|×|×|
@@ -117,7 +116,6 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |Audit|[SQL Explorer](/intl.en-US/RDS MySQL Database/Audit/SQL Explorer.md)|√|√|√|√|×|
 |[Log management](/intl.en-US/RDS MySQL Database/Audit/Manage logs.md)|√|√|√|√|×|
 |Database backup|[Back up an RDS instance](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
-|[t1952299.md\#]()|×|√|×|×|×|
 |[View the free quota for backup storage of an RDS instance](/intl.en-US/RDS MySQL Database/Backup/View the free quota for backup storage of an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Download a backup file of an RDS instance](/intl.en-US/RDS MySQL Database/Backup/Download data and log backup files of an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Back up an RDS instance across regions](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance across regions.md)|×|√|×|×|×|
@@ -180,7 +178,6 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |Audit|[SQL Explorer](/intl.en-US/RDS MySQL Database/Audit/SQL Explorer.md)|√|
 |[Log management](/intl.en-US/RDS MySQL Database/Audit/Manage logs.md)|√|
 |Database backup|[Back up an RDS instance](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance.md)|√|
-|[t1952299.md\#]()|√|
 |[View the free quota for backup storage of an RDS instance](/intl.en-US/RDS MySQL Database/Backup/View the free quota for backup storage of an ApsaraDB RDS for MySQL instance.md)|√|
 |[Download a backup file of an RDS instance](/intl.en-US/RDS MySQL Database/Backup/Download data and log backup files of an ApsaraDB RDS for MySQL instance.md)|√|
 |[Back up an RDS instance across regions](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance across regions.md)|√|
@@ -244,7 +241,6 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |Audit|[SQL Explorer](/intl.en-US/RDS MySQL Database/Audit/SQL Explorer.md)|√|
 |[Log management](/intl.en-US/RDS MySQL Database/Audit/Manage logs.md)|√|
 |Database backup|[Back up the data of an RDS instance](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance.md)|√|
-|[t1952299.md\#]()|×|
 |[View the free quota for backup storage of an RDS instance](/intl.en-US/RDS MySQL Database/Backup/View the free quota for backup storage of an ApsaraDB RDS for MySQL instance.md)|√|
 |[Download a backup file of an RDS instance](/intl.en-US/RDS MySQL Database/Backup/Download data and log backup files of an ApsaraDB RDS for MySQL instance.md)|√|
 |[Back up the data of an RDS instance across regions](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance across regions.md)|×|
