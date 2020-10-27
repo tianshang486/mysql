@@ -1,8 +1,8 @@
 # Authorize the service account of an ApsaraDB RDS for MySQL instance
 
-When you seek help from Alibaba Cloud technical support to locate problems that occurred on your ApsaraDB RDS for MySQL instance, you may need to grant permissions to the service account of your instance. The service account is used by Alibaba Cloud technical support to perform operations on the databases of your instance. After the specified expiration time elapses, the service account is automatically deleted.
+When you seek help from Alibaba Cloud technical support to locate problems that occurred on your ApsaraDB RDS for MySQL instance, you may need to grant permissions to a service account. The service account is used by Alibaba Cloud technical support to perform operations on the databases of your RDS instance. After the specified expiration time elapses, the service account is automatically deleted.
 
-The RDS instance runs one of the following MySQL versions and RDS editions:
+Your RDS instance runs one of the following MySQL versions and RDS editions:
 
 -   MySQL 8.0 on RDS High-availability Edition \(with local SSDs\) or Enterprise Edition
 -   MySQL 5.7 on RDS High-availability Edition \(with local SSDs\) or Enterprise Edition
@@ -23,8 +23,8 @@ The RDS instance runs one of the following MySQL versions and RDS editions:
 
 5.  On the **Service Account Permissions** tab, find the permission that you want to grant to the service account, and turn on the switch in the **Permission Status** column.
 
-    -   For problems related to IP address whitelists or database parameters, you can grant only the **Configuration Permission** to the service account.
-    -   For database performance problems caused by application defects, you must grant the **Data Permission** to the service account.
+    -   For problems that are related to IP address whitelists or database parameters, you only need to grant the **Configuration Permission** to the service account.
+    -   For database performance problems that are caused by applications, you must grant the **Data Permission** to the service account.
     ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/5250359951/p4170.png)
 
 6.  In the dialog box that appears, specify the expiration time of the service account and click **OK**.
