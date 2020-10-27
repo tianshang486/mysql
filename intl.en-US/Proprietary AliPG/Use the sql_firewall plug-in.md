@@ -10,6 +10,8 @@ Your RDS instance runs one of the following RDS editions:
 
 ## Learning, permissive, and enforcing modes
 
+![流程图](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/5402873061/p162105.png)
+
 The sql\_firewall plug-in supports the following modes:
 
 -   Learning: The plug-in records common SQL statements that are executed and adds them to a whitelist.
