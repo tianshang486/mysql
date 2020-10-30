@@ -1,86 +1,90 @@
+---
+keyword: [specifications, configuration]
+---
+
 # Primary instance types
 
-This topic provides an overview of primary ApsaraDB for RDS instance types.
+This topic provides an overview of primary ApsaraDB RDS instance types. You can view the latest and historical specifications of each instance type.
 
-ApsaraDB for RDS allows you to create [read-only instances](/intl.en-US/RDS MySQL Database/Read-only instances/Overview of ApsaraDB RDS for MySQL read-only instances.md) to scale the read capability of your database system. For more information about read-only instance types, see [Read-only instance types](/intl.en-US/Product Introduction/Product specifications/Read-only instance types.md).
+ApsaraDB RDS allows you to create [read-only instances](/intl.en-US/RDS MySQL Database/Read-only instances/Overview of ApsaraDB RDS for MySQL read-only instances.md) to scale the read capability of your database system. For more information about read-only instance types, see [Read-only instance types](/intl.en-US/Product Introduction/Product specifications/Read-only instance types.md).
 
 After you select a primary instance type, you can [create an instance](/intl.en-US/RDS MySQL Database/Quick start/Create an ApsaraDB RDS for MySQL instance.md) and perform subsequent operations.
 
 ## IOPS
 
-The maximum input/output operations per second \(IOPS\) of an RDS instance equipped with local SSDs varies based on the instance type. The maximum IOPS of an RDS instance equipped with standard SSDs or enhanced SSDs \(ESSDs\) varies based on the instance type and the storage capacity. The following table provides formulas to calculate the maximum IOPS of an RDS instance equipped with standard SSDs or ESSDs.
+The maximum input/output operations per second \(IOPS\) of an RDS instance equipped with local SSDs varies based on the instance type. The maximum IOPS of an RDS instance equipped with standard SSDs or enhanced SSDs \(ESSDs\) varies based on the instance type and storage capacity. The following table provides formulas to calculate the maximum IOPS of an RDS instance equipped with standard SSDs or ESSDs.
 
-**Note:** If the throughput of an RDS instance equipped with standard SSDs or ESSDs reaches the upper limit, the IOPS of the RDS instance is also affected.
+**Note:** If the throughput of an RDS instance equipped with standard SSDs or ESSDs reaches the upper limit, the IOPS of the RDS instance also decreases.
 
 |Storage type|ESSD|Standard SSD|
-|Performance level|PL3|PL2|PL1|N/A|
+|Performance level|PL3|PL2|PL1|-|
 |------------|----|------------|
-|-----------------|---|---|---|---|
+|-----------------|---|---|---|--|
 |Maximum IOPS
 
-\(Storage capacity measured in GB\)
+\(The storage capacity is measured in GB.\)
 
 |min\{1800 + 50 × Storage capacity, 1000000\}|min\{1800 + 50 × Storage capacity, 100000\}|min\{1800 + 50 × Storage capacity, 50000\}|min\{1800 + 30 × Storage capacity, 25000\}|
 
 ## Throughput
 
-ApsaraDB for RDS instances equipped with standard SSDs or ESSDs can be deployed on the sixth-generation ECS instances. In this situation, the maximum throughput of an RDS instance equipped with standard SSDs or ESSDs varies based on the ECS instance type. For more information, see [Storage I/O performance of the new generation of enterprise-level instance families](/intl.en-US/Block Storage/Performance/Storage I/O performance.md).
+RDS instances equipped with standard SSDs or ESSDs are deployed on the sixth-generation ECS instances. In this situation, the maximum throughput of an RDS instance equipped with standard SSDs or ESSDs varies based on the ECS instance type. For more information, see [Storage I/O performance of the new generation of enterprise-level instance families](/intl.en-US/Block Storage/Performance/Storage I/O performance.md).
 
-**Note:** If the IOPS of an RDS instance equipped with standard SSDs or ESSDs reaches the upper limit, the throughput of the RDS instance is also affected.
+**Note:** If the IOPS of an RDS instance equipped with standard SSDs or ESSDs reaches the upper limit, the throughput of the RDS instance also decreases.
 
 ## Primary ApsaraDB RDS for MySQL instances
 
-|RDS edition|MySQL version|Instance family|Instance type|CPU and memory|Maximum connections|Maximum IOPS|Storage capacity|
-|-----------|-------------|---------------|-------------|--------------|-------------------|------------|----------------|
-|Basic Edition|5.7 and 8.0|General-purpose instance|mysql.n1.micro.1|1 core, 1 GB|2,000|See [IOPS]().|20 GB to 6,000 GB|
-|mysql.n2.small.1|1 core, 2 GB|2,000|
-|mysql.n2.medium.1|2 cores, 4 GB|4,000|
-|mysql.n4.medium.1|2 cores, 8 GB|6,000|
-|mysql.n4.large.1|4 cores, 16 GB|8,000|
-|mysql.n4.xlarge.1|8 cores, 32 GB|10,000|
-|High-availability Edition|5.5, 5.6, 5.7, and 8.0|General-purpose instance|rds.mysql.t1.small|1 core, 1 GB|300|600|5 GB to 2,000 GB|
-|rds.mysql.s1.small|1 core, 2 GB|600|1,000|
-|rds.mysql.s2.large|2 cores, 4 GB|1,200|2,000|
-|rds.mysql.s2.xlarge|2 cores, 8 GB|2,000|4,000|
-|rds.mysql.s3.large|4 cores, 8 GB|2,000|5,000|
-|rds.mysql.m1.medium|4 cores, 16 GB|4,000|7,000|
-|rds.mysql.c1.large|8 cores, 16 GB|4,000|8,000|
-|rds.mysql.c1.xlarge|8 cores, 32 GB|8,000|12,000|
-|rds.mysql.c2.xlarge|16 cores, 64 GB|16,000|14,000|5 GB to 3,000 GB|
-|rds.mysql.c2.xlp2|16 cores, 96 GB|24,000|16,000|
-|rds.mysql.c2.2xlarge|16 cores, 128 GB|32,000|16,000|
-|Dedicated instance \(with a large memory capacity\)|mysql.x8.medium.2|2 cores, 16 GB|2,500|4,500|50 GB to 1,000 GB|
-|mysql.x8.large.2|4 cores, 32 GB|5,000|9,000|50 GB to 1,000 GB|
-|mysql.x8.xlarge.2|8 cores, 64 GB|10,000|18,000|500 GB to 3,000 GB|
-|mysql.x8.2xlarge.2|16 cores, 128 GB|20,000|36,000|500 GB to 3,000 GB|
-|mysql.x8.4xlarge.2|32 cores, 256 GB|40,000|72,000|1,000 GB to 6,000 GB|
-|mysql.x8.8xlarge.2|64 cores, 512 GB|80,000|144,000|1,000 GB to 6,000 GB|
-|Dedicated instance \(with a large number of CPU cores\)|mysql.x4.large.2|4 cores, 16 GB|2,500|4,500|50 GB to 2,000 GB|
-|mysql.x4.xlarge.2|8 cores, 32 GB|5,000|9,000|500 GB to 3,000 GB|
-|mysql.x4.2xlarge.2|16 cores, 64 GB|10,000|18,000|500 GB to 3,000 GB|
-|mysql.x4.4xlarge.2|32 cores, 128 GB|20,000|36,000|1,000 GB to 6,000 GB|
-|Dedicated host|rds.mysql.st.h43|60 cores, 470 GB|100,000|120,000|3,000 GB, 4,000 GB, 5,000 GB, or 6,000 GB|
-|rds.mysql.st.v52|90 cores, 720 GB|100,000|140,000|1,000 GB to 6,000 GB|
-|Enterprise Edition|5.7 and 8.0|General-purpose instance|mysql.n2.small.25|1 core, 2 GB|600|1,000|5 GB to 2,000 GB|
-|mysql.n2.medium.25|2 cores, 4 GB|1,200|2,000|5 GB to 2,000 GB|
-|mysql.n4.medium.25|2 cores, 8 GB|2,000|4,000|5 GB to 2,000 GB|
-|mysql.n2.large.25|4 cores, 8 GB|2,000|5,000|5 GB to 2,000 GB|
-|mysql.n4.large.25|4 cores, 16 GB|4,000|7,000|5 GB to 2,000 GB|
-|mysql.n2.xlarge.25|8 cores, 16 GB|4,000|8,000|5 GB to 2,000 GB|
-|mysql.n4.xlarge.25|8 cores, 32 GB|8,000|12,000|5 GB to 2,000 GB|
-|mysql.n4.2xlarge.25|16 cores, 64 GB|16,000|14,000|5 GB to 3,000 GB|
-|mysql.n8.2xlarge.25|16 cores, 128 GB|32,000|16,000|5 GB to 3,000 GB|
-|Dedicated instance \(with a large number of CPU cores\)|mysql.x4.large.25|4 cores, 16 GB|2,500|4,500|50 GB to 2,000 GB|
-|mysql.x4.xlarge.25|8 cores, 32 GB|5,000|9,000|500 GB to 3,000 GB|
-|mysql.x4.2xlarge.25|16 cores, 64 GB|10,000|18,000|500 GB to 3,000 GB|
-|mysql.x4.4xlarge.25|32 cores, 128 GB|20,000|36,000|1,000 GB to 6,000 GB|
-|Dedicated instance \(with a large memory capacity\)|mysql.x8.medium.25|2 cores, 16 GB|2,500|4,500|50 GB to 2,000 GB|
-|mysql.x8.large.25|4 cores, 32 GB|5,000|9,000|50 GB to 2,000 GB|
-|mysql.x8.xlarge.25|8 cores, 64 GB|10,000|18,000|500 GB to 3,000 GB|
-|mysql.x8.2xlarge.25|16 cores, 128 GB|20,000|36,000|500 GB to 3,000 GB|
-|mysql.x8.4xlarge.25|32 cores, 256 GB|40,000|72,000|1,000 GB to 6,000 GB|
-|Dedicated host|mysql.st.8xlarge.25|60 cores, 470 GB|100,000|120,000|3,000 GB, 4,000 GB, 5,000 GB, or 6,000 GB|
-|mysql.st.12xlarge.25|90 cores, 720 GB|100,000|140,000|1,000 GB to 6,000 GB|
+|RDS edition|PostgreSQL version|Instance family|Instance type|CPU and memory specifications|Maximum connections|Maximum IOPS|Storage capacity|
+|-----------|------------------|---------------|-------------|-----------------------------|-------------------|------------|----------------|
+|Basic|5.7, 8.0|General purpose instance families|mysql.n1.micro.1|1 core, 1 GB|2000|For more information, see the "IOPS" section in [Primary instance types]().|20GB-6000GB|
+|mysql.n2.small.1|1 CPU core, 2 GB|2000|
+|mysql.n2.medium.1|2 CPU cores, 4 GB|4000|
+|mysql.n4.medium.1|2 CPU cores, 8 GB|6000|
+|mysql.n4.large.1|4 CPU cores, 16 GB|8000|
+|mysql.n4.xlarge.1|8 CPU cores, 32 GB|10000|
+|High-availability Edition|5.5, 5.6, 5.7, and 8.0|General purpose instance families|rds.mysql.t1.small|1 core, 1 GB|300|600|5GB-2000GB|
+|rds.mysql.s1.small|1 CPU core, 2 GB|600|1000|
+|rds.mysql.s2.large|2 CPU cores, 4 GB|1200|2000|
+|rds.mysql.s2.xlarge|2 CPU cores, 8 GB|2000|4000|
+|rds.mysql.s3.large|4 CPU cores, 8 GB|2000|5000|
+|rds.mysql.m1.medium|4 CPU cores, 16 GB|4000|7000|
+|rds.mysql.c1.large|8 CPU cores, 16 GB|4000|8000|
+|rds.mysql.c1.xlarge|8 CPU cores, 32 GB|8000|12000|
+|rds.mysql.c2.xlarge|16 CPU cores, 64 GB|16000|14000|5GB-3000GB|
+|rds.mysql.c2.xlp2|16 cores, 96 GB|24000|16000|
+|rds.mysql.c2.2xlarge|16 CPU cores, 128 GB|32000|16000|
+|Dedicated instance \(with a large memory size\)|mysql.x8.medium.2|2 CPU cores, 16 GB|2500|4500|50GB-1000GB|
+|mysql.x8.large.2|4 CPU cores, 32 GB|5000|9000|50GB-1000GB|
+|mysql.x8.xlarge.2|8 CPU cores, 64 GB|10000|18000|500GB-3000GB|
+|mysql.x8.2xlarge.2|16 CPU cores, 128 GB|20000|36000|500GB-3000GB|
+|mysql.x8.4xlarge.2|32 CPU cores, 256 GB|40000|72000|1000GB-6000GB|
+|mysql.x8.8xlarge.2|64 CPU cores, 512 GB|80000|144000|1000GB-6000GB|
+|Dedicated instance \(with a large number of CPU cores\)|mysql.x4.large.2|4 CPU cores, 16 GB|2500|4500|50GB-2000GB|
+|mysql.x4.xlarge.2|8 CPU cores, 32 GB|5000|9000|500GB-3000GB|
+|mysql.x4.2xlarge.2|16 CPU cores, 64 GB|10000|18000|500GB-3000GB|
+|mysql.x4.4xlarge.2|32 CPU cores, 128 GB|20000|36000|1000GB-6000GB|
+|Dedicated host|rds.mysql.st.h43|60 CPU cores, 470 GB|100000|120000|3000GB/4000GB/5000GB/6000GB|
+|rds.mysql.st.v52|90 cores, 720 GB|100000|140000|1000GB-6000GB|
+|Supported for the RDS Enterprise Edition|5.7, 8.0|General purpose instance families|mysql.n2.small.25|1 CPU core, 2 GB|600|1000|5GB-2000GB|
+|mysql.n2.medium.25|2 CPU cores, 4 GB|1200|2000|5GB-2000GB|
+|mysql.n4.medium.25|2 CPU cores, 8 GB|2000|4000|5GB-2000GB|
+|mysql.n2.large.25|4 CPU cores, 8 GB|2000|5000|5GB-2000GB|
+|mysql.n4.large.25|4 CPU cores, 16 GB|4000|7000|5GB-2000GB|
+|mysql.n2.xlarge.25|8 CPU cores, 16 GB|4000|8000|5GB-2000GB|
+|mysql.n4.xlarge.25|8 CPU cores, 32 GB|8000|12000|5GB-2000GB|
+|mysql.n4.2xlarge.25|16 CPU cores, 64 GB|16000|14000|5GB-3000GB|
+|mysql.n8.2xlarge.25|16 CPU cores, 128 GB|32000|16000|5GB-3000GB|
+|Dedicated instance \(with a large number of CPU cores\)|mysql.x4.large.25|4 CPU cores, 16 GB|2500|4500|50GB-2000GB|
+|mysql.x4.xlarge.25|8 CPU cores, 32 GB|5000|9000|500GB-3000GB|
+|mysql.x4.2xlarge.25|16 CPU cores, 64 GB|10000|18000|500GB-3000GB|
+|mysql.x4.4xlarge.25|32 CPU cores, 128 GB|20000|36000|1000GB-6000GB|
+|Dedicated instance \(with a large memory capacity\)|mysql.x8.medium.25|2 CPU cores, 16 GB|2500|4500|50GB-2000GB|
+|mysql.x8.large.25|4 CPU cores, 32 GB|5000|9000|50GB-2000GB|
+|mysql.x8.xlarge.25|8 CPU cores, 64 GB|10000|18000|500GB-3000GB|
+|mysql.x8.2xlarge.25|16 CPU cores, 128 GB|20000|36000|500GB-3000GB|
+|mysql.x8.4xlarge.25|32 CPU cores, 256 GB|40000|72000|1000GB-6000GB|
+|Dedicated host instance|mysql.st.8xlarge.25|60 CPU cores, 470 GB|100000|120000|3000GB/4000GB/5000GB/6000GB|
+|mysql.st.12xlarge.25|90 cores, 720 GB|100000|140000|1000GB-6000GB|
 
 ## Primary ApsaraDB RDS for SQL Server instances
 
@@ -196,7 +200,7 @@ Enhanced SSD: 50 GB to 32,000 GB |
 |pg.n8.8xlarge.1|56 CPU cores, 480 GB|48,000|
 |High-availability Edition|10, 11, and 12
 
-|General-purpose instance|pg.n2.small.2c|1 CPU core, 2 GB|50|For more information, see the "IOPS" section in[Primary instance types]().|Standard SSD: 20 GB to 6,000 GB
+|General-purpose instance|pg.n2.small.2c|1 CPU core, 2 GB|50|For more information, see the "IOPS" section in [Primary instance types]().|Standard SSD: 20 GB to 6,000 GB
 
 Fully encrypted standard SSD: 50 GB to 6,000GB
 
@@ -361,7 +365,7 @@ The following table lists phased-out ApsaraDB RDS for PPAS instance types. These
 
 ## FAQ
 
-Q: Why does an entry-level RDS instance support a larger maximum number of connections and deliver higher IOPS than an enterprise-level RDS instance when the same CPU cores and memory capacity are used?
+Why does an entry-level RDS instance support a larger maximum number of connections and deliver higher IOPS than an enterprise-level RDS instance when the instances have the same CPU cores and memory capacity?
 
-A: An entry-level RDS instance belongs to the shared or general-purpose instance family, whereas an enterprise-level RDS instance belongs to the dedicated instance family. The shared and general-purpose instance families reuse CPU resources. This allows an entry-level RDS instance to support a larger maximum number of connections and deliver higher IOPS. However, the dedicated instance family occupies more exclusive CPU and memory resources. This allows an enterprise-level RDS instance to run more stably. For more information, see [Instance families](/intl.en-US/Product Introduction/Product specifications/Instance families.md).
+The entry-level RDS instance belongs to the shared or general-purpose instance family, whereas the enterprise-level RDS instance belongs to the dedicated instance family. The shared and general-purpose instance families reuse CPU resources. This allows the entry-level RDS instance to support a larger maximum number of connections and deliver higher IOPS. However, the dedicated instance family uses exclusive CPU and memory resources. This allows the enterprise-level RDS instance to run more stably. For more information, see [Instance families](/intl.en-US/Product Introduction/Product specifications/Instance families.md).
 
