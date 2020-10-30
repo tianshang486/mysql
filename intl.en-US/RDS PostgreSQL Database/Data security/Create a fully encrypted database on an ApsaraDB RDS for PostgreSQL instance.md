@@ -153,7 +153,7 @@ for (Result& r : rs) {
 
 Perform the following steps to use an SDK. For more information, see the README.md file.
 
-**Note:** Click [here](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/144151/cn_zh/1574652114855/encdbsdk.tar.gz) to download the client SDK package that is supported by fully encrypted RDS databases.
+**Note:** [Download the client SDK package that is supported by fully encrypted RDS databases](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/144151/cn_zh/1574652114855/encdbsdk.tar.gz).
 
 -   Only the client SDK of x86\_64 is provided. It has been tested on Linux.
 -   The client SDK provides complete C++ sample code. Compile the code and test it by following the instructions provided in the example.cpp file.
