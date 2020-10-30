@@ -1,104 +1,104 @@
 # Read-only instance types
 
-This topic introduces the read-only instance types supported by ApsaraDB for RDS.
+This topic provides an overview of read-only ApsaraDB RDS instance types. You can view the latest and historical specifications of each type.
 
-You can add [read-only instances](/intl.en-US/RDS MySQL Database/Read-only instances/Overview of ApsaraDB RDS for MySQL read-only instances.md) to scale the read capability of your database system.
+ApsaraDB RDS allows you to create [read-only instances](/intl.en-US/RDS MySQL Database/Read-only instances/Overview of ApsaraDB RDS for MySQL read-only instances.md) to scale the read capability of your database system.
 
 For more information about primary instance types, see [Primary instance types](/intl.en-US/Product Introduction/Product specifications/Primary instance types.md).
 
-## Prices of RDS read-only instances
+## Read-only instance prices
 
-Please download the following files to check the price of RDS read-only instances.
+Download the following files to obtain detailed prices:
 
-[Monthly prices of RDS read-only instance specifications](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/141303/cn_zh/1595215398287/RDS_read_only_instance_specifications_monthly_price.xlsx)
+[Subscription Prices for Read-only ApsaraDB RDS Instances \(Specifications\)](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/141303/cn_zh/1595212336565/%E5%9B%BD%E9%99%85%E7%AB%99RDS%E5%8F%AA%E8%AF%BB%E5%AE%9E%E4%BE%8B%E5%8C%85%E5%B9%B4%E5%8C%85%E6%9C%88%E5%AE%9A%E4%BB%B7%EF%BC%88%E8%A7%84%E6%A0%BC%EF%BC%89.xlsx)
 
-For prices of pay-as-you-go specifications and capacities, see:
+For more information about prices of pay-as-you-go instances and storage capacities, visit the following pages:
 
--   [RDS MySQL](https://www.alibabacloud.com/product/apsaradb-for-rds-mysql/pricing)
--   [RDS SQL Server](https://www.alibabacloud.com/product/apsaradb-for-rds-sql-server/pricing)
--   [RDS PostgreSQL](https://www.alibabacloud.com/product/apsaradb-for-rds-postgresql/pricing)
--   [RDS PPAS](https://www.alibabacloud.com/product/apsaradb-for-rds-ppas/pricing)
+-   [RDS MySQL](https://www.alibabacloud.com/zh/product/apsaradb-for-rds-mysql/pricing)
+-   [RDS SQL Server](https://www.alibabacloud.com/zh/product/apsaradb-for-rds-sql-server/pricing)
+-   [RDS PostgreSQL](https://www.alibabacloud.com/zh/product/apsaradb-for-rds-postgresql/pricing)
+-   [RDS PPAS](https://www.alibabacloud.com/zh/product/apsaradb-for-rds-ppas/pricing)
 
-## ApsaraDB RDS for MySQL read-only instances
+## Read-only ApsaraDB RDS for MySQL instances
 
-|Category|MySQL version|Instance family|Instance type|CPU and memory|Maximum number of connections|Maximum IOPS|Storage capacity|
-|--------|-------------|---------------|-------------|--------------|-----------------------------|------------|----------------|
-|Read-only instance|5.6, 5.7, and 8.0|General-purpose instance|rds.mysql.t1.small|1 core, 1 GB|300|600|5 GB to 2,000 GB|
-|rds.mysql.s1.small|1 core, 2 GB|600|1,000|
-|rds.mysql.s2.large|2 cores, 4 GB|1,200|2,000|
-|rds.mysql.s2.xlarge|2 cores, 8 GB|2,000|4,000|
-|rds.mysql.s3.large|4 cores, 8 GB|2,000|5,000|
-|rds.mysql.m1.medium|4 cores, 16 GB|4,000|7,000|
-|rds.mysql.c1.large|8 cores, 16 GB|4,000|8,000|
-|rds.mysql.c1.xlarge|8 cores, 32 GB|8,000|12,000|
-|rds.mysql.c2.xlarge|16 cores, 64 GB|16,000|14,000|5 GB to 3,000 GB|
-|rds.mysql.c2.xlp2|16 cores, 96 GB|24,000|16,000|
-|Dedicated instance \(with a large memory capacity\)|mysqlro.x8.medium.1|2 cores, 16 GB|2,500|4,500|50 GB to 2,000 GB|
-|mysqlro.x8.large.1|4 cores, 32 GB|5,000|9,000|50 GB to 2,000 GB|
-|mysqlro.x8.xlarge.1|8 cores, 64 GB|10,000|18,000|500 GB to 3,000 GB|
-|mysqlro.x8.2xlarge.1|16 cores, 128 GB|20,000|36,000|500 GB to 3,000 GB|
-|mysqlro.x8.4xlarge.1|32 cores, 256 GB|40,000|72,000|1,000 GB to 6,000 GB|
-|mysqlro.x8.8xlarge.1|64 cores, 512 GB|80,000|144,000|1,000 GB to 6,000 GB|
-|Dedicated instance \(with a large number of CPU cores\)|mysqlro.x4.large.1|4 cores, 16 GB|2,500|4,500|50 GB to 2,000 GB|
-|mysqlro.x4.xlarge.1|8 cores, 32 GB|5,000|9,000|500 GB to 3,000 GB|
-|mysqlro.x4.2xlarge.1|16 cores, 64 GB|10,000|18,000|500 GB to 3,000 GB|
-|mysqlro.x4.4xlarge.1|32 cores, 128 GB|20,000|36,000|1,000 GB to 6,000 GB|
+|Category|MySQL version|Instance family|Instance type|CPU and memory|Maximum connections|Maximum IOPS|Storage capacity|
+|--------|-------------|---------------|-------------|--------------|-------------------|------------|----------------|
+|Read-only instance|5.6, 5.7, and 8.0|General-purpose instance family|rds.mysql.t1.small|1 CPU core, 1 GB|300|600|5GB-2000GB|
+|rds.mysql.s1.small|1 CPU core, 2 GB|600|1000|
+|rds.mysql.s2.large|2 CPU cores, 4 GB|1200|2000|
+|rds.mysql.s2.xlarge|2 CPU cores, 8 GB|2000|4000|
+|rds.mysql.s3.large|4 CPU cores, 8 GB|2000|5000|
+|rds.mysql.m1.medium|4 CPU cores, 16 GB|4000|7000|
+|rds.mysql.c1.large|8 CPU cores, 16 GB|4000|8000|
+|rds.mysql.c1.xlarge|8 CPU cores, 32 GB|8000|12000|
+|rds.mysql.c2.xlarge|16 CPU cores, 64 GB|16000|14000|5GB-3000GB|
+|rds.mysql.c2.xlp2|16 CPU cores, 96 GB|24000|16000|
+|Dedicated instance family \(with a large memory capacity\)|mysqlro.x8.medium.1|2 CPU cores, 16 GB|2500|4500|50GB-2000GB|
+|mysqlro.x8.large.1|4 CPU cores, 32 GB|5000|9000|50GB-2000GB|
+|mysqlro.x8.xlarge.1|8 CPU cores, 64 GB|10000|18000|500GB-3000GB|
+|mysqlro.x8.2xlarge.1|16 CPU cores, 128 GB|20000|36000|500GB-3000GB|
+|mysqlro.x8.4xlarge.1|32 CPU cores, 256 GB|40000|72000|1000GB-6000GB|
+|mysqlro.x8.8xlarge.1|64 CPU cores, 512 GB|80000|144000|1000GB-6000GB|
+|Dedicated instance family \(with a large number of CPU cores\)|mysqlro.x4.large.1|4 CPU cores, 16 GB|2500|4500|50GB-2000GB|
+|mysqlro.x4.xlarge.1|8 CPU cores, 32 GB|5000|9000|500GB-3000GB|
+|mysqlro.x4.2xlarge.1|16 CPU cores, 64 GB|10000|18000|500GB-3000GB|
+|mysqlro.x4.4xlarge.1|32 CPU cores, 128 GB|20000|36000|1000GB-6000GB|
 
-## ApsaraDB RDS for SQL Server read-only instances
+## Read-only ApsaraDB RDS for SQL Server instances
 
-|Category|SQL Server version|Instance family|Instance type|CPU and memory|Maximum number of connections|Maximum IOPS|Storage capacity|
-|--------|------------------|---------------|-------------|--------------|-----------------------------|------------|----------------|
-|Read-only instance|2017 EE|General-purpose instance|rds.mssql.s2.large|2 cores, 4 GB|Unlimited|See [IOPS](/intl.en-US/Product Introduction/Product specifications/Primary instance types.mdsection_ire_dbl_kzm).|20 GB to 4,000 GB|
-|rds.mssql.s3.large|4 cores, 8 GB|
-|rds.mssql.c1.large|8 cores, 16 GB|
-|rds.mssql.s2.xlarge|2 cores, 8 GB|
-|rds.mssql.m1.medium|4 cores, 16 GB|
-|rds.mssql.c1.xlarge|8 cores, 32 GB|
-|rds.mssql.c2.xlarge|16 cores, 64 GB|
-|Dedicated instance|mssql.x4.medium.ro|2 cores, 8 GB|
-|mssql.x4.large.ro|4 cores, 16 GB|
-|mssql.x4.xlarge.ro|8 cores, 32 GB|
-|mssql.x4.2xlarge.ro|16 cores, 64 GB|
-|mssql.x4.4xlarge.ro|32 cores, 128 GB|
-|mssql.x4.8xlarge.ro|64 cores, 256 GB|
-|mssql.x8.medium.ro|2 cores, 16 GB|
-|mssql.x8.large.ro|4 cores, 32 GB|
-|mssql.x8.xlarge.ro|8 cores, 64 GB|
-|mssql.x8.2xlarge.ro|16 cores, 128 GB|
-|mssql.x8.4xlarge.ro|32 cores, 256 GB|
-|mssql.x8.7xlarge.ro|56 cores, 480 GB|
-|mssql.x8.8xlarge.ro|64 cores, 512 GB|
+|Category|SQL Server version|Instance family|Instance type|CPU and memory|Maximum connections|Maximum IOPS|Storage capacity|
+|--------|------------------|---------------|-------------|--------------|-------------------|------------|----------------|
+|Read-only instance|2017 EE|General-purpose instance family|rds.mssql.s2.large|2 CPU cores, 4 GB|Unlimited|See [IOPS](/intl.en-US/Product Introduction/Product specifications/Primary instance types.mdsection_ire_dbl_kzm).|20GB-4000GB|
+|rds.mssql.s3.large|4 CPU cores, 8 GB|
+|rds.mssql.c1.large|8 CPU cores, 16 GB|
+|rds.mssql.s2.xlarge|2 CPU cores, 8 GB|
+|rds.mssql.m1.medium|4 CPU cores, 16 GB|
+|rds.mssql.c1.xlarge|8 CPU cores, 32 GB|
+|rds.mssql.c2.xlarge|16 CPU cores, 64 GB|
+|Dedicated instance family|mssql.x4.medium.ro|2 CPU cores, 8 GB|
+|mssql.x4.large.ro|4 CPU cores, 16 GB|
+|mssql.x4.xlarge.ro|8 CPU cores, 32 GB|
+|mssql.x4.2xlarge.ro|16 CPU cores, 64 GB|
+|mssql.x4.4xlarge.ro|32 CPU cores, 128 GB|
+|mssql.x4.8xlarge.ro|64 CPU cores, 256 GB|
+|mssql.x8.medium.ro|2 CPU cores, 16 GB|
+|mssql.x8.large.ro|4 CPU cores, 32 GB|
+|mssql.x8.xlarge.ro|8 CPU cores, 64 GB|
+|mssql.x8.2xlarge.ro|16 CPU cores, 128 GB|
+|mssql.x8.4xlarge.ro|32 CPU cores, 256 GB|
+|mssql.x8.7xlarge.ro|56 CPU cores, 480 GB|
+|mssql.x8.8xlarge.ro|64 CPU cores, 512 GB|
 
-## ApsaraDB RDS for PostgreSQL read-only instances \(with local SSDs\)
+## Read-only ApsaraDB RDS for PostgreSQL instances \(with local SSDs\)
 
-|Category|PostgreSQL version|Instance family|Instance type|CPU and memory|Maximum number of connections|Maximum IOPS|Storage capacity|
-|--------|------------------|---------------|-------------|--------------|-----------------------------|------------|----------------|
+|Category|PostgreSQL version|Instance family|Instance type|CPU and memory|Maximum connections|Maximum IOPS|Storage capacity|
+|--------|------------------|---------------|-------------|--------------|-------------------|------------|----------------|
 |Read-only instance|10
 
-|Dedicated instance \(with a large memory capacity\)|pg.x8.xlarge.2|8 cores, 64 GB|10,000|18,000|20 GB to 6,000 GB|
-|pg.x8.2xlarge.2|16 cores, 128 GB|12,000|36,000|
-|Dedicated instance \(with a large number of CPU cores\)|pg.x4.xlarge.2|8 cores, 32 GB|5,000|9,000|
-|pg.x4.2xlarge.2|16 cores, 64 GB|10,000|18,000|
-|pg.x4.4xlarge.2|32 cores, 128 GB|12,000|36,000|
-|Dedicated host|rds.pg.st.h43|60 cores, 470 GB|4,000|50,000|
+|Dedicated instance family \(with a large memory capacity\)|pg.x8.xlarge.2|8 CPU cores, 64 GB|10000|18000|20GB-6000GB|
+|pg.x8.2xlarge.2|16 CPU cores, 128 GB|12000|36000|
+|Dedicated instance family \(with a large number of CPU cores\)|pg.x4.xlarge.2|8 CPU cores, 32 GB|5000|9000|
+|pg.x4.2xlarge.2|16 CPU cores, 64 GB|10000|18000|
+|pg.x4.4xlarge.2|32 CPU cores, 128 GB|12000|36000|
+|Dedicated host instance family|rds.pg.st.h43|60 CPU cores, 470 GB|4000|50000|
 
-## ApsaraDB RDS for PPAS read-only instances
+## Read-only ApsaraDB RDS for PPAS instances
 
-|Category|PPAS version|Instance family|Instance type|CPU and memory|Maximum number of connections|Maximum IOPS|Storage capacity|
-|--------|------------|---------------|-------------|--------------|-----------------------------|------------|----------------|
+|Category|PPAS version|Instance family|Instance type|CPU and memory|Maximum connections|Maximum IOPS|Storage capacity|
+|--------|------------|---------------|-------------|--------------|-------------------|------------|----------------|
 |Read-only instance|10
 
-|General-purpose instance|rds.ppas.t1.small|1 core, 1 GB|100|1,200|150 GB|
-|Dedicated instance|ppas.x4.small.2|1 core, 4 GB|200|5,000|250 GB|
-|ppas.x4.medium.2|2 cores, 8 GB|400|10,000|
-|ppas.x8.medium.2|2 cores, 16 GB|2,500|15,000|
-|ppas.x4.large.2|4 cores, 16 GB|2,500|20,000|250 GB or 500 GB|
-|ppas.x8.large.2|4 cores, 32 GB|5,000|30,000|
-|ppas.x4.xlarge.2|8 cores, 32 GB|5,000|40,000|500 GB or 1,000 GB|
-|ppas.x8.xlarge.2|8 cores, 64 GB|10,000|60,000|
-|ppas.x4.2xlarge.2|16 cores, 64 GB|10,000|80,000|1,000 GB or 2,000 GB|
-|ppas.x8.2xlarge.2|16 cores, 128 GB|12,000|120,000|
-|ppas.x4.4xlarge.2|32 cores, 128 GB|12,000|160,000|2,000 GB or 3,000 GB|
-|ppas.x8.4xlarge.2|32 cores, 256 GB|12,000|240,000|
-|Dedicated host|rds.ppas.st.h43|60 cores, 470 GB|12,000|450,000|3,000 GB, 4,000 GB, 5,000 GB, or 6,000 GB|
+|General-purpose instance family|rds.ppas.t1.small|1 CPU core, 1 GB|100|1200|150GB|
+|Dedicated instance family|ppas.x4.small.2|1 CPU core, 4 GB|200|5000|250GB|
+|ppas.x4.medium.2|2 CPU cores, 8 GB|400|10000|
+|ppas.x8.medium.2|2 CPU cores, 16 GB|2500|15000|
+|ppas.x4.large.2|4 CPU cores, 16 GB|2500|20000|250GB/500GB|
+|ppas.x8.large.2|4 CPU cores, 32 GB|5000|30000|
+|ppas.x4.xlarge.2|8 CPU cores, 32 GB|5000|40000|500GB/1000GB|
+|ppas.x8.xlarge.2|8 CPU cores, 64 GB|10000|60000|
+|ppas.x4.2xlarge.2|16 CPU cores, 64 GB|10000|80000|1000GB/2000GB|
+|ppas.x8.2xlarge.2|16 CPU cores, 128 GB|12000|120000|
+|ppas.x4.4xlarge.2|32 CPU cores, 128 GB|12000|160000|2000GB/3000GB|
+|ppas.x8.4xlarge.2|32 CPU cores, 256 GB|12000|240000|
+|Dedicated host instance|rds.ppas.st.h43|60 CPU cores, 470 GB|12000|450000|3000GB/4000GB/5000GB/6000GB|
 
