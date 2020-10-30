@@ -14,7 +14,7 @@
 
 ## PostgreSQL 支持的字符集类型
 
-您可以通过[PostgreSQL 的官方文档](https://www.postgresql.org/docs/9.6/static/multibyte.html)``
+您可以参考[PostgreSQL 的官方文档](https://www.postgresql.org/docs/9.6/static/multibyte.html)。
 
 |Name|Description|Language|Server|Bytes/Char|Aliases|
 |----|-----------|--------|------|----------|-------|
@@ -107,7 +107,7 @@ test=> select pg_encoding_to_char(collencoding) as encoding,collname,collcollate
 
 ## 设置数据库的本土化（collate）信息
 
-关于如何设置字符集、LC\_COLLATE及LC\_CTYPE的信息，请参见文档[CREATE DATABASE 命令的具体使用方法](~~52949~~)
+关于如何设置字符集、LC\_COLLATE及LC\_CTYPE的信息，请参见文档[CREATE DATABASE 命令的具体使用方法](~~52949~~)。
 
 -   设置字段的本土化
 
@@ -152,7 +152,7 @@ test=> select pg_encoding_to_char(collencoding) as encoding,collname,collcollate
         **说明：** 修改列collate时，会导致rewrite table，大表请谨慎操作。
 
         ```
-        alter table a alter c1 type text COLLATE "zh_CN";
+        alter table a alter c1 type text COLLATE "en_US";
         ```
 
 -   在SQL使用本土化
@@ -167,14 +167,14 @@ test=> select pg_encoding_to_char(collencoding) as encoding,collname,collcollate
         ```
              c1
           --------
-           刘少奇
-           刘德华
+           Tom
+           Alice
           (2 rows)
-          test=# select * from a order by c1 collate "zh_CN";
+          test=# select * from a order by c1 collate "en_US";
              c1
           --------
-           刘德华
-           刘少奇
+           Alice
+           Tom
           (2 rows)
         ```
 
@@ -183,7 +183,7 @@ test=> select pg_encoding_to_char(collencoding) as encoding,collname,collcollate
         命令：
 
         ```
-        select * from a where c1 > '刘少奇' collate "C";  
+        select * from a where c1 > 'Tom' collate "C";  
         ```
 
         输出结果如下：
@@ -191,14 +191,14 @@ test=> select pg_encoding_to_char(collencoding) as encoding,collname,collcollate
         ```
              c1
           --------
-           刘德华
+           Alice
           (1 row)
         ```
 
         命令：
 
         ```
-        select * from a where c1 > '刘少奇' collate "zh_CN";
+        select * from a where c1 > 'Tom' collate "en_US";
         ```
 
         输出结果如下：
@@ -214,8 +214,8 @@ test=> select pg_encoding_to_char(collencoding) as encoding,collname,collcollate
     排序语句中的collate与索引的collate保持一致，才能使用这个索引进行排序。命令如下：
 
     ```
-    create index idxa on a(c1 collate "zh_CN");  
-    explain select * from a order by c1 collate "zh_CN";                      
+    create index idxa on a(c1 collate "en_US");  
+    explain select * from a order by c1 collate "en_US";                      
     ```
 
     输出结果如下：
@@ -235,7 +235,7 @@ test=> select pg_encoding_to_char(collencoding) as encoding,collname,collcollate
 -   使用本土化 SQL。该方法不修改原有数据。命令如下：
 
     ```
-    select * from a order by c1 collate "zh_CN";  
+    select * from a order by c1 collate "en_US";  
     ```
 
     输出结果如下：
@@ -243,22 +243,22 @@ test=> select pg_encoding_to_char(collencoding) as encoding,collname,collcollate
     ```
          c1
       --------
-       刘德华
-       刘少奇
+       Alice
+       Tom
       (2 rows)
     ```
 
 -   使用本土化字段。若已有数据，使用该方法时需要调整原有数据。命令如下：
 
     ```
-    alter table a alter c1 type text COLLATE "zh_CN";
+    alter table a alter c1 type text COLLATE "en_US";
     ```
 
 -   使用本土化索引以及本土化 SQL。该方法不修改原有数据。命令如下：
 
     ```
-    create index idxa on a(c1 collate "zh_CN");  
-    explain select * from a order by c1 collate "zh_CN";  
+    create index idxa on a(c1 collate "en_US");  
+    explain select * from a order by c1 collate "en_US";  
     ```
 
     输出结果如下：
@@ -270,12 +270,12 @@ test=> select pg_encoding_to_char(collencoding) as encoding,collname,collcollate
       (1 row)
     ```
 
--   将数据库的collate设置为zh\_CN，数据会将默认使用这个collate按拼音排序。命令如下：
+-   将数据库的collate设置为en\_US，数据会将默认使用这个collate按拼音排序。命令如下：
 
     ```
-    create database test03 encoding 'UTF8' lc_collate 'zh_CN.utf8' lc_ctype 'zh_CN.utf8'  template template0;
+    create database test03 encoding 'UTF8' lc_collate 'en_US.utf8' lc_ctype 'en_US.utf8'  template template0;
     \c test03
-    select * from (values ('刘德华'),('刘少奇')) as a(c1) order by c1 ; 
+    select * from (values ('Alice'),('Tom')) as a(c1) order by c1 ; 
     ```
 
     输出结果如下：
@@ -283,12 +283,12 @@ test=> select pg_encoding_to_char(collencoding) as encoding,collname,collcollate
     ```
          c1
       --------
-       刘德华
-       刘少奇
+       Alice
+       Tom
       (2 rows)
     ```
 
-    **说明：** 在设置按拼音排序时，要注意多音字。例如重庆（chongqing），在编码时，重可能会按照zhong编码，影响输出。
+    **说明：** 如果是中文，在设置按拼音排序时，要注意多音字。例如重庆（chongqing），在编码时，重可能会按照zhong编码，影响输出。
 
 
 ## 在Greenplum中设置输出结果按拼音排序
@@ -298,7 +298,7 @@ Greenplum不支持单列设置collate，按拼音排序有些许不同。
 在Greenplum中，可以使用字符集转换，按对应二进制排序，得到拼音排序的效果，如下面的命令所示：
 
 ```
-select * from (values ('刘德华'), ('刘少奇')) t(id) order by byteain(textout(convert(id,'UTF8','EUC_CN')));
+select * from (values ('Alice'), ('Tom')) t(id) order by byteain(textout(convert(id,'UTF8','EUC_CN')));
 ```
 
 输出结果如下：
@@ -306,8 +306,8 @@ select * from (values ('刘德华'), ('刘少奇')) t(id) order by byteain(texto
 ```
    id
 --------
- 刘德华
- 刘少奇
+ Alice
+ Tom
 (2 rows)
 ```
 
