@@ -54,7 +54,7 @@ Each migration task is used to migrate the data of only a single database. If yo
 
 ## Use DTS to migrate data
 
-For more information about the precautions, see [Migrate incremental data from a user-created PostgreSQL database \(version 10.x to 12\) to an ApsaraDB RDS for PostgreSQL instance]().
+For more information about the precautions, see [Migrate incremental data from a user-created PostgreSQL database \(version 10.1 to 12\) to an ApsaraDB RDS for PostgreSQL instance]().
 
 1.  Log on to the [DTS console](https://dts.console.aliyun.com/).
 
@@ -125,5 +125,5 @@ For more information about the precautions, see [Migrate incremental data from a
 6.  Update the endpoints of the destination RDS instance to your application.
 
 
-The data migration is complete. Observe the performance of the source RDS instance for a period of time. If your workloads run properly on the destination RDS instance, we recommend that you release orsubmit a ticket to unsubscribe from the source RDS instance. You can visit [https://workorder-intl.console.aliyun.com/\#/ticket/createIndex](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to submit a ticket.
+The data migration is complete. Observe the performance of the source RDS instance for a period of time. If your workloads run properly on the destination RDS instance, we recommend that you release or[submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to unsubscribe from the source RDS instance..
 
