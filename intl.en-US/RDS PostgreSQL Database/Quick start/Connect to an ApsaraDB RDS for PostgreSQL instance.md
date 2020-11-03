@@ -26,7 +26,7 @@ For more information, see [Use DMS to log on to an ApsaraDB RDS for PostgreSQL i
 ## Use the pgAdmin 4 client to connect to an RDS instance
 
 1.  Add the IP address of the pgAdmin client to an IP address whitelist of the RDS instance. For more information, see [Configure a whitelist for an ApsaraDB RDS for PostgreSQL instance](/intl.en-US/RDS PostgreSQL Database/Quick start/Configure a whitelist for an ApsaraDB RDS for PostgreSQL instance.md).
-2.  Start the pgAdmin 4 client. For more information, visit [https://www.pgadmin.org/download/](https://www.pgadmin.org/download/).
+2.  Start the [pgAdmin 4 client](https://www.pgadmin.org/download/).
 
     **Note:** If the pgAdmin client runs a later version and you log on the pgAdmin client for the first time, you must specify a master password that is used to protect the saved passwords and other credentials.
 
