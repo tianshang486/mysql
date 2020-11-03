@@ -407,7 +407,7 @@ New feature: The configuration of thread IDs in handshake packets is supported.
 New features:
 
 -   The RDS High-availability Edition is supported.
--   The SQL Audit feature is supported.For more information, see [SQL audit]().
+-   The SQL Audit feature is supported. For more information, see [SQL audit]().
 -   The protection for RDS instances on which snapshot backups are being created is enhanced.
 
 ## ApsaraDB RDS for MySQL 5.7 on RDS Enterprise Edition
@@ -619,7 +619,7 @@ New feature: The privileged account of an RDS instance is granted the permission
 
 20170221 \(ApsaraDB RDS for MySQL 5.6.16\)
 
-New feature: The read/write splitting function is supported.For more information, see [Read/write splitting overview]().
+New feature: The read/write splitting function is supported. For more information, see [Read/write splitting overview]().
 
 ## ApsaraDB RDS for MySQL 5.5
 
