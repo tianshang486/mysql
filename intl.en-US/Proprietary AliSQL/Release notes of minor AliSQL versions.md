@@ -2,7 +2,9 @@
 
 This topic describes the release notes of minor AliSQL versions.
 
-## ApsaraDB RDS for MySQL 8.0
+**Note:** For more information about the minor versions of dedicated proxies in ApsaraDB RDS for MySQL, see [Release notes of dedicated proxies](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Release notes of dedicated proxies.md).
+
+## MySQL 8.0
 
 20200831
 
@@ -28,7 +30,7 @@ This topic describes the release notes of minor AliSQL versions.
 20200630
 
 -   New features:
-    -   The faster DDL feature is introduced to provide an optimized buffer pool management mechanism. This mechanism reduces the impact of data definition language \(DDL\) operations and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/Proprietary AliSQL/Stability/Faster DDL.md).
+    -   The faster DDL feature is introduced. It provides an optimized buffer pool management mechanism. This mechanism reduces the impact of data definition language \(DDL\) operations on performance and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/Proprietary AliSQL/Stability/Faster DDL.md).
     -   The maximum number of connections that are allowed is increased to 500,000.
 -   Performance optimization:
     -   The thread pool feature is optimized.
@@ -52,7 +54,7 @@ This topic describes the release notes of minor AliSQL versions.
     -   The XA\_RECOVER\_ADMIN permission is provided.
 -   Performance optimization:
     -   The code that is used to scan data when operations are performed on a temporary InnoDB table is optimized. This allows the system to scan only dirty pages instead of the entire buffer pool.
-    -   The global parameter opt\_readonly\_trans\_implicit\_commit is renamed to rds\_disable\_explicit\_trans. This ensures compatibility with MySQL 5.6.
+    -   The global parameter opt\_readonly\_trans\_implicit\_commit is renamed as rds\_disable\_explicit\_trans. This ensures compatibility with MySQL 5.6.
     -   The SQL Explorer \(SQL Audit\) feature is optimized, so it does not log upgrades to RDS instances.
     -   Memory resources that are consumed by DDL operations on X-Engine tables are reduced.
 -   Bugs fixed:
@@ -78,6 +80,7 @@ This topic describes the release notes of minor AliSQL versions.
 -   New features:
     -   The performance agent feature is introduced. For more information, see [Performance Agent](/intl.en-US/Proprietary AliSQL/Stability/Performance Agent.md). This feature is provided as a MySQL plug-in. It allows you to collect and analyze the performance metrics of an RDS instance.
     -   Network round-trip time is supported for the semi-synchronous mode. This allows you to better understand the performance of an RDS instance.
+    -   The online execution of DDL operations is supported for X-Engine.
 -   Performance optimization:
     -   Statement-level CCL is allowed on read-only RDS instances.
     -   Outlines are supported for secondary RDS instances.
@@ -85,13 +88,17 @@ This topic describes the release notes of minor AliSQL versions.
     -   The time that is required to execute a PAUSE statement is reduced in various CPU architectures.
     -   A memory table is introduced to present the running status of thread pools.
 -   Bugs fixed:
-    -   The bug that causes the system to forbid the ppoll function and replace the ppoll function with the poll function in Linux kernels earlier than 4.9 is fixed.
-    -   The bug that causes errors when the system calls the wrap\_sm4\_encrypt function is fixed.
+    -   The bug that causes the system to forbid the ppoll function and replace the ppoll function with the poll function in Linux kernels earlier than version 4.9 is fixed.
+    -   The bug that causes errors when the system invokes the wrap\_sm4\_encrypt function is fixed.
     -   The bug that causes the system to lock global variables when SQL logs are rotated is fixed.
     -   The bug that causes errors in restoration inconsistency checks is fixed.
     -   The bug that causes inaccurate time values in the io\_statistics table is fixed.
     -   The bug that causes the system to unexpectedly exit when invalid compression algorithms are invoked is fixed.
     -   The bug that causes user columns in MySQL 8.0 and MySQL 5.6 to be incompatible is fixed.
+-   Programs optimized:
+    -   The buffer pool management mechanism is optimized. This reduces the impact of DDL operations on performance and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/Proprietary AliSQL/Stability/Faster DDL.md).
+    -   The thread pool feature is optimized to improve performance.
+    -   The mechanism that is used to count numbers is optimized to ensure correct counting.
 
 20200110
 
@@ -102,7 +109,7 @@ This topic describes the release notes of minor AliSQL versions.
 -   Performance optimization:
     -   The CCL mechanism is optimized. When an RDS instance is started, CCL queue structures are initialized before CCL rules are initialized.
     -   The file deletion mechanism is optimized. When you asynchronously delete small files, links to the small files are canceled.
-    -   The performance of thread pools is optimized. For more information, see [Thread Pool](/intl.en-US/Proprietary AliSQL/Feature/Thread Pool.md).
+    -   The thread pool feature is optimized. For more information, see [Thread Pool](/intl.en-US/Proprietary AliSQL/Feature/Thread Pool.md).
     -   Restoration inconsistency checks are disabled by default.
     -   The permissions that are required to configure variables are changed.
         -   The user role that is authorized to configure the following variables is changed to standard user:
@@ -128,11 +135,11 @@ This topic describes the release notes of minor AliSQL versions.
     -   A dedicated thread is used to serve the maintain user. This allows you to avoid high availability \(HA\) failures.
     -   The locking mechanism is optimized. If an error occurs when binary logs are flushed by using redo logs, ApsaraDB RDS can explicitly release the lock that is triggered by file synchronization.
     -   The deletion of unnecessary TCP error logs is supported.
-    -   Thread pools are enabled by default.
+    -   The thread pool feature is enabled by default.
 -   Bugs fixed:
     -   The bug that causes errors in updates to slow query logs is fixed.
     -   The bug that causes an inappropriate lock scope is fixed.
-    -   The bug that causes errors in core dumps when the system invokes the select function for TDE is fixed.
+    -   The bug that causes errors in core dumps when the system invokes the select\(\) function for TDE is fixed.
 
 20191115
 
@@ -144,9 +151,9 @@ The statement queue feature is introduced. It allows statements to queue in the 
 
 -   New features:
     -   The SM4 encryption algorithm is supported for TDE. For more information, see [Configure TDE for an ApsaraDB RDS for MySQL instance](/intl.en-US/RDS MySQL Database/Data security/Configure TDE for an ApsaraDB RDS for MySQL instance.md).
-    -   Data protection for secondary RDS instances is supported. Only the accounts with the SUPER or REPLICATION\_SLAVE\_ADMIN role have the permissions to insert, delete, and modify data in the slave\_master\_info, slave\_relay\_log\_info, and slave\_worker\_info tables.
+    -   Data protection is supported for secondary RDS instances. Only the accounts with the SUPER or REPLICATION\_SLAVE\_ADMIN role have the permissions to insert, delete, and modify data in the slave\_master\_info, slave\_relay\_log\_info, and slave\_worker\_info tables.
     -   A mechanism is introduced to increase the priorities of auto-increment keys. If a table does not have a primary key or it does not have a unique key without a null value, the auto-increment key without a null value has the highest priority.
-    -   A mechanism is introduced to prevent the automatic conversion of tables from the MEMORY to MyISAM storage engines. These tables include system tables. These tables also include the tables that are invoked by threads in the initializing state.
+    -   A mechanism is introduced to prevent the automatic conversion of tables from the MEMORY storage engine to the MyISAM storage engine. These tables include system tables. These tables also include the tables that are invoked by threads in the initializing state.
     -   A mechanism is introduced to flush binary log files to the disk before redo log files.
     -   A mechanism is introduced to stop the creation of temporary tables on an RDS instance when the RDS instance is locked.
     -   The X-Engine storage engine is provided to store transactions based on a log-structured merge \(LSM\) tree.
@@ -160,12 +167,12 @@ The statement queue feature is introduced. It allows statements to queue in the 
 20191015
 
 -   New features:
-    -   The TDE feature is introduced to support real-time I/O encryption and decryption on data files. Data is encrypted before it is written to the disk and decrypted before it is read from the disk to the memory. For more information, see [Configure TDE for an ApsaraDB RDS for MySQL instance](/intl.en-US/RDS MySQL Database/Data security/Configure TDE for an ApsaraDB RDS for MySQL instance.md).
+    -   The TDE feature is introduced to support real-time I/O encryption and decryption on data files. It encrypts data before it is written to the disk and decrypts data before it is read from the disk to the memory. For more information, see [Configure TDE for an ApsaraDB RDS for MySQL instance](/intl.en-US/RDS MySQL Database/Data security/Configure TDE for an ApsaraDB RDS for MySQL instance.md).
     -   The returning feature is introduced. It allows data manipulation language \(DML\) statements to return result sets. In addition, the DBMS\_TRANS package is provided for you to use this feature. For more information, see [Returning](/intl.en-US/Proprietary AliSQL/Feature/Returning.md).
     -   The forced conversion from the MyISAM or MEMORY storage engine to the InnoDB storage engine is supported. If the global variable **force\_mysiam\_to\_innodb** or **force\_memory\_to\_innodb** is set to **ON**, a table is converted from the MyISAM or MEMORY storage engine to the InnoDB storage engine when the table is created or modified.
     -   A mechanism is introduced to forbid standard accounts from performing primary/secondary switchovers. Only privileged accounts have the permissions to perform primary/secondary switchovers.
-    -   A performance proxy plug-in is provided. This plug-in obtains performance data and saves the data as TXT files to your computer. These files are deleted in a circular manner. Only the latest files at the single-digit second level are retained.
-    -   A configurable timeout period is introduced for mutexes in InnoDB: This timeout period can be changed by setting the global variable **innodb\_fatal\_semaphore\_wait\_threshold**. The default value of the global variable is 600.
+    -   A performance proxy plug-in is provided. It obtains performance data at the single-digit second level and saves the data as TXT files to your computer. These files are deleted in a circular manner. Only the latest files are retained.
+    -   A configurable timeout period is introduced for mutexes in InnoDB. This timeout period can be changed by setting the global variable **innodb\_fatal\_semaphore\_wait\_threshold**. The default value of the global variable is 600.
     -   Index hint errors can be ignored by setting the global variable **ignore\_index\_hint\_error**. The default value of the global variable is false.
     -   The SSL encryption feature can be disabled. For more information, see [Configure SSL encryption on an ApsaraDB RDS for MySQL instance](/intl.en-US/RDS MySQL Database/Data security/Configure SSL encryption on an ApsaraDB RDS for MySQL instance.md).
     -   The output of TCP errors is supported. TCP errors in read, read-wait, and write-wait events are returned with their error codes by using end\_connection events. In addition, logs with information about the errors are generated.
@@ -187,7 +194,7 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
     -   The CCL mechanism is introduced. It allows you to specify the maximum number of concurrent requests that are allowed. This enables the system to handle traffic bursts, process statements that consume excessive resources, and adapt to changes of SQL models. This also ensures the continuity and stability of your database service. For more information, see [Statement concurrency control](/intl.en-US/Proprietary AliSQL/Stability/Statement concurrency control.md).
     -   The statement outline feature is introduced to support optimizer hints and index hints. These hints are used to stabilize the execution of query plans on an RDS instance. For more information, see [Statement outline](/intl.en-US/Proprietary AliSQL/Feature/Statement outline.md).
     -   The Sequence engine is introduced to simplify the acquisition of sequence values. For more information, see [Sequence Engine](/intl.en-US/Proprietary AliSQL/Feature/Sequence Engine.md).
-    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, a background thread is started to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/Proprietary AliSQL/Stability/Purge Large File Asynchronously.md).
+    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, the system starts a background thread to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/Proprietary AliSQL/Stability/Purge Large File Asynchronously.md).
     -   The performance insight feature is introduced to support load monitoring, association analysis, and performance optimization at the instance level. This feature allows you to evaluate the loads of an RDS instance. This feature also allows you to locate performance issues to ensure the stability of your database service. For more information, see [Performance Insight](/intl.en-US/Proprietary AliSQL/Stability/Performance Insight.md).
     -   An optimized instance locking mechanism is introduced. You can delete tables from an RDS instance by using DROP or TRUNCATE statements even if the RDS instance is locked.
 -   Bugs fixed:
@@ -210,7 +217,7 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
 
 20200831
 
--   New features:
+-   New feature:
     -   Changes incorporated: Changes in MySQL 5.7.30 are incorporated. For more information, visit [GitHub](https://github.com/mysql/mysql-server).
     -   An optimized CCL mechanism is introduced to better determine how transactions wait and concurrently run.
     -   Start GTIDs and end GTIDs are introduced to the mysqlbinlog plug-in.
@@ -224,9 +231,9 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
 
     The CCL mechanism is optimized to better prioritize the stored procedures that are to run.
 
--   Bug fixed:
+-   Bugs fixed:
 
-    Some major bugs that cause the server to unexpectedly stop when you shut down the server are fixed.
+    Some major bugs that cause the server to unexpectedly exit when you shut down the server is fixed.
 
 
 20200630
@@ -236,10 +243,10 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
     -   The CCL mechanism is introduced. It allows you to specify the maximum number of concurrent requests that are allowed. This enables the system to handle traffic bursts, process statements that consume excessive resources, and adapt to changes of SQL models. This also ensures the continuity and stability of your database service. For more information, see [Statement concurrency control](/intl.en-US/Proprietary AliSQL/Stability/Statement concurrency control.md).
     -   The statement queue feature is introduced. It allows statements to queue in the same bucket. These statements may be executed on the same resources. For example, these statements are executed on the same row of a table. This reduces overheads from possible conflicts. For more information, see [Statement Queue](/intl.en-US/Proprietary AliSQL/Performance/Statement Queue.md).
     -   The statement outline feature is introduced to support optimizer hints and index hints. These hints are used to stabilize the execution of query plans on an RDS instance. For more information, see [Statement outline](/intl.en-US/Proprietary AliSQL/Feature/Statement outline.md).
-    -   The faster DDL feature is introduced to provide an optimized buffer pool management mechanism. This mechanism reduces the impact of DDL operations and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/Proprietary AliSQL/Stability/Faster DDL.md).
+    -   The faster DDL feature is introduced. It provides an optimized buffer pool management mechanism. This mechanism reduces the impact of DDL operations on performance and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/Proprietary AliSQL/Stability/Faster DDL.md).
     -   The maximum number of connections that are allowed is increased to 500,000.
 -   Performance optimization:
-    -   The `call dbms_admin.show_native_procedure();` command is provided to view all of the procedures on an RDS instance.
+    -   The `call dbms_admin.show_native_procedure();` command is provided to display all of the procedures on an RDS instance.
     -   A new function is provided to delete orphan tables.
     -   The thread pool feature is optimized.
     -   Query caching is optimized.
@@ -259,7 +266,7 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
 
     Read-write locks are no longer supported in the query cache. The default hash function is changed from LF\_hash to murmur3 hash.
 
--   Bug fixed:
+-   Bugs fixed:
 
     Two bugs that occur after the system hits the query cache during the execution of transactions at the REPEATABLE\_READ isolation level are fixed.
 
@@ -277,7 +284,7 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
     -   The bug that causes the system to delete temporary files when you delete large files is fixed.
     -   The bug that causes dump threads in thread pools to time out is fixed.
     -   The bug that causes the system to incorrectly count the value of the IPK field in the procedure context is fixed.
-    -   The bug that causes rds\_change\_user to incur pfs thread leakage and release is fixed.
+    -   The bug that causes rds\_change\_user to cause pfs thread leakage and release is fixed.
 -   Changes incorporated: Changes in MySQL 5.7.28 are incorporated. For more information, visit [GitHub](https://github.com/mysql/mysql-server).
 
 20200229
@@ -300,7 +307,7 @@ The bug that causes memory leaks when the Cmd\_set\_current\_connection process 
 Performance optimization:
 
 -   The file deletion mechanism is optimized. When you asynchronously delete small files, links to the small files are canceled.
--   The performance of the thread pool feature is optimized. For more information, see [Thread Pool](/intl.en-US/Proprietary AliSQL/Feature/Thread Pool.md).
+-   The thread pool feature is optimized. For more information, see [Thread Pool](/intl.en-US/Proprietary AliSQL/Feature/Thread Pool.md).
 -   The default value of the thread\_pool\_enabled parameter is changed to OFF.
 
 20191225
@@ -329,7 +336,7 @@ The bug that causes the system to display variables in SQL logs that are generat
 -   New features:
     -   The SM4 encryption algorithm is supported for TDE. For more information, see [Configure TDE for an ApsaraDB RDS for MySQL instance](/intl.en-US/RDS MySQL Database/Data security/Configure TDE for an ApsaraDB RDS for MySQL instance.md).
     -   A mechanism is introduced to allow the system to access the primary index of a table with a primary key.
-    -   A mechanism is introduced to prevent the automatic conversion of tables from the MEMORY to MyISAM storage engines. These tables include system tables. These tables also include the tables that are invoked by threads in the initializing state.
+    -   A mechanism is introduced to prevent the automatic conversion of tables from the MEMORY storage engine to the MyISAM storage engine. These tables include system tables. These tables also include the tables that are invoked by threads in the initializing state.
 -   Performance optimization:
     -   The thread pool feature is optimized to reduce mutexes. For more information, see [Thread Pool](/intl.en-US/Proprietary AliSQL/Feature/Thread Pool.md).
     -   An SQL log caching mechanism is introduced to increase SQL logging performance.
@@ -342,9 +349,9 @@ The bug that causes the system to display variables in SQL logs that are generat
 20191015
 
 -   New features:
-    -   The rotation of slow query logs is supported. Each CSV slow query log file is assigned a unique name and a new file. This prevents data losses during the collection of slow query logs. You can run the `show variables like '%rotate_log_table%';` command to check whether the rotation of slow query logs is enabled.
-    -   A performance proxy plug-in is provided. This plug-in obtains performance data and saves the data as TXT files to your computer. These files are deleted in a circular manner. Only the latest files at the single-digit second level are retained.
-    -   The forced conversion from the MEMORY to InnoDB storage engines is supported. If the global variable **rds\_force\_memory\_to\_innodb** is set to **ON**, a table is converted from the MEMORY to InnoDB storage engines when the table is created or modified.
+    -   The rotation of slow query logs is supported. Every CSV slow query log file is assigned a unique name and a new file. This prevents data losses during the collection of slow query logs. You can run the `show variables like '%rotate_log_table%';` command to check whether the rotation of slow query logs is enabled.
+    -   A performance proxy plug-in is provided. It obtains performance data and saves the data as TXT files to your computer. These files are deleted in a circular manner. Only the latest files at the single-digit second level are retained.
+    -   The forced conversion from the MEMORY storage engine to the InnoDB storage engine is supported. If the global variable **rds\_force\_memory\_to\_innodb** is set to **ON**, a table is converted from the MEMORY storage engine to the InnoDB storage engine when the table is created or modified.
     -   The keyring-rds plug-in is introduced to TDE. This plug-in allows ApsaraDB RDS to communicate with the administration system or Alibaba Cloud KMS.
     -   The output of TCP errors is supported. TCP errors in read, read-wait, and write-wait events are returned with their error codes by using end\_connection events. In addition, logs with information about the errors are generated.
 -   Bug fixed:
@@ -368,7 +375,7 @@ The thread pool feature is introduced to separate threads from sessions. If a la
 20190815
 
 -   New features:
-    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, a background thread is started to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/Proprietary AliSQL/Stability/Purge Large File Asynchronously.md).
+    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, the system starts a background thread to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/Proprietary AliSQL/Stability/Purge Large File Asynchronously.md).
     -   The performance insight feature is introduced to support load monitoring, association analysis, and performance optimization at the instance level. This feature allows you to evaluate the loads of an RDS instance. This feature also allows you to locate performance issues to ensure the stability of your database service. For more information, see [Performance Insight](/intl.en-US/Proprietary AliSQL/Stability/Performance Insight.md).
     -   An optimized instance locking mechanism is introduced. You can delete tables from an RDS instance by using DROP or TRUNCATE statements even if the RDS instance is locked.
 -   Bugs fixed:
@@ -416,7 +423,7 @@ New features:
 
 -   New feature:
 
-    The read/write splitting function is supported.
+    The read/write splitting function is introduced.
 
 -   Bugs fixed:
     -   The bug that causes the system to incorrectly calculate the value of the Second\_Behind\_Master metric for a follower is fixed.
@@ -427,8 +434,8 @@ New features:
 
 -   New features:
     -   The upgrade from the RDS High-availability Edition to the RDS Enterprise Edition is supported for RDS instances that use local SSDs.
-    -   The GTID function that is provided by the MySQL Community edition is supported. This function is disabled by default.
-    -   All of the Alibaba Cloud-proprietary AliSQL features and functions that are released in the RDS Basic and High-availability Editions before the minor version 20190915 are incorporated.
+    -   The GTID feature that is provided by the MySQL Community edition is supported. This feature is disabled by default.
+    -   All of the proprietary AliSQL features and functions that are released by Alibaba Cloud in the RDS Basic and High-availability Editions before the minor version 20190915 are incorporated.
 -   Bug fixed:
 
     The bug that causes the system to disable binary logs for reset secondary RDS instances is fixed.
@@ -454,9 +461,9 @@ New features:
 -   Table-level parallel replication and write set-level parallel replication are supported.
 -   The pk\_access module is introduced to expedite queries that are run based on primary keys.
 -   The thread pool feature is supported.
--   All of the Alibaba Cloud-proprietary AliSQL features and functions that are released for MySQL 5.7 in the RDS Basic and High-availability Editions before the minor version 20190510 are incorporated.
+-   All of the proprietary AliSQL features and functions that are released by Alibaba Cloud in the RDS Basic and High-availability Editions before the minor version 20190510 are incorporated.
 
-## ApsaraDB RDS for MySQL 5.6
+## MySQL 5.6
 
 20200831
 
@@ -481,7 +488,7 @@ New features:
 -   New features:
     -   The performance agent feature is introduced. For more information, see [Performance Agent](/intl.en-US/Proprietary AliSQL/Stability/Performance Agent.md). This feature is provided as a MySQL plug-in. It allows you to collect and analyze the performance metrics of an RDS instance.
     -   The maximum number of connections that are allowed is increased to 500,000.
-    -   The faster DDL feature is introduced. It provides an optimized buffer pool management mechanism. This mechanism reduces the impact of DDL operations and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/Proprietary AliSQL/Stability/Faster DDL.md).
+    -   The faster DDL feature is introduced. It provides an optimized buffer pool management mechanism. This mechanism reduces the impact of DDL operations on performance and increases the number of concurrent DDL operations that are allowed. For more information, see [Faster DDL](/intl.en-US/Proprietary AliSQL/Stability/Faster DDL.md).
 -   Performance optimization:
     -   The global parameter max\_execution\_time is introduced. If the execution duration of an SQL statement exceeds the value of this parameter, the execution is paused.
     -   The thread pool feature is optimized.
@@ -492,7 +499,7 @@ New features:
 
 20200430
 
--   The data protection feature is introduced. This feature supports the customization of security policies that are used to manage the permissions on DROP and TRUNCATE statements. This allows you to avoid data losses that are caused by the unintentional execution of these statements. For more information, see [Data Protect](/intl.en-US/Proprietary AliSQL/Security/Data Protect.md).
+-   The data protection feature is introduced. It supports the customization of security policies that are used to manage the permissions on DROP and TRUNCATE statements. This allows you to avoid data losses that are caused by the unintentional execution of these statements. For more information, see [Data Protect](/intl.en-US/Proprietary AliSQL/Security/Data Protect.md).
 -   The mdl\_info table is provided to store information about metadata locks.
 -   The bug that causes conflicts when the thread pool and ic\_reduce features are both enabled is fixed.
 
@@ -528,7 +535,7 @@ Performance optimization:
     The file deletion mechanism is optimized. When you asynchronously delete small files, links to the small files are canceled.
 
 -   Bugs fixed:
-    -   The bug that cause the system to incorrectly calculate the sleep time of the page cleaner is fixed.
+    -   The bug that causes the system to incorrectly calculate the sleep time of the page cleaner is fixed.
     -   The bug that causes the `SELECT @@global.gtid_executed` statement to cause a failover failure is fixed.
     -   The bug that causes the [IF CLIENT KILLED AFTER ROLLBACK TO SAVEPOINT PREVIOUS STMTS COMMITTED](https://bugs.mysql.com/bug.php?id=79596) error is fixed.
 
@@ -542,7 +549,7 @@ The deletion of unnecessary TCP error logs is supported.
 
 Bug fixed:
 
-The bug that causes overflow of timestamps in slow query logs is fixed.
+The bug that causes the overflow of timestamps in slow query logs is fixed.
 
 20191101
 
@@ -554,15 +561,15 @@ Bugs fixed:
 20191015
 
 -   New features:
-    -   The rotation of slow query logs is supported. Each CSV slow query log file is assigned a unique name and a new file. This prevents data losses during the collection of slow query logs. You can run the `show variables like '%rotate_log_table%';` command to check whether the rotation of slow query logs is enabled.
+    -   The rotation of slow query logs is supported. Every CSV slow query log file is assigned a unique name and a new file. This prevents data losses during the collection of slow query logs. You can run the `show variables like '%rotate_log_table%';` command to check whether the rotation of slow query logs is enabled.
     -   A new SM4 encryption algorithm is introduced to replace the original SM4 encryption algorithm.
-    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, a background thread is started to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/Proprietary AliSQL/Stability/Purge Large File Asynchronously.md).
+    -   The Purge Large File Asynchronously feature is introduced to asynchronously delete files. Before you delete a tablespace, the system renames the files in the tablespace as temporary files. Then, the system starts a background thread to asynchronously delete the temporary files. For more information, see [Purge Large File Asynchronously](/intl.en-US/Proprietary AliSQL/Stability/Purge Large File Asynchronously.md).
     -   The output of TCP errors is supported. TCP errors in read, read-wait, and write-wait events are returned with their error codes by using end\_connection events. In addition, logs with information about the errors are generated.
     -   An SQL log caching mechanism is introduced to increase SQL logging performance.
 -   Bugs fixed:
     -   The bug that prevents responses to the pstack command when a large number of connections are established is fixed. This is implemented by disabling the pstack command.
     -   The bug that causes conflicts between implicit primary keys and `CREATE TABLE AS SELECT` statements is fixed.
-    -   The bug that prevents the system from automatically deleting the temporary files that are created from binary log files is fixed.
+    -   The bug that prevents the system from deleting the temporary files that are created from binary log files is fixed.
 
 20190815
 
@@ -621,7 +628,7 @@ New feature: The privileged account of an RDS instance is granted the permission
 
 New feature: The read/write splitting function is supported. For more information, see [Read/write splitting overview]().
 
-## ApsaraDB RDS for MySQL 5.5
+## MySQL 5.5
 
 20181212
 
