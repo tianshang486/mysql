@@ -73,13 +73,13 @@ X-Engine |
 |MySQL Enterprise Security|[Enterprise TDE](/intl.zh-CN/RDS MySQL 数据库/数据安全/加密/设置透明数据加密TDE.md)|本地密钥替换|√|BYOK TDE，Key Rotating|BYOK TDE，Key Rotating|
 |[Enterprise Disk Data Encryption at Rest](/intl.zh-CN/RDS MySQL 数据库/数据安全/加密/设置透明数据加密TDE.md)|未提供|未提供|未提供|BYOK 落盘加密|
 |[Enterprise Encryption](/intl.zh-CN/RDS MySQL 数据库/数据安全/加密/设置SSL加密.md)|SSL|√|SSL|SSL|
-|[Enterprise Audit](/intl.zh-CN/RDS MySQL 数据库/日志/审计/历史事件/SQL洞察.md)|未提供|√|SQL洞察|SQL洞察|
+|[SQL Explorer](/intl.zh-CN/RDS MySQL 数据库/日志/审计/历史事件/SQL洞察.md)|未提供|√|SQL洞察|SQL洞察|
 |安全加密算法SM4|未提供|未提供|√|√|
 |MySQL Enterprise Scalability|[Thread Pool](/intl.zh-CN/自研内核 AliSQL/功能/Thread Pool.md)|未提供|√|MySQL 8.0支持|MySQL 8.0支持|
 |[Enterprise Readonly Request Extention](/intl.zh-CN/RDS MySQL 数据库/只读实例/MySQL只读实例简介.md)|未提供|未提供|√|只读实例|
-|MySQL Enterprise Reliability|[SQL Outline](/intl.zh-CN/自研内核 AliSQL/功能/Statement Outline.md)|未提供|未提供|√|√|
-|[Hot Massive Update](/intl.zh-CN/自研内核 AliSQL/性能/Inventory Hint.md)|未提供|未提供|√|√|
-|[Hot SQL Limit](/intl.zh-CN/自研内核 AliSQL/稳定/Statement Concurrency Control.md)|未提供|未提供|√|√|
+|MySQL Enterprise Reliability|[Statement Outline](/intl.zh-CN/自研内核 AliSQL/功能/Statement Outline.md)|未提供|未提供|√|√|
+|[Inventory Hint](/intl.zh-CN/自研内核 AliSQL/性能/Inventory Hint.md)|未提供|未提供|√|√|
+|[Statement Concurrency Control](/intl.zh-CN/自研内核 AliSQL/稳定/Statement Concurrency Control.md)|未提供|未提供|√|√|
 |[Hot SQL Firewall](/intl.zh-CN/云数据库 RDS 简介/为什么选择RDS/高安全性.md)|未提供|未提供|√|√|
 |MySQL Enterprise High-Availability|[Enterprise Automatic Failover Switch](/intl.zh-CN/云数据库 RDS 简介/为什么选择RDS/高可用和容灾设计.md)|未提供|未提供|需要第三方HA机制|高可用版|
 |[Multi-Source Replication](/intl.zh-CN/RDS MySQL 数据库/只读实例/MySQL只读实例简介.md)|√|√|√|只读实例高可用|
