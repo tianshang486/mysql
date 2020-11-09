@@ -14,50 +14,45 @@
 
 ## 小版本更新说明
 
--   1.12.7
-    -   新功能
-        -   支持`show full processlist`语法。
-        -   支持XA事务语法。
-    -   Bug修复
-        -   修复MySQL 8.0的`show processlist`报错问题。
-        -   修复若干事务级连接池的问题。
-        -   修复若干建立连接失败的问题。
--   1.11.12
-    -   新功能
+|小版本|说明|
+|---|--|
+|1.12.7|-   新功能
+    -   支持`show full processlist`语法。
+    -   支持XA事务语法。
+-   Bug修复
+    -   修复MySQL 8.0的`show processlist`报错问题。
+    -   修复若干事务级连接池的问题。
+    -   修复若干建立连接失败的问题。 |
+|1.11.12|-   新功能
 
-        支持[事务级连接池](/cn.zh-CN/RDS MySQL 数据库/数据库代理（读写分离）/连接池.md)。
+支持[事务级连接池](/cn.zh-CN/RDS MySQL 数据库/数据库代理（读写分离）/连接池.md)。
 
-    -   Bug修复
-        -   优化长连接的负载均衡，当节点从异常状态变成正常后，旧的长连接新请求可以再次路由到该节点。
-        -   优化Prepare语法，支持Prepare单播。
-        -   修复当MySQL 5.7连接MySQL 5.6数据库，开启Deprecate EOF导致连接失败的问题。
-        -   修复存储过程中更改数据库时导致连接断开的问题。
-        -   修复当结果集里大报文单行超过16 MB数据时，客户端报`Packets out of order`错误的问题。
-        -   修复只读实例通过`set autocommit=0`打开的事务未及时关闭问题。
-        -   修复`lock in shared mode`语句被路由到只读实例的问题。
-        -   修复`select handler from abc for update`语句被路由到只读实例的问题。
-        -   修复同个用户多个host的认证失败问题。
--   1.10.7
+-   Bug修复
+    -   优化长连接的负载均衡，当节点从异常状态变成正常后，旧的长连接新请求可以再次路由到该节点。
+    -   优化Prepare语法，支持Prepare单播。
+    -   修复当MySQL 5.7连接MySQL 5.6数据库，开启Deprecate EOF导致连接失败的问题。
+    -   修复存储过程中更改数据库时导致连接断开的问题。
+    -   修复当结果集里大报文单行超过16 MB数据时，客户端报`Packets out of order`错误的问题。
+    -   修复只读实例通过`set autocommit=0`打开的事务未及时关闭问题。
+    -   修复`lock in shared mode`语句被路由到只读实例的问题。
+    -   修复`select handler from abc for update`语句被路由到只读实例的问题。
+    -   修复同个用户多个host的认证失败问题。 |
+|1.10.7|Bug修复
 
-    Bug修复
+修复会话级连接池的若干问题。 |
+|1.9.23|-   新功能
+    -   支持root账号连接。
+    -   支持SSL连接。
+-   Bug修复
+    -   修复`change user`失败问题。
+    -   修复`load file`失败问题。
+    -   修复客户端收到sequence错误报文，导致应用报`Exception: Packets out of order`错误的问题。
+    -   修复主实例异常时只读实例的连接被断开问题。 |
+|1.9.14|-   新功能
 
-    修复会话级连接池的若干问题。
+支持hint语法：`/*FORCE_SLAVE*/, /*FORCE_MASTE*/`。
 
--   1.9.23
-    -   新功能
-        -   支持root账号连接。
-        -   支持SSL连接。
-    -   Bug修复
-        -   修复`change user`失败问题。
-        -   修复`load file`失败问题。
-        -   修复客户端收到sequence错误报文，导致应用报`Exception: Packets out of order`错误的问题。
-        -   修复主实例异常时只读实例的连接被断开问题。
--   1.9.14
-    -   新功能
-
-        支持hint语法：`/*FORCE_SLAVE*/, /*FORCE_MASTE*/`。
-
-    -   Bug修复
-        -   修复charset默认值获取错误导致的乱码问题。
-        -   修复返回MySQL版本号的String不正确问题。
+-   Bug修复
+    -   修复charset默认值获取错误导致的乱码问题。
+    -   修复返回MySQL版本号的String不正确问题。 |
 
