@@ -77,18 +77,18 @@ ApsaraDB RDS for PostgreSQL instances support two types of accounts: privileged 
 
 6.  Configure the following parameters.
 
-    ![Create a database on an RDS instance equipped with standard or enhanced SSDs](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/9250359951/p99288.png)
+    ![Create a database for an RDS instance with standard or enhanced SSDs](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/9250359951/p99288.png)
 
     |Parameter|Description|
     |---------|-----------|
     |**Database Name:**|    -   The name of the database can contain up to 64 characters.
     -   The name of the database can contain lowercase letters, digits, hyphens \(-\), and underscores \(\_\).
     -   The name of the database must start with a lowercase letter and end with a lowercase letter or digit. |
-    |**Supported Character Sets:**|Specify the character set that is supported by the database.|
-    |**Collate**|Specify the rule that is used to collate strings in the database.|
-    |**Ctype**|Specify the type of character that is supported by the database.|
-    |**Authorized Account:**|Specify the owner of the database. The owner has all permissions on the database.|
-    |**Description:**|Enter the description of the database.|
+    |**Supported Character Sets:**|The character set that is supported by the database.|
+    |**Collate**|The rule that is used to sort strings.|
+    |**Ctype**|The type of character that is supported by the database.|
+    |**Authorized Account:**|The owner of the database. The owner has all permissions on the database.|
+    |**Description:**|The description of the database.|
 
 7.  Click **Create**.
 
@@ -176,7 +176,7 @@ ApsaraDB RDS for PostgreSQL instances support two types of accounts: privileged 
 
 ## Create a database on an RDS instance that uses local SSDs
 
-1.  Connect to the RDS instance. For more information, see [Connect to an ApsaraDB RDS for PostgreSQL instance](/intl.en-US/RDS PostgreSQL Database/Quick start/Connect to an ApsaraDB RDS for PostgreSQL instance.md).
+1.  Log on to the [ApsaraDB RDS console](/intl.en-US/RDS PostgreSQL Database/Quick start/Connect to an ApsaraDB RDS for PostgreSQL instance.md).
 
 2.  In the SQL window, execute the following statement to create a database:
 
@@ -191,7 +191,7 @@ ApsaraDB RDS for PostgreSQL instances support two types of accounts: privileged 
             [ CONNECTION LIMIT [=] connlimit ] ]
     ```
 
-    For example, if you want to create a database named test, execute the following statement.
+    For example, if you want to create a database named test, execute the following statement:
 
     ```
     create database test;
