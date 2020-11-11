@@ -9,7 +9,7 @@ PolarDB支持将RDS MySQL一键升级至PolarDB MySQL，升级后PolarDB集群�
 
 -   源RDS实例未开启[TDE](/intl.zh-CN/RDS MySQL 数据库/数据安全/加密/设置透明数据加密TDE.md)和[SSL](/intl.zh-CN/RDS MySQL 数据库/数据安全/加密/设置SSL加密.md)。
 -   源RDS实例的表存储引擎为InnoDB。
--   如果RDS处于高安全模式（数据库代理模式），需要创建有高权限账号（请参见[创建高权限账号](/intl.zh-CN/RDS MySQL 数据库/快速入门/创建数据库和账号.md)），或者切换到高性能模式（参见[【重要】RDS网络链路升级说明](/intl.zh-CN/通知/【重要】RDS网络链路升级说明.md)），才能进行一键升级。
+-   如果RDS处于高安全模式（数据库代理模式），需要创建有高权限账号（请参见[创建高权限账号](/intl.zh-CN/RDS MySQL 数据库/快速入门/创建数据库和账号.md)），或者切换到高性能模式（参见[【重要】RDS网络链路升级说明](/intl.zh-CN/活动与通知/【重要】RDS网络链路升级说明.md)），才能进行一键升级。
 
     ![查看数据库模式](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8003729951/p54653.png)
 
