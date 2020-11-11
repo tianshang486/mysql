@@ -4,25 +4,26 @@ This topic describes how to create an account on an ApsaraDB RDS for PostgreSQL 
 
 ## Account types
 
-ApsaraDB RDS for PostgreSQL instances support two types of database accounts: privileged accounts and standard accounts. The following table describes these account types.
+ApsaraDB RDS for PostgreSQL instances support two types of accounts: privileged accounts and standard accounts. The following table describes these account types.
 
 |Account type|Description|
 |------------|-----------|
-|**Privileged account**|-   You can create and manage privileged accounts by using the ApsaraDB for RDS console or API operations.
--   For an ApsaraDB RDS for PostgreSQL instance with local SSDs, you can create only one privileged account. For an ApsaraDB RDS for PostgreSQL instance with cloud disks, you can create multiple privileged accounts. A privileged account allows you to manage all standard accounts and databases in an ApsaraDB RDS for PostgreSQL instance.
--   A privileged account has more permissions, which allows you to perform more fine-grained management operations. For example, you can grant query permissions on different tables to different users.
--   You can use a privileged account to disconnect any accounts from their authorized databases in your ApsaraDB RDS for PostgreSQL instance. |
-|**Standard account**|-   You can create and manage standard accounts by using the ApsaraDB for RDS console, API operations, or SQL statements.
--   You can create multiple standard accounts for an ApsaraDB RDS for PostgreSQL instance.
--   You must grant permissions on specific databases to a standard account.
--   You cannot use a standard account to create or manage other accounts, nor disconnect other accounts from databases. |
+|**Privileged account**|-   You can create and manage privileged accounts by using the ApsaraDB RDS console or the API.
+-   If your RDS instance uses local SSDs, you can create only one privileged account. If your RDS instance uses standard or enhanced SSDs, you can create more than one privileged account. A privileged account allows you to manage all of the standard accounts and databases that are created on your RDS instance.
+-   A privileged account has more permissions that allow you to manage your RDS instance at more fine-grained levels. For example, you can grant the query permissions on different tables to different users.
+-   A privileged account has the permissions to disconnect any accounts that are created on your RDS instance. |
+|**Standard account**|-   You can create and manage standard accounts by using the ApsaraDB RDS console, API, or SQL statements.
+-   You can create more than one standard account on your RDS instance.
+-   You must grant the permissions on specific databases to a standard account.
+-   A standard account does not have the permissions to create, manage, or disconnect other accounts on your RDS instance. |
 
 ## Precautions
 
--   Databases within the same instance share all of the resources that belong to the instance. You can create databases, privileged accounts, and standard accounts for an ApsaraDB RDS for PostgreSQL instance. You can create as many databases as you want. You can also manage standard accounts and databases by using SQL statements.
--   To migrate data from an on-premises database to an ApsaraDB for RDS instance, you must create a database and an account in the RDS instance. Ensure that the database has the same properties as the on-premises database, and the account of the database has the same permissions as the account of the on-premises database.
--   Use service roles to create accounts and follow the principle of least privilege to assign appropriate read-only and read/write permissions to the accounts. When necessary, you can create multiple database accounts and allow each of them to access only data relevant to their own business tasks. If an account does not need to write data to a database, assign the read-only permissions to the account.
--   To ensure database security, set strong account passwords and change the passwords on a regular basis.
+-   If your RDS instance uses local SSDs, you can create one privileged account in the ApsaraDB RDS console. After the privileged account is created, it cannot be deleted. You can also create and manage more than one standard account by using SQL statements.
+-   If your RDS instance uses standard or enhanced SSDs, you can create more than one privileged account and standard account in the ApsaraDB RDS console. You can also create and manage more than one standard account by using SQL statements.
+-   To migrate data from an on-premises database to your RDS instance, you must create a database and an account on the RDS instance. Make sure that the created database has the same properties as the on-premises database. Also make sure that the created account has the same permissions on the created database as the account that is authorized to manage the on-premises database.
+-   Follow the least privilege principle to create accounts and grant them appropriate read-only and read/write permissions on databases. If necessary, you can create more than one account and grant them only the permissions on specific databases. If an account does not need to write data to a database, grant only the read-only permissions on that database to the account.
+-   For security purposes, we recommend that you specify strong passwords for the accounts on your RDS instance and change the passwords on a regular basis.
 
 ## Create an account on an RDS instance that uses standard or enhanced SSDs
 
