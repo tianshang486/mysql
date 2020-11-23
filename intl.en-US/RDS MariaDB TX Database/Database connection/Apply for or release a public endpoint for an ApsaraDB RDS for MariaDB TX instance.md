@@ -7,11 +7,11 @@ ApsaraDB RDS for MariaDB TX supports two types of endpoints: internal endpoints 
 |Endpoint type|Description|
 |-------------|-----------|
 |Internal endpoint|-   An internal endpoint is provided by default. You do not need to apply for this endpoint. In addition, you cannot release this endpoint. You can change the network type of the RDS instance.
--   If your application is deployed on an Elastic Compute Service \(ECS\) instance that resides in the same region andhas the same [network type](https://www.alibabacloud.com/help/doc-detail/61651.htm) as the RDS instance, the ECS and RDS instances can communicate over an internal network. You do not need to apply for a public endpoint for the RDS instance.
+-   If your application is deployed on an Elastic Compute Service \(ECS\) instance that resides in the same region andhas the same [network types](/intl.en-US/Network/Network types.md) as the RDS instance, the ECS and RDS instances can communicate over an internal network. You do not need to apply for a public endpoint for the RDS instance.
 -   For security and performance purposes, we recommend that you connect to the RDS instance by using the internal endpoint. |
 |Public endpoint|-   You must manually apply for a public endpoint. You can release this endpoint if it is no longer required.
 -   If you cannot connect to the RDS instance by using the internal endpoint, you must apply for a public endpoint. This includes the following scenarios:
-    -   Connect to the RDS instance from an ECS instance that resides in a different region or has a different network type from the RDS instance.
+    -   Connect to the RDS instance from an ECS instance that resides in a different region or has a different [network types](/intl.en-US/Network/Network types.md) from the RDS instance.
     -   Connect to the RDS instance from a device outside Alibaba Cloud.
 
 **Note:**
