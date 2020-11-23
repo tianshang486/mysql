@@ -7,7 +7,7 @@ ApsaraDB RDS for MariaDB TX supports two types of endpoints: internal endpoints 
 |Endpoint type|Description|
 |-------------|-----------|
 |Internal endpoint|-   An internal endpoint is provided by default. You do not need to apply for this endpoint. In addition, you cannot release this endpoint. You can change the network type of the RDS instance.
--   If your application is deployed on an Elastic Compute Service \(ECS\) instance that resides in the same region andhas the same [network type](https://www.alibabacloud.com/help/zh/doc-detail/61651.htm) as the RDS instance, the ECS and RDS instances can communicate over an internal network. You do not need to apply for a public endpoint for the RDS instance.
+-   If your application is deployed on an Elastic Compute Service \(ECS\) instance that resides in the same region andhas the same [network type](https://www.alibabacloud.com/help/doc-detail/61651.htm) as the RDS instance, the ECS and RDS instances can communicate over an internal network. You do not need to apply for a public endpoint for the RDS instance.
 -   For security and performance purposes, we recommend that you connect to the RDS instance by using the internal endpoint. |
 |Public endpoint|-   You must manually apply for a public endpoint. You can release this endpoint if it is no longer required.
 -   If you cannot connect to the RDS instance by using the internal endpoint, you must apply for a public endpoint. This includes the following scenarios:
@@ -26,7 +26,7 @@ ApsaraDB RDS for MariaDB TX supports two types of endpoints: internal endpoints 
 
 2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where your RDS instance resides.
 
-    ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
+    ![Select a region](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
 3.  Find your RDS instance and click its ID.
 
@@ -36,9 +36,9 @@ ApsaraDB RDS for MariaDB TX supports two types of endpoints: internal endpoints 
 
     -   If you have not applied for a public endpoint, you can click **Apply for Public Endpoint**.
     -   If you have applied for a public endpoint, you can click **Release Public Endpoint**.
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6150359951/p11667.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6150359951/p11667.png)
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6150359951/p3993.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6150359951/p3993.png)
 
 6.  In the message that appears, click **Confirm**.
 
@@ -47,6 +47,6 @@ ApsaraDB RDS for MariaDB TX supports two types of endpoints: internal endpoints 
 
 |API|Description|
 |---|-----------|
-|[Allocate public connection](/intl.en-US/API Reference/Database Connection/Allocate public connection.md)|Applies for a public endpoint for an ApsaraDB for RDS instance.|
-|[Release public endpoint](/intl.en-US/API Reference/Database Connection/Release public endpoint.md)|Releases the public endpoint of an ApsaraDB for RDS instance.|
+|[Apply for public endpoint](/intl.en-US/API Reference/Database Connection/Apply for public endpoint.md)|Applies for a public endpoint for an ApsaraDB for RDS instance.|
+|[t8139.md\#](/intl.en-US/API Reference/Database Connection/Release a public endpoint.md)|Releases the public endpoint of an ApsaraDB for RDS instance.|
 
