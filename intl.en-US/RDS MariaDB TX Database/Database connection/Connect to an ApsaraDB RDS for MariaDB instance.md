@@ -16,7 +16,7 @@ DMS is a graphical data management service that allows you to manage relational 
 
 Log on the ApsaraDB RDS console, find the RDS instance to which you want to connect, and go to the Databases page. On the **Databases** page, find the database that you want to manage, and click **SQL Query** in the Actions column. On the logon page of DMS, enter the logon information as prompted to connect to the RDS instance.
 
-![SQL Query](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3249404061/p174701.png)
+![SQL Query](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3249404061/p174701.png)
 
 ## Use a client to connect to an RDS instance
 
@@ -26,7 +26,7 @@ ApsaraDB RDS for MySQL is fully compatible with open source MySQL. You can conne
 2.  In the lower-left corner of the Session manager dialog box, click **New**.
 3.  Enter information about the RDS instance that you want to connect. The following table describes the parameters.
 
-    ![Connection settings](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2250359951/p54911.png)
+    ![Connection settings](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1425385061/p54911.png)
 
     |Parameter|Description|
     |---------|-----------|
@@ -44,12 +44,12 @@ For more information about how to view the internal and public endpoints and the
 
     If the connection information is correct, the RDS instance is connected.
 
-    ![Connection established](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2250359951/p2610.png)
+    ![Connection established](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2250359951/p2610.png)
 
 
 ## FAQ
 
 How do I obtain data from ApsaraDB RDS to Function Compute?
 
-You can install third-party dependencies on Function Compute. Then, you can use these built-in dependencies to obtain data from ApsaraDB RDS.For more information, see [Install third-party dependencies](https://www.alibabacloud.com/help/zh/doc-detail/74571.htm).
+You can install third-party dependencies on Function Compute. Then, you can use these built-in dependencies to obtain data from ApsaraDB RDS.For more information, see [Install third-party dependencies](https://www.alibabacloud.com/help/doc-detail/74571.htm).
 
