@@ -14,13 +14,13 @@
 
 ## 前提条件
 
-已对RDS实例[设置白名单](/intl.zh-CN/RDS MariaDB TX 数据库/快速入门/设置白名单.md)和[申请或释放外网地址](/intl.zh-CN/RDS MariaDB TX 数据库/数据库连接/申请或释放外网地址.md)。
+已对RDS实例[设置白名单](/intl.zh-CN/RDS MariaDB TX 数据库/快速入门/设置白名单.md)和[申请外网地址](/intl.zh-CN/RDS MariaDB TX 数据库/数据库连接/申请或释放外网地址.md)。
 
 ## 操作步骤
 
 1.  使用远程工具[登录RDS MariaDB TX实例](/intl.zh-CN/RDS MariaDB TX 数据库/快速入门/连接MariaDB实例.md)，创建空数据库。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0803377951/p40891.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0803377951/p40891.png)
 
 2.  登录本地Linux服务器，使用自带的mysqldump工具将本地数据库数据导出为数据文件。
 
@@ -47,6 +47,6 @@
 
 5.  刷新远程工具后查看表，已经有了数据，说明已经迁移成功。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1803377951/p40892.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1803377951/p40892.png)
 
 
