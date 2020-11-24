@@ -8,7 +8,7 @@ The original RDS instance runs one of the following MySQL versions and RDS editi
 -   MySQL 5.7 on RDS High-availability Edition \(with local SSDs\)
 -   MySQL 5.6
 
-**Note:** For more information about how to back up an ApsaraDB RDS for SQL Server instance across regions, see [Back up an ApsaraDB RDS for SQL Server instance across regions]().
+**Note:** For more information about how to back up an ApsaraDB RDS for SQL Server instance across regions, see [Back up an ApsaraDB RDS for SQL Server instance across regions](/intl.en-US/RDS SQL Server Database/Backup/Back up an ApsaraDB RDS for SQL Server instance across regions.md).
 
 The cross-region backup function is different from the default backup function. For more information about the default backup function, see [Back up an ApsaraDB RDS for MySQL instance](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance.md).
 
@@ -26,7 +26,7 @@ You can use a cross-region backup file of the original RDS instance to restore d
 The fees for the cross-region backup function include the following two parts:
 
 -   Remote storage: USD 0.0002/GB/hour.
--   Traffic consumption: For more information, see[Billing methods and billing items](https://www.alibabacloud.com/help/zh/doc-detail/70005.htm#h2-rds-2).
+-   Traffic consumption: For more information, see [Billing methods and billing items](https://www.alibabacloud.com/help/zh/doc-detail/70005.htm#h2-rds-2).
 
 ## Precautions
 
