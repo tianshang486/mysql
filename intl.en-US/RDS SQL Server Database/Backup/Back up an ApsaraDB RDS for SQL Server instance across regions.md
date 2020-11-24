@@ -20,7 +20,7 @@ You can use a cross-region backup file of the original RDS instance to restore d
 The fees for the cross-region backup function include the following two parts:
 
 -   Remote storage: USD 0.0002/GB/hour.
--   Traffic consumption: For more information, see[Billing methods and billing items](https://www.alibabacloud.com/help/zh/doc-detail/70005.htm#h2-rds-2).
+-   Traffic consumption: For more information, see [Billing methods and billing items](https://www.alibabacloud.com/help/zh/doc-detail/70005.htm#h2-rds-2).
 
 ## Precautions
 
