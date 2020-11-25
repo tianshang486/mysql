@@ -48,12 +48,12 @@ The source and destination RDS instances use the same database engines.
 2.  In the left-side navigation pane, click **Data Migration**.
 3.  At the top of the Migration Tasks page, select the region where the destination RDS instance resides.
 
-    ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/9840359951/p50439.png)
+    ![Select a region](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9840359951/p50439.png)
 
 4.  In the upper-right corner of the page, click **Create Migration Task**.
 5.  Configure the source and destination databases for the data migration task.
 
-    ![Migrate data between RDS instances](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/9840359951/p49618.png)
+    ![Migrate data between RDS instances](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/9840359951/p49618.png)
 
     |Section|Parameter|Description|
     |:------|:--------|:----------|
@@ -85,7 +85,7 @@ The **Encryption** parameter is available only for regions in mainland China and
 
 7.  Select the migration types and objects to be migrated.
 
-    ![Select the migration types and objects to be migrated](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8906544061/p47745.png)
+    ![Select the migration types and objects to be migrated](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8906544061/p47745.png)
 
     |Parameter|Description|
     |:--------|:----------|
@@ -94,7 +94,7 @@ The **Encryption** parameter is available only for regions in mainland China and
      -   To perform only full data migration, select **Schema Migration** and **Full Data Migration**.
     -   To ensure service continuity during data migration, select **Schema Migration**, **Full Data Migration**, and **Incremental Data Migration**.
  **Note:** If **Incremental Data Migration** is not selected, do not write data to the source RDS instance during full data migration. This ensures data consistency between the source and destination instances. |
-    |Available|Select objects from the Available section and click the ![Right arrow](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3457359951/p40698.png) icon to move the objects to the Selected section.
+    |Available|Select objects from the Available section and click the ![Right arrow](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3457359951/p40698.png) icon to move the objects to the Selected section.
 
  **Note:**
 
@@ -107,7 +107,7 @@ The **Encryption** parameter is available only for regions in mainland China and
     **Note:**
 
     -   Before you can start the data migration task, a precheck is performed. You can start the data migration task only after the task passes the precheck.
-    -   If the task fails to pass the precheck, click the ![Info icon](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/3457359951/p47468.png) icon next to each failed item to view details. Troubleshoot the issues based on the causes and run the precheck again.
+    -   If the task fails to pass the precheck, click the ![Info icon](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/3457359951/p47468.png) icon next to each failed item to view details. Troubleshoot the issues based on the causes and run the precheck again.
 9.  After the task passes the precheck, click **Next**.
 10. In the Confirm Settings dialog box, specify the **Channel Specification** and select **Data Transmission Service \(Pay-As-You-Go\) Service Terms**.
 11. Click **Buy and Start** to start the migration task.
@@ -124,6 +124,6 @@ The **Encryption** parameter is available only for regions in mainland China and
         1.  Wait until **Incremental Data Migration** and **The migration task is not delayed** appear in the progress bar of the migration task. Then, stop writing data to the source database for a few minutes. The delay time of **incremental data migration** may be displayed in the progress bar.
         2.  After the status of **incremental data migration** changes to **The migration task is not delayed**, manually stop the migration task.
 
-            ![The migration task is not delayed](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/2940359951/p47604.png)
+            ![The migration task is not delayed](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2940359951/p47604.png)
 
 
