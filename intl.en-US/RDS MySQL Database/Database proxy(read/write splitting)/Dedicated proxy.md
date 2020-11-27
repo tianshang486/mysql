@@ -1,6 +1,6 @@
 # Dedicated proxy
 
-This topic describes the dedicated proxy feature of ApsaraDB RDS for MySQL. This feature provides advanced functions, such as read/write splitting, connection pool, and transaction splitting. You can enable this feature on your primary RDS instance.
+This topic describes the dedicated proxy feature of ApsaraDB RDS for MySQL. This feature provides advanced features, such as read/write splitting, connection pool, and transaction splitting. You can enable this feature on your primary RDS instance.
 
 -   Your RDS instance runs one of the following MySQL versions and RDS editions:
 
@@ -11,7 +11,7 @@ This topic describes the dedicated proxy feature of ApsaraDB RDS for MySQL. This
     -   MySQL 5.6 with a minor engine version of 20200229 or later on RDS High-availability Edition
     **Note:** You can log on to the ApsaraDB RDS console and go to the Basic Information page of your RDS instance. In the **Configuration Information** section of the page, you can check whether the **Upgrade Minor Version** button exists. If the button exists, you can click it to view and update the minor engine version. If the button does not exist, you are using the latest minor engine version. For more information, see [Upgrade the minor engine version of an ApsaraDB RDS for MySQL instance](/intl.en-US/RDS MySQL Database/Version upgrade/Upgrade the minor engine version of an ApsaraDB RDS for MySQL instance.md).
 
-    ![Upgrade Minor Version](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6040359951/p61646.png)
+    ![Upgrade Minor Version](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6040359951/p61646.png)
 
 -   Your RDS instance does not reside in Zone D of the China \(Hangzhou\) region, Zone A of the China \(Beijing\) region, or Finance Zone B of the China \(Shenzhen\) region.
 
@@ -42,7 +42,7 @@ Dedicated proxies support only the pay-as-you-go billing method. The following t
 |China \(Shanghai\)|cn-shanghai|0.173|
 |China \(Qingdao\)|cn-qingdao|0.173|
 |China \(Beijing\)|cn-beijing|0.173|
-|China \(Zhangjiakou-Beijing Winter Olympics\)|cn-zhangjiakou|0.120|
+|China \(Zhangjiakou\)|cn-zhangjiakou|0.120|
 |China \(Hohhot\)|cn-huhehaote|0.173|
 |China \(Shenzhen\)|cn-shenzhen|0.173|
 |China \(Heyuan\)|cn-heyuan|0.173|
@@ -64,15 +64,15 @@ Dedicated proxies support only the pay-as-you-go billing method. The following t
 
 -   Dedicated proxies do not support Secure Sockets Layer \(SSL\) encryption.
 -   Dedicated proxies do not support compression protocols.
--   Dedicated proxies do not support VSwitch changes.
+-   Dedicated proxies do not support vSwitch changes.
 
 ## Precautions
 
 -   When you change the specifications of your RDS instance or its read-only RDS instances, a transient connection error may occur.
--   If you connect your application to the proxy endpoint, all of the requests that are encapsulated in transactions are routed to your RDS instance. This applies if you do not enable the transaction splitting function.
+-   If you connect your application to the proxy endpoint, all of the requests that are encapsulated in transactions are routed to your RDS instance. This applies if you do not enable the transaction splitting feature.
 -   If you use the proxy endpoint to implement read/write splitting, the read consistency of the requests that are not encapsulated in transactions cannot be guaranteed. If you require this read consistency, you must encapsulate these requests in transactions.
 -   If you connect your application to the proxy endpoint, a `SHOW PROCESSLIST` statement is invoked to return a result set for each query. This result set consists of the query results from your RDS instance and its read-only RDS instances.
--   If you execute multi-statements or run stored procedures, the read/write splitting function is disabled and all subsequent requests over the current connection are routed to your RDS instance. To enable the read/write splitting function again, you must close the current connection and establish a new connection. For more information about multi-statements, see [Multi-Statement](https://dev.mysql.com/doc/internals/en/multi-statement.html).
+-   If you execute multi-statements or run stored procedures, the read/write splitting feature is disabled and all subsequent requests over the current connection are routed to your RDS instance. To enable the read/write splitting feature again, you must close the current connection and establish a new connection. For more information about multi-statements, see [Multi-Statement](https://dev.mysql.com/doc/internals/en/multi-statement.html).
 -   The dedicated proxy feature supports the `/*FORCE_MASTER*/` and `/*FORCE_SLAVE*/` hints. However, requests that contain hints have the highest route priorities, and therefore these requests are not constrained by consistency or transaction limits. Before you use these hints, you must check whether these hints are suitable for your workloads. In addition, these hints cannot contain statements such as `/*FORCE_SLAVE*/ set names utf8;`. These statements can change environment variables. If you include these statements in these hints, errors may occur when you process subsequent workloads.
 
     **Note:** If you use the MySQL command line tool to establish a connection and execute these hints, you must add `-c` to the statements. Otherwise, the MySQL command line tool filters these hints.
@@ -89,7 +89,7 @@ This section describes how to enable the dedicated proxy feature in the ApsaraDB
 
 2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where your RDS instance resides.
 
-    ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
+    ![Select a region](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
 3.  Find your RDS instance and click its ID.
 
@@ -97,7 +97,7 @@ This section describes how to enable the dedicated proxy feature in the ApsaraDB
 
 5.  Click **Enable now**.
 
-    ![Enable the dedicated proxy feature](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6040359951/p60623.png)
+    ![Enable the dedicated proxy feature](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6040359951/p60623.png)
 
 6.  Configure the **Network Type** and **Proxy Instances** parameters. Then, click **Enable**.
 
@@ -108,27 +108,27 @@ This section describes how to enable the dedicated proxy feature in the ApsaraDB
 
         For example, if your RDS instance has 8 CPU cores and its read-only RDS instances have 4 CPU cores, the recommended number of dedicated proxies is 2 based on the following formula: \(8 + 4\)/8 = 1.5 \(rounded up to 2\).
 
-    ![Enable the database proxy feature](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6040359951/p99416.png)
+    ![Enable the database proxy feature](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/4272364061/p99416.png)
 
 
 ## Overview of the Database Proxy page
 
-After the dedicated proxy feature is enabled, you can use the generated proxy endpoint to implement functions such as read/write splitting, connection pool, and transaction splitting.
+After the dedicated proxy feature is enabled, you can use the generated proxy endpoint to implement features such as read/write splitting, connection pool, and transaction splitting.
 
-![Database Proxy page](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6040359951/p60624.png)
+![Database Proxy page](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6040359951/p60624.png)
 
 |Section|Parameter|Description|
 |-------|---------|-----------|
 |**Proxy Endpoint**|**Instance ID**|The ID of the dedicated proxy instance.|
 |**Enabled Proxies**|The number of dedicated proxies that are enabled on your RDS instance. You can enable additional dedicated proxies. This allows you to process more queries.|
-|**Read/Write Splitting**|Specifies whether to enable the read/write splitting function for the proxy endpoint. For more information, see [Read/write splitting](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Read/write splitting.md).|
-|**Connection Pool**|Specifies whether to enable the connection pool function for the proxy endpoint. If you want to enable the connection pool function, this parameter also specifies the type of connection pool to enable. Valid values: -   Enable Transaction Connection Pool: This is the default value. If tens of thousands of connections are established, select this value.
+|**Read/Write Splitting**|Specifies whether to enable the read/write splitting feature for the proxy endpoint. For more information, see [Read/write splitting](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Read/write splitting.md).|
+|**Connection Pool**|Specifies whether to enable the connection pool feature for the proxy endpoint. If you want to enable the connection pool feature, this parameter also specifies the type of connection pool to enable. Valid values: -   Enable Transaction Connection Pool: This is the default value. If tens of thousands of connections are established, select this value.
 -   Enable Session Connection Pool: If only PHP short-lived connections are established, select this value.
--   Disable: If you want to disable the connection pool function, select this value.
+-   Disable: If you want to disable the connection pool feature, select this value.
 
 For more information, see [Connection pool](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Connection pool.md). |
-|**Transaction Splitting**|Specifies whether to enable the transaction splitting function for the proxy endpoint. For more information, see [Transaction splitting](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Transaction splitting.md). **Note:** You can click **Enable** or **Disable** to the right of the Transaction Splitting parameter to enable or disable this function. |
-|**Endpoint**|The proxy endpoint that is generated after the dedicated proxy feature is enabled. This endpoint connects to all of the dedicated proxies that are enabled on your RDS instance. The read/write splitting function is also bound to this endpoint. You can also create, modify, or delete additional proxy endpoints. For more information, see [Create a proxy endpoint for a dedicated proxy](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Create a proxy endpoint for a dedicated proxy.md).|
+|**Transaction Splitting**|Specifies whether to enable the transaction splitting feature for the proxy endpoint. For more information, see [Transaction splitting](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Transaction splitting.md). **Note:** You can click **Enable** or **Disable** to the right of the Transaction Splitting parameter to enable or disable this feature. |
+|**Endpoint**|The proxy endpoint that is generated after the dedicated proxy feature is enabled. This endpoint connects to all of the dedicated proxies that are enabled on your RDS instance. The read/write splitting feature is also bound to this endpoint. You can also create, modify, or delete additional proxy endpoints. For more information, see [Create a proxy endpoint for a dedicated proxy](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Create a proxy endpoint for a dedicated proxy.md).|
 |**Port**|The port that is associated with the proxy endpoint. **Note:** To change the port, you can click **Change Port** to the right of the displayed port number. Valid values: 1000 to 5999. |
 |**Endpoint Type**|The network type of the proxy endpoint. You cannot change the network type.|
 |**Proxy**|**Proxy Type**|The type of proxy that is enabled on your RDS instance. Only the **Dedicated Proxy** type is supported.|
@@ -145,7 +145,7 @@ For example, if your RDS instance has 8 CPU cores and its read-only RDS instance
 
 2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where your RDS instance resides.
 
-    ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
+    ![Select a region](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
 3.  Find your RDS instance and click its ID.
 
@@ -153,11 +153,11 @@ For example, if your RDS instance has 8 CPU cores and its read-only RDS instance
 
 5.  In the Proxy section of the Proxy Service tab, change the number in the **Adjusted Proxies** column and click **Apply** in the Adjustment Plan column.
 
-    ![Adjust the number of dedicated proxies](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6040359951/p60627.png)
+    ![Adjust the number of dedicated proxies](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6040359951/p60627.png)
 
 6.  Set **Applied At** and click **OK**.
 
-    ![Configure Proxy Resources](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/6040359951/p60629.png)
+    ![Configure Proxy Resources](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/6040359951/p60629.png)
 
 
 ## View the monitoring data of dedicated proxies
@@ -166,7 +166,7 @@ For example, if your RDS instance has 8 CPU cores and its read-only RDS instance
 
 2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where your RDS instance resides.
 
-    ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
+    ![Select a region](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
 3.  Find your RDS instance and click its ID.
 
@@ -178,7 +178,7 @@ For example, if your RDS instance has 8 CPU cores and its read-only RDS instance
 
     **Note:** The CPU Utilization \(%\) metric indicates the CPU utilization that is contributed by the dedicated proxies.
 
-    ![View the monitoring data of dedicated proxies](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7040359951/p60641.png)
+    ![View the monitoring data of dedicated proxies](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7040359951/p60641.png)
 
 
 ## Update the minor engine version of the dedicated proxy instance
@@ -189,7 +189,7 @@ For example, if your RDS instance has 8 CPU cores and its read-only RDS instance
 
 2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where your RDS instance resides.
 
-    ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
+    ![Select a region](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
 3.  Find your RDS instance and click its ID.
 
@@ -197,18 +197,20 @@ For example, if your RDS instance has 8 CPU cores and its read-only RDS instance
 
 5.  In the Proxy Endpoint section of the Proxy Service tab, click **Upgrade Dedicated Proxy Version**.
 
-    ![Upgrade Dedicated Proxy Version](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7040359951/p128450.png)
+    ![Upgrade Dedicated Proxy Version](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7040359951/p128450.png)
 
 6.  Specify **Upgrade Time** and click **OK**.
 
 
 ## Disable the dedicated proxy feature
 
+**Note:** If read/write splitting is enabled, when you disable the dedicated proxy feature, read/write splitting is disabled as well.
+
 1.  Log on to the [ApsaraDB for RDS console](https://rds.console.aliyun.com/).
 
 2.  In the left-side navigation pane, click **Instances**. In the top navigation bar, select the region where your RDS instance resides.
 
-    ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
+    ![Select a region](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
 3.  Find your RDS instance and click its ID.
 
@@ -216,7 +218,7 @@ For example, if your RDS instance has 8 CPU cores and its read-only RDS instance
 
 5.  In the upper-right corner of the Proxy Service tab, click **Disable Proxy Service**.
 
-    ![Disable Proxy Service](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/7040359951/p60650.png)
+    ![Disable Proxy Service](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/7040359951/p60650.png)
 
 6.  In the message that appears, click **OK**.
 
@@ -225,7 +227,7 @@ For example, if your RDS instance has 8 CPU cores and its read-only RDS instance
 
 -   After I update my RDS instance that runs MySQL 5.7 to the latest minor engine version, why is the dedicated proxy feature still unavailable?
 
-    Before you can use the dedicated proxy feature, you must disable the original read/write splitting function. This applies after you update your RDS instance that runs MySQL 5.7 to the latest minor engine version.
+    Before you can use the dedicated proxy feature, you must disable the original read/write splitting feature. This applies after you update your RDS instance that runs MySQL 5.7 to the latest minor engine version.
 
 -   After I enable the dedicated proxy feature, do I need to use the proxy endpoint or the read/write splitting endpoint to implement read/write splitting?
 
