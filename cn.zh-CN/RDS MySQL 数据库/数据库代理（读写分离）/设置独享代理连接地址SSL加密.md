@@ -81,6 +81,8 @@ RDS提供数据库独享代理服务，基于独享代理提供例如读写分�
 
 6.  单击**更新有效期**，在弹出的重启提示对话框中单击**确定**。
 
+    ![更新有效期](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1290446061/p185705.png)
+
 
 ## 关闭SSL加密
 
@@ -99,5 +101,7 @@ RDS提供数据库独享代理服务，基于独享代理提供例如读写分�
 5.  单击**SSL**页签。
 
 6.  单击**已开通**左侧开关，在弹出的对话框中单击**确定**。
+
+    ![关闭SSL](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1290446061/p185706.png)
 
 
