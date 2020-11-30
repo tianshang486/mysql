@@ -113,7 +113,7 @@
 |[DescribeReadDBInstanceDelay](/intl.zh-CN/API 参考/只读实例/查询只读实例延迟信息.md)|查询RDS只读实例的延迟信息。|
 |[ModifyReadonlyInstanceDelayReplicationTime](/intl.zh-CN/API 参考/只读实例/设置只读实例延迟复制.md)|修改RDS只读实例的延迟复制时间。|
 
-## 读写分离
+## 数据库共享代理（下线中）
 
 |API|描述|
 |---|--|
@@ -121,21 +121,21 @@
 |[ReleaseReadWriteSplittingConnection](/intl.zh-CN/API 参考/读写分离/释放读写分离地址.md)|释放读写分离地址。|
 |[CalculateDBInstanceWeight](/intl.zh-CN/API 参考/读写分离/查询系统权重分配值.md)|查询系统权重分配值。|
 |[ModifyReadWriteSplittingConnection](/intl.zh-CN/API 参考/读写分离/修改读权重和延迟阈值.md)|修改读写分离链路的延迟阈值和各个实例的读权重。|
+|[DescribeDBInstanceProxyConfiguration](/intl.zh-CN/API 参考/读写分离/查询数据库代理设置（共享代理）.md)|查询数据库代理设置。|
 
-## 数据库代理
+## 数据库独享代理（读写分离）
 
 |API|描述|
 |---|--|
 |[ModifyDBProxy](/intl.zh-CN/API 参考/数据库代理/开关独享代理.md)|开启或者关闭RDS实例的数据库独享代理功能。|
-|[ModifyDBProxyInstance](/intl.zh-CN/API 参考/数据库代理/修改独享代理设置.md)|修改RDS数据库独享代理设置。|
-|[ModifyDBProxyEndpoint](/intl.zh-CN/API 参考/数据库代理/修改独享代理地址.md)|修改RDS实例数据库独享代理的连接地址信息。|
+|[ModifyDBProxyInstance](/intl.zh-CN/API 参考/数据库代理/修改独享代理设置.md)|修改RDS数据库独享代理实例数量。|
+|[ModifyDBProxyEndpoint](/intl.zh-CN/API 参考/数据库代理/修改独享代理地址.md)|修改RDS实例数据库独享代理的连接地址配置（读写分离、事务拆分、连接池）。|
 |[DescribeDBProxy](/intl.zh-CN/API 参考/数据库代理/查询独享代理设置.md)|查询RDS实例的数据库独享代理详情。|
 |[DescribeDBProxyEndpoint](/intl.zh-CN/API 参考/数据库代理/查询独享代理地址信息.md)|查询RDS实例独享代理的连接地址信息。|
 |[DescribeDBProxyPerformance](/intl.zh-CN/API 参考/数据库代理/查询独享代理性能.md)|查询独享代理的性能数据。|
 |[CreateDBProxyEndpointAddress](/intl.zh-CN/API 参考/数据库代理/创建独享代理连接地址.md)|创建RDS实例独享代理的连接地址。|
 |[ModifyDBProxyEndpointAddress](/intl.zh-CN/API 参考/数据库代理/修改独享代理连接地址.md)|修改RDS实例独享代理的连接地址。|
 |[DeleteDBProxyEndpointAddress](/intl.zh-CN/API 参考/数据库代理/删除独享代理连接地址.md)|删除RDS实例独享代理的连接地址。|
-|[DescribeDBInstanceProxyConfiguration](/intl.zh-CN/API 参考/数据库代理/查询数据库代理设置（共享代理）.md)|查询数据库代理（共享代理）设置。|
 
 ## 安全加密
 
