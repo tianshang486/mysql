@@ -2,9 +2,15 @@
 
 您可以将RDS PostgreSQL的基础版实例升级为高可用版，获得更高可靠性。
 
-实例为PostgreSQL基础版。
+实例版本如下：
 
-**说明：** 您可以在实例的**基本信息**页面查看实例的系列。
+-   PostgreSQL 12基础版
+-   PostgreSQL 11基础版
+
+**说明：**
+
+-   PostgreSQL 10基础版暂不支持升级。
+-   您可以在实例的**基本信息**页面查看实例的系列。
 
 ![基础版信息](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3013729951/p65912.png)
 
