@@ -510,7 +510,7 @@ slow log精度提升为微秒。 |
 -   修复信号处理引起的数据库无法停止问题，详情请参见[参考文档](https://github.com/alibaba/AliSQL/wiki/Changes-in-AliSQL-5.6.32-%282017-10-10%29#1-the-ack-receiver-thread-didnt-handle-signal-correctly)。
 -   修复RESET MASTER引入的问题。
 -   修复备库陷入等待的问题。
--   修复三节点企业版版主节点切换后状态维护问题。
+-   修复三节点企业版主节点切换后状态维护问题。
 -   修复SHOW CREATE TABLE可能触发的进程崩溃问题。 |
 |20170927|Bug修复
 
