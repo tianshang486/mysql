@@ -15,7 +15,7 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |Instance management|[Create an RDS instance](/intl.en-US/RDS MySQL Database/Quick start/Create an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Change the specifications of an RDS instance](/intl.en-US/RDS MySQL Database/Instance Change/Change the specifications of an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Migrate an RDS instance across zones in the same region](/intl.en-US/RDS MySQL Database/Instance Change/Migrate an ApsaraDB RDS for MySQL instance across zones in the same region.md)|√|√|×|×|×|
-|[Switch over services between a primary RDS instance and its secondary instance](/intl.en-US/RDS MySQL Database/Instance Change/Perform a manual or automatic switchover of services between a primary ApsaraDB RDS for MySQL instance and its secondary instance.md)|×|√|√|√|×|
+|[Switch over services between a primary RDS instance and its secondary instance](/intl.en-US/RDS MySQL Database/Instance Change/Perform a manual or automatic switchover of services between a primary ApsaraDB RDS for MySQL instance and its secondary instance.md)|√|√|√|√|×|
 |[Change the data replication mode of an RDS instance](/intl.en-US/RDS MySQL Database/Instance Change/Change the data replication mode of an ApsaraDB RDS for MySQL instance.md)|×|√|×|×|×|
 |[Apply a parameter template to an RDS instance](/intl.en-US/RDS MySQL Database/Instance parameters/Use a parameter template to manage parameters.md)|√|√|√|√|√|
 |[Create a disaster recovery instance](/intl.en-US/RDS MySQL Database/Disaster recovery instances/Create a disaster recovery ApsaraDB RDS for MySQL instance.md)|√|√|√|√|×|
@@ -29,7 +29,7 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |[Reset the password of an account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Reset the password of an account on an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Modify the permissions of an account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Account permission/Modify the permissions of a standard account on an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Authorize the service account of an RDS instance](/intl.en-US/RDS MySQL Database/Account/Authorize the service account of an ApsaraDB RDS for MySQL instance.md)|√|√|×|×|×|
-|[Delete an account from an RDS instance](/intl.en-US/RDS MySQL Database/Account/Delete an account for an RDS MySQL instance.md)|√|√|√|√|√|
+|[Delete an account from an RDS instance](/intl.en-US/RDS MySQL Database/Account/Delete a standard account from an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Reset the permissions of the privileged account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Reset the permissions of the privileged account for an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |Database management|[Create a database for an RDS instance](/intl.en-US/RDS MySQL Database/Database/Create a database on an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Delete a database from an RDS instance](/intl.en-US/RDS MySQL Database/Database/Delete a database from an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
@@ -58,7 +58,7 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |[Back up an RDS instance across regions](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance across regions.md)|×|√|×|×|×|
 |Database restoration|[Restore an RDS instance](/intl.en-US/RDS MySQL Database/Restoration/Restore the data of an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Restore individual databases or tables of an RDS instance](/intl.en-US/RDS MySQL Database/Restoration/Restore individual databases and tables of an ApsaraDB RDS for MySQL instance.md)|×|√|×|×|×|
-|[Restore an RDS instance across regions](/intl.en-US/RDS MySQL Database/Restoration/Restore an ApsaraDB RDS for MySQL instance across regions.md)|×|√|×|×|×|
+|[Restore an RDS instance across regions](/intl.en-US/RDS MySQL Database/Restoration/Restore the data of an ApsaraDB RDS for MySQL instance across regions.md)|×|√|×|×|×|
 |Dedicated proxy|[Dedicated proxy](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Dedicated proxy.md)|√|√|√|√|×|
 |AliSQL|[AliSQL](/intl.en-US/Proprietary AliSQL/Features of AliSQL.md)|√|√|√|√|√|
 |Tag management|[Create tags](/intl.en-US/RDS MySQL Database/Tag/Create tags.md)|√|√|√|√|√|
@@ -78,7 +78,7 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |Instance management|[Create an RDS instance](/intl.en-US/RDS MySQL Database/Quick start/Create an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Change the specifications of an RDS instance](/intl.en-US/RDS MySQL Database/Instance Change/Change the specifications of an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Migrate an RDS instance across zones in the same region](/intl.en-US/RDS MySQL Database/Instance Change/Migrate an ApsaraDB RDS for MySQL instance across zones in the same region.md)|√|√|×|×|×|
-|[Switch over services between a primary RDS instance and its secondary instance](/intl.en-US/RDS MySQL Database/Instance Change/Perform a manual or automatic switchover of services between a primary ApsaraDB RDS for MySQL instance and its secondary instance.md)|×|√|√|√|×|
+|[Switch over services between a primary RDS instance and its secondary instance](/intl.en-US/RDS MySQL Database/Instance Change/Perform a manual or automatic switchover of services between a primary ApsaraDB RDS for MySQL instance and its secondary instance.md)|√|√|√|√|×|
 |[Change the data replication mode of an RDS instance](/intl.en-US/RDS MySQL Database/Instance Change/Change the data replication mode of an ApsaraDB RDS for MySQL instance.md)|×|√|×|×|×|
 |[Apply a parameter template to an RDS instance](/intl.en-US/RDS MySQL Database/Instance parameters/Use a parameter template to manage parameters.md)|√|√|√|√|√|
 |[Create a disaster recovery instance](/intl.en-US/RDS MySQL Database/Disaster recovery instances/Create a disaster recovery ApsaraDB RDS for MySQL instance.md)|√|√|√|√|×|
@@ -92,7 +92,7 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |[Reset the password of an account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Reset the password of an account on an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Modify the permissions of an account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Account permission/Modify the permissions of a standard account on an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Authorize the service account of an RDS instance](/intl.en-US/RDS MySQL Database/Account/Authorize the service account of an ApsaraDB RDS for MySQL instance.md)|√|√|×|×|×|
-|[Delete an account from an RDS instance](/intl.en-US/RDS MySQL Database/Account/Delete an account for an RDS MySQL instance.md)|√|√|√|√|√|
+|[Delete an account from an RDS instance](/intl.en-US/RDS MySQL Database/Account/Delete a standard account from an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Reset the permissions of the privileged account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Reset the permissions of the privileged account for an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |Database management|[Create a database for an RDS instance](/intl.en-US/RDS MySQL Database/Database/Create a database on an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Delete a database from an RDS instance](/intl.en-US/RDS MySQL Database/Database/Delete a database from an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
@@ -121,7 +121,7 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |[Back up an RDS instance across regions](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance across regions.md)|×|√|×|×|×|
 |Database restoration|[Restore an RDS instance](/intl.en-US/RDS MySQL Database/Restoration/Restore the data of an ApsaraDB RDS for MySQL instance.md)|√|√|√|√|√|
 |[Restore individual databases or tables of an RDS instance](/intl.en-US/RDS MySQL Database/Restoration/Restore individual databases and tables of an ApsaraDB RDS for MySQL instance.md)|×|√|×|×|×|
-|[Restore an RDS instance across regions](/intl.en-US/RDS MySQL Database/Restoration/Restore an ApsaraDB RDS for MySQL instance across regions.md)|×|√|×|×|×|
+|[Restore an RDS instance across regions](/intl.en-US/RDS MySQL Database/Restoration/Restore the data of an ApsaraDB RDS for MySQL instance across regions.md)|×|√|×|×|×|
 |Dedicated proxy|[Dedicated proxy](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Dedicated proxy.md)|√|√|√|√|×|
 |AliSQL|[AliSQL](/intl.en-US/Proprietary AliSQL/Features of AliSQL.md)|√|√|√|√|√|
 |Tag management|[Create tags](/intl.en-US/RDS MySQL Database/Tag/Create tags.md)|√|√|√|√|√|
@@ -154,7 +154,7 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |[Reset the password of an account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Reset the password of an account on an ApsaraDB RDS for MySQL instance.md)|√|
 |[Modify the permissions of an account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Account permission/Modify the permissions of a standard account on an ApsaraDB RDS for MySQL instance.md)|√|
 |[Authorize the service account of an RDS instance](/intl.en-US/RDS MySQL Database/Account/Authorize the service account of an ApsaraDB RDS for MySQL instance.md)|√|
-|[Delete an account from an RDS instance](/intl.en-US/RDS MySQL Database/Account/Delete an account for an RDS MySQL instance.md)|√|
+|[Delete an account from an RDS instance](/intl.en-US/RDS MySQL Database/Account/Delete a standard account from an ApsaraDB RDS for MySQL instance.md)|√|
 |[Reset the permissions of the privileged account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Reset the permissions of the privileged account for an ApsaraDB RDS for MySQL instance.md)|√|
 |Database management|[Create a database for an RDS instance](/intl.en-US/RDS MySQL Database/Database/Create a database on an ApsaraDB RDS for MySQL instance.md)|√|
 |[Delete a database from an RDS instance](/intl.en-US/RDS MySQL Database/Database/Delete a database from an ApsaraDB RDS for MySQL instance.md)|√|
@@ -183,7 +183,7 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |[Back up an RDS instance across regions](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance across regions.md)|√|
 |Database restoration|[Restore an RDS instance](/intl.en-US/RDS MySQL Database/Restoration/Restore the data of an ApsaraDB RDS for MySQL instance.md)|√|
 |[Restore individual databases or tables of an RDS instance](/intl.en-US/RDS MySQL Database/Restoration/Restore individual databases and tables of an ApsaraDB RDS for MySQL instance.md)|√|
-|[Restore an RDS instance across regions](/intl.en-US/RDS MySQL Database/Restoration/Restore an ApsaraDB RDS for MySQL instance across regions.md)|√|
+|[Restore an RDS instance across regions](/intl.en-US/RDS MySQL Database/Restoration/Restore the data of an ApsaraDB RDS for MySQL instance across regions.md)|√|
 |Dedicated proxy|[Dedicated proxy](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Dedicated proxy.md)|×|
 |AliSQL|[AliSQL](/intl.en-US/Proprietary AliSQL/Features of AliSQL.md)|√|
 |Tag management|[Create tags](/intl.en-US/RDS MySQL Database/Tag/Create tags.md)|√|
@@ -217,7 +217,7 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |[Reset the password of an account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Reset the password of an account on an ApsaraDB RDS for MySQL instance.md)|√|
 |[Modify the permissions of an account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Account permission/Modify the permissions of a standard account on an ApsaraDB RDS for MySQL instance.md)|√|
 |[Authorize the service account of an RDS instance](/intl.en-US/RDS MySQL Database/Account/Authorize the service account of an ApsaraDB RDS for MySQL instance.md)|√|
-|[Delete an account from an RDS instance](/intl.en-US/RDS MySQL Database/Account/Delete an account for an RDS MySQL instance.md)|√|
+|[Delete an account from an RDS instance](/intl.en-US/RDS MySQL Database/Account/Delete a standard account from an ApsaraDB RDS for MySQL instance.md)|√|
 |[Reset the permissions of the privileged account for an RDS instance](/intl.en-US/RDS MySQL Database/Account/Reset the permissions of the privileged account for an ApsaraDB RDS for MySQL instance.md)|√|
 |Database management|[Create a database for an RDS instance](/intl.en-US/RDS MySQL Database/Database/Create a database on an ApsaraDB RDS for MySQL instance.md)|√|
 |[Delete a database from an RDS instance](/intl.en-US/RDS MySQL Database/Database/Delete a database from an ApsaraDB RDS for MySQL instance.md)|√|
@@ -246,7 +246,7 @@ This topic provides an overview of the features supported by ApsaraDB RDS for My
 |[Back up the data of an RDS instance across regions](/intl.en-US/RDS MySQL Database/Backup/Back up an ApsaraDB RDS for MySQL instance across regions.md)|×|
 |Database restoration|[Restore an RDS instance](/intl.en-US/RDS MySQL Database/Restoration/Restore the data of an ApsaraDB RDS for MySQL instance.md)|√|
 |[Restore individual databases or tables of an RDS instance](/intl.en-US/RDS MySQL Database/Restoration/Restore individual databases and tables of an ApsaraDB RDS for MySQL instance.md)|×|
-|[Restore an RDS instance across regions](/intl.en-US/RDS MySQL Database/Restoration/Restore an ApsaraDB RDS for MySQL instance across regions.md)|×|
+|[Restore an RDS instance across regions](/intl.en-US/RDS MySQL Database/Restoration/Restore the data of an ApsaraDB RDS for MySQL instance across regions.md)|×|
 |Dedicated proxy|[Dedicated proxy](/intl.en-US/RDS MySQL Database/Database proxy(read/write splitting)/Dedicated proxy.md)|×|
 |AliSQL|[AliSQL](/intl.en-US/Proprietary AliSQL/Features of AliSQL.md)|x|
 |Tag management|[Create tags](/intl.en-US/RDS MySQL Database/Tag/Create tags.md)|√|
