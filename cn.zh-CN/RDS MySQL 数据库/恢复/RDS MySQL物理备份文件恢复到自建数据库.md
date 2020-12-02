@@ -162,9 +162,13 @@
     xtrabackup --datadir=/var/lib/mysql --copy-back --target-dir=/home/mysql/data
     ```
 
-    若系统返回如下类似结果，则说明备份文件已成功恢复到自建数据库。
+    -   若系统返回如下类似结果，则说明备份文件已成功恢复到自建数据库。
 
-    ![恢复成功](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8313729951/p47412.jpg)
+        ![恢复成功](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8313729951/p47412.jpg)
+
+    -   若系统返回如下报错，可以用`rm -rf /var/lib/mysql`命令清空文件夹内文件。
+
+        ![文件夹不为空](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8742986061/p187242.png)
 
     **说明：** 请确保您的Percona XtraBackup版本正确：
 
@@ -178,7 +182,13 @@
         vi /home/mysql/data/backup-my.cnf
         ```
 
-    2.  自建数据库不支持如下参数，需要注释掉。
+    2.  添加如下参数：
+
+        ```
+        lower_case_table_names=1
+        ```
+
+    3.  注释掉如下自建数据库不支持的参数：
 
         ```
         #innodb_log_checksum_algorithm
@@ -208,7 +218,7 @@
             alter table <表名> engine=myisam;
             ```
 
-    3.  按**Esc**键，然后输入`:wq`并回车进行保存。
+    4.  按**Esc**键，然后输入`:wq`并回车进行保存。
 15. 执行如下命令，修改文件属主，并确定文件所属为MySQL用户。
 
     ```
@@ -225,9 +235,9 @@
 
     常见错误
 
-    如果报如下错误，请在/home/mysql/data/backup-my.cnf文件中添加`lower_case_table_names=1`。
+    如果Ubuntu操作系统报如下错误，是Ubuntu自带安全程序AppArmor导致的，请使用`apt install -y apparmor-utils`和`aa-complain /usr/sbin/mysqld`命令修改AppArmor设置。
 
-    ![报错](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7719536061/p185240.png)
+    ![报错](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8742986061/p185240.png)
 
 17. 执行如下命令，登录MySQL数据库以验证进程启动成功。
 
