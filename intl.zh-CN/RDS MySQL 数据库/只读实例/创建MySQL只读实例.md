@@ -37,11 +37,19 @@
 
 ## 创建只读实例
 
-1.  在页面右侧单击**添加只读实例**。
+1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
+
+2.  在左侧单击**实例列表**，然后在上方选择实例所在地域。
+
+    ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
+
+3.  找到目标实例，单击实例ID。
+
+4.  在页面右侧单击**添加只读实例**。
 
     ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2413729951/p9361.png)
 
-2.  设置只读实例的参数。
+5.  设置只读实例的参数。
 
     |参数|说明|
     |--|--|
@@ -56,7 +64,7 @@
     -   部分本地SSD盘的存储空间大小与实例规格绑定，ESSD/SSD云盘不受此限制。详情请参见[主实例规格列表](/intl.zh-CN/云数据库 RDS 简介/产品规格/主实例规格列表.md)。
     -   如果存储类型为云盘，默认会勾选**存储空间自动扩展**，当存储空间过小时，会自动扩展存储空间，避免实例锁定。 |
 
-3.  单击**下一步：实例配置**，设置如下参数。
+6.  单击**下一步：实例配置**，设置如下参数。
 
     |参数|说明|
     |--|--|
@@ -64,9 +72,9 @@
     -   **专有网络**（推荐）：也称为VPC（Virtual Private Cloud）。VPC是一种隔离的网络环境，安全性和性能均高于传统的经典网络。选择专有网络时您需要选择对应的**VPC**和**主节点交换机**。
 **说明：** 请确保RDS实例与需要连接的ECS实例网络类型一致（如果选择专有网络，还需要保证VPC一致），否则它们无法通过内网互通。 |
 
-4.  单击**下一步：确认订单**。
+7.  单击**下一步：确认订单**。
 
-5.  勾选服务协议，单击**去支付**，根据提示完成支付。
+8.  勾选服务协议，单击**去支付**，根据提示完成支付。
 
     **说明：** 如果您的实例支持开通[数据库独享代理](/intl.zh-CN/RDS MySQL 数据库/数据库代理（读写分离）/数据库独享代理.md)（付费服务），您可以额外勾选**代理服务**，可以在创建只读实例的同时开通独享代理。
 
@@ -75,18 +83,30 @@
 
 在实例列表中查看只读实例
 
-1.  在实例列表中找到只读实例，单击该只读实例的ID。
+1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
+
+2.  在左侧单击**实例列表**，然后在上方选择实例所在地域。
+
+    ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
+
+3.  在实例列表中找到只读实例，单击该只读实例的ID。
 
     ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3413729951/p2617.png)
 
 
 在主实例的基本信息页面查看只读实例
 
-1.  在实例列表中找到主实例，单击该主实例的ID。
+1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
+
+2.  在左侧单击**实例列表**，然后在上方选择实例所在地域。
+
+    ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
+
+3.  在实例列表中找到主实例，单击该主实例的ID。
 
     ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3413729951/p32584.png)
 
-2.  在主实例的**基本信息**页面，将鼠标悬停于只读实例的数量上，单击只读实例的ID。
+4.  在主实例的**基本信息**页面，将鼠标悬停于只读实例的数量上，单击只读实例的ID。
 
     ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3413729951/p9379.png)
 
