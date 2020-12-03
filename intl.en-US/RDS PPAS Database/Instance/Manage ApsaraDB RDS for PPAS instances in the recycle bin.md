@@ -1,6 +1,6 @@
 # Manage ApsaraDB RDS for PPAS instances in the recycle bin
 
-This topic describes how to manage expired and overdue ApsaraDB RDS for PPAS instances in the recycle bin. You can unlock or destroy these instances in the recycle bin.
+This topic describes how to manage expired and overdue ApsaraDB RDS for PPAS instances in the recycle bin. You can unlockor destroy these instances in the recycle bin.
 
 ## Unlock an overdue RDS instance
 
@@ -13,7 +13,7 @@ If a subscription RDS instance is locked due to expiration, you can go to the re
 1.  Log on to the [recycle bin](https://rdsnext.console.aliyun.com/#/rdsList/cn-hangzhou/recyclelist/lock).
 2.  In the top navigation bar, select the region where the RDS instance resides.
 
-    ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
+    ![Select a region](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
 3.  Find the RDS instance and click **Unlock**.
 
@@ -27,7 +27,7 @@ After a subscription RDS instance expires, it will be retained for a specified p
 1.  Log on to the [recycle bin](https://rdsnext.console.aliyun.com/#/rdsList/cn-hangzhou/recyclelist/lock).
 2.  In the top navigation bar, select the region where the RDS instance resides.
 
-    ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
+    ![Select a region](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
 3.  Find the RDS instance and click **Recreate Instance**.
 
@@ -45,7 +45,7 @@ Procedure
 1.  Log on to the [recycle bin](https://rdsnext.console.aliyun.com/#/rdsList/cn-hangzhou/recyclelist/lock).
 2.  In the top navigation bar, select the region where the RDS instance resides.
 
-    ![Select a region](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
+    ![Select a region](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/8651559951/p36543.png)
 
 3.  Find the RDS instance and click **Destroy**.
 
