@@ -13,24 +13,25 @@
 -   只能在主实例内创建只读实例，不能将已有实例切换为只读实例。
 -   由于创建只读实例时是从备实例复制数据，因此不会影响主实例。
 -   最多创建7个只读实例。
--   计费方式为按量付费，即每小时扣费一次，费用取决于扣费时的只读实例规格。具体费用请参见[详细价格信息](/cn.zh-CN/RDS SQL Server 数据库/快速入门/只读实例/SQL Server只读实例简介.md)。
 
 ## 创建只读实例
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  在页面左上角，选择实例所在地域。
 
-    ![选择地域](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
+    ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
 
 3.  找到目标实例，单击实例ID。
 4.  在页面右侧单击**添加只读实例**。
 
-    ![添加只读实例](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4851760061/p168763.png)
+    ![添加只读实例](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4851760061/p168763.png)
 
 5.  设置以下参数，单击**下一步：实例配置**。
 
     |类别|说明|
     |--|--|
+    |**计费方式**|    -   **包年包月**：属于预付费，即在新建实例时需要支付费用。适合长期需求，价格比按量付费更实惠，且购买时长越长，折扣越多。
+    -   **按量付费**：属于后付费，即按小时扣费。适合短期需求，用完可立即释放实例，节省费用。 |
     |**存储类型**|    -   **SSD云盘**：基于分布式存储架构的弹性块存储设备。将数据存储于SSD云盘，即实现了计算与存储分离。
     -   **ESSD云盘**：增强型（Enhanced）SSD云盘，是阿里云全新推出的超高性能云盘产品。ESSD云盘基于新一代分布式块存储架构，结合25GE网络和RDMA技术，为您提供单盘高达100万的随机读写能力和更低的单路时延。ESSD云盘分为如下三类：
         -   ESSD云盘：PL1性能级别的ESSD云盘。
@@ -64,25 +65,25 @@
     1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
     2.  选择只读实例所在地域。
 
-        ![选择地域](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
+        ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
 
     3.  在实例列表中找到只读实例，单击该只读实例的ID。
 
-        ![只读实例](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8603729951/p39852.png)
+        ![只读实例](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8603729951/p39852.png)
 
 -   在主实例的基本信息页面查看只读实例
     1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
     2.  选择主实例所在地域。
 
-        ![选择地域](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
+        ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
 
     3.  在实例列表中找到主实例，单击该主实例的ID。
 
-        ![主实例](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8603729951/p39853.png)
+        ![主实例](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8603729951/p39853.png)
 
     4.  在主实例的**基本信息**页面，把鼠标悬停于只读实例的数量上，单击只读实例的ID。
 
-        ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3413729951/p9379.png)
+        ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3413729951/p9379.png)
 
 
 ## 在集群管理页面查看只读实例
@@ -91,25 +92,25 @@
 
 已在集群管理页面[开通读写分离]()。
 
-![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9603729951/p32588.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9603729951/p32588.png)
 
 1.  登录[RDS管理控制台](https://rds.console.aliyun.com/)。
 2.  选择主实例所在地域。
 
-    ![选择地域](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
+    ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
 
 3.  在实例列表中找到主实例，单击该主实例的ID。
 4.  在左侧导航栏中，单击**集群管理**。
 5.  找到只读实例，单击该只读实例的ID。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8603729951/p32587.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8603729951/p32587.png)
 
 
 ## 查看只读实例的延迟时间
 
 只读实例同步主实例的数据时，可能会有一定的延迟。您可以在只读实例的基本信息页面查看延迟时间。
 
-![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3413729951/p2636.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3413729951/p2636.png)
 
 ## 相关API
 
