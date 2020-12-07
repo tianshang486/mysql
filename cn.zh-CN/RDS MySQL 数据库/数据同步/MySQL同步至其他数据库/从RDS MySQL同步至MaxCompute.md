@@ -65,13 +65,13 @@
 
 4.  在同步作业列表页面顶部，选择同步的目标实例所属地域。
 
-    ![选择地域](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7349459951/p50604.png)
+    ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7349459951/p50604.png)
 
 5.  定位至已购买的数据同步实例，单击**配置同步链路**。
 
 6.  配置同步通道的源实例及目标实例信息。
 
-    ![配置源和目标实例信息](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9620649951/p55482.png)
+    ![配置源和目标实例信息](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9620649951/p55482.png)
 
     |类别|配置|说明|
     |:-|:-|:-|
@@ -84,7 +84,7 @@
     |连接方式|根据需求选择**非加密连接**或**SSL安全连接**。如果设置为**SSL安全连接**，您需要提前开启RDS实例的SSL加密功能，详情请参见[设置SSL加密](https://help.aliyun.com/document_detail/96120.html)。|
     |目标实例信息|实例类型|固定为**MaxCompute**，不可变更。|
     |实例地区|购买数据同步实例时选择的目标实例地域信息，不可变更。|
-    |Project|填入MaxCompute实例的**Project**，您可以在[MaxCompute工作空间列表](https://workbench.data.aliyun.com/consolenew#/projectlist)页面中查询。![MaxCompute工作空间列表](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9620649951/p55484.png) |
+    |Project|填入MaxCompute实例的**Project**，您可以在[MaxCompute工作空间列表](https://workbench.data.aliyun.com/consolenew#/projectlist)页面中查询。![MaxCompute工作空间列表](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9620649951/p55484.png) |
 
 7.  单击页面右下角的**授权白名单并进入下一步**。
 
@@ -92,11 +92,11 @@
 
 8.  单击页面右下角的**下一步**，允许将MaxCompute中项目的下述权限授予给DTS同步账号，详情如下图所示。
 
-    ![账号授权](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9620649951/p55487.png)
+    ![账号授权](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9620649951/p55487.png)
 
 9.  配置同步策略和同步对象。
 
-    ![配置同步策略和对象](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0720649951/p65864.png)
+    ![配置同步策略和对象](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0720649951/p65864.png)
 
     |配置|说明|
     |:-|:-|
@@ -114,7 +114,7 @@
 
         -   表结构一致的情况下，如果在目标库遇到与源库主键的值相同的记录，在初始化阶段会保留目标库中的该条记录；在增量同步阶段则会覆盖目标库的该条记录。
         -   表结构不一致的情况下，可能会导致无法初始化数据、只能同步部分列的数据或同步失败。 |
-    |选择同步对象|在源库对象框中单击待同步的表，然后单击![向右小箭头](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8502659951/p40698.png)将其移动至已选择对象框。
+    |选择同步对象|在源库对象框中单击待同步的表，然后单击![向右小箭头](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8502659951/p40698.png)将其移动至已选择对象框。
 
 **说明：**
 
@@ -127,21 +127,21 @@
     **说明：**
 
     -   在数据同步作业正式启动之前，会先进行预检查。只有预检查通过后，才能成功启动数据同步作业。
-    -   如果预检查失败，单击具体检查项后的![提示](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8502659951/p47468.png)图标，查看失败详情。根据提示修复后，重新进行预检查。
+    -   如果预检查失败，单击具体检查项后的![提示](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8502659951/p47468.png)图标，查看失败详情。根据提示修复后，重新进行预检查。
 11. 在预检查对话框中显示**预检查通过**后，关闭预检查对话框，同步作业将正式开始。
 
 12. 等待同步作业的链路初始化完成，直至处于**同步中**状态。
 
     您可以在数据同步页面，查看数据同步作业的状态。
 
-    ![查看同步作业状态](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1349459951/p41059.png)
+    ![查看同步作业状态](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1349459951/p41059.png)
 
 
 ## 增量日志表结构定义说明
 
 DTS在将MySQL产生的增量数据同步至MaxCompute的增量日志表时，除了存储增量数据，还会存储一些元信息，示例如下。
 
-![增量日志表结构](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0720649951/p55989.png)
+![增量日志表结构](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0720649951/p55989.png)
 
 **说明：** 示例中的`modifytime_year`、`modifytime_month`、`modifytime_day`、`modifytime_hour`、`modifytime_minute`为分区字段，是在[配置同步策略和同步对象](#step_pze_gpg_5gx)步骤中指定的。
 
@@ -149,9 +149,9 @@ DTS在将MySQL产生的增量数据同步至MaxCompute的增量日志表时，�
 
 |字段|说明|
 |:-|:-|
-|record\_id|增量日志的记录id，为该日志唯一标识。 **说明：**
+|record\_id|增量日志的记录ID，为该日志唯一标识。 **说明：**
 
--   id的值唯一且递增。
+-   ID的值唯一且递增。
 -   如果增量日志的操作类型为UPDATE，那么增量更新会被拆分成两条记录（分别记录更新前和更新后的值），且record\_id的值相同。 |
 |operation\_flag|操作类型，取值： -   I：INSERT操作。
 -   D：DELETE操作。
@@ -168,7 +168,7 @@ DTS在将MySQL产生的增量数据同步至MaxCompute的增量日志表时，�
 
     当操作类型为INSERT时，所有列的值为新插入的记录值，即为更新后的值，所以before\_flag取值为N，after\_flag取值为Y，示例如下。
 
-    ![INSERT操作示例](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0720649951/p55992.png)
+    ![INSERT操作示例](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0720649951/p55992.png)
 
 -   UPDATE
 
@@ -176,13 +176,13 @@ DTS在将MySQL产生的增量数据同步至MaxCompute的增量日志表时，�
 
     第一条增量日志记录了更新前的值，所以before\_flag取值为Y，after\_flag取值为N。第二条增量日志记录了更新后的值，所以before\_flag取值为N，after\_flag取值为Y，示例如下。
 
-    ![UPDATE操作示例](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0720649951/p55993.png)
+    ![UPDATE操作示例](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0720649951/p55993.png)
 
 -   DELETE
 
     当操作类型为DELETE时，增量日志中所有的列值为被删除的值，即列值不变，所以before\_flag取值为Y，after\_flag取值为N，示例如下。
 
-    ![DELETE操作示例](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0720649951/p55994.png)
+    ![DELETE操作示例](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0720649951/p55994.png)
 
 
 ## 全量数据合并示例
@@ -191,7 +191,7 @@ DTS在将MySQL产生的增量数据同步至MaxCompute的增量日志表时，�
 
 本案例以customer表为例（表结构如下），介绍操作流程。
 
-![customer表结构](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0720649951/p56270.png)
+![customer表结构](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0720649951/p56270.png)
 
 1.  根据源库中待同步表的结构，在MaxCompute中创建用于存储合并结果的表。
 
@@ -262,6 +262,6 @@ DTS在将MySQL产生的增量数据同步至MaxCompute的增量日志表时，�
 
 3.  上述命令执行完成后，可在customer\_1565944878表中查询合并后的数据。
 
-    ![查询merge后的数据](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0720649951/p56256.png)
+    ![查询merge后的数据](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0720649951/p56256.png)
 
 
