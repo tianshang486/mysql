@@ -32,7 +32,7 @@ SSL是Netscape公司所提出的安全保密协议，在浏览器和Web服务器
 
 2.  在左侧单击**实例列表**，然后在上方选择实例所在地域。
 
-    ![选择地域](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
+    ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
 
 3.  找到目标实例，单击实例ID。
 
@@ -42,17 +42,15 @@ SSL是Netscape公司所提出的安全保密协议，在浏览器和Web服务器
 
 6.  单击**未开通**前面的滑块开关。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6249259951/p4147.png)
-
 7.  在弹出的对话框中选择要开通SSL加密的地址，单击**确定**，开通SSL加密。
 
     **说明：** 用户可以根据需要，选择加密内网链路或者外网链路，但只可以加密一条链路。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6249259951/p4148.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6249259951/p4148.png)
 
 8.  单击**下载证书**，下载SSL CA证书。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6249259951/p4149.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9236037061/p4149.png)
 
     下载的文件为压缩包，包含如下三个文件：
 
@@ -86,7 +84,7 @@ MySQL Workbench配置方法
 
 3.  启用**Use SSL**，并导入SSL CA证书。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7140359951/p4150.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7140359951/p4150.png)
 
 
 Navicat配置方法
@@ -95,11 +93,11 @@ Navicat配置方法
 
 2.  在目标数据库上单击鼠标右键，选择**编辑连接**。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7140359951/p52885.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7140359951/p52885.png)
 
 3.  选择**SSL**页签，选择.pem格式CA证书的路径。参照下图进行设置。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7140359951/p52887.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7140359951/p52887.png)
 
 4.  单击**确定**。
 
@@ -107,7 +105,7 @@ Navicat配置方法
 
 5.  双击目标数据库测试能否正常连接。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7140359951/p52889.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7140359951/p52889.png)
 
 
 ## 更新证书有效期
@@ -117,7 +115,7 @@ Navicat配置方法
 -   **更新有效期**操作将会重启实例，重启前请做好业务安排，谨慎操作。
 -   **更新有效期**后需要重新下载及配置CA证书。
 
-![更新证书有效期](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7249259951/p45367.png)
+![更新证书有效期](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0336037061/p45367.png)
 
 ## 关闭SSL加密
 
@@ -130,7 +128,7 @@ Navicat配置方法
 
 2.  在左侧单击**实例列表**，然后在上方选择实例所在地域。
 
-    ![选择地域](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
+    ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
 
 3.  找到目标实例，单击实例ID。
 
@@ -139,8 +137,6 @@ Navicat配置方法
 5.  选择**SSL**标签页。
 
 6.  单击**已开通**前面的开关，在弹出的提示框中单击**确定**。
-
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7249259951/p57405.png)
 
 
 ## 常见问题
