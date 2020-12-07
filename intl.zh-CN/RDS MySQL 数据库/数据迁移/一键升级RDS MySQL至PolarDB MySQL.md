@@ -11,7 +11,7 @@ PolarDB支持将RDS MySQL一键升级至PolarDB MySQL，升级后PolarDB集群�
 -   源RDS实例的表存储引擎为InnoDB。
 -   如果RDS处于高安全模式（数据库代理模式），需要创建有高权限账号（请参见[创建高权限账号](/intl.zh-CN/RDS MySQL 数据库/快速入门/创建数据库和账号.md)），或者切换到高性能模式（参见[【重要】RDS网络链路升级说明](/intl.zh-CN/活动与通知/【重要】RDS网络链路升级说明.md)），才能进行一键升级。
 
-    ![查看数据库模式](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/8003729951/p54653.png)
+    ![查看数据库模式](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8003729951/p54653.png)
 
 
 PolarDB是阿里云自研的下一代关系型云数据库，主要优势如下：
@@ -96,7 +96,7 @@ PolarDB是阿里云自研的下一代关系型云数据库，主要优势如下�
     |**删除（释放）集群时**|设置删除（释放）集群时的备份保留策略，默认**保留最后一个备份（释放前自动备份）**。    -   **保留最后一个备份（释放前自动备份）**：删除集群时保留最后一个备份。
     -   **保留全部备份**：删除集群时保留所有备份。
     -   **不保留备份（释放后无法恢复）**：删除集群时不保留任何备份。
-**说明：** 删除（释放）集群时保留备份可能会产生少量费用，您可以随时删除备份来节省成本，详情请参见[数据备份价格](/intl.zh-CN/产品定价/规格与定价.mdsection_ryg_gsw_hmu)。 |
+**说明：** 删除（释放）集群时保留备份可能会产生少量费用，您可以随时删除备份来节省成本，详情请参见[数据备份价格（超出免费额度时）](/intl.zh-CN/产品定价/规格与定价.mdsection_ryg_gsw_hmu)。 |
     |**集群名称**|    -   集群名称长度为2~128个字符，以大小写字母或中文开头，可包含数字、英文句号（.）、下划线（\_）或短划线（-）。
     -   如果留空，系统将为您自动生成一个集群名称。创建集群后还可以修改集群名称。 |
     |**资源组**|从已[创建资源组]()中选择一个目标资源组。**说明：** 资源组是在单个云账号下将一组相关资源进行统一管理的容器，一个资源只能归属于一个资源组，详情请参见[RAM资源分组与授权](/intl.zh-CN/教程/RAM资源分组与授权.md)。 |
@@ -121,7 +121,7 @@ PolarDB是阿里云自研的下一代关系型云数据库，主要优势如下�
 -   已完成[步骤一：从RDS迁移](#section_s4t_zsn_13b)的操作。
 -   **复制延迟**小于60秒。
 
-    ![基本信息](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6003729951/p51400.png)
+    ![基本信息](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6003729951/p51400.png)
 
 
 1.  进入[PolarDB控制台](https://polardb.console.aliyun.com)。
@@ -130,7 +130,7 @@ PolarDB是阿里云自研的下一代关系型云数据库，主要优势如下�
 
 3.  在**基本信息**页面单击**迁移切换**，在弹出的对话框中单击**确定**。
 
-    ![迁移切换](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6003729951/p51031.png)
+    ![迁移切换](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6003729951/p51031.png)
 
     **说明：** 切换过程一般小于5分钟。
 
@@ -138,13 +138,13 @@ PolarDB是阿里云自研的下一代关系型云数据库，主要优势如下�
 
 4.  在**开始切换**对话框中，选择**带地址切换（应用程序不用改连接配置）**或**不带地址切换（应用程序需要改为新的PolarDB连接配置）**。
 
-    ![开始切换](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6003729951/p120880.png)
+    ![开始切换](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6003729951/p120880.png)
 
     若您选择**带地址切换（应用程序不用改连接配置）**，操作步骤如下：
 
     1.  选中**带地址切换（应用程序不用改连接配置）**，系统会自动交换RDS和PolarDB上的连接地址，您无需在应用程序端修改任何配置即可自动连接到PolarDB。选择该切换方式后，RDS连接地址对应的PolarDB连接地址如下图所示。
 
-        ![地址交换规则](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6003729951/p120873.png)
+        ![地址交换规则](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6003729951/p120873.png)
 
         **说明：**
 
@@ -166,7 +166,7 @@ PolarDB是阿里云自研的下一代关系型云数据库，主要优势如下�
 
     3.  刷新页面，当**PolarDB读写状态**显示为**读写**后，尽快修改应用里的数据库连接地址。
 
-        ![刷新](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6003729951/p51038.png)
+        ![刷新](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6003729951/p51038.png)
 
         **说明：** 迁移切换完成后，如果您发现数据存在异常等问题，可以进行回滚操作，快速恢复至迁移前的状态也可以选择[迁移回滚](#section_hw4_hy4_13b)。
 
@@ -183,9 +183,9 @@ PolarDB是阿里云自研的下一代关系型云数据库，主要优势如下�
 
 3.  在**基本信息**页面，单击**完成迁移**，在弹出的对话框中单击**确定**。
 
-    ![完成迁移](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6003729951/p48987.png)
+    ![完成迁移](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6003729951/p48987.png)
 
-    ![完成迁移确定](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7003729951/p51039.png)
+    ![完成迁移确定](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7003729951/p51039.png)
 
     **说明：**
 
@@ -203,11 +203,11 @@ PolarDB是阿里云自研的下一代关系型云数据库，主要优势如下�
 
 3.  在**基本信息**页面单击**迁移回滚**。
 
-    ![迁移回滚](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7003729951/p48988.png)
+    ![迁移回滚](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7003729951/p48988.png)
 
 4.  在**开始回切**对话框中，选择**带地址回切（应用程序不用改连接配置）**或**不带地址回切（应用程序需要改为原RDS连接配置）**。
 
-    ![1](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/7003729951/p131920.png)
+    ![1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7003729951/p131920.png)
 
     若您选择**带地址回切（应用程序不用改连接配置）**，操作步骤如下：
 
