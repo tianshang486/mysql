@@ -21,7 +21,9 @@
 
 **说明：** 您可以在实例的基本信息页面查看实例的系列。
 
-![基础版信息](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3013729951/p65912.png)
+![基础版信息](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3013729951/p65912.png)
+
+![实例系列新](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8515317061/p188498.png)
 
 ## 操作步骤
 
@@ -29,17 +31,15 @@
 
 2.  在左侧单击**实例列表**，然后在上方选择实例所在地域。
 
-    ![选择地域](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
+    ![选择地域](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3074469951/p36543.png)
 
 3.  找到目标实例，单击实例ID。
 
-4.  在**基本信息**页面，单击**变更配置**。
-
-    ![基础版变更配置](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4013729951/p65913.png)
+4.  在**配置信息**区域单击**变更配置**。
 
 5.  （仅包年包月实例需要执行此步骤）在弹出的对话框中，选择**立即升级配置**，单击**下一步**。
 
-    ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/4013729951/p65915.png)
+    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8757626061/p65915.png)
 
 6.  设置如下参数。
 
