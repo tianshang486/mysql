@@ -19,10 +19,6 @@
 
 1.  进入[RDS实例创建](https://rds-buy.aliyun.com/nextBuy/?#/create/rds/mysql)页面。
 
-    **说明：** 您也可以在当前创建RDS实例页面上方单击**返回旧版**切换到旧版创建RDS实例页面。
-
-    ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6867559951/p60573.png)
-
 2.  设置以下参数。
 
     |类别|说明|
