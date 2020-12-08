@@ -49,7 +49,7 @@
 
 4.  设置如下参数，单击**立即购买**。
 
-    ![创建迁移任务界面](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/5132269951/p162855.png)
+    ![创建迁移任务界面](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5132269951/p162855.png)
 
     |配置项|说明|
     |---|--|
@@ -67,11 +67,11 @@
 
 3.  单击目标迁移任务右侧**操作**列下的**配置备份计划**。
 
-    ![配置迁移任务按钮](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/5132269951/p162928.png)
+    ![配置迁移任务按钮](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5132269951/p162928.png)
 
 4.  在**配置备份源和目标**页面，配置相关信息并单击**下一步**。
 
-    ![配置迁移任务](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2819420061/p162946.png)
+    ![配置迁移任务](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2819420061/p162946.png)
 
     |类别|配置|说明|
     |--|--|--|
@@ -115,26 +115,26 @@
 
 9.  在预检查对话框中显示预检查通过后，单击**立即启动**。
 
-    ![SQLserver预检查](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/5132269951/p163728.png)
+    ![SQLserver预检查](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5132269951/p163728.png)
 
 
 ## 开启迁移
 
 1.  开启迁移任务后，系统会自动创建RDS SQL Server实例并进行全量迁移，请耐心等待。
 
-    ![开启迁移任务1](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/5132269951/p163779.png)
+    ![开启迁移任务1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5132269951/p163779.png)
 
 2.  全量迁移完成后，系统会进入增量持续迁移阶段，您可以看到**增量日志迁移进度**在不断地推进。
 
     **说明：** 此时，RDS SQL Server实例为`restoring`状态，不可读写，且其中的数据为上一次增量备份后的数据。
 
-    ![开启迁移任务2](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/5132269951/p163781.png)
+    ![开启迁移任务2](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5132269951/p163781.png)
 
 3.  当您确认可以将业务切换至RDS时，请将线下数据库改为只读状态并记录时刻T0，然后待增量日志迁移进度超过T0时刻后，单击**完成迁移上云**按钮，并等待迁移任务变成**完成**状态。
 
     **说明：** 在单击**完成迁移上云**按钮后，RDS SQL Server实例为`online`状态，即可正常读写。
 
-    ![开启迁移任务3](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6132269951/p163792.png)
+    ![开启迁移任务3](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6132269951/p163792.png)
 
 
 您可以在[RDS管理控制台](https://rds.console.aliyun.com/)中查看新创建的实例。
