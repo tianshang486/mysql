@@ -32,6 +32,8 @@
 
     -   请确保登录的数据库账号拥有目标数据库的权限，否则在左侧菜单里看不到目标数据库。修改数据库账号权限请参见[修改账号权限](/cn.zh-CN/RDS MySQL 数据库/账号/账号权限/修改账号权限.md)。
     -   关于如何创建账号，请参见[创建数据库和账号](/cn.zh-CN/RDS MySQL 数据库/快速入门/创建数据库和账号.md)。
+    ![账号密码](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/7781057061/p190424.png)
+
     ![登录数据库](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6122613061/p174718.png)
 
 7.  登录后请刷新页面，然后在左侧**已登录实例**菜单双击目标数据库，即可切换到目标数据库。
