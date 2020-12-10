@@ -92,10 +92,10 @@ The [Ganos](/intl.en-US/Spatio-temporal Database/Overview.md) plug-in is upgrade
 
 -   Bug fixed:
 
-The bug that causes the PASE plug-in to slowly execute INSERT statements on HNSW indexes is fixed. |
+The bug that causes the PASE plug-in to slowly run INSERT statements on HNSW indexes is fixed. |
 |20200421|New features:
 
--   The failover slot feature is supported. For more information, see [Use the failover slot feature for logical subscriptions](/intl.en-US/Proprietary AliPG/Use the failover slot feature for logical subscriptions.md).
+-   The failover slot function is supported. For more information, see [Use the failover slot feature for logical subscriptions](/intl.en-US/Proprietary AliPG/Use the failover slot feature for logical subscriptions.md).
 -   The [PL/Proxy](/intl.en-US/Proprietary AliPG/Use the PL/Proxy plug-in for horizontal sharding.md) plug-in of version 2.9.0 is supported.
 -   The tsm\_system\_rows plug-in of version 1.0 is supported.
 -   The tsm\_system\_time plug-in of version 1.0 is supported.
@@ -157,6 +157,11 @@ The bug that causes a long wait for streaming replication is fixed. |
 
 |Minor version|Description|
 |-------------|-----------|
+|20201130|Bugs fixed:
+
+-   The CVE-2020-25694 vulnerability is fixed. This vulnerability may cause ApsaraDB RDS to lose security parameters when RDS instances are switched over to other connections. If security parameters are lost, RDS instances may be attacked.
+-   The CVE-2020-25695 vulnerability is fixed. This vulnerability allows you to create permanent objects and to invoke all SQL functions as a super user.
+-   The CVE-2020-25696 vulnerability is fixed. This vulnerability allows the gset command to overwrite variables that are processed based on specified conditions. |
 |20200623|-   New features:
     -   The [wal2json](/intl.en-US/Proprietary AliPG/Use the wal2json plug-in.md) plug-in is upgraded to version 2.2.
     -   The xml2 plug-in of version 1.0 is supported.
