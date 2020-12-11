@@ -24,7 +24,7 @@ Most of the traditional remote backup solutions compress the backup files that a
 
 ## Technical architecture
 
-![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/0984884061/p58448.png)
+![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0984884061/p58448.png)
 
 ## Precautions
 
@@ -35,22 +35,22 @@ Most of the traditional remote backup solutions compress the backup files that a
 
 ## Procedure
 
-1.  Use DBS to configure a backup schedule that is used to backup databases from the source RDS instance.
+1.  Configure a backup schedule that is used to back up databases from the source RDS instance on DBS.
 
     1.  Log on to the [DBS console](https://dbs.console.aliyun.com/#/home/).
     2.  In the left-side navigation pane, click **Backup Schedules**.
     3.  In the top navigation bar, select the region where the backup schedule resides.
     4.  Find the backup schedule and in the Actions column click **Configure Backup Schedule**.
 
-        ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/0675564061/p58470.png)
+        ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0675564061/p58470.png)
 
     5.  Configure the Schedule Name parameter and the other parameters in the **Backup Source Information** and **Backup Destination Information** sections.
 
-        ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/0675564061/p58472.png)
+        ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/0675564061/p58472.png)
 
         |Category|Parameter|Description|
         |--------|---------|-----------|
-        |Schedule Name|-|        -   DTS generates a name for each backup schedule. You do not need to specify a unique name.
+        |Schedule Name|-|        -   DBS generates a name for each backup schedule. You do not need to specify a unique name.
         -   You can modify the name of the backup schedule based on your business requirements. We recommend that you specify an informative name that helps identify the backup schedule. |
         |Backup Source Information|Backup Mode|The type of backup that you want to perform. Default value: Logical Backup.|
         |Database Location|The location of the databases that you want to back up. Select **RDS Instance**.|
@@ -74,20 +74,20 @@ Most of the traditional remote backup solutions compress the backup files that a
         **Note:** For more information about how to configure the parameters in the Configure Backup Time and Edit Lifecycle steps, see [Configure a backup schedule](~~59609~~).
 
     10. After the backup task passes the precheck, click **Start Task**.
-    11. Wait until the backup is completed.
+    11. Wait until the backup is complete.
 2.  Configure the root account, endpoint, and OSS access permissions on DLA.
 
     -   For more information about how to configure an endpoint, see [Create endpoints](~~107696~~).
     -   To configure OSS access permissions, perform the following steps:
 
-        **Note:** If OSS access permissions are configured, you can skip these steps.
+        **Note:** If OSS access permissions have been configured, you can skip these steps.
 
         1.  Log on to the [DLA console](https://datalakeanalytics.console.aliyun.com/overview).
         2.  In the left-side navigation pane, choose **Data Lake Management** \> **Metadata management**.
         3.  Click **Create Schema**.
         4.  In the OSS section, click **Create By Wizard**.
         5.  On the Cloud Resource Access Authorization page, click **Confirm Authorization Policy**.
-3.  Create a schema.
+3.  Create a schema on DBS.
 
     1.  Log on to the [DBS console](https://dbs.console.aliyun.com/#/home/).
     2.  In the left-side navigation pane, click **Backup Schedules**.
@@ -97,19 +97,18 @@ Most of the traditional remote backup solutions compress the backup files that a
 
         **Note:** After you click **OK**, DLA creates a schema for the backup set.
 
-        ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/en-US/1675564061/p58495.png)
+        ![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1675564061/p58495.png)
 
 4.  Query full backup data from DBS.
 
     1.  Log on to the [DLA console](https://datalakeanalytics.console.aliyun.com/overview).
-    2.  In the left-side navigation pane, choose Serverless SQL \> **SQL access point**.
-    3.  In the Public network section of the SQL access point page, click **Log on in DMS**.
-    4.  In the Login instance dialog box, enter the information that is used to log on to the source RDS instance, and then click **Login**.
+    2.  In the left-side navigation pane, choose **Serverless SQL** \> **SQL access point**.
+    3.  On the **SQL access point** page, click **Log on in DMS**.
+    4.  In the Login instance dialog box, enter the information that is used to log on to the source RDS instance and click **Login**.
 
-        **Note:** DMS automatically specifies the **Instance Area**, **Connection string address**, and **Database account** parameters. You must confirm the parameter settings and then enter the password of the specified account.
+        **Note:** DMS automatically specifies the **Database type**, **Instance Area**, and **Connection string address**. You must confirm the parameter settings and enter the username and password of the specified account.
 
-    5.  Log on to the source RDS instance by using DMS. For more information, see [Use DMS to log on to an ApsaraDB RDS for MySQL instance](/intl.en-US/RDS MySQL Database/Database connection/Use DMS to log on to an ApsaraDB RDS for MySQL instance.md).
-    6.  Execute the following SQL statements on both DLA and the source RDS instance to check whether the data volume on DLA is consistent with the data volume on the source RDS instance:
+    5.  Execute the following SQL statements on both DLA and the source RDS instance to check whether the data volume on DLA is consistent with the data volume on the source RDS instance:
 
         ```
         select 'bill' as tableName ,count(id) as countNumber from `bill`
@@ -117,7 +116,11 @@ Most of the traditional remote backup solutions compress the backup files that a
         select 'dim_code_desc' as tableName ,count(id) as countNumber from `dim_code_desc` ;
         ```
 
-    7.  Execute the following SQL statement on DLA to run a multi-table join query:
+        ![](../images/p58506.png "Data volume on the source RDS instance")
+
+        ![](../images/p58507.png "Data volume on DLA")
+
+    6.  Execute the following SQL statement on DLA to run a multi-table join query:
 
         ```
         select  t.* from dim_code_desc   as t1,  BILL t
@@ -125,10 +128,14 @@ Most of the traditional remote backup solutions compress the backup files that a
         and t1.code_id like '9%';
         ```
 
+        ![](../images/p58508.png "Multi-table join query on DLA")
+
         Run a multi-table join query on the source RDS instance. Then, compare the query results that you obtain from DLA and the source RDS instance.
+
+        ![](../images/p58509.png "Multi-table join query on the source RDS instance")
 
         Verify that the query result on DLA is consistent with that on the source RDS instance.
 
-        If you use a traditional remote backup solution, Alibaba Cloud needs to clone an RDS instance by using the full backup data of the source RDS instance and configure an IP address whitelist. In this case, a query requires about 1 hour, and the query process is more complicated. The remote backup solution in this topic relieves the need to restore data. In addition, this solution allows you to check for and recover a small amount of data that is accidentally deleted.
+        If you use a traditional remote backup solution, Alibaba Cloud needs to clone an RDS instance by using the full backup data of the source RDS instance and configure an IP address whitelist. In this case, a query requires about 1 hour, and the query process is more complicated. The remote backup solution in this topic relieves the need to restore data. In addition, this solution allows you to check for and recover a small volume of data that is accidentally deleted.
 
 
