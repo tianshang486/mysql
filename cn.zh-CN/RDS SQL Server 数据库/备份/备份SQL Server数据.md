@@ -85,7 +85,7 @@
 
     ![单库备份](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1013729951/p40346.png)
 
-6.  在右上角**任务进度**列表查看任务进度，等待任务完成。
+6.  在右上角![任务列表](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3576567061/p195753.png)查看任务进度，等待任务完成。
 
     ![查看任务进度](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6468937061/p66932.png)
 
