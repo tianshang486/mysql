@@ -116,10 +116,6 @@ Most of the traditional remote backup solutions compress the backup files that a
         select 'dim_code_desc' as tableName ,count(id) as countNumber from `dim_code_desc` ;
         ```
 
-        ![](../images/p58506.png "Data volume on the source RDS instance")
-
-        ![](../images/p58507.png "Data volume on DLA")
-
     6.  Execute the following SQL statement on DLA to run a multi-table join query:
 
         ```
@@ -128,11 +124,7 @@ Most of the traditional remote backup solutions compress the backup files that a
         and t1.code_id like '9%';
         ```
 
-        ![](../images/p58508.png "Multi-table join query on DLA")
-
         Run a multi-table join query on the source RDS instance. Then, compare the query results that you obtain from DLA and the source RDS instance.
-
-        ![](../images/p58509.png "Multi-table join query on the source RDS instance")
 
         Verify that the query result on DLA is consistent with that on the source RDS instance.
 
